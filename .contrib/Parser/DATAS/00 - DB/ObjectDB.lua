@@ -307173,13 +307173,6 @@ local ObjectDB = ObjectDB; for objectID,objectData in pairs({
 			en = "Giant Growth Potion",
 		},
 	},
-	[571495] = {
-		readable = "Savory Deviate Delight",
-		model = 1091574,
-		text = {
-			en = "Savory Deviate Delight",
-		},
-	},
 	[571496] = {
 		readable = "Pygmy Oil",
 		model = 775408,
@@ -307248,20 +307241,6 @@ local ObjectDB = ObjectDB; for objectID,objectData in pairs({
 		model = 1572190,
 		text = {
 			en = "Reflecting Prism",
-		},
-	},
-	[571562] = {
-		readable = "Savory Deviate Delight",
-		model = 1091574,
-		text = {
-			en = "Savory Deviate Delight",
-		},
-	},
-	[571563] = {
-		readable = "Savory Deviate Delight",
-		model = 1091574,
-		text = {
-			en = "Savory Deviate Delight",
 		},
 	},
 	[572035] = {

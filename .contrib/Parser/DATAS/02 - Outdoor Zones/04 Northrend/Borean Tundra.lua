@@ -517,6 +517,8 @@ root(ROOTS.Zones, {
 						["coord"] = { 43.3, 55.3, BOREAN_TUNDRA },
 						["races"] = HORDE_ONLY,
 						["groups"] = {
+							i(34710),	-- Seaforium Depth Charge Bundle (QI!)
+							--
 							i(36888),	-- Marshwalker Legguards
 							i(36938),	-- Mightstone Breastplate
 							i(36937),	-- Tundrastrider Coif
@@ -1480,12 +1482,14 @@ root(ROOTS.Zones, {
 						["qg"] = 25438,	-- Shadowstalker Canarius
 						["coord"] = { 37.9, 52.5, BOREAN_TUNDRA },
 						["races"] = HORDE_ONLY,
+						["groups"] = { i(34908) },	-- Scourge Cage Key (QI!)
 					}),
 					q(11616, {	-- Message to Hellscream
 						["sourceQuest"] = 11615,	-- Nerub'ar Secrets
 						["qg"] = 25394,	-- Shadowstalker Barthus
 						["coord"] = { 43.2, 55.0, BOREAN_TUNDRA },
 						["races"] = HORDE_ONLY,
+						["groups"] = { i(11616) },	-- Barthus' Note (QI!)
 					}),
 					q(11698, {	-- Might As Well Wipe Out the Scourge
 						["sourceQuest"] = 11694,	-- There's Something Going On In Those Caves
@@ -1592,6 +1596,7 @@ root(ROOTS.Zones, {
 						["qg"] = 25328,	-- Shadowstalker Luther
 						["coord"] = { 40.0, 52.0, BOREAN_TUNDRA },
 						["races"] = HORDE_ONLY,
+						["groups"] = { i(34719) },	-- Luther's Journal (QI!)
 					}),
 					q(11647, {	-- Neutralizing the Cauldrons
 						["sourceQuest"] = 11633,	-- Blending In
@@ -3005,11 +3010,13 @@ root(ROOTS.Zones, {
 				n(TREASURES, {
 					o(244447, {	-- White Murloc Egg
 						["description"] = "Found beneath Riplash Ruins. There is an obscured underwater cave outside the northeastern end of the ruins. Two white murloc eggs can be found in the end of the cave, but only the one on the ground can be looted.",
-						["coord"] = { 56.0, 88.0, BOREAN_TUNDRA },
-						["timeline"] = { ADDED_6_2_2 },
-						["groups"] = {
-							i(22780),	-- White Murloc Egg (Terky)
+						["coords"] = {
+							{ 55.8, 88.1, BOREAN_TUNDRA },	-- Cave Entrance
+							{ 54.6, 89.4, BOREAN_TUNDRA },	-- White Murloc Egg
 						},
+						["questID"] = 39783,
+						["timeline"] = { ADDED_6_2_2 },
+						["groups"] = { i(22780) },	-- White Murloc Egg (Terky) (PET!)
 					}),
 				}),
 				-- #endif
@@ -3234,13 +3241,3 @@ root(ROOTS.Zones, {
 		}),
 	})),
 });
-
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { ADDED_6_2_2 } }, {
-	m(NORTHREND, {
-		m(BOREAN_TUNDRA, {
-			n(TREASURES, {
-				q(39783),	-- Battle Pet - Terky
-			}),
-		}),
-	}),
-})));

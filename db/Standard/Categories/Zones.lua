@@ -3135,6 +3135,8 @@ q(60887,{awp=90001,coords={
 q(26227,{awp=40003,coords={
 [85]={{56.5,62.5}}},isDaily=1,lvl=10,qgs={42506},r=1,requireSkill=185,g={
 cu(81),
+o(203969,{
+i(57766)}),
 crit(15807,{achID=5475,awp=40200,id=2,r=1})}}),
 q(26543,{awp=40001,coords={
 [85]={{65.7,41.1}}},isDaily=1,lvl=10,qgs={43239},r=1,requireSkill=356,g={
@@ -32232,7 +32234,10 @@ q(5510,{coords={
 [23]={{75.8,53.8}}},cost={{"i",12840,20}},qgs={11039},repeatable=1,rwp=40003,u=2,g={
 i(12844,{b=2,factionID=529,repeatable=1,spellID=17047,u=2})}}),
 q(6146,{coords={
-[23]={{23,68.2}}},cost={{"i",15875,1},{"i",15876,1}},qgs={11878},qis={13852},r=1,rwp=40003,sourceQuests={14350},u=2}),
+[23]={{23,68.2}}},qgs={11878},qis={13852},r=1,rwp=40003,sourceQuests={14350},u=2,g={
+i(15876,{u=2,g={
+i(15875,{b=1,spellID=19690,u=2}),
+i(13852,{u=2})}})}}),
 q(27489,{awp=40003,coords={
 [23]={{61.6,43.2}}},crs={45400},lvl=15,qgs={45729},sourceQuests={27488},g={
 crit(38312,{achID=4892,id=4})}}),
@@ -45326,8 +45331,6 @@ q(11381,{coords={
 i(33844,{b=1}),
 i(33857,{b=1}),
 crit(5705,{achID=906,awp=30002,id=5})}}),
-q(10984,{altQuests={11022},coords={
-[111]={{56.4,49.2}}},isBreadcrumb=1,lvl=20,nextQuests={10983},qgs={22497}}),
 q(10017,{coords={
 [111]={{64.2,15.4}}},cost={{"i",25802,8}},description="If you want to switch from Scryers to Aldor, use this quest to regain lost Aldor reputation.",lvl=15,minReputation={934,0},qgs={18597}}),
 q(11877,{coords={
@@ -46605,7 +46608,7 @@ q(10719,{description="You have to accept or complete the quest '...and a Time fo
 q(10487,{coords={
 [105]={{52.4,57.9}}},crs={20713},lvl=20,qgs={21117},qis={30174},r=1,sourceQuests={10486}}),
 q(10997,{coords={
-[105]={{55.5,44.8}}},description="This quest has three possible breadcrumb quests. Completing one will give you credit for the other, but if you're interested in completing as many breadcrumbs as possible then you should start this quest chain by picking up 'Speak with the Ogre' in the middle of Shattrath City.",lvl=20,maps={108},qgs={22941},qis={32382},sourceQuests={10983,10989,11057},g={
+[105]={{55.5,44.8}}},crs={22199},description="This quest has three possible breadcrumb quests. Completing one will give you credit for the other, but if you're interested in completing as many breadcrumbs as possible then you should start this quest chain by picking up 'Speak with the Ogre' in the middle of Shattrath City.",lvl=20,maps={108},qgs={22941},qis={32382},sourceQuests={10983,10989,11057},g={
 o(185574)}}),
 q(10830,{coords={
 [105]={{37.2,22.2}}},lvl=20,qgs={22215},sourceQuests={10829},g={
@@ -46640,7 +46643,7 @@ o(185124),
 o(185147),
 o(185148)}}),
 q(10859,{coords={
-[105]={{74.9,60.5}}},lvl=20,qgs={22312},r=1,sourceQuests={10853}}),
+[105]={{74.9,60.5}}},lvl=20,qgs={22312},qis={31668},r=1,sourceQuests={10853}}),
 q(10594,{coords={
 [105]={{60.2,68.9}}},lvl=20,qgs={21755},qis={30701},r=2,sourceQuests={10608},g={
 s(14387,31445,{b=1,f=7}),
@@ -46666,12 +46669,12 @@ s(14455,31543,{b=1,f=28})}}),
 q(10517,{coords={
 [105]={{44,51.8}}},crs={20732},lvl=20,qgs={21277},r=2,sourceQuests={10516}}),
 q(10998,{coords={
-[105]={{55.5,44.8}}},lvl=20,qgs={22941},qis={32358},sourceQuests={10995,10996,10997},g={
+[105]={{55.5,44.8}}},crs={22911},lvl=20,qgs={22941},qis={32358},sourceQuests={10995,10996,10997},g={
 o(185562)}}),
 q(10543,{coords={
 [105]={{45,72.2}}},crs={20095,20723},lvl=20,qgs={21349},r=1,sourceQuests={10545}}),
 q(10995,{coords={
-[105]={{55.5,44.8}}},description="This quest has three possible breadcrumb quests. Completing one will give you credit for the other, but if you're interested in completing as many breadcrumbs as possible then you should start this quest chain by picking up 'Speak with the Ogre' in the middle of Shattrath City.",lvl=20,qgs={22941},qis={32379},sourceQuests={10983,10989,11057},g={
+[105]={{55.5,44.8}}},crs={20216},description="This quest has three possible breadcrumb quests. Completing one will give you credit for the other, but if you're interested in completing as many breadcrumbs as possible then you should start this quest chain by picking up 'Speak with the Ogre' in the middle of Shattrath City.",lvl=20,qgs={22941},qis={32379},sourceQuests={10983,10989,11057},g={
 o(185567)}}),
 q(11059,{coords={
 [105]={{28.8,57.4}}},crs={22275},lvl=20,qgs={23233},qis={32697},sourceQuests={11025}}),
@@ -46699,7 +46702,7 @@ s(14373,31430,{b=1,f=5}),
 s(14372,31429,{b=1,f=4}),
 o(184689)}}),
 q(11000,{coords={
-[105]={{55.5,44.8}}},lvl=20,qgs={22941},qis={32383},sourceQuests={10998},g={
+[105]={{55.5,44.8}}},crs={22910},lvl=20,qgs={22941},qis={32383,32467},sourceQuests={10998},g={
 o(185577)}}),
 q(10801,{coords={
 [105]={{53.2,41}}},lvl=20,qgs={22103},r=2,sourceQuests={10800}}),
@@ -46714,7 +46717,7 @@ q(10770,{coords={
 q(10893,{coords={
 [105]={{50.2,36}}},crs={22396},lvl=20,qgs={22386},sourceQuests={10894}}),
 q(10996,{coords={
-[105]={{55.5,44.8}}},description="This quest has three possible breadcrumb quests. Completing one will give you credit for the other, but if you're interested in completing as many breadcrumbs as possible then you should start this quest chain by picking up 'Speak with the Ogre' in the middle of Shattrath City.",lvl=20,qgs={22941},qis={32380},sourceQuests={10983,10989,11057},g={
+[105]={{55.5,44.8}}},crs={20600},description="This quest has three possible breadcrumb quests. Completing one will give you credit for the other, but if you're interested in completing as many breadcrumbs as possible then you should start this quest chain by picking up 'Speak with the Ogre' in the middle of Shattrath City.",lvl=20,qgs={22941},qis={32380},sourceQuests={10983,10989,11057},g={
 o(185569)}}),
 q(10555,{coords={
 [105]={{37,65.6}}},crs={20113},lvl=20,qgs={21469},qis={30529},r=2}),
@@ -46731,12 +46734,14 @@ s(14439,31514,{b=1,f=6}),
 crit(38662,{achID=1193,id=7,r=1})}}),
 q(10722,{coords={
 [105]={{50.2,36}}},lvl=20,qgs={22386},sourceQuests={10893}}),
-q(10983,{altQuests={10989},coords={
+q(10983,{altQuests={10989,11057},awp=20100,coords={
 [111]={{65,68.4}}},lvl=20,qgs={22940},sourceQuests={10984}}),
-q(10989,{altQuests={10983},coords={
+q(10984,{awp=20100,coords={
+[111]={{56.4,49.2}}},isBreadcrumb=1,lvl=20,nextQuests={10983},qgs={22497}}),
+q(10989,{altQuests={10983,11057},awp=20100,coords={
 [105]={{55.4,45.2}}},lvl=20,qgs={22995}}),
 q(10860,{coords={
-[105]={{76.1,60.3}}},lvl=20,qgs={21088},r=1,g={
+[105]={{76.1,60.3}}},cost={{"i",31671,3},{"i",31670,3}},lvl=20,qgs={21088},r=1,g={
 r(38868,{b=1,itemID=31674,requireSkill=185,skillID=2547}),
 r(38867,{b=1,itemID=31675,requireSkill=185,skillID=2547}),
 i(31672,{f=55,lvl=23,spellID=35271}),
@@ -46851,7 +46856,7 @@ s(14564,31685,{b=1,f=6}),
 s(14562,31683,{b=1,f=4}),
 s(14563,31684,{b=1,f=5}),
 s(14565,31686,{b=1,f=7})}}),
-q(11022,{altQuests={10984},coords={
+q(11022,{coords={
 [105]={{56.2,48}}},isBreadcrumb=1,lvl=20,nextQuests={11009},qgs={23053},sourceQuests={11000}}),
 q(10853,{coords={
 [105]={{74.9,60.5}}},crs={21004},lvl=20,qgs={22312},qis={31656},r=1,sourceQuests={10851},g={
@@ -46948,11 +46953,11 @@ q(10851,{coords={
 [105]={{74.9,60.5}}},crs={20765,20766},lvl=20,qgs={22312},qis={31651},r=1,sourceQuests={10846}}),
 q(10516,{coords={
 [105]={{44,51.8}}},crs={20726,20731},lvl=20,qgs={21277},qis={30413,30415},r=2,sourceQuests={10504}}),
-q(11057,{coords={
-[105]={{28.8,57.4}}},crs={20726,20731},isBreadcrumb=1,lvl=20,nextQuests={10995,10996,10997},qgs={23233},qis={30413,30415}}),
+q(11057,{altQuests={10983,10989},awp=20100,coords={
+[105]={{28.8,57.4}}},isBreadcrumb=1,lvl=20,nextQuests={10995,10996,10997},qgs={23233}}),
 q(10825,{crs={19988,19989,19990},lvl=20,providers={{"i",31489}}}),
 q(10867,{coords={
-[105]={{75.3,60.9}}},lvl=20,qgs={22004},qis={30890},r=1,sourceQuests={10865},g={
+[105]={{75.3,60.9}}},crs={21057},description="Nexus-Prince Razaan spawns after killing etereals in the area.",lvl=20,qgs={22004},qis={30890},r=1,sourceQuests={10865},g={
 s(14569,31690,{b=1,f=7}),
 s(14568,31689,{b=1,f=6}),
 s(14566,31687,{b=1,f=4}),
@@ -48237,25 +48242,25 @@ q(9361,{coords={
 [100]={{49.2,74.8}}},cost={{"i",23270,1},{"i",23268,1}},crs={16863,16879,16880,16992},lvl=10,qgs={19344},qis={23248},sourceQuests={9349},g={
 i(29292,{f=55,lvl=10,spellID=24800})}}),
 q(10106,{coords={
-[100]={{56.3,62.8}}},isDaily=1,lvl=10,qgs={18266},r=2,sourceQuests={13408,13410},g={
-i(24579,{b=1,f=55})}}),
+[100]={{56.3,62.8}}},isDaily=1,lvl=10,pvp=1,qgs={18266},r=2,sourceQuests={13408,13410},g={
+i(24579,{b=1,f=55,pvp=1})}}),
 q(13408,{awp=30300,c={1,2,3,4,5,7,8,9,10,11,12,13},coords={
-[100]={{56.3,62.8}}},lvl=10,qgs={18266},r=2,sourceQuests={10143},g={
-i(40476,{awp=20001,b=1,f=53,r=2,spellID=42292}),
-i(24579,{awp=20001,b=1,f=55})}}),
+[100]={{56.3,62.8}}},lvl=10,pvp=1,qgs={18266},r=2,sourceQuests={10143},g={
+i(40476,{awp=20001,b=1,f=53,pvp=1,r=2,spellID=42292}),
+i(24579,{awp=20001,b=1,f=55,pvp=1})}}),
 q(13410,{awp=30300,c={6},coords={
-[100]={{56.3,62.8}}},isDaily=1,lvl=10,qgs={18266},r=2,sourceQuests={10143},g={
-i(24579,{awp=20001,b=1,f=55})}}),
+[100]={{56.3,62.8}}},isDaily=1,lvl=10,pvp=1,qgs={18266},r=2,sourceQuests={10143},g={
+i(24579,{awp=20001,b=1,f=55,pvp=1})}}),
 q(10110,{coords={
-[100]={{55.9,39.2}}},isDaily=1,lvl=10,qgs={18267},r=1,sourceQuests={13409,13411},g={
-i(24581,{b=1,f=55})}}),
+[100]={{55.9,39.2}}},isDaily=1,lvl=10,pvp=1,qgs={18267},r=1,sourceQuests={13409,13411},g={
+i(24581,{b=1,f=55,pvp=1})}}),
 q(13409,{awp=30300,c={1,2,3,4,5,7,8,9,10,11,12,13},coords={
-[100]={{55.9,39.2}}},lvl=10,qgs={18267},r=1,g={
-i(40477,{awp=20001,b=1,f=53,r=1,spellID=42292}),
-i(24581,{awp=20001,b=1,f=55})}}),
+[100]={{55.9,39.2}}},lvl=10,pvp=1,qgs={18267},r=1,g={
+i(40477,{awp=20001,b=1,f=53,pvp=1,r=1,spellID=42292}),
+i(24581,{awp=20001,b=1,f=55,pvp=1})}}),
 q(13411,{awp=30300,c={6},coords={
-[100]={{55.9,39.2}}},lvl=10,qgs={18267},r=1,g={
-i(24581,{awp=20001,b=1,f=55})}}),
+[100]={{55.9,39.2}}},lvl=10,pvp=1,qgs={18267},r=1,g={
+i(24581,{awp=20001,b=1,f=55,pvp=1})}}),
 q(10443,{coords={
 [100]={{23.4,36.5}}},isBreadcrumb=1,lvl=10,nextQuests={9372},qgs={16796},r=2}),
 q(10442,{coords={
@@ -50070,7 +50075,7 @@ q(10855,{coords={
 q(10256,{coords={
 [109]={{58.3,86.4}}},lvl=25,qgs={19481},sourceQuests={10176}}),
 q(10426,{coords={
-[109]={{42.3,32.6}}},lvl=25,qgs={20871}}),
+[109]={{42.3,32.6}}},crs={20774,20983},lvl=25,qgs={20871},qis={29818}}),
 q(10281,{coords={
 [109]={{70.9,38.8}}},lvl=25,qgs={20154},sourceQuests={10271}}),
 q(10276,{coords={
@@ -51008,7 +51013,7 @@ q(10688,{coords={
 n(21506,{coords={
 [104]={{69.8,51.6}}}})}}),
 q(10664,{coords={
-[108]={{77.4,38.6}}},cost={{"i",30823,1},{"i",23793,4},{"i",23784,1}},lvl=25,maps={111},qgs={21465},sourceQuests={10662,10663}}),
+[108]={{77.4,38.6}}},cost={{"i",23793,4},{"i",23784,1}},lvl=25,maps={111},qgs={21465},qis={30823},sourceQuests={10662,10663}}),
 q(10628,{coords={
 [104]={{57.3,49.5}}},lvl=25,qgs={21826},sourceQuests={10622}}),
 q(10708,{altQuests={11052},coords={
@@ -52101,7 +52106,7 @@ o(185224),
 o(185225),
 o(185226)}}),
 q(10879,{coords={
-[111]={{51.8,20.8}}},lvl=15,qgs={22373},sourceQuests={10889},g={
+[111]={{51.8,20.8}}},crs={22375},lvl=15,qgs={22373},sourceQuests={10889},g={
 i(31727,{b=1,f=51}),
 i(31726,{b=1,f=51}),
 crit(38603,{achID=1191,id=1,r=2}),
@@ -53015,12 +53020,12 @@ o(182053,{
 i(24245)})}),
 h(-58,{
 n(18581,{coords={
-[102]={{64.6,46.4}}},r=2,g={
-s(12161,27931,{b=1,cost={{"i",24579,15}},f=32,lvl=25,r=2}),
-s(12166,27942,{b=1,cost={{"i",24579,15}},f=27,lvl=25,r=2}),
-i(27921,{b=1,c={1,3,4,11},cost={{"i",24579,30}},f=53,lvl=25,spellID=33510}),
-i(27922,{b=1,c={5,8,9},cost={{"i",24579,30}},f=53,lvl=25,spellID=33511}),
-i(27927,{b=1,c={2,7},cost={{"i",24579,30}},f=53,lvl=25,spellID=33522})}}),
+[102]={{64.6,46.4}}},pvp=1,r=2,g={
+s(12161,27931,{b=1,cost={{"i",24579,15}},f=32,lvl=25,pvp=1,r=2}),
+s(12166,27942,{b=1,cost={{"i",24579,15}},f=27,lvl=25,pvp=1,r=2}),
+i(27921,{b=1,c={1,3,4,11},cost={{"i",24579,30}},f=53,lvl=25,pvp=1,spellID=33510}),
+i(27922,{b=1,c={5,8,9},cost={{"i",24579,30}},f=53,lvl=25,pvp=1,spellID=33511}),
+i(27927,{b=1,c={2,7},cost={{"i",24579,30}},f=53,lvl=25,pvp=1,spellID=33522})}}),
 n(19383,{coords={
 [102]={{32.4,48}}},r=1,g={
 r(30318,{isLimited=1,itemID=23805,requireSkill=202,skillID=2505}),
@@ -53093,12 +53098,12 @@ r(28557,{isLimited=1,itemID=22909,requireSkill=171,skillID=2484}),
 r(28549,{isLimited=1,itemID=22902,requireSkill=171,skillID=2484}),
 r(28555,{isLimited=1,itemID=22907,requireSkill=171,skillID=2484})}}),
 n(18564,{coords={
-[102]={{33,49}}},r=1,g={
-s(12160,27930,{b=1,cost={{"i",24581,15}},f=32,lvl=25,r=1}),
-s(12165,27939,{b=1,cost={{"i",24581,15}},f=27,lvl=25,r=1}),
-i(27920,{b=1,c={1,3,4,11},cost={{"i",24581,30}},f=53,lvl=25,spellID=33510}),
-i(27924,{b=1,c={5,8,9},cost={{"i",24581,30}},f=53,lvl=25,spellID=33511}),
-i(27926,{b=1,c={2,7},cost={{"i",24581,30}},f=53,lvl=25,spellID=33522})}}),
+[102]={{33,49}}},pvp=1,r=1,g={
+s(12160,27930,{b=1,cost={{"i",24581,15}},f=32,lvl=25,pvp=1,r=1}),
+s(12165,27939,{b=1,cost={{"i",24581,15}},f=27,lvl=25,pvp=1,r=1}),
+i(27920,{b=1,c={1,3,4,11},cost={{"i",24581,30}},f=53,lvl=25,pvp=1,spellID=33510}),
+i(27924,{b=1,c={5,8,9},cost={{"i",24581,30}},f=53,lvl=25,pvp=1,spellID=33511}),
+i(27926,{b=1,c={2,7},cost={{"i",24581,30}},f=53,lvl=25,pvp=1,spellID=33522})}}),
 n(18911,{coords={
 [102]={{78,66}}},g={
 i(27532,{f=200,lvl=20,rank=5,requireSkill=356,rwp=30100,u=2}),
@@ -54588,7 +54593,7 @@ o(192713,{coords={
 [125]={{43.6,46.7}}},description="On a box on the upper balcony of The Threads of Fate.",g={
 crit(7240,{achID=1956,id=6})}}),
 o(192865,{coords={
-[125]={{64.4,52.4}}},description="On a box in the corner of the Violet Hold near Archmage Timear.",g={
+[125]={{64.4,52.3}}},description="On a box in the corner of the Violet Hold near Archmage Timear.",g={
 crit(7241,{achID=1956,id=7})}}),
 o(192708,{coords={
 [125]={{56.7,45.5}}},description="First floor of the teleportation room of the Violet Gate near a bookcase.",g={
@@ -57507,6 +57512,7 @@ s(17798,37418,{b=1,f=6}),
 i(37556,{b=1,f=53,spellID=48847})}}),
 q(11608,{coords={
 [114]={{43.3,55.3}}},lvl=10,qgs={25327},r=1,sourceQuests={11606},g={
+i(34710,{spellID=45503}),
 s(17485,36888,{b=1,f=5}),
 s(17487,36938,{b=1,f=7}),
 s(17486,36937,{b=1,f=6}),
@@ -57839,9 +57845,11 @@ s(17817,37441,{b=1,f=6})}}),
 q(11895,{coords={
 [114]={{77.2,38.4}}},lvl=10,qgs={25982},r=1,sourceQuests={11890}}),
 q(11676,{coords={
-[114]={{37.9,52.5}}},lvl=10,qgs={25438},r=1,sourceQuests={11618}}),
+[114]={{37.9,52.5}}},lvl=10,qgs={25438},r=1,sourceQuests={11618},g={
+i(34908,{spellID=45807})}}),
 q(11616,{coords={
-[114]={{43.2,55}}},lvl=10,qgs={25394},r=1,sourceQuests={11615}}),
+[114]={{43.2,55}}},lvl=10,qgs={25394},r=1,sourceQuests={11615},g={
+i(11616,{f=55})}}),
 q(11698,{coords={
 [114]={{73.4,18.7}}},crs={24957,25660,25678,25682,25684,26126},lvl=10,qgs={25705},r=2,sourceQuests={11694},g={
 s(17869,37518,{b=1,f=7}),
@@ -57877,7 +57885,8 @@ s(17795,37414,{b=1,f=6}),
 s(17871,37520,{b=1,f=8}),
 s(17656,37203,{b=1,f=4})}}),
 q(11615,{coords={
-[114]={{40,52}}},lvl=10,qgs={25328},r=1,sourceQuests={11614}}),
+[114]={{40,52}}},lvl=10,qgs={25328},r=1,sourceQuests={11614},g={
+i(34719)}}),
 q(11647,{coords={
 [114]={{75.8,37.2}}},lvl=10,qgs={24709},r=1,sourceQuests={11633},g={
 s(17868,37517,{b=1,f=7}),
@@ -58370,7 +58379,7 @@ s(21542,44649,{f=7,lvl=27}),
 crit(8103,{achID=2257,id=4})}})}),
 h(-56,{
 o(244447,{awp=60202,coords={
-[114]={{56,88}}},description="Found beneath Riplash Ruins. There is an obscured underwater cave outside the northeastern end of the ruins. Two white murloc eggs can be found in the end of the cave, but only the one on the ground can be looted.",g={
+[114]={{54.6,89.4},{55.8,88.1}}},description="Found beneath Riplash Ruins. There is an obscured underwater cave outside the northeastern end of the ruins. Two white murloc eggs can be found in the end of the cave, but only the one on the ground can be looted.",questID=39783,g={
 p(1073,{itemID=22780,npcID=16445,spellID=28487})}})}),
 h(-58,{
 n(25206,{coords={
@@ -60868,9 +60877,11 @@ s(16676,35885,{b=1,f=5}),
 i(35886,{b=1,f=51}),
 crit(38986,{achID=34,id=9,r=2})}}),
 q(11325,{coords={
-[117]={{30,28.5}}},lvl=10,qgs={24273},r=2,sourceQuests={11322}}),
+[117]={{30,28.5}}},lvl=10,qgs={24273},r=2,sourceQuests={11322},g={
+i(33618,{spellID=43369})}}),
 q(11323,{coords={
-[117]={{31.1,24.5}}},lvl=10,qgs={24186},r=1,sourceQuests={11317}}),
+[117]={{31.1,24.5}}},lvl=10,qgs={24186},r=1,sourceQuests={11317},g={
+i(33618,{spellID=43369})}}),
 q(11333,{coords={
 [117]={{59.8,61.4}}},lvl=10,qgs={23975},qis={33635},r=2,sourceQuests={11244},g={
 o(186662)}}),
@@ -61171,9 +61182,17 @@ i(35911,{b=1,f=52}),
 i(35936,{b=1,f=51}),
 o(186397)}}),
 q(11346,{coords={
-[117]={{62.2,17.2}}},lvl=10,qgs={24328},r=2,sourceQuests={11329}}),
+[117]={{62.2,17.2}}},lvl=10,qgs={24328},r=2,sourceQuests={11329},g={
+i(33778,{spellID=43490}),
+i(33779,{spellID=43490}),
+i(33780,{spellID=43490}),
+i(33781)}}),
 q(11350,{coords={
-[117]={{49.2,12.2}}},lvl=10,qgs={24362},r=1,sourceQuests={11275}}),
+[117]={{49.2,12.2}}},lvl=10,qgs={24362},qis={33778,33779,33780},r=1,sourceQuests={11275},g={
+i(33778,{spellID=43490}),
+i(33779,{spellID=43490}),
+i(33780,{spellID=43490}),
+i(33781)}}),
 q(11322,{coords={
 [117]={{30,28.5}}},lvl=10,qgs={24273},r=2}),
 q(11317,{coords={
@@ -61251,9 +61270,11 @@ i(38259,{b=1,f=53,spellID=50263}),
 crit(38980,{achID=34,id=5,r=2}),
 crit(38980,{achID=1356,id=5,r=1})}}),
 q(11358,{coords={
-[117]={{62.5,16.5}}},lvl=10,qgs={24376},r=2,sourceQuests={11355}}),
+[117]={{62.5,16.5}}},lvl=10,qgs={24376},r=2,sourceQuests={11355},g={
+i(33819,{spellID=43692})}}),
 q(11366,{coords={
-[117]={{48,10.4}}},lvl=10,qgs={24390},r=1,sourceQuests={11365}}),
+[117]={{48,10.4}}},lvl=10,qgs={24390},r=1,sourceQuests={11365},g={
+i(33819,{spellID=43692})}}),
 q(11519,{coords={
 [117]={{35,80.9}}},lvl=10,qgs={24539},sourceQuests={11510}}),
 q(11167,{coords={
@@ -61276,9 +61297,11 @@ q(11299,{coords={
 [117]={{56.6,49.5},{56.9,53.7}}},description="Inside the |cFFFFD700Utgarde Catacombs|r.",lvl=10,qgs={24150},r=2,sourceQuests={11277}}),
 q(11348,{coords={
 [117]={{62.2,17.2}}},lvl=10,qgs={24328},r=2,sourceQuests={11349},g={
+i(33796,{spellID=49859}),
 crit(38990,{achID=34,id=11,r=2})}}),
 q(11352,{coords={
 [117]={{49.2,12.2}}},lvl=10,qgs={24362},r=1,sourceQuests={11351},g={
+i(33796,{spellID=49859}),
 crit(38997,{achID=1356,id=9,r=1})}}),
 q(11530,{coords={
 [117]={{33.8,70.1},{35.3,74.7},{37,67.1},{37.2,74.8},{38,77.5},{38.4,69.2},{38.9,72.1},{39.7,74.4},{40.8,81.2},{41.1,76.2},{43.2,77.7},{43.6,83.3},{45.9,80.1}}},lvl=10,qgs={24910},sourceQuests={11529}}),
@@ -76181,6 +76204,7 @@ n(62088,{coords={
 [390]={{82.8,30.4}}},g={
 de(11456,{awp=110207,cost=20000000,itemID=257354,spellID=1261470}),
 de(11453,{awp=110207,cost=20000000,itemID=257351,spellID=1261467}),
+de(21857,{awp=120007,cost=20000000,itemID=271971,spellID=1289826}),
 de(767,{awp=110207,cost=20000000,itemID=245332,spellID=1238432}),
 de(11457,{awp=110207,cost=20000000,itemID=257355,spellID=1261473})}}),
 n(65172,{coords={
@@ -103320,6 +103344,7 @@ q(47889,{coords={
 [831]={{34.1,57.1},{39.6,24.9}},
 [886]={{33.6,58}}},lvl=45,qgs={124312,126954},sourceQuests={47473,48929}}),
 q(48273,{coords={
+[831]={{40.9,24.3}},
 [883]={{46.7,25}}},lvl=45,qgs={124312},sourceQuests={48560}}),
 q(48277,{coords={
 [831]={{39.1,24.9}},
@@ -104296,7 +104321,8 @@ q(47890,{coords={
 [830]={{56.6,67.4}}},lvl=45,qgs={124595},sourceQuests={47889}}),
 q(49015,{coords={
 [831]={{40.2,24.1}},
-[886]={{32.9,59}}},lvl=45,qgs={120533,126307,126950,128722,128949},sourceQuests={49014},g={
+[886]={{32.9,59}},
+[887]={{33.4,59.2}}},lvl=45,qgs={120533,126307,126950,128722,128949},sourceQuests={49014},g={
 i(152984,{b=1,f=55}),
 i(152626,{b=1,f=52,lvl=40,spellID=280740})}}),
 q(47967,{coords={
@@ -126334,7 +126360,9 @@ q(63711,{coords={
 i(185719)}}),
 q(63712,{coords={
 [1961]={{34.9,35.3}}},lvl=60,qgs={177451},sourceQuests={63710},g={
-i(185716),
+o(367972,{coords={
+[1961]={{36.9,34.2},{36.9,34.5},{37.8,37.1},{38.4,40.4},{38.4,40.6},{38.6,40.4},{38.6,40.5}}},g={
+i(185716)}}),
 i(185921,{spellID=351760})}}),
 q(63713,{coords={
 [1961]={{34.9,35.3}}},lvl=60,qgs={177452},sourceQuests={63711,63712}}),
@@ -129692,6 +129720,7 @@ crit(48817,{achID=14310,id=17})}}),
 n(166993,{coords={
 [1525]={{61.8,79.2}}},crs={165891},isDaily=1,questID=60022,g={
 cq(61160,{b=1,c={3},itemID=180705,spellID=334850}),
+i(180704,{b=1,f=55,spellID=334833}),
 crit(48820,{achID=14310,id=20})}}),
 n(160640,{coords={
 [1525]={{21.7,35.9}}},description="You will need a |cFFFFFFFFScorched Crypt Key|r to enter the rare's tomb. The key can drop from the Feral Ritualists and Blistering Inquisitors in the surrounding area.",isDaily=1,questID=58210,g={
@@ -130018,12 +130047,13 @@ n(158986,{coords={
 i(180685,{b=1,cost={{"c",1820,20}},f=55,spellID=334432})}}),
 n(156218,{coords={
 [1525]={{48.6,68.6}}},g={
+i(182746,{cost={{"c",1820,5}}}),
 i(181298,{b=1,cost={{"c",1820,20}},f=55,spellID=336055}),
-i(183416,{b=1,cost={{"c",1820,10}},lvl=50}),
 i(183419,{b=1,cost={{"c",1820,10}},lvl=50}),
-i(183422,{b=1,cost={{"c",1820,10}},lvl=50}),
+i(180704,{b=1,cost={{"c",1820,20}},f=55,spellID=334833}),
+i(183416,{b=1,cost={{"c",1820,10}},lvl=50}),
 i(183427,{b=1,cost={{"c",1820,10}},lvl=50}),
-i(182746,{cost={{"c",1820,5}}})}}),
+i(183422,{b=1,cost={{"c",1820,10}},lvl=50})}}),
 n(165859,{coords={
 [1525]={{60.8,62.5}}},g={
 i(180687,{b=1,cost={{"c",1820,10}},f=55,spellID=334443}),
@@ -131150,7 +131180,7 @@ q(63047,{coords={
 [1543]={{25.6,24.2}}},isDaily=1,lvl=60,providers={{"o",364926}},g={
 i(184552)}}),
 q(63072,{coords={
-[1543]={{48.2,81.9}}},isDaily=1,lvl=60,providers={{"o",364994}},g={
+[1543]={{47.2,82.7}}},isDaily=1,lvl=60,providers={{"o",364994}},g={
 i(184585)}}),
 q(60732,{coords={
 [1543]={{46.9,41.7}}},isDaily=1,lvl=60,qgs={176164}}),
@@ -132813,7 +132843,8 @@ q(65331,{coords={
 i(189433,{spellID=364685})}}),
 q(64840,{coords={
 [1970]={{47.7,79.9}}},lvl=60,qgs={184323},sourceQuests={64835,64836,64839},g={
-i(187835)}}),
+o(370492,{
+i(187835)})}}),
 q(64841,{coords={
 [1970]={{47.6,80.3}}},lvl=60,qgs={181814},sourceQuests={64835,64836,64839}}),
 q(64842,{coords={
@@ -133670,7 +133701,7 @@ i(190740,{b=1,spellID=368050}),
 i(190739,{b=1,spellID=368038})}}),
 o(375373,{coords={
 [1970]={{39.6,77.7},{40.1,69.4},{40.6,70},{41.2,72.9},{43.6,83.3},{49.7,75.9},{50.6,93.1},{51.1,46.9},{53.9,88.6},{54.8,46.7},{57.7,43.6},{59,60.9},{59.9,51.2},{62.1,74.9},{63.9,72.3},{67.5,40.3},{70,34.2}},
-[2028]={{50.2,76.4},{79.2,74.8}}},repeatable=1,g={
+[2028]={{50.2,76.4},{50.4,73.6},{79.2,74.8}}},repeatable=1,g={
 cq(65483,{b=1,itemID=189717,spellID=366299}),
 cq(65484,{b=1,itemID=189718,spellID=366300})}}),
 o(375530,{coords={
@@ -138991,7 +139022,8 @@ n(193128,{coords={
 q(73869,{isDaily=1}),
 crit(56136,{achID=16679,id=3})}}),
 n(201535,{awp=100005,coords={
-[2023]={{37.3,38.5}}},isDaily=1,questID=74467,g={
+[2023]={{37.3,38.5}}},isDaily=1,questID=74552,g={
+q(74467,{isDaily=1}),
 s(185343,203673,{b=1,f=20,lvl=60})}}),
 n(195186,{coords={
 [2023]={{31.3,76}}},description="Only spawns if the Aylaag Camp is stationed west.",isDaily=1,questID=73950,g={
@@ -142872,7 +142904,7 @@ n(197354,{coords={
 [2024]={{14.1,37.5}}},isDaily=1,questID=73996,g={
 crit(56127,{achID=16678,id=29})}}),
 n(201557,{awp=100005,coords={
-[2024]={{57.9,65.5}}},isDaily=1,questID=74532,g={
+[2024]={{57.9,68.5}}},isDaily=1,questID=74532,g={
 q(74459,{isDaily=1}),
 s(185329,203658,{b=1,f=5,lvl=60})}}),
 n(197356,{coords={
@@ -164770,7 +164802,7 @@ r(1230758,{learnedAt=35,requireSkill=164,skillID=2907})}),
 flt(57,{
 r(1229606,{learnedAt=30,requireSkill=164,skillID=2907}),
 r(1229611,{learnedAt=30,requireSkill=164,skillID=2907}),
-r(1229607,{learnedAt=39,requireSkill=164,skillID=2907}),
+r(1229607,{learnedAt=30,requireSkill=164,skillID=2907}),
 r(1229612,{learnedAt=30,requireSkill=164,skillID=2907}),
 r(1229613,{learnedAt=30,requireSkill=164,skillID=2907}),
 r(1229609,{learnedAt=20,requireSkill=164,skillID=2907}),
@@ -164857,29 +164889,29 @@ prof(333,{
 n(254051,{coords={
 [2393]={{39.5,51}}},g={
 r(1236461,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236463,{learnedAt=15,requireSkill=333,skillID=2909}),
+r(1236463,{learnedAt=45,requireSkill=333,skillID=2909}),
 r(1236465,{learnedAt=15,requireSkill=333,skillID=2909}),
 r(1236466,{learnedAt=15,requireSkill=333,skillID=2909}),
 r(1236594,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236467,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236468,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236469,{learnedAt=15,requireSkill=333,skillID=2909}),
+r(1236467,{learnedAt=50,requireSkill=333,skillID=2909}),
+r(1236468,{learnedAt=50,requireSkill=333,skillID=2909}),
+r(1236469,{learnedAt=40,requireSkill=333,skillID=2909}),
 r(1236470,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236471,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236472,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236473,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236474,{learnedAt=15,requireSkill=333,skillID=2909}),
+r(1236471,{learnedAt=35,requireSkill=333,skillID=2909}),
+r(1236472,{learnedAt=40,requireSkill=333,skillID=2909}),
+r(1236473,{learnedAt=55,requireSkill=333,skillID=2909}),
+r(1236474,{learnedAt=55,requireSkill=333,skillID=2909}),
 r(1236475,{learnedAt=15,requireSkill=333,skillID=2909}),
 r(1236476,{learnedAt=15,requireSkill=333,skillID=2909}),
 r(1236477,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236478,{learnedAt=15,requireSkill=333,skillID=2909}),
+r(1236478,{learnedAt=45,requireSkill=333,skillID=2909}),
 r(1236479,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236480,{learnedAt=15,requireSkill=333,skillID=2909}),
+r(1236480,{learnedAt=45,requireSkill=333,skillID=2909}),
 r(1236481,{learnedAt=15,requireSkill=333,skillID=2909}),
 r(1236482,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236483,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236484,{learnedAt=15,requireSkill=333,skillID=2909}),
-r(1236485,{learnedAt=15,requireSkill=333,skillID=2909})}}),
+r(1236483,{learnedAt=30,requireSkill=333,skillID=2909}),
+r(1236484,{learnedAt=30,requireSkill=333,skillID=2909}),
+r(1236485,{learnedAt=35,requireSkill=333,skillID=2909})}}),
 n(243349,{coords={
 [2393]={{48,53.9}}},g={
 r(471006,{requireSkill=333}),
@@ -164908,8 +164940,8 @@ r(1236090,{learnedAt=60,requireSkill=333,skillID=2909})}),
 flt(55,{
 r(1236491,{learnedAt=30,requireSkill=333,skillID=2909})}),
 h(-679,{
-r(1246904,{learnedAt=70,requireSkill=333,skillID=2909}),
-r(1246905,{learnedAt=70,requireSkill=333,skillID=2909})}),
+r(1246904,{learnedAt=85,requireSkill=333,skillID=2909}),
+r(1246905,{learnedAt=85,requireSkill=333,skillID=2909})}),
 flt(50,{
 r(1280401,{learnedAt=25,requireSkill=333,skillID=2909}),
 r(1236098,{learnedAt=35,requireSkill=333,skillID=2909}),
@@ -165065,8 +165097,8 @@ h(-88,{
 r(1230489,{learnedAt=30,requireSkill=755,skillID=2914}),
 r(1230490,{learnedAt=40,requireSkill=755,skillID=2914})}),
 h(-679,{
-r(1246895,{learnedAt=70,requireSkill=755,skillID=2914}),
-r(1246889,{learnedAt=70,requireSkill=755,skillID=2914})}),
+r(1246895,{learnedAt=85,requireSkill=755,skillID=2914}),
+r(1246889,{learnedAt=85,requireSkill=755,skillID=2914})}),
 flt(61,{
 r(1230455,{learnedAt=30,requireSkill=755,skillID=2914}),
 r(1230463,{learnedAt=20,requireSkill=755,skillID=2914}),
@@ -165138,8 +165170,8 @@ r(1237528,{learnedAt=20,requireSkill=165,skillID=2915})})}),
 h(-243,{
 r(1237546,{learnedAt=20,requireSkill=165,skillID=2915})}),
 h(-679,{
-r(1246937,{learnedAt=70,requireSkill=165,skillID=2915}),
-r(1246938,{learnedAt=70,requireSkill=165,skillID=2915})}),
+r(1246937,{learnedAt=85,requireSkill=165,skillID=2915}),
+r(1246938,{learnedAt=85,requireSkill=165,skillID=2915})}),
 flt(57,{
 r(1237560,{learnedAt=40,requireSkill=165,skillID=2915}),
 r(1237551,{learnedAt=45,requireSkill=165,skillID=2915}),
@@ -165272,6 +165304,9 @@ i(219934,{pvp=1})}}),
 q(93425,{coords={
 [2393]={{36.3,81.1}}},isWeekly=1,lvl=90,pvp=1,qgs={254971},g={
 i(219934,{pvp=1})}}),
+q(96726,{awp=120007,coords={
+[2393]={{36.3,81.1}}},isWeekly=1,pvp=1,qgs={254971},g={
+i(275134,{pvp=1})}}),
 q(93426,{coords={
 [2393]={{36.3,81.1}}},isWeekly=1,lvl=90,pvp=1,qgs={254971},g={
 i(219934,{pvp=1})}}),
@@ -165464,6 +165499,10 @@ q(93891,{coords={
 [2393]={{49,64.6}}},isWeekly=1,lvl=80,g={
 i(268490,{f=55,rwp=120001,sym={{"select","mapID",2537},{"pop"},{"where","headerID",-64},{"pop"},{"whereany","headerID",-88,-101}},u=2}),
 i(254677,{b=1,f=55,lvl=90,rwp=120100,sym={{"select","mapID",2537},{"pop"},{"where","headerID",-64},{"pop"},{"whereany","headerID",-88,-101}}})}}),
+q(96727,{awp=120007,coords={
+[2393]={{49,64.6}}},isWeekly=1,g={
+i(268490,{awp=120001,f=55,rwp=120001,sym={{"select","mapID",2537},{"pop"},{"where","headerID",-64},{"pop"},{"whereany","headerID",-88,-101}},u=2}),
+i(254677,{awp=120001,b=1,f=55,lvl=90,rwp=120100,sym={{"select","mapID",2537},{"pop"},{"where","headerID",-64},{"pop"},{"whereany","headerID",-88,-101}}})}}),
 q(93910,{coords={
 [2393]={{49,64.6}}},isWeekly=1,lvl=80,g={
 i(268490,{f=55,rwp=120001,sym={{"select","mapID",2537},{"pop"},{"where","headerID",-64},{"pop"},{"whereany","headerID",-88,-101}},u=2}),
@@ -165697,6 +165736,19 @@ de(1446,{cost=1500000,itemID=244656,spellID=1237785})})}}),
 n(251248,{coords={
 [2393]={{57.7,71.6}}},g={
 i(273307,{awp=120005,f=55,spellID=1292077})}}),
+n(267859,{awp=120007,coords={
+[2393]={{39.4,59.4}}},g={
+s(308887,274450,{f=9}),
+s(308888,274451,{f=9}),
+de(24194,{itemID=274736,spellID=1295145}),
+de(24193,{itemID=274734,spellID=1295142}),
+i(276281,{f=55,spellID=1299336,g={
+ach(63343,{coords={
+[2393]={{39.4,59.4}}},description="Kick three balls from the center of the field into either nearby goal.",g={
+de(24194,{itemID=274736,spellID=1295145}),
+de(24193,{itemID=274734,spellID=1295142}),
+de(23706,{itemID=274731,spellID=1295137})}})}}),
+de(23706,{itemID=274731,spellID=1295137})}}),
 n(239676,{coords={
 [2393]={{48.6,62}}},g={
 i(263976,{b=1,cost={{"c",3341,10}},description="\n|cffff0000 -- DOWNGRADE --|r\n\nCost: LFR Crest\nReceive: Adventurer Crest",lvl=90,rwp=120100,spellID=1270905}),
@@ -167632,6 +167684,56 @@ h(-14,{
 q(86874,{coords={
 [2413]={{30.6,77.2}}},sourceQuests={86867}})}),
 h(-45,{
+ah(61052,{awp=120007,coords={
+[2413]={{49.3,54.3}}},qgs={251259},type="a",g={
+q(96498,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 10 Moths.",lc={1,"sourceID",301686},qgs={251259},g={
+s(301686,257155,{coords={
+[2413]={{49.3,54.3}}},f=20,qgs={251259}})}}),
+q(96499,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 20 Moths.",lc={1,"sourceID",302663},qgs={251259},g={
+s(302663,263283,{coords={
+[2413]={{49.3,54.3}}},f=20,qgs={251259}})}}),
+q(96500,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 30 Moths.",lc={1,"decorID",15478},qgs={251259},g={
+de(15478,{coords={
+[2413]={{49.3,54.3}}},itemID=264243,qgs={251259},spellID=1271488})}}),
+q(96501,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 40 Moths.",lc={1,"sourceID",301690},qgs={251259},g={
+s(301690,257158,{coords={
+[2413]={{49.3,54.3}}},f=25,qgs={251259}})}}),
+q(96502,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 50 Moths.",lc={1,"spellID",1270675},qgs={251259},g={
+mnt(1270675,{b=1,coords={
+[2413]={{49.3,54.3}}},itemID=263580,lvl=10,qgs={251259}})}}),
+q(96504,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 60 Moths.",lc={1,"decorID",15480},qgs={251259},g={
+de(15480,{coords={
+[2413]={{49.3,54.3}}},itemID=264245,qgs={251259},spellID=1271490})}}),
+q(96505,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 70 Moths.",lc={1,"sourceID",301688},qgs={251259},g={
+s(301688,257159,{coords={
+[2413]={{49.3,54.3}}},f=8,qgs={251259}})}}),
+q(96506,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 80 Moths.",lc={1,"sourceID",302664},qgs={251259},g={
+s(302664,263284,{coords={
+[2413]={{49.3,54.3}}},f=28,qgs={251259}})}}),
+q(96507,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 90 Moths.",lc={1,"decorID",14824},qgs={251259},g={
+de(14824,{coords={
+[2413]={{49.3,54.3}}},itemID=263038,qgs={251259},spellID=1269700})}}),
+q(96508,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 100 Moths.",lc={1,"sourceID",301687},qgs={251259},g={
+s(301687,257161,{coords={
+[2413]={{49.3,54.3}}},f=29,qgs={251259}})}}),
+q(96509,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 110 Moths.",lc={1,"sourceID",302665},qgs={251259},g={
+s(302665,263285,{coords={
+[2413]={{49.3,54.3}}},f=26,qgs={251259}})}}),
+q(96510,{coords={
+[2413]={{49.3,54.3}}},description="Unlocks after you have captured 120 Moths.",lc={1,"spellID",447173},qgs={251259},g={
+mnt(447173,{b=1,coords={
+[2413]={{49.3,54.3}}},itemID=222988,lvl=10,qgs={251259}})}})}}),
 ah(41804,{type="a",g={
 ah(41804.01,{type="crit",g={
 q(89402,{coords={
@@ -168278,8 +168380,8 @@ ach(61706)}})}})}),
 h(-56,{
 r(1246939,{itemID=259362,requireSkill=165,skillID=2915}),
 ah(61052,{type="a",g={
-h(-47,{rwp=120007,g={
-cu(3385)}}),
+h(-47,{rwp=120007,u=2,g={
+cu(3385,{u=2})}}),
 h(-739,{
 o(571099,{coords={
 [2413]={{36.4,48.4}}},questID=92196,g={
@@ -168675,7 +168777,7 @@ o(613818,{coords={
 crit(111823,{achID=62104,awp=120000,id=13})}})}}),
 ah(61263,{type="a",g={
 o(572998,{coords={
-[2413]={{47.1,50.2}}},questID=92426,g={
+[2413]={{47,50.4}}},questID=92426,g={
 i(258900),
 crit(109034,{achID=61263,id=2})}}),
 o(572958,{coords={
@@ -168748,21 +168850,9 @@ o(574126,{description="Spawns randomly throughout the zone."})}),
 h(-58,{
 n(251259,{coords={
 [2413]={{49.3,54.3}}},g={
-mnt(447173,{b=1,cost={{"c",3385,10}},itemID=222988,lvl=10}),
-i(265943,{b=1,cost={{"c",3385,10}},spellID=1271488,g={
-de(15478,{cost={{"c",3316,150}},itemID=264243,spellID=1271488})}}),
-s(301688,257159,{cost={{"c",3385,10}},f=8}),
-s(302663,263283,{cost={{"c",3385,10}},f=20}),
-s(302665,263285,{cost={{"c",3385,10}},f=26}),
-s(301687,257161,{cost={{"c",3385,10}},f=29}),
-s(301686,257155,{cost={{"c",3385,10}},f=20}),
-s(301690,257158,{cost={{"c",3385,10}},f=25}),
-s(302664,263284,{cost={{"c",3385,10}},f=28}),
-i(265946,{b=1,cost={{"c",3385,10}},spellID=1269700,g={
-de(14824,{cost={{"c",3316,500}},itemID=263038,spellID=1269700})}}),
-mnt(1270675,{b=1,cost={{"c",3385,10}},itemID=263580,lvl=10}),
-i(265945,{b=1,cost={{"c",3385,10}},spellID=1271490,g={
-de(15480,{cost={{"c",3316,150}},itemID=264245,spellID=1271490})}})}}),
+de(15478,{cost={{"c",3316,150}},itemID=264243,spellID=1271488}),
+de(14824,{cost={{"c",3316,500}},itemID=263038,spellID=1269700}),
+de(15480,{cost={{"c",3316,150}},itemID=264245,spellID=1271490})}}),
 n(255114,{coords={
 [2576]={{62.7,34.4}}},g={
 de(17886,{cost={{"c",3316,250}},itemID=266259,spellID=1278045}),
@@ -168857,7 +168947,7 @@ flt(56,{
 i(265800,{lvl=78})})}),
 h(-64,{
 i(251881,{b=1})})}}),
-m(2424,{awp=120001,icon=7454100,lore="Seven thousand years ago, when Quel'Thalas was founded, Dath'Remar Sunstrider, ruler of the new elven kingdom, created a mystic fountain at a convergence of ley lines on this island off the northern coast of Eversong Woods, utilizing a vial of water stolen from the Well of Eternity sometime before the Great Sundering. As a result, the island - which became known as Quel'Danas - is also known as the Sunwell Isle.",maps={2432,2565,2566},lvl=80,g={
+m(2424,{awp=120001,icon=7454100,lore="Seven thousand years ago, when Quel'Thalas was founded, Dath'Remar Sunstrider, ruler of the new elven kingdom, created a mystic fountain at a convergence of ley lines on this island off the northern coast of Eversong Woods, utilizing a vial of water stolen from the Well of Eternity sometime before the Great Sundering. As a result, the island - which became known as Quel'Danas - is also known as the Sunwell Isle.",maps={2432,2565,2566,2649},lvl=80,g={
 h(-12,{
 ach(62191),
 ach(62273,{description="Earning this achievement rewards a 'Voidfeather Dragonhawk' flying mount on Anniversary realms if completed before May 16th, 2026."})}),
@@ -170448,7 +170538,7 @@ i(265779,{b=1,f=55,spellID=1277121}),
 i(265778,{b=1,f=55,spellID=1277119}),
 i(265767,{b=1,f=55,spellID=1277064})})}}),
 h(-12,{
-ach(62267,{crs={250100,250101},description="Kill 100 Kapara or Kapara pups around Zul'Aman to draw the wrath of Filo, Loa of Childhood.",providers={{"n",259804}}}),
+ach(62267,{crs={250100,250101,255136},description="Kill 100 Kapara or Kapara pups around Zul'Aman to draw the wrath of Filo, Loa of Childhood.",providers={{"n",259804}}}),
 ach(62269),
 ach(62270,{sourceQuests={93792}}),
 ach(62121,{
@@ -170557,6 +170647,11 @@ crit(110360,{achID=61581,id=8})}}),
 ach(62122,{
 de(15573,{itemID=264335,spellID=1271722}),
 crit(112451,{achID=61453,id=2})}),
+ach(62413,{awp=120007,g={
+crit(113022,{achID=62413,id=2,questID=95527}),
+crit(113023,{achID=62413,id=3,questID=95528}),
+crit(113024,{achID=62413,id=4,questID=95530}),
+crit(113025,{achID=62413,id=5,questID=95531})}}),
 ach(62201,{
 crit(112041,{achID=62201,coords={
 [2437]={{31.7,22.6}}},id=1,providers={{"n",258937}}}),
@@ -171309,6 +171404,22 @@ s(303979,265781,{b=1,f=1}),
 s(303250,264196,{b=1,f=21}),
 s(303978,265775,{b=1,f=28})}}),
 crit(111865,{achID=61452,id=17})}})}})}}),
+h(-753,{awp=120007,description="With the return of Jan’alai, Loa of Fire comes a return to past traditions. She’s ready to bring a new clutch of eggs into the world but Loa Speaker Brek requires assistance with the ceremony and with ensuring all the Loa’s young are released safely from their eggs. Be a part of welcoming the first of her offspring and protecting them as they take their first steps.",g={
+q(94868,{coords={
+[2437]={{55.1,18.3}}},lvl=83,qgs={245512},g={
+i(273844,{spellID=1293937})}}),
+q(94869,{coords={
+[2437]={{55.1,18.3}}},lvl=83,qgs={245512},g={
+i(269612)}}),
+q(94870,{coords={
+[2437]={{55.1,18.3}}},lvl=83,qgs={245512},sourceQuests={94868,94869},g={
+o(639875,{
+i(269666)})}}),
+q(94882,{coords={
+[2437]={{55.1,18.3}}},lvl=83,qgs={245512},sourceQuests={94870}}),
+q(94883,{coords={
+[2437]={{55.1,18.4}}},lvl=83,qgs={264710},sourceQuests={94882},g={
+p(5041,{itemID=271185,npcID=262985,spellID=1288774})}})}}),
 q(93792,{coords={
 [2437]={{43.1,69.2}}},lvl=83,qgs={256510},sourceQuests={91062}}),
 q(94839,{lvl=83,providers={{"i",263938}}}),
@@ -171317,9 +171428,9 @@ h(-46,{
 h(-19,{crs={242023,242024,242025,242026,242027,242028,242031,242032,242033,242034,242035,245691,245692,245975,247976},g={
 mnt(1261316,{b=1,itemID=257152,lvl=10}),
 mnt(1261351,{b=1,itemID=257200,lvl=10}),
-i(265554,{spellID=1276160}),
-i(265543,{spellID=1276160}),
-i(265560,{spellID=1276160})}}),
+i(265554,{b=2,spellID=1276160}),
+i(265543,{b=2,spellID=1276160}),
+i(265560,{b=2,spellID=1276160})}}),
 n(245692,{coords={
 [2437]={{45.2,41.7}}},isDaily=1,questID=91073,g={
 s(303490,264643,{b=1,f=21,lvl=80}),
@@ -171505,7 +171616,7 @@ o(539047,{coords={
 mnt(1261576,{b=1,itemID=257444,lvl=10})}}),
 o(555462,{description="Spawns randomly around the coastal areas of the zone."}),
 o(587912,{coords={
-[2437]={{26,35.9},{26.4,38.4},{26.4,38.5},{27.6,37.7},{27.6,39.1},{29.6,36.6},{51.3,76.7},{51.5,71.6},{51.6,75.1},{52.3,69.9},{56.2,74.9}}}}),
+[2437]={{26,35.9},{26.4,38.4},{26.4,38.5},{27.6,37.7},{27.6,39.1},{29.6,36.6},{51.3,76.7},{51.5,71.6},{51.6,75.1},{52.3,69.9},{56.2,74.9},{56.4,75.2}}}}),
 o(583965,{coords={
 [2437]={{34.4,38.3},{41.9,39.6},{44.8,39},{44.9,41.4},{45.3,38.1},{46.6,37.4},{46.7,40.1},{47.8,46.1},{48,48.6},{48,50.4},{49,46.5}}}}),
 o(587913,{description="Spawns randomly around the area of Atal'Abasi."}),
@@ -171996,7 +172107,53 @@ hqt(92802,{coords={
 hqt(92810,{coords={
 [2424]={{53.2,47.4}}},description="Dialogue becomes available after the cutscene during 'From Darkness, Light' (90867).",qgs={253144},sourceQuests={90862}}),
 hqt(92757,{coords={
-[2424]={{51.2,44.5}}},description="Dialogue becomes available after the cutscene during 'From Darkness, Light' (90867).",qgs={244578},sourceQuests={90862}})}})}})}}),
+[2424]={{51.2,44.5}}},description="Dialogue becomes available after the cutscene during 'From Darkness, Light' (90867).",qgs={244578},sourceQuests={90862}})}})}}),
+ah(62413,{awp=120007,type="a",g={
+ah(62413.01,{type="crit",g={
+q(92897,{description="You can get this Breadcrumb Quest from your Adventure Journal.",isBreadcrumb=1,nextQuests={92895},sourceQuests={90867}}),
+q(92895,{coords={
+[2393]={{45.3,70.5}}},qgs={253640},sourceQuests={92897}}),
+q(92899,{coords={
+[2576]={{43.9,53.2}}},qgs={253654},sourceQuests={92895}}),
+q(92900,{coords={
+[2576]={{43.5,51.1}}},qgs={253651},sourceQuests={92899}}),
+q(92901,{coords={
+[2413]={{38.7,46.8}}},qgs={253675},sourceQuests={92900}}),
+q(92904,{coords={
+[2413]={{34.9,44}}},qgs={255660},sourceQuests={92901}}),
+q(92907,{coords={
+[2536]={{16.4,20.4}}},qgs={253788},sourceQuests={92904}}),
+q(92955,{coords={
+[2536]={{16.9,20.7}}},qgs={256363},sourceQuests={92907}}),
+q(92957,{coords={
+[2437]={{39,38.8}}},qgs={253834},sourceQuests={92955},g={
+o(616804,{coords={
+[2437]={{36.7,37},{36.9,37.9},{37.3,36.9},{37.7,36.7},{37.7,38.7},{37.8,38},{38,35.9},{38,36.9},{38.2,38},{38.5,38.3},{38.6,36.7}}},g={
+i(262654)}})}}),
+q(92958,{coords={
+[2437]={{39,38.9}}},qgs={253833},sourceQuests={92955},g={
+i(262659)}}),
+q(92952,{coords={
+[2437]={{39,38.9}}},qgs={253833},sourceQuests={92957,92958}}),
+q(92953,{coords={
+[2437]={{44.5,36.7}}},qgs={253805,259125},sourceQuests={92952}}),
+q(92951,{coords={
+[2437]={{44.5,36.6}}},qgs={253806},sourceQuests={92952},g={
+o(617077,{
+i(262752,{spellID=1279808})})}}),
+q(92954,{coords={
+[2437]={{44.5,36.6}}},qgs={253806},sourceQuests={92951,92953},g={
+i(262791)}}),
+q(93010,{coords={
+[2437]={{44.5,36.6}}},qgs={253806},sourceQuests={92954}}),
+q(93011,{coords={
+[2536]={{67.8,47.3}}},qgs={253840},sourceQuests={93010}}),
+q(93012,{coords={
+[2437]={{44.4,66.7}}},qgs={259778},sourceQuests={93011},g={
+p(5007,{itemID=268557,npcID=260149,spellID=1282832}),
+crit(113021,{achID=62413,id=1})}}),
+hqt(92898,{coords={
+[2437]={{43.8,68.4}}},description="Dialogue becomes available after completing 'Dead End' (93012).",qgs={253848},sourceQuests={93012}})}})}})}}),
 h(-246,{awp=120001,sharedDescription="Rewarded from most repeatable treasures.",g={
 i(259189,{b=1,requireSkill=171,spellID=1264572}),
 i(259188,{b=1,requireSkill=171,spellID=1264572}),

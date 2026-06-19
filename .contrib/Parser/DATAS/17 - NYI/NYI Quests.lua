@@ -5277,9 +5277,7 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(56639),	--
 			q(56651),	--
 			-- 8.2.0.30329
-			q(56666),	--
 			q(56691),	--
-			q(56717),	--
 			q(56718),	--
 			q(56736),	--
 			q(56738),	--
@@ -9969,6 +9967,7 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(93235),	-- First Craft: M0LL1, Atomic Anomaly
 			q(90436),	-- First Craft: Pigments of the Wind
 		})),
+
 		-- 12.0.1
 		expansion(EXPANSION.MID, patch(0,1), bubbleDownSelf({ ["timeline"] = { CREATED_12_0_1 } }, {
 			q(93523, {["_drop"] = {"g"}}),	-- Short-Supply Reward

@@ -290,11 +290,11 @@ REMOVED_2_5_4_A = "removed 2.5.4.43638";				-- The Burning Crusade Classic 2.5.4
 CREATED_2_5_5 = "created 2.5.5.65340";					-- The Burning Crusade Classic Pre-patch launch on January 13th, 2026
 ADDED_2_5_5 = "added 2.5.5.65340";						-- The Burning Crusade Classic Pre-patch launch on January 13th, 2026
 REMOVED_2_5_5 = "removed 2.5.5.65340";					-- The Burning Crusade Classic Pre-patch launch on January 13th, 2026
-CREATED_2_5_6 = "created 2.5.6";						-- CRIEVE NOTE: Sorry, in a rush. Update this when it happens. TBC Phase 2.
-ADDED_2_5_6 = "added 2.5.6";
-REMOVED_2_5_6 = "removed 2.5.6";
+CREATED_2_5_5_PHASE_2 = "created 2.5.5.67511";			-- The Burning Crusade Classic 2.5.5 phase 2 launch on May 14th, 2026
+ADDED_2_5_5_PHASE_2 = "added 2.5.5.67511";				-- The Burning Crusade Classic 2.5.5 phase 2 launch on May 14th, 2026
+REMOVED_2_5_5_PHASE_2 = "removed 2.5.5.67511";			-- The Burning Crusade Classic 2.5.5 phase 2 launch on May 14th, 2026
 --- DYNAMIC CLASSIC TIMELINES ---
-REMOVED_TBC_PHASE_TWO = REMOVED_2_5_6;
+REMOVED_TBC_PHASE_TWO = REMOVED_2_5_5_PHASE_2;
 
 ----------------------------
 -- WRATH OF THE LICH KING --
@@ -439,9 +439,9 @@ REMOVED_5_5_2 = "removed 5.5.2.64068";					-- Mists of Pandaria Classic 5.5.2 la
 CREATED_5_5_3 = "created 5.5.3.64802";					-- Mists of Pandaria Classic 5.5.3 launch in December 9th, 2025
 ADDED_5_5_3 = "added 5.5.3.64802";						-- Mists of Pandaria Classic 5.5.3 launch in December 9th, 2025
 REMOVED_5_5_3 = "removed 5.5.3.64802";					-- Mists of Pandaria Classic 5.5.3 launch in December 9th, 2025
-CREATED_5_5_4 = "created 5.5.4";						-- Mists of Pandaria Classic 5.5.4 launch in Summer 2026
-ADDED_5_5_4 = "added 5.5.4";							-- Mists of Pandaria Classic 5.5.4 launch in Summer 2026
-REMOVED_5_5_4 = "removed 5.5.4";						-- Mists of Pandaria Classic 5.5.4 launch in Summer 2026
+CREATED_5_5_4 = "created 5.5.4.67969";					-- Mists of Pandaria Classic 5.5.4 launch in June 4th, 2026
+ADDED_5_5_4 = "added 5.5.4.67969";						-- Mists of Pandaria Classic 5.5.4 launch in June 4th, 2026
+REMOVED_5_5_4 = "removed 5.5.4.67969";					-- Mists of Pandaria Classic 5.5.4 launch in June 4th, 2026
 CREATED_5_5_5 = "created 5.5.5";						-- Mists of Pandaria Classic 5.5.5 launch in Autumn 2026
 ADDED_5_5_5 = "added 5.5.5";							-- Mists of Pandaria Classic 5.5.5 launch in Autumn 2026
 REMOVED_5_5_5 = "removed 5.5.5";						-- Mists of Pandaria Classic 5.5.5 launch in Autumn 2026
@@ -683,10 +683,10 @@ REMOVED_12_0_1_SEASONSTART = "removed 12.0.1.66431";	-- Midnight 12.0.1 Season 1
 CREATED_12_0_5 = "created 12.0.5.67088";				-- Midnight 12.0.5 launch on April 21st, 2026
 ADDED_12_0_5 = "added 12.0.5.67088";					-- Midnight 12.0.5 launch on April 21st, 2026
 REMOVED_12_0_5 = "removed 12.0.5.67088";				-- Midnight 12.0.5 launch on April 21st, 2026
+CREATED_12_0_7 = "created 12.0.7.68182";				-- Midnight 12.0.7 launch on June 16th, 2026
+ADDED_12_0_7 = "added 12.0.7.68182";					-- Midnight 12.0.7 launch on June 16th, 2026
+REMOVED_12_0_7 = "removed 12.0.7.68182";				-- Midnight 12.0.7 launch on June 16th, 2026
 
-CREATED_12_0_7 = "created 12.0.7";						-- Midnight 12.0.7 launch in spring 2026
-ADDED_12_0_7 = "added 12.0.7";							-- Midnight 12.0.7 launch in spring 2026
-REMOVED_12_0_7 = "removed 12.0.7";						-- Midnight 12.0.7 launch in spring 2026
 CREATED_12_1_0 = "created 12.1.0";						-- Midnight 12.1.0 launch in summer 2026
 ADDED_12_1_0 = "added 12.1.0";							-- Midnight 12.1.0 launch in summer 2026
 REMOVED_12_1_0 = "removed 12.1.0";						-- Midnight 12.1.0 launch in summer 2026

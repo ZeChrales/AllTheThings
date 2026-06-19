@@ -5,12 +5,13 @@
 local FIELD_ACCOLADE = 3405;
 local DARK_PARTICLE = 267051;
 
+local function sym_cachevoidtouched_invtype(...)
+	return { { "select", "itemID", 263928 },{"pop"},
+			{"extract","itemID"},{"invtype",...} }
+end
+
 root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 	["groups"] = sharedData({
-		["maps"] = {
-			MAP.MIDNIGHT.EVERSONG_WOODS,
-			MAP.MIDNIGHT.ZULAMAN,
-		},
 		["timeline"] = { ADDED_12_0_5 },
 	}, {
 		header(HEADERS.Achievement, 41052, {	-- Lingering Shadows
@@ -219,63 +220,159 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 						}),
 						i(263929, {	-- Cache of Void-Touched Armaments (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 500 } },
+							["skipFill"] = true,
 							["sym"] = { { "select", "itemID", 263928 },{"pop"} },	-- Cache of Void-Touched Armaments (Champion)
 						}),
 						i(276380, {	-- Cache of Void-Touched Armaments: Belts (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WAIST"),
 						}),
 						i(276378, {	-- Cache of Void-Touched Armaments: Boots (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FEET"),
 						}),
 						i(276382, {	-- Cache of Void-Touched Armaments: Bracers (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WRIST"),
 						}),
 						i(276383, {	-- Cache of Void-Touched Armaments: Chest (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_BODY","INVTYPE_CHEST","INVTYPE_ROBE"),
 						}),
 						i(276384, {	-- Cache of Void-Touched Armaments: Cloak (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_CLOAK"),
 						}),
 						i(276381, {	-- Cache of Void-Touched Armaments: Gloves (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HAND"),
 						}),
 						i(276386, {	-- Cache of Void-Touched Armaments: Head (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HEAD"),
 						}),
 						i(276379, {	-- Cache of Void-Touched Armaments: Legs (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_LEGS"),
 						}),
 						i(277126, {	-- Cache of Void-Touched Armaments: Necklaces (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_NECK"),
 						}),
 						i(277127, {	-- Cache of Void-Touched Armaments: Rings (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FINGER"),
 						}),
 						i(276385, {	-- Cache of Void-Touched Armaments: Shoulder (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_SHOULDER"),
 						}),
 						i(277125, {	-- Cache of Void-Touched Armaments: Weapons (Heroic)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WEAPON","INVTYPE_SHIELD","INVTYPE_2HWEAPON","INVTYPE_WEAPONMAINHAND","INVTYPE_RANGED","INVTYPE_RANGEDRIGHT","INVTYPE_WEAPONOFFHAND","INVTYPE_HOLDABLE"),
 						}),
-						i(268996, {	-- Field Accolade (Automatically converts to 10x FIELD_ACCOLADE currency when bought)
+						i(268996, {	-- Field Accolade Pouch (Automatically converts to 10x FIELD_ACCOLADE currency when bought)
 							["cost"] = { { "i", DARK_PARTICLE, 100 } },
+						-- Removing Display of Field Accolades. Creates insane 200+ Items bloat.
+						-- You can farm 300-400 Particles/hour, so 30-40 accolades. Or you can directly farm 1000+ Accolades/hour
+							["skipFill"] = true,	-- don't fill in minilist, but it's still nice to see the available content in tooltip
 							["groups"] = { currency(FIELD_ACCOLADE), },
 						}),
-						i(277124, {	-- Warbound Cache of Void-Touched Armaments (Champion)
+						i(278006, {	-- Warbound Cache of Void-Touched Armaments: Belts (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
 							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WAIST"),
+						}),
+						i(278004, {	-- Warbound Cache of Void-Touched Armaments: Boots (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FEET"),
+						}),
+						i(278008, {	-- Warbound Cache of Void-Touched Armaments: Bracers (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WRIST"),
+						}),
+						i(278009, {	-- Warbound Cache of Void-Touched Armaments: Chest (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_BODY","INVTYPE_CHEST","INVTYPE_ROBE"),
+						}),
+						i(278010, {	-- Warbound Cache of Void-Touched Armaments: Cloak (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_CLOAK"),
+						}),
+						i(278007, {	-- Warbound Cache of Void-Touched Armaments: Gloves (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HAND"),
+						}),
+						i(278012, {	-- Warbound Cache of Void-Touched Armaments: Head (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HEAD"),
+						}),
+						i(278005, {	-- Warbound Cache of Void-Touched Armaments: Legs (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_LEGS"),
+						}),
+						i(278014, {	-- Warbound Cache of Void-Touched Armaments: Necklaces (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_NECK"),
+						}),
+						i(278015, {	-- Warbound Cache of Void-Touched Armaments: Rings (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FINGER"),
+						}),
+						i(278011, {	-- Warbound Cache of Void-Touched Armaments: Shoulder (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_SHOULDER"),
+						}),
+						i(278013, {	-- Warbound Cache of Void-Touched Armaments: Weapons (Champion)
+							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
+							["timeline"] = { ADDED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WEAPON","INVTYPE_SHIELD","INVTYPE_2HWEAPON","INVTYPE_WEAPONMAINHAND","INVTYPE_RANGED","INVTYPE_RANGEDRIGHT","INVTYPE_WEAPONOFFHAND","INVTYPE_HOLDABLE"),
 						}),
 					},
 				}),
@@ -704,6 +801,8 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								i(274882),	-- Hal'hadar Pulse Rifle (COSMETIC!)
 								i(274878),	-- Hal'hadar Shadowripper's Blade (COSMETIC!)
 								i(274883),	-- Hal'hadar Warpguard's Poleaxe (COSMETIC!)
+								i(274885),	-- Phase-Edged Falchion (COSMETIC!)
+								i(274877),	-- Phaseblade Headsplitter (COSMETIC!)
 							},
 						}),
 						i(278027, {	-- Bulging Winter Pack
@@ -779,11 +878,11 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 						}),
 					},
 				}),
-				--n(266234, {	-- Kifaan <The Consortium>
-				--	["coord"] = { 59.8, 19.6, VAL },
-				--	["timeline"] = { ADDED_12_0_7 },
-				--	@DARKAL I need a symlinik here to mirror NPC 265559
-				--}),
+				n(266234, {	-- Kifaan <The Consortium>
+					["coord"] = { 59.8, 19.6, VAL },
+					["timeline"] = { ADDED_12_0_7 },
+					["sym"] = { { "sub", "common_vendor", 265559 } },	-- Kifaan <The Consortium>
+				}),
 				n(265581, {	-- Zuronar <Lightveil Artificer>
 					["coords"] = {
 						{ 48.1, 83.3, NAIGTAL },

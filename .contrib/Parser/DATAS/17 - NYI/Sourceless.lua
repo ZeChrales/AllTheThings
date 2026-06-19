@@ -522,7 +522,9 @@ root(ROOTS.Sourceless, bubbleDownFiltered({
 				q(56127),	--
 				q(56607),	-- Killed Sandcastle?
 				q(56618),	-- killed Tidelord Aquatus (153898)?
+				q(56666, {["repeatable"]=true}),	-- Unflagged at some point for L:80 R:10 (BloodElf) C:9 (WARLOCK)
 				q(56667),	--
+				q(56717),	--
 				q(56742),	--
 				q(56744),	--
 				q(56844),	--
@@ -646,9 +648,10 @@ root(ROOTS.Sourceless, bubbleDownFiltered({
 			expansion(EXPANSION.DF, patch(2,6), bubbleDownSelf({ ["timeline"] = { ADDED_10_2_6 } }, {
 				q(79988),	--
 			})),
+
 			-- 10.2.7
 			expansion(EXPANSION.DF, patch(2,7), bubbleDownSelf({ ["timeline"] = { ADDED_10_2_7 } }, {
-				q(81957),	-- Completed in Blackrock Depths
+				q(81957, {["isYearly"]=true}),	-- Completed in Blackrock Depths
 			})),
 
 		}),
@@ -661,7 +664,6 @@ root(ROOTS.Sourceless, bubbleDownFiltered({
 			-- 11.0.2
 			expansion(EXPANSION.TWW, patch(0,2), bubbleDownSelf({ ["timeline"] = { ADDED_11_0_2 } }, {
 				q(84255),	-- Received item 'The Warband Map to Everywhere All At Once' (itemID 212174) - Not for me, it has to be something else - Darkal
-				q(84587),	-- user obtained within Deaths of Chromie
 			})),
 
 			-- 11.0.5

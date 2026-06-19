@@ -374,6 +374,8 @@
 1267077@@@Scarlet Lady
 1284679@@@Sha-Warped Riding Wolf
 1285897@@@Sha-Warped Owl
+3.80.1.68181
+1291315@@@Spring Panda
 4.4.0.53627
 10790@@@Tiger
 13819@@@Summon Warhorse
@@ -563,6 +565,15 @@
 1257674@@@Embertuft Groveglider
 1257676@@@Petalbranch Groveglider
 1257677@@@Shadowbough Groveglider
+5.5.4.67279
+1298510@@@Reins of the Black Kor'kron Proto-drake
+1298512@@@Stormcrow
+1298515@@@Spectral Gryphon
+1298516@@@Spectral Wind Rider
+5.5.4.67732
+1298510@@@Reins of the Fire Drake
+1302506@@@Frostwyrm
+1302947@@@Darkshade Drake
 6.0.1.18179
 0@@@TEST - Traveler's Tundra Mammoth (Alliance)
 0@@@TEST - Running Wild
@@ -2538,6 +2549,9 @@
 1296758@@@Profit-Green Shreddertank
 1296759@@@High-Yield Shreddertank
 1296760@@@Speculative Shreddertank
+12.0.5.67314
+1283837@@@Zothwing Darkseeker
+1283838@@@Zothwing Deepseeker
 12.0.7.67227
 404018@@@Black-Furred Bakar
 1261369@@@Amani Hex Bear
@@ -2553,3 +2567,44 @@
 1294767@@@Badlands Buzzard
 1297427@@@Tortured Gorger
 1298439@@@Sun Festival's Painted Roc
+12.0.7.67360
+1294663@@@Netherforged Nullframe
+1297427@@@Void-Tortured Gorger
+12.0.7.67669
+1243582@@@Dusk Grimlynx
+12.0.7.67808
+350220@@@Liquid Hot Magma Slug
+12.0.7.68182
+1292344@@@Bilgewater X-TREME Firework Rocket
+12.1.0.68209
+1266211@@@Venomous Gladiator's Goredrake
+1292668@@@Spirit of Tok'jara
+1295958@@@Swift Spectral Eagle
+1296670@@@Vicious Lightbloom Boar
+1296672@@@Vicious Lightbloom Boar
+1296724@@@[PH] Broomstick Spice - Orange
+1296985@@@[PH] Broomstick Spice - Green
+1296986@@@[PH] Broomstick Spice - Grey
+1296987@@@[PH] Broomstick Spice - Hallow
+1296988@@@[PH] Broomstick Spice - Pink
+1296989@@@[PH] Broomstick Spice - Red
+1297217@@@Caustic Venomfang
+1297220@@@Crimson Venomfang
+1297404@@@Apophic Soul Crusher
+1297405@@@Primeval Skyfriend
+1297407@@@Hexflame Reaver
+1297408@@@Preyhunter's Courser
+1298808@@@Corroded Soul Crusher
+1299963@@@Violet-Backed Skyfang
+1299965@@@Emerald Skyfang
+1300776@@@The Writhing Brood
+1300777@@@Venomous Coiler
+1300778@@@Indigo Coiled Horror
+1301070@@@Breath of Blight
+1301074@@@Breath of Ruin
+1301775@@@Umbral Ashes
+1301817@@@[PH] Pygmy Owl
+1305204@@@Crested Burnished Leafmimic
+1305206@@@Crested Aqua Leafmimic
+1305207@@@Crested Verdant Leafmimic
+1305209@@@Crested Violet Leafmimic

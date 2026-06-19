@@ -151,7 +151,7 @@ if C_QuestLog_RequestLoadQuestByID and pcall(app.RegisterEvent, app, "QUEST_DATA
 			if rawget(QuestNameFromServer, questID) == false then
 				QuestNameFromServer[questID] = nil
 				app.PrintDebug("Fresh Quest Name!",questID,QuestNameFromServer[questID])
-				app.CallbackEvent("OnRedrawWindows")
+				app.UpdateRawID("questID", questID, app.DirectGroupRedraw)
 			end
 			ValidQuestDataLoads[questID] = true
 		else
@@ -353,7 +353,7 @@ app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, acco
 			accountWideData.IGNORE_QUEST_PRINT = userignored
 		end
 		local questID
-		for i=2,#args do
+		for i=1,#args do
 			questID = tonumber(args[i])
 			if not questID then
 				app.print("Unable to add a questID to ignore",args[i])
@@ -377,7 +377,7 @@ app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, acco
 			accountWideData.IGNORE_QUEST_PRINT = userignored
 		end
 		local questID
-		for i=2,#args do
+		for i=1,#args do
 			questID = tonumber(args[i])
 			if not questID then
 				app.print("Unable to add a questID to allow",args[i])
@@ -1267,6 +1267,15 @@ local criteriaFuncs = {
 		local group = app.SearchForObject("toyID", toyID, "field") or app.CreateToy(toyID)
 		return group.link or group.text or RETRIEVING_DATA;
 	end,
+
+	decorID = function(decorID)
+		return app.IsAccountCached("Decor", decorID)
+	end,
+	label_decorID = L.LOCK_CRITERIA_DECOR_LABEL or "Known Decor",
+	text_decorID = function(decorID)
+		local group = app.SearchForObject("decorID", decorID, "field") or app.CreateDecor(decorID)
+		return group.link or group.text or RETRIEVING_DATA;
+	end,
 };
 app.AddEventHandler("OnLoad", function()
 	criteriaFuncs.text_spellID = app.GetSpellName
@@ -1277,11 +1286,18 @@ local AWQuestLockers = setmetatable({
 	sourceID = app.ReturnTrue,
 	-- toyID is account-wide, so any lock via that will lock account-wide
 	toyID = app.ReturnTrue,
+	-- decorID is account-wide, so any lock via that will lock account-wide
+	decorID = app.ReturnTrue,
 	-- achID is possibly account-wide, so lock could also mean quest is locked account-wide
 	achID = function(id)
 		local ach = Search("achievementID", id, "field")
 		-- app.PrintDebug("Locked due to AW Ach?",ach.accountWide,app:SearchLink(ach))
 		if ach and ach.accountWide then return true end
+	end,
+	-- spellID is always account-wide when it's a mount, so any mount lock will lock account-wide
+	spellID = function(spellID)
+		local o = app.SearchForObject("mountID", spellID)
+		return o and true or nil
 	end,
 	questID = function(id)
 		-- quest itself is AccountWide, or Once per Account, so anything it locks will be locked account-wide
@@ -2137,15 +2153,13 @@ app.AddEventRegistration("QUEST_ACCEPTED", function(questLogIndex, questID)
 	ResetQuestName(questID)
 	PrintQuestInfoViaCallback(questID, true);
 	CheckFollowupQuests(questID);
-	-- TODO: could figure a way to basically do UpdateRawID but simply DirectGroupRefresh the results instead
-	app.CallbackEvent("OnRefreshWindows")
+	app.UpdateRawID("questID", questID, app.DirectGroupRedraw)
 end)
 app.AddEventRegistration("QUEST_REMOVED", function(questID)
 	if not questID then return end
 	softRefresh();
 	-- app.PrintDebug("QUEST_REMOVED",questID)
-	-- TODO: could figure a way to basically do UpdateRawID but simply DirectGroupRefresh the results instead
-	app.CallbackEvent("OnRefreshWindows")
+	app.UpdateRawID("questID", questID, app.DirectGroupRedraw)
 end)
 app.AddEventRegistration("QUEST_TURNED_IN", function(questID)
 	if not questID then return end
@@ -2558,7 +2572,7 @@ local function BuildSourceQuestChain(group)
 		local questChainHeader = app.CreateRawText(useNested and L.NESTED_QUEST_REQUIREMENTS or L.QUEST_CHAIN_REQ, {
 			description = L.QUEST_CHAIN_REQ_DESC,
 			icon = 135932,
-			OnUpdate = app.AlwaysShowUpdate,
+			OnSetVisibility = app.ReturnTrue,
 			OnClick = app.UI.OnClick.IgnoreRightClick,
 			-- sourceIgnored = true,
 			skipFull = true,
