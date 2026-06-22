@@ -31,7 +31,9 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 					n(QUESTS, {
 						q(96048, {	-- The Time to Strike
 							["description"] = "Can be accepted from the Adventure Journal.",	-- Or will it pop-up on first log-in when eligible?
-							["isBreadcrumb"] = true,	-- ?? You can't accept followup quests without it?
+							["isBreadcrumb"] = true,
+							["qg"] = 263929,	-- Riftblade Maella's Summons
+							["coord"] = { 48.3, 64.6, MAP.MIDNIGHT.SILVERMOON_CITY },
 						}),
 						q(96049, {	-- Stalkers of the Stars
 							["sourceQuest"] = 96048,	-- The Time to Strike
@@ -73,7 +75,12 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								{ 59.3, 19.5, VAL },
 								{ 59.5, 22.1, VAL },
 							},
-							["groups"] = { i(275690) },	-- Riftstalker's Cache
+							["groups"] = {
+								-- Box given to Leveling Characters
+								i(272125),	-- Recruit's Cache
+								-- Box given to Max Level Characters
+								i(275690),	-- Riftstalker's Cache
+							},
 							["isWeekly"] = true,
 						}),
 					}),

@@ -465,6 +465,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 									264787,	-- Magister Umbric
 									269814,	-- Magister Umbric
 								},
+								["lockCriteria"] = { 1, "questID", 96238 },	-- Return to the Omnium
 								["coord"] = { 62.5, 62.6, MAP.MIDNIGHT.EVERSONG_WOODS },
 							}),
 							q(96238, {	-- Return to the Omnium
@@ -473,6 +474,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 									96231,	-- Unravelling the Wards
 								},
 								["qg"] = 264944,	-- Grand Magister Rommath
+								["lockCriteria"] = { 1, "questID", 96232 },	-- Return to the Omnium
 								["coord"] = { 59.0, 59.3, MAP.MIDNIGHT.ISLE_OF_QUELDANAS },
 							}),
 							q(96233, {	-- The Omnium Reawakens
@@ -536,9 +538,11 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 		["timeline"] = { ADDED_12_0_5 },
 		["groups"] = {
 			n(QUESTS, {
-				q(92589, {["isRepeatable"] = true,}),	-- <DNT> Last Scenario Step Quest, Triggers after completing any Void Ritual
+				q(92589, {["isRepeatable"] = true,}),	-- <DNT> Last Scenario Step Quest, Triggers after completing any Void Strike
 				q(94456, {["isRepeatable"] = true,}),	-- <DNT> Last Scenario Step Quest, Triggers after completing a Void Incursion
 				q(96100, {["timeline"] = { ADDED_12_0_7 }}),	-- Triggered when accepting "Seeking Knowledge: The Omnium Folio' (96410)
+				q(97491, {["timeline"] = { ADDED_12_0_7 }, ["isRepeatable"] = true}),	-- <DNT> Early Scenario Steps Quest, Triggers after completing phase 1 of any Void Strike
+				q(97492, {["timeline"] = { ADDED_12_0_7 }, ["isRepeatable"] = true}),	-- <DNT> Early Scenario Steps Quest, Triggers after completing phase 1 of Void Incursion
 			}),
 		},
 	}),

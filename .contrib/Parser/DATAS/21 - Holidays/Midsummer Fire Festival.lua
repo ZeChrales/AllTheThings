@@ -249,6 +249,10 @@ local MERCHANT_GROUPS = {
 		["cost"] = { { "i", 23247, 350 } },	-- Burning Blossom
 		["timeline"] = { ADDED_6_0_2 },
 	}),
+	iensemble(275461, {	-- Ensemble: Sun Festival's Flame Totems
+		["cost"] = { { "i", 23247, 300 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
 	i(166746, {	-- Fire Eater's Hearthstone (TOY!)
 		["cost"] = { { "i", 23247, 300 } },	-- Burning Blossom
 		["timeline"] = { ADDED_8_1_5 },
@@ -277,6 +281,10 @@ local MERCHANT_GROUPS = {
 		["cost"] = { { "i", 23247, 350 } },	-- Burning Blossom
 		["timeline"] = { ADDED_4_3_0 },
 	}),
+	i(276546, {	-- Illusion: Summer Sun Blossom (ILLUSION!)
+		["cost"] = { { "i", 23247, 250 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
 	i(188699, {	-- Insulated Dancing Insoles (TOY!)
 		["cost"] = { { "i", 23247, 100 } },	-- Burning Blossom
 		["timeline"] = { ADDED_9_2_0 },
@@ -300,6 +308,70 @@ local MERCHANT_GROUPS = {
 	i(188695, {	-- Summer Cranial Skillet (TOY!)
 		["cost"] = { { "i", 23247, 150 } },	-- Burning Blossom
 		["timeline"] = { ADDED_9_2_0 },
+	}),
+	i(275460, {	-- Sun Festival's Flamebrand
+		["cost"] = { { "i", 23247, 150 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275469, {	-- Sun Festival's Painted Girdle
+		["cost"] = { { "i", 23247, 50 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275472, {	-- Sun Festival's Painted Greaves
+		["cost"] = { { "i", 23247, 100 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275474, {	-- Sun Festival's Painted Gauntlets
+		["cost"] = { { "i", 23247, 75 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275476, {	-- Sun Festival's Painted Hauberk
+		["cost"] = { { "i", 23247, 100 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275471, {	-- Sun Festival's Leggings
+		["cost"] = { { "i", 23247, 75 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275468, {	-- Sun Festival's Painted Mantle
+		["cost"] = { { "i", 23247, 150 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275466, {	-- Sun Festival's Painted Mask
+		["cost"] = { { "i", 23247, 100 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275470, {	-- Sun Festival's Painted Sash
+		["cost"] = { { "i", 23247, 75 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275473, {	-- Sun Festival's Painted Striders
+		["cost"] = { { "i", 23247, 75 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275465, {	-- Sun Festival's Painted Tunic
+		["cost"] = { { "i", 23247, 100 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275475, {	-- Sun Festival's Painted Wrap
+		["cost"] = { { "i", 23247, 50 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275467, {	-- Sun Festival's Painted Wings
+		["cost"] = { { "i", 23247, 150 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275458, {	-- Sun Festival's Totemic Greataxe
+		["cost"] = { { "i", 23247, 150 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275459, {	-- Sun Festival's Torchblade
+		["cost"] = { { "i", 23247, 150 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
+	}),
+	i(275457, {	-- Sun Festival's Totemic Edge
+		["cost"] = { { "i", 23247, 150 } },	-- Burning Blossom
+		["timeline"] = { ADDED_12_0_7 },
 	}),
 	-- #if AFTER 2.4.0.7994
 	-- This item was originally exclusively available as a quest reward.
@@ -418,6 +490,20 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 								["timeline"] = { ADDED_11_1_7 },
 							}),
 						},
+					}),
+					hqt(97116, {	-- Has rolled for Ahune Special Loot (Daily Accountwide)
+						["name"] = "Has rolled for Ahune Special Loot (Daily Accountwide)",
+						["description"] = "Items under this group only have a chance to drop on your first kill per day for your warband.",
+						["timeline"] = { ADDED_12_0_7 },
+						["isDaily"] = true,
+						["groups"] = {
+							i(275464, {	-- Sun Festival's Painted Roc (MOUNT!)
+								["timeline"] = { ADDED_12_0_7 },
+							}),
+						},
+						--["sym"] = {
+						--	-- TODO: Vendor items probably
+						--},
 					}),
 				},
 			}),
@@ -747,10 +833,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 				["timeline"] = { ADDED_11_1_7 },
 				["sym"] = {{ "achievement_criteria" }},
 			}),
-			ach(61335, {	-- Flame Keeper of Midnight
-				["timeline"] = { ADDED_12_0_7 },
-			}),
-			ach(61336, {	-- Flame Warden of Midnight
+			ach(61336, {	-- Flame Warden of Midnight (A)
 				["timeline"] = { ADDED_12_0_7 },
 			}),
 		})),
@@ -875,9 +958,12 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 				["timeline"] = { ADDED_8_1_5 },
 				["sym"] = {{ "achievement_criteria" }},
 			}),
-			ach(41632, {	-- Flame Keeper of Khaz Algar (A)
+			ach(41632, {	-- Flame Keeper of Khaz Algar (H)
 				["timeline"] = { ADDED_11_1_7 },
 				["sym"] = {{ "achievement_criteria" }},
+			}),
+			ach(61335, {	-- Flame Keeper of Midnight (H)
+				["timeline"] = { ADDED_12_0_7 },
 			}),
 		})),
 		ach(271, {	-- Burning Hot Pole Dance
@@ -1107,6 +1193,72 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 			},
 			-- #endif
 		}),
+		q(92503, {	-- Ignite the Skies: Northern Eastern Kingdoms
+			["sourceQuest"] = 92504,	-- Ignite the Skies: Southern Eastern Kingdoms
+			["qg"] = 252784, -- Fiery Image of Aedh Firebeard
+			["coord"] = { 53.9, 69.3, LOCH_MODAN },
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+		}),
+		q(92106, {	-- Ignite the Skies: Northern Kalimdor
+			["sourceQuests"] = {
+				92435,	-- Ignite the Skies: Orgrimmar
+				92635,	-- Midsummer's Journey to the Barrens
+			},
+			["sourceQuestNumRequired"] = 1,
+			["qgs"] = {
+				250811,	-- Elder Sunhorn
+				265658, -- Fiery Image of Elder Sunhorn
+			},
+			["coords"] = {
+				{ 47.6, 37.9, ORGRIMMAR },
+				{ 62.6, 11.6, NORTHERN_BARRENS },
+			},
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+		}),
+		h(q(92435, {	-- Ignite the Skies: Orgrimmar
+			["qg"] = 250811,	-- Elder Sunhorn
+			["coord"] = { 47.6, 37.9, ORGRIMMAR },
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+		})),
+		q(92821, {	-- Ignite the Skies: Silvermoon
+			["qg"] = 266846,	-- Elder Sunhorn
+			["coord"] = { 48.4, 80.0, MAP.MIDNIGHT.SILVERMOON_CITY },
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+		}),
+		q(92504, {	-- Ignite the Skies: Southern Eastern Kingdoms
+			["sourceQuests"] = {
+				92711,	-- Ignite the Skies: Stormwind
+				92634,	-- Midsummer's Journey to Loch Modan
+			},
+			["sourceQuestNumRequired"] = 1,
+			["qgs"] = {
+				252528,	-- Aedh Firebeard
+				266045,	-- Fiery Image of Aedh Firebeard
+			},
+			["coords"] = {
+				{ 48.0, 72.0, STORMWIND_CITY },
+				{ 74.8, 1.4, NORTHSHIRE_VALLEY },
+			},
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+		}),
+		q(92420, {	-- Ignite the Skies: Southern Kalimdor
+			["sourceQuest"] = 92106,	-- Ignite the Skies: Northern Kalimdor
+			["qg"] = 251986,	-- Fiery Image of Elder Sunhorn
+			["coord"] = { 22.3, 19.2, NORTHERN_BARRENS },
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+		}),
+		a(q(92711, {	-- Ignite the Skies: Stormwind
+			["qg"] = 252528,	-- Aedh Firebeard
+			["coord"] = { 48.0, 72.0, STORMWIND_CITY },
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+		})),
 		q(11964, {	-- Incense for the Summer Scorchlings (A)
 			["qg"] = FESTIVAL_LOREMASTER_ID,
 			["coords"] = FESTIVAL_LOREMASTER_COORDS,
@@ -1150,6 +1302,22 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 			-- #endif
 			["lvl"] = lvlsquish(16, 1, 1),
 		}),
+		h(q(92634, {	-- Midsummer's Journey to Loch Modan
+			["sourceQuest"] = 92420,	-- Ignite the Skies: Southern Kalimdor
+			["qg"] = 251986, -- Fiery Image of Elder Sunhorn
+			["coord"] = { 31.7, 63.6, TANARIS },
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+			["isBreadcrumb"] = true,
+		})),
+		a(q(92635, {	-- Midsummer's Journey to the Barrens
+			["sourceQuest"] = 92503,	-- Ignite the Skies: Northern Eastern Kingdoms
+			["qg"] = 252784, -- Fiery Image of Aedh Firebeard
+			["coord"] = { 19.2, 48.1, THE_HINTERLANDS },
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
+			["isBreadcrumb"] = true,
+		})),
 		q(11924, {	-- More Torch Catching (A)
 			["sourceQuest"] = 11657,	-- Torch Catching (A)
 			["qg"] = FESTIVAL_MASTER_FIRE_EATER_ID,
@@ -1252,6 +1420,18 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 			["timeline"] = { ADDED_2_4_0 },
 			["races"] = HORDE_ONLY,
 		}),
+		h(q(92839, {	-- Reignite the Skies: Orgrimmar
+			["qg"] = 250811,	-- Elder Sunhorn
+			["coord"] = { 47.6, 37.9, ORGRIMMAR },
+			["timeline"] = { ADDED_12_0_7 },
+			["isDaily"] = true,
+		})),
+		a(q(92836, {	-- Reignite the Skies: Stormwind
+			["qg"] = 252528,	-- Aedh Firebeard
+			["coords"] = { 48.0, 72.0, STORMWIND_CITY },
+			["timeline"] = { ADDED_12_0_7 },
+			["isDaily"] = true,
+		})),
 		q(11972, {	-- Shards of Ahune
 			["altQuests"] = { 11976 },	-- Ice Shards (Never Implemented?)
 			["provider"] = { "i", 35723 },	-- Shards of Ahune
@@ -1675,6 +1855,18 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 			["groups"] = {
 				i(23247),	-- Burning Blossom
 			},
+		}),
+		q(92185, {	-- The Tale of the Frost Lord
+			["qgs"] = {
+				FESTIVAL_LOREMASTER_ID,
+				FESTIVAL_TALESPINNER_ID,
+			},
+			["coords"] = {
+				FESTIVAL_LOREMASTER_COORDS,
+				FESTIVAL_TALESPINNER_COORDS,
+			},
+			["timeline"] = { ADDED_12_0_7 },
+			["isYearly"] = true,
 		}),
 		q(11657, {	-- Torch Catching (A)
 			["sourceQuest"] = 11731,	-- Torch Tossing (A)
@@ -3309,6 +3501,31 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 					["coord"] = { 43.65, 32.59, THE_RINGING_DEEPS },
 					["timeline"] = { ADDED_11_1_7 },
 				}),
+				honortheflame(92555, {	-- Honor the Flame - Eversong Woods
+					["qg"] = 252192,	-- Tranquillien Flame Guardian
+					["coord"] = { 48.9, 63.9, MAP.MIDNIGHT.EVERSONG_WOODS },
+					["timeline"] = { ADDED_12_0_7 },
+				}),
+				honortheflame(92556, {	-- Honor the Flame - Silvermoon City
+					["qg"] = 248989,	-- Silvermoon Flame Guardian
+					["coord"] = { 48.6, 80.8, MAP.MIDNIGHT.SILVERMOON_CITY },
+					["timeline"] = { ADDED_12_0_7 },
+				}),
+				honortheflame(92557, {	-- Honor the Flame - Zul'Aman
+					["qg"] = 248975,	-- Zul'Aman Flame Guardian
+					["coord"] = { 54.4, 16.8, MAP.MIDNIGHT.ZULAMAN },
+					["timeline"] = { ADDED_12_0_7 },
+				}),
+				honortheflame(92558, {	-- Honor the Flame - Voidstorm
+					["qg"] = 252194,	-- Voidstorm Void Flame Guardian
+					["coord"] = { 55.7, 70.2, MAP.MIDNIGHT.VOIDSTORM },
+					["timeline"] = { ADDED_12_0_7 },
+				}),
+				honortheflame(92559, {	-- Honor the Flame - Harandar
+					["qg"] = 252196,	-- Harandar Luminescent Guardian
+					["coord"] = { 54.2, 51.6, MAP.MIDNIGHT.HARANDAR },
+					["timeline"] = { ADDED_12_0_7 },
+				}),
 			},
 		}),
 	}),
@@ -3349,24 +3566,36 @@ root(ROOTS.Holidays, applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE
 			["races"] = HORDE_ONLY,
 			["groups"] = MERCHANT_GROUPS,
 		}),
+		n(267838, {	-- Midsummer Merchant
+			["coord"] = { 48.9, 80.9, MAP.MIDNIGHT.SILVERMOON_CITY },
+			["timeline"] = { ADDED_12_0_7 },
+			["sym"] = { { "sub", "common_vendor", 26123 } },	-- Midsummer Supplier (Alliance Vendor)
+		}),
 	}),
 })));
 
 root(ROOTS.HiddenQuestTriggers, {
-	expansion(EXPANSION.TBC, bubbleDownSelf({ ["timeline"] = { ADDED_2_4_0 } }, {
+	expansion(EXPANSION.TBC, {
 		applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE_FESTIVAL_HEADER, {
-			n(QUESTS, {
+			n(QUESTS, bubbleDownSelf({ ["timeline"] = { ADDED_2_4_0 } }, {
 				q(11976),	-- Cross completes on completion of Shards of Ahune
-			}),
+			})),
 		})),
-	})),
-	expansion(EXPANSION.CATA, bubbleDownSelf({ ["timeline"] = { ADDED_4_0_3 } }, {
+	}),
+	expansion(EXPANSION.CATA, {
 		applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE_FESTIVAL_HEADER, {
-			n(QUESTS, {
+			n(QUESTS, bubbleDownSelf({ ["timeline"] = { ADDED_4_0_3 } }, {
 				q(28761),	-- obsolete "Honor the Flame" quest according to Wowhead, triggered together with "Honor the Flame" 11834 in Winterspring
-			}),
+			})),
 		})),
-	})),
+	}),
+	expansion(EXPANSION.MID, {
+		applyevent(EVENTS.MIDSUMMER_FIRE_FESTIVAL, n(MIDSUMMER_FIRE_FESTIVAL_HEADER, {
+			n(QUESTS, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_7 } }, {
+				q(97111),	-- Looted 12.0.7 cosmetic/mount from the bag
+			})),
+		})),
+	}),
 });
 
 -- Remove the holiday flag.

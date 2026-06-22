@@ -42,6 +42,24 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				2566,	-- The Sunwell, Isle of Quel'Danas (Intro)
 			},
 		}),
+		m(MAP.MIDNIGHT.THE_COILED_ISLE, {
+			["icon"] = 7578560,
+			["lore"] = "The Coiled Isle is an island located east of Zul'Aman, connected via the ruined Strait of Hexx'alor and surrounded by Zul'Aman Depths. It is shrouded in a mist.\n\nThe temple here, Atal'Utek, was built to commemorate the Amani tribes' victory over the faceless general Kith'ix. The strait dividing Atal'Utek from Zul'Aman is protected by the loa Pahk.",
+			["timeline"] = { ADDED_12_1_0 },
+			["maps"] = {
+				2639,	-- Crypt of the Denied
+			},
+		}),
+		m(MAP.MIDNIGHT.VAULTS_OF_ATALUTEK, {
+			["icon"] = 136070,
+			--["lore"] = "",
+			["timeline"] = { ADDED_12_1_0 },
+			["maps"] = {
+				2638,	-- Profaned Mausoleum
+				2613,	-- The Underbelly
+				2636,	-- Vault of Restless Bones
+			},
+		}),
 		m(MAP.MIDNIGHT.VOIDSTORM, {
 			["icon"] = 5927657,
 			["lore"] = "It is a world shaped by the Void where predation reigns supreme, and serves as Xal'atath's launching point for her attack on the Sunwell.",

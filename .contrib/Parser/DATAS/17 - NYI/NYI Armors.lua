@@ -3030,7 +3030,7 @@ root(ROOTS.NeverImplemented, n(ARMOR, {
 				i(170903),	-- Felsoul Sandals
 				i(170908),	-- Felsoul Shoulderpads
 				i(170910),	-- Felsoul Wristwraps
-			})
+			}),
 		}),
 		filter(LEATHER, {
 			expansion(EXPANSION.BFA, patch(0,1), {
@@ -6431,6 +6431,302 @@ root(ROOTS.NeverImplemented, n(ARMOR, {
 			i(248037),	-- Twilight Tamer's Spaulders
 			-- Trinket
 			i(268534),	-- Sanctum's Decree
+		})),
+
+		-- 12.0.5
+		expansion(EXPANSION.MID, patch(0,5), bubbleDownSelf({ ["timeline"] = { CREATED_12_0_5 } }, {
+			header(HEADERS.LFGDungeon, 3214, {	-- Sporefall
+				d(DIFFICULTY.RAID.LFR, bubbleDown({ ["bonusID"] = 6894, ["modID"] = 0, }, {
+					filter(CLOTH, {
+						i(268282),	-- Luxurious Loamstriders
+						i(268284),	-- Mycomancer's Rot Robes
+					}),
+					filter(LEATHER, {
+						i(268283),	-- Festerbloom Crown
+						i(268286),	-- Sash of the Putrid Giant
+					}),
+					filter(MAIL, {
+						i(268288),	-- Fungarian Folly Faulds
+						i(268287),	-- Grudgefiend Stompers
+					}),
+					filter(PLATE, {
+						i(268289),	-- Girdle of Devouring Rot
+						i(268285),	-- Putrid Tender's Battleplate
+					}),
+				})),
+				d(DIFFICULTY.RAID.NORMAL, bubbleDown({ ["bonusID"] = 6895, ["modID"] = 0, }, {
+					filter(CLOTH, {
+						i(268282),	-- Luxurious Loamstriders
+						i(268284),	-- Mycomancer's Rot Robes
+					}),
+					filter(LEATHER, {
+						i(268283),	-- Festerbloom Crown
+						i(268286),	-- Sash of the Putrid Giant
+					}),
+					filter(MAIL, {
+						i(268288),	-- Fungarian Folly Faulds
+						i(268287),	-- Grudgefiend Stompers
+					}),
+					filter(PLATE, {
+						i(268289),	-- Girdle of Devouring Rot
+						i(268285),	-- Putrid Tender's Battleplate
+					}),
+				})),
+				d(DIFFICULTY.RAID.HEROIC, bubbleDown({ ["bonusID"] = 6896, ["modID"] = 0, }, {
+					filter(CLOTH, {
+						i(268282),	-- Luxurious Loamstriders
+						i(268284),	-- Mycomancer's Rot Robes
+					}),
+					filter(LEATHER, {
+						i(268283),	-- Festerbloom Crown
+						i(268286),	-- Sash of the Putrid Giant
+					}),
+					filter(MAIL, {
+						i(268288),	-- Fungarian Folly Faulds
+						i(268287),	-- Grudgefiend Stompers
+					}),
+					filter(PLATE, {
+						i(268289),	-- Girdle of Devouring Rot
+						i(268285),	-- Putrid Tender's Battleplate
+					}),
+				})),
+				d(DIFFICULTY.RAID.MYTHIC, bubbleDown({ ["bonusID"] = 6897, ["modID"] = 0, }, {
+					filter(CLOTH, {
+						i(268282),	-- Luxurious Loamstriders
+						i(268284),	-- Mycomancer's Rot Robes
+					}),
+					filter(LEATHER, {
+						i(268283),	-- Festerbloom Crown
+						i(268286),	-- Sash of the Putrid Giant
+					}),
+					filter(MAIL, {
+						i(268288),	-- Fungarian Folly Faulds
+						i(268287),	-- Grudgefiend Stompers
+					}),
+					filter(PLATE, {
+						i(268289),	-- Girdle of Devouring Rot
+						i(268285),	-- Putrid Tender's Battleplate
+					}),
+				})),
+			}),
+			n(WORLD_BOSSES, {
+				filter(CLOTH, {
+					i(275224, {["modID"] = 4 }),	-- Mertei's Adjutant Leggings
+					i(275224, {["bonusID"] = 6894 }),	-- Mertei's Adjutant Leggings
+					i(275224, {["bonusID"] = 6895 }),	-- Mertei's Adjutant Leggings
+					i(275224, {["bonusID"] = 6896 }),	-- Mertei's Adjutant Leggings
+					i(275224, {["bonusID"] = 6897 }),	-- Mertei's Adjutant Leggings
+				}),
+				filter(LEATHER, {
+					i(275225, {["modID"] = 4 }),	-- Toxic Voidscythe Spaulders
+					i(275225, {["bonusID"] = 6894 }),	-- Toxic Voidscythe Spaulders
+					i(275225, {["bonusID"] = 6895 }),	-- Toxic Voidscythe Spaulders
+					i(275225, {["bonusID"] = 6896 }),	-- Toxic Voidscythe Spaulders
+					i(275225, {["bonusID"] = 6897 }),	-- Toxic Voidscythe Spaulders
+				}),
+				filter(MAIL, {
+					i(275226, {["modID"] = 4 }),	-- Shredclaw Handler's Grips
+					i(275226, {["bonusID"] = 6894 }),	-- Shredclaw Handler's Grips
+					i(275226, {["bonusID"] = 6895 }),	-- Shredclaw Handler's Grips
+					i(275226, {["bonusID"] = 6896 }),	-- Shredclaw Handler's Grips
+					i(275226, {["bonusID"] = 6897 }),	-- Shredclaw Handler's Grips
+				}),
+				filter(PLATE, {
+					i(275227, {["modID"] = 4 }),	-- Leth'ir's Dress Sabatons
+					i(275227, {["bonusID"] = 6894 }),	-- Leth'ir's Dress Sabatons
+					i(275227, {["bonusID"] = 6895 }),	-- Leth'ir's Dress Sabatons
+					i(275227, {["bonusID"] = 6896 }),	-- Leth'ir's Dress Sabatons
+					i(275227, {["bonusID"] = 6897 }),	-- Leth'ir's Dress Sabatons
+				}),
+			}),
+			-- Blizzard decided to make another copy of random WoD NYI sourceIDs again in 12.0.5
+			expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { CREATED_12_0_5 } }, {
+				itemsource(64383),	-- Belt of Singing Hooves
+				itemsource(64882),	-- Bonebreaker Boots
+				itemsource(64389),	-- Chain of Natural Fury
+				itemsource(64377),	-- Chainhoof Grips
+				itemsource(67803),	-- Chestguard of Rejuvenation
+				itemsource(64386),	-- Cord of Ruination
+				itemsource(64815),	-- Cord of Skulls
+				itemsource(64330),	-- Cowl of Grim Shadows
+				itemsource(64277),	-- Crystalhide Belt
+				itemsource(65714),	-- Crystalhide Bracers
+				itemsource(65678),	-- Crystalhide Cowl
+				itemsource(65652),	-- Crystalhide Grips
+				itemsource(64262),	-- Crystalhide Legguards
+				itemsource(65717),	-- Crystal-Leaf Bracers
+				itemsource(64280),	-- Crystal-Leaf Chain
+				itemsource(65655),	-- Crystal-Leaf Gloves
+				itemsource(65681),	-- Crystal-Leaf Helm
+				itemsource(64265),	-- Crystal-Leaf Legguards
+				itemsource(65720),	-- Crystal-Plated Bracers
+				itemsource(65658),	-- Crystal-Plated Gauntlets
+				itemsource(64283),	-- Crystal-Plated Greatbelt
+				itemsource(65684),	-- Crystal-Plated Greathelm
+				itemsource(64268),	-- Crystal-Plated Legplates
+				itemsource(64398),	-- Down-Lined Leggings
+				itemsource(69155),	-- Ethereal Crystalhide Belt
+				itemsource(69131),	-- Ethereal Crystalhide Bracers
+				itemsource(69119),	-- Ethereal Crystalhide Cowl
+				itemsource(69167),	-- Ethereal Crystalhide Grips
+				itemsource(69143),	-- Ethereal Crystalhide Legguards
+				itemsource(69134),	-- Ethereal Crystal-Leaf Bracers
+				itemsource(69158),	-- Ethereal Crystal-Leaf Chain
+				itemsource(69170),	-- Ethereal Crystal-Leaf Gloves
+				itemsource(69122),	-- Ethereal Crystal-Leaf Helm
+				itemsource(69146),	-- Ethereal Crystal-Leaf Legguards
+				itemsource(69137),	-- Ethereal Crystal-Plated Bracers
+				itemsource(69173),	-- Ethereal Crystal-Plated Gauntlets
+				itemsource(69161),	-- Ethereal Crystal-Plated Greatbelt
+				itemsource(69125),	-- Ethereal Crystal-Plated Greathelm
+				itemsource(69149),	-- Ethereal Crystal-Plated Legplates
+				itemsource(69116),	-- Ethereal Windcrystal Hood
+				itemsource(69128),	-- Ethereal Windcrystal Bracers
+				itemsource(69140),	-- Ethereal Windcrystal Leggings
+				itemsource(69152),	-- Ethereal Windcrystal Cord
+				itemsource(69164),	-- Ethereal Windcrystal Wraps
+				itemsource(65628),	-- Exceptional Crystalhide Belt
+				itemsource(65702),	-- Exceptional Crystalhide Bracers
+				itemsource(65690),	-- Exceptional Crystalhide Cowl
+				itemsource(64289),	-- Exceptional Crystalhide Grips
+				itemsource(65604),	-- Exceptional Crystalhide Legguards
+				itemsource(65705),	-- Exceptional Crystal-Leaf Bracers
+				itemsource(65631),	-- Exceptional Crystal-Leaf Chain
+				itemsource(64292),	-- Exceptional Crystal-Leaf Gloves
+				itemsource(65693),	-- Exceptional Crystal-Leaf Helm
+				itemsource(65607),	-- Exceptional Crystal-Leaf Legguards
+				itemsource(65708),	-- Exceptional Crystal-Plated Bracers
+				itemsource(64295),	-- Exceptional Crystal-Plated Gauntlets
+				itemsource(65634),	-- Exceptional Crystal-Plated Greatbelt
+				itemsource(65696),	-- Exceptional Crystal-Plated Greathelm
+				itemsource(65610),	-- Exceptional Crystal-Plated Legplates
+				itemsource(64286),	-- Exceptional Windcrystal Wraps
+				itemsource(65601),	-- Exceptional Windcrystal Leggings
+				itemsource(65625),	-- Exceptional Windcrystal Cord
+				itemsource(65687),	-- Exceptional Windcrystal Hood
+				itemsource(65699),	-- Exceptional Windcrystal Bracers
+				itemsource(67806),	-- Falling Leaf Breastplate
+				itemsource(67816),	-- Featherflame Sandals
+				itemsource(66788),	-- Flame Infusion Drape
+				itemsource(65640),	-- Flawless Crystalhide Belt
+				itemsource(64318),	-- Flawless Crystalhide Bracers
+				itemsource(64306),	-- Flawless Crystalhide Cowl
+				itemsource(65664),	-- Flawless Crystalhide Grips
+				itemsource(65616),	-- Flawless Crystalhide Legguards
+				itemsource(64321),	-- Flawless Crystal-Leaf Bracers
+				itemsource(65643),	-- Flawless Crystal-Leaf Chain
+				itemsource(65667),	-- Flawless Crystal-Leaf Gloves
+				itemsource(64309),	-- Flawless Crystal-Leaf Helm
+				itemsource(65619),	-- Flawless Crystal-Leaf Legguards
+				itemsource(64324),	-- Flawless Crystal-Plated Bracers
+				itemsource(65670),	-- Flawless Crystal-Plated Gauntlets
+				itemsource(65646),	-- Flawless Crystal-Plated Greatbelt
+				itemsource(64312),	-- Flawless Crystal-Plated Greathelm
+				itemsource(65622),	-- Flawless Crystal-Plated Legplates
+				itemsource(64315),	-- Flawless Windcrystal Bracers
+				itemsource(65637),	-- Flawless Windcrystal Cord
+				itemsource(64303),	-- Flawless Windcrystal Hood
+				itemsource(65613),	-- Flawless Windcrystal Leggings
+				itemsource(65661),	-- Flawless Windcrystal Wraps
+				itemsource(66835),	-- Fleshhook Cloak
+				itemsource(64345),	-- Gatecrasher's Chain Boots
+				itemsource(64380),	-- Gauntlets of Impenetrability
+				itemsource(64374),	-- Grips of Natural Fury
+				itemsource(64357),	-- Gruntslayer Shoulderguards
+				itemsource(64401),	-- Leggings of Flowing Feathers
+				itemsource(64327),	-- Oana's Observant Gaze
+				itemsource(64333),	-- One-Eyed Chain Helm
+				itemsource(64348),	-- Ozymandias' Burdensome Treads
+				itemsource(64404),	-- Phoenixfire Legplates
+				itemsource(67819),	-- Phoenix-Rider Boots
+				itemsource(64371),	-- Quadripedal Grips
+				itemsource(67809),	-- Robes of the Ageless
+				itemsource(64339),	-- Sandals of Marauding
+				itemsource(64354),	-- Scaling Hook Spaulders
+				itemsource(64395),	-- Solarflame Legwraps
+				itemsource(64360),	-- Spaulders of Primal Ferocity
+				itemsource(67822),	-- Talongrip Spurs
+				itemsource(64336),	-- Tehax's Penetrating Visage
+				itemsource(64392),	-- Waistplate of Bladed Force
+				itemsource(64351),	-- Wall-Breaker's Shoulderpads
+				itemsource(64342),	-- Wall-Climber's Treads
+				itemsource(65711),	-- Windcrystal Bracers
+				itemsource(64274),	-- Windcrystal Cord
+				itemsource(64259),	-- Windcrystal Leggings
+				itemsource(65675),	-- Windcrystal Hood
+				itemsource(65649),	-- Windcrystal Wraps
+				itemsource(67825),	-- Wing-Forged Greatboots
+				itemsource(67800),	-- Witherleaf Chestguard
+			})),
+			filter(CLOAKS, {
+				i(276799, {["modID"] = 4 }),	-- Riftstalker's Shade Cloak
+				i(276799, {["modID"] = 3 }),	-- Riftstalker's Shade Cloak
+				i(276799, {["modID"] = 5 }),	-- Riftstalker's Shade Cloak
+			}),
+			filter(CLOTH, {
+				i(276794, {["modID"] = 4 }),	-- Archmage's Cord of Light
+				i(276794, {["modID"] = 3 }),	-- Archmage's Cord of Light
+				i(276794, {["modID"] = 5 }),	-- Archmage's Cord of Light
+				i(276794, {["bonusID"] = 6894 }),	-- Archmage's Cord of Light
+				i(276794, {["bonusID"] = 6895 }),	-- Archmage's Cord of Light
+				i(276794, {["bonusID"] = 6896 }),	-- Archmage's Cord of Light
+				i(276794, {["bonusID"] = 6897 }),	-- Archmage's Cord of Light
+				i(276788, {["modID"] = 4 }),	-- Kifaan's Spare Bindings
+				i(276788, {["modID"] = 3 }),	-- Kifaan's Spare Bindings
+				i(276788, {["modID"] = 5 }),	-- Kifaan's Spare Bindings
+				i(276788, {["bonusID"] = 6894 }),	-- Kifaan's Spare Bindings
+				i(276788, {["bonusID"] = 6895 }),	-- Kifaan's Spare Bindings
+				i(276788, {["bonusID"] = 6896 }),	-- Kifaan's Spare Bindings
+				i(276788, {["bonusID"] = 6897 }),	-- Kifaan's Spare Bindings
+			}),
+			filter(LEATHER, {
+				i(276792, {["modID"] = 4 }),	-- Belt of the Illidari Vanguard
+				i(276792, {["modID"] = 3 }),	-- Belt of the Illidari Vanguard
+				i(276792, {["modID"] = 5 }),	-- Belt of the Illidari Vanguard
+				i(276792, {["bonusID"] = 6894 }),	-- Belt of the Illidari Vanguard
+				i(276792, {["bonusID"] = 6895 }),	-- Belt of the Illidari Vanguard
+				i(276792, {["bonusID"] = 6896 }),	-- Belt of the Illidari Vanguard
+				i(276792, {["bonusID"] = 6897 }),	-- Belt of the Illidari Vanguard
+				i(276790, {["modID"] = 4 }),	-- Runed Illidari Wraps
+				i(276790, {["modID"] = 3 }),	-- Runed Illidari Wraps
+				i(276790, {["modID"] = 5 }),	-- Runed Illidari Wraps
+				i(276790, {["bonusID"] = 6894 }),	-- Runed Illidari Wraps
+				i(276790, {["bonusID"] = 6895 }),	-- Runed Illidari Wraps
+				i(276790, {["bonusID"] = 6896 }),	-- Runed Illidari Wraps
+				i(276790, {["bonusID"] = 6897 }),	-- Runed Illidari Wraps
+			}),
+			filter(MAIL, {
+				i(276793, {["modID"] = 4 }),	-- Longshot's Fletched Girdle
+				i(276793, {["modID"] = 3 }),	-- Longshot's Fletched Girdle
+				i(276793, {["modID"] = 5 }),	-- Longshot's Fletched Girdle
+				i(276793, {["bonusID"] = 6894 }),	-- Longshot's Fletched Girdle
+				i(276793, {["bonusID"] = 6895 }),	-- Longshot's Fletched Girdle
+				i(276793, {["bonusID"] = 6896 }),	-- Longshot's Fletched Girdle
+				i(276793, {["bonusID"] = 6897 }),	-- Longshot's Fletched Girdle
+				i(276787, {["modID"] = 4 }),	-- Reinforced Expedition Bands
+				i(276787, {["modID"] = 3 }),	-- Reinforced Expedition Bands
+				i(276787, {["modID"] = 5 }),	-- Reinforced Expedition Bands
+				i(276787, {["bonusID"] = 6894 }),	-- Reinforced Expedition Bands
+				i(276787, {["bonusID"] = 6895 }),	-- Reinforced Expedition Bands
+				i(276787, {["bonusID"] = 6896 }),	-- Reinforced Expedition Bands
+				i(276787, {["bonusID"] = 6897 }),	-- Reinforced Expedition Bands
+			}),
+			filter(PLATE, {
+				i(276789, {["modID"] = 4 }),	-- Lightveil Watcher's Vambraces
+				i(276789, {["modID"] = 3 }),	-- Lightveil Watcher's Vambraces
+				i(276789, {["modID"] = 5 }),	-- Lightveil Watcher's Vambraces
+				i(276789, {["bonusID"] = 6894 }),	-- Lightveil Watcher's Vambraces
+				i(276789, {["bonusID"] = 6895 }),	-- Lightveil Watcher's Vambraces
+				i(276789, {["bonusID"] = 6896 }),	-- Lightveil Watcher's Vambraces
+				i(276789, {["bonusID"] = 6897 }),	-- Lightveil Watcher's Vambraces
+				i(276791, {["modID"] = 4 }),	-- Tala'saan's Training Belt
+				i(276791, {["modID"] = 3 }),	-- Tala'saan's Training Belt
+				i(276791, {["modID"] = 5 }),	-- Tala'saan's Training Belt
+				i(276791, {["bonusID"] = 6894 }),	-- Tala'saan's Training Belt
+				i(276791, {["bonusID"] = 6895 }),	-- Tala'saan's Training Belt
+				i(276791, {["bonusID"] = 6896 }),	-- Tala'saan's Training Belt
+				i(276791, {["bonusID"] = 6897 }),	-- Tala'saan's Training Belt
+			}),
 		})),
 	}),
 }));

@@ -1915,8 +1915,8 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 2339,"Materials produced from disenchanting",0,0,4,0,0,0
 2340,,2339,0,0,5304,1,0
 2342,"Grab the flag and capture it in under 75 seconds.",0,0,4,0,0,0
-2343,"Pick up flag while it's at the base",2342,1,0,5601,1,2
-2344,"Cap in 75 seconds",2342,1,0,5602,2,2
+2343,"Pick up flag while it's at the base",2342,1,0,113796,0,2
+2344,"Cap in 75 seconds",2342,1,0,5602,1,2
 2346,"Equipped epic items in item slots",0,1,7,0,0,0
 2347,"Ring is Epic!",2346,1,0,4773,6,0
 2348,"Weapon is Epic!",2346,1,0,4777,10,0
@@ -3909,8 +3909,8 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 4748,"Scarlet Point",4733,0,0,4177,17,0
 4749,"Obsidian Dragonshrine",4733,0,0,4162,3,0
 4750,"Wyrmrest Temple",4733,0,0,4172,12,0
-4753,"Cap in 75 seconds",4752,1,0,7769,2,2
-4754,"Pick up flag while it's at the base",4752,1,0,5603,1,2
+4753,"Cap in 75 seconds",4752,1,0,7769,1,2
+4754,"Pick up flag while it's at the base",4752,1,0,113797,0,2
 4756,"Complete the Defending Wyrmrest Temple quest in under 3 minutes while not in a group.",0,0,4,0,0,0
 4757,"Defending Wyrmrest Temple",4756,1,0,3924,1,2
 4759,"Owner of one of the original epic mounts that are no longer attainable.",0,1,8,0,0,0
@@ -7923,9 +7923,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 11106,Marwyn,11054,0,0,13272,53,0
 11107,"The Lich King",11054,0,0,13273,54,0
 11108,"Eadric the Pure",11054,0,0,13264,45,0
-11110,"First guild on the realm to defeat Ragnaros in Firelands on Heroic Difficulty while in a guild group.",0,1,8,0,0,0
-11111,Ragnaros,11110,1,0,18103,1,2
-11112,Ragnaros,11110,1,0,18104,2,2
+11110,"First guild on the realm to defeat Ragnaros in Firelands on Heroic Difficulty while in a guild group.",0,1,4,0,0,0
+11111,Ragnaros,221650,1,0,18103,0,2
+11112,Ragnaros,221650,1,0,18104,1,2
 11114,"During the Feast of Winter Veil, use your Winter Veil Disguise kit to become a snowman and then dance with another snowman in Dalaran.",0,0,4,0,0,0
 11115,"Winter Veil Disguise Kit in Dalaran",11114,1,0,6258,2,2
 11116,"Winter Veil Disguise Kit",11114,1,0,6257,3,2
@@ -8266,7 +8266,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 12467,"Complete 50 quests in Southern Barrens.",0,0,4,0,0,0
 12468,"Southern Barrens",12467,50,0,13848,1,1
 12470,"First priest on the realm to achieve level 85.",0,0,4,0,0,0
-12471,"Level to 85",12470,85,0,5216,1,2
+12471,"Level to 85",12470,85,0,5216,0,2
 12473,"Defeat the trio of Crown Chemical Co. apothecaries in Shadowfang Keep.",0,0,4,0,0,0
 12474,,12473,1,0,12992,1,2
 12476,"Proud owner of the 2009 Vintage Green Brewfest Stein.",0,1,8,0,0,0
@@ -8762,9 +8762,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 13113,"Obtain 600 skill points in cooking.",0,0,4,0,0,0
 13114,"Obtain 600 skill points in cooking.",13113,600,0,5701,0,2
 13116,"First druid on the realm to achieve level 85.",0,0,4,0,0,0
-13117,"Level to 85",13116,85,0,5214,1,2
+13117,"Level to 85",13116,85,0,5214,0,2
 13119,"First mage on the realm to achieve level 85.",0,0,4,0,0,0
-13120,"Level to 85",13119,85,0,5018,1,2
+13120,"Level to 85",13119,85,0,5018,0,2
 13122,"Defeat Mutanus the Devourer while in a guild group.",0,1,8,0,0,0
 13123,"Mutanus the Devourer",13122,1,0,14317,1,2
 13125,"Defeat Hogger while in a guild group.",0,1,8,0,0,0
@@ -9639,9 +9639,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 14126,"Heroic Rotface 10 (TRACKING ONLY) <DND>",0,0,4,0,0,0
 14127,Rotface,14126,1,0,13119,1,2
 14131,"First paladin on the realm to achieve level 85.",0,0,4,0,0,0
-14132,"Level to 85",14131,85,0,5215,1,2
+14132,"Level to 85",14131,85,0,5215,0,2
 14134,"First warrior on the realm to achieve level 85.",0,0,4,0,0,0
-14135,"Level to 85",14134,85,0,5220,1,2
+14135,"Level to 85",14134,85,0,5220,0,2
 14137,"Defeat the leaders of Scholomance while in a guild group.",0,0,4,0,0,0
 14139,"Darkmaster Gandling",14137,1,0,22241,0,0
 14141,"Defeat Professor Putricide without using Regurgitated Ooze on the Abomination in 25-player mode.",0,1,8,0,0,0
@@ -10054,7 +10054,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 14673,"Loot 500 Stone Keeper's Shards.",0,0,4,0,0,0
 14674,"Loot 500 Stone Keeper's Shards",14673,500,0,7403,1,1
 14679,"First death knight on the realm to achieve level 85.",0,0,4,0,0,0
-14680,"Level to 85",14679,85,0,5219,1,2
+14680,"Level to 85",14679,85,0,5219,0,2
 14682,"Defeat Aku'mai while in a guild group.",0,0,4,0,0,0
 14683,Aku'mai,14682,1,0,14319,1,2
 14685,"Defeat Mekgineer Thermaplugg while in a guild group.",0,1,8,0,0,0
@@ -10308,9 +10308,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 15026,"Rescue Valithria Dreamwalker",15025,1,0,12954,1,0
 15027,Sindragosa,15025,1,0,12955,2,0
 15029,"First person on the realm to achieve level 85.",0,0,4,0,0,0
-15030,"Level 85",15029,85,0,5212,1,2
+15030,"Level 85",15029,85,0,5212,0,2
 15032,"First hunter on the realm to achieve level 85.",0,0,4,0,0,0
-15033,"Level to 85",15032,85,0,5218,1,2
+15033,"Level to 85",15032,85,0,5218,0,2
 15035,"Defeat Chief Ukorz Sandscalp while in a guild group.",0,0,4,0,0,0
 15036,"Chief Ukorz Sandscalp",15035,1,0,14331,1,2
 15038,"Complete the Crucible of Carnage quests in Twilight Highlands up to and including The Twilight Terror!",0,0,4,0,0,0
@@ -10497,15 +10497,15 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 15301,"Vile Spirits",15299,1,0,13164,2,2
 15303,"Defeat the Assembly of Iron with Stormcaller Brundir as the last member alive in 10-player mode.",0,0,4,0,0,0
 15304,"Stormcaller Brundir",15303,1,0,10083,1,2
-15306,"First guild on the realm to defeat Nefarian in Blackwing Descent on Heroic difficulty while in a guild group.",0,1,8,0,0,0
-15307,Nefarian,15306,1,0,15698,2,2
-15308,Nefarian,15306,1,0,15697,1,2
-15310,"First guild on the realm to defeat Al'Akir in the Throne of the Four Winds on Heroic difficulty while in a guild group.",0,1,8,0,0,0
-15311,Al'Akir,15310,1,0,15700,2,2
-15312,Al'Akir,15310,1,0,15699,1,2
-15314,"First guild on the realm to defeat Sinestra in the Bastion of Twilight on Heroic difficulty while in a guild group.",0,1,8,0,0,0
-15315,Sinestra,15314,1,0,15702,2,2
-15316,Sinestra,15314,1,0,15701,1,2
+15306,"First guild on the realm to defeat Nefarian in Blackwing Descent on Heroic difficulty while in a guild group.",0,1,4,0,0,0
+15307,Nefarian,221595,1,0,15698,0,2
+15308,Nefarian,221595,1,0,15697,1,2
+15310,"First guild on the realm to defeat Al'Akir in the Throne of the Four Winds on Heroic difficulty while in a guild group.",0,1,4,0,0,0
+15311,Al'Akir,221648,1,0,15700,1,2
+15312,Al'Akir,221648,1,0,15699,0,2
+15314,"First guild on the realm to defeat Sinestra in the Bastion of Twilight on Heroic difficulty while in a guild group.",0,1,4,0,0,0
+15315,Sinestra,221652,1,0,15702,1,2
+15316,Sinestra,221652,1,0,15701,0,2
 15318,"Complete the Burning Crusade raid achievements listed below while in a guild group.",0,0,4,0,0,0
 15319,"Serpentshrine Cavern",15318,0,0,14235,4,0
 15320,"Tempest Keep",15318,0,0,14237,6,0
@@ -10597,7 +10597,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 15449,"Earn a battleground rating of 2400.",0,0,4,0,0,0
 15450,,15449,2400,0,15300,1,2
 15452,"First person on the realm to achieve 525 skill in herbalism.",0,0,4,0,0,0
-15453,,15452,525,0,5569,1,2
+15453,,15452,525,0,5569,0,2
 15455,"Heroic Putricide 10 (TRACKING ONLY) <DND>",0,0,4,0,0,0
 15456,"Professor Putricide",15455,1,0,13128,1,2
 15458,"Heroic Valithria 10 (TRACKING ONLY) <DND>",0,0,4,0,0,0
@@ -10679,7 +10679,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 15555,"Death Knight",15546,1,0,15534,1,0
 15556,Druid,15546,1,0,15535,2,0
 15558,"First person on the realm to achieve 450 skill in archaeology.",0,0,4,0,0,0
-15559,,15558,450,0,13812,1,2
+15559,,15558,450,0,13812,0,2
 15561,"Perform a /gasp emote under the double rainbow in the Battle For Gilneas.",0,0,4,0,0,0
 15562,"Peform a /gasp emote beneath the double rainbow in the Battle for Gilneas",15561,1,0,14989,1,2
 15565,"Al'Akir 25-Heroic",15564,1,0,16297,2,2
@@ -11461,7 +11461,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 16465,"Karkrog the Exterminator",16462,0,0,15949,2,0
 16466,"Korthalon the Black",16462,0,0,15951,4,0
 16468,"First person on the realm to achieve 525 skill in alchemy.",0,0,4,0,0,0
-16469,,16468,525,0,5565,1,2
+16469,,16468,525,0,5565,0,2
 16471,"Equip an epic item in every slot with a minimum item level of 359.",0,0,4,0,0,0
 16472,Head,16471,1,0,15330,1,0
 16473,Neck,16471,1,0,15331,2,0
@@ -11728,7 +11728,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 16820,"Helix Gearbreaker",16819,20,0,16209,1,1
 16823,,16822,1500,0,15300,1,2
 16825,"First person on the realm to achieve 525 skill in blacksmithing.",0,0,4,0,0,0
-16826,,16825,525,0,5566,1,2
+16826,,16825,525,0,5566,0,2
 16828,"Recruit all 8 characters into Fiona's travelling party in Eastern Plaguelands.",0,0,4,0,0,0
 16829,"Beezil Linkspanner",16828,1,0,17428,8,0
 16830,"Gidwin Goldbraids",16828,1,0,15625,2,0
@@ -11867,9 +11867,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 16980,"Earn exalted status with Therazane.",0,0,4,0,0,0
 16981,"Therazane exalted",16980,42000,0,14517,1,2
 16983,"First person on the realm to achieve 525 skill in cooking.",0,0,4,0,0,0
-16984,,16983,525,0,5701,1,2
+16984,,16983,525,0,5701,0,2
 16986,"First person on the realm to achieve 525 skill in inscription.",0,0,4,0,0,0
-16987,,16986,525,0,5716,1,2
+16987,,16986,525,0,5716,0,2
 16992,"Complete the raids and Heroic dungeons listed below.",0,0,4,0,0,0
 16993,"Heroic: The Stonecore",16992,0,0,13562,3,0
 16994,"The Bastion of Twilight",16992,0,0,16061,12,0
@@ -11979,9 +11979,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 17127,"Classy Trolls",17122,0,0,14584,2,0
 17128,"Classy Blood Elves",17122,0,0,14586,4,0
 17130,"First person on the realm to achieve 525 skill in leatherworking.",0,0,4,0,0,0
-17131,,17130,525,0,5718,1,2
+17131,,17130,525,0,5718,0,2
 17133,"First person on the realm to achieve 525 skill in archaeology.",0,0,4,0,0,0
-17134,,17133,525,0,13812,1,2
+17134,,17133,525,0,13812,0,2
 17136,"Number of times the player kicked someone in LFG, voting, but not initiating",0,0,4,0,0,0
 17137,,17136,0,0,13423,1,0
 17139,"Number of times the player abandoned an LFG dungeon",0,0,4,0,0,0
@@ -12060,23 +12060,23 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 17239,Cho'gall,17236,1,0,14010,4,0
 17240,"Halfus Wyrmbreaker",17236,1,0,14008,2,0
 17242,"First guild on the realm to reach guild level 25.",0,0,4,0,0,0
-17243,"Reach guild level 25",17242,25,0,13878,1,2
+17243,"Reach guild level 25",17242,25,0,13878,0,2
 17245,"First guild on the realm to obtain 525 skill points in all professions and secondary professions.",0,0,4,0,0,0
-17246,Alchemy,17245,525,0,13864,1,0
-17247,Blacksmithing,17245,525,0,13865,2,0
-17248,Enchanting,17245,525,0,13866,3,0
-17249,Engineering,17245,525,0,13867,4,0
-17250,Herbalism,17245,525,0,13868,5,0
-17251,Inscription,17245,525,0,13869,6,0
-17252,Jewelcrafting,17245,525,0,13870,7,0
-17253,Leatherworking,17245,525,0,13871,8,0
-17254,Mining,17245,525,0,13872,9,0
-17255,Skinning,17245,525,0,13873,10,0
-17256,Tailoring,17245,525,0,13874,11,0
-17257,Cooking,17245,525,0,14590,12,0
-17258,Fishing,17245,525,0,14591,13,0
-17259,"First Aid",17245,525,0,14592,14,0
-17260,Archaeology,17245,525,0,14593,15,0
+17246,Alchemy,17245,525,0,13864,0,0
+17247,Blacksmithing,17245,525,0,13865,1,0
+17248,Enchanting,17245,525,0,13866,2,0
+17249,Engineering,17245,525,0,13867,3,0
+17250,Herbalism,17245,525,0,13868,4,0
+17251,Inscription,17245,525,0,13869,5,0
+17252,Jewelcrafting,17245,525,0,13870,6,0
+17253,Leatherworking,17245,525,0,13871,7,0
+17254,Mining,17245,525,0,13872,8,0
+17255,Skinning,17245,525,0,13873,9,0
+17256,Tailoring,17245,525,0,13874,10,0
+17257,Cooking,17245,525,0,14590,11,0
+17258,Fishing,17245,525,0,14591,12,0
+17259,"First Aid",17245,525,0,14592,13,0
+17260,Archaeology,17245,525,0,14593,14,0
 17262,"Defeat Fungalmancer Glop during the Glop, Son of Glop daily quest in Deepholm without taking any damage from his Boomshrooms.",0,0,4,0,0,0
 17263,,17262,1,0,16540,1,2
 17265,"Complete 45 quests in Duskwood.",0,0,4,0,0,0
@@ -12381,7 +12381,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 17685,"Complete the Vault of Lights within 5 minutes of entering in the Halls of Origination on Heroic Difficulty.",0,0,4,0,0,0
 17686,"The Vault of Lights",17685,1,0,63601,1,2
 17688,"First shaman on the realm to achieve level 85.",0,0,4,0,0,0
-17689,"Level to 85",17688,85,0,5213,1,2
+17689,"Level to 85",17688,85,0,5213,0,2
 17691,"Defeat Gal'darah on Heroic Difficulty while in a guild group.",0,0,4,0,0,0
 17692,Gal'darah,17691,1,0,14392,1,2
 17694,"Defeat Ozumat in Throne of the Tides on Heroic difficulty while in a guild group.",0,0,4,0,0,0
@@ -12714,7 +12714,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 18178,"Create 500 Dense Embersilk Bandages",18177,500,0,15825,1,2
 18179,"Create 500 Dense Embersilk Bandages",18177,500,0,16766,2,2
 18181,"First person on the realm to achieve 525 skill in enchanting.",0,0,4,0,0,0
-18182,,18181,525,0,5567,1,2
+18182,,18181,525,0,5567,0,2
 18184,"Reach level 85 on each of the Dwarven classes listed below.",0,0,4,0,0,0
 18185,Hunter,18184,85,0,14555,0,0
 18186,Paladin,18184,85,0,14556,1,0
@@ -12773,7 +12773,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 18249,"Crucible of Carnage in Twilight Highlands",18247,1,0,13918,3,0
 18250,"Ring of Blood in Nagrand",18247,1,0,5798,1,0
 18252,"First person on the realm to achieve 525 skill in jewelcrafting.",0,0,4,0,0,0
-18253,,18252,525,0,5571,1,2
+18253,,18252,525,0,5571,0,2
 18255,"Defeat the bosses in Firelands.",0,0,4,0,0,0
 18256,Baleroc,18255,1,0,17432,5,0
 18257,Ragnaros,18255,1,0,17434,7,0
@@ -13815,7 +13815,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 19840,"Defeat Warp Splinter on Heroic Difficulty while in a guild group.",0,0,4,0,0,0
 19841,"Warp Splinter",19840,1,0,14368,1,2
 19843,"First warlock on the realm to achieve level 85.",0,0,4,0,0,0
-19844,"Level to 85",19843,85,0,5217,1,2
+19844,"Level to 85",19843,85,0,5217,0,2
 19846,"Loot 200,000 gold from creatures.",0,0,4,0,0,0
 19847,,19846,2000000000,0,4093,0,9
 19849,"Obtain 300 skill points in archaeology.",0,0,4,0,0,0
@@ -13906,11 +13906,11 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 20033,Matoclaw,20026,1,0,17879,2,0
 20034,"Thisalee Crow",20026,1,0,17883,5,0
 20036,"First person on the realm to achieve 525 skill in engineering.",0,0,4,0,0,0
-20037,,20036,525,0,5722,1,2
+20037,,20036,525,0,5722,0,2
 20039,"First person on the realm to achieve 525 skill in fishing.",0,0,4,0,0,0
-20040,,20039,525,0,5696,1,2
+20040,,20039,525,0,5696,0,2
 20042,"First person on the realm to achieve 525 skill in mining.",0,0,4,0,0,0
-20043,,20042,525,0,5573,1,2
+20043,,20042,525,0,5573,0,2
 20045,"Reach level 85 on each of the Troll classes listed below.",0,0,4,0,0,0
 20046,Druid,20045,85,0,14644,7,0
 20047,"Death Knight",20045,85,0,14619,6,0
@@ -13943,7 +13943,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 20088,"Zergling Leash",20087,1,0,571,1,2
 20089,Zergling,20087,0,0,6154,2,2
 20091,"First rogue on the realm to achieve level 85.",0,0,4,0,0,0
-20092,"Level to 85",20091,85,0,5221,1,2
+20092,"Level to 85",20091,85,0,5221,0,2
 20094,"Defeat Ley-Guardian Eregos on Heroic Difficulty while in a guild group.",0,0,4,0,0,0
 20095,"Ley-Guardian Eregos",20094,1,0,14395,1,2
 20097,"Defeat the bosses laying siege to Wyrmrest Temple in the Dragon Soul raid.",0,0,4,0,0,0
@@ -13969,9 +13969,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 20121,"Spine of Deathwing (10H)",20120,1,0,18563,1,2
 20122,"Spine of Deathwing (25H)",20120,1,0,18564,2,2
 20124,"First person on the realm to achieve 525 skill in skinning.",0,0,4,0,0,0
-20125,,20124,525,0,5720,1,2
+20125,,20124,525,0,5720,0,2
 20127,"First person on the realm to achieve 525 skill in tailoring.",0,0,4,0,0,0
-20128,,20127,525,0,5575,1,2
+20128,,20127,525,0,5575,0,2
 20130,"Defeat The Black Knight in the Trial of the Champion on Heroic Difficulty while in a guild group.",0,0,4,0,0,0
 20131,"The Black Knight",20130,1,0,14401,1,2
 20146,,20145,1100,0,15300,1,2
@@ -14282,9 +14282,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 20604,"Defeat Deathwing in Dragon Soul on Heroic difficulty while in a guild group.",0,1,8,0,0,0
 20605,Deathwing,20604,1,0,18489,1,2
 20606,Deathwing,20604,1,0,18490,2,2
-20608,"First guild on the realm to defeat Deathwing in Dragon Soul on Heroic difficulty while in a guild group.",0,1,8,0,0,0
-20609,Deathwing,20608,1,0,18489,1,2
-20610,Deathwing,20608,1,0,18490,2,2
+20608,"First guild on the realm to defeat Deathwing in Dragon Soul on Heroic difficulty while in a guild group.",0,1,4,0,0,0
+20609,Deathwing,221655,1,0,18489,0,2
+20610,Deathwing,221655,1,0,18490,1,2
 20612,"Defeat Morchok in Dragon Soul on Normal or Heroic Difficulty without any two players (three players on 25-player mode) ever being within 5 yards of each other while Morchok is channeling Black Blood of the Earth.",0,0,4,0,0,0
 20613,"Don't Stand So Close to Me",20612,1,0,18607,1,2
 20615,"Defeat Hagara the Stormbinder in Dragon Soul on Heroic Difficulty.",0,1,8,0,0,0
@@ -14416,7 +14416,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 20759,"[DNT] Players in China who log in during the month of December 2011 to receive the Cenarion Hatchling pet in their mail as a promotion.",0,0,4,0,0,0
 20760,,20759,1,0,18860,2,2
 20763,"First person on the realm to achieve 525 skill in first aid.",0,0,4,0,0,0
-20764,,20763,525,0,5592,1,2
+20764,,20763,525,0,5592,0,2
 20767,"The Black Knight",20766,1,0,14401,1,2
 20769,"Defeat Valiona and Theralion in the Bastion of Twilight on Heroic Difficulty.",0,1,8,0,0,0
 20770,"Valiona and Theralion",20769,1,0,16278,1,2
@@ -15037,7 +15037,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 22071,,21083,1,0,19591,8,0
 22072,,21083,1,0,19592,9,0
 22073,,21083,1,0,19593,10,0
-22074,"Wise Mari",21078,1,0,19230,0,0
+22074,"Wise Mari",21078,1,0,111686,0,0
 22076,,21083,3,0,19583,0,0
 22077,"Sha of Doubt",21078,1,0,19234,3,0
 22078,"Liu Flameheart",21078,1,0,19235,2,0
@@ -15676,27 +15676,26 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 22945,"Candle in the Wind",22937,1,0,19952,7,0
 22946,"Like an Arrow to the Face",22937,1,0,19953,8,0
 22947,"Less Than Three",22937,1,0,19954,9,0
-22948,"I Heard You Like Amber...",22937,1,0,19955,10,0
-22949,"Timing is Everything",22937,1,0,19956,11,0
-22950,"Face Clutchers",22937,1,0,19957,13,0
-22951,"Power Overwhelming",22937,1,0,19958,12,0
-22952,"Who's Got Two Green Thumbs",22937,1,0,19959,14,0
-22953,"The Mind-Killer",22937,1,0,19960,15,0
-22954,"Heroic: Stone Guard",22937,1,0,19961,16,0
-22955,"Heroic: Feng the Accursed",22937,1,0,19962,17,0
-22956,"Heroic: Gara'jal the Spiritbinder",22937,1,0,19963,18,0
-22957,"Heroic: Four Kings",22937,1,0,19964,19,0
-22958,"Heroic: Elegon",22937,1,0,19965,20,0
-22959,"Heroic: Will of the Emperor",22937,1,0,19966,21,0
-22960,"Heroic: Imperial Vizier Zor'lok",22937,1,0,19967,22,0
-22961,"Heroic: Blade Lord Ta'yak",22937,1,0,19968,23,0
-22962,"Heroic: Garalon",22937,1,0,19969,24,0
-22963,"Heroic: Wind Lord Mel'jarak",22937,1,0,19970,25,0
-22964,"Heroic: Amber-Shaper Un'sok",22937,1,0,19971,26,0
-22965,"Heroic: Shek'zeer",22937,1,0,19972,27,0
-22966,"Heroic: Tsulong",22937,1,0,19973,29,0
-22967,"Heroic: Lei Shi",22937,1,0,19974,30,0
-22968,"Heroic: Protectors of the Endless",22937,1,0,19975,28,0
+22949,"Timing is Everything",22937,1,0,19956,10,0
+22950,"Face Clutchers",22937,1,0,19957,12,0
+22951,"Power Overwhelming",22937,1,0,19958,11,0
+22952,"Who's Got Two Green Thumbs",22937,1,0,19959,13,0
+22953,"The Mind-Killer",22937,1,0,19960,14,0
+22954,"Heroic: Stone Guard",22937,1,0,19961,15,0
+22955,"Heroic: Feng the Accursed",22937,1,0,19962,16,0
+22956,"Heroic: Gara'jal the Spiritbinder",22937,1,0,19963,17,0
+22957,"Heroic: Four Kings",22937,1,0,19964,18,0
+22958,"Heroic: Elegon",22937,1,0,19965,19,0
+22959,"Heroic: Will of the Emperor",22937,1,0,19966,20,0
+22960,"Heroic: Imperial Vizier Zor'lok",22937,1,0,19967,21,0
+22961,"Heroic: Blade Lord Ta'yak",22937,1,0,19968,22,0
+22962,"Heroic: Garalon",22937,1,0,19969,23,0
+22963,"Heroic: Wind Lord Mel'jarak",22937,1,0,19970,24,0
+22964,"Heroic: Amber-Shaper Un'sok",22937,1,0,19971,25,0
+22965,"Heroic: Shek'zeer",22937,1,0,19972,26,0
+22966,"Heroic: Tsulong",22937,1,0,19973,28,0
+22967,"Heroic: Lei Shi",22937,1,0,19974,29,0
+22968,"Heroic: Protectors of the Endless",22937,1,0,19975,27,0
 22973,"Lei Shi - Defeat normal or heroic with Parasitic Clutch",0,0,4,0,0,0
 22974,,22973,1,0,19979,0,2
 22975,"Scenario - Theramore (H) - To The Waterline!",0,0,4,0,0,0
@@ -16181,7 +16180,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 23769,,23768,1,0,21047,0,2
 23770,"Quests - Pandaria - Tillers - Harvest first crop",0,0,4,0,0,0
 23771,,23770,1,0,21119,0,2
-23859,"Cheng Bo!",23852,1,0,20493,6,0
 23772,"Quest - Pandaria - Tillers - Harvest 100 crops",0,100,4,0,0,2
 23773,"Harvest 100 crops",23772,100,5,0,0,1
 23774,"Quests - Pandaria - Tillers - Harvest a special crop",0,1,8,0,0,0
@@ -16256,6 +16254,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 23856,"Spirit Dust",23852,1,0,20490,3,0
 23857,"The Enemy of My Enemy... Is Still My Enemy!",23852,1,0,21208,4,0
 23858,Uruk!,23852,1,0,20492,5,0
+23859,"Cheng Bo!",23852,1,0,20493,6,0
 23860,"Master all six Pandaren Ways of cooking.",0,0,4,0,0,0
 23861,,23860,0,0,20497,0,0
 23862,,23860,0,0,20498,1,0
@@ -22189,8 +22188,8 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 30552,"Westfall Quests",30551,0,0,5948,0,0
 30553,"Westfall Quests",30551,0,0,9081,1,0
 30554,"Proud owner of the 2012 Vintage Winter Veil gift, the Pigskin and Foot Ball.",0,0,4,0,0,0
-30555,,30554,1,0,22226,0,2
-30556,,30554,1,0,22227,1,2
+30555,"[DNT] Foot Ball",30554,1,8,0,0,0
+30556,,30555,1,0,112871,0,2
 30557,"All Criteria",30533,0,4,0,0,128
 30558,,30533,1,0,6147,1,2
 30559,"All Criteria",10258,0,4,0,0,128
@@ -23267,16 +23266,15 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 32099,"Heroic: Megaera",32090,1,0,22895,4,0
 32100,"Soft Hands",32090,1,0,22896,16,0
 32101,"Heroic: Ji-Kun",32090,1,0,22897,5,0
-32102,"You Said Crossing the Streams Was Bad",32090,1,0,22898,17,0
 32103,"Heroic: Durumu the Forgotten",32090,1,0,22899,6,0
-32104,"Genetically Unmodified Organism",32090,1,0,22900,18,0
+32104,"Genetically Unmodified Organism",32090,1,0,22900,17,0
 32105,"Heroic: Primordius",32090,1,0,22901,7,0
-32106,"Ritualist Who?",32090,1,0,22902,19,0
+32106,"Ritualist Who?",32090,1,0,22902,18,0
 32107,"Heroic: Dark Animus",32090,1,0,22903,8,0
-32108,"Can't Touch This",32090,1,0,22904,20,0
+32108,"Can't Touch This",32090,1,0,22904,19,0
 32109,"Heroic: Iron Qon",32090,1,0,22905,9,0
 32110,"Heroic: Twin Empyreans",32090,1,0,22906,10,0
-32111,"A Complete Circuit",32090,1,0,22907,22,0
+32111,"A Complete Circuit",32090,1,0,22907,21,0
 32112,"Nalak (Guild Run)",0,0,4,0,0,0
 32113,Nalak,32112,1,0,22908,0,2
 32114,"Oondasta (Guild Run)",0,0,4,0,0,0
@@ -23311,7 +23309,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 32143,"Start the Thunder Forge",32142,0,0,22925,0,0
 32144,"Reputation - Pandaria - Dominance Offensive - Exalted",0,0,4,0,0,0
 32145,"Dominance Offensive exalted",32144,42000,0,22512,0,2
-32327,"Jin'rokh (25H)",32326,1,0,23012,0,2
 32146,"Reputation - Pandaria - Operation: Shieldwall - Exalted",0,0,4,0,0,0
 32147,"Operation: Shieldwall exalted",32146,42000,0,22511,0,2
 32148,"Reputation - Pandaria - Kirin Tor Offensive - Exalted",0,0,4,0,0,0
@@ -23416,7 +23413,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 32261,"Sha of Fear",32635,1,0,20406,1,2
 32262,"Sha of Fear (Normal)",23118,1,0,22975,1,2
 32263,"Lightning Overload",32090,1,0,22976,11,0
-32264,"From Dusk 'til Dawn",32090,1,0,22977,21,0
+32264,"From Dusk 'til Dawn",32090,1,0,22977,20,0
 32265,"Ahead of the Curve: Lei Shen",0,0,4,0,0,0
 32266,"Lei Shen",32265,1,0,22978,0,2
 32267,"Sunreaver Onslaught Bonus Reputation",0,0,4,0,0,0
@@ -23463,6 +23460,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 32324,"Jin'rokh kills (10H)",0,0,4,0,0,0
 32325,"Jin'rokh (10H)",32324,1,0,23011,0,2
 32326,"Jin'rokh kills (25H)",0,0,4,0,0,0
+32327,"Jin'rokh (25H)",32326,1,0,23012,0,2
 32328,"Horridon kills (LFR)",0,0,4,0,0,0
 32329,"Horridon (LFR)",32328,1,0,23017,0,2
 32330,"Horridon kills (10N)",0,0,4,0,0,0
@@ -24239,6 +24237,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 33367,,33366,0,0,23622,0,0
 33377,,31466,1,0,23250,7,2
 33378,,31454,1,0,23250,7,2
+33582,"Wise Mari",33577,1,0,23619,4,0
 33397,"Challenge Master: Gate of the Setting Sun",0,1,8,0,0,0
 33398,,33397,1,0,23629,0,2
 33399,,33397,1,0,23646,1,2
@@ -24394,7 +24393,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 33579,Wrathion,33577,1,0,23610,1,0
 33580,"Lorewalker Cho",33577,1,0,23611,2,0
 33581,"Chen Stormstout",33577,1,0,23616,3,0
-33582,"Wise Mari",33577,1,0,23619,4,0
 33583,"Shademaster Kiryn",33577,1,0,23607,5,0
 33584,"Sully ""The Pickle"" McLeary",33577,1,0,23617,6,0
 33585,"Taran Zhu",33577,1,0,23618,7,0
@@ -24705,7 +24703,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 33911,,33910,1,0,15308,0,2
 33912,"(H) End PvP season 13 in the top .5% of the rated battleground ladder.",0,0,4,0,0,0
 33913,,33912,1,0,15308,0,2
-34134,Huolon,34116,1,0,23984,26,0
 33914,"(H) End PvP season 14 in the top .5% of the rated battleground ladder.",0,0,4,0,0,0
 33915,,33914,1,0,15308,0,2
 33916,"(H) End PvP season 15 in the top .5% of the rated battleground ladder.",0,0,4,0,0,0
@@ -24861,6 +24858,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 34131,Cinderfall,34116,1,0,23981,23,0
 34132,Garnia,34116,1,0,23982,14,0
 34133,Tsavo'ka,34116,1,0,23983,15,0
+34134,Huolon,34116,1,0,23984,26,0
 34135,"Monstrous Spineclaw",34116,1,0,23985,16,0
 34136,Bufo,34116,1,0,23986,13,0
 34137,"Dread Ship Vazuvius",34116,1,0,23987,29,0
@@ -25259,7 +25257,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 94307,Survivor,0,0,4,0,0,0
 94311,"Survivor of the Shadow Flame",0,1,4,0,0,0
 94312,,94311,1,0,52893,0,0
-129190,"Blended Bean Brew",129174,0,0,4659,0,2
 94313,"Survivor of the Old God",0,1,4,0,0,0
 94314,,94313,1,0,52894,0,0
 94315,"Survivor of the Damned",0,1,4,0,0,0
@@ -25418,6 +25415,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 129187,"Filtered Draenic Water",129174,0,0,4686,0,2
 129188,"Fizzy Faire Drink",129174,0,0,4687,0,2
 129189,"Holiday Spirits",129174,0,0,4693,0,2
+129190,"Blended Bean Brew",129174,0,0,4659,0,2
 129191,"Captain Rumsey's Lager",129174,0,0,4663,0,2
 129192,"Conjured Mountain Spring Water",129174,0,0,4672,0,2
 129193,"Conjured Sparkling Water",129174,0,0,4674,0,2
@@ -26286,7 +26284,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 164852,Gnomeregan/Darkspear,164794,1,8,0,47,2
 164853,Gnomeregan,164852,42000,0,5329,0,2
 164854,Darkspear,164852,42000,0,5313,1,2
-164938,"Zandalar Tribe",164897,42000,0,2050,40,2
 164855,"Ironforge/Thunder Bluff",164794,1,8,0,48,2
 164856,Ironforge,164855,42000,0,5330,0,2
 164857,"Thunder Bluff",164855,42000,0,5315,1,2
@@ -26370,6 +26367,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 164935,Tranquillien,164897,42000,0,5323,37,2
 164936,"Avengers of Hyjal",164897,42000,0,17550,38,2
 164937,"Cenarion Circle",164897,42000,0,2045,39,2
+164938,"Zandalar Tribe",164897,42000,0,2050,40,2
 164939,"Wintersaber Trainers",164897,42000,0,5338,41,2
 164940,"Alterac Valley",164897,1,8,0,42,2
 164941,"Frostwolf Clan",164940,42000,0,5320,0,2
@@ -27870,15 +27868,220 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 218747,"Pearlfin Jinyu",218745,42000,0,109789,1,2
 218831,"Test Criteria - DNT",0,0,4,0,0,0
 218832,Test,218831,1,0,109862,0,0
-219937,,219936,85,0,110588,0,2
+219937,,219936,85,0,107848,0,2
 220614,"[DNT] Player Has CN ICC Event Title 1 - Dream Chaser Deliverable",0,0,4,0,0,0
 220615,,220614,1,0,111016,0,0
-220616,"[DNT] Player Has CN ICC Event Title 1 - Northbound Rush Deliverable",0,0,4,0,0,0
+220616,"[DNT] Player Has CN ICC Event Title 2 - Northbound Rush Deliverable",0,0,4,0,0,0
 220617,,220616,1,0,111017,0,0
 220618,"[DNT] Player Has CN ICC Event Title 3 - Dawn's Vanguard Deliverable",0,0,4,0,0,0
 220619,,220618,1,0,111018,0,0
 220620,"[DNT] Player Has CN ICC Event Title 4 - The Overlord of Dawn Deliverable",0,0,4,0,0,0
 220621,,220620,1,0,111019,0,0
+221261,"Challenge Grandmaster: Temple of the Jade Serpent",0,1,4,0,0,0
+221262,,221261,1,0,23645,0,2
+221263,,221261,1,0,23630,1,2
+221317,"Temple of the Jade Serpent (Platinum Challenge)",0,0,4,0,0,0
+221318,,221317,1,0,111437,0,2
+221319,"Stormstout Brewery (Platinum Challenge)",0,0,4,0,0,0
+221320,,221319,1,0,111438,0,2
+221321,"Mogu'shan Palace (Platinum Challenge)",0,0,4,0,0,0
+221322,,221321,1,0,111439,0,2
+221323,"Shado-Pan Monastery (Platinum Challenge)",0,0,4,0,0,0
+221324,,221323,1,0,111440,0,2
+221325,"Gate of the Setting Sun (Platinum Challenge)",0,0,4,0,0,0
+221326,,221325,1,0,111441,0,2
+221327,"Scarlet Halls (Platinum Challenge)",0,0,4,0,0,0
+221328,,221327,1,0,111442,0,2
+221329,"Scarlet Monastery (Platinum Challenge)",0,0,4,0,0,0
+221330,,221329,1,0,111443,0,2
+221331,"Scholomance (Platinum Challenge)",0,0,4,0,0,0
+221332,,221331,1,0,111444,0,2
+221333,"Siege of Niuzao Temple (Platinum Challenge)",0,0,4,0,0,0
+221334,,221333,1,0,111445,0,2
+221385,"Realm First! Challenge Conqueror Platinum (Season 2)",0,0,4,0,0,0
+221386,,221385,1,0,111532,0,2
+221387,"Realm First! Challenge Conqueror Platinum (Season 3)",0,0,4,0,0,0
+221388,,221387,1,0,111533,0,2
+221389,"Temple of the Jade Serpent (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221390,,221389,1,0,111486,0,2
+221392,,221391,1,0,111486,0,2
+221393,"Stormstout Brewery (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221394,,221393,1,0,111487,0,2
+221395,"Mogu'shan Palace (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221396,,221395,1,0,111488,0,2
+221397,"Shado-Pan Monastery (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221398,,221397,1,0,111489,0,2
+20233,,0,0,4,0,0,0
+221399,"Gate of the Setting Sun (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221400,,221399,1,0,111490,0,2
+221401,"Scarlet Halls (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221402,,221401,1,0,111491,0,2
+221403,"Scarlet Monastery (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221404,,221403,1,0,111492,0,2
+221405,"Scholomance (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221406,,221405,1,0,111493,0,2
+221407,"Siege of Niuzao Temple (Platinum Challenge) (Season 2)",0,0,4,0,0,0
+221408,,221407,1,0,111494,0,2
+221409,"Temple of the Jade Serpent (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221410,,221409,1,0,111495,0,2
+221411,"Stormstout Brewery (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221412,,221411,1,0,111496,0,2
+221413,"Mogu'shan Palace (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221414,,221413,1,0,111497,0,2
+221415,"Shado-Pan Monastery (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221416,,221415,1,0,111498,0,2
+221417,"Gate of the Setting Sun (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221418,,221417,1,0,111499,0,2
+221419,"Scarlet Halls (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221420,,221419,1,0,111500,0,2
+221421,"Scarlet Monastery (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221422,,221421,1,0,111501,0,2
+221423,"Scholomance (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221424,,221423,1,0,111502,0,2
+221425,"Siege of Niuzao Temple (Platinum Challenge) (Season 3)",0,0,4,0,0,0
+221426,,221425,1,0,111503,0,2
+221428,,221427,1,0,111495,0,2
+221429,"Platinum in every Challenge Mode in Season 1.",0,0,4,0,0,0
+221430,"Temple of the Jade Serpent",221429,1,0,111504,0,2
+221431,"Stormstout Brewery",221429,1,0,111505,1,2
+221432,"Mogu'shan Palace",221429,1,0,111506,2,2
+221433,"Shado-Pan Monastery",221429,1,0,111507,3,2
+221434,"Gate of the Setting Sun",221429,1,0,111508,4,2
+221435,"Scarlet Halls",221429,1,0,111509,5,2
+221436,"Scarlet Monastery",221429,1,0,111510,6,2
+221437,Scholomance,221429,1,0,111511,7,2
+221438,"Siege of Niuzao Temple",221429,1,0,111512,8,2
+221443,"Platinum in every Challenge Mode in Season 2.",0,0,4,0,0,0
+221444,"Temple of the Jade Serpent Season 2",221443,1,0,112595,0,0
+221445,"Stormstout Brewery Season 2",221443,1,0,112596,1,0
+221446,"Mogu'shan Palace Season 2",221443,1,0,112597,2,0
+221447,"Shado-Pan Monastery Season 2",221443,1,0,112598,3,0
+221448,"Gate of the Setting Sun Season 2",221443,1,0,112599,4,0
+221449,"Scarlet Halls Season 2",221443,1,0,112600,5,0
+221450,"Scarlet Monastery Season 2",221443,1,0,112601,6,0
+221451,"Scholomance Season 2",221443,1,0,112602,7,0
+221452,"Siege of Niuzao Temple Season 2",221443,1,0,112603,8,0
+221453,"Platinum in every Challenge Mode in Season 3.",0,0,4,0,0,0
+221454,"Temple of the Jade Serpent Season 3",221453,1,0,111523,0,2
+221455,"Stormstout Brewery Season 3",221453,1,0,111524,1,2
+221456,"Mogu'shan Palace Season 3",221453,1,0,111525,2,2
+221457,"Shado-Pan Monastery Season 3",221453,1,0,111526,3,2
+221458,"Gate of the Setting Sun Season 3",221453,1,0,111527,4,2
+221459,"Scarlet Halls Season 3",221453,1,0,111528,5,2
+221460,"Scarlet Monastery Season 3",221453,1,0,111529,7,2
+221461,"Scholomance Season 3",221453,1,0,111530,6,2
+221462,"Siege of Niuzao Temple Season 3",221453,1,0,111531,8,2
+221589,"Level 85",15029,1,0,111572,1,2
+221590,"Level 85",13119,1,0,111572,1,2
+221595,"Unnamed Branch",15306,1,8,0,0,0
+221596,"Level 85",15306,1,0,111572,1,2
+221597,"Level 85",14679,1,0,111572,1,2
+221598,"Level 85",14134,1,0,111572,1,2
+221599,"Level 85",15032,1,0,111572,1,2
+221600,"Level 85",20091,1,0,111572,1,2
+221601,"Level 1 and NOT China",12470,1,0,111572,1,2
+221602,"Level 1 and NOT China",17688,1,0,111572,1,2
+221603,"Level 1 and NOT China",19843,1,0,111572,1,2
+221604,"Level 1 and NOT China",13116,1,0,111572,1,2
+221605,"Level 1 and NOT China",14131,1,0,111572,1,2
+221606,"Level 1 and NOT China",16468,1,0,111572,1,2
+221607,"Level 1 and NOT China",16825,1,0,111572,1,2
+221608,"Level 1 and NOT China",18181,1,0,111572,1,2
+221614,"Level 85",20036,1,0,111572,1,2
+221615,"Level 1 and NOT China",17130,1,0,111572,1,2
+221616,"Level 1 and NOT China",20127,1,0,111572,1,2
+221617,"Level 1 and NOT China",18252,1,0,111572,1,2
+221618,"Level 1 and NOT China",16986,1,0,111572,1,2
+221619,"Level 1 and NOT China",20042,1,0,111572,1,2
+221641,"Level 1 and NOT China",20124,1,0,111572,1,2
+221642,"Level 1 and NOT China",15452,1,0,111572,1,2
+221643,"Level 1 and NOT China",16983,1,0,111572,1,2
+221644,"Level 1 and NOT China",20763,1,0,111572,1,2
+221645,"Level 1 and NOT China",20039,1,0,111572,1,2
+221646,"Level 1 and NOT China",15558,1,0,111572,1,2
+221647,"Level 1 and NOT China",17133,1,0,111572,1,2
+221648,"Unnamed Branch",15310,1,8,0,0,0
+221649,"Level 1 and NOT China",15310,1,0,111572,1,2
+221650,"Unnamed Branch",11110,1,8,0,0,0
+221651,"Level 1 and NOT China",11110,1,0,111572,1,2
+221652,"Unnamed Branch",15314,1,8,0,0,0
+221653,"Level 1 and NOT China",15314,1,0,111572,1,2
+221654,"Level 1 and NOT China",17245,1,0,111572,15,2
+221655,"Unnamed Branch",20608,1,8,0,0,0
+221656,"Level 1 and NOT China",20608,1,0,111572,1,2
+221657,"Level 1 and NOT China",17242,1,0,111572,1,2
+221658,"Level 1 and NOT China",17245,1,0,111572,16,2
+222821,"[DNT] Joyous Journeys - Reach Level 90 with buff Joyous Journeys (hidden)",0,0,4,0,0,2
+222822,,222821,90,0,110588,0,2
+223391,,223390,1,0,112607,0,0
+223840,,30555,1,0,112872,1,2
+223841,,30555,1,0,112873,2,2
+223842,"[DNT] Pigskin",30554,1,8,0,1,0
+223843,,223842,1,0,112874,0,2
+223844,,223842,1,0,112875,1,2
+223845,,223842,1,0,112876,2,2
+223880,,223879,1,0,112894,0,0
+225398,"New Criteria Tree",0,0,4,0,0,4096
+225399,,225398,1,0,113714,0,0
+228501,,228500,85,0,114561,0,2
+228796,"Account knows pet ""Sha-Warped Beaky""",0,1,4,0,0,0
+228797,,228796,1,0,114747,0,2
+229728,"Temple of the Jade Serpent S2 (Diamond Challenge)",0,0,4,0,0,0
+229729,,229728,1,0,115329,0,2
+229730,"Stormstout Brewery S2 (Diamond Challenge)",0,0,4,0,0,0
+229731,,229730,1,0,115330,0,2
+229732,"Mogu'shan Palace S2 (Diamond Challenge)",0,0,4,0,0,0
+229733,,229732,1,0,115331,0,2
+229734,"Shado-Pan Monastery S2 (Diamond Challenge)",0,0,4,0,0,2
+229735,,229734,1,0,115332,0,2
+229736,"Gate of the Setting Sun S2 (Diamond Challenge)",0,0,4,0,0,2
+229737,,229736,1,0,115333,0,2
+229738,"Scarlet Halls S2 (Diamond Challenge)",0,0,4,0,0,2
+229739,,229738,1,0,115334,0,2
+229740,"Scarlet Monastery S2 (Diamond Challenge)",0,0,4,0,0,2
+229741,,229740,1,0,115335,0,2
+229742,"Scholomance S2 (Diamond Challenge)",0,0,4,0,0,2
+229743,,229742,1,0,115336,0,2
+229744,"Siege of Niuzao Temple S2 (Diamond Challenge)",0,0,4,0,0,2
+229745,,229744,1,0,115337,0,2
+229746,"Diamond in every Challenge Mode in Season 2.",0,0,4,0,0,0
+229747,"Temple of the Jade Serpent Season 2",229746,1,0,115329,0,0
+229748,"Stormstout Brewery Season 2",229746,1,0,115329,1,0
+229749,"Mogu'shan Palace Season 2",229746,1,0,115331,2,0
+229750,"Shado-Pan Monastery Season 2",229746,1,0,115332,3,0
+229751,"Gate of the Setting Sun Season 2",229746,1,0,115333,4,0
+229752,"Scarlet Halls Season 2",229746,1,0,115334,5,0
+229753,"Scarlet Monastery Season 2",229746,1,0,115335,6,0
+229754,"Scholomance Season 2",229746,1,0,115336,7,0
+229755,"Siege of Niuzao Temple Season 2",229746,1,0,115337,8,0
+229764,"Diamond S2 Achievements",0,0,4,0,0,2
+229765,,229764,1,0,115344,0,2
+229766,,229764,1,0,115345,1,2
+229767,,229764,1,0,115346,2,2
+229768,,229764,1,0,115347,3,2
+229769,,229764,1,0,115348,4,2
+229770,,229764,1,0,115349,5,2
+229771,,229764,1,0,115351,6,2
+229772,,229764,1,0,115353,7,2
+229773,,229764,1,0,115354,8,2
+229781,"Temple of the Jade Serpent S3 (Diamond Challenge)",0,0,4,0,0,0
+229782,,229781,1,0,115359,0,2
+229783,"Stormstout Brewery S3 (Diamond Challenge)",0,0,4,0,0,0
+229784,,229783,1,0,115360,0,2
+229785,"Mogu'shan Palace S3 (Diamond Challenge)",0,0,4,0,0,2
+229786,,229785,1,0,115361,0,2
+229787,"Shado-Pan Monastery S3 (Diamond Challenge)",0,0,4,0,0,0
+229788,,229787,1,0,115362,0,2
+229789,"Gate of the Setting Sun S3 (Diamond Challenge)",0,0,4,0,0,2
+229790,,229789,1,0,115363,0,2
+229791,"Scarlet Halls S3 (Diamond Challenge)",0,0,4,0,0,2
+229792,,229791,1,0,115364,0,2
+229793,"Scarlet Monastery S3 (Diamond Challenge)",0,0,4,0,0,2
+229794,,229793,1,0,115365,0,2
+229795,"Scholomance S3 (Diamond Challenge)",0,0,4,0,0,2
+229796,,229795,1,0,115366,0,2
+229797,"Siege of Niuzao Temple S3 (Diamond Challenge)",0,0,4,0,0,2
+229798,,229797,1,0,115367,0,2
 138064,"Receive a Glowing Pebble from Pebble the penguin.",0,0,4,0,0,0
 138065,"Glowing Pebble",138064,1,0,55087,0,2
 12374,"Honor the flames of Kalimdor.",0,0,4,0,0,0
@@ -27956,7 +28159,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 19820,,0,0,4,0,0,0
 19910,,0,0,4,0,0,0
 20209,,0,0,4,0,0,0
-20233,,0,0,4,0,0,0
 20236,,0,0,4,0,0,0
 20376,,0,0,4,0,0,0
 20382,,0,0,4,0,0,0
@@ -28038,6 +28240,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 6308,"Complete 100 battlegrounds at max level.",0,100,5,0,0,0
 4409,"Complete the Arathi Basin achievements listed below.",0,0,4,0,0,0
 7316,"Honor the flames of Eastern Kingdoms.",0,0,4,0,0,0
+19676,server-only,0,0,4,0,0,2
 8077,"Raise all of The Burning Crusade dungeon reputations to exalted.",0,0,4,0,0,0
 6714,"Complete the Eastern Kingdoms quest achievements listed below.",0,0,4,0,0,0
 6894,"Complete the Northrend quest achievements listed below.",0,0,4,0,0,0
@@ -28182,7 +28385,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 19492,server-only,0,0,4,0,0,2
 19670,server-only,0,0,4,0,0,2
 19673,server-only,0,0,4,0,0,2
-19676,server-only,0,0,4,0,0,2
 19752,server-only,0,0,4,0,0,2
 36198,server-only,0,0,4,0,0,2
 82060,server-only,0,0,4,0,0,2
@@ -28305,6 +28507,8 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 146405,"[DNT] Joyous Journeys - Reach Level 80 with buff Joyous Journeys (hidden)",0,0,4,0,0,2
 167716,"[DNT] Joyous Journeys - Reach Level 80 with buff Joyous Journeys (hidden)",0,0,4,0,0,2
 214785,"[DNT] Joyous Journeys - Reach Level 80 with buff Joyous Journeys (hidden)",0,0,4,0,0,2
+223390,"New Criteria Tree",0,0,4,0,0,0
+223879,"New Criteria Tree",0,0,4,0,0,0
 147712,"Defeat all Defense Protocol Beta Heroic Dungeons",0,0,4,0,0,0
 153740,"4.4.0 Level 80 Character Boost -  Learned Spells",0,1,8,0,0,4096
 153751,"4.4.0 Level 80 Character Boost -  Learned Spells",0,1,8,0,0,4096
@@ -28326,3 +28530,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 207623,"[DNT] Joyous Journeys - Reach Level 85 with buff Joyous Journeys (hidden)",0,0,4,0,0,2
 210767,"[DNT] Joyous Journeys - Reach Level 85 with buff Joyous Journeys (hidden)",0,0,4,0,0,2
 219936,"[DNT] Joyous Journeys - Reach Level 85 with buff Joyous Journeys (hidden)",0,0,4,0,0,2
+228500,"[DNT] Joyous Journeys - Reach Level 85 with buff Joyous Journeys (hidden)",0,0,4,0,0,2
+221391,"Realm First! Challenge Conqueror Platinum (Season 2)",0,0,4,0,0,0
+221427,"Temple of the Jade Serpent (Platinum Challenge) (Season 3)",0,0,4,0,0,0

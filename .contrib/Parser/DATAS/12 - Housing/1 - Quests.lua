@@ -6,7 +6,17 @@ MAIL_DELIVERY_RACES = createHeader({
 	readable = "Mail Delivery Races",
 	icon = 413580,
 	text = {
-		en = "Mail Delivery Races",
+		en = "Neighborhood postal route",
+		de = "Postroute in der Nachbarschaft",
+		es = "Ruta postal del vecindario",
+		mx = "Ruta postal de vecindario",
+		fr = "Tournée postale dans le quartier",
+		it = "Percorso postale nel Vicinato",
+		ko = "거주구 우편 경로를",
+		pt = "Rota postal na vizinhança",
+		ru = "Pайонный почтовый маршрут",
+		cn = "住宅区邮路",
+		tw = "社區郵政路線"
 	},
 });
 
@@ -223,7 +233,7 @@ root(ROOTS.HiddenQuestTriggers, {
 				q(95166,{isDaily=true}),	-- Pet the Dog (245551)
 			},
 		}),
-	})
+	}),
 });
 
 root(ROOTS.HiddenQuestTriggers, {
@@ -235,5 +245,5 @@ root(ROOTS.HiddenQuestTriggers, {
 				q(95406),	-- Lost Animals, Triggered after completing 'Lost Animals' (95438)
 			},
 		}),
-	})
+	}),
 });

@@ -46542,8 +46542,9 @@ q(11091,{coords={
 i(32835,{b=1})}}),
 q(10682,{coords={
 [105]={{62,39.5}}},crs={21981},lvl=20,qgs={22007}}),
-q(11058,{coords={
-[105]={{28.8,57.4}}},lvl=20,qgs={23233},sourceQuests={11025}}),
+q(11058,{awp=20100,coords={
+[105]={{28.8,57.4}}},lvl=20,qgs={23233},sourceQuests={11025},g={
+o(185890)}}),
 q(11119,{coords={
 [105]={{60.8,69.1}}},lvl=20,qgs={23334},sourceQuests={11010}}),
 q(11051,{coords={
@@ -46643,7 +46644,8 @@ o(185124),
 o(185147),
 o(185148)}}),
 q(10859,{coords={
-[105]={{74.9,60.5}}},lvl=20,qgs={22312},qis={31668},r=1,sourceQuests={10853}}),
+[105]={{74.9,60.5}}},lvl=20,qgs={22312},qis={31668},r=1,sourceQuests={10853},g={
+i(31668,{spellID=38862})}}),
 q(10594,{coords={
 [105]={{60.2,68.9}}},lvl=20,qgs={21755},qis={30701},r=2,sourceQuests={10608},g={
 s(14387,31445,{b=1,f=7}),
@@ -46899,8 +46901,8 @@ s(14415,31478,{b=1,f=5}),
 crit(38649,{achID=1193,id=4,r=1})}}),
 q(10980,{c={11},coords={
 [105]={{61.5,38.3}}},cost={{"i",32244,1}},qgs={22924},rwp=40001,sourceQuests={10979},u=2}),
-q(11025,{coords={
-[105]={{28.8,57.4}}},lvl=20,qgs={23233}}),
+q(11025,{awp=20100,coords={
+[105]={{28.8,57.4}}},cost={{"i",32569,5}},lvl=20,qgs={23233}}),
 q(10690,{coords={
 [105]={{36.6,67.3}}},crs={21956},lvl=20,providers={{"o",185035}},r=2,g={
 s(14367,31424,{b=1,f=27}),
@@ -46928,9 +46930,10 @@ q(10976,{coords={
 [105]={{52.8,15}}},cost={{"i",31941,1}},lvl=25,qgs={22919},sourceQuests={10974}}),
 q(9795,{coords={
 [102]={{30.6,50.8}}},isBreadcrumb=1,lvl=20,nextQuests={10486},qgs={18013},r=1}),
-q(11080,{coords={
+q(11080,{awp=20100,coords={
 [105]={{28.8,57.4}}},isDaily=1,lvl=20,qgs={23233},sourceQuests={11058},g={
-i(32569,{b=1})}}),
+i(32569,{b=1}),
+o(185890)}}),
 q(11062,{coords={
 [105]={{28.4,57.6}}},lvl=20,qgs={23233},sourceQuests={11030}}),
 q(10720,{coords={
@@ -49151,7 +49154,7 @@ q(9821,{coords={
 q(11503,{coords={
 [107]={{52.8,36}}},crs={24867},isDaily=1,lvl=15,qgs={24881},r=1}),
 q(9948,{coords={
-[107]={{32.2,36.2}}},crs={18037,18065,18423},lvl=15,qgs={18415},qis={25604},r=1,g={
+[107]={{32.2,36.2}}},crs={18037,18065,18423,18428},lvl=15,qgs={18415},qis={25604},r=1,g={
 s(10578,25778,{b=1,f=4}),
 s(10579,25780,{b=1,f=3}),
 i(25779,{b=1,f=52}),
@@ -49286,6 +49289,7 @@ q(9934,{coords={
 [107]={{73.8,62.6}}},lvl=15,qgs={18261},r=1,sourceQuests={9931,9932},g={
 i(25607,{b=1,f=52}),
 s(10497,25609,{b=1,f=5}),
+i(25586),
 s(10496,25608,{b=1,f=29}),
 crit(38678,{achID=1273,id=4,r=1})}}),
 q(9933,{coords={
@@ -49409,20 +49413,20 @@ o(182520)}}),
 q(10988,{c={11},coords={
 [107]={{20.6,35.7}}},cost={{"i",32313,8},{"i",32315,1}},maps={108},qgs={22981},rwp=40001,sourceQuests={10987},u=2}),
 q(9962,{coords={
-[107]={{42.8,20.7}}},lvl=15,qgs={18471}}),
+[107]={{42.8,20.7}}},crs={18398},lvl=15,qgs={18471}}),
 q(9970,{coords={
-[107]={{42.8,20.7}}},lvl=15,qgs={18471},sourceQuests={9967},g={
+[107]={{42.8,20.7}}},crs={18400},lvl=15,qgs={18471},sourceQuests={9967},g={
 i(22829,{f=55,lvl=10,spellID=28495}),
 i(22832,{f=55,lvl=23,spellID=28499})}}),
 q(9972,{coords={
-[107]={{42.8,20.7}}},lvl=15,qgs={18471},sourceQuests={9970},g={
+[107]={{42.8,20.7}}},crs={18401},lvl=15,qgs={18471},sourceQuests={9970},g={
 i(22829,{f=55,lvl=10,spellID=28495}),
 i(22832,{f=55,lvl=23,spellID=28499}),
 i(21991,{f=55,lvl=21,spellID=27031})}}),
 q(9967,{coords={
-[107]={{42.8,20.7}}},lvl=15,qgs={18471},sourceQuests={9962}}),
+[107]={{42.8,20.7}}},crs={18399},lvl=15,qgs={18471},sourceQuests={9962}}),
 q(9977,{coords={
-[107]={{42.8,20.7}}},lvl=15,qgs={18471},sourceQuests={9973},g={
+[107]={{42.8,20.7}}},crs={18069},lvl=15,qgs={18471},sourceQuests={9973},g={
 s(10569,25760,{b=1,f=28}),
 s(10572,25763,{b=1,f=20}),
 s(10571,25762,{b=1,f=22}),
@@ -49434,7 +49438,7 @@ crit(5798,{achID=1273,id=2,r=1}),
 crit(5798,{achID=1576,awp=30002,id=2}),
 crit(5798,{achID=4958,awp=40003,id=2})}}),
 q(9973,{coords={
-[107]={{42.8,20.7}}},lvl=15,qgs={18471},sourceQuests={9972}}),
+[107]={{42.8,20.7}}},crs={18402},lvl=15,qgs={18471},sourceQuests={9972}}),
 q(9921,{coords={
 [107]={{54.6,72.2}}},crs={17134,17135},lvl=15,qgs={18223},r=2,sourceQuests={9920}}),
 q(9810,{coords={
@@ -50075,7 +50079,8 @@ q(10855,{coords={
 q(10256,{coords={
 [109]={{58.3,86.4}}},lvl=25,qgs={19481},sourceQuests={10176}}),
 q(10426,{coords={
-[109]={{42.3,32.6}}},crs={20774,20983},lvl=25,qgs={20871},qis={29818}}),
+[109]={{42.3,32.6}}},crs={20774,20983},lvl=25,qgs={20871},qis={29818},g={
+i(29818,{spellID=35772})}}),
 q(10281,{coords={
 [109]={{70.9,38.8}}},lvl=25,qgs={20154},sourceQuests={10271}}),
 q(10276,{coords={
@@ -67798,33 +67803,25 @@ crit(19379,{achID=6541,id=5})}}),
 ach(6536,{r=1,g={
 crit(19384,{achID=6541,id=5})}})}),
 flt(101,{pb=1,g={
-p(716,{npcID=63288,pb=1,g={
+p(716,{description="Can be found in the forests as well as secondary pets.",npcID=63288,pb=1,g={
 crit(20817,{achID=6350,id=1}),
 crit(21809,{achID=6589,id=4})}}),
 p(714,{coords={
-[418]={{18,43.8}}},npcID=65054,pb=1,g={
+[418]={{18.4,46.2}}},npcID=65054,pb=1,g={
 crit(21810,{achID=6589,id=12})}}),
-p(678,{npcID=63304,pb=1,g={
+p(678,{description="Very common through the zone.",npcID=63304,pb=1,g={
 crit(21811,{achID=6589,id=19})}}),
-p(718,{npcID=65124,pb=1,g={
+p(718,{description="Can be found in the forests as well as secondary pets.",npcID=65124,pb=1,g={
 crit(20813,{achID=6350,id=10}),
 crit(21812,{achID=6589,id=22})}}),
 p(708,{npcID=63094,pb=1,g={
 crit(20825,{achID=6350,id=11}),
 crit(21800,{achID=6589,id=23})}}),
-p(722,{coords={
-[418]={{37.6,44}}},npcID=65185,pb=1,g={
+p(722,{description="Can spawn around Temple of the Red Crane, and uncommonly through the forests. Otherwise common as secondary pet.",npcID=65185,pb=1,g={
 crit(21814,{achID=6589,id=28})}}),
-p(717,{npcID=63291,pb=1,g={
+p(717,{description="Can be found in the forests as well as secondary pets.",npcID=63291,pb=1,g={
 crit(21815,{achID=6589,id=37})}}),
-p(711,{coords={
-[418]={{86.4,10.4}}},npcID=63057,pb=1,g={
-crit(21316,{achID=6350,id=16}),
-crit(21797,{achID=6589,id=42})}}),
-p(712,{coords={
-[418]={{85.8,16.6}}},npcID=63358,pb=1,g={
-crit(21816,{achID=6589,id=43})}}),
-p(723,{npcID=63293,pb=1,g={
+p(723,{description="Can be found by bodies of water.",npcID=63293,pb=1,g={
 crit(21817,{achID=6589,id=47})}})}}),
 h(-30,{
 exp(6160,{collectible=false,coords={
@@ -70858,14 +70855,15 @@ ach(6300,{r=2,g={
 crit(19377,{achID=6541,id=4})}}),
 ach(6534,{r=1,g={
 crit(19383,{achID=6541,id=4})}})}),
-flt(101,{pb=1,g={
+flt(101,{description="Protip: Begin with the Wild Hatchlings found under the header for 'Order of the Cloud Serpent' as they only appears as primary pets. Battling them requires being Exalted with said faction.",pb=1,g={
 p(380,{coords={
-[371]={{34.4,47.6}}},npcID=62992,pb=1,g={
+[371]={{34.4,47.6},{56.8,84.6}}},description="Can be found on the riverside.",npcID=62992,pb=1,g={
 crit(21781,{achID=6589,id=7})}}),
 p(562,{coords={
-[371]={{66.2,86.4}}},npcID=62991,pb=1,g={
+[371]={{66.2,86.4}}},description="Can only be found as primary pets at the given location. Otherwise found as secondary pet on Timeless Isle.",npcID=62991,pb=1,g={
 crit(21315,{achID=6350,id=4})}}),
-p(564,{npcID=62994,pb=1,g={
+p(564,{coords={
+[371]={{45.7,64.8}}},description="Can be found on the riverside.",npcID=62994,pb=1,g={
 crit(21782,{achID=6589,id=10})}}),
 p(569,{coords={
 [371]={{56.6,45.2}}},npcID=63002,pb=1,g={
@@ -70873,36 +70871,36 @@ crit(21784,{achID=6589,id=13})}}),
 p(753,{coords={
 [371]={{53.6,45.2}}},npcID=65215,pb=1,g={
 crit(21785,{achID=6589,id=14})}}),
-p(571,{npcID=63004,pb=1,g={
+p(571,{description="Commonly found throughout the zone.",npcID=63004,pb=1,g={
 crit(21786,{achID=6589,id=16})}}),
-p(699,{npcID=63715,pb=1,g={
+p(699,{description="Commonly found throughout the zone.",npcID=63715,pb=1,g={
 crit(21787,{achID=6589,id=17})}}),
 p(565,{coords={
-[371]={{54.2,71}}},npcID=62997,pb=1,g={
+[371]={{44.8,93.9},{47,76.9},{47.4,69.9},{50.9,84.3},{52.9,68.4},{55.7,83.7},{55.8,71.4}}},description="Can be found on multiple locations in southern half of Jade Forest, but only a few spawns at each. Use a macro to find them. Otherwise found as secondary pet.",npcID=62997,pb=1,g={
 crit(21788,{achID=6589,id=18})}}),
-p(702,{npcID=63919,pb=1,g={
+p(702,{description="Commonly found throughout the zone.",npcID=63919,pb=1,g={
 crit(20824,{achID=6350,id=9}),
 crit(21789,{achID=6589,id=21})}}),
-p(570,{npcID=63003,pb=1,g={
+p(570,{description="Can be found throughout the zone, but they are few and far between. Otherwise found as secondary pet.",npcID=63003,pb=1,g={
 crit(21790,{achID=6589,id=26})}}),
-p(703,{npcID=63716,pb=1,g={
+p(703,{description="Can be found throughout the zone, but they are few and far between. Otherwise found as secondary pet.",npcID=63716,pb=1,g={
 crit(21791,{achID=6589,id=27})}}),
 p(566,{coords={
-[371]={{32.6,45.4},{40.6,53.4}}},npcID=62998,pb=1,g={
+[371]={{32.6,45.4},{36.4,80.8},{40.6,53.4}}},description="Can be found on the riverside.",npcID=62998,pb=1,g={
 crit(21792,{achID=6589,id=29})}}),
 p(573,{coords={
-[371]={{66.8,28}}},npcID=63006,pb=1,g={
+[371]={{66.8,28}}},description="Can only be found as primary pet at the given location. Otherwise found as secondary pet.",npcID=63006,pb=1,g={
 crit(21793,{achID=6589,id=36})}}),
 p(754,{coords={
-[371]={{33.4,50.6},{36.6,58.6}}},npcID=65216,pb=1,g={
+[371]={{33.4,50.6},{36.6,58.6}}},description="Can only be found as primary pet at the given locations. Otherwise found as secondary pet.",npcID=65216,pb=1,g={
 crit(18980,{achID=6350,id=15}),
 crit(21794,{achID=6589,id=40})}}),
 p(711,{coords={
-[371]={{40.6,93.8}}},npcID=63057,pb=1,g={
+[371]={{38.8,90}}},description="Can be found around the body of water between Paw'don Village and Krasarang Wilds.",npcID=63057,pb=1,g={
 crit(21316,{achID=6350,id=16}),
 crit(21797,{achID=6589,id=42})}}),
 p(712,{coords={
-[371]={{38.2,92.6}}},npcID=63358,pb=1,g={
+[371]={{38.8,90}}},description="Can be found around the body of water between Paw'don Village and Krasarang Wilds. Respawns after some minutes as long as their Silfang Otter parent is still alive. Only a few spawns as primary pets, but common as secondary pets.",npcID=63358,pb=1,g={
 crit(21816,{achID=6589,id=43})}}),
 p(568,{coords={
 [371]={{48.8,94.2}}},npcID=63001,pb=1,g={
@@ -70911,7 +70909,7 @@ p(572,{coords={
 [371]={{69.2,30}}},npcID=63005,pb=1,g={
 crit(21796,{achID=6589,id=48})}}),
 p(567,{coords={
-[371]={{55,56.6}}},npcID=62999,pb=1,g={
+[371]={{55,56.6}}},description="Can be found around the Temple of the Jade Serpent.",npcID=62999,pb=1,g={
 crit(21805,{achID=6589,id=51})}})}}),
 h(-30,{
 exp(5943),
@@ -76329,27 +76327,24 @@ crit(20122,{achID=6974,id=2})}),
 ach(6301,{
 crit(19378,{achID=6541,id=1})})}),
 flt(101,{pb=1,g={
-p(706,{npcID=63062,pb=1,g={
+p(706,{description="Can be found all over the zone.",npcID=63062,pb=1,g={
 crit(21314,{achID=6350,id=2}),
 crit(21798,{achID=6589,id=5})}}),
-p(707,{npcID=63064,pb=1,g={
+p(707,{description="Respawns after some minutes as long as their Bandicoon parent is still alive. Can be found all over the zone, and common as secondary pets.",npcID=63064,pb=1,g={
 crit(21799,{achID=6589,id=6})}}),
-p(708,{npcID=63094,pb=1,g={
+p(708,{description="Can be found almost everywhere in Valley of the Four Winds.",npcID=63094,pb=1,g={
 crit(20825,{achID=6350,id=11}),
 crit(21800,{achID=6589,id=23})}}),
-p(709,{npcID=63095,pb=1,g={
+p(709,{description="Respawns after some minutes as long as their Malayan Quillrat parent is still alive. Can be found all over the zone, and common as secondary pets.",npcID=63095,pb=1,g={
 crit(21801,{achID=6589,id=24})}}),
 p(710,{coords={
-[376]={{41.6,45.2}}},npcID=63096,pb=1,g={
+[376]={{41.6,45.2}}},description="Can be found all over The Heartland.",npcID=63096,pb=1,g={
 crit(18979,{achID=6350,id=12}),
 crit(21802,{achID=6589,id=25})}}),
 p(677,{coords={
-[376]={{17.8,42.8}}},npcID=64246,pb=1,g={
+[376]={{17.8,42.8}}},description="Can be found through Paoquan Hollow and the foothills south of Singing Marshes, but will never appear as secondary pets!",npcID=64246,pb=1,g={
 crit(21803,{achID=6589,id=41})}}),
-p(711,{npcID=63057,pb=1,g={
-crit(21316,{achID=6350,id=16}),
-crit(21797,{achID=6589,id=42})}}),
-p(713,{npcID=63060,pb=1,g={
+p(713,{description="Can be found by bodies of water.",npcID=63060,pb=1,g={
 crit(21806,{achID=6589,id=46})}})}}),
 h(-30,{
 exp(6096,{collectible=false,coords={
@@ -168852,7 +168847,10 @@ n(251259,{coords={
 [2413]={{49.3,54.3}}},g={
 de(15478,{cost={{"c",3316,150}},itemID=264243,spellID=1271488}),
 de(14824,{cost={{"c",3316,500}},itemID=263038,spellID=1269700}),
-de(15480,{cost={{"c",3316,150}},itemID=264245,spellID=1271490})}}),
+de(15480,{cost={{"c",3316,150}},itemID=264245,spellID=1271490}),
+i(265943,{b=1,cost={{"c",3316,150}},rwp=120007,spellID=1271488,u=2}),
+i(265946,{b=1,cost={{"c",3316,150}},rwp=120007,spellID=1269700,u=2}),
+i(265945,{b=1,cost={{"c",3316,150}},rwp=120007,spellID=1271490,u=2})}}),
 n(255114,{coords={
 [2576]={{62.7,34.4}}},g={
 de(17886,{cost={{"c",3316,250}},itemID=266259,spellID=1278045}),
@@ -172112,9 +172110,10 @@ ah(62413,{awp=120007,type="a",g={
 ah(62413.01,{type="crit",g={
 q(92897,{description="You can get this Breadcrumb Quest from your Adventure Journal.",isBreadcrumb=1,nextQuests={92895},sourceQuests={90867}}),
 q(92895,{coords={
-[2393]={{45.3,70.5}}},qgs={253640},sourceQuests={92897}}),
+[2393]={{45.4,70.1}}},qgs={253640},sourceQuests={92897}}),
 q(92899,{coords={
-[2576]={{43.9,53.2}}},qgs={253654},sourceQuests={92895}}),
+[2576]={{43.9,53.2}}},qgs={253654},sourceQuests={92895},g={
+mnt(1243582,{itemID=246731})}}),
 q(92900,{coords={
 [2576]={{43.5,51.1}}},qgs={253651},sourceQuests={92899}}),
 q(92901,{coords={
@@ -172516,6 +172515,7 @@ n(252873,{coords={
 [2541]={{42,50.1}}},g={
 de(9250,{cost={{"c",3316,150}},itemID=253176,spellID=1255728}),
 de(9475,{cost={{"c",3316,500}},itemID=253598,spellID=1256817}),
+de(20679,{awp=120007,itemID=269316,spellID=1285118}),
 de(9440,{cost={{"c",3316,150}},itemID=253543,spellID=1256611}),
 de(9248,{cost={{"c",3316,150}},itemID=253174,spellID=1255726}),
 de(9249,{cost={{"c",3316,250}},itemID=253175,spellID=1255727}),

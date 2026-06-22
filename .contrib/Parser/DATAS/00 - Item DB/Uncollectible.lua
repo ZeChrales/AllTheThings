@@ -2890,3 +2890,20 @@ i(272110);	-- Singed Propaganda Leaflet
 i(272051);	-- Sticky Propaganda Scroll
 i(272115);	-- Smashed Shield Emitter
 i(272116);	-- Water-Logged Transaction Scroll
+
+------------------
+-- PATCH 12.0.7 --
+------------------
+i(276349);	-- Bulbous Leyshroom
+i(276345);	-- Malfunctioning Holoprint
+i(276344);	-- Overgrown Spore Extractor
+i(276350);	-- Shimmering Algae
+
+------------------
+-- PATCH 12.1.0 --
+------------------
+i(280182);	-- Coiled Curry
+i(276343);	-- Console Encryption Key
+i(274951);	-- Corroded Scale
+i(280183);	-- Harrier Hotcakes
+i(280184);	-- Sweetsaw Surprise

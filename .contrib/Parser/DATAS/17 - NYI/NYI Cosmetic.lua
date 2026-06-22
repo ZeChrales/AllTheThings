@@ -488,6 +488,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 
 		-- 11.0.5
 		expansion(EXPANSION.TWW, patch(0,5), bubbleDownSelf({ ["timeline"] = { CREATED_11_0_5 } }, {
+			n(ARMOR, {
+				i(230059),	-- Prowler's Deep Cowl
+				i(230079),	-- Prowler's Deep Mask
+			}),
 			n(SETS, {
 				------ Prowler's Aquatic Set ------
 				i(230050),	-- Prowler's Aquatic Shoulder Cape
@@ -743,7 +747,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 			n(ARMOR, {
 				i(239003),	-- Feathered Mantle of the Guardian
 				i(238949),	-- Inferno Helm
-				i(235986),	-- Pointy Half Shell
 			}),
 			n(SETS, {
 				------ Lavaborn Citrine Set ------
@@ -1310,7 +1313,7 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(253048),	-- Crusader's Emerald Greatblade
 				i(253274),	-- Crusader's Emerald Greatmace
 				i(253278),	-- Crusader's Emerald Mace
-				i(260383),	-- Dark Blue Wooden Shortbow
+				i(260383),	-- Quel'Danil Shortbow
 				i(260384),	-- Dark Red Wooden Shortbow
 				i(260385),	-- Frost Wooden Shortbow
 				i(250315),	-- Hunter's Etched Glaive
@@ -1355,7 +1358,7 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(266077),	-- Basic Black Quiver
 				i(266078),	-- Basic Blue Quiver
 				i(266079),	-- Basic Bronze Quiver
-				i(266081),	-- Basic Dark Blue Quiver
+				i(266081),	-- Quel'Danil Quiver
 				i(266082),	-- Basic Dark Red Quiver
 				i(266083),	-- Basic Frost Quiver
 				i(266085),	-- Basic Ice Quiver
@@ -1487,6 +1490,54 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(262718),	-- Simple Withering Trowl
 				i(260731),	-- Snugglefin's Lil' Fish Stick
 				i(263009),	-- Valeera's Wicked Knife
+			}),
+		})),
+
+		-- 12.0.5
+		expansion(EXPANSION.MID, patch(0,5), bubbleDownSelf({ ["timeline"] = { CREATED_12_0_5 } }, {
+			n(SETS, {
+				------ Sire's Ornate Attire Set ------
+				i(270222),	-- Ensemble: Sire's Ornate Attire
+				q(95681),	-- Ensemble: Sire's Ornate Attire
+				i(270212),	-- Sire's Ornate Collar
+				i(270213),	-- Sire's Ornate Treads
+				i(270215),	-- Sire's Ornate Vestments
+				i(270216),	-- Sire's Ornate Gloves
+				i(270217),	-- Sire's Ornate Leggings
+				i(270218),	-- Sire's Ornate Mantle
+				i(270219),	-- Sire's Ornate Cloak
+				i(270220),	-- Sire's Ornate Bracers
+				i(270221),	-- Sire's Ornate Belt
+
+				------ Azshara's Darkscale Set ------
+				i(269797),	-- Ensemble: Azshara's Darkscale Raiment
+				q(95545),	-- Ensemble: Azshara's Darkscale Raiment
+				i(269786),	-- Azshara's Darkscale Helm
+				i(269787),	-- Azshara's Darkscale Cloak
+				i(269788),	-- Azshara's Darkscale Epaulets
+				i(269789),	-- Azshara's Darkscale Vest
+				i(269790),	-- Azshara's Darkscale Breastplate
+				i(269791),	-- Azshara's Darkscale Talons
+				i(269792),	-- Azshara's Darkscale Gloves
+				i(269793),	-- Azshara's Darkscale Belt
+				i(269794),	-- Azshara's Darkscale Breeches
+				i(269795),	-- Azshara's Darkscale Leggings
+				i(269796),	-- Azshara's Darkscale Boots
+
+				------ Azshara's Deepscale Set ------
+				i(269809),	-- Ensemble: Azshara's Deepscale Raiment
+				q(95546),	-- Ensemble: Azshara's Deepscale Raiment
+				i(269798),	-- Azshara's Deepscale Helm
+				i(269799),	-- Azshara's Deepscale Cloak
+				i(269800),	-- Azshara's Deepscale Epaulets
+				i(269801),	-- Azshara's Deepscale Vest
+				i(269802),	-- Azshara's Deepscale Breastplate
+				i(269803),	-- Azshara's Deepscale Talons
+				i(269804),	-- Azshara's Deepscale Gloves
+				i(269805),	-- Azshara's Deepscale Belt
+				i(269806),	-- Azshara's Deepscale Breeches
+				i(269807),	-- Azshara's Deepscale Leggings
+				i(269808),	-- Azshara's Deepscale Boots
 			}),
 		})),
 	}),

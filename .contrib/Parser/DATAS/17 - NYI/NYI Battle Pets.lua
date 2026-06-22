@@ -1615,10 +1615,6 @@ root(ROOTS.NeverImplemented, filter(BATTLE_PETS, {
 
 		-- 11.2.0
 		expansion(EXPANSION.TWW, patch(2,0), bubbleDownSelf({ ["timeline"] = { CREATED_11_2_0 } }, {
-			-- With SpeciesID Attached
-			i(246723, {	-- Unfazed Diver (PET!)
-				["displayID"] = 98508,
-			}),
 			-- Only SpeciesID
 			pet(4824, {	-- Baby Karesh Fox - Orange (PET!)
 				["displayID"] = 124240,
@@ -1658,9 +1654,6 @@ root(ROOTS.NeverImplemented, filter(BATTLE_PETS, {
 			-- With SpeciesID Attached
 			i(258739, {	-- Chillcrawler (PET!)
 				["displayID"] = 111522,
-			}),
-			i(262768, {	-- Sleepy Mandrake (PET!)
-				["displayID"] = 139713,
 			}),
 			i(262763, {	-- Plump Mandrake (PET!)
 				["displayID"] = 139711,

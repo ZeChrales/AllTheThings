@@ -165,8 +165,6 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_O
 				}),
 			}),
 			-- #if AFTER 7.3.5
-			Difficulty(DIFFICULTY.DUNGEON.NORMAL).AddGroups({
-			}),
 			Difficulty(DIFFICULTY.DUNGEON.MULTI.NORMAL_HEROIC).AddGroups({
 				n(ZONE_DROPS, {
 					i(37115),	-- Crusader's Square Pauldrons
@@ -232,6 +230,8 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_O
 					i(37111),	-- Soul Preserver
 				}),
 			}),
+			Difficulty(DIFFICULTY.DUNGEON.NORMAL).AddGroups({
+			}),
 			Difficulty(DIFFICULTY.DUNGEON.HEROIC, { ["lvl"] = lvlsquish(80, 80, 30) }).AddGroups({
 				n(ACHIEVEMENTS, {
 					ach(1872, {	-- Zombiefest!
@@ -242,7 +242,13 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_O
 				BossOnly(MEATHOOK),
 				BossOnly(SALRAMM),
 				BossOnly(CHRONOLORD),
-				BossOnly(MALGANIS),
+				n(32273, {	-- Infinite Corruptor
+					ach(1817),	-- The Culling of Time
+					i(43951),	-- Bronze Drake (MOUNT!)
+				}),
+				BossOnly(MALGANIS, {
+					ach(5106, { ["timeline"] = { ADDED_4_0_3 } }),	-- Heroic: The Culling of Stratholme Guild Run
+				}),
 			}),
 			-- #else
 			Difficulty(DIFFICULTY.DUNGEON.NORMAL).AddGroups({

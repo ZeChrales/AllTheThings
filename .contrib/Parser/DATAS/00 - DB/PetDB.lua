@@ -4486,7 +4486,6 @@ i(244914, 4833);	-- Xanthous Siphonmite
 i(246694, 4859);	-- Zo'ya
 --- NYI ---
 i(0, 4824);			-- Baby Karesh Fox - Orange
-i(246723, 4860);	-- Unfazed Diver
 i(0, 4837);			-- Worm, Cosmic - Critter (Red)
 
 ------------------
@@ -4532,7 +4531,6 @@ i(0, 4887);			-- Dundun
 i(258739, 4914);	-- Chillcrawler
 i(262763, 4964);	-- Plump Mandrake
 i(262769, 4966);	-- Screechy Mandrake
-i(262768, 4965);	-- Sleepy Mandrake
 i(260341, 4943);	-- Star the Lucky Dragon
 i(242251, 0);		-- [NYI] Magical Broom Pet
 i(250141, 0);		-- Purple Swamp Leech
@@ -4637,3 +4635,11 @@ i(252195, 4898);	-- Fishstick Keith
 i(275662, 5073);	-- Frosticus Maximus
 i(260885, 4949);	-- Shadowflame Remnant
 i(275663, 5074);	-- Silento
+i(262768, 4965);	-- Sleepy Mandrake
+i(246723, 4860);	-- Unfazed Diver
+
+------------------
+-- PATCH 12.1.0 --
+------------------
+i(276248, 5093);	-- Snek'zali
+i(279387, 5130);	-- Ul'ava'took

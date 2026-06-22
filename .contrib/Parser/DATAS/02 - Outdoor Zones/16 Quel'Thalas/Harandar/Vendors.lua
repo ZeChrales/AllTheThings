@@ -8,11 +8,13 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			n(251259, {	-- Mothkeeper Wew'tam
 				["coord"] = { 49.3, 54.3, MAP.MIDNIGHT.HARANDAR },
 				["groups"] = sharedData({
-					-- #if AFTER 12.0.7
-					["cost"] = { { "c", VOIDLIGHT_MARL, 150 } },
-					-- #else
-					["cost"] = { { "c", 3385, 10 } },	-- Luminous Dust
-					-- #endif
+					["cost"] = {
+						-- #if AFTER 12.0.7
+						{ "c", VOIDLIGHT_MARL, 150 },
+						-- #else
+						{ "c", 3385, 10 },	-- Luminous Dust
+						-- #endif
+					},
 				}, {
 					-- #if AFTER 12.0.7
 					i(264243),	-- Firm Haranir Pillow (DECOR!)
@@ -20,6 +22,10 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						["cost"] = { { "c", VOIDLIGHT_MARL, 500 } },
 					}),
 					i(264245),	-- Warm Haranir Blanket (DECOR!)
+					-- Removed with 12.0.7, since the new quests reward the buyable version instead
+					i(265943, {["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_7 }}),	-- Firm Haranir Pillow
+					i(265946, {["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_7 }}),	-- Haranir Reclined Bed
+					i(265945, {["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_7 }}),	-- Warm Haranir Blanket
 					-- #else
 					i(222988),	-- Elder Glowmite (MOUNT!)
 					i(265943, {	-- Firm Haranir Pillow (DECOR!)
@@ -51,8 +57,6 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			n(255114, {	-- Maku <Decor Specialist>
 				["coord"] = { 62.7, 34.4, 2576 },	-- The Den, Harandar
 				["groups"] = {
-					-- Exo Note - TODO: Fill sourceQuests once all questIDs are sourced. Quest names in the comments are taken in-game from the items themselves. Items are left in 'Unsorted' file so that they can be quickly copy/pasted onto the quest itself.
-					-- Exo Note: Something is fishy here... Some decor here and sourceQuests have no sense. Quest A, rewards Decor 1 but unlocks Decor 2 at the vendor. Quest B, rewards Decor 2 but unlocks Decor 1 at the vendor... Maybe a bug?
 					i(266259, {	-- Altar of the Shul'ka (DECOR!)
 						["cost"] = { { "c", VOIDLIGHT_MARL, 250 } },
 					}),

@@ -1727,7 +1727,7 @@ localize(L.HEADER_NAMES, {
 	[-741] = "Void Assaults",
 	[-742] = "Ritual Sites",
 	[-743] = COVENANT_SANCTUM_TAB_RENOWN.." 9",
-	[-745] = "Mail Delivery Races",
+	[-745] = "Neighborhood postal route",
 	[-746] = "Profession Nodes",
 	[-748] = "Fanta",
 	[-749] = "Decor Duel",
@@ -2678,7 +2678,6 @@ _.Modules.Events.SetEventInformation(242, {
 	_.Modules.Events.CreateSchedule({["hour"]=10,["minute"]=0,["month"]=11,["monthDay"]=16,["weekday"]=3,["year"]=2027},{["hour"]=10,["minute"]=0,["month"]=12,["monthDay"]=7,["weekday"]=3,["year"]=2027})
 });
 _.Modules.Events.SetEventInformation(133900, {
-	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=6,["monthDay"]=14,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=6,["monthDay"]=14,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=6,["monthDay"]=21,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=6,["monthDay"]=21,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=6,["monthDay"]=28,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=6,["monthDay"]=28,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=7,["monthDay"]=5,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=7,["monthDay"]=5,["weekday"]=1,["year"]=2026}),
@@ -2730,7 +2729,8 @@ _.Modules.Events.SetEventInformation(133900, {
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=5,["monthDay"]=23,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=5,["monthDay"]=23,["weekday"]=1,["year"]=2027}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=5,["monthDay"]=30,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=5,["monthDay"]=30,["weekday"]=1,["year"]=2027}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=6,["monthDay"]=6,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=6,["monthDay"]=6,["weekday"]=1,["year"]=2027}),
-	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=6,["monthDay"]=13,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=6,["monthDay"]=13,["weekday"]=1,["year"]=2027})
+	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=6,["monthDay"]=13,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=6,["monthDay"]=13,["weekday"]=1,["year"]=2027}),
+	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=6,["monthDay"]=20,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=6,["monthDay"]=20,["weekday"]=1,["year"]=2027})
 });
 _.Modules.Events.SetEventInformation(133899, {
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=23,["weekday"]=3,["year"]=2025},{["hour"]=23,["minute"]=59,["month"]=3,["monthDay"]=19,["weekday"]=5,["year"]=2026}),
@@ -4301,6 +4301,7 @@ _.FlightPathNames = {
 	[3164] = "Hosaas' Rest",
 	[3165] = "Quest Path 11099: 12.0 Z1 - Silvermoon - Teleporters - Bazaar > Mage Academy - SJC",
 	[3166] = "Quest Path 11100: 12.0 Z1 - Silvermoon - Teleporters - Mage Academy > Bazaar - SJC",
+	[3168] = "Tokka's Landing, The Coiled Isle",
 	[3169] = "Base Node",
 	[3170] = "Collapsar",
 	[3171] = "Deep Well",
@@ -4355,10 +4356,16 @@ _.FlightPathNames = {
 	[3239] = "Quest Path 11403: 12.0 Z1 - Eversong - Teleporters - Upper Rookery - Going Down - Force Taxi - SJC",
 	[3240] = "Quest Path 11404: 12.0 Z1 - Eversong - Teleporters - Brightwing Estates - Going Up - Force Taxi - SJC",
 	[3241] = "Quest Path 11405: 12.0 Z1 - Eversong - Teleporters - Brightwing Estates - Going Down - Force Taxi - SJC",
+	[3267] = "Umbral Base Camp",
+	[3268] = "The Devouring Ingress",
+	[3269] = "Void Acropolis",
+	[3270] = "Steam Ravine",
 	[3277] = "Umbral Base Camp",
 	[3278] = "Sporeforge",
 	[3279] = "Nexus Port",
 	[3280] = "Extraction Coast",
+	[3285] = "Amani Foothold",
+	[3286] = "Eastern Entrance",
 }
 -- Glyphs Database Module
 _.GlyphDB = {
@@ -6168,6 +6175,7 @@ local ObjectNames = {
 	[185861] = "Fel Cannonball Stack",
 	[185877] = "Nethercite Deposit",
 	[185881] = "Netherdust Bush",
+	[185890] = "Apexis Relic",
 	[185913] = "Skull Pile",
 	[185915] = "Netherwing Egg",
 	[185928] = "Ancient Skull Pile",
@@ -9457,6 +9465,7 @@ local ObjectNames = {
 	[291236] = "Steaming Fresh Carrion",
 	[291238] = "Bwonsamdi's Tears",
 	[291241] = "Gnarl Root",
+	[291242] = "Barrel of Coal",
 	[291244] = "Small Treasure Chest",
 	[291246] = "Small Treasure Chest",
 	[291254] = "Small Treasure Chest",
@@ -13226,8 +13235,15 @@ local ObjectNames = {
 	[655270] = "Domanaar Storage Vessel",
 	[655271] = "Hal'hadar Pocket-Storage",
 	[655738] = "Nullframe Holoprint",
+	[656056] = "Bill of Lading",
 	[656141] = "Soul Lattice Holoprint",
 	[656142] = "Glittering Crypt Holoprint",
+	[658802] = "Ancient Crypt Reliquary",
+	[659300] = "Squirming Mollusk",
+	[659301] = "Highland Redcap",
+	[659302] = "Marshy Redcap",
+	[659303] = "Dusty Redcap",
+	[659304] = "Airy Redcap",
 	[9000000] = "Wind Sculpted Stone",
 	[9000001] = "Ancient Incense Brazier",
 	[9000002] = "Ancient Incense Brazier",
@@ -15591,6 +15607,7 @@ local ObjectModels = {
 	[185861] = 192333,
 	[185877] = 219544,
 	[185881] = 219493,
+	[185890] = 191535,
 	[185913] = 190688,
 	[185915] = 200966,
 	[185928] = 190688,
@@ -18833,6 +18850,7 @@ local ObjectModels = {
 	[291236] = 1726093,
 	[291238] = 894512,
 	[291241] = 848980,
+	[291242] = 1602488,
 	[291244] = 2120294,
 	[291246] = 2120294,
 	[291254] = 2120294,
@@ -22286,8 +22304,15 @@ local ObjectModels = {
 	[655270] = 6391990,
 	[655271] = 6320659,
 	[655738] = 6321897,
+	[656056] = 936413,
 	[656141] = 6321897,
 	[656142] = 6321897,
+	[658802] = 1062118,
+	[659300] = 145889,
+	[659301] = 4884010,
+	[659302] = 4884010,
+	[659303] = 4884010,
+	[659304] = 4884010,
 }; _.ObjectModels = ObjectModels;
 -- Consolidated Object Data
 local ALLIANCE_BONFIRES = { 187564,187914,187916,187917,187919,187920,187921,187922,187923,187924,187925,187926,187927,187928,187929,187930,187931,187932,187933,187934,187935,187936,187937,187938,187939,187940,187941,187942,187943,187944,187945,187946,194032,194035,194036,194038,194040,194044,194045,194049,207982,207984,207985,207987,207988,207993,208089,208093,217851,259871,259927,316788,316791,316793 };
@@ -26133,6 +26158,12 @@ L.QUEST_NAMES = {
 	[95136] = "MID Inscription Order: Skinning",
 	[95137] = "MID Inscription Order: Tailoring",
 	[95138] = "MID Inscription Order: Engineering",
+	[97091] = "Feed the Sleepy Mandrake a Highland Redcap",
+	[97092] = "Feed the Sleepy Mandrake a Dusty Redcap",
+	[97093] = "Feed the Sleepy Mandrake a Marshy Redcap",
+	[97094] = "Feed the Sleepy Mandrake a Partially-Digested Redcap",
+	[97095] = "Feed the Sleepy Mandrake an Airy Redcap",
+	[97116] = "Has rolled for Ahune Special Loot (Daily Accountwide)",
 	[97139] = "Stay awhile and listen: Grand Magister Rommath",
 	[97293] = "Stay awhile and listen: Riftblade Maella",
 }
@@ -26782,6 +26813,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "Legenden der Haranir",
 	[-741] = "Angriffe der Leere",
 	[-742] = "Ritualstätten",
+	[-745] = "Postroute in der Nachbarschaft",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-36] = "Es muss möglicherweise ein bestimmter Feiertag aktiv sein, um hier genannte Dinge abschließen zu können.",
@@ -27844,6 +27876,7 @@ localize(ObjectNames, {
 	[185861] = "Stapel mit Teufelskanonenkugeln",
 	[185877] = "Netheritvorkommen",
 	[185881] = "Netherstaubbusch",
+	[185890] = "Apexisrelikt",
 	[185913] = "Schädelhaufen",
 	[185915] = "Ei der Netherschwingen",
 	[185928] = "Uralter Schädelhaufen",
@@ -31041,6 +31074,7 @@ localize(ObjectNames, {
 	[291236] = "Dampfendes frisches Aas",
 	[291238] = "Bwonsamdis Tränen",
 	[291241] = "Runzelwurzel",
+	[291242] = "Fass mit Kohle",
 	[291244] = "Kleine Schatztruhe",
 	[291246] = "Kleine Schatztruhe",
 	[291254] = "Kleine Schatztruhe",
@@ -34585,6 +34619,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "Légendes des Haranir",
 	[-741] = "Assauts du Vide",
 	[-742] = "Sites rituels",
+	[-745] = "Tournée postale dans le quartier",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-24] = "Contient des objets de récompenses ou disponibles dans d’autres contenus de la section qui les contient.\nIls sont regroupés ici dans le but de réduire la duplication de nombreuses sources possibles.",
@@ -35659,6 +35694,7 @@ localize(ObjectNames, {
 	[185861] = "Pile de boulets de gangrecanon",
 	[185877] = "Gisement de néanticite",
 	[185881] = "Buisson de pruinéante",
+	[185890] = "Relique apogide",
 	[185913] = "Pile de crânes",
 	[185915] = "Œuf de l'Aile-du-Néant",
 	[185928] = "Pile de crânes anciens",
@@ -38861,6 +38897,7 @@ localize(ObjectNames, {
 	[291236] = "Charogne fumante",
 	[291238] = "Larmes de Bwonsamdi",
 	[291241] = "Racine noueuse",
+	[291242] = "Tonneau de charbon",
 	[291244] = "Petit coffre au trésor",
 	[291246] = "Petit coffre au trésor",
 	[291254] = "Petit coffre au trésor",
@@ -41994,6 +42031,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "Leggende degli Haranir",
 	[-741] = "Assalti del Vuoto",
 	[-742] = "Siti Rituali",
+	[-745] = "Percorso postale nel Vicinato",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-106] = "Ottieni esperienza e reputazione bonus nel corso delle tue avventure ad Azeroth, e trova tesori misteriosi sulle Isole dei Draghi e a Khaz Algar!",
@@ -42665,6 +42703,7 @@ localize(ObjectNames, {
 	[185861] = "Pila di Palle del Vilcannone",
 	[185877] = "Deposito di Faturcite",
 	[185881] = "Cespuglio di Nubefatua",
+	[185890] = "Reliquia Apexis",
 	[185913] = "Pila di Teschi",
 	[185915] = "Uovo di Alafatua",
 	[185928] = "Cumulo di Antichi Teschi",
@@ -45839,6 +45878,7 @@ localize(ObjectNames, {
 	[291236] = "Carogna Fresca Fumante",
 	[291238] = "Lacrime di Bwonsamdi",
 	[291241] = "Radice di Gnarl",
+	[291242] = "Barile di Carbone",
 	[291244] = "Cassa del Tesoro Piccola",
 	[291246] = "Cassa del Tesoro Piccola",
 	[291254] = "Cassa del Tesoro Piccola",
@@ -48716,6 +48756,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "Lendas dos Haranir",
 	[-741] = "Investidas do Caos",
 	[-742] = "Sítios Ritualísticos",
+	[-745] = "Rota postal na vizinhança",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-106] = "Ganhe bônus de experiência e reputação em suas aventuras em Azeroth e ache fortuitos mistérios nas Ilhas do Dragão e em Khaz Algar!",
@@ -49684,6 +49725,7 @@ localize(ObjectNames, {
 	[185861] = "Pilha de Balas de Canhão Vil",
 	[185877] = "Depósito de Etercita",
 	[185881] = "Arbusto de Poeira Etérea",
+	[185890] = "Relíquia Apexis",
 	[185913] = "Pilha de Crânios",
 	[185915] = "Ovo da Asa Etérea",
 	[185928] = "Pilha de Crânios Antiga",
@@ -52872,6 +52914,7 @@ localize(ObjectNames, {
 	[291236] = "Carniça Fresca Fumegante",
 	[291238] = "Lágrimas do Bwonsamdi",
 	[291241] = "Roer Raiz",
+	[291242] = "Barril de Carvão",
 	[291244] = "Baú do Tesouro Pequeno",
 	[291246] = "Baú do Tesouro Pequeno",
 	[291254] = "Baú do Tesouro Pequeno",
@@ -56638,6 +56681,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "Легенды хараниров",
 	[-741] = "Натиски Бездны",
 	[-742] = "Места проведения ритуалов",
+	[-745] = "Pайонный почтовый маршрут",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-24] = "Штучки, которые можно получить в награду с разного контента в родительской секции.\nОни собраны здесь, чтобы уменьшить количество источников, когда Штучка доступна из многих мест.",
@@ -57722,6 +57766,7 @@ localize(ObjectNames, {
 	[185861] = "Груда пушечных ядер Скверны",
 	[185877] = "Залежи хаотита",
 	[185881] = "Куст пустопраха",
+	[185890] = "Апекситовая реликвия",
 	[185913] = "Груда черепов",
 	[185915] = "Яйцо дракона из стаи Крыльев Пустоты",
 	[185928] = "Груда древних черепов",
@@ -60945,6 +60990,7 @@ localize(ObjectNames, {
 	[291236] = "Свежая падаль",
 	[291238] = "Слезы Бвонсамди",
 	[291241] = "Корявый корень",
+	[291242] = "Угольный бочонок",
 	[291244] = "Маленький сундук с сокровищами",
 	[291246] = "Маленький сундук с сокровищами",
 	[291254] = "Маленький сундук с сокровищами",
@@ -64111,6 +64157,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "하라니르의 전설",
 	[-741] = "공허 공세",
 	[-742] = "의식 지점",
+	[-745] = "거주구 우편 경로를",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-106] = "아제로스를 모험하며 추가 경험치와 평판을 획득하고, 용의 섬과 카즈 알가르에서 수수께끼의 보물을 발견해 보십시오!",
@@ -65099,6 +65146,7 @@ localize(ObjectNames, {
 	[185861] = "지옥 포탄 더미",
 	[185877] = "황천연 광맥",
 	[185881] = "황천티끌 덤불",
+	[185890] = "에펙시스 유물",
 	[185913] = "해골 더미",
 	[185915] = "황천날개 알",
 	[185928] = "고대 해골 더미",
@@ -71610,6 +71658,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "Leyendas de los haranir",
 	[-741] = "Asaltos del Vacío",
 	[-742] = "Lugares de ritual",
+	[-745] = "Ruta postal del vecindario",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-24] = "Contiene recompensas que dan al completar el evento.",
@@ -72732,6 +72781,7 @@ localize(ObjectNames, {
 	[185861] = "Montón de balas de cañón vil",
 	[185877] = "Depósito de abisalita",
 	[185881] = "Arbusto de polvo abisal",
+	[185890] = "Reliquia apexis",
 	[185913] = "Montón de cráneos",
 	[185915] = "Huevo de Ala Abisal",
 	[185928] = "Montón de cráneos antiguos",
@@ -75925,6 +75975,7 @@ localize(ObjectNames, {
 	[291236] = "Carroña fresca humeante",
 	[291238] = "Lágrimas de Bwonsamdi",
 	[291241] = "Raíz de Gnarl",
+	[291242] = "Barrica de carbón",
 	[291244] = "Arqueta pequeña",
 	[291246] = "Arqueta pequeña",
 	[291254] = "Arqueta pequeña",
@@ -79063,6 +79114,7 @@ localize(L.HEADER_NAMES, {
 	[-710] = "|cFFFFFFFFStep 1:|rNota sospechosa",
 	[-723] = "Invasiones elementales",
 	[-742] = "Sitios de ritual",
+	[-745] = "Ruta postal de vecindario",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-29] = "Contiene cosas que se otorgan como recompensa al completar este evento.",
@@ -80769,6 +80821,13 @@ localize(L.HEADER_NAMES, {
 	[-710] = "|cFFFFFFFF步骤1:|r 不起眼的纸条",
 	[-712] = "升级中角色",
 	[-713] = "最高等级角色",
+	[-714] = "文化节",
+	[-715] = "卡雷什文化",
+	[-716] = "土地精文化",
+	[-717] = "鼹鼠人文化",
+	[-718] = "辛多雷文化",
+	[-719] = "巨龙文化",
+	[-720] = "机械侏儒文化",
 	[-722] = "暗黑破坏神II重制版 - 术士君临",
 	[-723] = "元素入侵",
 	[-729] = "丰饶",
@@ -80776,6 +80835,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "哈籁尼尔的传说",
 	[-741] = "虚空侵袭",
 	[-742] = "仪式场地",
+	[-745] = "住宅区邮路",
 	[-746] = "专业节点",
 	[-749] = "装饰决斗",
 	[-750] = "相位导管",
@@ -81781,6 +81841,7 @@ localize(ObjectNames, {
 	[185861] = "邪能炮弹堆",
 	[185877] = "虚空矿脉",
 	[185881] = "灵尘灌木丛",
+	[185890] = "埃匹希斯圣物",
 	[185913] = "颅骨堆",
 	[185915] = "灵翼龙卵",
 	[185928] = "上古颅骨堆",
@@ -88074,6 +88135,7 @@ localize(L.HEADER_NAMES, {
 	[-738] = "哈拉尼爾的傳說",
 	[-741] = "虛無襲擊",
 	[-742] = "儀式地點第",
+	[-745] = "社區郵政路線",
 });
 localize(L.HEADER_DESCRIPTIONS, {
 	[-24] = "包含完成探究時獎勵的東西。",

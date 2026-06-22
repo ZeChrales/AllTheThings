@@ -53,6 +53,11 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, {
 		["groups"] = {
 			n(ACHIEVEMENTS, {
 			}),
+			filter(MOUNTS, {
+				i(269240, {	-- Luminous Sporeglider (MOUNT!)
+					["cost"] = { { "i", 269245, 4 } },	-- 4x Delicious Sporesnack
+				}),
+			}),
             n(QUESTS, {
                 q(96746, {  -- Sporefall: Rotmire
                     ["qg"] = 266165,    -- Sporomir
@@ -68,11 +73,11 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, {
 				BossOnly(ROTMIRE, {
 					ach(63237),	-- Rotmire
 					ach(63242),	-- Rotmire Guild Run
+					i(275228, {["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 }}),	-- Nebulous Voidcache: Rotmire
                     i(247235),	-- Luminous Rotshroom (DECOR!)
                     i(264313),	-- Madcap Redcap (TOY!)
                     i(264367),	-- Mycomancer's Hearthspore (TOY!)
 					i(268280),	-- Sporelord's Shroom Cap (COSMETIC!)
-					-- mount thingy drops once per week, needs 4 in total
 					i(269245),	-- Delicious Sporesnack
 				}),
 			}),

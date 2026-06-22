@@ -2850,9 +2850,12 @@ local AccountWideQuestsDB = {
 	96215,	-- Tracking Quest
 	96744,	-- Bouncy Mushrooms
 	96745,	-- Aerospores
+	96790,	-- ??
 	96845,	-- The Grappler
 	96936,	-- Accolades for the Umbral Contender
+	97111,	-- ??
 	97115,	-- First Preference Killing of the week
+	97116,	-- Has rolled for Ahune Special Loot (Daily Accountwide)
 
 	-- Weird partial cases... ??
 	-- 45237,	-- Ensemble: Funerary Plate of the Chosen Dead (Only flags complete for Plate characters)
