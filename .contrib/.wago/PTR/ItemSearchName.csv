@@ -99376,7 +99376,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 273874,"Void-Touched Sunfury Poleaxe",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 274050,"Bandit's Midnight Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
 274051,"Bandit's Azure Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274052,"Bandit's Sepia Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
+274052,"Bandit's Sepia Highboot",1,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
 274053,"Bandit's Grassy Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
 274054,"Bandit's Cloudy Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
 274055,"Bandit's Deep Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
@@ -99415,7 +99415,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 274542,"Bloodwatch Outlaw's Hand Cannon",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274619,"Gunslinger's Midnight Lid",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274621,"Gunslinger's Azure Lid",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-274622,"Gunslinger's Sepia Lid",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+274622,"Gunslinger's Sepia Lid",1,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
 274623,"Gunslinger's Grassy Lid",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274624,"Gunslinger's Cloudy Lid",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274625,"Gunslinger's Deep Lid",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -99886,8 +99886,51 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 277312,"Venomous Gladiator's Axe",4,11,0,0,-1,90,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 277326,"Axe of Akil'zon",3,11,0,0,-1,1,0,0,0,1,36864,8192,0,65536,0,-1,-1
 277327,"Mantle of Nalorakk",3,11,0,0,-1,1,0,0,0,1,36864,8192,0,65536,0,-1,-1
+277764,"Venom-Cursed Bear's Battle Bands",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277765,"Venom-Cursed Bear's Warbelt",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277766,"Venom-Cursed Bear's Pauldrons",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277767,"Venom-Cursed Bear's Greaves",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277768,"Venom-Cursed Bear's Jaws",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277769,"Venom-Cursed Bear's Gauntlets",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277770,"Venom-Cursed Bear's Charge",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277771,"Venom-Cursed Bear's Chestguard",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277772,"Venom-Cursed Dragonhawk's Scalebands",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277773,"Venom-Cursed Dragonhawk's Waistguard",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277774,"Venom-Cursed Dragonhawk's Amice",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277775,"Venom-Cursed Dragonhawk's Legguards",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277776,"Venom-Cursed Dragonhawk's Guise",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277777,"Venom-Cursed Dragonhawk's Grips",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277778,"Venom-Cursed Dragonhawk's Flight",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277779,"Venom-Cursed Dragonhawk's Crest",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277780,"Venom-Cursed Lynx's Bracers",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277781,"Venom-Cursed Lynx's Buckle",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277782,"Venom-Cursed Lynx's Spaulders",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277783,"Venom-Cursed Lynx's Breeches",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277784,"Venom-Cursed Lynx's Gaze",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277785,"Venom-Cursed Lynx's Claws",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277786,"Venom-Cursed Lynx's Paws",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277787,"Venom-Cursed Lynx's Harness",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277788,"Venom-Cursed Eagle's Wristbands",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277789,"Venom-Cursed Eagle's Cinch",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277790,"Venom-Cursed Eagle's Wingspan",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277791,"Venom-Cursed Eagle's Leggings",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277792,"Venom-Cursed Eagle's Plumage",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277793,"Venom-Cursed Eagle's Handwraps",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277794,"Venom-Cursed Eagle's Talons",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277795,"Venom-Cursed Eagle's Robes",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277798,"Venom-Cursed Spellfang",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277799,"Venom-Cursed Cudgel",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277800,"Venom-Cursed Focus",2,11,0,0,-1,80,0,0,0,400,0,8704,0,0,0,-1,-1
+277801,"Venom-Cursed Boneglaive",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277802,"Venom-Cursed Guillotine",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
 277803,"Venom-Cursed Spellcarver",2,11,0,0,-1,80,0,0,0,219,0,8704,0,0,0,-1,-1
+277804,"Venom-Cursed Longbow",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277805,"Venom-Cursed Dirk",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277806,"Venom-Cursed Hidepiercer",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
+277807,"Venom-Cursed Ritual Staff",2,11,0,0,-1,80,0,0,0,400,0,8704,0,0,0,-1,-1
+277808,"Venom-Cursed Gladius",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
 277809,"Venom-Cursed Claymore",2,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
+277810,"Venom-Cursed Aegis",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
 277951,"Venomous Aspirant's Slicer",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
 277970,"Venomous Warmonger's Warblade",4,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 278110,"DNT Ula'tek Pole Dummy A",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
@@ -100046,7 +100089,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279112,"Clumped Asteroidea",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279114,"[ph] SpiceWitch Head - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279115,"Soulcoiler's Ritual Candle",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
-279118,"Lost Explorers Mailbox",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
+279118,"Lost Explorers' Mailbox",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279122,"Venom-Fanged Font",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279125,"The Venomous Abyss Aureate Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279127,"The Venomous Abyss Argent Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
@@ -100095,7 +100138,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279283,"Exorcised Battleaxe",2,11,0,0,-1,90,0,0,0,250,0,8192,0,0,0,-1,-1
 279428,"Midnight Gloomcap",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 279429,"Azure Gloomcap",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-279430,"Sepia Gloomcap",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279430,"Sepia Gloomcap",1,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
 279431,"Grassy Gloomcap",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 279432,"Cloudy Gloomcap",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 279433,"Deep Gloomcap",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -100127,17 +100170,18 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279540,"Tinker's Padded Vest",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
 279541,"Priestess' Moon Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
 279542,"Runecloth Clergy Coat",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279543,"Sky Shaman's Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279544,"Witch Doctor's Undervest",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279545,"Wild Seer's Mantle",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279546,"Elder's Ritual Coat",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279547,"Junkyard Crafter's Vest",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279548,"Villager's Labor Vest",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279549,"Witch-Hunter's Undercoat",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279551,"Radical's Gilded Vestment",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
+279543,"Sky Shaman's Tunic",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
+279544,"Witch Doctor's Undervest",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
+279545,"Wild Seer's Mantle",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
+279546,"Elder's Ritual Coat",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
+279547,"Junkyard Crafter's Vest",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
+279548,"Villager's Labor Vest",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
+279549,"Witch-Hunter's Undercoat",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
+279551,"Radical's Gilded Vestment",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
 279579,"Cruel Warrior's Blade",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279818,"Basic Iron Sabatons",1,-3,0,0,-1,1,0,0,0,1,134217728,159744,8388608,65536,0,-1,-1
 279819,"Basic Steel Sabatons",1,-3,0,0,-1,1,0,0,0,1,134217728,159744,8388608,65536,0,-1,-1
+280333,"Pirate's Eyepatch",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 270212,"Sire's Ornate Collar",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 270213,"Sire's Ornate Treads",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 270215,"Sire's Ornate Vestments",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
@@ -101110,7 +101154,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 78843,"Time Lord's Mantle",4,3,0,0,128,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78844,"Mantle of the Faceless Shroud",4,3,0,0,256,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78825,"Robes of the Faceless Shroud",4,3,0,0,256,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
-78818,"Spiritwalker's Hauberk",4,3,0,0,64,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78816,"Leggings of the Faceless Shroud",4,3,0,0,256,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78797,"Hood of the Faceless Shroud",4,3,0,0,256,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78776,"Gloves of the Faceless Shroud",4,3,0,0,256,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
@@ -101193,6 +101236,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 78806,"Spiritwalker's Kilt",4,3,0,0,64,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78780,"Spiritwalker's Headpiece",4,3,0,0,64,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78761,"Spiritwalker's Gloves",4,3,0,0,64,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
+78818,"Spiritwalker's Hauberk",4,3,0,0,64,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78819,"Spiritwalker's Cuirass",4,3,0,0,64,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78762,"Spiritwalker's Grips",4,3,0,0,64,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
 78781,"Spiritwalker's Helmet",4,3,0,0,64,32,0,0,0,37,4096,134225920,0,0,0,-1,-1
@@ -101385,10 +101429,10 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 91618,"Malevolent Gladiator's Copperskin Tunic",4,4,0,0,512,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91591,"Malevolent Gladiator's Silk Robe",4,4,0,0,128,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91779,"Malevolent Gladiator's Felweave Raiment",4,4,0,0,256,35,0,0,0,39,4096,8192,0,0,0,-1,-1
+87022,"Tomb Raider's Girdle",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 91548,"Malevolent Gladiator's Wyrmhide Robes",4,4,0,0,1024,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91531,"Malevolent Gladiator's Kodohide Robes",4,4,0,0,1024,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91668,"Malevolent Gladiator's Mooncloth Robe",4,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
-87028,"Amulet of Seven Curses",4,4,0,0,-1,35,0,0,0,39,0,1073766400,0,0,0,-1,-1
 91678,"Malevolent Gladiator's Satin Robe",4,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 85124,"Malevolent Gladiator's Shield Wall",4,4,0,0,-1,35,0,0,0,39,4096,8192,8388608,0,0,-1,-1
 85125,"Malevolent Gladiator's Barrier",4,4,0,0,-1,35,0,0,0,39,4096,8192,8388608,0,0,-1,-1
@@ -101463,10 +101507,10 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 87017,"Jade Dust Leggings",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87018,"Cape of Three Lanterns",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
 87023,"Wildfire Worldwalkers",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
-87022,"Tomb Raider's Girdle",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87025,"Bracers of Six Oxen",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87024,"Nullification Greathelm",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87026,"Cloak of Peacock Feathers",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
+87028,"Amulet of Seven Curses",4,4,0,0,-1,35,0,0,0,39,0,1073766400,0,0,0,-1,-1
 87030,"Chain of Shadow",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87031,"Legplates of Sagacious Shadows",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87029,"Hood of Cursed Dreams",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
@@ -102170,6 +102214,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 103238,"Grievous Gladiator's Copperskin Helm",4,4,0,0,512,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
 103239,"Grievous Gladiator's Copperskin Legguards",4,4,0,6,512,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
 103240,"Grievous Gladiator's Copperskin Spaulders",4,4,0,0,512,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
+105164,"Corruption-Rotted Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 103241,"Grievous Gladiator's Copperskin Tunic",4,4,0,0,512,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
 103242,"Grievous Gladiator's Scaled Chestpiece",4,4,0,0,2,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
 103243,"Grievous Gladiator's Scaled Gauntlets",4,4,0,0,2,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
@@ -102402,7 +102447,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 105304,"Ravager's Pathwalkers",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 105553,"Ravager's Pathwalkers",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 104417,"Corruption-Rotted Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
-105164,"Corruption-Rotted Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 105413,"Corruption-Rotted Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 104515,"Tar-Coated Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 105262,"Tar-Coated Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
