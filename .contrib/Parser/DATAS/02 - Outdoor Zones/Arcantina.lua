@@ -8,10 +8,16 @@ root(ROOTS.Zones, m(ARCANTINA, {
 	["groups"] = {
 		n(ACHIEVEMENTS, {
 			ach(61083),	-- Highly Decorated
+			ach(63619, {	-- New Friends
+				["timeline"] = { ADDED_12_1_0 },
+			}),
 			ach(61082),	-- Old Soldiers
 			ach(61081, {	-- Share a Drink
 				["description"] = "NOTE: You currently also get credit for YOUR character's Race when sharing a drink!",
 				["cost"] = { { "i", 251039, 26 } },	-- 26x Toasting Brew
+			}),
+			ach(63620, {	-- Well Decorated
+				["timeline"] = { ADDED_12_1_0 },
 			}),
 		}),
 		n(QUESTS, {	-- TODO: same source for all, ["sourceQuests"] = { 86903 },	-- The Arcantina
@@ -155,7 +161,11 @@ root(ROOTS.Zones, m(ARCANTINA, {
 				},
 			}),
 			h(q(90718, {	-- Request of the Arcantina
-				["sourceQuests"] = { 92520 },	-- Wake of the Darkwell
+				["sourceQuests"] = {
+					92520, -- Wake of the Darkwell
+					92319, -- A Favor to Axe
+					92322, -- Timear Foresees a Proof of Demise!
+				},
 				["qg"] = 240265,	-- Chief Telemancer Oculeth
 				["coord"] = { 47.4, 69.6, MAP.MIDNIGHT.SILVERMOON_CITY },
 				["groups"] = { i(260165) },	-- Request for Reagents (PQI!)
@@ -401,7 +411,10 @@ root(ROOTS.Zones, m(ARCANTINA, {
 					i(253598, {	-- Banner of the Ebon Blade (DECOR!)
 						["cost"] = { { "c", VOIDLIGHT_MARL, 500 } },
 					}),
-					i(269316, { ["timeline"] = { ADDED_12_0_7 } }),	-- Bartender Bob's "No Weapons Allowed" Rack (DECOR!)
+					i(269316, {	-- Bartender Bob's "No Weapons Allowed" Rack (DECOR!)
+						["sourceAchievement"] = 61083,	-- Highly Decorated
+						["timeline"] = { ADDED_12_0_7 },
+					}),
 					i(253543, {	-- Clefthoof Hide Rug (DECOR!)
 						["cost"] = { { "c", VOIDLIGHT_MARL, 150 } },
 					}),
@@ -434,4 +447,3 @@ root(ROOTS.Zones, m(ARCANTINA, {
 		}),
 	},
 }))
-

@@ -116220,6 +116220,8 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 231661,,219450,1,0,116654,8,0
 231662,,219450,1,0,116655,9,0
 231663,,220000,0,0,116656,9,0
+231884,,221217,0,0,116810,4,0
+231885,,221217,0,0,116811,5,0
 209727,"Gathering of the Elves",209723,0,0,104636,2,16
 207626,"12.0 Max Campaign - Ch 5 - Battle of the Bridge - Army Assembly - Signal Attack (KCO)",0,0,4,0,0,0
 207627,"Unnamed Branch",207626,0,4,0,0,0
@@ -116461,7 +116463,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 8923,"Complete the cooking achievements listed below.",0,0,4,0,0,0
 7572,"Defeat the bosses in the Trial of the Champion on Heroic Difficulty.",0,0,4,0,0,0
 35949,"Explore Shadowmoon Valley, revealing the covered areas of the world map.",0,0,4,0,0,0
-89605,"Evade the Tarragrue",0,0,4,0,0,2
 10705,"Raise your reputation values in Warsong Gulch, Arathi Basin and Alterac Valley to Exalted.",0,0,4,0,0,0
 7516,"Fight Thorim with Sif involved.",0,0,4,0,0,0
 7510,"Win Isle of Conquest while controlling the Quarry, Oil Refinery, Shipyard, Siege Workshop and Hangar.",0,2,8,0,0,0
@@ -116520,7 +116521,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 18479,"Win 75 rated battlegrounds.",0,0,4,0,0,0
 20145,"Earn a battleground rating of 1100.",0,0,4,0,0,0
 16822,"Earn a battleground rating of 1500.",0,0,4,0,0,0
-40233,"Earned Gold Reward - Alliance",0,0,4,0,0,4096
 18290,"Win a Twin Peaks battle after being behind by a score of 0 to 2.",0,0,4,0,0,0
 20564,"Win 25 battles for Tol Barad.",0,0,4,0,0,0
 19607,"Earn exalted reputation with the classic battlegrounds listed below.",0,0,4,0,0,0
@@ -116584,7 +116584,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 33926,"Seat and serve as many customers as you can in 5 minutes",0,0,4,0,0,0
 157389,"Seat and serve as many customers as you can in 5 minutes",0,0,4,0,0,0
 33883,"Win 100 Arena (3v3) or 40 Rated Battlegrounds in Season 15",0,1,8,0,0,0
-89601,"Evade the Tarragrue",0,0,4,0,0,2
 33918,"(H) End PvP season 14 in the top .5% of the rated battleground ladder.",0,0,4,0,0,0
 157385,"Get a score of at least 30,000",0,0,4,0,0,0
 34564,"Obtain Legendary Cloak 5.0 (Hidden Tracking)",0,0,4,0,0,0
@@ -116658,6 +116657,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 39849,"Achievement - Draenor Quest - Garrison Campaign - Alliance",0,0,4,0,0,0
 39832,"Achievement - Draenor Quest - Garrison Campaign - Horde",0,0,4,0,0,0
 39420,"Recruit Garrison Follower while in own Garrison - Horde",0,0,4,0,0,4096
+40233,"Earned Gold Reward - Alliance",0,0,4,0,0,4096
 40235,"Earn Gold Invasion - Horde",0,0,4,0,0,4096
 41531,"Defeat Remaining Shadowmoon Forces",0,0,4,0,0,0
 42563,"Complete The Real Big Race within 30 tolls.",0,1,8,0,0,0
@@ -116792,6 +116792,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 58669,"Tomb - Defeat Desolate Host",0,0,4,0,0,4096
 58671,"Tomb - Defeat Desolate Host",0,0,4,0,0,4096
 58675,"Tomb - Defeat the Fallen Avatar",0,0,4,0,0,4096
+89593,"Evade the Tarragrue",0,0,4,0,0,2
 58677,"Tomb - Defeat the Fallen Avatar",0,0,4,0,0,4096
 58679,"Tomb - Defeat the Fallen Avatar",0,0,4,0,0,4096
 58683,"Tomb - Defeat Kil'jaeden",0,0,4,0,0,4096
@@ -117225,8 +117226,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 89581,"Evade the Tarragrue",0,0,4,0,0,2
 89585,"Evade the Tarragrue",0,0,4,0,0,2
 89589,"Evade the Tarragrue",0,0,4,0,0,2
-89593,"Evade the Tarragrue",0,0,4,0,0,2
 89597,"Evade the Tarragrue",0,0,4,0,0,2
+89601,"Evade the Tarragrue",0,0,4,0,0,2
+89605,"Evade the Tarragrue",0,0,4,0,0,2
 89609,"Evade the Tarragrue",0,0,4,0,0,2
 89613,"Evade the Tarragrue",0,0,4,0,0,2
 89617,"Evade the Tarragrue",0,0,4,0,0,2
@@ -117371,9 +117373,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 85419,"Complete the Terrors in Tirna Scithe World Quest or the Mists of Tirna Scithe Dungeon.",0,1,8,0,0,4096
 85422,"Complete the Terrors in Tirna Scithe World Quest or the Mists of Tirna Scithe Dungeon.",0,1,8,0,0,4096
 85425,"Complete the Terrors in Tirna Scithe World Quest or the Mists of Tirna Scithe Dungeon.",0,1,8,0,0,4096
+90854,"Jailer's forces defeated",0,300,9,0,0,1
 85431,"Complete the Disloyal Denizens World Quest or the Spires of Ascension Dungeon.",0,1,8,0,0,4096
 85434,"Complete the Disloyal Denizens World Quest or the Spires of Ascension Dungeon.",0,1,8,0,0,4096
-90864,"Jailer's forces defeated",0,300,9,0,0,1
 85437,"Complete the Disloyal Denizens World Quest or the Spires of Ascension Dungeon.",0,1,8,0,0,4096
 85443,"Complete the Chosen Champions World Quest or the Theater of Pain Dungeon.",0,1,8,0,0,4096
 85446,"Complete the Chosen Champions World Quest or the Theater of Pain Dungeon.",0,1,8,0,0,4096
@@ -117439,9 +117441,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 90935,"Tormentor defeated",0,1,4,0,0,0
 90937,"Tormentor defeated",0,1,4,0,0,0
 90943,"Tormentor defeated",0,1,4,0,0,0
-90854,"Jailer's forces defeated",0,300,9,0,0,1
 90856,"Jailer's forces defeated",0,300,9,0,0,1
 90858,"Jailer's forces defeated",0,300,9,0,0,1
+90864,"Jailer's forces defeated",0,300,9,0,0,1
 90893,"Jailer's forces defeated",0,300,9,0,0,1
 90933,"Jailer's forces defeated",0,300,9,0,0,1
 90941,"Jailer's forces defeated",0,300,9,0,0,1
@@ -117520,7 +117522,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 149957,"Quests completed",0,15,5,0,0,8193
 168729,"Quests completed",0,15,5,0,0,8193
 219761,"Quests completed",0,15,5,0,0,8193
-151658,"Creatures killed",0,0,4,0,0,1
 145198,"Timewalking dungeons completed",0,5,5,0,0,8193
 145457,"Timewalking dungeons completed",0,5,5,0,0,8193
 219775,"Timewalking dungeons completed",0,5,5,0,0,8193
@@ -117588,6 +117589,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 145403,"Dragonriding courses completed",0,15,5,0,0,8193
 145550,"Creatures killed",0,0,4,0,0,1
 145554,"Creatures killed",0,0,4,0,0,1
+151658,"Creatures killed",0,0,4,0,0,1
 154172,"Use the /love emote on Trading Post Merchants and Merchandise",0,0,4,0,0,1
 156779,"Dragonflight dungeon completed",0,1,8,0,0,8193
 142474,"Forbidden Reach Dragon Racing Completionist - Silver",0,0,4,0,0,0
@@ -117784,7 +117786,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 163395,"Bonus Event Weekend - Timewalking (Classic)",0,5,5,0,0,4096
 169774,"Bonus Event Weekend - Timewalking (Classic)",0,5,5,0,0,4096
 206223,"Bonus Event Weekend - Timewalking (Classic)",0,5,5,0,0,4096
-206003,"Achievement - Undermine - Wing 4",0,0,4,0,0,0
 163232,"Earn a 2600 personal rating in the 2v2 bracket of the arena in Season 38 (TWW 1)",0,0,4,0,0,0
 220407,"Complete the delves listed below on any difficulty.",0,0,4,0,0,0
 169781,"11.0 War Within - Legion - Bonus Event Weekend - Timewalking (Burning Crusade)",0,5,5,0,0,4096
@@ -117848,7 +117849,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 209873,"Add a Utility Curio to your collection",0,1,8,0,0,4096
 209802,"Equip a Combat Curio to your companion",0,1,8,0,0,4096
 209898,"Equip a Utility Curio to your companion",0,1,8,0,0,4096
+211449,"[DNT] Boss killed",0,0,4,0,0,4096
 205760,"11.2 - FF - Devourer Attack - 3 - Phase 1 (SMART)",0,0,4,0,0,4096
+206003,"Achievement - Undermine - Wing 4",0,0,4,0,0,0
 206254,"11.1 Undermine - S&H - Weekly Cartel Chosen (KNF)",0,1,8,0,0,4096
 212394,"Delver's Cosmetic Surprise Bag purchased from Reno Jackson",0,0,4,0,0,6144
 212404,"Delver's Cosmetic Surprise Bag purchased from Reno Jackson",0,0,4,0,0,6144
@@ -117914,7 +117917,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 211355,"[DNT] Kill demons",0,100,5,0,0,4097
 211470,"Defeat Nexus-King Salhadaar inside Manaforge Omega on Normal difficulty or higher.",0,0,4,0,0,4096
 211480,"Defeat Nexus-King Salhadaar inside Manaforge Omega on Normal difficulty or higher.",0,0,4,0,0,4096
-211449,"[DNT] Boss killed",0,0,4,0,0,4096
 211447,"[DNT] Enemies Slain",0,15,5,0,0,4096
 211445,"[DNT] Quests completed",0,2,5,0,0,4096
 221096,"Complete World Quests",0,5,4,0,0,0

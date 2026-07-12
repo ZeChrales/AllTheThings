@@ -12874,7 +12874,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 32882,"Hellfire Shot",0,0,947,6,-1,27,0,0,0,1,0,8192,0,0,0,-1,-1
 32883,"Felbane Slugs",0,0,946,6,-1,27,0,0,0,1,0,8192,0,0,0,-1,-1
 32912,"Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,1,134381760,2252800,8388608,65536,0,-1,-1
-32915,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
+32915,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
 32943,"Swiftsteel Bludgeon",4,1,0,0,-1,27,0,0,0,32,0,24576,0,0,0,-1,-1
 32944,"Talon of the Phoenix",4,1,0,0,-1,27,0,0,0,32,4096,8192,0,0,0,-1,-1
 32945,"Fist of Molten Fury",4,1,0,0,-1,27,0,0,0,32,0,24576,0,0,0,-1,-1
@@ -12914,7 +12914,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 33012,"Terokkar Lilac",1,0,0,0,-1,0,0,0,0,12,0,8192,0,0,0,-1,-1
 33014,"Fine Poking Stick",1,0,0,0,-1,0,0,0,0,12,0,8192,0,0,0,-1,-1
 33016,"Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,1,134381760,2252800,8388608,65536,0,-1,-1
-33017,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
+33017,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
 33040,"Repaired Diving Gear",1,0,0,0,-1,0,0,0,0,1,65600,24576,0,0,0,-1,-1
 33047,"Belbi's Eyesight Enhancing Romance Goggles",1,-3,0,0,-1,0,0,0,0,5,134221824,155650,0,262144,0,-1,-1
 33054,"The Seal of Danzalar",4,1,0,0,-1,27,0,0,0,32,528384,24576,0,0,0,-1,-1
@@ -15506,7 +15506,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 37890,"Chain Gang Legguards",3,2,0,0,-1,30,0,0,0,35,0,8192,0,0,0,-1,-1
 37891,"Cast Iron Shackles",3,2,0,0,-1,30,0,0,0,35,0,8192,0,0,0,-1,-1
 37892,"Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,1,134381760,2252800,8388608,65536,0,-1,-1
-37893,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
+37893,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
 37936,"Fisherman's Earwarmer",2,2,0,0,-1,0,0,0,0,33,0,8192,0,0,0,-1,-1
 37937,"Alystros' Plume Cinch",2,2,0,0,-1,0,0,0,0,33,0,8192,0,0,0,-1,-1
 37938,"Visionary's Robes",2,2,0,0,-1,0,0,0,0,33,0,8192,0,0,0,-1,-1
@@ -28863,6 +28863,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 70069,"Bloodthirsty Hide Cloak",3,3,0,0,-1,32,0,0,0,37,4096,8192,8388608,0,0,-1,-1
 70070,"Bloodthirsty Embersilk Cape",3,3,0,0,-1,32,0,0,0,37,4096,8192,8388608,0,0,-1,-1
 70080,"Reforged Heartless",4,3,0,0,-1,32,0,0,0,37,0,8192,0,0,0,-1,-1
+70104,"Empty Purple Brewfest Stein",3,-3,0,0,-1,1,0,0,0,1,134414528,155648,8388608,65536,0,-1,-1
 70108,"Pyrelord Greaves",4,3,0,0,-1,32,0,0,0,37,98304,24576,0,0,0,-1,-1
 70112,"Globe of Moonlight",4,3,0,0,-1,32,0,0,0,37,98304,24576,0,0,0,-1,-1
 70114,"Fireplume Girdle",4,3,0,0,-1,32,0,0,0,37,98304,24576,0,0,0,-1,-1
@@ -30268,7 +30269,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 73565,"Cataclysmic Gladiator's Clasp of Meditation",4,3,0,5,2,32,0,0,0,37,4096,24576,0,0,0,-1,-1
 73566,"Cataclysmic Gladiator's Clasp of Cruelty",4,3,0,5,2,32,0,0,0,37,4096,8192,0,0,0,-1,-1
 73567,"Cataclysmic Gladiator's Scaled Shoulders",4,3,0,0,2,32,0,0,0,37,4096,8192,0,0,0,-1,-1
-74587,"Jade Shield",1,0,0,0,-1,1,0,0,0,3,65536,8192,0,0,0,-1,-1
 73568,"Cataclysmic Gladiator's Scaled Legguards",4,3,0,0,2,32,0,0,0,37,4096,8192,0,0,0,-1,-1
 73569,"Cataclysmic Gladiator's Scaled Helm",4,3,0,0,2,32,0,0,0,37,4096,8192,0,0,0,-1,-1
 73570,"Cataclysmic Gladiator's Scaled Gauntlets",4,3,0,0,2,32,0,0,0,37,4096,8192,0,0,0,-1,-1
@@ -30461,6 +30461,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 74584,"Summer Shoes",1,0,0,0,-1,1,0,0,0,3,65536,8192,0,0,0,-1,-1
 74585,"Dancing Boots",1,0,0,0,-1,1,0,0,0,3,65536,8192,0,0,0,-1,-1
 74586,"Cloak of the Fiery Skies",1,0,0,0,-1,1,0,0,0,3,65536,8192,0,0,0,-1,-1
+74587,"Jade Shield",1,0,0,0,-1,1,0,0,0,3,65536,8192,0,0,0,-1,-1
 74588,"Jade Crossbow",1,0,0,0,-1,1,0,0,0,3,65536,8192,0,0,0,-1,-1
 74589,"Jade Hilted Sword",1,0,0,0,-1,1,0,0,0,3,65536,8192,0,0,0,-1,-1
 74590,"Jade Hilted Dagger",1,0,0,0,-1,1,0,0,0,3,65536,8192,0,0,0,-1,-1
@@ -31098,6 +31099,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 77847,"Replica Knight-Captain's Dreadweave Legguards",3,0,0,0,256,25,0,0,0,1,36864,8194,0,65536,0,-1,-1
 77848,"Replica Knight-Captain's Dreadweave Tunic",3,0,0,0,256,25,0,0,0,1,36864,8194,0,65536,0,-1,-1
 77849,"Replica Blood Guard's Dreadweave Handwraps",3,0,0,0,256,25,0,0,0,1,36864,8193,0,65536,0,-1,-1
+78015,"Replica Magister's Gloves",3,0,0,0,-1,23,0,0,0,1,0,8192,8388608,65536,0,-1,-1
 77850,"Replica Lieutenant Commander's Dreadweave Spaulders",3,0,0,0,256,25,0,0,0,1,36864,8194,0,65536,0,-1,-1
 77851,"Replica Legionnaire's Dreadweave Tunic",3,0,0,0,256,25,0,0,0,1,36864,8193,0,65536,0,-1,-1
 77852,"Replica Legionnaire's Dreadweave Legguards",3,0,0,0,256,25,0,0,0,1,36864,8193,0,65536,0,-1,-1
@@ -31218,7 +31220,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 78012,"Ring of the Riven",4,3,0,0,-1,32,0,0,0,37,4096,201351168,0,0,0,-1,-1
 78013,"Curled Twilight Claw",4,3,0,0,-1,32,0,0,0,37,4096,167796736,0,0,0,-1,-1
 78014,"Replica Magister's Boots",3,0,0,0,-1,23,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-78015,"Replica Magister's Gloves",3,0,0,0,-1,23,0,0,0,1,0,8192,8388608,65536,0,-1,-1
 78016,"Replica Magister's Crown",3,0,0,0,-1,24,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 78017,"Replica Magister's Leggings",3,0,0,0,-1,23,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 78018,"Replica Magister's Robes",3,0,0,0,-1,24,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
@@ -33502,6 +33503,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 84446,"Dreadful Gladiator's Satin Hood",3,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84447,"Dreadful Gladiator's Satin Leggings",3,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84448,"Dreadful Gladiator's Satin Robe",3,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
+84631,"Sunset Leather Tunic",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
 84449,"Dreadful Gladiator's Satin Mantle",3,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84456,"Dreadful Gladiator's Waistband of Cruelty",3,4,0,5,1544,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84457,"Dreadful Gladiator's Waistband of Accuracy",3,4,0,5,1544,35,0,0,0,39,4096,8192,0,0,0,-1,-1
@@ -33540,6 +33542,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 84499,"Dreadful Gladiator's Felweave Handguards",3,4,0,0,256,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84500,"Dreadful Gladiator's Felweave Cowl",3,4,0,0,256,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84501,"Dreadful Gladiator's Felweave Trousers",3,4,0,0,256,35,0,0,0,39,4096,8192,0,0,0,-1,-1
+84632,"Wind-Reaver Breastplate",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
 84502,"Dreadful Gladiator's Felweave Raiment",3,4,0,0,256,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84503,"Dreadful Gladiator's Felweave Amice",3,4,0,0,256,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84504,"Dreadful Gladiator's Plate Chestpiece",3,4,0,0,1,35,0,0,0,39,4096,8192,0,0,0,-1,-1
@@ -33623,8 +33626,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 84628,"Withered Wood Breastplate",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
 84629,"Sunset Burnished Chestguard",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
 84630,"Sunset Silk Robe",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
-84631,"Sunset Leather Tunic",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
-84632,"Wind-Reaver Breastplate",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
 84633,"Sunset Heavy Chestpiece",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
 84634,"Sunset Armored Chestpiece",2,4,0,0,-1,0,0,0,0,39,65536,8192,0,0,0,-1,-1
 84660,"Pandaren Fishing Pole",2,4,1302,5,-1,0,0,0,0,1,0,24576,0,0,0,-1,-1
@@ -33741,11 +33742,11 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 84867,"Malevolent Gladiator's Reprieve",4,4,0,0,-1,35,0,0,0,39,4096,8192,8388608,0,0,-1,-1
 84868,"Malevolent Gladiator's Leather Legguards",4,4,0,0,8,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84869,"Malevolent Gladiator's Ornamented Legplates",4,4,0,0,2,35,0,0,0,39,4096,8192,0,0,0,-1,-1
+85185,Ghostheart,3,4,0,0,-1,34,0,0,0,39,4096,8192,8388608,0,0,-1,-1
 84870,"Malevolent Gladiator's Scaled Legguards",4,4,0,0,2,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84871,"Malevolent Gladiator's Dragonhide Legguards",4,4,0,0,1024,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84872,"Malevolent Gladiator's Dreadplate Legguards",4,4,0,0,32,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84873,"Malevolent Gladiator's Copperskin Legguards",4,4,0,6,512,35,0,0,0,39,4096,8192,0,0,0,-1,-1
-85190,"Firescribe Dagger",3,4,0,0,-1,34,0,0,0,39,0,8704,8388608,0,0,-1,-1
 84874,"Malevolent Gladiator's Chain Leggings",4,4,0,0,4,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84875,"Malevolent Gladiator's Silk Trousers",4,4,0,0,128,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 84876,"Malevolent Gladiator's Plate Legguards",4,4,0,0,1,35,0,0,0,39,4096,8192,0,0,0,-1,-1
@@ -33971,10 +33972,10 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 85182,"Cloak of Cleansing Flame",3,4,0,0,-1,34,0,0,0,39,4096,8192,8388608,0,0,-1,-1
 85183,"Claws of Gekkan",3,4,0,0,-1,34,0,0,0,39,4096,8192,8388608,0,0,-1,-1
 85184,"Hexxer's Lethargic Gloves",3,4,0,0,-1,34,0,0,0,39,0,8192,8388608,0,0,-1,-1
-85185,Ghostheart,3,4,0,0,-1,34,0,0,0,39,4096,8192,8388608,0,0,-1,-1
 85186,"Axebreaker Gauntlets",3,4,0,0,-1,34,0,0,0,39,0,8192,8388608,0,0,-1,-1
 85187,"Boots of Plummeting Death",3,4,0,0,-1,34,0,0,0,39,0,8192,8388608,0,0,-1,-1
 85189,"Groundshaker Bracers",3,4,0,0,-1,34,0,0,0,39,4096,8192,8388608,0,0,-1,-1
+85190,"Firescribe Dagger",3,4,0,0,-1,34,0,0,0,39,0,8704,8388608,0,0,-1,-1
 85192,"Soulbinder Treads",3,4,0,0,-1,34,0,0,0,39,4096,8192,8388608,0,0,-1,-1
 85193,"Mind's Eye Breastplate",3,4,0,0,-1,34,0,0,0,39,0,8192,8388608,0,0,-1,-1
 85194,"Regal Silk Shoulderpads",3,4,0,0,-1,34,0,0,0,39,4096,8192,8388608,0,0,-1,-1
@@ -35781,6 +35782,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 89841,"Legguards of Failing Purification",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
 89842,"Gauntlets of the Shadow's Caress",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 89843,"Grasps of Serpentine Might",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
+89967,"Feng's Seal of Binding",4,4,0,0,-1,35,0,0,0,39,4096,24576,0,0,0,-1,-1
 89883,"Shoulderpads of Twisted Fate",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
 89884,"Fear-Blackened Leggings",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 89885,"Waterborne Shoulderguards",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
@@ -35822,7 +35824,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 89964,"Stonefang Chestguard",4,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 89965,"Ruby-Linked Girdle",4,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 89966,"Claws of Amethyst",4,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
-89967,"Feng's Seal of Binding",4,4,0,0,-1,35,0,0,0,39,4096,24576,0,0,0,-1,-1
 89968,"Feng's Ring of Dreams",4,4,0,0,-1,35,0,0,0,39,4096,24576,0,0,0,-1,-1
 89969,"Bonded Soul Bracers",4,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 89970,"Bracers of Violent Meditation",4,4,0,0,-1,35,0,0,0,39,4096,8192,0,0,0,-1,-1
@@ -36313,6 +36314,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 91133,"Tyrannical Gladiator's Battle Staff",4,4,0,0,-1,35,0,0,0,39,4096,8706,8388608,0,0,-1321907123,1427461461
 91134,"Tyrannical Gladiator's Battle Staff",4,4,0,0,-1,35,0,0,0,39,4096,8704,8388608,0,0,-1,-1
 91135,"Tyrannical Gladiator's Pendant of Cruelty",4,4,0,0,2002,35,0,0,0,39,4096,24578,0,0,0,-1321907123,1427461461
+92841,"Danio-Scale Greaves",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 91136,"Tyrannical Gladiator's Pendant of Alacrity",4,4,0,0,2002,35,0,0,0,39,4096,24578,0,0,0,-1321907123,1427461461
 91137,"Tyrannical Gladiator's Pendant of Meditation",4,4,0,0,5714,35,0,0,0,39,4096,24578,0,0,0,-1321907123,1427461461
 91138,"Tyrannical Gladiator's Band of Cruelty",4,4,0,0,2002,35,0,0,0,39,528384,24578,0,0,0,-1321907123,1427461461
@@ -36320,7 +36322,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 91140,"Tyrannical Gladiator's Band of Meditation",4,4,0,0,5714,35,0,0,0,39,528384,24578,0,0,0,-1321907123,1427461461
 91141,"Tyrannical Gladiator's Reprieve",4,4,0,0,-1,35,0,0,0,39,4096,8194,8388608,0,0,-1321907123,1427461461
 91142,"Tyrannical Gladiator's Reprieve",4,4,0,0,-1,35,0,0,0,39,4096,8192,8388608,0,0,-1,-1
-92849,"Hozen-Speed Hood",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 91144,"Tyrannical Gladiator's Touch of Defeat",4,4,0,0,-1,35,0,0,0,39,4096,8706,8388608,0,0,-1,-1
 91145,"Tyrannical Gladiator's Heavy Crossbow",4,4,0,0,-1,35,0,0,0,39,4096,8194,8388608,0,0,-1321907123,1427461461
 91146,"Tyrannical Gladiator's Heavy Crossbow",4,4,0,0,-1,35,0,0,0,39,4096,8192,8388608,0,0,-1,-1
@@ -36661,7 +36662,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 92838,"Danio-Scale Belt",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92839,"Danio-Scale Bracers",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92840,"Danio-Scale Gauntlets",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
-92841,"Danio-Scale Greaves",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92842,"Danio-Scale Helm",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92843,"Danio-Scale Legguards",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92844,"Danio-Scale Spaulders",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
@@ -36669,6 +36669,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 92846,"Hozen-Speed Waistband",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92847,"Hozen-Speed Shoulders",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92848,"Hozen-Speed Jerkin",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
+92849,"Hozen-Speed Hood",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92850,"Hozen-Speed Gloves",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92851,"Hozen-Speed Britches",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
 92852,"Hozen-Speed Boots",3,4,0,0,-1,35,0,0,0,39,0,8192,0,0,0,-1,-1
@@ -37095,6 +37096,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 94085,"Tarnished Fanatic's Battlevest",2,4,0,0,-1,35,0,0,0,38,0,8192,0,0,0,-1,-1
 94086,"Tarnished Fanatic's Warboots",2,4,0,0,-1,35,0,0,0,38,0,8192,0,0,0,-1,-1
 94087,"Tarnished Fanatic's Girdle",2,4,0,0,-1,35,0,0,0,38,0,8192,0,0,0,-1,-1
+94276,"Cloud Serpent Helm",4,4,0,0,-1,35,0,0,0,40,65536,8192,0,0,0,-1,-1
 94088,"Tarnished Fanatic's Wargreaves",2,4,0,0,-1,35,0,0,0,38,0,8192,0,0,0,-1,-1
 94089,"Tarnished Fanatic's Deathgrips",2,4,0,0,-1,35,0,0,0,38,0,8192,0,0,0,-1,-1
 94090,"Tarnished Fanatic's Shackles",2,4,0,0,-1,35,0,0,0,38,0,8192,0,0,0,-1,-1
@@ -37137,7 +37139,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 94273,"Spirit Keeper Footguards",4,4,0,0,-1,35,0,0,0,40,65536,8192,0,0,0,-1,-1
 94274,"Spirit Keeper Helm",4,4,0,0,-1,35,0,0,0,40,65536,8192,0,0,0,-1,-1
 94275,"Cloud Serpent Sabatons",4,4,0,0,-1,35,0,0,0,40,65536,8192,0,0,0,-1,-1
-94276,"Cloud Serpent Helm",4,4,0,0,-1,35,0,0,0,40,65536,8192,0,0,0,-1,-1
 94277,"Falling Blossom Treads",4,4,0,0,-1,35,0,0,0,40,65536,24576,0,0,0,-1,-1
 94278,"Falling Blossom Cowl",4,4,0,0,-1,35,0,0,0,40,65536,24576,0,0,0,-1,-1
 94279,"Falling Blossom Sandals",4,4,0,0,-1,35,0,0,0,40,65536,24576,0,0,0,-1,-1
@@ -37453,6 +37454,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 94802,"Links of the Bifurcated Tongue",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
 94803,"Megaera's Shining Eye",4,4,0,0,-1,35,0,0,0,40,0,1073766400,0,0,0,-1,-1
 94804,"Frostborn Wristwraps",4,4,0,0,-1,35,0,0,0,40,0,1073750016,65536,0,0,-1,-1
+94945,"Greatshield of the Gloaming",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
 94805,"Giorgio's Caduceus of Pure Moods",4,4,0,0,-1,35,0,0,0,40,0,1073750528,0,0,0,-1,-1
 94806,"Robe of Midnight Down",4,4,0,0,-1,35,0,0,0,40,4096,1073750016,0,0,0,-1,-1
 94807,"Egg-Shard Grips",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
@@ -37494,7 +37496,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 94942,"Hydra-Scale Bloodcloak",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
 94943,"Synapse-String Handguards",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
 94944,"Black Blood Legplates",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
-94945,"Greatshield of the Gloaming",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
 94946,"Leggings of the Malformed Sapling",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
 94947,"Helix-Breaker Gloves",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
 94948,"Bracers of Fragile Bone",4,4,0,0,-1,35,0,0,0,40,0,1073750016,0,0,0,-1,-1
@@ -40517,7 +40518,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 100677,"Grievous Gladiator's Leather Spaulders",4,4,0,0,8,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 100678,"Grievous Gladiator's Plate Legguards",4,4,0,0,1,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 100679,"Grievous Gladiator's Cuffs of Prowess",4,4,0,0,400,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
-100992,"Heart-Lesion Chestguard",2,4,0,0,32,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 100680,"Grievous Gladiator's Chain Spaulders",4,4,0,0,4,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 100681,"Grievous Gladiator's Silk Handguards",4,4,0,0,128,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 100683,"Grievous Gladiator's Chain Gauntlets",4,4,0,0,4,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
@@ -40597,6 +40597,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 100984,"Heart-Lesion Vambraces",2,4,0,0,32,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 100985,"Heart-Lesion Blade",2,4,0,0,32,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 100986,"Heart-Lesion Cloak of Battle",2,4,0,0,32,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
+100992,"Heart-Lesion Chestguard",2,4,0,0,32,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 100993,"Heart-Lesion Cloak of Stoicism",2,4,0,0,32,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 100994,"Heart-Lesion Greaves",2,4,0,0,32,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 100995,"Heart-Lesion Handguards",2,4,0,0,32,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
@@ -41013,7 +41014,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 102624,"Prideful Gladiator's Armbands of Meditation",4,4,0,0,64,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
 102626,"Prideful Gladiator's Ironskin Spaulders",4,4,0,0,512,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
 102627,"Prideful Gladiator's Copperskin Gloves",4,4,0,0,512,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
-103394,"Prideful Gladiator's Staff",4,4,0,0,-1,35,0,0,0,42,4096,8193,8388608,0,0,1309324210,-1440044374
 102628,"Prideful Gladiator's Copperskin Helm",4,4,0,0,512,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
 102629,"Prideful Gladiator's Linked Spaulders",4,4,0,0,64,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
 102630,"Prideful Gladiator's Scaled Gauntlets",4,4,0,0,2,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
@@ -41122,6 +41122,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 102742,"Prideful Gladiator's Linked Gauntlets",4,4,0,0,64,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
 102743,"Prideful Gladiator's Mail Armor",4,4,0,0,64,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
 102744,"Prideful Gladiator's Scaled Shoulders",4,4,0,0,2,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
+103510,"Prideful Gladiator's Slicer",4,4,0,0,-1,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 102745,"Prideful Gladiator's Warboots of Alacrity",4,4,0,0,-1,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
 102746,"Prideful Gladiator's Signet of Accuracy",4,4,0,0,35,35,0,0,0,42,528384,24578,0,0,0,-1321907123,1427461461
 102747,"Prideful Gladiator's Scaled Chestpiece",4,4,0,0,2,35,0,0,0,42,4096,8194,0,0,0,-1321907123,1427461461
@@ -41166,7 +41167,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 102787,"Grievous Gladiator's Gavel",4,4,0,0,-1,35,0,0,0,40,4096,8705,0,0,0,1309324210,-1440044374
 102788,"Grievous Gladiator's Longbow",4,4,0,0,-1,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 102789,"Grievous Gladiator's Pummeler",4,4,0,0,-1,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
-103754,"Earthripper Gloves",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 102790,"Grievous Gladiator's Touch of Defeat",4,4,0,0,-1,35,0,0,0,40,4096,8705,0,0,0,1309324210,-1440044374
 102791,"Grievous Gladiator's Spellblade",4,4,0,0,-1,35,0,0,0,40,4096,8705,0,0,0,1309324210,-1440044374
 102793,"Grievous Gladiator's Baton of Light",4,4,0,0,-1,35,0,0,0,40,4096,8705,0,0,0,1309324210,-1440044374
@@ -41206,7 +41206,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 102991,"Prideful Gladiator's Silk Cord",4,4,0,5,128,35,0,0,0,42,4096,8396800,8388608,0,0,-1,-1
 102992,"Prideful Gladiator's Felweave Cord",4,4,0,5,256,35,0,0,0,42,4096,8396800,8388608,0,0,-1,-1
 102993,"Prideful Gladiator's Mooncloth Cord",4,4,0,5,16,35,0,0,0,42,4096,8396800,8388608,0,0,-1,-1
-103755,"Ichor-Dripping Shoulderpads",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
 102994,"Prideful Gladiator's Silk Treads",4,4,0,0,128,35,0,0,0,42,4096,8396800,8388608,0,0,-1,-1
 102995,"Prideful Gladiator's Felweave Treads",4,4,0,0,256,35,0,0,0,42,4096,8396800,8388608,0,0,-1,-1
 102996,"Prideful Gladiator's Mooncloth Treads",4,4,0,0,16,35,0,0,0,42,4096,8396800,8388608,0,0,-1,-1
@@ -41440,6 +41439,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 103391,"Prideful Gladiator's Kodohide Legguards",4,4,0,6,1024,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 103392,"Prideful Gladiator's Kodohide Robes",4,4,0,0,1024,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 103393,"Prideful Gladiator's Kodohide Spaulders",4,4,0,0,1024,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
+103394,"Prideful Gladiator's Staff",4,4,0,0,-1,35,0,0,0,42,4096,8193,8388608,0,0,1309324210,-1440044374
 103395,"Prideful Gladiator's Belt of Cruelty",4,4,0,5,1536,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 103396,"Prideful Gladiator's Footguards of Alacrity",4,4,0,0,1536,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 103397,"Prideful Gladiator's Bindings of Prowess",4,4,0,0,1536,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
@@ -41550,7 +41550,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 103507,"Prideful Gladiator's Baton of Light",4,4,0,0,-1,35,0,0,0,42,4096,8705,0,0,0,1309324210,-1440044374
 103508,"Prideful Gladiator's Hacker",4,4,0,0,-1,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 103509,"Prideful Gladiator's Bonecracker",4,4,0,0,-1,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
-103510,"Prideful Gladiator's Slicer",4,4,0,0,-1,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 103512,"Prideful Gladiator's Cloak of Alacrity",4,4,0,0,35,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 103513,"Prideful Gladiator's Cloak of Prowess",4,4,0,0,35,35,0,0,0,42,4096,8193,0,0,0,1309324210,-1440044374
 103514,"Prideful Gladiator's Choker of Proficiency",4,4,0,0,35,35,0,0,0,42,4096,24577,0,0,0,1309324210,-1440044374
@@ -41596,6 +41595,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 103751,"Hood of Swirling Senses",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 103752,"Bolt-Burster Grips",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 103753,"Seebo's Sainted Touch",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
+103754,"Earthripper Gloves",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
+103755,"Ichor-Dripping Shoulderpads",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
 103756,"Shoulderpads of Pulsing Protection",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
 103757,"Bracers of Purified Spirit",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
 103758,"Bracers of Averted Fatality",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
@@ -42130,7 +42131,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 105045,"Belt of the Iron Prison",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105046,"Shoulderguards of Foul Streams",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105047,"Shackles of Stinking Slime",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
-105098,"Shado-Pan Reliquary Kilt",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105048,"Shoulderplates of Gushing Geysers",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105049,"Nazgrim's Gutripper",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105050,"Sandals of Two Little Bees",4,4,0,0,-1,35,0,0,0,40,4096,8192,8388608,0,0,-1,-1
@@ -42172,6 +42172,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 105094,"Mantid Vizier's Robes",4,4,0,0,-1,35,0,0,0,40,4096,8192,8388608,0,0,-1,-1
 105096,"Immaculately Preserved Wand",4,4,0,0,-1,35,0,0,0,40,0,8704,8388608,0,0,-1,-1
 105097,"Klaxxi Grips of Rejuvenation",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
+105098,"Shado-Pan Reliquary Kilt",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105099,"Chitin-Link Chain Belt",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105100,"Bracers of the Pristine Purifier",4,4,0,0,-1,35,0,0,0,40,4096,8192,8388608,0,0,-1,-1
 105101,"Plate Belt of the War-Healer",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
@@ -42206,6 +42207,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 105142,"Legplates of Unthinking Strife",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105143,"Spaulders of the Fallen Warchief",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105145,"Greathelm of the Warchief",4,4,0,0,-1,35,0,0,0,40,4096,8192,8388608,0,0,-1,-1
+105766,"Anafielle's Spiked Choker",4,4,0,0,-1,35,0,0,0,42,0,1073766400,0,0,0,-1,-1
 105146,"Xal'atoh, Desecrated Image of Gorehowl",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,8,0,-1,-1
 105148,"Belt of the Broken Pact",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
 105149,"Ebon Ritual Hood",4,4,0,0,-1,35,0,0,0,40,0,8192,8388608,0,0,-1,-1
@@ -42247,7 +42249,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 105763,"Penate's Perilous Pendant",4,4,0,0,-1,35,0,0,0,42,0,1073766400,0,0,0,-1,-1
 105764,"Rising New Moon Talisman",4,4,0,0,-1,35,0,0,0,42,0,1073766400,0,0,0,-1,-1
 105765,"Bladeforger Necklace",4,4,0,0,-1,35,0,0,0,42,0,1073766400,0,0,0,-1,-1
-105766,"Anafielle's Spiked Choker",4,4,0,0,-1,35,0,0,0,42,0,1073766400,0,0,0,-1,-1
 105767,"Hoodrych's Bloodied Chestplate",4,4,0,0,-1,35,0,0,0,42,0,1073750016,0,0,0,-1,-1
 105768,"Pamela's Muuscat Wrap",4,4,0,0,-1,35,0,0,0,42,0,1073750016,0,0,0,-1,-1
 105769,"Omegal's Crushing Carapace",4,4,0,0,-1,35,0,0,0,42,0,1073750016,0,0,0,-1,-1
@@ -43828,7 +43829,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 112930,"Penetrating Gaze of Y'Shaarj",4,4,0,0,-1,35,0,0,0,41,0,8192,0,0,0,-1,-1
 112931,"Chestguard of Relentless Tyranny",4,4,0,0,-1,35,0,0,0,41,0,8192,0,0,0,-1,-1
 112932,"Kor'kron Spire of Supremacy",4,4,0,0,-1,35,0,0,0,41,0,8192,0,0,0,-1,-1
-113051,"Iron Shredder Axle",2,5,0,0,-1,0,0,0,0,42,0,8192,0,0,0,-1,-1
 112933,"Legplates of Unthinking Strife",4,4,0,0,-1,35,0,0,0,41,0,8192,0,0,0,-1,-1
 112934,"Spaulders of the Fallen Warchief",4,4,0,0,-1,35,0,0,0,41,0,8192,0,0,0,-1,-1
 112935,"Tusks of Mannoroth",4,4,0,0,-1,35,0,0,0,41,0,8192,0,0,0,-1,-1
@@ -43871,6 +43871,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 113048,"Vorpil's Ribcrusher",2,5,0,0,-1,0,0,0,0,42,0,8192,0,0,0,-1,-1
 113049,"Vorpil's Ribnicker",2,5,0,0,-1,0,0,0,0,42,0,8192,0,0,0,-1,-1
 113050,"Ketya's Boomstick",2,5,0,0,-1,0,0,0,0,42,0,8192,0,0,0,-1,-1
+113051,"Iron Shredder Axle",2,5,0,0,-1,0,0,0,0,42,0,8192,0,0,0,-1,-1
 113052,"Camshaft-Haft Greatcleaver",2,5,0,0,-1,0,0,0,0,42,0,8192,0,0,0,-1,-1
 113053,"Iron Shredder Doohickey",2,5,0,0,-1,0,0,0,0,42,0,8704,0,0,0,-1,-1
 113054,"Broken Shredder Blade",2,5,0,0,-1,0,0,0,0,42,0,8192,0,0,0,-1,-1
@@ -43953,7 +43954,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 113598,"Champion's Medallion",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113599,"Grunt's Solid Signet",4,5,0,0,-1,40,0,0,0,44,524288,8192,0,0,0,-1,-1
 113600,"Casque of the Iron Bomber",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
-113664,"Sandals of Mycoid Musing",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113601,"Chestguard of the Roaring Crowd",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113602,"Throat-Ripper Gauntlets",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113604,"Kargath's Last Link",4,5,0,0,-1,40,0,0,0,44,524288,8192,0,0,0,-1,-1
@@ -43995,6 +43995,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 113660,"Mosscrusher Sabatons",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113661,"Deep Walker Paulders",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113662,"Collar of Wailing Mouths",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
+113664,"Sandals of Mycoid Musing",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113666,"Absalom's Bloody Bulwark",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113667,"Phemos' Double Slasher",4,5,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 113683,"Coldwrap Cloak",3,2,0,0,-1,1,0,0,0,33,65536,8192,0,0,0,-1,-1
@@ -45841,7 +45842,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 116969,"Flawless Crystal-Edged Bladecloak",4,5,0,0,-1,40,0,0,0,44,69632,8192,0,0,0,-1,-1
 116970,"Flawless Crystalclasp Stormcloak",4,5,0,0,-1,40,0,0,0,44,69632,8192,0,0,0,-1,-1
 116971,"Flawless Refractory Heartcloak",4,5,0,0,-1,40,0,0,0,44,69632,8192,0,0,0,-1,-1
-117074,"Springrain Legguards",2,5,0,0,1024,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 116972,"Flawless Crystal Reinforced Doomcloak",4,5,0,0,-1,40,0,0,0,44,69632,8192,0,0,0,-1,-1
 116973,"Crystal-Edged Bladecloak",3,5,0,0,-1,40,0,0,0,44,69632,8192,0,0,0,-1,-1
 116974,"Crystalclasp Stormcloak",3,5,0,0,-1,40,0,0,0,44,69632,8192,0,0,0,-1,-1
@@ -45884,6 +45884,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 117071,"Springrain Footpads",2,5,0,0,1024,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 117072,"Springrain Handguards",2,5,0,0,1024,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 117073,"Springrain Helm",2,5,0,0,1024,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
+117074,"Springrain Legguards",2,5,0,0,1024,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 117075,"Springrain Spear",2,5,0,0,1024,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 117076,"Springrain Pauldrons",2,5,0,0,1024,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
 117077,"Springrain Cord",2,5,0,0,1024,35,0,0,0,39,32768,8192,8388608,0,0,-1,-1
@@ -46322,6 +46323,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 117811,"Tournament Gladiator's Dreadplate Gauntlets",4,5,0,0,32,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117812,"Tournament Gladiator's Dreadplate Helm",4,5,0,0,32,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117813,"Tournament Gladiator's Dreadplate Legguards",4,5,0,0,32,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
+117956,"Tournament Gladiator's Helm",4,5,0,0,-1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117814,"Tournament Gladiator's Dreadplate Shoulders",4,5,0,0,32,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117815,"Tournament Gladiator's Dragonhide Gloves",4,5,0,0,1024,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117816,"Tournament Gladiator's Dragonhide Helm",4,5,0,0,1024,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
@@ -46360,6 +46362,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 117858,"Tournament Gladiator's Silk Handguards",4,5,0,0,128,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117859,"Tournament Gladiator's Silk Cowl",4,5,0,0,128,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117860,"Tournament Gladiator's Silk Trousers",4,5,0,0,128,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
+118076,"Fungal Resistant Slippers",2,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 117861,"Tournament Gladiator's Silk Robe",4,5,0,0,128,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117862,"Tournament Gladiator's Silk Amice",4,5,0,0,128,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117863,"Tournament Gladiator's Waistguard of Cruelty",4,5,0,0,-1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
@@ -46437,7 +46440,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 117951,"Tournament Gladiator's Plate Shoulders",4,5,0,0,1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117954,"Tournament Gladiator's Tunic",4,5,0,0,-1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117955,"Tournament Gladiator's Gloves",4,5,0,0,-1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
-117956,"Tournament Gladiator's Helm",4,5,0,0,-1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117957,"Tournament Gladiator's Legguards",4,5,0,0,-1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117958,"Tournament Gladiator's Spaulders",4,5,0,0,-1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
 117959,"Tournament Gladiator's Armor",4,5,0,0,-1,40,0,0,0,5,4231168,4218882,8396800,0,0,-1321907123,1427461461
@@ -46479,7 +46481,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 118073,"""Fireproof"" Venture Co. Tunic",2,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 118074,"""Fireproof"" Venture Co. Robes",2,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 118075,"Fungal Resistant Plate Boots",2,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
-118076,"Fungal Resistant Slippers",2,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 118077,"Fungal Reisistant Chainmail Boots",2,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 118078,"Fungal Resistant Workboots",2,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 118079,"Admiral Taylor's Ceremonial Sword",2,5,0,0,-1,0,0,0,0,42,0,8192,0,0,0,-1,-1
@@ -47430,7 +47431,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 120982,"Replica Knight-Lieutenant's Mail Links",3,0,0,0,64,25,0,0,0,1,36864,8396802,0,65536,0,-1,-1
 120983,"Replica Knight-Lieutenant's Chain Belt",3,0,0,0,4,25,0,0,0,1,36864,8396802,0,65536,0,-1,-1
 120984,"Replica Blood Guard's Dragonhide Belt",3,0,0,0,1024,25,0,0,0,1,36864,8396801,0,65536,0,-1,-1
-121048,"Temporal Scholar's Cord",2,6,0,0,-1,40,0,0,0,44,0,8192,0,4,0,-1,-1
 120985,"Replica Blood Guard's Leather Clasp",3,0,0,0,8,25,0,0,0,1,36864,8396801,0,65536,0,-1,-1
 120986,"Replica Blood Guard's Dreadweave Wrap",3,0,0,0,256,25,0,0,0,1,36864,8396801,0,65536,0,-1,-1
 120987,"Replica Blood Guard's Silk Cinch",3,0,0,0,128,25,0,0,0,1,36864,8396801,0,65536,0,-1,-1
@@ -47472,6 +47472,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 121045,"Faronaar Chain Legguards",2,6,0,0,-1,40,0,0,0,44,0,8192,0,4,0,-1,-1
 121046,"Faronaar Chain Spaulders",2,6,0,0,-1,40,0,0,0,44,0,8192,0,4,0,-1,-1
 121047,"Faronaar Chain Vest",2,6,0,0,-1,40,0,0,0,44,0,8192,0,4,0,-1,-1
+121048,"Temporal Scholar's Cord",2,6,0,0,-1,40,0,0,0,44,0,8192,0,4,0,-1,-1
 121049,"Temporal Scholar's Cowl",2,6,0,0,-1,40,0,0,0,44,0,8192,0,4,0,-1,-1
 121050,"Temporal Scholar's Handwraps",2,6,0,0,-1,40,0,0,0,44,0,8192,0,4,0,-1,-1
 121051,"Temporal Scholar's Leggings",2,6,0,0,-1,40,0,0,0,44,0,8192,0,4,0,-1,-1
@@ -48876,6 +48877,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 125008,"Wild Combatant's Leather Legguards",3,5,0,0,8,40,0,0,0,44,4096,8194,0,0,0,-1321907123,1427461461
 125009,"Wild Combatant's Leather Spaulders",3,5,0,0,8,40,0,0,0,44,4096,8194,0,0,0,-1321907123,1427461461
 125010,"Wild Combatant's Ringmail Armor",3,5,0,0,64,40,0,0,0,44,4096,8194,0,0,0,-1321907123,1427461461
+125475,"Wild Combatant's Legplates",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125011,"Wild Combatant's Ringmail Gauntlets",3,5,0,0,64,40,0,0,0,44,4096,8194,0,0,0,-1321907123,1427461461
 125012,"Wild Combatant's Ringmail Helm",3,5,0,0,64,40,0,0,0,44,4096,8194,0,0,0,-1321907123,1427461461
 125013,"Wild Combatant's Ringmail Leggings",3,5,0,0,64,40,0,0,0,44,4096,8194,0,0,0,-1321907123,1427461461
@@ -49038,7 +49040,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 125230,"Wild Gladiator's Belt of Cruelty",4,5,0,0,-1,40,0,0,0,45,4096,8193,0,0,0,1309324210,-1440044374
 125231,"Wild Gladiator's Belt of Victory",4,5,0,6,-1,40,0,0,0,45,4096,8193,0,0,0,1309324210,-1440044374
 125232,"Wild Gladiator's Boots of Cruelty",4,5,0,0,-1,40,0,0,0,45,4096,8193,0,0,0,1309324210,-1440044374
-125437,"Wild Combatant's Helm",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125233,"Wild Gladiator's Boots of Prowess",4,5,0,0,-1,40,0,0,0,45,4096,8193,0,0,0,1309324210,-1440044374
 125234,"Wild Gladiator's Boots of Victory",4,5,0,6,-1,40,0,0,0,45,4096,8193,0,0,0,1309324210,-1440044374
 125235,"Wild Gladiator's Bindings of Cruelty",4,5,0,0,-1,40,0,0,0,45,4096,8193,0,0,0,1309324210,-1440044374
@@ -49199,6 +49200,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 125434,"Wild Combatant's Bindings of Prowess",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125435,"Wild Combatant's Tunic",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125436,"Wild Combatant's Gloves",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
+125437,"Wild Combatant's Helm",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125438,"Wild Combatant's Legguards",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125439,"Wild Combatant's Spaulders",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125440,"Wild Combatant's Silk Handguards",3,5,0,0,128,40,0,0,0,44,4096,8193,0,0,0,1309324210,-1440044374
@@ -49234,7 +49236,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 125472,"Wild Combatant's Plate Breastplate",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125473,"Wild Combatant's Plate Gloves",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125474,"Wild Combatant's Plate Helmet",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
-125475,"Wild Combatant's Legplates",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125476,"Wild Combatant's Shoulderplates",3,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125477,"Wild Combatant's Satin Gloves",3,5,0,0,16,40,0,0,0,44,4096,8193,0,0,0,1309324210,-1440044374
 125478,"Wild Combatant's Satin Hood",3,5,0,0,16,40,0,0,0,44,4096,8193,0,0,0,1309324210,-1440044374
@@ -49314,6 +49315,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 125588,"Wild Aspirant's Scaled Helm",2,5,0,0,2,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125589,"Wild Aspirant's Scaled Legguards",2,5,0,0,2,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125590,"Wild Aspirant's Scaled Shoulders",2,5,0,0,2,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
+127107,"Gladiator's Silk Trousers",4,5,0,0,128,40,0,0,0,44,4096,4202496,0,0,0,1309324210,-1440044374
 125591,"Wild Aspirant's Girdle of Cruelty",2,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125592,"Wild Aspirant's Warboots of Cruelty",2,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
 125593,"Wild Aspirant's Armplates of Cruelty",2,5,0,0,-1,40,0,0,0,44,4096,8193,8388608,0,0,1309324210,-1440044374
@@ -49398,7 +49400,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 125682,"Wild Gladiator's Chain Sabatons",4,5,0,0,4,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125683,"Wild Gladiator's Linked Sabatons",4,5,0,0,64,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125684,"Wild Gladiator's Chain Armor",4,5,0,0,4,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
-125724,"Wild Gladiator's Pike",4,5,0,0,-1,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125685,"Wild Gladiator's Chain Gauntlets",4,5,0,0,4,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125686,"Wild Gladiator's Chain Helm",4,5,0,0,4,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125687,"Wild Gladiator's Chain Leggings",4,5,0,0,4,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
@@ -49434,10 +49435,12 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 125717,"Wild Gladiator's Ornamented Headcover",4,5,0,0,2,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125718,"Wild Gladiator's Ornamented Legplates",4,5,0,0,2,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125719,"Wild Gladiator's Ornamented Spaulders",4,5,0,0,2,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
+127183,"Spellfire Longsword",3,1,0,0,-1,0,0,0,0,30,0,8704,8388608,0,0,-1,-1
 125720,"Wild Gladiator's Dreadplate Girdle",4,5,0,5,32,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125721,"Wild Gladiator's Plate Girdle",4,5,0,5,1,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125722,"Wild Gladiator's Plate Warboots",4,5,0,0,1,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125723,"Wild Gladiator's Dreadplate Warboots",4,5,0,0,32,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
+125724,"Wild Gladiator's Pike",4,5,0,0,-1,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125725,"Wild Gladiator's Mooncloth Gloves",4,5,0,0,16,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125726,"Wild Gladiator's Mooncloth Helm",4,5,0,0,16,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
 125727,"Wild Gladiator's Mooncloth Leggings",4,5,0,0,16,40,0,0,0,45,4096,8396800,8388608,0,0,-1,-1
@@ -50470,7 +50473,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 127104,"Gladiator's Dreadplate Legguards",4,5,0,0,32,40,0,0,0,44,4096,4202496,0,0,0,1309324210,-1440044374
 127105,"Gladiator's Dragonhide Legguards",4,5,0,0,1024,40,0,0,0,44,4096,4202496,0,0,0,1309324210,-1440044374
 127106,"Gladiator's Chain Leggings",4,5,0,0,4,40,0,0,0,44,4096,4202496,0,0,0,1309324210,-1440044374
-127107,"Gladiator's Silk Trousers",4,5,0,0,128,40,0,0,0,44,4096,4202496,0,0,0,1309324210,-1440044374
 127108,"Gladiator's Ironskin Legguards",4,5,0,0,512,40,0,0,0,44,4096,4202496,0,0,0,1309324210,-1440044374
 127109,"Gladiator's Scaled Legguards",4,5,0,0,2,40,0,0,0,44,4096,4202496,0,0,0,1309324210,-1440044374
 127110,"Gladiator's Satin Leggings",4,5,0,0,16,40,0,0,0,44,4096,4202496,0,0,0,1309324210,-1440044374
@@ -50512,7 +50514,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 127180,"Vest of Living Lightning",3,1,0,0,-1,0,0,0,0,30,0,8192,8388608,0,0,-1,-1
 127181,"Princely Reign Leggings",3,1,0,0,-1,0,0,0,0,30,0,8192,8388608,0,0,-1,-1
 127182,"Tracker's Belt",3,1,0,0,-1,0,0,0,0,30,0,8192,8388608,0,0,-1,-1
-127183,"Spellfire Longsword",3,1,0,0,-1,0,0,0,0,30,0,8704,8388608,0,0,-1,-1
 127184,"Runed Fungalcap",3,1,0,0,-1,0,0,0,0,30,524288,24576,8388608,0,0,-1,-1
 127185,"Coilfang Hammer of Renewal",3,1,0,0,-1,0,0,0,0,30,0,8704,8388608,0,0,-1,-1
 127186,"Bogstrok Scale Cloak",3,1,0,0,-1,0,0,0,0,30,0,8192,8388608,0,0,-1,-1
@@ -55939,7 +55940,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 142917,"Fearless Combatant's Chain Gauntlets",3,6,0,0,4,45,0,0,0,50,4096,8193,65536,4,0,1309324210,-1440044374
 142918,"Fearless Combatant's Chain Helm",3,6,0,0,4,45,0,0,0,50,4096,8193,65536,4,0,1309324210,-1440044374
 142919,"Fearless Combatant's Chain Leggings",3,6,0,0,4,45,0,0,0,50,4096,8193,65536,4,0,1309324210,-1440044374
-143339,"Sabatons of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 142920,"Fearless Combatant's Chain Spaulders",3,6,0,0,4,45,0,0,0,50,4096,8193,65536,4,0,1309324210,-1440044374
 142921,"Fearless Combatant's Chain Clasp",3,6,0,0,4,45,0,0,0,50,4096,8193,65536,4,0,1309324210,-1440044374
 142922,"Fearless Combatant's Chain Armband",3,6,0,0,4,45,0,0,0,50,4096,8193,65536,4,0,1309324210,-1440044374
@@ -56129,6 +56129,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 143144,"Fearless Gladiator's Chain Helm",4,6,0,0,4,45,0,0,0,50,4096,8193,8454144,4,0,1309324210,-1440044374
 143145,"Fearless Gladiator's Chain Leggings",4,6,0,0,4,45,0,0,0,50,4096,8193,8454144,4,0,1309324210,-1440044374
 143146,"Fearless Gladiator's Chain Spaulders",4,6,0,0,4,45,0,0,0,50,4096,8193,8454144,4,0,1309324210,-1440044374
+143327,"Livestock Lochaber Axe",3,6,0,0,-1,0,0,0,0,44,0,8256,8388608,0,0,-1,-1
 143147,"Fearless Gladiator's Chain Clasp",4,6,0,0,4,45,0,0,0,50,4096,8193,8454144,4,0,1309324210,-1440044374
 143148,"Fearless Gladiator's Chain Armband",4,6,0,0,4,45,0,0,0,50,4096,8193,8454144,4,0,1309324210,-1440044374
 143149,"Fearless Gladiator's Silk Treads",4,6,0,0,128,45,0,0,0,50,4096,8193,8454144,4,0,1309324210,-1440044374
@@ -56285,12 +56286,12 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 143319,"Fearless Combatant's Demonthread Cloak",3,6,0,0,2048,45,0,0,0,50,4096,8193,65536,4,0,1309324210,-1440044374
 143320,"Fearless Gladiator's Demonthread Cloak",4,6,0,0,2048,45,0,0,0,50,4096,8194,8454144,4,0,-1321907123,1427461461
 143321,"Fearless Gladiator's Demonthread Cloak",4,6,0,0,2048,45,0,0,0,50,4096,8193,8454144,4,0,1309324210,-1440044374
-143327,"Livestock Lochaber Axe",3,6,0,0,-1,0,0,0,0,44,0,8256,8388608,0,0,-1,-1
 143334,"Chestplate of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 143335,"Chain Shirt of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 143336,"Tunic of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 143337,"Treads of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 143338,"Sandals of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
+143339,"Sabatons of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 143340,"Boots of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 143341,"Grips of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 143342,"Handguards of the Chosen Dead",4,6,0,0,-1,45,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
@@ -56895,13 +56896,13 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 144782,"Cruel Gladiator's Demonthread Cloak",4,6,0,0,2048,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144783,"Cruel Gladiator's Demonthread Cloak",4,6,0,0,2048,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144784,"Cruel Gladiator's Dragonhide Cloak",4,6,0,0,1024,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
+146762,"Xorothian Greaves",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 144785,"Cruel Gladiator's Dragonhide Cloak",4,6,0,0,1024,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144786,"Cruel Gladiator's Drape of the Tracker",4,6,0,0,4,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144787,"Cruel Gladiator's Drape of the Tracker",4,6,0,0,4,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144788,"Cruel Gladiator's Silken Shawl",4,6,0,0,128,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144789,"Cruel Gladiator's Silken Shawl",4,6,0,0,128,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144790,"Cruel Gladiator's Ironskin Cloak",4,6,0,0,512,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
-146770,"Netherfiend Trousers",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 144791,"Cruel Gladiator's Ironskin Cloak",4,6,0,0,512,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144792,"Cruel Gladiator's Greatcloak of Faith",4,6,0,0,2,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144793,"Cruel Gladiator's Greatcloak of Faith",4,6,0,0,2,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
@@ -57013,13 +57014,13 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 144899,"Cruel Gladiator's Ironskin Wristguards",4,6,0,0,512,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144906,"Cruel Gladiator's Scaled Breastplate",4,6,0,0,2,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144907,"Cruel Gladiator's Scaled Breastplate",4,6,0,0,2,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
+146763,"Xorothian Pauldrons",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 144908,"Cruel Gladiator's Scaled Sabatons",4,6,0,0,2,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144909,"Cruel Gladiator's Scaled Sabatons",4,6,0,0,2,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144910,"Cruel Gladiator's Scaled Gauntlets",4,6,0,0,2,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144911,"Cruel Gladiator's Scaled Gauntlets",4,6,0,0,2,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144912,"Cruel Gladiator's Scaled Helm",4,6,0,0,2,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144913,"Cruel Gladiator's Scaled Helm",4,6,0,0,2,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
-146771,"Netherfiend Grips",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 144914,"Cruel Gladiator's Scaled Legguards",4,6,0,0,2,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144915,"Cruel Gladiator's Scaled Legguards",4,6,0,0,2,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144916,"Cruel Gladiator's Scaled Shoulders",4,6,0,0,2,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
@@ -57053,6 +57054,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 144950,"Cruel Gladiator's Leather Helm",4,6,0,0,8,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144951,"Cruel Gladiator's Leather Helm",4,6,0,0,8,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144952,"Cruel Gladiator's Leather Legguards",4,6,0,0,8,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
+146764,"Xorothian Sabatons",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 144953,"Cruel Gladiator's Leather Legguards",4,6,0,0,8,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 144954,"Cruel Gladiator's Leather Spaulders",4,6,0,0,8,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 144955,"Cruel Gladiator's Leather Spaulders",4,6,0,0,8,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
@@ -57557,13 +57559,13 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 145636,"Ferocious Gladiator's Drape of Piety",4,6,0,0,16,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 145637,"Ferocious Gladiator's Drape of Piety",4,6,0,0,16,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 145638,"Ferocious Gladiator's Shadowcape",4,6,0,0,8,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
+146765,"Xorothian Vambraces",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 145639,"Ferocious Gladiator's Shadowcape",4,6,0,0,8,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 145640,"Ferocious Gladiator's Totemic Cloak",4,6,0,0,64,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 145641,"Ferocious Gladiator's Totemic Cloak",4,6,0,0,64,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 145642,"Ferocious Gladiator's Felweave Cloak",4,6,0,0,256,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 145643,"Ferocious Gladiator's Felweave Cloak",4,6,0,0,256,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 145644,"Ferocious Gladiator's Cloak of Battle",4,6,0,0,1,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
-146772,"Netherfiend Headgear",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 145645,"Ferocious Gladiator's Cloak of Battle",4,6,0,0,1,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 145646,"Ferocious Gladiator's Dreadplate Chestpiece",4,6,0,0,32,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 145647,"Ferocious Gladiator's Dreadplate Chestpiece",4,6,0,0,32,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
@@ -57634,6 +57636,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 145712,"Ferocious Gladiator's Silk Handguards",4,6,0,0,128,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 145713,"Ferocious Gladiator's Silk Handguards",4,6,0,0,128,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 145714,"Ferocious Gladiator's Silk Cowl",4,6,0,0,128,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
+146766,"Nethercaller Cloak",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 145715,"Ferocious Gladiator's Silk Cowl",4,6,0,0,128,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
 145716,"Ferocious Gladiator's Silk Trousers",4,6,0,0,128,45,0,0,0,50,0,8194,8454144,4,0,-1321907123,1427461461
 145717,"Ferocious Gladiator's Silk Trousers",4,6,0,0,128,45,0,0,0,50,0,8193,8454144,4,0,1309324210,-1440044374
@@ -57982,13 +57985,11 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 146759,"Xorothian Gauntlets",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 146760,"Xorothian Waistplate",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 146761,"Xorothian Helmet",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
-146762,"Xorothian Greaves",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
-146763,"Xorothian Pauldrons",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
-146764,"Xorothian Sabatons",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
-146765,"Xorothian Vambraces",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
-146766,"Nethercaller Cloak",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 146768,"Netherfiend Armbands",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 146769,"Netherfiend Treads",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
+146770,"Netherfiend Trousers",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
+146771,"Netherfiend Grips",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
+146772,"Netherfiend Headgear",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 146773,"Netherfiend Chestpiece",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 146774,"Netherfiend Mantle",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
 146775,"Netherfiend Belt",2,6,0,0,-1,40,0,0,0,50,0,8192,0,0,0,-1,-1
@@ -58108,6 +58109,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 147044,"Soul-Rattle Ribcage",4,6,0,0,-1,45,0,0,0,50,0,8192,0,0,0,-1,-1
 147045,"Insulated Finpads",4,6,0,0,-1,45,0,0,0,50,0,8192,0,0,0,-1,-1
 147046,"Star-Stalker Treads",4,6,0,0,-1,45,0,0,0,50,0,8192,0,0,0,-1,-1
+147092,"Ice-Threaded Conch",4,6,0,0,-1,45,0,0,0,50,0,8192,-2147483648,2,0,-1,-1
 147047,"Gauntlets of Spiteful Haunting",4,6,0,0,-1,45,0,0,0,50,0,8192,0,0,0,-1,-1
 147048,"Vicegrip of the Unrepentant",4,6,0,0,-1,45,0,0,0,50,0,8192,0,0,0,-1,-1
 147049,"Azure Squallshaper's Helm",4,6,0,0,-1,45,0,0,0,50,0,8192,0,0,0,-1,-1
@@ -58149,7 +58151,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 147089,"Ferocity of the Devout",4,6,0,0,-1,45,0,0,0,50,0,8192,-2147483648,2,0,-1,-1
 147090,"Stabilized Extinction Protocol",4,6,0,0,-1,45,0,0,0,50,0,8192,-2147483648,2,0,-1,-1
 147091,"Cleansing Ignition Catalyst",4,6,0,0,-1,45,0,0,0,50,0,8192,-2147483648,2,0,-1,-1
-147092,"Ice-Threaded Conch",4,6,0,0,-1,45,0,0,0,50,0,8192,-2147483648,2,0,-1,-1
 147093,"Globe of Frothing Eddies",4,6,0,0,-1,45,0,0,0,50,0,8192,-2147483648,2,0,-1,-1
 147094,"Virus of Lethargy",4,6,0,0,-1,45,0,0,0,50,0,8192,-2147483648,2,0,-1,-1
 147095,"Sphere of Entropy",4,6,0,0,-1,45,0,0,0,50,0,8192,-2147483648,2,0,-1,-1
@@ -58274,6 +58275,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 147248,"Storm-Tempered Legplates",2,6,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 147249,"Ley-Touched Mantle",2,6,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 147250,"Fel-Treated Spaulders",2,6,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
+147743,"Harness of Devouring Flame",4,6,0,0,-1,45,0,0,0,50,0,8256,0,0,0,-1,-1
 147251,"Galvanized Stormscale Spaulders",2,6,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 147252,"Storm-Tempered Shoulderguard",2,6,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
 147253,"Ley-Touched Cord",2,6,0,0,-1,40,0,0,0,44,0,8192,0,0,0,-1,-1
@@ -58354,7 +58356,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 147740,"Plague-Resistant Headcover",4,6,0,0,-1,45,0,0,0,50,0,8256,0,0,0,-1,-1
 147741,"Legguards of Unholy Disdain",4,6,0,0,-1,45,0,0,0,50,0,8256,0,0,0,-1,-1
 147742,"Violent Zealot's Shoulderpads",4,6,0,0,-1,45,0,0,0,50,0,8256,0,0,0,-1,-1
-147743,"Harness of Devouring Flame",4,6,0,0,-1,45,0,0,0,50,0,8256,0,0,0,-1,-1
 147744,"Treads of Disorderly Retreat",4,6,0,0,-1,45,0,0,0,50,0,8256,0,0,0,-1,-1
 147745,"Taloned Brain-Scrapers",4,6,0,0,-1,45,0,0,0,50,0,8256,0,0,0,-1,-1
 147746,"Glistening Seaspray Legguards",4,6,0,0,-1,45,0,0,0,50,0,8256,0,0,0,-1,-1
@@ -62352,7 +62353,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 155864,"Power-Assisted Vicegrips",3,7,0,0,-1,0,0,0,0,59,0,8192,0,32,0,-1,-1
 155866,"Soulspun Casque",3,7,0,0,-1,50,0,0,0,59,4096,8192,0,32,0,-1,-1
 155868,"Kilt of Fanatical Consumption",3,7,0,0,-1,0,0,0,0,59,0,8192,0,32,0,-1,-1
-155957,"Charred Saronite Greaves",4,2,0,0,-1,30,0,0,0,35,0,8192,8388608,0,0,-1,-1
 155869,"Shambling Berserker's Leggings",3,7,0,0,-1,50,0,0,0,59,0,8192,0,32,0,-1,-1
 155881,"Harlan's Loaded Dice",3,7,0,0,-1,0,0,0,0,59,524288,8192,0,32,0,-1,-1
 155884,"Parrotfeather Cloak",3,7,0,0,-1,0,0,0,0,59,0,8192,0,32,0,-1,-1
@@ -62395,6 +62395,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 155954,"Flamestalker Boots",4,2,0,0,-1,30,0,0,0,35,0,8192,8388608,0,0,-1,-1
 155955,"Helm of the Furnace Master",4,2,0,0,-1,30,0,0,0,35,0,8192,8388608,0,0,-1,-1
 155956,Worldcarver,4,2,0,0,-1,30,0,0,0,35,0,8192,8388608,0,0,-1,-1
+155957,"Charred Saronite Greaves",4,2,0,0,-1,30,0,0,0,35,0,8192,8388608,0,0,-1,-1
 155958,"Lifeforge Breastplate",4,2,0,0,-1,30,0,0,0,35,0,8192,8388608,0,0,-1,-1
 155960,"Scepter of Creation",4,2,0,0,-1,30,0,0,0,35,0,8704,8388608,0,0,-1,-1
 155961,Intensity,4,2,0,6,-1,30,0,0,0,35,0,8704,8388608,0,0,-1,-1
@@ -65338,6 +65339,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 161753,"Dread Gladiator's Chain Handguards",4,7,0,0,-1,50,0,0,0,58,0,8193,0,32,0,-1,-1
 161754,"Dread Gladiator's Silk Cowl",4,7,0,0,-1,50,0,0,0,58,0,8193,0,32,0,1309324210,-1440044374
 161755,"Dread Gladiator's Chain Headpiece",4,7,0,0,-1,50,0,0,0,58,0,8193,0,32,0,1309324210,-1440044374
+161916,"Monel-Hardened Shanker",2,7,0,0,-1,45,0,0,0,52,0,24578,0,36,0,-1,-1
 161756,"Dread Gladiator's Leather Hood",4,7,0,0,-1,50,0,0,0,58,0,8193,0,32,0,1309324210,-1440044374
 161757,"Dread Gladiator's Plate Leg Armor",4,7,0,0,-1,50,0,0,0,58,0,8193,0,32,0,-1,-1
 161758,"Dread Gladiator's Silk Trousers",4,7,0,0,-1,50,0,0,0,58,0,8193,0,32,0,-1,-1
@@ -65378,13 +65380,11 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 161913,"Monel-Hardened Cutlass",2,7,0,0,-1,45,0,0,0,52,0,24578,0,36,0,-1,-1
 161914,"Monel-Hardened Claymore",2,7,0,0,-1,45,0,0,0,52,0,24578,0,36,0,-1,-1
 161915,"Monel-Hardened Deckpounder",2,7,0,0,-1,45,0,0,0,52,0,25090,0,36,0,-1,-1
-161916,"Monel-Hardened Shanker",2,7,0,0,-1,45,0,0,0,52,0,24578,0,36,0,-1,-1
 161917,"Monel-Hardened Polearm",2,7,0,0,-1,45,0,0,0,52,0,24578,0,36,0,-1,-1
 161918,"Stormsteel Spear",3,7,0,0,-1,50,0,0,0,59,0,24578,0,36,0,-1,-1
 161919,"Stormsteel Dagger",3,7,0,0,-1,50,0,0,0,59,0,24578,0,36,0,-1,-1
 161920,"Honorable Combatant's Cutlass",3,7,0,0,-1,50,0,0,0,59,0,24578,0,36,0,-1,-1
 161921,"Honorable Combatant's Deckpounder",3,7,0,0,-1,50,0,0,0,59,0,24578,0,36,0,-1,-1
-162469,"Imbued Tempest Leggings",4,7,0,0,-1,50,0,0,0,60,0,8193,0,36,0,-1,-1
 161922,"Honorable Combatant's Shanker",3,7,0,0,-1,50,0,0,0,59,0,24578,0,36,0,-1,-1
 161923,"Honorable Combatant's Polearm",3,7,0,0,-1,50,0,0,0,59,0,24578,0,36,0,-1,-1
 161924,"Seapriest's Wand",2,7,0,0,-1,45,0,0,0,52,0,8706,0,36,0,-1,-1
@@ -65466,6 +65466,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 162466,"Emblazoned Stormsteel Girdle",4,7,0,0,-1,50,0,0,0,66,0,8193,0,36,0,-1,-1
 162467,"Imbued Tempest Boots",4,7,0,0,-1,50,0,0,0,60,0,8193,0,36,0,-1,-1
 162468,"Emblazoned Tempest Boots",4,7,0,0,-1,50,0,0,0,66,0,8193,0,36,0,-1,-1
+162469,"Imbued Tempest Leggings",4,7,0,0,-1,50,0,0,0,60,0,8193,0,36,0,-1,-1
 162470,"Emblazoned Tempest Leggings",4,7,0,0,-1,50,0,0,0,66,0,8193,0,36,0,-1,-1
 162471,"Imbued Mistscale Boots",4,7,0,0,-1,50,0,0,0,60,0,8193,0,36,0,-1,-1
 162472,"Emblazoned Mistscale Boots",4,7,0,0,-1,50,0,0,0,66,0,8193,0,36,0,-1,-1
@@ -67491,11 +67492,11 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 167436,"Notorious Gladiator's Plate Spaulders",4,7,0,0,-1,50,0,0,0,60,0,8193,0,32,0,1309324210,-1440044374
 167437,"Notorious Gladiator's Leather Shoulderguards",4,7,0,0,-1,50,0,0,0,60,0,8194,0,32,0,-1321907123,1427461461
 167438,"Notorious Gladiator's Plate Spaulders",4,7,0,0,-1,50,0,0,0,60,0,8194,0,32,0,-1321907123,1427461461
+168361,"Naga Centaur's Shellplate",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
 167439,"Notorious Gladiator's Silk Epaulets",4,7,0,0,-1,50,0,0,0,60,0,8194,0,32,0,-1321907123,1427461461
 167440,"Notorious Gladiator's Chain Pauldrons",4,7,0,0,-1,50,0,0,0,60,0,8194,0,32,0,-1321907123,1427461461
 167441,"Notorious Gladiator's Silk Shoulderpads",4,7,0,0,-1,50,0,0,0,60,0,8193,0,32,0,1309324210,-1440044374
 167442,"Notorious Gladiator's Leather Pauldrons",4,7,0,0,-1,50,0,0,0,60,0,8193,0,32,0,1309324210,-1440044374
-168365,"Greathelm of the Tender",4,7,0,0,-1,50,0,0,0,72,64,8192,0,32,0,-1,-1
 167443,"Notorious Gladiator's Chain Mantle",4,7,0,0,-1,50,0,0,0,60,0,8193,0,32,0,1309324210,-1440044374
 167444,"Notorious Gladiator's Plate Shoulderguards",4,7,0,0,-1,50,0,0,0,60,0,8193,0,32,0,1309324210,-1440044374
 167445,"Notorious Gladiator's Leather Pauldrons",4,7,0,0,-1,50,0,0,0,60,0,8194,0,32,0,-1321907123,1427461461
@@ -67812,10 +67813,10 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 168358,"Chestguard of the Submerged",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
 168359,"Abyssal Commander's Mantle",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
 168360,"Warhelm of Dread Waters",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
-168361,"Naga Centaur's Shellplate",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
 168362,"Trench Tyrant's Shoulderplates",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
 168363,"Dark Passenger's Breastplate",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
 168364,"Pauldrons of Fanatical Might",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
+168365,"Greathelm of the Tender",4,7,0,0,-1,50,0,0,0,72,64,8192,0,32,0,-1,-1
 168366,"Tidal Lurker's Greathelm",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
 168367,"Barnacle-Crusted Breastplate",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
 168371,"Seawrath Legwraps",4,7,0,0,-1,50,0,0,0,72,0,8192,0,32,0,-1,-1
@@ -67980,7 +67981,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 168977,"Rebooting Bit Band",4,7,0,0,-1,0,0,0,0,78,524288,8192,0,32,0,-1,-1
 168978,"Anodized Deflectors",4,7,0,0,-1,0,0,0,0,78,0,8192,0,32,0,-1,-1
 168979,"Mechanized Plate Chasse",4,7,0,0,-1,0,0,0,0,78,4096,8192,0,32,0,-1,-1
-169075,"Tank Buster Pauldrons",4,7,0,0,-1,0,0,0,0,78,4096,8192,0,32,0,-1,-1
 168980,"Gauntlets of Absolute Authority",4,7,0,0,-1,0,0,0,0,78,0,8192,0,32,0,-1,-1
 168981,"Circuit-Linked Chainmail",4,7,0,0,-1,0,0,0,0,78,4096,8192,0,32,0,-1,-1
 168982,"Regal Mekanospurs",4,7,0,0,-1,0,0,0,0,78,0,8192,0,32,0,-1,-1
@@ -68022,6 +68022,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 169072,"Volatile Arming Doublet",4,7,0,0,-1,0,0,0,0,78,4096,8192,0,32,0,-1,-1
 169073,"Type II Bomber Jacket",4,7,0,0,-1,0,0,0,0,78,4096,8192,0,32,0,-1,-1
 169074,"Epaulets of Arcing Power",4,7,0,0,-1,0,0,0,0,78,4096,8192,0,32,0,-1,-1
+169075,"Tank Buster Pauldrons",4,7,0,0,-1,0,0,0,0,78,4096,8192,0,32,0,-1,-1
 169076,"Logic Loop of Maintenance",4,7,0,0,-1,0,0,0,0,78,524288,8192,0,32,0,-1,-1
 169077,"Light Auto-Stabilizing Energy Rifle",4,7,0,0,-1,0,0,0,0,78,0,8192,0,32,0,-1,-1
 169141,"Butterfly Net",3,7,2395,7,-1,1,0,0,0,1,4160,24576,0,0,0,-1,-1
@@ -68107,7 +68108,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 169433,"Wavecrash Greatcloak",2,7,0,0,-1,50,0,0,0,58,0,8192,0,32,0,-1,-1
 169434,"Slithershell Cloak",2,7,0,0,-1,50,0,0,0,58,0,8192,0,32,0,-1,-1
 169435,"Deeptide Drape",2,7,0,0,-1,50,0,0,0,58,0,8192,0,32,0,-1,-1
-169448,"Bottomless Brewfest Stein",3,-3,0,0,-1,1,0,0,0,1,168128,2105344,8388608,0,0,-1,-1
+169448,"Bottomless Brewfest Stein",3,-3,0,0,-1,1,0,0,0,1,168128,2121728,8388608,0,0,-1,-1
 169450,"Filled Bottomless Brewfest Stein",3,-3,0,0,-1,1,0,0,0,1,134381760,2252800,8388608,65536,0,-1,-1
 169461,"Garland of Grain",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,0,0,0,-1,-1
 169486,"Shirakess Drape",4,7,0,0,-1,50,0,0,0,66,0,8192,0,32,0,-1,-1
@@ -68807,7 +68808,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 171566,"Glorenzelg, High-Blade of the Silver Hand",4,2,0,0,-1,30,0,0,0,60,0,8192,8388608,0,0,-1,-1
 171567,"Oathbinder, Charge of the Ranger-General",4,2,0,0,-1,30,0,0,0,60,0,24576,8388608,0,0,-1,-1
 171568,"Heaven's Fall, Kryss of a Thousand Lies",4,2,0,0,-1,30,0,0,0,60,0,8192,8388608,0,0,-1,-1
-171610,"Blackhorn Bludgeon",4,2,0,0,-1,30,0,0,0,60,0,8193,8388608,0,0,-1,-1
 171569,"Bloodsurge, Kel'Thuzad's Blade of Agony",4,2,0,0,-1,30,0,0,0,60,524288,8704,8388608,0,0,-1,-1
 171570,"Royal Scepter of Terenas II",4,2,0,0,-1,30,0,0,0,60,0,25088,8388608,0,0,-1,-1
 171571,"Archus, Greatstaff of Antonidas",4,2,0,6,-1,30,0,0,0,60,0,8704,8388608,0,0,-1,-1
@@ -68849,6 +68849,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 171607,"Legplates of Redeemed Blood",4,2,0,0,-1,30,0,0,0,60,0,8193,8388608,0,0,-1,-1
 171608,"Forsaken Bonecarver",4,2,0,0,-1,30,0,0,0,60,0,8193,8388608,0,0,-1,-1
 171609,"Shoulderpads of the Snow Bandit",4,2,0,0,-1,30,0,0,0,60,0,8193,8388608,0,0,-1,-1
+171610,"Blackhorn Bludgeon",4,2,0,0,-1,30,0,0,0,60,0,8193,8388608,0,0,-1,-1
 171611,"Robes of the Sleepless",4,2,0,0,-1,30,0,0,0,60,0,24577,8388608,0,0,-1,-1
 171612,"Darkmaw Crossbow",4,2,0,0,-1,30,0,0,0,60,0,8193,8388608,0,0,-1,-1
 171613,"Sunwalker Legguards",4,2,0,0,-1,30,0,0,0,60,0,8193,8388608,0,0,-1,-1
@@ -70606,7 +70607,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 175850,"Sinful Aspirant's Plate Helm",3,8,0,0,-1,60,0,0,0,158,4096,8192,0,0,0,-1,-1
 175851,"Sinful Aspirant's Cloak",3,8,0,0,-1,60,0,0,0,158,4096,8192,0,0,0,-1,-1
 175852,"Sinful Aspirant's Silk Robe",3,8,0,0,-1,60,0,0,0,158,4096,8192,0,0,0,-1,-1
-176336,"Guidenote Grip",2,8,0,0,-1,48,0,0,0,85,0,8192,0,0,0,-1,-1
 175853,"Sinful Aspirant's Plate Chestplate",3,8,0,0,-1,60,0,0,0,158,4096,8192,0,0,0,-1,-1
 175854,"Sinful Aspirant's Chain Vest",3,8,0,0,-1,60,0,0,0,158,4096,8192,0,0,0,-1,-1
 175855,"Sinful Aspirant's Leather Vest",3,8,0,0,-1,60,0,0,0,158,4096,8192,0,0,0,-1,-1
@@ -70728,6 +70728,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 176333,"Melody Defender's Bulwark",2,8,0,0,-1,48,0,0,0,85,0,8192,0,0,0,-1,-1
 176334,"Silverchime Longspear",2,8,0,0,-1,48,0,0,0,85,0,8192,0,0,0,-1,-1
 176335,"Chime of Melodic Reflection",2,8,0,0,-1,48,0,0,0,85,0,8192,0,0,0,-1,-1
+176336,"Guidenote Grip",2,8,0,0,-1,48,0,0,0,85,0,8192,0,0,0,-1,-1
 176337,"Skytone Quickblade",2,8,0,0,-1,48,0,0,0,85,0,8192,0,0,0,-1,-1
 176338,"Skytone Greatsword",2,8,0,0,-1,48,0,0,0,85,0,8192,0,0,0,-1,-1
 176339,"Skytone Mallet",2,8,0,0,-1,48,0,0,0,85,0,8192,0,0,0,-1,-1
@@ -71971,7 +71972,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 180240,"Reverent Collector's Chestplate",4,8,0,0,-1,60,0,0,0,1,134217728,139264,0,65536,0,-1,-1
 180241,"Reverent Collector's Warboots",4,8,0,0,-1,60,0,0,0,1,134217728,139264,0,65536,0,-1,-1
 180242,"Reverent Collector's Gauntlets",4,8,0,0,-1,60,0,0,0,1,134221824,139264,0,65536,0,-1,-1
-180559,"Boots of Endless Betrayal",4,6,0,0,-1,45,0,0,0,50,0,4202496,0,0,0,-1,-1
 180243,"Reverent Collector's Legguards",4,8,0,0,-1,60,0,0,0,1,134221824,139264,0,65536,0,-1,-1
 180244,"Reverent Collector's Shoulders",4,8,0,0,-1,60,0,0,0,1,134217728,139264,0,65536,0,-1,-1
 180245,"Reverent Collector's Girdle",4,8,0,0,-1,60,0,0,0,1,134217728,139264,0,65536,0,-1,-1
@@ -72054,6 +72054,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 180556,"Doomblade Tunic",4,6,0,0,8,45,0,0,0,50,4096,4202496,0,0,0,-1,-1
 180557,"Doomblade Pants",4,6,0,0,8,45,0,0,0,50,4096,4202496,0,0,0,-1,-1
 180558,"Doomblade Spaulders",4,6,0,0,8,45,0,0,0,50,4096,4202496,0,0,0,-1,-1
+180559,"Boots of Endless Betrayal",4,6,0,0,-1,45,0,0,0,50,0,4202496,0,0,0,-1,-1
 180560,"Girdle of Nefarious Strategy",4,6,0,0,-1,45,0,0,0,50,0,4202496,0,0,0,-1,-1
 180561,"Bracers of Impossible Choices",4,6,0,0,-1,45,0,0,0,50,0,4202496,0,0,0,-1,-1
 180562,"Tunic of Enveloped Dissonance",4,6,0,0,512,45,0,0,0,50,4096,4202496,0,0,0,-1,-1
@@ -72840,7 +72841,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 182407,"Sinful Gladiator's Wingblade",4,8,0,0,-1,60,0,0,0,200,4096,8192,0,32,0,-1,-1
 182408,"Sinful Gladiator's Swordbreaker",4,8,0,0,-1,60,0,0,0,200,4096,8192,8388608,32,0,-1,-1
 182409,"Sinful Gladiator's Sineater Blade",4,8,0,0,-1,60,0,0,0,200,4096,8704,8388608,32,0,-1,-1
-182465,"Truth's Wake",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 182410,"Sinful Gladiator's Wingglaive",4,8,0,0,-1,60,0,0,0,200,4096,8192,8388608,32,0,-1,-1
 182411,"Sinful Gladiator's Repeating Crossbow",4,8,0,0,-1,60,0,0,0,200,4096,8192,8388608,32,0,-1,-1
 182412,"Sinful Gladiator's Redoubt",4,8,0,0,-1,60,0,0,0,200,4096,8192,8388608,0,0,-1,-1
@@ -72882,6 +72882,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 182462,Expurgation,2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 182463,"Harrowing Punishment",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 182464,"Harmony of the Tortollan",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
+182465,"Truth's Wake",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 182466,"Shade of Terror",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 182468,"Mortal Combo",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 182469,"Rejuvenating Wind",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
@@ -73250,7 +73251,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 183435,"Sinful Aspirant's Crescent",3,8,0,0,-1,60,0,0,0,158,4096,8704,0,32,0,-1,-1
 183437,"Sinful Gladiator's Shanker",4,8,0,0,-1,60,0,0,0,200,4096,8192,8388608,32,0,-1,-1
 183439,"Sinful Gladiator's Crystal",4,8,0,0,-1,60,0,0,0,200,4096,8704,8388608,0,0,-1,-1
-183488,"Unstoppable Growth",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 183441,"Sinful Gladiator's Warglaive",4,8,0,0,-1,60,0,0,0,200,4096,8192,8388608,32,0,-1,-1
 183443,"Sinful Gladiator's Sacrificial Dagger",4,8,0,0,-1,60,0,0,0,200,4096,8704,8388608,32,0,-1,-1
 183445,"Sinful Gladiator's Rifle",4,8,0,0,-1,60,0,0,0,200,4096,8192,8388608,32,0,-1,-1
@@ -73293,6 +73293,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 183485,"Savage Combatant",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 183486,"Well-Honed Instincts",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 183487,"Layered Mane",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
+183488,"Unstoppable Growth",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 183489,"Flash of Clarity",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 183490,"Floral Recycling",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
 183491,"Ready for Anything",2,8,0,0,-1,1,0,0,0,145,36928,24640,-2139095040,2,0,-1,-1
@@ -73371,6 +73372,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 183575,"Argent Conscript's Skullcap",3,7,0,0,-1,50,0,0,0,100,4096,24641,8388608,32,0,1309324210,-1440044374
 183576,"Argent Conscript's Gloves",3,7,0,0,-1,50,0,0,0,100,4096,8257,8388608,32,0,1309324210,-1440044374
 183577,"Argent Conscript's Cord",3,7,0,0,-1,50,0,0,0,100,4096,8257,8388608,32,0,1309324210,-1440044374
+183639,"Gaze of Bewilderment",4,7,0,0,-1,50,0,0,0,100,0,8256,8388608,0,0,-1,-1
 183578,"Argent Conscript's Pauldrons",3,7,0,0,-1,50,0,0,0,100,4096,24641,8388608,32,0,1309324210,-1440044374
 183579,"Argent Conscript's Mask",3,7,0,0,-1,50,0,0,0,100,4096,24641,8388608,32,0,1309324210,-1440044374
 183580,"Argent Conscript's Grips",3,7,0,0,-1,50,0,0,0,100,4096,8257,8388608,32,0,1309324210,-1440044374
@@ -73412,7 +73414,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 183636,"Helm of the Violent Fracas",4,7,0,0,-1,50,0,0,0,100,0,8256,8388608,0,0,-1,-1
 183637,"Shoulderpads of the Notorious Knave",4,7,0,0,-1,50,0,0,0,100,0,8256,8388608,0,0,-1,-1
 183638,"Phantasmic Kris",4,7,0,0,-1,50,0,0,0,100,528384,8768,8388608,0,0,-1,-1
-183639,"Gaze of Bewilderment",4,7,0,0,-1,50,0,0,0,100,0,8256,8388608,0,0,-1,-1
 183640,"Leggings of Disreputable Charms",4,7,0,0,-1,50,0,0,0,100,0,8256,8388608,0,0,-1,-1
 183641,"Shoulderpads of Corpal Rigidity",4,7,0,0,-1,50,0,0,0,100,0,8256,8388608,0,0,-1,-1
 183642,"Robes of Rasped Breaths",4,7,0,0,-1,50,0,0,0,100,0,8256,8388608,0,0,-1,-1
@@ -76235,6 +76236,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 191824,"Obsidian Dracthyr Battlegear Leggings",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
 191825,"Obsidian Dracthyr Battlegear Monnion",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
 191826,"Obsidian Dracthyr Battlegear Belt",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
+192012,"Wyrmforged Armplates",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 191827,"Obsidian Dracthyr Battlegear Bracers",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
 191828,"Obsidian Dracthyr Battlegear Cover",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
 191829,"Cobalt Guardian's Hauberk",3,9,0,0,-1,58,0,0,0,1,134221824,139264,0,65536,0,-1,-1
@@ -76276,7 +76278,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 192009,"Wyrmforged Legguards",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192010,"Wyrmforged Mantle",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192011,"Wyrmforged Girdle",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
-192012,"Wyrmforged Armplates",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192013,"Ottuk Hide Vest",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192014,"Ottuk Hide Epaulets",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192015,"Cobalt Watcher's Shoulderpads",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
@@ -76320,7 +76321,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 192228,"Eternal Gladiator's Silk Trousers",4,8,0,0,-1,60,0,0,0,200,4096,8192,0,0,0,-1,-1
 192229,"Eternal Gladiator's Silk Mantle",4,8,0,0,-1,60,0,0,0,200,4096,8192,0,0,0,-1,-1
 192230,"Eternal Gladiator's Silk Amice",4,8,0,0,-1,60,0,0,0,200,4096,8192,0,0,0,-1,-1
-192424,"Rhapsodic Cleaver",4,8,0,0,-1,60,0,0,0,233,0,8192,0,32,0,-1,-1
 192231,"Eternal Gladiator's Silk Cord",4,8,0,0,-1,60,0,0,0,200,4096,8192,0,0,0,-1,-1
 192232,"Eternal Gladiator's Silk Belt",4,8,0,0,-1,60,0,0,0,200,4096,8192,0,0,0,-1,-1
 192233,"Eternal Gladiator's Silk Wristwraps",4,8,0,0,-1,60,0,0,0,200,4096,8192,0,0,0,-1,-1
@@ -76480,6 +76480,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 192411,"Eternal Aspirant's Crescent",3,8,0,0,-1,60,0,0,0,158,4096,8704,0,0,0,-1,-1
 192422,"Harmonium Lantern",4,8,0,0,-1,60,0,0,0,233,0,8192,0,0,0,-1,-1
 192423,"Serenading Arbalest",4,8,0,0,-1,60,0,0,0,233,0,8192,0,32,0,-1,-1
+192424,"Rhapsodic Cleaver",4,8,0,0,-1,60,0,0,0,233,0,8192,0,32,0,-1,-1
 192425,"Legato Hammer",4,8,0,0,-1,60,0,0,0,233,0,8704,0,32,0,-1,-1
 192426,"Waltzing Glaive",4,8,0,0,-1,60,0,0,0,233,0,8192,0,32,0,-1,-1
 192427,"Senza Spellblade",4,8,0,0,-1,60,0,0,0,233,0,8704,0,32,0,-1,-1
@@ -78131,7 +78132,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 201131,"Crimson Aspirant's Silk Footwraps",3,9,0,0,-1,70,0,0,0,340,4096,8192,0,0,0,-1,-1
 201132,"Crimson Aspirant's Chain Stompers",3,9,0,0,-1,70,0,0,0,340,4096,8192,0,0,0,-1,-1
 201133,"Crimson Aspirant's Leather Footpads",3,9,0,0,-1,70,0,0,0,340,4096,8192,0,0,0,-1,-1
-201245,"Emerald Blessed Greatsword",4,9,0,0,-1,70,0,0,0,250,0,8704,8388608,0,0,-1,-1
 201135,"Crimson Aspirant's Leather Grips",3,9,0,0,-1,70,0,0,0,340,4096,8192,0,0,0,-1,-1
 201136,"Crimson Aspirant's Plate Handguards",3,9,0,0,-1,70,0,0,0,340,4096,8192,0,0,0,-1,-1
 201137,"Crimson Aspirant's Silk Handwraps",3,9,0,0,-1,70,0,0,0,340,4096,8192,0,0,0,-1,-1
@@ -78172,6 +78172,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 201242,"Growth Evoking Furnace",4,9,0,0,-1,70,0,0,0,250,0,8712,8388608,0,0,-1,-1
 201243,"Drakebone Tenderizer",4,9,0,0,-1,70,0,0,0,250,0,8192,8388608,0,0,-1,-1
 201244,"Dreamfire-Infused Broadsword",4,9,0,0,-1,70,0,0,0,250,0,8192,8388608,0,0,-1,-1
+201245,"Emerald Blessed Greatsword",4,9,0,0,-1,70,0,0,0,250,0,8704,8388608,0,0,-1,-1
 201246,"Coiled Green Draketail",4,9,0,0,-1,70,0,0,0,250,0,8704,8388608,0,0,-1,-1
 201247,"Whaler's Fang",4,9,0,0,-1,70,0,0,0,250,0,8192,8388608,0,0,-1,-1
 201248,"Dreamfused Scaled Protector",4,9,0,0,-1,70,0,0,0,250,0,8192,8388608,0,0,-1,-1
@@ -79314,7 +79315,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 205390,"Obsidian Gladiator's Silk Armbands",4,9,0,0,128,70,0,0,0,408,4096,8192,0,0,0,-1,-1
 205391,"Obsidian Gladiator's Chain Vest",4,9,0,0,4096,70,0,0,0,408,4096,8192,0,0,0,-1,-1
 205392,"Obsidian Gladiator's Chain Tunic",4,9,0,0,4096,70,0,0,0,408,4096,8192,0,0,0,-1,-1
-205924,"Obsidian Gladiator's Axe",4,9,0,0,-1,70,0,0,0,408,4096,8192,0,0,0,-1,-1
 205393,"Obsidian Gladiator's Chain Sabatons",4,9,0,0,4096,70,0,0,0,408,4096,8192,0,0,0,-1,-1
 205394,"Obsidian Gladiator's Chain Boots",4,9,0,0,4096,70,0,0,0,408,4096,8192,0,0,0,-1,-1
 205395,"Obsidian Gladiator's Chain Gauntlets",4,9,0,0,4096,70,0,0,0,408,4096,8192,0,0,0,-1,-1
@@ -79709,6 +79709,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 205921,"Obsidian Gladiator's Scepter",4,9,0,0,-1,70,0,0,0,408,4096,8704,0,0,0,-1,-1
 205922,"Obsidian Gladiator's Rod",4,9,0,0,-1,70,0,0,0,408,4096,8192,0,0,0,-1,-1
 205923,"Obsidian Gladiator's Shield",4,9,0,0,-1,70,0,0,0,408,4096,8192,0,0,0,-1,-1
+205924,"Obsidian Gladiator's Axe",4,9,0,0,-1,70,0,0,0,408,4096,8192,0,0,0,-1,-1
 205925,"Obsidian Gladiator's Knife",4,9,0,0,-1,70,0,0,0,408,4096,8704,0,0,0,-1,-1
 205926,"Obsidian Gladiator's Mace",4,9,0,0,-1,70,0,0,0,408,4096,8192,0,0,0,-1,-1
 205927,"Obsidian Gladiator's Polearm",4,9,0,0,-1,70,0,0,0,408,4096,8192,0,0,0,-1,-1
@@ -80855,6 +80856,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209151,"Verdant Gladiator's Leather Helm",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209152,"Verdant Gladiator's Leather Mask",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209153,"Verdant Gladiator's Leather Breeches",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
+209384,"Dreambound Girdle",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209154,"Verdant Gladiator's Leather Legwraps",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209155,"Verdant Gladiator's Leather Spaulders",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209156,"Verdant Gladiator's Leather Shoulderpads",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
@@ -80933,11 +80935,11 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209229,"Verdant Gladiator's Chain Leggings",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209230,"Verdant Gladiator's Chain Breeches",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209231,"Verdant Gladiator's Chain Monnion",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
+209385,"Dreambound Mantle",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209232,"Verdant Gladiator's Chain Shoulderguard",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209233,"Verdant Gladiator's Chain Belt",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209234,"Verdant Gladiator's Chain Girdle",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209235,"Verdant Gladiator's Chain Wristguards",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
-209276,"Verdant Gladiator's Drape",4,9,0,0,32,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209236,"Verdant Gladiator's Chain Bracers",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209237,"Verdant Gladiator's Cloak",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209238,"Verdant Gladiator's Drape",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
@@ -80978,6 +80980,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209273,"Verdant Gladiator's Plate Wristguards",4,9,0,0,32,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209274,"Verdant Gladiator's Plate Vambraces",4,9,0,0,32,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209275,"Verdant Gladiator's Cloak",4,9,0,0,32,70,0,0,0,447,4096,8192,0,0,0,-1,-1
+209276,"Verdant Gladiator's Drape",4,9,0,0,32,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209277,"Verdant Gladiator's Shawl",4,9,0,0,32,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209278,"Verdant Gladiator's Plate Chestguard",4,9,0,0,2,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209279,"Verdant Gladiator's Plate Chestplate",4,9,0,0,2,70,0,0,0,447,4096,8192,0,0,0,-1,-1
@@ -81053,8 +81056,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209381,"Dreambound Epaulets",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209382,"Dreambound Vest",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209383,"Dreambound Armplates",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
-209384,"Dreambound Girdle",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
-209385,"Dreambound Mantle",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209386,"Dreambound Legguards",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209387,"Dreambound Gauntlets",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209388,"Dreambound Sabatons",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
@@ -81176,6 +81177,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209758,"Verdant Aspirant's Leather Cord",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
 209759,"Verdant Aspirant's Silk Bindings",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
 209760,"Verdant Aspirant's Plate Armguards",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
+209921,"Spirited Stag's Branch",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209761,"Verdant Aspirant's Chain Bracer",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
 209762,"Verdant Aspirant's Leather Armguards",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
 209774,"Verdant Aspirant's Cloak",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
@@ -81217,7 +81219,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209918,"Summer Soother's Wrap",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209919,"Chartreuse Champion's Bulwark",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209920,"Summer Soother's Implement",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
-209921,"Spirited Stag's Branch",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209922,"Fearless Faerie's Glaive",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209923,"Chartreuse Champion's Blade",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209924,"Chartreuse Champion's Warspear",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
@@ -82868,7 +82869,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 214222,"Red Crane Bracers",2,4,0,0,-1,10,0,0,0,1,0,16801792,8388608,32,0,-1,-1
 214223,"Gleaming Helm of Unrelenting Justice",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 214224,"Gleaming Tunic of Unrelenting Justice",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-214269,"Fire-Charm Waistband",2,4,0,0,-1,10,0,0,0,1,0,16801792,8388608,32,0,-1,-1
 214225,"Gleaming Bracers of Unrelenting Justice",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 214226,"Gleaming Belt of Unrelenting Justice",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 214227,"Gleaming Leggings of Unrelenting Justice",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -82910,6 +82910,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 214266,"Fire-Charm Leggings",2,4,0,0,-1,10,0,0,0,1,0,16801792,8388608,32,0,-1,-1
 214267,"Fire-Charm Legguards",2,4,0,0,-1,10,0,0,0,1,0,16801792,8388608,32,0,-1,-1
 214268,"Fire-Charm Spaulders",2,4,0,0,-1,10,0,0,0,1,64,16801792,8388608,32,0,-1,-1
+214269,"Fire-Charm Waistband",2,4,0,0,-1,10,0,0,0,1,0,16801792,8388608,32,0,-1,-1
 214270,"Fire-Charm Grips",2,4,0,0,-1,10,0,0,0,1,0,16801792,8388608,32,0,-1,-1
 214271,"Fire-Charm Cover",2,4,0,0,-1,10,0,0,0,1,0,16801792,8388608,32,0,-1,-1
 214272,"Fire-Charm Footguards",2,4,0,0,-1,10,0,0,0,1,64,16801792,8388608,32,0,-1,-1
@@ -84099,6 +84100,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 216105,"Draconic Gladiator's Leather Treads",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
 216106,"Draconic Gladiator's Leather Gloves",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
 216107,"Draconic Gladiator's Leather Grips",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
+216417,"Hozen Shanker",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216108,"Draconic Gladiator's Leather Helm",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
 216109,"Draconic Gladiator's Leather Mask",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
 216110,"Draconic Gladiator's Leather Breeches",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
@@ -84374,7 +84376,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 216408,"Fyn's Dagger",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216412,"Iron Qon's Knife",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216416,"Hozen Blade",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
-216417,"Hozen Shanker",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216418,"Hozen Dagger",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216419,"Hozen Knife",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216421,"Pandaren Mace",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
@@ -84820,6 +84821,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 217524,"Crucible Raider's Shadowed Focus",4,9,0,0,-1,70,0,0,0,1,134221824,139264,0,65536,0,-1,-1
 217525,"Crucible Raider's Molten Focus",4,9,0,0,-1,70,0,0,0,1,134221824,139264,0,65536,0,-1,-1
 217526,"Crucible Raider's Corrupted Focus",4,9,0,0,-1,70,0,0,0,1,134221824,139264,0,65536,0,-1,-1
+218030,"Recruit's Sturdy Girdle",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 217527,"Crucible Raider's Bronzed Kiteshield",4,9,0,0,-1,70,0,0,0,1,134221824,139264,0,65536,0,-1,-1
 217528,"Crucible Raider's Shadowed Kiteshield",4,9,0,0,-1,70,0,0,0,1,134221824,139264,0,65536,0,-1,-1
 217529,"Crucible Raider's Molten Kiteshield",4,9,0,0,-1,70,0,0,0,1,134221824,139264,0,65536,0,-1,-1
@@ -85060,7 +85062,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218027,"Recruit's Sturdy Crushers",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218028,"Recruit's Sturdy Greathelm",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218029,"Recruit's Sturdy Pauldrons",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
-218030,"Recruit's Sturdy Girdle",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218031,"Recruit's Sturdy Vambraces",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218032,"Recruit's Sturdy Cape",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218033,"Defender's Hefty Satchel",2,-3,0,0,-1,10,0,0,0,1,134217728,139264,0,0,0,-1,-1
@@ -85383,12 +85384,12 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218552,"Forged Gladiator's Cloak",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218553,"Forged Gladiator's Drape",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218554,"Forged Gladiator's Shawl",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
+218725,"Forged Gladiator's Focus",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218555,"Forged Gladiator's Leather Vest",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218556,"Forged Gladiator's Leather Jerkin",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218557,"Forged Gladiator's Leather Boots",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218558,"Forged Gladiator's Leather Treads",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218559,"Forged Gladiator's Leather Gloves",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
-218730,"Forged Gladiator's Crossbow",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218560,"Forged Gladiator's Leather Grips",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218561,"Forged Gladiator's Leather Helm",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218562,"Forged Gladiator's Leather Mask",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -85423,12 +85424,12 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218591,"Forged Gladiator's Drape",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218592,"Forged Gladiator's Shawl",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218593,"Forged Gladiator's Armored Scales",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
+218726,"Forged Gladiator's Shield",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218594,"Forged Gladiator's Scaleguard",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218595,"Forged Gladiator's Chain Sabatons",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218596,"Forged Gladiator's Chain Boots",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218597,"Forged Gladiator's Chain Gauntlets",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218598,"Forged Gladiator's Chain Handguards",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
-218775,"Cardinal Educator's Vest",3,10,0,0,-1,1,0,0,0,1,134283264,139264,0,65536,0,-1,-1
 218599,"Forged Gladiator's Chain Helm",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218600,"Forged Gladiator's Chain Faceguard",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218601,"Forged Gladiator's Chain Leggings",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -85544,11 +85545,10 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218722,"Forged Gladiator's Staff",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
 218723,"Forged Gladiator's Bow",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218724,"Forged Gladiator's Scepter",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
-218725,"Forged Gladiator's Focus",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
-218726,"Forged Gladiator's Shield",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218727,"Forged Gladiator's Axe",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218728,"Forged Gladiator's Pincer",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
 218729,"Forged Gladiator's Claws",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
+218730,"Forged Gladiator's Crossbow",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218731,"Forged Gladiator's Greatstaff",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
 218732,"Forged Gladiator's Bulwark",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218733,"Forged Gladiator's Greataxe",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -85590,6 +85590,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218772,"Cobalt Educator's Vest",3,10,0,0,-1,1,0,0,0,1,134283264,139264,0,65536,0,-1,-1
 218773,"Leafy Educator's Vest",3,10,0,0,-1,1,0,0,0,1,134283264,139264,0,65536,0,-1,-1
 218774,"Lilac Educator's Vest",3,10,0,0,-1,1,0,0,0,1,134283264,139264,0,65536,0,-1,-1
+218775,"Cardinal Educator's Vest",3,10,0,0,-1,1,0,0,0,1,134283264,139264,0,65536,0,-1,-1
 218776,"Mossy Cartographer's Trailblazers",3,10,0,0,-1,1,0,0,0,1,134283264,139264,0,65536,0,-1,-1
 218777,"Deep Cartographer's Trailblazers",3,10,0,0,-1,1,0,0,0,1,134283264,139264,0,65536,0,-1,-1
 218778,"Crimson Cartographer's Trailblazers",3,10,0,0,-1,1,0,0,0,1,134283264,139264,0,65536,0,-1,-1
@@ -87400,6 +87401,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 225136,"Netherwalker's Eternal Shoulderblades",4,-3,0,0,256,80,0,0,0,571,4112,8192,0,0,0,-1,-1
 225137,"Netherwalker's Eternal Leggings",4,-3,0,0,256,80,0,0,0,571,4112,8192,0,0,0,-1,-1
 225138,"Netherwalker's Eternal Skullcap",4,-3,0,0,256,80,0,0,0,571,4112,8192,0,0,0,-1,-1
+225353,"Kaheti Confiscated Spade",2,10,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
 225139,"Netherwalker's Eternal Gloves",4,-3,0,0,256,80,0,0,0,571,4112,8192,0,0,0,-1,-1
 225140,"Netherwalker's Eternal Sandals",4,-3,0,0,256,80,0,0,0,571,16,8192,0,0,0,-1,-1
 225141,"Netherwalker's Eternal Harness",4,-3,0,0,256,80,0,0,0,571,16,8192,0,0,0,-1,-1
@@ -87441,7 +87443,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 225200,"Alcor's Sunrazor",3,0,0,0,-1,1,0,0,0,164,36864,8192,0,0,0,-1,-1
 225201,"Precisely Calibrated Rifle",3,0,0,0,-1,1,0,0,0,164,36864,8192,0,0,0,-1,-1
 225349,"Kaheti Confiscated Borers",2,10,0,0,-1,70,0,0,0,400,4096,8704,0,0,0,-1,-1
-225353,"Kaheti Confiscated Spade",2,10,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
 225354,"Kaheti Confiscated Dirk",2,10,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
 225356,"Kaheti Confiscated Crossbow",2,10,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
 225357,"Kaheti Confiscated Lantern",2,10,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
@@ -87615,7 +87616,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 225734,"Sturdy Chitinous Striders",4,10,0,0,-1,80,0,0,0,571,0,8192,0,0,0,-1,-1
 225735,"Dornish Warden's Coat",4,10,0,0,-1,80,0,0,0,571,0,8192,0,0,0,-1,-1
 225736,"11.0 Raid Template - Plate - Head",4,10,0,0,-1,80,0,0,0,571,16,8192,0,0,0,-1,-1
-226059,"Timely Tourist's Torch",3,0,0,0,-1,70,0,0,0,400,0,8704,0,0,0,-1,-1
 225737,"11.0 Raid Template - Plate - Feet",4,10,0,0,-1,80,0,0,0,571,16,8192,0,0,0,-1,-1
 225744,"Heritage Militia's Stompers",4,10,0,0,-1,80,0,0,0,571,0,8192,0,0,0,-1,-1
 225745,"Crystal Star Cuisses",4,10,0,0,-1,80,0,0,0,571,0,8192,0,0,0,-1,-1
@@ -87698,6 +87698,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 226056,"Timely Tourist's Blade",3,0,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
 226057,"Timely Tourist's Sword",3,0,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
 226058,"Timely Tourist's Sharpshooter",3,0,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
+226059,"Timely Tourist's Torch",3,0,0,0,-1,70,0,0,0,400,0,8704,0,0,0,-1,-1
 226060,"Timely Tourist's Waraxe",3,0,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
 226061,"Timely Tourist's Spade",3,0,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
 226062,"Timely Tourist's Polearm",3,0,0,0,-1,70,0,0,0,400,0,8192,0,0,0,-1,-1
@@ -88618,6 +88619,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 229610,"Prized Gladiator's Leather Shoulderpads",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229611,"Prized Gladiator's Leather Belt",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229612,"Prized Gladiator's Leather Strap",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
+229692,"Prized Gladiator's Drape",4,10,0,0,4,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229613,"Prized Gladiator's Leather Wristwraps",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229614,"Prized Gladiator's Leather Wristguards",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229615,"Prized Gladiator's Cloak",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -88627,7 +88629,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 229619,"Prized Gladiator's Leather Jerkin",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229620,"Prized Gladiator's Leather Boots",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229621,"Prized Gladiator's Leather Treads",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
-229794,"Prized Gladiator's Flail",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229622,"Prized Gladiator's Leather Gloves",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229623,"Prized Gladiator's Leather Grips",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229624,"Prized Gladiator's Leather Helm",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -88667,7 +88668,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 229658,"Prized Gladiator's Chain Sabatons",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229659,"Prized Gladiator's Chain Boots",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229660,"Prized Gladiator's Chain Gauntlets",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
-229795,"Prized Gladiator's Pincer",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
 229661,"Prized Gladiator's Chain Handguards",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229662,"Prized Gladiator's Chain Helm",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229663,"Prized Gladiator's Chain Faceguard",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -88699,7 +88699,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 229689,"Prized Gladiator's Chain Wristguards",4,10,0,0,4,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229690,"Prized Gladiator's Chain Bracers",4,10,0,0,4,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229691,"Prized Gladiator's Cloak",4,10,0,0,4,80,0,0,0,584,4096,8192,0,0,0,-1,-1
-229692,"Prized Gladiator's Drape",4,10,0,0,4,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229693,"Prized Gladiator's Shawl",4,10,0,0,4,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229694,"Prized Gladiator's Chain Vest",4,10,0,0,64,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229695,"Prized Gladiator's Chain Tunic",4,10,0,0,64,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -88788,6 +88787,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 229791,"Prized Gladiator's Bludgeon",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
 229792,"Prized Gladiator's Army Knife",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229793,"Prized Gladiator's Gasket",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
+229794,"Prized Gladiator's Flail",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
+229795,"Prized Gladiator's Pincer",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
 229796,"Prized Gladiator's Detonator",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229797,"Prized Gladiator's Blaster",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 229798,"Prized Gladiator's Greatstaff",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
@@ -89142,6 +89143,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 230497,"Astral Gladiator's Shawl",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 230498,"Astral Gladiator's Leather Vest",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 230499,"Astral Gladiator's Leather Jerkin",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
+230673,"Astral Warmonger's Hood",3,10,0,0,-1,68,0,0,0,350,4096,8192,0,0,0,-1,-1
 230500,"Astral Gladiator's Leather Boots",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 230501,"Astral Gladiator's Leather Treads",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 230502,"Astral Gladiator's Leather Gloves",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -89303,7 +89305,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 230670,"Astral Warmonger's Mantle",3,10,0,0,-1,68,0,0,0,350,4096,8192,0,0,0,-1,-1
 230671,"Astral Warmonger's Boots",3,10,0,0,-1,68,0,0,0,350,4096,8192,0,0,0,-1,-1
 230672,"Astral Warmonger's Handwraps",3,10,0,0,-1,68,0,0,0,350,4096,8192,0,0,0,-1,-1
-230673,"Astral Warmonger's Hood",3,10,0,0,-1,68,0,0,0,350,4096,8192,0,0,0,-1,-1
 230674,"Astral Warmonger's Breeches",3,10,0,0,-1,68,0,0,0,350,4096,8192,0,0,0,-1,-1
 230675,"Astral Warmonger's Belt",3,10,0,0,-1,68,0,0,0,350,4096,8192,0,0,0,-1,-1
 230676,"Astral Warmonger's Wraps",3,10,0,0,-1,68,0,0,0,350,4096,8192,0,0,0,-1,-1
@@ -89805,7 +89806,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 232728,"Darkfuse Dinner Jacket",4,10,0,0,-1,80,0,0,0,623,134217728,139264,0,0,0,-1,-1
 232729,"Horn-Adorned Chausses",4,10,0,0,-1,80,0,0,0,623,134217728,139264,0,0,0,-1,-1
 232730,"Cauldron Master Cleats",4,10,0,0,-1,80,0,0,0,623,134217728,139264,0,0,0,-1,-1
-233046,"Radiant Belt of the Heavens",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 232731,"Steadfast Contender's Breastplate",4,10,0,0,-1,80,0,0,0,623,134217728,139264,0,0,0,-1,-1
 232732,"Champion's Gilded Stompers",4,10,0,0,-1,80,0,0,0,623,134217728,139264,0,0,0,-1,-1
 232733,"Gobfather's Gold Medal",4,10,0,0,-1,70,0,0,0,623,134217728,139264,0,0,0,-1,-1
@@ -89887,6 +89887,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 233043,"Radiant Pauldrons of the Twilight Heavens",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 233044,"Radiant Chestguard of the Heavens",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 233045,"Radiant Greaves of the Heavens",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+233046,"Radiant Belt of the Heavens",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 233047,"Radiant Gloves of the Heavens",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 233048,"Radiant Treads of the Heavens",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 233049,"Radiant Cloak of the Heavens",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
@@ -90421,7 +90422,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 234652,"Awakened Peacekeeper Waistcoat",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234653,"Awakened Peacekeeper Gauntlets",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234654,"Awakened Peacekeeper Pauldrons",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,-1,-1
-234695,"Stonebound Machinist Robe",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234655,"Awakened Peacekeeper Sabatons",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234656,"Awakened Peacekeeper Greathelm",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234657,"Awakened Explorer's Kilt",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
@@ -90462,6 +90462,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 234692,"Stonebound Artisan Footwraps",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234693,"Stonebound Artisan Collar",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234694,"Stonebound Machinist Wristchains",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
+234695,"Stonebound Machinist Robe",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234696,"Stonebound Machinist Helmet",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234697,"Stonebound Machinist Girdle",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,395268,0
 234698,"Stonebound Machinist Cog",2,10,0,0,-1,1,0,0,0,13,134217728,155648,67371008,268500992,0,-1,-1
@@ -91229,7 +91230,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 237257,"Banded Grassy War Legwraps",1,-3,0,0,-1,1,0,0,0,1,134221824,143360,8388608,65536,0,-1,-1
 237267,"Spare Uncrowned Vest",4,10,0,0,8,1,0,0,0,1,32768,12288,0,65536,0,-1,-1
 237342,"Renaissance Sai",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-237343,"Nunchuck of the Renaissance",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+237343,"Nunchucks of the Renaissance",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 237344,"Renaissance Katana",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 237355,"Golden Coffer Key",4,10,0,0,-1,1,0,0,0,1,134221824,139264,0,65536,0,-1,-1
 237358,"Silver Coffer Key",4,10,0,0,-1,1,0,0,0,1,134221824,139264,0,65536,0,-1,-1
@@ -91722,7 +91723,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 238015,"Sun-Blessed Pickaxe",3,11,0,0,-1,78,2916,1,0,106,0,24576,0,16777216,8,-1,-1
 238016,"Sun-Blessed Skinning Knife",3,11,0,0,-1,78,2917,1,0,106,0,24576,0,16777216,8,-1,-1
 238017,"Sun-Blessed Leatherworker's Knife",3,11,0,0,-1,78,2915,1,0,106,0,24576,0,16777216,8,-1,-1
-238018,"Sun-Blessed Blacksmith's Hammer",3,11,0,0,-1,78,2907,1,0,106,0,24576,0,16777216,8,-1,-1
+238018,"Sun-Blessed Blacksmith's Hammer",3,11,0,0,-1,78,2907,1,0,106,64,24576,0,16777216,8,-1,-1
 238021,"Spirit-Touched Mace",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 238022,"Soul-Touched Mace",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 238025,"Stormstout's Sha-Warped Tunic",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -91760,7 +91761,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 238192,"Entropic-Shadow Warglaive",2,10,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
 238193,"Blade of Unyielding Will",2,10,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
 238194,"Blaster of Unyielding Will",2,10,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
-238217,"Offhand Renaissance Nunchuck",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+238217,"Offhand Renaissance Nunchucks",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 238249,"Boreal Greatsword",2,10,0,0,-1,80,0,0,0,600,0,8192,0,0,0,-1,-1
 238250,"Boreal Cleaver",2,10,0,0,-1,80,0,0,0,600,0,8192,0,0,0,-1,-1
 238251,"Grateful Goblin's Blade",2,10,0,0,-1,80,0,0,0,600,0,8192,0,0,0,-1,-1
@@ -92875,6 +92876,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 241016,"Arathi Lancer's Polearm",3,10,0,0,-1,1,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 241019,"Arathi Camper's Knife",3,10,0,0,-1,1,0,0,0,1,134254592,143360,0,65536,0,-1,-1
 241033,"Arathi Templar's Claymore",4,10,0,0,-1,80,0,0,0,610,4096,8192,0,0,0,-1,-1
+241707,"Conservatory Ward's Shroud",2,6,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 241035,"Arathi Soldier's Morningstar",4,10,0,0,-1,80,0,0,0,610,4096,8192,0,0,0,-1,-1
 241036,"Arathi Anointer's Wand",4,10,0,0,-1,80,0,0,0,610,4096,8704,0,0,0,-1,-1
 241044,"Argussian Crate",2,-3,0,0,-1,1,0,0,0,1,134287424,139264,0,0,0,-1,-1
@@ -92958,7 +92960,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 241695,"Excellent Eredar Cape",2,6,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 241701,"Eredar Battle Shroud",2,6,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 241702,"Eredar Battle Cloak",2,6,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
-241707,"Conservatory Ward's Shroud",2,6,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 241710,"Conservatory Ward's Cloak",2,6,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 241716,"Shroud of Dragon's Dominance",2,6,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 241717,"Shawl of Dragon's Dominance",2,6,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
@@ -93902,7 +93903,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 244785,"Time-Lost Wolfbite, Legacy of Garad",4,5,0,0,-1,1,0,0,0,1,134254592,143360,0,65536,0,-1,-1
 244786,"Grom'gar Hunting Spear",3,5,0,0,-1,1,0,0,0,1,134254592,143360,0,65536,0,-1,-1
 244787,"Elodor Attuning Beacon",3,5,0,0,-1,1,0,0,0,1,134254592,143360,0,65536,0,-1,-1
-244788,"[PH] Test Fishing Rod A",2,11,0,0,-1,78,356,1,0,486,0,24576,0,16777216,8,-1,-1
 244789,"[PH] Test Fishing Rod B",3,11,0,0,-1,78,356,1,0,486,0,24576,0,16777216,8,-1,-1
 244790,"The Coiled Huntress",4,11,0,0,-1,78,356,1,0,486,4096,24576,0,0,12,-1,-1
 244806,"Renowned Explorer's Versatile Vest",4,10,0,0,-1,1,0,0,0,1,65536,8192,0,524288,0,-1,-1
@@ -93944,7 +93944,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 245663,"Holy Golden Greatsword",3,6,0,0,-1,0,0,0,0,1,4096,8400896,8388608,65536,0,-1,-1
 245664,"Holy Hologem Greatsword",3,6,0,0,-1,0,0,0,0,1,4096,8400896,8388608,65536,0,-1,-1
 245667,"Warglaive of the Audacious Hunter",3,10,0,0,-1,1,0,0,0,1,134254592,143360,0,65536,0,-1,-1
-246156,"Lotus Remembrance Veil",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 245669,"P.O.S.T. Master's Prototype Parcel and Postage Presser",3,10,0,0,-1,1,0,0,0,1,36864,12288,0,65536,0,-1,-1
 245671,"Phaseblade of the Void Marches",3,10,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
 245673,"Bladed Rifle of Unfettered Momentum",3,10,0,0,-1,1,0,0,0,1,32768,12288,0,65536,0,-1,-1
@@ -94027,6 +94026,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 246071,"Mana-Seamster's Arcane-Needle",4,10,0,0,-1,80,0,0,0,662,0,8704,0,0,0,-1,-1
 246154,"Marigold Remembrance Veil",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 246155,"Starflower Remembrance Veil",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+246156,"Lotus Remembrance Veil",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 246157,"Orchid Remembrance Veil",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 246158,"Heartblossom Remembrance Veil",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 246179,"Lotus Deathmask",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
@@ -94085,7 +94085,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 246534,"Sunforged Pickaxe",4,11,0,0,-1,78,2916,1,0,132,0,24576,0,16777216,8,-1,-1
 246535,"Sunforged Skinning Knife",4,11,0,0,-1,78,2917,1,0,132,0,24576,0,16777216,8,-1,-1
 246536,"Sunforged Leatherworker's Knife",4,11,0,0,-1,78,2915,1,0,132,0,24576,0,16777216,8,-1,-1
-246537,"Sunforged Blacksmith's Hammer",4,11,0,0,-1,78,2907,1,0,132,0,24576,0,16777216,8,-1,-1
+246537,"Sunforged Blacksmith's Hammer",4,11,0,0,-1,78,2907,1,0,132,64,24576,0,16777216,8,-1,-1
 246565,"Cosmic Hearthstone",3,10,0,0,-1,0,0,0,0,1,36928,8256,32768,0,0,-1,-1
 246570,"Rethfuras, Scorched Stave of Cinders",3,-3,0,0,-1,1,0,0,0,1,134250496,139776,8388608,65536,0,-1,-1
 246571,"Glazfuris, Spire of the Deep Chill",3,-3,0,0,-1,1,0,0,0,1,134250496,139776,8388608,65536,0,-1,-1
@@ -94889,7 +94889,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 249150,"Manaforge Raider's Gamma Warpblade",4,10,0,0,-1,80,0,0,0,1,528384,8192,0,65536,0,-1,-1
 249151,"Manaforge Raider's Gamma Spire",4,10,0,0,-1,80,0,0,0,1,4096,8192,0,65536,0,-1,-1
 249152,"Manaforge Raider's Gamma Ward",4,10,0,0,-1,80,0,0,0,1,4096,8192,0,65536,0,-1,-1
-249295,"Turalyon's False Echo",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 249153,"Manaforge Raider's Gamma Staff",4,10,0,0,-1,80,0,0,0,1,4096,8192,0,65536,0,-1,-1
 249154,"Manaforge Raider's Gamma Greatsword",4,10,0,0,-1,80,0,0,0,1,4096,8192,0,65536,0,-1,-1
 249155,"Manaforge Raider's Gamma Reactor",4,10,0,0,-1,80,0,0,0,1,4096,8192,0,65536,0,-1,-1
@@ -94969,6 +94968,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 249288,"Ranger-Captain's Lethal Recurve",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 249293,"Weight of Command",4,11,0,0,-1,90,0,0,0,197,0,8704,0,0,0,-1,-1
 249294,"Blade of the Blind Verdict",4,11,0,0,-1,90,0,0,0,197,1048576,8704,0,0,0,-1,-1
+249295,"Turalyon's False Echo",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 249296,"Alah'endal, the Dawnsong",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 249298,"Tormentor's Bladed Fists",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 249302,"Inescapable Reach",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
@@ -95383,11 +95383,11 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 250300,"Phase-Lost Rod",3,10,0,0,-1,1,0,0,0,1,36864,12288,0,65536,0,-1,-1
 250301,"Phase-Lost Wand",3,10,0,0,-1,1,0,0,0,1,36864,12288,0,65536,0,-1,-1
 250309,"Simple Dagger",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-250310,"Simple Knife",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
+250310,"Thief's Notched Blade",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 250311,"Standard Warrior's Sword",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-250312,"Warrior's Katana",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+250312,"Monastery's Katana",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 250313,"Vicious Warrior's Blade",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-250314,"Standard Hunter's Glaive",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+250314,"Initiate's Training Glaive",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 250315,"Hunter's Etched Glaive",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 250355,"Twilight Agitator's Stave",2,11,0,0,-1,70,0,0,0,197,0,8192,0,0,0,-1,-1
 250356,"Treasonous Ranger's Longbow",2,11,0,0,-1,70,0,0,0,197,0,8192,0,0,0,-1,-1
@@ -96472,6 +96472,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 255898,"Galactic Warmonger's Faceplate",4,11,0,0,-1,90,0,0,0,197,4096,8192,0,0,0,-1,-1
 255899,"Galactic Warmonger's Cuirass",4,11,0,0,-1,90,0,0,0,197,4096,8192,0,0,0,-1,-1
 255900,"Galactic Warmonger's Sabatons",4,11,0,0,-1,90,0,0,0,197,4096,8192,0,0,0,-1,-1
+256214,"Boots of Infinite Gravity",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 255901,"Galactic Warmonger's Gauntlets",4,11,0,0,-1,90,0,0,0,197,4096,8192,0,0,0,-1,-1
 255902,"Galactic Warmonger's Legguards",4,11,0,0,-1,90,0,0,0,197,4096,8192,0,0,0,-1,-1
 255903,"Galactic Warmonger's Spaulders",4,11,0,0,-1,90,0,0,0,197,4096,8192,0,0,0,-1,-1
@@ -96553,7 +96554,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 256211,"Light-Blighted Trousers",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 256212,"Hat of the Harmonious Grove",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 256213,"Alndust-Touched Gloves",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
-256214,"Boots of Infinite Gravity",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 256215,"On'heia's Dusty Jerkin",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 256216,"Dissipated Ritual Bangles",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 256217,"Councilmember's Spare Cinch",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
@@ -97128,6 +97128,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 258879,"Frayed Strap",0,11,0,0,-1,78,0,0,0,78,65536,8192,0,0,0,-1,-1
 258912,"Tarnished Dawnlit Spellbinder's Robe",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258913,"Tarnished Dawnlit Spellbinder's Slippers",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
+258953,"Tarnished Dawnlit Longbow",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258914,"Tarnished Dawnlit Spellbinder's Mitts",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258915,"Tarnished Dawnlit Spellbinder's Crown",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258916,"Tarnished Dawnlit Spellbinder's Trousers",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
@@ -97167,7 +97168,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 258950,"Tarnished Dawnlit Warmace",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258951,"Tarnished Dawnlit Shortsword",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258952,"Tarnished Dawnlit Longsword",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
-258953,"Tarnished Dawnlit Longbow",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258954,"Tarnished Dawnlit Poleaxe",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258955,"Tarnished Dawnlit Halberd",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
 258956,"Tarnished Dawnlit Scepter",2,11,0,0,-1,90,0,0,0,197,65536,8192,0,0,0,-1,-1
@@ -97327,7 +97327,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 260376,"Breastplate of the Final Defense",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 260377,"Fading Dawn Sabatons",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 260378,"Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-260379,"Black Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
+260379,"Dark Ranger's Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260380,"Blue Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260381,"Bronze Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260382,"Sentinel's Night Bow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
@@ -97335,7 +97335,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 260384,"Dark Red Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260385,"Frost Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260386,"Farstrider's Forest Bow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-260387,"Icey Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
+260387,"Silver Ranger's Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260388,"Light Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260389,"Ren'dorei Aspirant's Bow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260390,"Light Brown Wooden Shortbow",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
@@ -97466,7 +97466,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 260934,"Thalassian Archer's Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260935,"Tranquillien Archer's Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
 260936,"Basic Brown Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-260945,"Ensemble: Razorscale Pauldrons",2,9,0,0,-1,1,0,0,0,1,134287360,139264,0,65536,1,-1,-1
+260945,"Ensemble: Razorscale Pauldrons",2,9,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,1,-1,-1
 262358,"Sin'dorei Captain's Mantle",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 262359,"Djaradin Sparring Spear",3,9,0,0,-1,10,0,0,0,60,36864,12288,0,0,0,-1,-1
 262360,"Storyteller's Verses",3,9,0,0,-1,10,0,0,0,60,36864,12288,0,0,0,-1,-1
@@ -97495,6 +97495,34 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 262383,"Ohn'ir Initiate Leggings",3,9,0,0,-1,10,0,0,0,60,36864,8192,0,0,0,-1,-1
 262384,"Shikaar Scout Breeches",3,9,0,0,-1,10,0,0,0,60,36864,8192,0,0,0,-1,-1
 262385,"Nokhud Reaver Legplates",3,9,0,0,-1,10,0,0,0,60,36864,8192,0,0,0,-1,-1
+262398,"Pink Candlelight Kobold Pullover",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262399,"Pink Candlelight Kobold Slippers",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262400,"Pink Candlelight Kobold Mittens",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262401,"Pink Candlelight Kobold Sweatpants",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262402,"Pink Candlelight Kobold Hood",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262403,"Pink Candlelight Kobold Backpack",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262404,"Pink Candlelight Kobold Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262406,"Blue Candlelight Kobold Pullover",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262407,"Blue Candlelight Kobold Slippers",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262408,"Blue Candlelight Kobold Mittens",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262409,"Blue Candlelight Kobold Sweatpants",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262410,"Blue Candlelight Kobold Hood",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262411,"Blue Candlelight Kobold Backpack",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262412,"Blue Candlelight Kobold Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262415,"Brown Candlelight Kobold Pullover",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262416,"Brown Candlelight Kobold Slippers",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262417,"Brown Candlelight Kobold Mittens",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262418,"Brown Candlelight Kobold Sweatpants",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262419,"Brown Candlelight Kobold Hood",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262420,"Brown Candlelight Kobold Backpack",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262421,"Brown Candlelight Kobold Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262423,"Tan Candlelight Kobold Pullover",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262424,"Tan Candlelight Kobold Slippers",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262425,"Tan Candlelight Kobold Mittens",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262426,"Tan Candlelight Kobold Sweatpants",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262427,"Tan Candlelight Kobold Hood",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262428,"Tan Candlelight Kobold Backpack",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
+262429,"Tan Candlelight Kobold Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
 262439,"Shadowflame Mantle",4,9,0,0,-1,1,0,0,0,1,134250496,139264,1024,65536,0,-1,-1
 262440,"Shadowflame Wings",4,9,0,0,-1,1,0,0,0,1,134250496,139264,1024,65536,0,-1,-1
 262441,"Shadowflame Talons",4,9,0,0,-1,1,0,0,0,1,134250496,139264,1024,65536,0,-1,-1
@@ -97998,6 +98026,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 264195,"Amani Fangcaller's Spear",2,11,0,0,-1,1,0,0,0,1,32768,12288,0,65536,0,-1,-1
 264196,"Amani Warbringer's Edge",2,11,0,0,-1,1,0,0,0,1,32768,12288,0,65536,0,-1,-1
 264197,"Amani Spiritbark Ward",2,11,0,0,-1,1,0,0,0,1,32768,12288,0,65536,0,-1,-1
+264241,"Crimson Bow Tie",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 264246,"Eerie Iridescent Riftshroom",3,-3,0,0,-1,1,0,0,0,1,134287424,139264,0,0,0,-1,-1
 264289,"Wraps of Threadless Control",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 264290,"Gloves of Threadless Control",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
@@ -98269,22 +98298,22 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 265951,"Voidspire Vanquisher's Aureate Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 265997,"Blood Knight Champion's Tabard",2,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
 266075,"Harpoon of Extirpation",3,11,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
-266077,"Basic Black Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266078,"Basic Blue Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266079,"Basic Bronze Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266080,"Sentinel's Night Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266081,"Quel'Danil Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266082,"Basic Dark Red Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266083,"Basic Frost Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266084,"Farstrider's Forest Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266085,"Basic Ice Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266086,"Basic Light Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266087,"Ren'dorei Aspirant's Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266088,"Basic Light Brown Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266089,"Basic Pale Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266090,"Basic Purple Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266091,"Basic Rugged Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-266092,"Basic Sea Green Quiver",1,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
+266077,"Dark Ranger's Shadow Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266078,"Basic Blue Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266079,"Basic Bronze Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266080,"Sentinel's Night Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266081,"Quel'Danil Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266082,"Basic Dark Red Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266083,"Basic Frost Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266084,"Farstrider's Forest Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266085,"Silver Ranger's Spell Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266086,"Basic Light Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266087,"Ren'dorei Aspirant's Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266088,"Basic Light Brown Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266089,"Basic Pale Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266090,"Basic Purple Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266091,"Basic Rugged Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+266092,"Basic Sea Green Quiver",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 266095,"Obsidian Scale Treads",1,-3,0,0,-1,1,0,0,0,1,134250496,159744,8388608,65536,0,-1,-1
 266096,"Huntress' Moonglaive",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 266097,"Huntress' Moonblade",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
@@ -98370,6 +98399,9 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 267447,"Farstrider's Embroidered Cover",2,11,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 267448,"Blood-Tempered Cape",2,11,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 267449,"Spellbreaker's Shroud",2,11,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+267466,"Silversun Compact Cape",3,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
+267467,"Silversun Compact Tabard",3,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
+267468,"Silversun Compact Shoulderpads",3,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
 267479,"Aspiring Hara'ti Defender's Sash",3,11,0,0,-1,81,0,0,0,100,36864,24576,0,0,0,-1,-1
 267480,"Aspiring Hara'ti Defender's Cord",3,11,0,0,-1,81,0,0,0,100,36864,24576,0,0,0,-1,-1
 267481,"Aspiring Hara'ti Defender's Belt",3,11,0,0,-1,81,0,0,0,100,36864,24576,0,0,0,-1,-1
@@ -98594,11 +98626,11 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 268911,"Dawnchaser Totemic Edge",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 268921,"Staff of the Great Dark",2,11,0,0,-1,70,0,0,0,197,0,8192,0,0,0,-1,-1
 269269,"Devouring Ritual Spire",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
-269751,"Artisan Sai",2,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-269752,"Nunchuck of the Artisan",2,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-269753,"Artisan Katana",2,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
-269754,"Offhand Artisan Nunchuck",2,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-269755,"Large Artisan Katana",2,-3,0,0,-1,1,0,0,0,1,134217728,139264,8388608,65536,0,-1,-1
+269751,"Artisan Sai",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+269752,"Nunchucks of the Artisan",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+269753,"Artisan Katana",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+269754,"Offhand Artisan Nunchucks",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+269755,"Large Artisan Katana",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 269897,"Ascension Arrestor's Crossbow",4,-3,0,0,-1,80,0,0,0,246,134254592,139264,0,0,0,-1,-1
 269898,"Ascension Agitator's Crossbow",3,-3,0,0,-1,10,0,0,0,246,36864,8192,0,0,0,-1,-1
 269972,"Arathi Miner's Pickaxe",2,10,0,0,-1,70,0,0,0,400,0,8704,0,0,0,-1,-1
@@ -98717,7 +98749,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 270445,"Venomous Aspirant's Shield",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 270446,"Venomous Aspirant's Sigil",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 270447,"Venomous Aspirant's Claymore",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270448,"Venomous Aspirant's Warblade",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+270448,"Venomous Aspirant's Warblade",3,11,0,0,4,90,0,0,0,259,0,8192,0,0,0,-1,-1
 270449,"Venomous Aspirant's Greatblade",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
 270450,"Venomous Aspirant's Stave",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
 270451,"Venomous Aspirant's Polearm",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
@@ -98810,9 +98842,45 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 270552,"Venomous Aspirant's Battleaxe",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 270553,"Venomous Aspirant's Cleaver",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 270554,"Venomous Aspirant's Reaper",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270563,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270564,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270565,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270563,"Venomous Gladiator's Cloak",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270564,"Venomous Gladiator's Drape",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270565,"Venomous Gladiator's Shawl",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270566,"Venomous Gladiator's Cloak",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270567,"Venomous Gladiator's Drape",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270568,"Venomous Gladiator's Shawl",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270569,"Venomous Gladiator's Cloak",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270570,"Venomous Gladiator's Drape",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270571,"Venomous Gladiator's Shawl",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270572,"Venomous Gladiator's Cloak",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270573,"Venomous Gladiator's Drape",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270574,"Venomous Gladiator's Shawl",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270578,"Venomous Gladiator's Cloak",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270579,"Venomous Gladiator's Drape",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270580,"Venomous Gladiator's Shawl",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270581,"Venomous Gladiator's Cloak",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270582,"Venomous Gladiator's Drape",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270583,"Venomous Gladiator's Shawl",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270584,"Venomous Gladiator's Cloak",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270585,"Venomous Gladiator's Drape",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270586,"Venomous Gladiator's Shawl",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270590,"Venomous Gladiator's Cloak",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270591,"Venomous Gladiator's Drape",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270592,"Venomous Gladiator's Shawl",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270593,"Venomous Gladiator's Cloak",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270594,"Venomous Gladiator's Drape",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270595,"Venomous Gladiator's Shawl",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270596,"Venomous Gladiator's Cloak",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270597,"Venomous Gladiator's Drape",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270598,"Venomous Gladiator's Shawl",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270599,"Venomous Gladiator's Cloak",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270600,"Venomous Gladiator's Drape",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270601,"Venomous Gladiator's Shawl",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270607,"Venomous Gladiator's Cloak",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270608,"Venomous Gladiator's Drape",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270609,"Venomous Gladiator's Shawl",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270610,"Venomous Gladiator's Cloak",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270611,"Venomous Gladiator's Drape",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270612,"Venomous Gladiator's Shawl",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270613,"Venomous Gladiator's Silk Robe",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270614,"Venomous Gladiator's Silk Gown",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270615,"Venomous Gladiator's Silk Slippers",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
@@ -98894,7 +98962,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 270827,"Venomous Gladiator's Cudgel",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
 270828,"Venomous Gladiator's Chopper",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270829,"Venomous Gladiator's Splitter",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270830,"Venomous Gladiator's Slicer",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270830,"Venomous Gladiator's Slicer",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
 270831,"Venomous Gladiator's Blade",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270832,"Venomous Gladiator's Sword",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270833,"Venomous Gladiator's Spellblade",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
@@ -98913,8 +98981,9 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 270849,"Venomous Gladiator's Scaleshield",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270850,"Venomous Gladiator's Spikeshield",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270851,"Venomous Gladiator's Claymore",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270852,"Venomous Gladiator's Warblade",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
+270852,"Venomous Gladiator's Warblade",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270853,"Venomous Gladiator's Greatblade",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
+270900,"Pattern: Snakeskin Lining",3,11,0,0,-1,1,0,0,0,1,65600,8192,0,0,0,-1,-1
 270909,"Slumbering Coil Curio",4,11,0,0,-1,90,0,0,0,219,0,12288,128,16386,1,-1,-1
 270910,"Venomwoven Idol",4,11,0,0,400,90,0,0,0,219,64,8192,0,2,1,-1,-1
 270911,"Venomcured Idol",4,11,0,0,3592,90,0,0,0,219,64,8192,0,2,1,-1,-1
@@ -99079,8 +99148,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 271088,"Azure Petalweave Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 271092,"Jan'thrazet, the Soul Fang",4,11,0,0,-1,90,0,0,0,219,524288,8704,0,0,0,-1,-1
 271093,"Zatha'tek, Breath of Corruption",4,11,0,0,-1,90,0,0,0,219,524288,8192,0,0,0,-1,-1
-271131,"Test Weapon",4,11,0,0,-1,90,0,0,0,650,0,25088,0,16777216,0,-1,-1
-271155,"Test Weapon 2",4,11,0,0,-1,90,0,0,0,650,0,25088,0,16777216,0,-1,-1
 271434,"Venom Rite Mantle",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 271435,"Slippers of the Hissing Cult",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 271436,"Slitherscale Girdle",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
@@ -99142,7 +99209,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 271493,"Skulking Viper's Hidepiercers",4,11,0,0,4,90,0,0,0,219,4096,8192,0,0,0,-1,-1
 271494,"Skulking Viper's Tracks",4,11,0,0,4,90,0,0,0,219,0,8192,0,0,0,-1,-1
 271495,"Skulking Viper's Scuteplate",4,11,0,0,4,90,0,0,0,219,4096,8192,0,0,0,-1,-1
-271577,"Duskwatch Outlaw's Headgear",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 271496,"Fearsome Greatcloak of Calamity",4,11,0,0,4096,90,0,0,0,219,0,8192,0,0,0,-1,-1
 271497,"Calamitous Echo's Scalebands",4,11,0,0,4096,90,0,0,0,219,0,8192,0,0,0,-1,-1
 271498,"Calamitous Echo's Scarred Girdle",4,11,0,0,4096,90,0,0,0,219,0,8192,0,0,0,-1,-1
@@ -99223,6 +99289,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 271573,"Bloodwatch Outlaw's Epaulets",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 271574,"Bloodwatch Outlaw's Cloak",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 271575,"Bloodwatch Outlaw's Gloves",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+271577,"Duskwatch Outlaw's Headgear",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 271578,"Duskwatch Outlaw's Tunic",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 271579,"Duskwatch Outlaw's Buckle",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 271580,"Duskwatch Outlaw's Trousers",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -99304,13 +99371,13 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 272261,"Pledgebearer's Girdle",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
 272262,"Pledgebearer's Splints",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
 272266,"Forgotten Eidolon's Dagger",4,11,0,0,-1,78,0,0,0,206,0,8712,0,0,0,-1,-1
-272267,"Uncoffined Labrys",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
+272267,"Unconfined Labrys",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
 272268,Mask-Etcher,4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
 272269,"Soulsealer's Headstone",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
 272270,"Bonedust Pestle",4,11,0,0,-1,78,0,0,0,206,0,8712,0,0,0,-1,-1
 272271,"Spiritbound Focus",4,11,0,0,-1,78,0,0,0,206,0,8704,0,0,0,-1,-1
 272272,"Harrowed Partisan",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
-272273,"Unshrined Ceremonial Scepter",4,11,0,0,-1,78,0,0,0,206,0,8704,0,0,0,-1,-1
+272273,"Enshrined Ceremonial Scepter",4,11,0,0,-1,78,0,0,0,206,0,8704,0,0,0,-1,-1
 272274,"Realm Splitter",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
 272275,"Soulsinger's Horn",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
 272276,"Wailing Bulwark",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
@@ -99374,24 +99441,24 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 273872,"Duskwatch Outlaw's Undercoat",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 273873,"Void-Touched Sunfury Poleaxe",4,11,0,0,-1,80,0,0,0,246,0,8192,0,0,0,-1,-1
 273874,"Void-Touched Sunfury Poleaxe",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
-274050,"Bandit's Midnight Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274051,"Bandit's Azure Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
+274050,"Bandit's Midnight Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274051,"Bandit's Azure Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 274052,"Bandit's Sepia Highboot",1,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
-274053,"Bandit's Grassy Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274054,"Bandit's Cloudy Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274055,"Bandit's Deep Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274056,"Bandit's Camo Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274057,"Bandit's Brick Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274058,"Bandit's Lively Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274059,"Bandit's Faded Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274060,"Bandit's Carrot Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274061,"Bandit's Rosy Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274062,"Bandit's Plum Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274063,"Bandit's Crimson Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274064,"Bandit's Violet Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274065,"Bandit's Aquatic Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274066,"Bandit's Snowy Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
-274067,"Bandit's Sunny Highboot",1,-3,0,0,-1,1,0,0,0,1,134217728,143360,8388608,65536,0,-1,-1
+274053,"Bandit's Grassy Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274054,"Bandit's Cloudy Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274055,"Bandit's Deep Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274056,"Bandit's Camo Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274057,"Bandit's Brick Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274058,"Bandit's Lively Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274059,"Bandit's Faded Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274060,"Bandit's Carrot Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274061,"Bandit's Rosy Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274062,"Bandit's Plum Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274063,"Bandit's Crimson Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274064,"Bandit's Violet Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274065,"Bandit's Aquatic Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274066,"Bandit's Snowy Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+274067,"Bandit's Sunny Highboot",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 274072,"Azure Extravaganza Rocketstaff",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 274073,"Lively Extravaganza Rocketstaff",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 274074,"Suntouched Extravaganza Rocketstaff",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
@@ -99412,6 +99479,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 274434,"Righteous Lawbringer's Knife",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274435,"Duskwatch Outlaw's Knife",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274436,"Bloodwatch Outlaw's Knife",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+274450,"Alliance Tabard of Participation",4,-3,0,3,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1321907123,1427461461
+274451,"Horde Tabard of Participation",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,1309324210,-1440044374
 274542,"Bloodwatch Outlaw's Hand Cannon",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274619,"Gunslinger's Midnight Lid",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274621,"Gunslinger's Azure Lid",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -99484,7 +99553,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 274854,"Shadowguard Plate Gauntlets",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274855,"Portal-Keeper's Helm",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274856,"Felguard's Frozen Greaves",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
-274857,"Chitonous Broodmother's Spaulders",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
+274857,"Chitinous Broodmother's Spaulders",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274858,"Domanaar Battle Belt",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274859,"Klaxid Plate Vambraces",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274860,"Ancient Spore-Coated Axe",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
@@ -99518,10 +99587,10 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 274888,"Hal'hadar Legion Glaives",3,11,0,0,-1,1,0,0,0,1,32768,8192,0,65536,0,-1,-1
 274889,"Hal'hadar Darkblade's Edge",3,11,0,0,-1,1,0,0,0,1,32768,24576,0,65536,0,-1,-1
 275030,"Slugg's Favorite Fishing Rod",1,11,0,0,-1,1,356,1,0,1,0,8192,0,16777216,8,-1,-1
-275063,"[PH] Taretha Axe - Black",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-275064,"[PH] Taretha Axe - Blue",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-275065,"[PH] Taretha Axe - Purple",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-275066,"[PH] Taretha Axe - White",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+275063,"Foxton's Song of Warmth",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+275064,"Foxton's Song of Mercy",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+275065,"Foxton's Song of Binding",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+275066,"Foxton's Song of Strength",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
 275068,"Venomous Legend's Pennant",4,11,0,0,-1,90,0,0,0,1,32768,24576,8388608,65536,0,-1,-1
 275070,"Sharpened Lightwood Slasher",3,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
 275136,"Leaf-Woven Blouse",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
@@ -99615,14 +99684,14 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 275225,"Toxic Voidscythe Spaulders",4,11,0,0,-1,90,0,0,0,197,134217728,139264,0,0,0,-1,-1
 275226,"Shredclaw Handler's Grips",4,11,0,0,-1,90,0,0,0,197,134217728,139264,0,0,0,-1,-1
 275227,"Leth'ir's Dress Sabatons",4,11,0,0,-1,90,0,0,0,197,134217728,139264,0,0,0,-1,-1
-275230,"Azure Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-275231,"Obsidian Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-275232,"Leafy Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+275230,"Moonstone Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+275231,"Souldarite Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+275232,"Moss Agate Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 275233,"Rosy Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 275234,"Violet Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-275235,"Ruby Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+275235,"Star Ruby Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 275236,"Silver Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-275237,"Crystal Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+275237,"Dragon's Eye Diamond Bracelet of Friendship",1,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 275457,"Sun Festival's Totemic Edge",4,-3,0,0,-1,1,0,0,0,1,134254592,159744,8388608,65536,0,-1,-1
 275458,"Sun Festival's Totemic Greataxe",4,-3,0,0,-1,1,0,0,0,1,134254592,159744,8388608,65536,0,-1,-1
 275459,"Sun Festival's Torchblade",4,-3,0,0,-1,1,0,0,0,1,134254592,159744,8388608,65536,0,-1,-1
@@ -99681,6 +99750,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 275533,"Preyhunter's Kukri",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 275534,"Preyhunter's Shiv",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 275535,"Preyhunter's Cudgel",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
+275536,"Preyhunter's Scepter",2,11,0,0,-1,80,0,0,0,100,0,8704,0,0,0,-1,-1
 275537,"Preyhunter's Hammer",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 275538,"Preyhunter's Scimitar",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 275539,"Preyhunter's Ritual Blade",2,11,0,0,-1,80,0,0,0,100,0,8704,0,0,0,-1,-1
@@ -99784,22 +99854,22 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 276304,"Blessed Argunite Warblade",3,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 276330,"Taken Riftwalker's Starbarb",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 276331,"Light Vanguard's Gleamspear",3,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
-276405,"[PH] Rainbow Axe - 1h - Blue",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-276406,"[PH] Rainbow Axe - 1h - Green",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+276405,"Elegant Draenite Chopper",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+276406,"Elegant Talasite Chopper",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
 276407,"[PH] Rainbow Axe - 1h - Purple",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-276408,"[PH] Rainbow Axe - 1h - Red",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-276409,"[PH] Rainbow Axe - 2h - Blue",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-276410,"[PH] Rainbow Axe - 2h - Green",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+276408,"Elegant Pyrestone Chopper",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+276409,"Grand Draenite War Axe",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+276410,"Grand Talasite War Axe",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
 276411,"[PH] Rainbow Axe - 2h - Purple",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-276412,"[PH] Rainbow Axe - 2h - Red",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
-276413,"[PH] Rainbow Mace- 1h - Blue",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-276414,"[PH] Rainbow Mace- 1h - Green",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+276412,"Grand Pyrestone War Axe",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
+276413,"Ceremonial Draenite War Maul",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+276414,"Ceremonial Talasite War Maul",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 276415,"[PH] Rainbow Mace- 1h - Purple",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-276416,"[PH] Rainbow Mace- 1h - Red",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-276417,"[PH] Rainbow Mace- 2h - Blue",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-276418,"[PH] Rainbow Mace- 2h - Green",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+276416,"Ceremonial Pyrestone War Maul",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+276417,"Battle-Hardened Draenite War Maul",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+276418,"Battle-Hardened Talasite War Maul",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 276420,"[PH] Rainbow Mace- 2h - Purple",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-276421,"[PH] Rainbow Mace- 2h - Red",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+276421,"Battle-Hardened Pyrestone War Maul",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 276531,"Cursebreaker's Vambraces",4,11,0,0,-1,90,0,0,0,285,32768,8192,0,0,0,-1,-1
 276532,"Cursebreaker's Bracers",4,11,0,0,-1,90,0,0,0,285,32768,8192,0,0,0,-1,-1
 276533,"Cursebreaker's Wristwraps",4,11,0,0,-1,90,0,0,0,285,32768,8192,0,0,0,-1,-1
@@ -99884,7 +99954,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 277307,"Venomous Gladiator's Basher",4,11,0,0,-1,90,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 277308,"Venomous Gladiator's Greataxe",4,11,0,0,-1,90,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 277312,"Venomous Gladiator's Axe",4,11,0,0,-1,90,0,0,0,1,134254592,139264,0,65536,0,-1,-1
-277326,"Axe of Akil'zon",3,11,0,0,-1,1,0,0,0,1,36864,8192,0,65536,0,-1,-1
+277326,"Axe of the Amani",3,11,0,0,-1,1,0,0,0,1,36864,8192,0,65536,0,-1,-1
 277327,"Mantle of Nalorakk",3,11,0,0,-1,1,0,0,0,1,36864,8192,0,65536,0,-1,-1
 277764,"Venom-Cursed Bear's Battle Bands",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
 277765,"Venom-Cursed Bear's Warbelt",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
@@ -99932,7 +100002,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 277809,"Venom-Cursed Claymore",2,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 277810,"Venom-Cursed Aegis",2,11,0,0,-1,80,0,0,0,400,0,8192,0,0,0,-1,-1
 277951,"Venomous Aspirant's Slicer",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-277970,"Venomous Warmonger's Warblade",4,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+277970,"Venomous Warmonger's Warblade",4,11,0,0,4,90,0,0,0,259,0,8192,0,0,0,-1,-1
 278110,"DNT Ula'tek Pole Dummy A",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 278111,"DNT Ula'tek Pole Dummy B",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 278112,"DNT Ula'tek Pole Dummy C",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
@@ -99940,13 +100010,13 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 278114,"DNT Ula'tek Pole Dummy E",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 278115,"DNT Ula'tek Pole Dummy F",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 278245,"Royal Attendant's Coffin",2,-3,0,0,-1,1,0,0,0,1,134287424,139264,0,0,0,-1,-1
-278577,"Nightfall Assassin's Tunic",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-278578,"Nightfall Assassin's Mask",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-278579,"Nightfall Assassin's Spaulder",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-278580,"Nightfall Assassin's Gloves",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-278581,"Nightfall Assassin's Belt",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-278582,"Nightfall Assassin's Leggings",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-278583,"Nightfall Assassin's Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278577,"Ravenholdt Assassin's Tunic",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278578,"Ravenholdt Assassin's Mask",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278579,"Ravenholdt Assassin's Spaulder",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278580,"Ravenholdt Assassin's Gloves",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278581,"Ravenholdt Assassin's Belt",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278582,"Ravenholdt Assassin's Leggings",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278583,"Ravenholdt Assassin's Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278584,"Thornshadow Assassin's Tunic",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278585,"Thornshadow Assassin's Mask",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278586,"Thornshadow Assassin's Spaulder",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -99995,8 +100065,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 278869,"Lil' Blue Perdition",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278870,"Lil' Green Perdition",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278871,"Lil' Purple Perdition",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-278872,"Lil' Red Perdition",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-278873,"Lil' Blue Armageddon",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278872,"Lil' Perdition's Play-Blade",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278873,"Lil' Armegeddon's Play-Blade",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278874,"Lil' Dark Armageddon",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278875,"Lil' Green Armageddon",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278876,"Lil' Red Armageddon",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -100037,57 +100107,57 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 278911,"Shipwrecked Shroud",2,11,0,0,-1,90,0,0,0,250,0,8192,0,0,0,-1,-1
 278912,"Gral-Blessed Greatcloak",2,11,0,0,-1,90,0,0,0,250,0,8192,0,0,0,-1,-1
 278982,"Hatchery of Hissing Eggs",2,-3,0,0,-1,1,0,0,0,1,134287424,139264,0,0,0,-1,-1
-278993,"Big Blue Armageddon",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+278993,"Lil' Armegeddon's Play-More",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 278994,"Big Green Armageddon",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 279001,"Big Dark Armageddon",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 279002,"Big Red Armageddon",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-279013,"[ph] SpiceWitch Chest - Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279014,"[ph] SpiceWitch Feet - Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279015,"[ph] SpiceWitch Waist - Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279016,"[ph] SpiceWitch Gloves- Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279017,"[ph] SpiceWitch Legs - Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279018,"[ph] SpiceWitch Head - Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279019,"[ph] SpiceWitch Shoulders - Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279056,"[ph] SpiceWitch Chest - Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279057,"[ph] SpiceWitch Feet - Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279058,"[ph] SpiceWitch Waist - Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279059,"[ph] SpiceWitch Gloves- Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279061,"[ph] SpiceWitch Legs - Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279062,"[ph] SpiceWitch Head - Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279063,"[ph] SpiceWitch Shoulders - Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279066,"[ph] SpiceWitch Chest - Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279070,"[ph] SpiceWitch Head - Blue (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279071,"[ph] SpiceWitch Head - Green (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279072,"[ph] SpiceWitch Feet - Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279074,"[ph] SpiceWitch Waist - Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279075,"[ph] SpiceWitch Gloves- Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279076,"[ph] SpiceWitch Legs - Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279077,"[ph] SpiceWitch Head - Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279078,"[ph] SpiceWitch Head - Grey(Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279079,"[ph] SpiceWitch Shoulders - Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279081,"[ph] SpiceWitch Chest - Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279083,"[ph] SpiceWitch Feet - Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279084,"[ph] SpiceWitch Waist - Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279085,"[ph] SpiceWitch Gloves- Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279086,"[ph] SpiceWitch Legs - Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279087,"[ph] SpiceWitch Head - Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279088,"[ph] SpiceWitch Head - Hallow (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279089,"[ph] SpiceWitch Shoulders - Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279095,"[ph] SpiceWitch Chest - Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279096,"[ph] SpiceWitch Feet - Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279097,"[ph] SpiceWitch Waist - Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279098,"[ph] SpiceWitch Gloves- Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279099,"[ph] SpiceWitch Legs - Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279101,"[ph] SpiceWitch Head - Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279102,"[ph] SpiceWitch Head - Orange (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279103,"[ph] SpiceWitch Shoulders - Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279107,"[ph] SpiceWitch Chest - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279108,"[ph] SpiceWitch Feet - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279109,"[ph] SpiceWitch Waist - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279110,"[ph] SpiceWitch Gloves- Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279111,"[ph] SpiceWitch Legs - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279013,"Wintry Witchwick Chestpiece",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279014,"Wintry Witchwick Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279015,"Wintry Witchwick Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279016,"Wintry Witchwick Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279017,"Wintry Witchwick Skirt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279018,"Wintry Witchwick Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279019,"Wintry Witchwick Shoulderpads",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279056,"Mossy Witchwick Chestpiece",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279057,"Mossy Witchwick Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279058,"Mossy Witchwick Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279059,"Mossy Witchwick Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279061,"Mossy Witchwick Skirt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279062,"Mossy Witchwick Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279063,"Mossy Witchwick Shoulderpads",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279066,"Moonlit Witchwick Chestpiece",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279070,"Wintry Witchwick Flowing Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279071,"Mossy Witchwick Flowing Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279072,"Moonlit Witchwick Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279074,"Moonlit Witchwick Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279075,"Moonlit Witchwick Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279076,"Moonlit Witchwick Skirt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279077,"Moonlit Witchwick Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279078,"Moonlit Witchwick Flowing Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279079,"Moonlit Witchwick Shoulderpads",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279081,"Scarlet Witchwick Chestpiece",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279083,"Scarlet Witchwick Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279084,"Scarlet Witchwick Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279085,"Scarlet Witchwick Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279086,"Scarlet Witchwick Skirt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279087,"Scarlet Witchwick Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279088,"Scarlet Witchwick Flowing Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279089,"Scarlet Witchwick Shoulderpads",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279095,"Autumnal Witchwick Chestpiece",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279096,"Autumnal Witchwick Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279097,"Autumnal Witchwick Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279098,"Autumnal Witchwick Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279099,"Autumnal Witchwick Skirt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279101,"Autumnal Witchwick Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279102,"Autumnal Witchwick Flowing Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279103,"Autumnal Witchwick Shoulderpads",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279107,"Blushing Witchwick Chestpiece",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279108,"Blushing Witchwick Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279109,"Blushing Witchwick Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279110,"Blushing Witchwick Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279111,"Blushing Witchwick Skirt",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279112,"Clumped Asteroidea",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
-279114,"[ph] SpiceWitch Head - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279114,"Blushing Witchwick Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279115,"Soulcoiler's Ritual Candle",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279118,"Lost Explorers' Mailbox",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279122,"Venom-Fanged Font",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
@@ -100095,26 +100165,26 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279127,"The Venomous Abyss Argent Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279129,"The Venomous Abyss Gleaming Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279131,"Pillar of the Coiled Isle",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
-279133,"[ph] SpiceWitch Head - Pink (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279134,"[ph] SpiceWitch Shoulders - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279136,"[ph] SpiceWitch Shoulders 02 - Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279137,"[ph] SpiceWitch Shoulders 02 - Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279138,"[ph] SpiceWitch Shoulders 02 - Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279139,"[ph] SpiceWitch Shoulders 02 - Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279140,"[ph] SpiceWitch Shoulders 02 - Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279141,"[ph] SpiceWitch Shoulders 02 - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279149,"[ph] SpiceWitch Head 02 - Blue",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279150,"[ph] SpiceWitch Head 02 - Blue (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279151,"[ph] SpiceWitch Head 02 - Green",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279155,"[ph] SpiceWitch Head 02 - Green (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279156,"[ph] SpiceWitch Head 02 - Grey",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279158,"[ph] SpiceWitch Head 02 - Grey (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279159,"[ph] SpiceWitch Head 02 - Hallow",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279161,"[ph] SpiceWitch Head 02 - Hallow (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279162,"[ph] SpiceWitch Head 02 - Orange",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279163,"[ph] SpiceWitch Head 02 - Orange (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279164,"[ph] SpiceWitch Head 02 - Pink",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279165,"[ph] SpiceWitch Head 02 - Pink (Hair Vis)",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279133,"Blushing Witchwick Flowing Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279134,"Blushing Witchwick Shoulderpads",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279136,"Wintry Witchwick Shouldergourds",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279137,"Mossy Witchwick Shouldergourds",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279138,"Moonlit Witchwick Shouldergourds",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279139,"Scarlet Witchwick Shouldergourds",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279140,"Autumnal Witchwick Shouldergourds",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279141,"Blushing Witchwick Shouldergourds",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279149,"Wintry Witchwick Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279150,"Wintry Witchwick Flowing Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279151,"Mossy Witchwick Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279155,"Mossy Witchwick Flowing Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279156,"Moonlit Witchwick Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279158,"Moonlit Witchwick Flowing Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279159,"Scarlet Witchwick Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279161,"Scarlet Witchwick Flowing Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279162,"Autumnal Witchwick Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279163,"Autumnal Witchwick Flowing Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279164,"Blushiing Witchwick Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279165,"Blushiing Witchwick Flowing Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279209,"Plainsrunner's Sun Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
 279211,"Pillar of the Fanged Altar",2,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279217,"Venom-Cursed Eagle's Shroud",2,11,0,0,-1,90,0,0,0,253,0,8192,0,0,0,-1,-1
@@ -100157,13 +100227,13 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279500,"""Rage of the Shackled"" Mural",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279524,"Brewer's Purple Kilt",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 279528,"Mag'har Laborer's Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279529,"Brewer's Purple Shoulder Cape",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-279530,"Brewer's Purple Belt",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-279531,"Brewer's Purple Beret",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-279532,"Brewer's Red Beret",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-279533,"Brewer's Red Shoulder Cape",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279529,"Brewer's Purple Shoulder Cape",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+279530,"Brewer's Purple Belt",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+279531,"Brewer's Purple Beret",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+279532,"Brewer's Red Beret",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+279533,"Brewer's Red Shoulder Cape",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 279534,"Brewer's Red Kilt",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-279535,"Brewer's Red Belt",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279535,"Brewer's Red Belt",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 279536,"Painted Raptor-Tooth Shirt",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
 279538,"Spore-Pocked Lab Coat",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
 279539,"Junior Artificer's Work Vest",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
@@ -100178,10 +100248,32 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279548,"Villager's Labor Vest",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
 279549,"Witch-Hunter's Undercoat",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
 279551,"Radical's Gilded Vestment",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
-279579,"Cruel Warrior's Blade",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279818,"Basic Iron Sabatons",1,-3,0,0,-1,1,0,0,0,1,134217728,159744,8388608,65536,0,-1,-1
-279819,"Basic Steel Sabatons",1,-3,0,0,-1,1,0,0,0,1,134217728,159744,8388608,65536,0,-1,-1
+279579,"Crusader's Zweihander",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+279818,"Basic Steel Sabatons",1,-3,0,0,-1,1,0,0,0,1,134217728,159744,8388608,65536,0,-1,-1
+279819,"Basic Dark Iron Sabatons",1,-3,0,0,-1,1,0,0,0,1,134217728,159744,8388608,65536,0,-1,-1
 280333,"Pirate's Eyepatch",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+280689,"Big Mon's Big Spear",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280690,"Bow of the Snapper",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280691,"Dagger of the Slithering Ritual",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280692,"Plunderer's Pummeler",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280693,"Staff of All-Knowing",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
+280694,"Blade of the Forgotten",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280695,"Skully's Skullcleaver",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280698,"Szarith's Underbelly Slicer",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
+280700,"Armbands of the Rotten Claw",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280701,"Waistwrap of the Fanged",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280702,"Mantle of the Riser",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280704,"Siltmouth's Venom Waders",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280706,"Sss'alik's Rotting Claws",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280708,"Venom-Shelled Sash",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280709,"Triple Threat Pauldrons",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280710,"Garsecg's Barnacled Girdle",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280711,"Pitted Specter Shackles",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280712,"Bracers of the Sleeping Hydra",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280713,"Big Mon's Buckle",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280714,"Hull Render Hauberk",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280718,"Unflappable Flapping Cape",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280842,"Shadowhunters' Hexblade",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 270212,"Sire's Ornate Collar",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 270213,"Sire's Ornate Treads",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 270215,"Sire's Ornate Vestments",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
@@ -100191,7 +100283,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 270219,"Sire's Ornate Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 270220,"Sire's Ornate Bracers",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 270221,"Sire's Ornate Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
-264241,"Crimson Bow Tie",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 269786,"Azshara's Darkscale Helm",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 269787,"Azshara's Darkscale Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 269788,"Azshara's Darkscale Epaulets",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
@@ -100203,50 +100294,17 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 269794,"Azshara's Darkscale Breeches",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 269795,"Azshara's Darkscale Leggings",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 269796,"Azshara's Darkscale Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
-269798,"Azshara's Deepscale Helm",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269799,"Azshara's Deepscale Cloak",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269800,"Azshara's Deepscale Epaulets",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269801,"Azshara's Deepscale Vest",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269802,"Azshara's Deepscale Breastplate",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269803,"Azshara's Deepscale Talons",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269804,"Azshara's Deepscale Gloves",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269805,"Azshara's Deepscale Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269806,"Azshara's Deepscale Breeches",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269807,"Azshara's Deepscale Leggings",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-269808,"Azshara's Deepscale Boots",4,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,65536,0,-1,-1
-262398,"Pink Candlelight Kobold Pullover",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262399,"Pink Candlelight Kobold Slippers",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262400,"Pink Candlelight Kobold Mittens",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262401,"Pink Candlelight Kobold Sweatpants",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262402,"Pink Candlelight Kobold Hood",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262403,"Pink Candlelight Kobold Backpack",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262404,"Pink Candlelight Kobold Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262406,"Blue Candlelight Kobold Pullover",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262407,"Blue Candlelight Kobold Slippers",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262408,"Blue Candlelight Kobold Mittens",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262409,"Blue Candlelight Kobold Sweatpants",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262410,"Blue Candlelight Kobold Hood",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262411,"Blue Candlelight Kobold Backpack",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262412,"Blue Candlelight Kobold Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262415,"Brown Candlelight Kobold Pullover",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262416,"Brown Candlelight Kobold Slippers",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262417,"Brown Candlelight Kobold Mittens",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262418,"Brown Candlelight Kobold Sweatpants",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262419,"Brown Candlelight Kobold Hood",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262420,"Brown Candlelight Kobold Backpack",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262421,"Brown Candlelight Kobold Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262423,"Tan Candlelight Kobold Pullover",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262424,"Tan Candlelight Kobold Slippers",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262425,"Tan Candlelight Kobold Mittens",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262426,"Tan Candlelight Kobold Sweatpants",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262427,"Tan Candlelight Kobold Hood",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262428,"Tan Candlelight Kobold Backpack",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-262429,"Tan Candlelight Kobold Belt",4,-3,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
-267466,"Silversun Compact Cape",3,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
-267467,"Silversun Compact Tabard",3,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
-267468,"Silversun Compact Shoulderpads",3,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
-274450,"Alliance Tabard of Participation",4,-3,0,3,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1321907123,1427461461
-274451,"Horde Tabard of Participation",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,1309324210,-1440044374
+269798,"Azshara's Deepscale Helm",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269799,"Azshara's Deepscale Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269800,"Azshara's Deepscale Epaulets",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269801,"Azshara's Deepscale Vest",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269802,"Azshara's Deepscale Breastplate",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269803,"Azshara's Deepscale Talons",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269804,"Azshara's Deepscale Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269805,"Azshara's Deepscale Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269806,"Azshara's Deepscale Breeches",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269807,"Azshara's Deepscale Leggings",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+269808,"Azshara's Deepscale Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 6121,"Recruit's Pants",1,0,0,0,-1,1,0,0,0,1,0,8192,0,0,0,-1,-1
 20902,"Recruit's Pants",1,0,0,0,-1,1,0,0,0,1,0,8192,0,0,0,-1,-1
 23474,"Recruit's Pants",1,0,0,0,-1,1,0,0,0,1,0,8192,0,0,0,-1,-1
@@ -100437,14 +100495,14 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 188314,"Mantle of Shadowy Embrace",4,1,0,0,-1,27,0,0,0,32,0,8192,0,0,0,-1,-1
 188365,"Eye of the Stalker",4,1,0,0,-1,27,0,0,0,32,524288,8192,0,0,0,-1,-1
 32838,"Warglaive of Azzinoth",5,1,0,0,2601,27,0,0,0,33,4096,6299648,0,0,0,-1,-1
-32917,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-32918,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-32919,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-32920,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-33018,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-33019,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-33020,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-33021,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
+32917,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+32918,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+32919,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+32920,"Filled Yellow Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+33018,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+33019,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+33020,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+33021,"Filled Blue Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
 79784,"Diving Helm",1,0,0,0,-1,0,0,0,0,1,64,24576,0,0,0,-1,-1
 188429,"Keleseth's Blade of Evocation",3,2,0,0,-1,27,0,0,0,33,0,8704,0,0,0,-1,-1
 188430,"Dragon Stabler's Gauntlets",3,2,0,0,-1,27,0,0,0,33,0,8192,0,0,0,-1,-1
@@ -100498,10 +100556,10 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 188426,"Sash of the Servant",4,2,0,0,-1,30,0,0,0,35,0,8192,0,0,0,-1,-1
 238993,"Cracked Epoch Grasps",3,2,0,0,-1,30,0,0,0,35,0,8192,0,0,0,-1,-1
 238991,"Gloves of Distorted Time",3,2,0,0,-1,30,0,0,0,35,0,8192,0,0,0,-1,-1
-37894,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-37895,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-37896,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
-37897,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2105344,8388608,0,0,-1,-1
+37894,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+37895,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+37896,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
+37897,"Filled Green Brewfest Stein",3,-3,0,0,-1,1,0,0,0,2,164032,2121728,8388608,0,0,-1,-1
 142274,"Keleseth's Persuader",1,2,0,0,32,0,0,0,0,29,0,24576,0,0,0,-1,-1
 44740,"Mechanized Snow Goggles",3,2,0,0,-1,24,2504,1,0,35,0,24576,0,0,0,-1,-1
 44741,"Mechanized Snow Goggles",3,2,0,0,-1,24,2504,1,0,35,0,24576,0,0,0,-1,-1
@@ -101014,6 +101072,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 70528,"Vicious Gladiator's Boots of Cruelty",4,3,0,0,1544,32,0,0,0,37,4096,8192,8388608,0,0,-1,-1
 70527,"Vicious Gladiator's Boots of Alacrity",4,3,0,0,1544,32,0,0,0,37,4096,8192,8388608,0,0,-1,-1
 70640,"Vicious Gladiator's Sabatons of Alacrity",4,3,0,0,64,32,0,0,0,37,4096,8192,8388608,0,0,-1,-1
+69878,"Permafrost Cape",4,3,0,0,-1,32,0,0,0,37,0,8192,65536,0,0,-1,-1
 70642,"Vicious Gladiator's Sabatons of Meditation",4,3,0,0,64,32,0,0,0,37,4096,8192,8388608,0,0,-1,-1
 141979,"Crown of the Hallowed",3,0,0,0,-1,0,0,0,0,26,65536,8194,0,0,0,-1,-1
 141980,"Crown of the Hallowed",3,0,0,0,-1,0,0,0,0,26,65536,8194,0,0,0,-1,-1
@@ -101056,7 +101115,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 69885,"Cloudburst Necklace",4,3,0,0,-1,32,0,0,0,37,0,24576,65536,0,0,-1,-1
 69882,"Planetary Amulet",4,3,0,0,-1,32,0,0,0,37,0,24576,65536,0,0,-1,-1
 69884,"Mistral Drape",4,3,0,0,-1,32,0,0,0,37,0,8192,65536,0,0,-1,-1
-69878,"Permafrost Cape",4,3,0,0,-1,32,0,0,0,37,0,8192,65536,0,0,-1,-1
 69879,"Cloudburst Cloak",4,3,0,0,-1,32,0,0,0,37,0,8192,65536,0,0,-1,-1
 69881,"Planetary Drape",4,3,0,0,-1,32,0,0,0,37,0,8192,65536,0,0,-1,-1
 122387,"Burnished Breastplate of Might",7,0,0,0,-1,1,0,0,0,1,134217728,155648,0,0,0,-1,-1
@@ -101429,7 +101487,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 91618,"Malevolent Gladiator's Copperskin Tunic",4,4,0,0,512,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91591,"Malevolent Gladiator's Silk Robe",4,4,0,0,128,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91779,"Malevolent Gladiator's Felweave Raiment",4,4,0,0,256,35,0,0,0,39,4096,8192,0,0,0,-1,-1
-87022,"Tomb Raider's Girdle",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 91548,"Malevolent Gladiator's Wyrmhide Robes",4,4,0,0,1024,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91531,"Malevolent Gladiator's Kodohide Robes",4,4,0,0,1024,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91668,"Malevolent Gladiator's Mooncloth Robe",4,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
@@ -101452,6 +101509,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 91550,"Malevolent Gladiator's Wyrmhide Spaulders",4,4,0,0,1024,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91729,"Malevolent Gladiator's Linked Spaulders",4,4,0,0,64,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91533,"Malevolent Gladiator's Kodohide Spaulders",4,4,0,0,1024,35,0,0,0,39,4096,8192,0,0,0,-1,-1
+90529,"Lightning Prisoner's Boots",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 91670,"Malevolent Gladiator's Mooncloth Mantle",4,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91680,"Malevolent Gladiator's Satin Mantle",4,4,0,0,16,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91719,"Malevolent Gladiator's Ringmail Spaulders",4,4,0,0,64,35,0,0,0,39,4096,8192,0,0,0,-1,-1
@@ -101507,6 +101565,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 87017,"Jade Dust Leggings",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87018,"Cape of Three Lanterns",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
 87023,"Wildfire Worldwalkers",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
+87022,"Tomb Raider's Girdle",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87025,"Bracers of Six Oxen",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87024,"Nullification Greathelm",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87026,"Cloak of Peacock Feathers",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
@@ -101571,7 +101630,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 90526,"Cloak of Overwhelming Corruption",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
 90524,"Cuffs of the Corrupted Waters",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 90530,"Casque of Expelled Corruption",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
-90529,"Lightning Prisoner's Boots",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 90528,"Asani's Uncleansed Sandals",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 90527,"Regail's Crackling Dagger",4,4,0,0,-1,35,0,0,0,39,0,1073750528,0,0,0,-1,-1
 90503,"Regail's Band of the Endless",4,4,0,0,-1,35,0,0,0,40,4096,1073766400,0,0,0,-1,-1
@@ -102214,7 +102272,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 103238,"Grievous Gladiator's Copperskin Helm",4,4,0,0,512,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
 103239,"Grievous Gladiator's Copperskin Legguards",4,4,0,6,512,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
 103240,"Grievous Gladiator's Copperskin Spaulders",4,4,0,0,512,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
-105164,"Corruption-Rotted Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 103241,"Grievous Gladiator's Copperskin Tunic",4,4,0,0,512,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
 103242,"Grievous Gladiator's Scaled Chestpiece",4,4,0,0,2,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
 103243,"Grievous Gladiator's Scaled Gauntlets",4,4,0,0,2,35,0,0,0,40,4096,8194,0,0,0,-1321907123,1427461461
@@ -102316,6 +102373,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 102847,"Grievous Gladiator's Dreadplate Gauntlets",4,4,0,0,32,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 102848,"Grievous Gladiator's Dreadplate Legguards",4,4,0,0,32,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 102849,"Grievous Gladiator's Dreadplate Shoulders",4,4,0,0,32,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
+105160,"Hood of Blackened Tears",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
 102850,"Grievous Gladiator's Dragonhide Helm",4,4,0,0,1024,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 102851,"Grievous Gladiator's Dragonhide Legguards",4,4,0,0,1024,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
 102852,"Grievous Gladiator's Ringmail Spaulders",4,4,0,0,64,35,0,0,0,40,4096,8193,0,0,0,1309324210,-1440044374
@@ -102432,7 +102490,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 105168,"Encapsulated Essence of Immerseus",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 105417,"Encapsulated Essence of Immerseus",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 104413,"Hood of Blackened Tears",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
-105160,"Hood of Blackened Tears",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
 105409,"Hood of Blackened Tears",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
 104640,"Kor'kron Elite Skullmask",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
 105387,"Kor'kron Elite Skullmask",4,4,0,0,-1,35,0,0,0,42,4096,1073750016,8388608,0,0,-1,-1
@@ -102447,6 +102504,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 105304,"Ravager's Pathwalkers",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 105553,"Ravager's Pathwalkers",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 104417,"Corruption-Rotted Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
+105164,"Corruption-Rotted Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 105413,"Corruption-Rotted Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 104515,"Tar-Coated Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
 105262,"Tar-Coated Gauntlets",4,4,0,0,-1,35,0,0,0,42,0,1073750016,8388608,0,0,-1,-1
@@ -103128,6 +103186,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 115792,"Primal Gladiator's Pauldrons",4,5,0,6,-1,40,0,0,0,44,4096,8194,0,0,0,-1321907123,1427461461
 117760,"Tournament Gladiator's Helm",4,5,0,0,-1,40,0,0,0,5,4231168,4218881,8396800,0,0,1309324210,-1440044374
 117762,"Tournament Gladiator's Spaulders",4,5,0,0,-1,40,0,0,0,5,4231168,4218881,8396800,0,0,1309324210,-1440044374
+123255,"Warscout Tunic",2,6,0,0,4,40,0,0,0,44,0,8192,8388608,0,0,-1,-1
 117768,"Tournament Gladiator's Chestguard",4,5,0,6,-1,40,0,0,0,5,4231168,4218881,8396800,0,0,1309324210,-1440044374
 117771,"Tournament Gladiator's Leggings",4,5,0,6,-1,40,0,0,0,5,4231168,4218881,8396800,0,0,1309324210,-1440044374
 117772,"Tournament Gladiator's Pauldrons",4,5,0,6,-1,40,0,0,0,5,4231168,4218881,8396800,0,0,1309324210,-1440044374
@@ -103170,7 +103229,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 123245,"Nurturer Cord",2,6,0,0,1024,40,0,0,0,44,0,8192,8388608,0,0,-1,-1
 123238,"Nurturer Cuffs",2,6,0,0,1024,40,0,0,0,44,0,8192,8388608,0,0,-1,-1
 123246,"Nurturer Cuffs",2,6,0,0,1024,40,0,0,0,44,0,8192,8388608,0,0,-1,-1
-123255,"Warscout Tunic",2,6,0,0,4,40,0,0,0,44,0,8192,8388608,0,0,-1,-1
 123256,"Warscout Greaves",2,6,0,0,4,40,0,0,0,44,0,8192,8388608,0,0,-1,-1
 123257,"Warscout Gauntlets",2,6,0,0,4,40,0,0,0,44,0,8192,8388608,0,0,-1,-1
 123258,"Warscout Helm",2,6,0,0,4,40,0,0,0,44,0,8192,8388608,0,0,-1,-1
@@ -103933,7 +103991,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 253553,"Bloodculling Bone Scythe",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 253555,"Plagueculling Bone Scythe",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 257179,"Voidbreaker's Mantle",2,11,0,0,-1,90,0,0,0,90,0,8192,0,0,0,-1,-1
-275536,"Preyseeker's Scepter",2,11,0,0,-1,80,0,0,0,100,0,8704,0,0,0,-1,-1
 260873,"Cowl of Infinite Gravity",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 262721,"Lost Plunder Key",3,9,0,0,-1,1,0,0,0,1,134250496,139264,1024,65536,0,-1,-1
 262722,"Lost Plunder Key",3,9,0,0,-1,1,0,0,0,1,134250496,139264,1024,65536,0,-1,-1
@@ -103942,42 +103999,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 262727,"Found Plunder Key",3,9,0,0,-1,1,0,0,0,1,134250496,139264,1024,65536,0,-1,-1
 262728,"Found Plunder Key",3,9,0,0,-1,1,0,0,0,1,134250496,139264,1024,65536,0,-1,-1
 271814,"Spring Dagger-Tined Rake",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-270566,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270569,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270572,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270578,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270581,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270584,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270590,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270593,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270596,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270599,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270607,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270610,"Venomous Gladiator's Cloak",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270567,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270570,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270573,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270579,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270582,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270585,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270591,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270594,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270597,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270600,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270608,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270611,"Venomous Gladiator's Drape",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270568,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270571,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270574,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270580,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270583,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270586,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270592,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270595,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270598,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270601,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270609,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270612,"Venomous Gladiator's Shawl",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270629,"Venomous Gladiator's Silk Robe",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270631,"Venomous Gladiator's Silk Slippers",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
 270647,"Venomous Gladiator's Silk Slippers",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1

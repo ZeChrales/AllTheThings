@@ -1,6 +1,7 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+
 root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 	m(MAP.MIDNIGHT.THE_COILED_ISLE, {
 		n(ZONE_REWARDS, {
@@ -72,6 +73,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			}),
 			n(WEAPONS, {
 				i(276059),	-- Headhunter's Hacker
+				i(276048),	-- Vipersbane Dagger
 			}),
 		}),
 	}),

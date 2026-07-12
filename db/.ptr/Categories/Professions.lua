@@ -5329,6 +5329,9 @@ pn(104479,{cost={{"c",3154,1}},requireSkill=182}),
 pn(104703,{cost={{"c",3154,1}},requireSkill=182}),
 pn(104705,{cost={{"c",3154,1}},requireSkill=182})}}),
 h(-45,{requireSkill=182,sharedDescription="Requires 25 Skill.",g={
+q(93701,{coords={
+[2393]={{48.3,51.4}}},isWeekly=1,lvl=78,qgs={243355},requireSkill=182,g={
+i(263462,{b=1,requireSkill=182,spellID=1270534})}}),
 q(93700,{coords={
 [2393]={{48.3,51.4}}},isWeekly=1,lvl=78,qgs={243355},requireSkill=182,g={
 i(263462,{b=1,requireSkill=182,spellID=1270534})}}),
@@ -7336,7 +7339,7 @@ cu(2025,{requireSkill=165})}}),
 q(66385,{isWeekly=1,providers={{"i",193913}},requireSkill=165,g={
 cu(2025,{requireSkill=165})}}),
 q(70522,{coords={
-[2022]={{79.4,32.5},{80.6,33.8}}},crs={190056,195241,196420},description="Drops from any Proto Drake.\nCoordinates link to the spot(s) we found best.",isWeekly=1,providers={{"i",198975}},requireSkill=165,g={
+[2022]={{79.4,32.5},{80.6,33.8}}},crs={190056,193806,195241,196420},description="Drops from any Proto Drake.\nCoordinates link to the spot(s) we found best.",isWeekly=1,providers={{"i",198975}},requireSkill=165,g={
 cu(2025,{requireSkill=165})}}),
 q(70523,{coords={
 [2025]={{31.3,76.5},{32.4,73.5},{35.4,72.8},{36.6,72.8}}},crs={188277,191203,191317},description="Drops from any Sylvern or Vorquin.\nCoordinates link to the spot(s) we found best.",isWeekly=1,providers={{"i",198976}},requireSkill=165,g={

@@ -176,14 +176,14 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 			}),
 			n(WEAPONS, {
 				i(194318),	-- Book of Ancient Lore
-				i(198385),	-- Draconian Garden Pick
+				i(198385, {["sourceID"] = 181695 }),	-- Draconian Garden Pick
 				i(194329),	-- Elaborate Reliquary Candelabra
-				i(198386),	-- Gardener's Tilling Spork
+				i(198386, {["sourceID"] = 181696 }),	-- Gardener's Tilling Spork
 				i(194314),	-- Light of the Enlightened
 				i(194331),	-- Pristine Research Journal
 				i(194316),	-- Tome of Forgotten Legends
-				i(198342),	-- Tuskarr Expedition Pack
-				i(191647),	-- Tuskarr Fishing Pole
+				i(198342, {["sourceID"] = 181576 }),	-- Tuskarr Expedition Pack
+				i(191647, {["sourceID"] = 169691 }),	-- Tuskarr Fishing Pole
 			}),
 		})),
 
@@ -629,7 +629,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(235034),	-- Vigilante's Aquatic Mask
 				i(235023),	-- Vigilante's Cloudy Mask
 				i(235022),	-- Vigilante's Grassy Mask
-				i(235036),	-- Vigilante's Sunny Mask
 				i(234601),	-- Wings of the Icy Rose Monarch
 			}),
 			n(PVP, {
@@ -1032,7 +1031,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(250293),	-- Red Hot Portable Bakery
 				i(252751),	-- Snowy Winter Toque
 				i(251669),	-- Sturdy Wearable Pot Lid
-				i(252752),	-- Sunny Winter Toque
 				i(251985),	-- Trapper's Black Quiver
 				i(251986),	-- Trapper's Blue Quiver
 				i(251988),	-- Trapper's Dark Brown Quiver
@@ -1367,9 +1365,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(262853),	-- Snowy Dunecloth Belt
 				i(262835),	-- Snowy Dunecloth Skirt
 				i(262871),	-- Snowy Dunecloth Vest
-				i(262854),	-- Sunny Dunecloth Belt
-				i(262836),	-- Sunny Dunecloth Skirt
-				i(262872),	-- Sunny Dunecloth Vest
 				i(258031),	-- Vaunted Preyseeker's Knapsack
 				i(258029),	-- Vaunted Preyseeker's Plumed Helm
 				i(258027),	-- Vaunted Preyseeker's Shoulder-Spikes

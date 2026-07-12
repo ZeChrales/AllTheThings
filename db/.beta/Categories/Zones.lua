@@ -14390,25 +14390,25 @@ crit(23455,{achID=8348,awp=50300,id=9,pb=1,r=1})}}),
 crit(21403,{achID=6602,id=2,pb=1,r=1}),
 crit(21403,{achID=7499,id=8,pb=1}),
 crit(108090,{achID=61041,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108106,{achID=61042,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108118,{achID=61043,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108130,{achID=61044,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108142,{achID=61045,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108154,{achID=61046,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108166,{achID=61047,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108178,{achID=61048,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108190,{achID=61049,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1}),
+[10]={{58.6,53}}},id=2,pb=1}),
 crit(108202,{achID=61050,awp=120000,coords={
-[1]={{43.9,28.9}}},id=2,pb=1})}}),
+[10]={{58.6,53}}},id=2,pb=1})}}),
 q(31814,{coords={
 [10]={{58.6,53}}},crs={66136},maps={63},pb=1,qgs={66135},r=1,sourceQuests={31813},g={
 i(89125,{b=1,f=55,pb=1})}}),
@@ -33352,7 +33352,8 @@ s(196,1195,{awp=100107,coords={
 i(1399,{crs={476},f=55,rwp=40003,spellID=49512,u=2}),
 s(86,781,{awp=100107,coords={
 [37]={{23.8,91.6},{26.6,89.6},{27.6,95.4},{28,86.8}}},crs={97,478},f=23,lvl=2})})}}),
-m(94,{awp=20001,icon=236762,lore="Eversong Woods is the starter zone for the Blood Elf race. It is a golden forest with typical high elf buildings. In the center of the map is a blighted strip known as the Dead Scar, a remnant from Arthas' battle against the High Elves. Quests involve learning about the blood elves' rich history, decadent lifestyle, and their struggles to keep the Dead Scar from growing.",g={
+m(94,{awp=20001,coords={
+[23]={{53.8,8.6}}},crs={259326},icon=236762,lore="Eversong Woods is the starter zone for the Blood Elf race. It is a golden forest with typical high elf buildings. In the center of the map is a blighted strip known as the Dead Scar, a remnant from Arthas' battle against the High Elves. Quests involve learning about the blood elves' rich history, decadent lifestyle, and their struggles to keep the Dead Scar from growing.",g={
 m(467,{icon=135761,lore="Sunstrider Isle is an island located in northwestern Eversong Woods. After the Third War, no elf was alive on the isle. It was through here that the red dragon Korialstrasz flew over when Prince Kael'thas destroyed the corrupted Sunwell. By the year 25, the isle was reclaimed and thriving.",g={
 h(-45,{
 q(8336,{awp=11201,coords={
@@ -33872,7 +33873,8 @@ s(8312,21017,{description="This item seem to only drop easily for characters bel
 s(8311,21016,{description="This item seem to only drop easily for characters below level 14 within Sunstrider Isle.",f=6,maps={94,467}}),
 s(8316,21021,{description="This item seem to only drop easily for characters below level 14 within Sunstrider Isle.",f=8,maps={94,467}}),
 s(8317,21022,{description="This item seem to only drop easily for characters below level 14 within Sunstrider Isle.",f=8,maps={94,467}})})}}),
-m(95,{awp=20001,icon=236765,lore="Ghostlands is a low-level zone focusing on the alliance between the Blood Elves and Forsaken in pushing back the Scourge's presence. It is dark and shadowy with corruption throughout the land, culminating in Deathholme. It is also the site of the ancient Amani troll empire and the low-level reputation hub of Tranquillien.",maps={96},petBattleLvl=3,g={
+m(95,{awp=20001,coords={
+[23]={{53.8,8.6}}},crs={259326},icon=236765,lore="Ghostlands is a low-level zone focusing on the alliance between the Blood Elves and Forsaken in pushing back the Scourge's presence. It is dark and shadowy with corruption throughout the land, culminating in Deathholme. It is also the site of the ancient Amani troll empire and the low-level reputation hub of Tranquillien.",maps={96},petBattleLvl=3,g={
 h(-12,{
 ach(858,{
 crit(1551,{achID=42,awp=30002,id=16})}),
@@ -69352,7 +69354,7 @@ q(31255,{coords={
 [376]={{70,23.6}},
 [418]={{41.7,29.9}}},lvl=20,qgs={63778},r=1,sourceQuests={49541},g={
 i(85694)}}),
-q(38936,{description="This quest needs to be accepted from the 'Adventure Guide'.",isBreadcrumb=1,lvl=20}),
+q(38936,{awp=60200,description="This quest needs to be accepted from the 'Adventure Guide'.",isBreadcrumb=1,lvl=20}),
 q(30806,{coords={
 [379]={{60.6,21.3}}},lvl=20,qgs={60785},sourceQuests={30794},g={
 i(80907),
@@ -104573,7 +104575,7 @@ o(291265,{coords={
 o(291267,{coords={
 [942]={{57.6,50.9},{60.9,51.2}}},isDaily=1,questID=51946,type="AsSubGenericObject"}),
 o(273900,{coords={
-[895]={{83.3,74.6}}},isDaily=1,questID=48593,type="AsSubGenericObject"}),
+[895]={{76.8,75.5},{76.9,75.4},{77.1,77.3},{77.9,78.4},{78.4,76.2},{78.5,76.3},{79,79.2},{81.7,73.1},{82.1,74},{82.6,75.6},{83.3,74.7},{83.4,72},{83.5,72.1},{83.9,73.9}}},isDaily=1,questID=48593,type="AsSubGenericObject"}),
 o(273910,{coords={
 [895]={{41.9,26.5}}},isDaily=1,questID=48599,type="AsSubGenericObject"}),
 o(273956,{coords={
@@ -104581,15 +104583,17 @@ o(273956,{coords={
 o(275070,{coords={
 [895]={{56.2,18.9},{58.5,14.6}}},isDaily=1,questID=48617,type="AsSubGenericObject"}),
 o(275071,{coords={
-[895]={{88,79.6}}},isDaily=1,questID=48618,type="AsSubGenericObject"}),
+[895]={{87.3,73.8},{87.8,75.9},{88,79.6},{88.4,78.4},{88.4,78.5},{88.5,78.4},{88.5,78.5},{88.7,72.8},{88.9,79.9},{89,76.3},{89.3,71.1},{89.9,78.2},{90,75.2}}},isDaily=1,questID=48618,type="AsSubGenericObject"}),
 o(275076,{coords={
 [895]={{45.4,22.3},{47.6,20.5}}},isDaily=1,questID=48621,type="AsSubGenericObject"}),
 o(275074,{coords={
 [895]={{72.3,17}}},isDaily=1,type="AsSubGenericObject"}),
 o(273917,{coords={
-[895]={{78.1,49}}},isDaily=1,type="AsSubGenericObject"}),
+[895]={{78.1,49},{78.8,47.6},{79.2,50.4},{79.2,50.5},{79.5,45.7},{79.7,48.2},{80.2,47.2},{80.4,49.6},{80.5,49.6},{80.7,45.8},{81.3,49.4},{82.3,47.8},{82.5,47.8}}},isDaily=1,type="AsSubGenericObject"}),
 o(273919,{coords={
-[895]={{70,57.1}}},isDaily=1,type="AsSubGenericObject"})}})}),
+[895]={{70,57.1}}},isDaily=1,type="AsSubGenericObject"}),
+o(273902,{coords={
+[895]={{76.3,80.9},{76.6,81.2},{76.8,83.4},{76.8,83.5},{77,85.5},{77.4,85.3},{77.5,82.7},{77.7,85},{78,80.4},{78,80.5}}},isDaily=1,type="AsSubGenericObject"})}})}),
 h(-62,{
 ah(2163,{type="fa",g={
 i(165785,{b=1,g={
@@ -111595,7 +111599,7 @@ crit(39988,{achID=12473,id=3,r=2})}}),
 q(49720,{coords={
 [895]={{80.6,42}}},lvl=10,qgs={132720},r=2,sourceQuests={49733,51226}}),
 q(48539,{coords={
-[895]={{80.2,75.2}}},lvl=10,qgs={126158},r=2,sourceQuests={48505}}),
+[895]={{80.2,75.2}}},lvl=10,qgs={126620},r=2,sourceQuests={48505}}),
 q(52148,{coords={
 [895]={{56.4,61.6}},
 [1161]={{66.8,33.2}}},lvl=10,qgs={121239,131290},r=2,sourceQuests={49741}}),
@@ -111748,7 +111752,7 @@ i(162522)}}),
 q(48366,{coords={
 [895]={{39.5,26.6}}},lvl=10,qgs={126298},r=2,sourceQuests={48009,48356,48365}}),
 q(48773,{coords={
-[895]={{80.2,75.2}}},lvl=10,qgs={126158},r=2,sourceQuests={48539},g={
+[895]={{80.2,75.2}}},lvl=10,qgs={126620},r=2,sourceQuests={48539},g={
 i(152722,{spellID=252694}),
 i(152721)}}),
 q(48874,{coords={
@@ -111820,9 +111824,11 @@ q(49232,{coords={
 o(277427,{
 i(153349)})}}),
 q(53041,{coords={
-[895]={{75.85,49.08}}},lvl=10,qgs={121239},r=2,sourceQuests={50531},g={
-i(163032),
+[895]={{75.85,49.08}}},lvl=10,qgs={134166},r=2,sourceQuests={50531},g={
+o(294542,{coords={
+[895]={{74.8,50.1}}},g={
 i(163034)}}),
+i(163032)}}),
 q(48597,{coords={
 [895]={{55.9,17.5}}},lvl=10,qgs={126804},r=2,sourceQuests={48670}}),
 q(50026,{coords={
@@ -111861,7 +111867,7 @@ o(276838,{coords={
 i(152678)}}),
 i(152698,{b=1,f=55,lvl=45,spellID=272818})}}),
 q(47489,{coords={
-[895]={{75.8,49}}},lvl=10,qgs={121239},r=2,sourceQuests={53041},g={
+[895]={{75.8,49}}},lvl=10,qgs={134166},r=2,sourceQuests={53041},g={
 de(9055,{awp=110207,itemID=252406,spellID=1254623})}}),
 q(47486,{coords={
 [895]={{76.7,43.4}}},lvl=10,qgs={122671},r=2,sourceQuests={47485}}),
@@ -111883,7 +111889,7 @@ q(49531,{coords={
 i(155009,{spellID=257750}),
 i(158225,{b=1,f=53,spellID=268546})}}),
 q(49399,{coords={
-[895]={{77.3,83.9}}},lvl=10,qgs={126158},r=2,sourceQuests={49398,49401},g={
+[895]={{77.3,83.9}}},lvl=10,qgs={126620},r=2,sourceQuests={49398,49401},g={
 i(153680),
 i(153682),
 i(153681)}}),
@@ -111910,7 +111916,7 @@ q(51199,{coords={
 q(50544,{coords={
 [895]={{75.5,49.8}}},isBreadcrumb=1,lvl=10,nextQuests={48873,48874,48879},providers={{"o",281551}},r=2,sourceQuests={46728}}),
 q(48558,{coords={
-[895]={{80.2,75.2}}},lvl=10,qgs={126158},r=2,sourceQuests={48539},g={
+[895]={{80.2,75.2}}},lvl=10,qgs={126620},r=2,sourceQuests={48539},g={
 i(152719),
 i(152720),
 s(91976,155077,{b=1,f=25,r=2}),
@@ -113739,7 +113745,7 @@ s(94631,158669,{b=1,f=6,r=1}),
 s(94632,158670,{b=1,f=4,r=1}),
 s(94633,158671,{b=1,f=7,r=1})}}),
 q(46930,{coords={
-[1165]={{49.9,82.5}}},lvl=10,qgs={122661},r=1,sourceQuests={46957}}),
+[1165]={{49.9,82.5},{50,46.1}}},lvl=10,qgs={122661},r=1,sourceQuests={46957}}),
 q(47915,{coords={
 [1165]={{42.6,21.4}}},lvl=10,qgs={124629},r=1,sourceQuests={47509},g={
 i(156923)}}),
@@ -117335,6 +117341,7 @@ crit(42894,{achID=13144,id=624})}}),
 q(51115,{isWorldQuest=1,lvl=50,g={
 crit(42872,{achID=13144,id=602})}})}),
 h(-63,{
+i(160735,{b=1,spellID=247648}),
 i(158909,{b=1,coords={
 [864]={{48.2,39.6},{49.1,38.3}}},crs={130603},lvl=35}),
 mnt(237286,{crs={122746,122782,123773,123774,123775,123863,123864,127406,128678,128682,128749,129652,129778,134103,134427,134429,134559,134560,136191,136545},itemID=163576,lvl=10}),
@@ -117794,7 +117801,9 @@ q(51407,{coords={
 [862]={{70.6,64.9},{75.2,61.5}}},lvl=10,qgs={128925,129717},sourceQuests={49289},g={
 i(157543)}}),
 q(50268,{coords={
-[862]={{64,35.4}}},lvl=10,qgs={130905},r=1,sourceQuests={50252}}),
+[862]={{64,35.4}}},lvl=10,qgs={130905},r=1,sourceQuests={50252},g={
+i(156860),
+i(160752)}}),
 q(48400,{coords={
 [862]={{40,76.5}}},lvl=10,qgs={131580},r=1,sourceQuests={48317},g={
 s(92185,155310,{b=1,f=3,r=1}),
@@ -123175,7 +123184,7 @@ n(176066,{coords={
 [1670]={{46.6,77.2}}},sym={{"select","npcID",156822},{"isnt","repeatable"},{"pop"}}}),
 n(156690,{coords={
 [1670]={{47,23.6}}},g={
-s(112899,180136,{b=1,f=57,requireSkill=356,spellID=8083})}}),
+s(112899,180136,{b=1,f=57,requireSkill=356,spellID=310674})}}),
 n(176197,{awp=90105,coords={
 [1670]={{51,43.4}}},g={
 i(188226,{b=1}),
@@ -125756,7 +125765,7 @@ r(331007,{b=1,itemID=183097,minReputation={2407,42000},requireSkill=202,skillID=
 s(111637,178991,{b=1,f=9,minReputation={2407,42000}})}}),
 n(175574,{coords={
 [1533]={{49.6,63.2}}},g={
-s(112899,180136,{b=1,f=57,requireSkill=356,spellID=8083})}}),
+s(112899,180136,{b=1,f=57,requireSkill=356,spellID=310674})}}),
 n(171526,{coords={
 [1533]={{52.6,47.4}}},g={
 i(180788,{b=1,f=55,spellID=11009})}}),
@@ -128185,6 +128194,7 @@ n(162711,{coords={
 p(2953,{b=1,itemID=181263,npcID=172134,spellID=335969}),
 s(115597,184280,{b=1,f=4,lvl=48}),
 i(184224,{b=1}),
+i(163036,{b=2}),
 crit(48851,{achID=14308,id=17})}}),
 n(162797,{coords={
 [1536]={{46.8,45.6},{48.2,51.6},{54,45.6}}},isDaily=1,questID=58878,g={
@@ -135446,8 +135456,8 @@ s(181156,195497,{b=1,cost={{"i",213089,2}},f=28,lvl=70,u=2}),
 i(194303,{b=1,cost={{"i",213089,2}},f=53,lvl=70,spellID=377454,u=2}),
 s(181140,195481,{b=1,cost={{"i",213089,2}},f=23,lvl=70,u=2}),
 s(181172,195513,{b=1,cost={{"i",213089,2}},f=1,lvl=70,u=2}),
-i(195480,{b=1,cost={{"i",213089,2}},f=52,lvl=70,spellID=394452,u=2}),
-i(195526,{b=1,cost={{"i",213089,2}},f=52,lvl=70,spellID=394455,u=2}),
+i(195480,{b=1,collectible=false,cost={{"i",213089,2}},f=52,lvl=70,spellID=394452,u=2}),
+i(195526,{b=1,collectible=false,cost={{"i",213089,2}},f=52,lvl=70,spellID=394455,u=2}),
 s(181149,195490,{b=1,cost={{"i",213089,2}},f=33,lvl=70,u=2}),
 i(194309,{b=1,cost={{"i",213089,2}},f=53,lvl=70,spellID=377466,u=2}),
 i(194302,{b=1,cost={{"i",213089,2}},f=53,lvl=70,spellID=377453,u=2}),
@@ -138965,7 +138975,7 @@ q(70155,{c={13},coords={
 [2023]={{34.1,59.4}}},lvl=20,qgs={194282},races={52,70},g={
 i(198450,{b=1,spellID=383720}),
 i(198456,{b=1,spellID=383721}),
-i(198455,{b=1,spellID=383711})}}),
+s(181708,198455,{b=1,collectible=false,f=104,spellID=383711})}}),
 q(70319,{coords={
 [2023]={{84.5,25.3}}},lvl=20,qgs={194904},sourceQuests={65783},g={
 i(198795),
@@ -140666,7 +140676,7 @@ n(199425,{coords={
 [2085]={{61.2,46.8}}},g={
 i(201961,{b=1,cost={{"c",2118,525},{"i",202039,23}},f=52,spellID=400813}),
 i(201960,{b=1,cost={{"c",2118,525},{"i",202039,23}},f=52,spellID=400813}),
-i(201962,{b=1,cost={{"c",2118,750},{"i",202039,30}},f=51,spellID=400568}),
+s(184009,201962,{b=1,collectible=false,cost={{"c",2118,750},{"i",202039,30}},f=51,spellID=400568}),
 i(202015,{b=1,cost={{"c",2118,1000},{"i",202039,45}},f=53,spellID=396176}),
 i(203681,{b=1,cost={{"i",202039,30}},f=55,lvl=45}),
 toy(202020,{b=1,cost={{"c",2118,1200},{"i",202039,75}}}),
@@ -141245,7 +141255,7 @@ n(197872,{coords={
 [2025]={{50.06,42.68}}},g={
 i(201698,{f=55,lvl=10,spellID=369162}),
 i(201697,{f=55,lvl=10,spellID=369162}),
-i(201046,{f=55,lvl=10,spellID=369162}),
+s(183122,201046,{collectible=false,f=55,lvl=10,spellID=369162}),
 i(201725,{f=55,lvl=10,spellID=394350}),
 i(201721,{f=55,lvl=10,spellID=369162})}}),
 n(187300,{coords={
@@ -142322,7 +142332,7 @@ q(70856,{coords={
 i(199928,{spellID=388465})}}),
 q(67111,{coords={
 [2024]={{67.2,44.4}}},lvl=30,qgs={196254},sourceQuests={66964},g={
-i(194747)}}),
+s(181045,194747,{collectible=false,f=104})}}),
 q(67724,{coords={
 [2024]={{67.3,44.3}}},lvl=30,qgs={191715},sourceQuests={66964},g={
 i(195468,{spellID=388370})}}),
@@ -146610,10 +146620,20 @@ n(197510,{coords={
 i(200619,{f=55,lvl=10,spellID=369156})}}),
 n(191135,{coords={
 [2022]={{26.4,55.4}}},g={
+i(194884,{b=1,f=55,spellID=378032}),
+i(193499,{b=1,f=55,spellID=375298}),
+i(194679,{b=1,spellID=377680}),
 p(3376,{b=1,cost={{"i",199219,3},{"i",198082,2},{"i",198357,1}},itemID=199326,npcID=195896,spellID=386985}),
+i(194890,{b=1,f=55,spellID=378090}),
 i(201837,{b=1,coords={
 [2022]={{33.3,72.2}}},cost={{"i",201840,1},{"i",201839,1}},crs={198150},description="Use it while riding the Tame Magmammoth @ 33.3, 72.2",spellID=395425,g={
-mnt(373859,{b=1,itemID=192601})}})}})}),
+mnt(373859,{b=1,itemID=192601})}}),
+i(198452,{b=1,spellID=383668}),
+i(194696,{b=1,spellID=377690}),
+i(194887,{b=1,f=55,spellID=378041}),
+i(194961,{b=1,f=55,spellID=378171}),
+i(198453,{b=1,f=55,lvl=45,spellID=383675}),
+i(194889,{b=1,f=55,spellID=378089})}})}),
 h(-62,{sourceQuests={71232,72366},g={
 q(70150,{coords={
 [2022]={{57.8,68}}},isWorldQuest=1}),
@@ -147750,7 +147770,7 @@ q(72959,{coords={
 [2133]={{59.4,68.9}}},lvl=36,qgs={200049},sourceQuests={72958,74375}}),
 q(72961,{coords={
 [2133]={{62.6,73.3}}},lvl=10,qgs={200074},sourceQuests={72959},g={
-i(204387,{b=1,f=53,lvl=70,spellID=405066}),
+s(185789,204387,{b=1,collectible=false,f=53,lvl=70,spellID=405066}),
 i(204833)}}),
 q(72962,{coords={
 [2133]={{62.6,73.2}}},lvl=36,qgs={201619},sourceQuests={72961}}),
@@ -165736,9 +165756,6 @@ n(243160,{coords={
 i(188152,{spellID=113902})}})}),
 h(-60,{
 h(-45,{
-q(93613,{coords={
-[2393]={{48.9,64.6}}},isWeekly=1,lvl=90,qgs={256212},g={
-i(250116,{b=1,lvl=90,rwp=120100})}}),
 q(93628,{coords={
 [2393]={{48.9,64.6}}},isWeekly=1,lvl=90,qgs={256212},g={
 i(250116,{b=1,lvl=90,rwp=120100})}}),
@@ -166983,7 +167000,7 @@ crit(111993,{achID=62185,id=1})}})}}),
 ah(61960,{type="a",g={
 o(613242,{coords={
 [2395]={{52.3,45.4}}},questID=93455,g={
-i(265814,{f=52}),
+s(303985,265814,{collectible=false,f=52}),
 crit(111476,{achID=61960,id=6})}}),
 o(555351,{coords={
 [2395]={{48.7,75.5}}},questID=91358,g={
@@ -170267,7 +170284,7 @@ q(93905,{coords={
 [2405]={{37.4,75.1}}},isWorldQuest=1}),
 q(93517,{coords={
 [2405]={{47.3,70.3}}},isWorldQuest=1,g={
-i(259029)}}),
+s(301830,259029,{collectible=false,f=104})}}),
 q(93579,{coords={
 [2405]={{30.8,47.3}}},isWorldQuest=1}),
 q(93244,{coords={
@@ -170689,8 +170706,8 @@ q(86663,{coords={
 de(16092,{itemID=264715,spellID=1272511})}}),
 q(86664,{coords={
 [2437]={{55,18.3}}},lvl=83,qgs={236162},sourceQuests={86663},g={
-i(248578,{b=1,f=52,lvl=80}),
-i(248577,{b=1,f=52,lvl=80})}}),
+s(295609,248578,{b=1,collectible=false,f=52,lvl=80}),
+s(295608,248577,{b=1,collectible=false,f=52,lvl=80})}}),
 q(86665,{coords={
 [2437]={{55,18.3}}},lvl=83,qgs={236162},sourceQuests={86664}}),
 q(90772,{coords={
@@ -170808,8 +170825,8 @@ q(89230,{coords={
 i(249271)}}),
 q(89233,{coords={
 [2437]={{44.4,65.7}}},lvl=83,qgs={240975},sourceQuests={89230,89231},g={
-i(264448,{b=1,f=52,lvl=80}),
-i(264447,{b=1,f=52,lvl=80}),
+s(303353,264448,{b=1,collectible=false,f=52,lvl=80}),
+s(303352,264447,{b=1,collectible=false,f=52,lvl=80}),
 crit(109717,{achID=61452,id=3})}})}}),
 ah(61452.04,{type="crit",g={
 q(89565,{coords={
@@ -171616,10 +171633,12 @@ i(254838),
 i(248131,{spellID=1258081}),
 toy(253629,{b=1}),
 crit(103891,{achID=41805,id=2})}})}})}}),
-q(91787,{coords={
-[2541]={{52.2,60.6}}},lvl=83,qgs={237502},sourceQuests={86903}}),
+q(95008,{coords={
+[2393]={{55.7,70}}},lvl=80,qgs={259153}}),
 q(91854,{coords={
 [2393]={{45.4,70.2}}},description="Available after completing one of the optional zones after Eversong's campaign.",lvl=80,qgs={248631}}),
+q(91787,{coords={
+[2541]={{52.2,60.6}}},lvl=83,qgs={237502},sourceQuests={86903}}),
 ah(60891,{type="a",g={
 ah(60891.01,{type="crit",g={
 q(91822,{coords={
@@ -171779,7 +171798,7 @@ q(88938,{coords={
 i(251899),
 o(573743,{coords={
 [2395]={{30.2,90.8}}},g={
-i(251904)}}),
+s(298430,251904,{collectible=false,f=104})}}),
 i(264286,{b=1,f=51,lvl=90}),
 i(257171,{b=1,f=51,lvl=90})}}),
 q(88941,{coords={
@@ -172064,7 +172083,7 @@ i(263872)}),
 de(9249,{itemID=253175,spellID=1255727}),
 crit(108601,{achID=61082,id=5})}}),
 q(90718,{coords={
-[2393]={{47.4,69.6}}},lvl=90,qgs={240265},r=1,sourceQuests={92520},g={
+[2393]={{47.4,69.6}}},lvl=90,qgs={240265},r=1,sourceQuests={92319,92322,92520},g={
 i(260165)}})}),
 h(-56,{
 o(572030,{description="On the left side of Lady Deathwhisper's room.",maps={186},sourceQuests={92321},g={

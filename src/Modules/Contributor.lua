@@ -147,6 +147,17 @@ local function DoReport(reporttype, id)
 	-- the first report of a given ID for now
 	reportData.REPORTED = true
 end
+local function DoAllReports()
+	local Runner = app.CreateRunner("contributor")
+	local type = type
+	for reporttype,reporttypereports in pairs(Reports) do
+		for id,idreport in pairs(reporttypereports) do
+			if id ~= "__type" and type(idreport) == "table" and not idreport.REPORTED then
+				Runner.Run(DoReport, reporttype, id)
+			end
+		end
+	end
+end
 
 local function BuildGenericReportData(objRef, id)
 	return {
@@ -202,9 +213,9 @@ local function AddReportData(reporttype, id, data, chatlink)
 	end
 
 	reportData.CHATLINK = chatlink
-	-- after adding data for a report, we will trigger that report shortly afterwards in case more data is added elsewhere within
-	-- that timeframe
-	DelayedCallback(DoReport, 0.25, reporttype, id)
+	-- after adding data for a report, we will trigger all reports shortly afterwards in case more data is added elsewhere within
+	-- that timeframe or for other report types/ids
+	DelayedCallback(DoAllReports, 0.5)
 end
 
 api.DoReport = function(id, text)
@@ -1355,7 +1366,9 @@ MobileDB.GameObject = {
 	[232396] = true,	-- Void Crystal (q:35088)
 	[232403] = true,	-- Escape Pod
 	[232507] = true,	-- Lunarfall Egg
+	[232541] = true,	-- Mine Cart
 	[232542] = true,	-- Blackrock Deposit
+	[232651] = true,	-- Finalize Garrison Plot
 	[232652] = true,	-- Finalize Garrison Plot
 	[233028] = true,	-- Tears of the Vale
 	[233029] = true,	-- Vault of Forbidden Treasures [] ?
@@ -1364,6 +1377,8 @@ MobileDB.GameObject = {
 	[233248] = true,	-- Finalize Garrison Plot
 	[233249] = true,	-- Finalize Garrison Plot
 	[233250] = true,	-- Finalize Garrison Plot
+	[233251] = true,	-- Finalize Garrison Plot
+	[233899] = true,	-- XD-57 "Bullseye" Guided Rocket Kit
 	[234105] = true,	-- Arakkoa Archaeology Find
 	[234106] = true,	-- Ogre Archaeology Find
 	[234165] = true,	-- Cache of Arakkoan Treasures [Rukhran]
@@ -1409,6 +1424,7 @@ MobileDB.GameObject = {
 	[240677] = true,	-- Climbing Treads
 	[241031] = true,	-- Dread-Captain's Saber (q:38360)
 	[241127] = true,	-- Unguarded Thistleleaf Treasure
+	[241130] = true,	-- Blackrock Grapple
 	[241435] = true,	-- Greenhoof's Anvil
 	[241528] = true,	-- Horn of the Helmouth
 	[241536] = true,	-- Legion Cage
@@ -3281,6 +3297,7 @@ MobileDB.GameObject = {
 	[612081] = true,	-- Foul Carcass (q:93397)
 	[612102] = true,	-- Transplanted Tranquility Bloom
 	[612274] = true,	-- Portal to K'aresh (q:85002)
+	[612370] = true,	-- Burning Amani Pinecone
 	[613268] = true,	-- Burning Torch
 	[613789] = true,	-- Paint Globule (q:92695)
 	[613852] = true,	-- Potion of Unquestionable Strength (q:93569)
@@ -3331,6 +3348,7 @@ MobileDB.GameObject = {
 	[627599] = true,	-- Silver Hand Squire's Libram
 	[628381] = true,	-- Weapon Rack (Arcantina)
 	[628446] = true,	-- Jan'alai's Cinder (q:93019)
+	[628886] = true,	-- Ladder
 	[628949] = true,	-- Shadowmoon Lumber (Frostfire Ridge)
 	[628950] = true,	-- Shadowmoon Lumber (Gorgrond)
 	[628951] = true,	-- Shadowmoon Lumber (Tanaan Jungle)
@@ -3343,11 +3361,13 @@ MobileDB.GameObject = {
 	[638873] = true,	-- Orb of Translocation
 	[639875] = true,	-- Feather of Jan'alai (q:94870)
 	[641533] = true,	-- Corrupted Lantern (q:92320)
+	[649481] = true,	-- Wood Debris (q:96111)
 	[650051] = true,	-- Faithbreaker Ger'lok's Ritual Chest [Broken Throne, Ritual Site]
 	[651783] = true,	-- Pulsing Void Magicule (q:96229) [Ritual Site: Naigtal]
 	[652051] = true,	-- Belo'vir's Arcane Vault (q:96231)
 	[653416] = true,	-- Cynosure of Twilight (q:96051)
 	[653485] = true,	-- Cynosure of Twilight (q:96052)
+	[654240] = true,	-- Mound of Dirt (q:96543)
 	[654422] = true,	-- Energized Crystal Conductor (q:96569)
 	[655270] = true,	-- Dominaar Storage Vessel [Ritual Site: Val]
 	[655271] = true,	-- Hal'hadar Pocket-Storage [Ritual Site: Naigtal]

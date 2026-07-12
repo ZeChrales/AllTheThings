@@ -6265,15 +6265,42 @@ root(ROOTS.NeverImplemented, n(SETS, {
 		-- 10.0.0
 		expansion(EXPANSION.DF, patch(0,0,1), bubbleDownSelf({ ["timeline"] = { CREATED_10_0_0 } }, {
 			cl(DRUID, {
-				i(198145),	-- Copy Bracers of the druid name PH
-				i(198144),	-- Copy Chestguard of the druid name PH
-				i(198147),	-- Copy Cincture of the druid name PH
-				i(198149),	-- Copy Footwraps of the druid name PH
-				i(198148),	-- Copy Handwraps of the druid name PH
-				i(198142),	-- Copy Headpiece of the druid name PH
-				i(198143),	-- Copy Leggings of the druid name PH
-				i(198146),	-- Copy Shoulderpads of the druid name PH
-				i(198150),	-- Copy Wrap of the druid name PH
+				i(198145, {["sourceID"] = 181499 }),	-- Copy Bracers of the druid name PH
+				i(198145, {["sourceID"] = 181500 }),	-- Copy Bracers of the druid name PH
+				i(198145, {["sourceID"] = 181501 }),	-- Copy Bracers of the druid name PH
+				i(198145, {["sourceID"] = 181502 }),	-- Copy Bracers of the druid name PH
+				i(198144, {["sourceID"] = 181487 }),	-- Copy Chestguard of the druid name PH
+				i(198144, {["sourceID"] = 181488 }),	-- Copy Chestguard of the druid name PH
+				i(198144, {["sourceID"] = 181489 }),	-- Copy Chestguard of the druid name PH
+				i(198144, {["sourceID"] = 181490 }),	-- Copy Chestguard of the druid name PH
+				i(198147, {["sourceID"] = 181523 }),	-- Copy Cincture of the druid name PH
+				i(198147, {["sourceID"] = 181530 }),	-- Copy Cincture of the druid name PH
+				i(198147, {["sourceID"] = 181531 }),	-- Copy Cincture of the druid name PH
+				i(198147, {["sourceID"] = 181532 }),	-- Copy Cincture of the druid name PH
+				i(198149, {["sourceID"] = 181547 }),	-- Copy Footwraps of the druid name PH
+				i(198149, {["sourceID"] = 181548 }),	-- Copy Footwraps of the druid name PH
+				i(198149, {["sourceID"] = 181549 }),	-- Copy Footwraps of the druid name PH
+				i(198149, {["sourceID"] = 181550 }),	-- Copy Footwraps of the druid name PH
+				i(198148, {["sourceID"] = 181535 }),	-- Copy Handwraps of the druid name PH
+				i(198148, {["sourceID"] = 181542 }),	-- Copy Handwraps of the druid name PH
+				i(198148, {["sourceID"] = 181543 }),	-- Copy Handwraps of the druid name PH
+				i(198148, {["sourceID"] = 181544 }),	-- Copy Handwraps of the druid name PH
+				i(198142, {["sourceID"] = 181463 }),	-- Copy Headpiece of the druid name PH
+				i(198142, {["sourceID"] = 181464 }),	-- Copy Headpiece of the druid name PH
+				i(198142, {["sourceID"] = 181465 }),	-- Copy Headpiece of the druid name PH
+				i(198142, {["sourceID"] = 181466 }),	-- Copy Headpiece of the druid name PH
+				i(198143, {["sourceID"] = 181475 }),	-- Copy Leggings of the druid name PH
+				i(198143, {["sourceID"] = 181476 }),	-- Copy Leggings of the druid name PH
+				i(198143, {["sourceID"] = 181477 }),	-- Copy Leggings of the druid name PH
+				i(198143, {["sourceID"] = 181478 }),	-- Copy Leggings of the druid name PH
+				i(198146, {["sourceID"] = 181511 }),	-- Copy Shoulderpads of the druid name PH
+				i(198146, {["sourceID"] = 181512 }),	-- Copy Shoulderpads of the druid name PH
+				i(198146, {["sourceID"] = 181513 }),	-- Copy Shoulderpads of the druid name PH
+				i(198146, {["sourceID"] = 181514 }),	-- Copy Shoulderpads of the druid name PH
+				i(198150, {["sourceID"] = 181559 }),	-- Copy Wrap of the druid name PH
+				i(198150, {["sourceID"] = 181560 }),	-- Copy Wrap of the druid name PH
+				i(198150, {["sourceID"] = 181561 }),	-- Copy Wrap of the druid name PH
+				i(198150, {["sourceID"] = 181562 }),	-- Copy Wrap of the druid name PH
 			}),
 			cl(EVOKER, {
 				i(187651),	-- Evoker Tunic
@@ -6440,16 +6467,6 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(203503),	-- Peaks of the Walking Mountain
 						i(203502),	-- Poleyns of the Walking Mountain
 					}),
-					--
-					i(202146),	-- Brawler's Earthen Cuirass [BoP]
-					i(202148),	-- Emissary's Flamewrought Seal [BoP]
-					i(202145),	-- Frozen Claw Mantle [BoP]
-					i(202150),	-- Galvanic Gaiters [BoP]
-					i(202144),	-- Greathelm of Horned Fury [BoP]
-					i(202151),	-- Lavamancer's Ceremonial Waistguard [BoP]
-					i(202147),	-- Primal Seeker's Leggings [BoP]
-					i(202149),	-- Primalist Warden's Bracers [BoP]
-					i(202143),	-- Woven Stone Bracelets [BoP]
 				})),
 				d(DIFFICULTY.RAID.NORMAL, {
 					cl(DEATHKNIGHT, {
@@ -6543,16 +6560,6 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(203503),	-- Peaks of the Walking Mountain
 						i(203502),	-- Poleyns of the Walking Mountain
 					}),
-					--
-					i(202146),	-- Brawler's Earthen Cuirass [BoP]
-					i(202148),	-- Emissary's Flamewrought Seal [BoP]
-					i(202145),	-- Frozen Claw Mantle [BoP]
-					i(202150),	-- Galvanic Gaiters [BoP]
-					i(202144),	-- Greathelm of Horned Fury [BoP]
-					i(202151),	-- Lavamancer's Ceremonial Waistguard [BoP]
-					i(202147),	-- Primal Seeker's Leggings [BoP]
-					i(202149),	-- Primalist Warden's Bracers [BoP]
-					i(202143),	-- Woven Stone Bracelets [BoP]
 				}),
 				d(DIFFICULTY.RAID.HEROIC, bubbleDown({ ["bonusID"] = 1 }, {
 					cl(DEATHKNIGHT, {
@@ -6646,16 +6653,6 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(203503),	-- Peaks of the Walking Mountain
 						i(203502),	-- Poleyns of the Walking Mountain
 					}),
-					--
-					i(202146),	-- Brawler's Earthen Cuirass [BoP]
-					i(202148),	-- Emissary's Flamewrought Seal [BoP]
-					i(202145),	-- Frozen Claw Mantle [BoP]
-					i(202150),	-- Galvanic Gaiters [BoP]
-					i(202144),	-- Greathelm of Horned Fury [BoP]
-					i(202151),	-- Lavamancer's Ceremonial Waistguard [BoP]
-					i(202147),	-- Primal Seeker's Leggings [BoP]
-					i(202149),	-- Primalist Warden's Bracers [BoP]
-					i(202143),	-- Woven Stone Bracelets [BoP]
 				})),
 				d(DIFFICULTY.RAID.MYTHIC, bubbleDown({ ["bonusID"] = 450 }, {
 					cl(DEATHKNIGHT, {
@@ -6750,9 +6747,6 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(203502),	-- Poleyns of the Walking Mountain
 					}),
 				})),
-				-- Extra
-				i(192460),	--
-				i(194710),	--
 			}),
 			header(HEADERS.Object, 382621, {	-- Revival Catalyst Console
 				d(DIFFICULTY.RAID.LFR, {
@@ -7324,6 +7318,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					cl(MAGE, {
 						i(203593),	-- Crystal Scholar's Beacons
 						i(203591),	-- Crystal Scholar's Cowl
+						itemsource(184158),	-- Crystal Scholar's Cowl
 					}),
 					cl(MONK, {
 						i(203539),	-- Mantle of the Waking Fist
@@ -7377,6 +7372,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					cl(MAGE, {
 						i(203593),	-- Crystal Scholar's Beacons
 						i(203591),	-- Crystal Scholar's Cowl
+						itemsource(184159),	-- Crystal Scholar's Cowl
 					}),
 					cl(MONK, {
 						i(203539),	-- Mantle of the Waking Fist
@@ -7909,6 +7905,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205803),	-- Heartfire Sentinel's Steelwings
 					}),
 					cl(PRIEST, {
+						itemsource(186234),	-- Command of the Furnace Seraph
 						i(205855),	-- Mask of the Furnace Seraph
 					}),
 					cl(ROGUE, {
@@ -7924,6 +7921,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205850),	-- Grimhorns of the Sinister Savant
 					}),
 					cl(WARRIOR, {
+						i(202440),	-- Insignia of the Onyx Crucible
 						i(205798),	-- Pauldrons of the Onyx Crucible
 						i(205800),	-- Thraexhelm of the Onyx Crucible
 					}),
@@ -7955,6 +7953,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205803),	-- Heartfire Sentinel's Steelwings
 					}),
 					cl(PRIEST, {
+						itemsource(186235),	-- Command of the Furnace Seraph
 						i(205855),	-- Mask of the Furnace Seraph
 					}),
 					cl(ROGUE, {
@@ -7970,6 +7969,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205850),	-- Grimhorns of the Sinister Savant
 					}),
 					cl(WARRIOR, {
+						i(202440),	-- Insignia of the Onyx Crucible
 						i(205798),	-- Pauldrons of the Onyx Crucible
 						i(205800),	-- Thraexhelm of the Onyx Crucible
 					}),
@@ -8000,6 +8000,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205803),	-- Heartfire Sentinel's Steelwings
 					}),
 					cl(PRIEST, {
+						itemsource(186236),	-- Command of the Furnace Seraph
 						i(205855),	-- Mask of the Furnace Seraph
 					}),
 					cl(ROGUE, {
@@ -8015,6 +8016,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205850),	-- Grimhorns of the Sinister Savant
 					}),
 					cl(WARRIOR, {
+						i(202440),	-- Insignia of the Onyx Crucible
 						i(205798),	-- Pauldrons of the Onyx Crucible
 						i(205800),	-- Thraexhelm of the Onyx Crucible
 					}),
@@ -8045,6 +8047,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205803),	-- Heartfire Sentinel's Steelwings
 					}),
 					cl(PRIEST, {
+						itemsource(186237),	-- Command of the Furnace Seraph
 						i(205855),	-- Mask of the Furnace Seraph
 					}),
 					cl(ROGUE, {
@@ -8060,6 +8063,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205850),	-- Grimhorns of the Sinister Savant
 					}),
 					cl(WARRIOR, {
+						i(202440),	-- Insignia of the Onyx Crucible
 						i(205798),	-- Pauldrons of the Onyx Crucible
 						i(205800),	-- Thraexhelm of the Onyx Crucible
 					}),
@@ -8090,6 +8094,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205803),	-- Heartfire Sentinel's Steelwings
 					}),
 					cl(PRIEST, {
+						itemsource(186238),	-- Command of the Furnace Seraph
 						i(205855),	-- Mask of the Furnace Seraph
 					}),
 					cl(ROGUE, {
@@ -8105,6 +8110,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205850),	-- Grimhorns of the Sinister Savant
 					}),
 					cl(WARRIOR, {
+						i(202440),	-- Insignia of the Onyx Crucible
 						i(205798),	-- Pauldrons of the Onyx Crucible
 						i(205800),	-- Thraexhelm of the Onyx Crucible
 					}),
@@ -8135,6 +8141,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205803),	-- Heartfire Sentinel's Steelwings
 					}),
 					cl(PRIEST, {
+						itemsource(186239),	-- Command of the Furnace Seraph
 						i(205855),	-- Mask of the Furnace Seraph
 					}),
 					cl(ROGUE, {
@@ -8150,6 +8157,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 						i(205850),	-- Grimhorns of the Sinister Savant
 					}),
 					cl(WARRIOR, {
+						i(202440),	-- Insignia of the Onyx Crucible
 						i(205798),	-- Pauldrons of the Onyx Crucible
 						i(205800),	-- Thraexhelm of the Onyx Crucible
 					}),
@@ -12750,6 +12758,9 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					}),
 				})),
 			}),
+
+			-- #if BEFORE MID
+			-- Added to TWW Elite Ensembles with Midnight
 			header(HEADERS.Object, 456208, {	-- The Catalyst
 				n(PVP_ELITE, bubbleDown({ ["bonusID"] = 7532 }, {
 					cl(DEATHKNIGHT, {
@@ -12897,6 +12908,10 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					}),
 				})),
 			}),
+			-- #endif
+
+			-- #if BEFORE MID
+			-- Added to TWW Elite Ensembles with Midnight
 			n(SEASON_FORGED, {
 				n(PVP_ELITE, bubbleDownSelf({ ["bonusID"] = 7532 }, {
 					cl(DEATHKNIGHT, {
@@ -13057,6 +13072,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					}),
 				})),
 			}),
+			-- #endif
 		})),
 
 		-- 11.0.5
@@ -14573,6 +14589,9 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					}),
 				})),
 			}),
+
+			-- #if BEFORE MID
+			-- Added to TWW Elite Ensembles with Midnight
 			n(SEASON_PRIZED, {
 				n(PVP_ELITE, bubbleDownSelf({ ["bonusID"] = 7532 }, {
 					cl(DEATHKNIGHT, {
@@ -14733,6 +14752,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					}),
 				})),
 			}),
+			-- #endif
 		})),
 
 		-- 11.2.0
@@ -15969,6 +15989,9 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					}),
 				})),
 			}),
+
+			-- #if BEFORE MID
+			-- Added to TWW Elite Ensembles with Midnight
 			header(HEADERS.Object, 456208, {	-- The Catalyst
 				n(PVP_ELITE, bubbleDown({ ["bonusID"] = 7532 }, {
 					cl(DEATHKNIGHT, {
@@ -16116,6 +16139,10 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					}),
 				})),
 			}),
+			-- #endif
+
+			-- #if BEFORE MID
+			-- Added to TWW Elite Ensembles with Midnight
 			n(SEASON_ASTRAL, {
 				n(PVP_ELITE, bubbleDownSelf({ ["bonusID"] = 7532 }, {
 					cl(DEATHKNIGHT, {
@@ -16276,6 +16303,7 @@ root(ROOTS.NeverImplemented, n(SETS, {
 					}),
 				})),
 			}),
+			-- #endif
 		})),
 
 		-- 11.2.5
@@ -17288,6 +17316,165 @@ root(ROOTS.NeverImplemented, n(SETS, {
 				})),
 			}),
 			n(SEASON_GALACTIC, {
+				n(PVP_ELITE, bubbleDownSelf({ ["bonusID"] = 7532 }, {
+					cl(DEATHKNIGHT, {
+						i(255560),	-- Galactic Gladiator's Plate Pauldrons
+						i(255558),	-- Galactic Gladiator's Plate Wargreaves
+						i(255562),	-- Galactic Gladiator's Plate Greatbelt
+						i(255564),	-- Galactic Gladiator's Plate Vambraces
+						i(255566),	-- Galactic Gladiator's Drape
+						i(255550),	-- Galactic Gladiator's Chestplate
+						i(255556),	-- Galactic Gladiator's Plate Helmet
+						i(255552),	-- Galactic Gladiator's Plate Stompers
+						i(255554),	-- Galactic Gladiator's Plate Handguards
+						i(255567),	-- Galactic Gladiator's Shawl
+					}),
+					cl(DEMONHUNTER, {
+						i(255446),	-- Galactic Gladiator's Leather Shoulderpads
+						i(255444),	-- Galactic Gladiator's Leather Legwraps
+						i(255448),	-- Galactic Gladiator's Leather Strap
+						i(255450),	-- Galactic Gladiator's Leather Wristguards
+						i(255452),	-- Galactic Gladiator's Drape
+						i(255436),	-- Galactic Gladiator's Leather Jerkin
+						i(255442),	-- Galactic Gladiator's Leather Mask
+						i(255438),	-- Galactic Gladiator's Leather Treads
+						i(255440),	-- Galactic Gladiator's Leather Grips
+						i(255453),	-- Galactic Gladiator's Shawl
+					}),
+					cl(DRUID, {
+						i(255426),	-- Galactic Gladiator's Leather Shoulderpads
+						i(255424),	-- Galactic Gladiator's Leather Legwraps
+						i(255429),	-- Galactic Gladiator's Leather Strap
+						i(255431),	-- Galactic Gladiator's Leather Wristguards
+						i(255433),	-- Galactic Gladiator's Drape
+						i(255416),	-- Galactic Gladiator's Leather Vestments
+						i(255422),	-- Galactic Gladiator's Leather Mask
+						i(255418),	-- Galactic Gladiator's Leather Treads
+						i(255420),	-- Galactic Gladiator's Leather Grips
+						i(255434),	-- Galactic Gladiator's Shawl
+					}),
+					cl(EVOKER, {
+						i(255503),	-- Galactic Gladiator's Chain Shoulderguard
+						i(255501),	-- Galactic Gladiator's Chain Breeches
+						i(255505),	-- Galactic Gladiator's Chain Girdle
+						i(255507),	-- Galactic Gladiator's Chain Bracers
+						i(255509),	-- Galactic Gladiator's Drape
+						i(255493),	-- Galactic Gladiator's Scaleguard
+						i(255499),	-- Galactic Gladiator's Chain Faceguard
+						i(255495),	-- Galactic Gladiator's Chain Boots
+						i(255497),	-- Galactic Gladiator's Chain Handguards
+						i(255510),	-- Galactic Gladiator's Shawl
+					}),
+					cl(HUNTER, {
+						i(255522),	-- Galactic Gladiator's Chain Shoulderguard
+						i(255520),	-- Galactic Gladiator's Chain Breeches
+						i(255524),	-- Galactic Gladiator's Chain Girdle
+						i(255526),	-- Galactic Gladiator's Chain Bracers
+						i(255528),	-- Galactic Gladiator's Drape
+						i(255512),	-- Galactic Gladiator's Chain Tunic
+						i(255518),	-- Galactic Gladiator's Chain Faceguard
+						i(255514),	-- Galactic Gladiator's Chain Boots
+						i(255516),	-- Galactic Gladiator's Chain Handguards
+						i(255529),	-- Galactic Gladiator's Shawl
+					}),
+					cl(MAGE, {
+						i(255368),	-- Galactic Gladiator's Silk Amice
+						i(255366),	-- Galactic Gladiator's Silk Trousers
+						i(255370),	-- Galactic Gladiator's Silk Belt
+						i(255372),	-- Galactic Gladiator's Silk Armbands
+						i(255374),	-- Galactic Gladiator's Drape
+						i(255358),	-- Galactic Gladiator's Silk Gown
+						i(255364),	-- Galactic Gladiator's Silk Cap
+						i(255360),	-- Galactic Gladiator's Silk Treads
+						i(255362),	-- Galactic Gladiator's Silk Handwraps
+						i(255375),	-- Galactic Gladiator's Shawl
+					}),
+					cl(MONK, {
+						i(255465),	-- Galactic Gladiator's Leather Shoulderpads
+						i(255463),	-- Galactic Gladiator's Leather Legwraps
+						i(255467),	-- Galactic Gladiator's Leather Strap
+						i(255469),	-- Galactic Gladiator's Leather Wristguards
+						i(255471),	-- Galactic Gladiator's Drape
+						i(255455),	-- Galactic Gladiator's Leather Jerkin
+						i(255461),	-- Galactic Gladiator's Leather Mask
+						i(255457),	-- Galactic Gladiator's Leather Treads
+						i(255459),	-- Galactic Gladiator's Leather Grips
+						i(255472),	-- Galactic Gladiator's Shawl
+					}),
+					cl(PALADIN, {
+						i(255580),	-- Galactic Gladiator's Plate Pauldrons
+						i(255578),	-- Galactic Gladiator's Plate Tasses
+						i(255582),	-- Galactic Gladiator's Plate Greatbelt
+						i(255584),	-- Galactic Gladiator's Plate Vambraces
+						i(255586),	-- Galactic Gladiator's Drape
+						i(255569),	-- Galactic Gladiator's Chestplate
+						i(255575),	-- Galactic Gladiator's Plate Helmet
+						i(255571),	-- Galactic Gladiator's Plate Stompers
+						i(255573),	-- Galactic Gladiator's Plate Handguards
+						i(255587),	-- Galactic Gladiator's Shawl
+					}),
+					cl(PRIEST, {
+						i(255387),	-- Galactic Gladiator's Silk Amice
+						i(255385),	-- Galactic Gladiator's Silk Trousers
+						i(255389),	-- Galactic Gladiator's Silk Belt
+						i(255391),	-- Galactic Gladiator's Silk Armbands
+						i(255393),	-- Galactic Gladiator's Drape
+						i(255377),	-- Galactic Gladiator's Silk Vestments
+						i(255383),	-- Galactic Gladiator's Silk Guise
+						i(255379),	-- Galactic Gladiator's Silk Treads
+						i(255381),	-- Galactic Gladiator's Silk Handwraps
+						i(255394),	-- Galactic Gladiator's Shawl
+					}),
+					cl(ROGUE, {
+						i(255484),	-- Galactic Gladiator's Leather Shoulderpads
+						i(255482),	-- Galactic Gladiator's Leather Legwraps
+						i(255486),	-- Galactic Gladiator's Leather Strap
+						i(255488),	-- Galactic Gladiator's Leather Wristguards
+						i(255490),	-- Galactic Gladiator's Drape
+						i(255474),	-- Galactic Gladiator's Leather Jerkin
+						i(255480),	-- Galactic Gladiator's Leather Mask
+						i(255476),	-- Galactic Gladiator's Leather Treads
+						i(255478),	-- Galactic Gladiator's Leather Grips
+						i(255491),	-- Galactic Gladiator's Shawl
+					}),
+					cl(SHAMAN, {
+						i(255541),	-- Galactic Gladiator's Chain Shoulderguard
+						i(255539),	-- Galactic Gladiator's Chain Breeches
+						i(255543),	-- Galactic Gladiator's Chain Girdle
+						i(255545),	-- Galactic Gladiator's Chain Bracers
+						i(255547),	-- Galactic Gladiator's Drape
+						i(255531),	-- Galactic Gladiator's Chain Tunic
+						i(255537),	-- Galactic Gladiator's Chain Faceguard
+						i(255533),	-- Galactic Gladiator's Chain Boots
+						i(255535),	-- Galactic Gladiator's Chain Handguards
+						i(255548),	-- Galactic Gladiator's Shawl
+					}),
+					cl(WARLOCK, {
+						i(255407),	-- Galactic Gladiator's Silk Amice
+						i(255405),	-- Galactic Gladiator's Silk Trousers
+						i(255409),	-- Galactic Gladiator's Silk Belt
+						i(255411),	-- Galactic Gladiator's Silk Armbands
+						i(255413),	-- Galactic Gladiator's Drape
+						i(255396),	-- Galactic Gladiator's Silk Vestments
+						i(255402),	-- Galactic Gladiator's Silk Guise
+						i(255398),	-- Galactic Gladiator's Silk Treads
+						i(255400),	-- Galactic Gladiator's Silk Handwraps
+						i(255414),	-- Galactic Gladiator's Shawl
+					}),
+					cl(WARRIOR, {
+						i(255599),	-- Galactic Gladiator's Plate Pauldrons
+						i(255597),	-- Galactic Gladiator's Plate Wargreaves
+						i(255601),	-- Galactic Gladiator's Plate Greatbelt
+						i(255603),	-- Galactic Gladiator's Plate Vambraces
+						i(255605),	-- Galactic Gladiator's Drape
+						i(255589),	-- Galactic Gladiator's Chestplate
+						i(255595),	-- Galactic Gladiator's Plate Helmet
+						i(255591),	-- Galactic Gladiator's Plate Stompers
+						i(255593),	-- Galactic Gladiator's Plate Handguards
+						i(255606),	-- Galactic Gladiator's Shawl
+					}),
+				})),
+
 				-- All of these items were variants for sets: Catalyst Gladiator, Catalyst Elite, Special effect Gladiator, Special effect Elite
 				-- They were removed during alpha development of Midnight and it is impossible to tell which one is which now
 				cl(DEATHKNIGHT, {

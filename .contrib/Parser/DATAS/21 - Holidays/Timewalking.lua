@@ -105,7 +105,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.TIMEWALKING, n(TIMEWALKING_HEADER, bubble
 				["description"] = "Each week finish 4 dungeons with Distilled Knowledge of Timeways buff active, upon reaching 4 stacks the buff changes into Mastery of Timeways, completing that week's criteria.",
 				["groups"] = { i(254694) },	-- Ta'readon's Mount Voucher
 			})),
-			ach(61463, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_7 } }, {	-- Master of the Turbulent Timeways V (automated!)
+			ach(61463, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 } }, {	-- Master of the Turbulent Timeways V (automated!)
 				["description"] = "Each week finish 4 dungeons with Distilled Knowledge of Timeways buff active, upon reaching 4 stacks the buff changes into Mastery of Timeways, completing that week's criteria.",
 				["groups"] = { i(258884) },	-- Spawn of Vyranoth (MOUNT!)
 			})),
@@ -8051,8 +8051,14 @@ root(ROOTS.Holidays, n(TIMEWALKING_HEADER, applyevent(EVENTS.TIMEWALKING_DRAGONF
 				["groups"] = { i(232877) },	-- Timely Goodie Bag
 			}),
 			q(93497, {	-- A Soaring Path Through Time
-				["qg"] = 255019,	-- Xydan <Timewalking Vendor>
-				["coord"] = { 81.5, 47.2, VALDRAKKEN },
+				["qgs"] = {
+					255019,	-- Xydan <Timewalking Vendor>
+					256212,	-- Archmage Aethas Sunreaver
+				},
+				["coords"] = {
+					{ 48.7, 64.7, MAP.MIDNIGHT.SILVERMOON_CITY },
+					{ 81.5, 47.2, VALDRAKKEN },
+				},
 				["isWeekly"] = true,
 				["lvl"] = 80,
 				["groups"] = { i(250116) },	-- Cache of Quel'Thalas Treasures
@@ -8569,6 +8575,11 @@ root(ROOTS.HiddenQuestTriggers, {
 			q(86295, { ["timeline"] = { ADDED_11_1_5 } }),	-- Disturbance Detected: Black Temple
 			q(89211, { ["timeline"] = { ADDED_11_1_7 } }),	-- Gain Mastery of Timeways for 5 weeks during Turbulent Timeways III (spellID 1229050)
 			q(92856, { ["timeline"] = { ADDED_11_2_7 } }),	-- Gain Mastery of Timeways for 5 weeks during Turbulent Timeways IV (spellID 1258528)
+		})),
+	})),
+	expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_7 } }, {
+		applyevent(EVENTS.TIMEWALKING, n(TIMEWALKING_HEADER, {
+			q(93509),	-- Gain Mastery of Timeways for 4 weeks during Turbulent Timeways V (spellID 1269518)
 		})),
 	})),
 });

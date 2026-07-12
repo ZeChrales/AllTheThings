@@ -3,17 +3,14 @@
 -------------------------------------------------------------------
 
 root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
-	["groups"] = sharedData({
-		["timeline"] = { ADDED_12_0_5 },
-	}, {
-		header(HEADERS.Achievement, 41052, {	-- Lingering Shadows
-			n(ACHIEVEMENTS, bubbleDown({
-				["timeline"] = { ADDED_12_0_7 },
-				["maps"] = {
-					NAIGTAL,
-					VAL,
-				},
-			}, {
+	n(SHOWDOWN, {
+		["timeline"] = { ADDED_12_0_7 },
+		["maps"] = {
+			NAIGTAL,
+			VAL,
+		},
+		["groups"] = {
+			n(ACHIEVEMENTS, {
 				ach(62873),	-- A Trip Around the Stars
 				ach(62874),	-- A Trip Through the Stars
 				ach(62899),	-- Absolute Power
@@ -29,7 +26,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 				ach(62900),	-- Power Beyond Measure
 				ach(62896),	-- Power Creep
 				ach(63384),	-- Prepared for a Showdown
-			})),
-		}),
+			}),
+		},
 	}),
 }));

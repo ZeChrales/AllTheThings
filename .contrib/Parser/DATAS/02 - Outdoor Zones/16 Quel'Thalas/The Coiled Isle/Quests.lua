@@ -1,6 +1,7 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+
 root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 	m(MAP.MIDNIGHT.THE_COILED_ISLE, {
 		n(QUESTS, {
@@ -344,7 +345,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				}),
 				header(HEADERS.AchCriteria, 62297.06, {	-- The Call of the Void
 					q(95973, {	-- Echoes of the Darkwell
-						["sourceQuest"] = 93420,	-- Lor'themar's Judgement	-- Exo Note: Available from the get-go on PTR, this may change when Patch goes live. 93420 should be a proper sourceQuest as the story continuation fits nicely.
+						--["sourceQuest"] = 93420,	-- Lor'themar's Judgement	-- Exo Note: Available from the get-go on PTR, this may change when Patch goes live. 93420 should be a proper sourceQuest as the story continuation fits nicely.
 						["qg"] = 235787,	-- Lor'themar Theron
 						["coord"] = { 45.4, 70.3, MAP.MIDNIGHT.SILVERMOON_CITY },
 					}),
@@ -534,8 +535,57 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						},
 					}),
 				}),
-				--header(HEADERS.AchCriteria, 63641.02, {	-- Tokka's Crew
-				--}),
+				header(HEADERS.AchCriteria, 63641.02, {	-- Tokka's Crew
+					q(96110, {	-- Proof is in the Ooze
+						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog
+						["qg"] = 258755,	-- Captain Tokka
+						["coord"] = { 57.2, 48.6, MAP.MIDNIGHT.THE_COILED_ISLE },
+						["groups"] = { i(274076) },	-- Venom-Cursed Killifish (QI!)
+					}),
+					q(98343, {	-- My Second-Best
+						["sourceQuest"] = 96110,	-- Proof is in the Ooze
+						["qg"] = 258755,	-- Captain Tokka
+						["coord"] = { 57.2, 48.6, MAP.MIDNIGHT.THE_COILED_ISLE },
+					}),
+					q(98414, {	-- A Request from the Captain
+						["sourceQuest"] = 98343,	-- My Second-Best
+						["qg"] = 257598,	-- Second Mate Sluggs
+						["coord"] = { 51.6, 49.8, MAP.MIDNIGHT.THE_COILED_ISLE },
+					}),
+					q(96111, {	-- Shell of Yourself
+						["sourceQuest"] = 98414,	-- A Request from the Captain
+						["qg"] = 258755,	-- Captain Tokka
+						["coord"] = { 57.2, 48.6, MAP.MIDNIGHT.THE_COILED_ISLE },
+						["groups"] = {
+							i(274083),	-- Birdie's Bombardment Pack (QI!)
+							o(649481, {	-- Wood Debris
+								i(274033),	-- Wood Debris (QI!)
+							}),
+						},
+					}),
+					-- Chain not finished. Need to figure out the prerequisites. Since the faction related to these is Fishing related and quests unlock Venom/Temple Fishing, maybe increase fishing?
+					-- Following is WoWhead data
+					q(96112, {	-- Maddening Concoction
+						["sourceQuest"] = 96111,	-- Shell of Yourself
+						--["qg"] = 258755,	-- Captain Tokka
+						--["coord"] = { 57.2, 48.6, MAP.MIDNIGHT.THE_COILED_ISLE },
+						["groups"] = {
+							i(274103),	-- Leathertongue's Backup Stewpot (QI!)
+							i(274090),	-- Resplendent Ectobarb (QI!)
+							i(274089),	-- Souplrgr's Fine Breadcrumbs (QI!)
+							i(274091),	-- Tough Crab Meat (QI!)
+						},
+					}),
+					q(96113, {	-- Maximum Potency
+						["sourceQuest"] = 96112,	-- Maddening Concoction
+						--["qg"] = 258755,	-- Captain Tokka
+						--["coord"] = { 57.2, 48.6, MAP.MIDNIGHT.THE_COILED_ISLE },
+						["groups"] = {
+							i(274281),	-- Black-Venom Grouper (QI!)
+							i(274282),	-- Venom-Charged Dubloon (QI!)
+						},
+					}),
+				}),
 				header(HEADERS.AchCriteria, 63641.03, {	-- Ancient Anthropology
 					q(96467, {	-- Thirst for Knowledge
 						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog
@@ -556,10 +606,95 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						["groups"] = { i(280105) },	-- Disgraced Amani Tablet
 					}),
 				}),
-				--header(HEADERS.AchCriteria, 63641.04, {	-- Bone Deep
-				--}),
-				--header(HEADERS.AchCriteria, 63641.05, {	-- The Honored Mad'jai
-				--}),
+				header(HEADERS.AchCriteria, 63641.04, {	-- Bone Deep
+					q(94031, {	-- Bones of My Soul
+						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog
+						["qg"] = 257298,	-- Loa Speaker Yl'mul
+						["coord"] = { 59.1, 68.0, MAP.MIDNIGHT.THE_COILED_ISLE },
+						["groups"] = {
+							o(618320, {	-- Yl'mul's Other Arm
+								["coord"] = { 57.0, 67.3, MAP.MIDNIGHT.THE_COILED_ISLE },
+								["groups"] = { i(264697) },	-- Yl'mul's Other Arm (QI!)
+							}),
+							o(618319, {	-- Yl'mul's Ribcage
+								["coord"] = { 56.9, 65.7, MAP.MIDNIGHT.THE_COILED_ISLE },
+								["groups"] = { i(264698) },	-- Yl'mul's Ribcage (QI!)
+							}),
+							o(618321, {	-- Yl'mul's Skull
+								["coord"] = { 58.2, 66.6, MAP.MIDNIGHT.THE_COILED_ISLE },
+								["groups"] = { i(264696) },	-- Yl'mul's Skull (QI!)
+							}),
+						},
+					}),
+					q(94035, {	-- Meat for the Bones
+						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog
+						["qg"] = 257298,	-- Loa Speaker Yl'mul
+						["coord"] = { 59.1, 68.0, MAP.MIDNIGHT.THE_COILED_ISLE },
+						["groups"] = { i(264704) },	-- Sea Creature Meat (QI!)
+					}),
+					q(94036, {	-- One Final Prisoner
+						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog
+						["qg"] = 257298,	-- Loa Speaker Yl'mul
+						["coord"] = { 59.1, 68.0, MAP.MIDNIGHT.THE_COILED_ISLE },
+					}),
+					q(94040, {	-- Meat and Bone and Soul
+						["sourceQuests"] = {
+							94031,	-- Bones of My Soul
+							94035,	-- Meat for the Bones
+							94036,	-- One Final Prisoner
+						},
+						["qg"] = 257298,	-- Loa Speaker Yl'mul
+						["coord"] = { 59.1, 68.0, MAP.MIDNIGHT.THE_COILED_ISLE },
+						["groups"] = {
+							i(278909),	-- Cloak of Chumming
+							i(278912),	-- Gral-Blessed Greatcloak
+							i(278911),	-- Shipwrecked Shroud
+							i(278910),	-- Yl'mul's Waterlogged Wrap
+						},
+					}),
+				}),
+				header(HEADERS.AchCriteria, 63641.05, {	-- The Honored Mad'jai
+					q(95521, {	-- The Med'jai Medallion
+						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog
+						["provider"] = { "o", 641565 },	-- Faintly Glowing Gem
+						["coord"] = { 48.0, 51.8, MAP.MIDNIGHT.VAULTS_OF_ATALUTEK },
+					}),
+					q(95522, {	-- Guardians of Death, Guardians in Stone
+						["sourceQuest"] = 95521,	-- The Med'jai Medallion
+						["qg"] = 261659,	-- Me'si
+						["coord"] = { 48.9, 64.2, MAP.MIDNIGHT.VAULTS_OF_ATALUTEK },
+					}),
+					q(95523, {	-- Worthy of the Past
+						["sourceQuest"] = 95522,	-- Guardians of Death, Guardians in Stone
+						["qg"] = 261895,	-- Thaze'ala
+						["coord"] = { 38.4, 34.4, MAP.MIDNIGHT.VAULTS_OF_ATALUTEK },
+					}),
+					q(95524, {	-- The Unremembered
+						["sourceQuest"] = 95522,	-- Guardians of Death, Guardians in Stone
+						["qg"] = 261895,	-- Thaze'ala
+						["coord"] = { 38.4, 34.4, MAP.MIDNIGHT.VAULTS_OF_ATALUTEK },
+					}),
+					q(95954, {	-- An Ancient Foe
+						["sourceQuests"] = {
+							95523,	-- Worthy of the Past
+							95524,	-- The Unremembered
+						},
+						["qg"] = 262281,	-- Thaze'ala
+						["coords"] = {	-- Depends where you turn in previous quests
+							{ 39.4, 49.7, MAP.MIDNIGHT.VAULTS_OF_ATALUTEK },	-- The Statue of Let'aka
+							{ 43.9, 56.1, MAP.MIDNIGHT.VAULTS_OF_ATALUTEK },	-- The Statue of Gal'fon
+						},
+					}),
+					q(95525, {	-- A Worthy Vigil
+						["sourceQuest"] = 95954,	-- An Ancient Foe
+						["qg"] = 263557,	-- Thaze'ala
+						["coord"] = { 83.0, 45.2, 2636 },	-- Vault of Restless Bones
+						["groups"] = {
+							i(280278),	-- Temple Guardian's Ring
+							i(280277),	-- Weathered Med'jai Signet
+						},
+					}),
+				}),
 				header(HEADERS.AchCriteria, 63641.06, {	-- Don't be Afrayed
 					q(93841, {	-- Ghosts of the Arena
 						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog
@@ -777,8 +912,55 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						},
 					}),
 				}),
-				--header(HEADERS.AchCriteria, 63641.10, {	-- Living Legend
-				--}),
+				header(HEADERS.AchCriteria, 63641.10, {	-- Living Legend
+					q(96523, {	-- Living Legend
+						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog
+						["qg"] = 265476,	-- Kehiah
+						["coord"] = { 59.4, 50.9, MAP.MIDNIGHT.THE_COILED_ISLE },
+					}),
+					q(96539, {	-- Last Resort
+						["sourceQuest"] = 96523,	-- Living Legend
+						["qg"] = 265660,	-- Kehiah
+						["coord"] = { 45.6, 48.3, MAP.MIDNIGHT.ZULAMAN },
+					}),
+					q(96540, {	-- Strong Hands
+						["sourceQuest"] = 96539,	-- Last Resort
+						["qg"] = 265661,	-- Kehiah
+						["coord"] = { 44.4, 48.1, MAP.MIDNIGHT.ZULAMAN },
+					}),
+					q(96541, {	-- Strong Mind
+						["sourceQuest"] = 96540,	-- Strong Hands
+						["qg"] = 265662,	-- Kehiah
+						["coord"] = { 43.6, 47.9, MAP.MIDNIGHT.ZULAMAN },
+					}),
+					q(96543, {	-- Root of Survival
+						["sourceQuest"] = 96541,	-- Strong Mind
+						["qg"] = 265660,	-- Kehiah
+						["coord"] = { 45.6, 48.3, MAP.MIDNIGHT.ZULAMAN },
+						["groups"] = {
+							i(279995),	-- Critter Meat (QI!)
+							o(654240, {	-- Mound of Dirt
+								i(279994),	-- Withered Root (QI!)
+							}),
+						},
+					}),
+					q(96544, {	-- Bravely Burning
+						["sourceQuest"] = 96543,	-- Root of Survival
+						["qg"] = 265660,	-- Kehiah
+						["coord"] = { 45.6, 48.3, MAP.MIDNIGHT.ZULAMAN },
+					}),
+					q(96545, {	-- Strong Voice
+						["sourceQuest"] = 96544,	-- Bravely Burning
+						["qg"] = 265666,	-- Kehiah
+						["coord"] = { 45.7, 49.0, MAP.MIDNIGHT.ZULAMAN },
+					}),
+					q(96546, {	-- Strong Heart
+						["sourceQuest"] = 96545,	-- Strong Voice
+						["qg"] = 265668,	-- Kehiah
+						["coord"] = { 45.3, 48.7, MAP.MIDNIGHT.ZULAMAN },
+						["groups"] = { i(280201) },	-- Book of Storytime (TOY!)
+					}),
+				}),
 				header(HEADERS.AchCriteria, 63641.11, {	-- The Monster's Mother
 					q(96439, {	-- Gone Dark
 						--["sourceQuest"] = 92924,	-- What Lies Beyond the Fog

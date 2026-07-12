@@ -78035,8 +78035,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 140285,,138490,40,0,56424,15,0
 140286,,138490,10,0,56423,16,0
 140287,,138490,16,0,56422,17,0
-140288,,138490,16,0,56421,18,0
-140289,,138490,40,0,56420,19,0
+140289,,138490,40,0,56420,18,0
 140290,"Cliffside Wylderdrake Skins",0,0,4,0,0,0
 140291,"Red Scales",140290,1,0,56437,0,0
 140292,"Green Scales",140290,1,0,56438,1,0
@@ -78051,6 +78050,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 140302,"Silver and Purple Armor",140300,1,0,56447,1,0
 140303,"Silver and Blue Armor",140300,1,0,56448,2,0
 140304,"Gold and Black Armor",140300,1,0,56449,3,0
+140404,,138736,15,0,56514,14,0
 140306,"Gold and Orange Armor",140300,1,0,56451,4,0
 140308,"Steel and Yellow Armor",140300,1,0,56453,5,0
 140309,"Cliffside Wylderdrake Horns and Manes",0,0,4,0,0,0
@@ -78138,7 +78138,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 140401,,138736,4,0,56517,11,0
 140402,,138736,18,0,56516,12,0
 140403,,138736,2,0,56515,13,0
-140404,,138736,15,0,56514,14,0
 140405,,138736,8,0,56513,15,0
 140406,,138736,15,0,56512,16,0
 140407,,138736,5,0,56511,17,0
@@ -78401,6 +78400,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 140727,"10.0 Climbing - WQ - 02 - Rescue Marmoset (JDA)",0,1,8,0,0,4096
 140728,,140727,0,0,56792,0,0
 140729,,140135,0,0,56793,1,0
+140808,,137484,1,0,56825,20,32
 140730,"10.0 Valdrakken - Open Orientation - Valdrakken Quest Done (LAS)",0,0,4,0,0,4096
 140731,,140730,1,0,56794,0,0
 140732,"10.0 Valdrakken - Open Orientation - Dragonscale Basecamp Quest Done (LAS)",0,0,4,0,0,4096
@@ -78476,7 +78476,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 140805,,140804,1,0,56823,0,0
 140806,"10.0 Intro - Renown Vendor Tutorial - Buy Item (JDA)",0,1,8,0,0,4096
 140807,,140806,1,0,56824,0,0
-140808,,137484,1,0,56825,20,32
 140809,"10.07 - Forbidden Reach - Treasure Room - Mysterious Cache Looted (MDE)",0,0,4,0,0,4096
 140810,"Mysterious Cache Looted",140809,1,0,56826,0,16
 140812,,140811,5,0,56827,0,2
@@ -78899,7 +78898,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 142060,Enyobon,142058,1,0,57433,1,1
 142061,Stormamu,142058,1,0,57434,2,1
 142062,Swog,142058,1,0,57435,3,1
-142151,,142146,1,0,57493,4,48
 142063,"Fish up 50 items while looking good.",0,0,4,0,0,0
 142064,"Items fished up",142063,50,0,57436,0,1
 142065,"Items crafted",0,0,4,0,0,1
@@ -78976,6 +78974,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 142148,,142146,1,0,57490,1,48
 142149,,142146,1,0,57491,2,48
 142150,,142146,1,0,57492,3,48
+142151,,142146,1,0,57493,4,48
 142152,,142146,1,0,57494,5,48
 142153,,142146,1,0,57495,6,48
 142154,,142146,1,0,57496,7,48
@@ -79694,6 +79693,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 143182,"Discuss Plan",143181,1,0,58232,0,0
 143183,"10.1 UG - Ch 1 - Primalist Blockade - Step 2A - Fire Portals Destroyed (JSS)",0,0,4,0,0,0
 143184,"Fire Portals Destroyed",143183,2,0,58223,0,0
+143526,,143520,1,0,58385,5,48
 143185,"10.1 Underground - Campaign - Ch 1 - Q05 - The Throughway - S2 - Completion Criteria (JSS)",0,0,4,0,0,0
 143187,"10.1 UG - Ch 1 - Primalist Blockade - Step 3A1 - Acquire Portalkeeper's Fire Key (JSS)",0,0,4,0,0,0
 143189,"Fire Key Acquired",143187,1,0,58224,0,0
@@ -79977,7 +79977,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 143523,,143520,1,0,58382,2,48
 143524,,143520,1,0,58383,3,48
 143525,,143520,1,0,58384,4,48
-143526,,143520,1,0,58385,5,48
 143527,"Zaralek Cavern - Gold",0,0,4,0,0,0
 143528,,143527,1,0,58386,0,48
 143529,,143527,1,0,58387,1,48
@@ -80398,6 +80397,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 144019,"Cliffkeeper Bouldani slain",143185,1,0,58225,1,0
 144020,,144033,8,0,58695,0,1
 144021,"Tonk Commander completed",0,0,4,0,0,1
+144146,,70997,100,0,58786,9,0
 144022,"Tonk Commander completed",144021,1,0,58690,0,1
 144023,"Earth Primalists slain",143185,100,9,0,0,0
 144024,,144023,6,0,58692,1,1
@@ -80478,7 +80478,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 144143,,70970,100,0,58783,9,0
 144144,,70979,100,0,58784,9,0
 144145,,70988,100,0,58785,9,0
-144146,,70997,100,0,58786,9,0
 144147,,71006,100,0,58787,9,0
 144148,,21672,100,0,58775,9,0
 144149,,21676,100,0,58776,9,0
@@ -81043,11 +81042,11 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 144808,"1500 rating",144807,1500,0,59172,0,2
 144809,"Earn a 2000 personal rating in the 3v3 bracket of the arena in Season 35 (Dragonflight 2)",0,0,4,0,0,0
 144810,"2000 rating",144809,2000,0,59172,0,2
-144896,"Charred Egg",144892,1,0,59226,3,0
 144811,"Earn a 2200 personal rating in the 3v3 bracket of the arena in Season 35 (Dragonflight 2)",0,0,4,0,0,0
 144812,"2200 rating",144811,2200,0,59172,0,2
 144813,"Earn a 2600 personal rating in the 3v3 bracket of the arena in Season 35 (Dragonflight 2)",0,0,4,0,0,0
 144814,"2600 rating",144813,2600,0,59172,0,2
+144902,"Well-Chewed Chest",144892,1,0,59219,8,0
 144815,"Earn a 2800 personal rating in the 3v3 bracket of the arena in Season 35 (Dragonflight 2)",0,0,4,0,0,0
 144816,"2800 rating",144815,2800,0,59172,0,2
 144817,"Earn a 3000 personal rating in the 3v3 bracket of the arena in Season 35 (Dragonflight 2)",0,0,4,0,0,0
@@ -81120,11 +81119,11 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 144893,"Ancient Zaqali Chest",144892,1,0,59222,0,0
 144894,"Blazing Shadowflame Chest",144892,1,0,59220,1,0
 144895,"Bloody Body",144892,1,0,59225,2,0
+144896,"Charred Egg",144892,1,0,59226,3,0
 144897,"Chest of the Flights",144892,1,0,59224,4,0
 144898,"Crystal-Encased Chest",144892,1,0,59228,5,0
 144899,"Long-Lost Cache",144892,1,0,59223,6,0
 144900,"Old Trunk",144892,1,0,59227,7,0
-144902,"Well-Chewed Chest",144892,1,0,59219,8,0
 144903,,144885,0,0,59229,5,32
 144904,"Current Patch - Login Video [DNT] (DO NOT EDIT)",0,0,4,0,0,0
 144905,,144904,0,0,59230,0,0
@@ -81283,7 +81282,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 145084,,145083,0,0,59332,0,0
 145085,"Defeat Scalecommander Sarkareth after cultivating a Mysterious Lump and hurling it into the Emptiness Between Stars on Normal difficulty or higher.",0,0,4,0,0,0
 145086,"Hurl a Lump of Flesh into the Emptiness Between Stars.",145085,1,0,59333,0,0
-145163,"Trainer Orlogg",145159,1,0,59394,3,0
 145087,"Vale of Eternal Blossoms bonfire desecrated",0,1,8,0,0,8193
 145088,,145087,0,0,59334,0,1
 145089,,145087,0,0,59335,1,1
@@ -81360,10 +81358,12 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 145160,"Explorer Bezzert",145159,1,0,59391,0,0
 145161,Shinmura,145159,1,0,59392,1,0
 145162,"Delver Mardei",145159,1,0,59393,2,0
+145163,"Trainer Orlogg",145159,1,0,59394,3,0
 145164,"Family Battler of Zaralek Cavern",0,0,4,0,0,0
 145165,"Aquatic Battler of Zaralek Cavern",145164,1,0,59395,0,0
 145166,"Beast Battler of Zaralek Cavern",145164,1,0,59396,1,0
 145167,"Critter Battler of Zaralek Cavern",145164,1,0,59397,2,0
+145259,,145181,0,0,59469,14,0
 145168,"Dragonkin Battler of Zaralek Cavern",145164,1,0,59398,3,0
 145169,"Elemental Battler of Zaralek Cavern",145164,1,0,59399,4,0
 145170,"Flying Battler of Zaralek Cavern",145164,1,0,59400,5,0
@@ -81447,7 +81447,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 145256,,145181,0,0,59466,11,0
 145257,,145181,0,0,59467,12,0
 145258,,145181,0,0,59468,13,0
-145259,,145181,0,0,59469,14,0
 145260,,145181,0,0,59470,15,0
 145261,,145181,0,0,59471,16,0
 145262,,145181,0,0,59472,17,0
@@ -81690,6 +81689,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 145568,"Emote /cold at a player on fire from the Set of Matches toy",145567,1,0,59601,0,1
 145569,"Angry Trader disagreed at",0,0,4,0,0,8193
 145570,,145569,1,0,59602,0,1
+145649,"Statistic - 10.1 Raid - Aberrus - Zskarn - LFR",0,0,4,0,0,0
 145571,"Set of Matches used in Valdrakken, Iskaara, Dragonscale Basecamp, and Maruukai",0,0,4,0,0,1
 145572,Valdrakken,145571,1,0,59603,0,1
 145573,Iskaara,145571,1,0,59604,1,1
@@ -81768,7 +81768,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 145646,,145645,0,0,59650,0,2
 145647,"Statistic - 10.1 Raid - Aberrus - Djaradin Elder - LFR",0,0,4,0,0,0
 145648,,145647,0,0,59651,0,2
-145649,"Statistic - 10.1 Raid - Aberrus - Zskarn - LFR",0,0,4,0,0,0
 145650,,145649,0,0,59652,0,2
 145651,"Statistic - 10.1 Raid - Aberrus - Lava Hydra - LFR",0,0,4,0,0,0
 145652,,145651,0,0,59653,0,2
@@ -82316,6 +82315,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 146281,"[DNT] Kill Base Spawns 001 - North",146280,1,0,60060,0,0
 146282,"10.1.5 - Time Rifts - Scourge - Base Spawns 002",0,0,4,0,0,0
 146283,"[DNT] Kill Base Spawns 002 - Center",146282,1,0,60061,0,0
+146390,,145066,0,0,60108,10,0
 146284,"10.1.5 - Time Rifts - Scourge - Base Spawns 003",0,0,4,0,0,0
 146285,"[DNT] Kill Base Spawns 003 - South",146284,1,0,60062,0,0
 146287,"Defeat Wise Mari without being hit by Corrupted Water, Hydrolance, or Wash Away in Temple of the Jade Serpent on Heroic Difficulty.",15115,1,0,60063,1,2
@@ -82400,7 +82400,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 146387,,145066,0,0,60107,7,0
 146388,,145066,0,0,60105,8,0
 146389,,145066,0,0,60106,9,0
-146390,,145066,0,0,60108,10,0
 146391,,95173,0,0,60109,2,0
 146392,"10.1.5 Professions - Naxxramas Restoration - Unlocked Naxxramas Feature",0,1,8,0,0,0
 146393,,146392,0,0,60110,0,0
@@ -82753,6 +82752,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 146784,,146786,0,0,60221,4,2
 146785,,146786,0,0,60222,3,2
 146786,"Timewalking dungeons completed",146779,1,8,0,0,8193
+147165,"Destroy Fel Pylons",147164,3,0,60413,0,0
 146787,"Trading Post - Timewalking Dugneons (Burning Crusade) - 5",0,0,4,0,0,0
 146788,"Timewalking dungeons completed",146787,5,5,0,0,8193
 146789,,146788,0,0,60218,0,2
@@ -83049,7 +83049,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 147162,"10.1.5 Time Rifts - Demons - Solo - Slayer (YGR)",0,0,4,0,0,0
 147163,"Find and slay The Slayer",147162,1,0,60366,0,0
 147164,"10.1.5 Time Rifts - Demons - Solo - Fel Pylons (YGR)",0,0,4,0,0,0
-147165,"Destroy Fel Pylons",147164,3,0,60413,0,0
 147166,"Manifested Timeways achievement criteria",0,0,4,0,0,0
 147167,"Defeat Manifested Timeways after activating 3 Chaotic Time portals.",147166,1,0,60367,0,0
 147168,"Defeat as many Great Glorious Alliance as possible",146915,0,0,60368,0,0
@@ -83297,6 +83296,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 147476,"Reunite a lost slime with its parent.",147475,1,0,60623,0,0
 147477,"10.1.5 Time Rifts - Black Empire - Base Enemies 1",0,0,4,0,0,0
 147478,"Defeat as many followers of the Old Gods as possible",147477,1,0,59104,0,0
+147655,"Dirt Mound Looted",147654,1,0,60753,0,0
 147480,"Is Wearing the Goggles",147479,1,0,60624,0,0
 147482,,147481,1,0,60625,0,0
 147483,"10.1.5 Time Rifts - Black Empire - Base Enemies 2",0,0,4,0,0,0
@@ -83449,7 +83449,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 147652,"Day 1 Secrets",0,0,4,0,0,0
 147653,"Ceremonial Spear Returned",147652,1,0,60752,0,0
 147654,"Community Rumors Solved",0,5,5,0,0,8193
-147655,"Dirt Mound Looted",147654,1,0,60753,0,0
 147656,"Community Rumors Solved",0,10,5,0,0,8193
 147657,"Dirt Mound Looted",147656,1,0,60753,0,0
 147658,"Tools of the Trade",0,0,4,0,0,2
@@ -84597,7 +84596,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 148889,"Elusive Elder Frigidpelt",148887,1,0,61474,1,0
 148890,"Elusive Tempest Lizard",148887,1,0,61475,2,0
 148891,"Elusive Ferocious Titanfang",148887,1,0,61476,3,0
-149061,"Suja Deceived",149056,1,0,61607,4,0
 148892,"Elusive Deepwater Salamanther",148887,1,0,61477,4,0
 148893,"Elusive Proto Skyterror",148887,1,0,61478,5,0
 148894,"Elusive Cliffdweller Vorquin",148887,1,0,61479,6,0
@@ -84756,6 +84754,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 149058,"Grunt Grimful Deceived",149056,1,0,61604,1,0
 149059,"Ambassador Dawnsinger Deceived",149056,1,0,61605,2,0
 149060,"Branzlit Deceived",149056,1,0,61606,3,0
+149061,"Suja Deceived",149056,1,0,61607,4,0
 149062,"Deliver Forged Documents (Alliance)",0,0,4,0,0,0
 149063,"Master Mathias Shaw Deceived",149062,1,0,61608,0,0
 149064,"Jelinek Sharpshear Deceived",149062,1,0,61612,4,0
@@ -85159,7 +85158,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 149467,"Hear Nolaki's plan",149466,0,0,61896,0,0
 149470,"Collect Research Clues",0,100,4,0,0,0
 149471,"Clue Spots",149470,3,0,61898,0,0
-149550,"Headless Horseman",149549,1,0,61939,0,2
 149472,"Catch Research Clues",0,100,4,0,0,0
 149473,"Juicy Clues",149472,3,0,61899,0,0
 149474,"Defeat and collect Information-Stuffed Clues",0,100,4,0,0,0
@@ -85233,6 +85231,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 149547,"Kill the Headless Horseman.",0,1,8,0,0,0
 149548,"Headless Horseman",149547,1,0,5833,0,2
 149549,"Kill the Headless Horseman while all 4 wicker curses are applied",0,0,4,0,0,0
+149550,"Headless Horseman",149549,1,0,61939,0,2
 149552,"Don't Lose Your Head, Man",4995,0,0,61940,2,0
 149553,"Headless Horseman",149547,1,0,61941,1,2
 149554,"Kill the Headless Horseman.",0,1,4,0,0,0
@@ -86077,6 +86076,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 150690,"1500 rating",150689,1500,0,62679,0,2
 150691,"Earn a 2200 personal rating in the 2v2 bracket of the arena in Season 36 (Dragonflight 3)",0,0,4,0,0,0
 150692,"2200 rating",150691,2200,0,62389,0,2
+151068,,151067,1,0,62823,0,48
 150693,"Earn a 2400 personal rating in the 2v2 bracket of the arena in Season 36 (Dragonflight 3)",0,0,4,0,0,0
 150694,"2400 rating",150693,2400,0,62389,0,2
 150695,"Earn a 2600 personal rating in the 2v2 bracket of the arena in Season 36 (Dragonflight 3)",0,0,4,0,0,0
@@ -86140,6 +86140,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 150754,,150753,1,0,62709,0,0
 150757,"Portal to Tyrhold Taken",0,0,4,0,0,0
 150758,"Portal to Tyrhold Taken",150757,0,0,62716,0,0
+151069,,151067,1,0,62824,1,48
 150761,"PvP Season 36 - Set Collection",0,0,4,0,0,2
 150762,"Collect any armor set from Dragonflight Season 3 (PvP Season 36).",150761,1,0,62761,0,2
 150763,,58604,1,0,62762,63,0
@@ -86223,8 +86224,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 151065,,151050,5,0,62831,14,0
 151066,,151050,6,0,62832,15,0
 151067,"Dragonriding Glyphs - Emerald Dream",0,0,4,0,0,0
-151068,,151067,1,0,62823,0,48
-151069,,151067,1,0,62824,1,48
 151070,,151067,1,0,62825,2,48
 151071,,151067,1,0,62826,3,48
 151072,,151067,1,0,62827,4,48
@@ -86790,6 +86789,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 151747,"Herbs, ores, skins, or fish gathered",149959,1,0,62096,2,1
 151748,"Herbs, ores, skins, or fish gathered",149971,1,0,62193,2,1
 151749,"Herbs, ores, skins, or fish gathered",149962,1,0,62191,2,1
+151924,,151923,0,0,63351,0,0
 151750,"Obtain the maximum skill points in a ""Khaz Algar"" category of one primary profession.",0,1,8,0,0,0
 151751,Alchemy,151750,100,0,63282,0,2
 151752,Blacksmithing,151750,100,0,63283,1,2
@@ -86866,7 +86866,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 151850,"Statistic: Aspect's Dreaming Crests earned",0,0,4,0,0,0
 151851,,151850,0,0,63312,0,0
 151923,"War supplies donated",0,3,5,0,0,8193
-151924,,151923,0,0,63351,0,0
 151925,,151923,0,0,63352,1,0
 151926,,151923,0,0,63354,2,0
 151927,,151923,0,0,63355,3,0
@@ -86948,6 +86947,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 152057,"Defeat the leper gnome memories!",0,50,9,0,0,8193
 152058,"Defeat the remembered leper gnomes",152057,1,0,63441,0,2
 152059,"11.0 Delves - Kobolds01 - V03 - Magic in the Air (STM)",0,0,4,0,0,0
+152991,,151376,450,0,64339,1,0
 152060,"Speak to Dagran Thaurissan II",152059,0,0,63442,0,32
 152061,"Bundles of candles acquired and used",152059,0,0,62401,1,32
 152062,"11.0 Delves - Kobolds01 - V03 - Progress Bar + Candles - (STM)",0,100,4,0,0,1
@@ -87025,7 +87025,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 152986,,152985,0,0,64337,0,0
 152989,"Delivery to Zenata!",0,100,4,0,0,0
 152990,"Bring Eadweard's crate to Zenata",152989,1,0,64341,0,0
-152991,,151376,450,0,64339,1,0
 152992,,151376,450,0,64340,2,0
 152993,,151682,463,0,64339,1,0
 152994,,151682,463,0,64340,2,0
@@ -87092,7 +87091,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153077,"Delivery to Roska!",0,100,4,0,0,0
 153078,"Deliver a crate of artifacts to Roska to study",153077,1,0,64411,0,0
 153079,"Delivery to Nirobin!",0,100,4,0,0,0
-153436,,153428,1,0,64576,7,32
 153080,"Deliver a crate of artifacts to Nirobin to study",153079,1,0,64412,0,0
 153081,"Achievement - Dragonflight Season 3 Hero (Top 0.1%)",0,0,4,0,0,0
 153082,,153081,1,0,64413,0,2
@@ -87231,7 +87229,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153224,"1500 rating",153223,1500,0,64462,0,2
 153225,"Earn a 3000 personal rating in the 3v3 bracket of the arena in Season 37 (Dragonflight 4)",0,0,4,0,0,0
 153226,"3000 rating",153225,3000,0,64462,0,2
-153437,,153428,1,0,64577,8,32
 153227,"Earn a 2800 personal rating in the 3v3 bracket of the arena in Season 37 (Dragonflight 4)",0,0,4,0,0,0
 153228,"2800 rating",153227,2800,0,64462,0,2
 153229,"Earn a 3000 personal rating in rated battlegrounds in Season 37 (Dragonflight 4)",0,0,4,0,0,0
@@ -87309,7 +87306,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153347,,58604,1,0,64518,64,0
 153348,"Level third character to 80.",0,2,4,0,0,0
 153349,,153348,80,0,64519,0,2
-153438,,153428,1,0,64580,9,32
 153350,"Level fourth character to 80.",0,2,4,0,0,0
 153351,,153350,80,0,64520,0,2
 153352,"Level fifth character to 80.",0,2,4,0,0,0
@@ -87396,6 +87392,9 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153433,,153428,1,0,64573,4,32
 153434,,153428,1,0,64574,5,32
 153435,,153428,1,0,64575,6,32
+153436,,153428,1,0,64576,7,32
+153437,,153428,1,0,64577,8,32
+153438,,153428,1,0,64580,9,32
 153439,,153428,1,0,54818,10,32
 153440,"Aid the Timewalkers by completing the achievements below.",0,0,4,0,0,0
 153441,,153440,1,0,64581,0,32
@@ -87493,6 +87492,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153540,"Earn Rated Participation Currency in Dragonflight Season 4 (A) - Mount",0,0,4,0,0,0
 153541,"Win Rated PvP matches during Dragonflight Season 4 while at 1000 rating or higher",153540,2400,0,64639,0,1
 153542,"Earn Rated Participation Currency in Dragonflight Season 4 (H) - Mount",0,0,4,0,0,0
+153804,,153803,1,0,64781,0,0
 153543,"Win Rated PvP matches during Dragonflight Season 4 while at 1000 rating or higher",153542,2400,0,64639,0,1
 153544,"Obtain the Draconic Gladiator's Drake from Dragonflight Season 4.",0,0,4,0,0,0
 153545,,153544,0,0,65531,0,2
@@ -87571,6 +87571,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153641,,153638,80,0,5212,2,0
 153642,,153638,80,0,5212,3,0
 153643,,153638,80,0,5212,4,0
+153912,"Rashok, the Elder",153907,1,0,64961,4,0
 153644,"11.0 Delves - Kobyss02 - V04 - Speak with the Nerubian Researcher (STM)",0,0,4,0,0,0
 153645,"Speak with the Nerubian Researcher",153644,0,0,64688,0,32
 153646,"11.0 Delves - Z5 - Kobyss - Step 2 - Destroy Bodies - (STM)",0,0,4,0,0,0
@@ -87642,7 +87643,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153801,"Earn Conquest While Combatant (H) - Saddle (39)",0,0,4,0,0,1
 153802,"Win Rated PvP matches while at 1000 rating or higher",153801,2400,0,64778,0,1
 153803,"11.0 Z02 - Campaign - Ch01 - Q04 - Scenario - Steal Candle Crown - Enter Scenario (DTM)",0,0,4,0,0,4096
-153804,,153803,1,0,64781,0,0
 153805,"11.0 Z1 - Theater - Scenario - (KEF)/PRK - Duel Play Act 4: Kill Boss General L (KEF)",0,0,4,0,0,0
 153806,"General Emmerich defeated",153805,1,0,69396,0,32
 153807,"11.0 Z1 - Theater - Scenario - (KEF)/PRK - Take a Bow (KEF)",0,1,4,0,0,0
@@ -87716,7 +87716,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153909,"The Amalgamation Chamber",153907,1,0,64958,1,0
 153910,"The Forgotten Experiments",153907,1,0,64959,2,0
 153911,"Assault of the Zaqali",153907,1,0,64960,3,0
-153912,"Rashok, the Elder",153907,1,0,64961,4,0
 153913,"The Vigilant Steward, Zskarn",153907,1,0,64962,5,0
 153914,Magmorax,153907,1,0,64963,6,0
 153915,"Echo of Neltharion",153907,1,0,64964,7,0
@@ -87792,6 +87791,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 153994,"11.0 Z1 - Theater - Scenario - (KEF)/PRK - (Combat) Defend Against Deepflayers (RPS)",0,0,4,0,0,0
 153995,"Defeat as many deepflayers as possible",153994,0,0,64827,0,32
 153996,"11.0 Z1 - Theater - Scenario - (KEF)/PRK - Shepherd the Stampede (RPS)",0,1,4,0,0,0
+154086,"[DNT] A-C",154118,0,0,64858,1,1
 153997,"Stampeding Shalehorns shooed",153996,10,0,64828,0,0
 153998,"Reach a High Watermark of 489 in Every Slot During Dragonflight Season 4 (Outgrow Whelpling's Awakened Crests)",0,0,4,0,0,0
 153999,,153998,489,0,64829,0,0
@@ -87878,7 +87878,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 154083,"Brightbursts launched",0,5,5,0,0,8193
 154084,,154083,0,0,64878,0,1
 154085,"Self-care completed",0,0,4,0,0,1
-154086,"[DNT] A-C",154118,0,0,64858,1,1
 154087,"[DNT] A-T",154120,0,0,64859,0,1
 154088,"[DNT] A-N",154122,0,0,64860,1,1
 154089,"Lunar Preservation completed",0,0,4,0,0,8193
@@ -88337,7 +88336,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 154587,"Potion of Unwavering Focus",154577,1,0,65280,6,0
 154588,"Sending Dragon Isles Drakes: White Scales through an achiement reward to players that have completed ""Time to Process"" (QID77344) but not gotten the reward.",0,0,4,0,0,0
 154589,"Has completed quest and Meets condition",154588,0,0,65284,0,0
-154675,"Ancient of Lore",154661,1,0,65340,2,16
 154590,"10.2.5 Gilneas - Complete Gilneas Chain (CGT)",0,1,4,0,0,32
 154591,,154590,1,0,65287,0,2
 154592,"Return to Lordaeron",154590,1,8,0,1,0
@@ -88411,6 +88409,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 154672,"Blessing of Kings",154661,1,0,65337,7,16
 154673,"Baron Geddon",154661,1,0,65338,6,16
 154674,Hogger,154661,1,0,65339,14,16
+154675,"Ancient of Lore",154661,1,0,65340,2,16
 154676,"Arcane Golem",154661,1,0,65341,4,16
 154677,Abomination,154661,1,0,65343,0,16
 154678,"Grove Tender",154661,1,0,65344,12,16
@@ -88423,6 +88422,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 154685,"11.0 Delves - Nerubians01 - V04 - - Mole Machine boarded (STM)",0,0,4,0,0,0
 154686,"Mole Machine boarded",154685,0,0,65350,0,32
 154693,"11.0 Delves - Nerubians01 - V04 - - Ask Dark Iron Dwarf where the treasure is (STM)",0,0,4,0,0,0
+154776,,154775,75,0,63292,0,2
 154694,"Ask Maklin Drillstab where the treasure is",154693,0,0,65352,0,32
 154695,"11.0 Delves - Nerubians01 - V04 - - Treasure clues found (STM)",0,0,4,0,0,0
 154696,"Lost Treasures found",154695,8,0,65355,1,32
@@ -88497,7 +88497,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 154773,"Obtain 60 skill points in Algari Tailoring",0,0,4,0,0,0
 154774,,154773,60,0,63292,0,2
 154775,"Obtain 75 skill points in Algari Tailoring",0,0,4,0,0,0
-154776,,154775,75,0,63292,0,2
 154777,"Obtain 25 skill points in Algari Herbalism",0,0,4,0,0,0
 154778,,154777,25,0,63286,0,2
 154779,"Obtain 50 skill points in Algari Herbalism",0,0,4,0,0,0
@@ -89272,7 +89271,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 155675,"10.2.7 Timewalking Season - Pandaria - Journey - World Boss - 07 - Niuzao, the Black Ox",0,0,4,0,0,0
 155676,"10.2.7 Timewalking Season - Pandaria - Journey - World Boss - 08 - Xuen, the White Tiger",0,0,4,0,0,0
 155677,"10.2.7 Timewalking Season - Pandaria - Journey - World Boss - 09 - Ordos",0,0,4,0,0,0
-155852,"Alley Cat",155850,1,0,66032,1,0
 155678,"10.2.7 Timewalking Season - Pandaria - Journey - Party - 09 - Timeless Isle",0,0,4,0,0,0
 155679,,155678,1,0,65854,2,32
 155680,,155678,1,0,65852,0,32
@@ -89377,6 +89375,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 155784,"The Sunset Brewgarden",155774,1,0,66004,9,0
 155785,Writhingwood,155774,1,0,66005,10,0
 155786,Zan'vess,155774,1,0,66006,11,0
+155866,Hogger,155850,1,0,65339,15,0
 155787,"10.2.7 Timewalking Season - Pandaria - Journey - Explore - 05 - Townlong Steppes",0,0,4,0,0,0
 155788,"Gao-Ran Battlefront",155787,1,0,65984,0,0
 155789,Kri'vess,155787,1,0,65985,1,0
@@ -89442,6 +89441,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 155849,"Zhu's Descent",155831,1,0,65953,17,0
 155850,"Collect at least 10 Hearthstone Cards",0,10,8,0,0,8193
 155851,Abomination,155850,1,0,65343,0,0
+155852,"Alley Cat",155850,1,0,66032,1,0
 155853,"Ancient of Lore",155850,1,0,65340,2,0
 155854,"Arcane Explosion",155850,1,0,65335,3,0
 155855,"Arcane Golem",155850,1,0,65341,4,0
@@ -89455,7 +89455,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 155863,"Forbidden Words",155850,1,0,65336,12,0
 155864,"Grove Tender",155850,1,0,65344,13,0
 155865,"Hand of Protection",155850,1,0,65370,14,0
-155866,Hogger,155850,1,0,65339,15,0
 155867,"Jive, Insect!",155850,1,0,65332,16,0
 155868,Preparation,155850,1,0,65333,17,0
 155869,Pyroblast,155850,1,0,65328,18,0
@@ -89873,6 +89872,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 156651,"Volatile Pheromones recovered",156650,8,0,66459,0,32
 156652,"11.0 Delves - Evolved - V04 - Abomination lured  (STM)",0,0,4,0,0,0
 156653,"Abomination lured ",156652,0,0,66460,0,32
+156750,"Arathi priest saved",156749,1,0,66511,0,0
 156654,"11.0 Delves - Evolved - V04 - Abomination slain (STM)",0,0,4,0,0,0
 156655,"Crazed Abominations defeated",156654,3,0,66461,1,32
 156656,"11.0 Delves - Nerubians02 - V03 - Rescue Kobolds A, B and C - The Dread Pit (AAO)",0,0,4,0,0,0
@@ -89944,7 +89944,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 156744,,156743,0,0,66508,0,0
 156745,,156743,0,0,66509,1,0
 156749,"11.0 Delves - Kobyss01 - V02 - The Sinkhole - Speak to Priest",0,0,4,0,0,0
-156750,"Arathi priest saved",156749,1,0,66511,0,0
 156751,"Northrend Cup courses completed",0,5,5,0,0,8193
 156752,,156751,0,0,66512,0,0
 156753,"Northrend Cup courses completed",0,10,5,0,0,8193
@@ -90009,7 +90008,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 156819,"Confront Speaker Xanventh",156818,1,0,66548,0,32
 156820,"11.0 Delves - Nerubians03 - V02 - Stage 2 (Confront)",0,0,4,0,0,0
 156822,"11.0 Delves - Nerubians03 - V02 - Defeat Boss",0,0,4,0,0,0
-156969,,156968,0,0,66636,0,0
 156823,"Speaker Xanventh defeated",156822,1,0,66546,0,2080
 156824,"11.0 Delves - Nerubians03 - V03 - Step 1 (ADT)",0,0,4,0,0,0
 156825,"Discuss the situation with Friendly Nerubian",156824,1,0,66550,0,32
@@ -90151,6 +90149,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 156966,"[DNT] Daily - Celestial - East",0,2,5,0,0,4097
 156967,,156966,0,0,66637,0,0
 156968,"[DNT] Daily - Golden Lotus",0,2,5,0,0,4097
+156969,,156968,0,0,66636,0,0
 156970,"[DNT] Daily - Celestial - Yak",0,2,5,0,0,4097
 156971,,156970,0,0,66638,0,0
 156972,"[DNT] Daily - Celestial - Tiger",0,2,5,0,0,4097
@@ -90389,6 +90388,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 157239,,157225,1,0,53490,13,32
 157240,,157225,1,0,53491,14,32
 157241,,157225,1,0,53492,15,32
+157324,,157316,0,0,66802,7,2
 157243,"11.0 Delves - Kobyss01 - V02 - The Sinkhole - Strange Noises Investigated",0,0,4,0,0,0
 157244,"Strange noises investigated",157243,1,0,66758,0,0
 157245,"11.0 Delves - Kobyss01 - V03 - Speak with the Arathi Priest (STM)",0,0,4,0,0,0
@@ -90465,7 +90465,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 157321,,157316,0,0,66799,4,0
 157322,,157316,0,0,66800,5,32
 157323,"Defeat Commander Tel'vrak",157316,0,0,66801,6,0
-157324,,157316,0,0,66802,7,2
 157325,,157316,0,0,66803,8,2
 157326,,157316,0,0,66804,9,2
 157327,,157316,0,0,66805,10,2
@@ -91126,6 +91125,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 159833,,159827,1,0,38629,5,0
 159834,,159827,1,0,38630,6,0
 159835,,159827,1,0,38631,7,0
+159924,,159922,1,0,38615,1,0
 159836,"Nagrand (Outland) - Achievement - Alliance (char specific hidden copy)",0,0,4,0,0,2
 159837,"The Adventures of Corki",159836,0,4,0,0,8208
 159838,,159837,1,0,38663,0,0
@@ -91214,7 +91214,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 159921,,159916,1,0,38612,4,0
 159922,"The Warden's Secret",159908,0,4,0,3,8208
 159923,,159922,1,0,38614,0,0
-159924,,159922,1,0,38615,1,0
 159925,"Stonebreaker Hold",159908,0,4,0,4,8208
 159926,,159925,1,0,38616,0,0
 159927,,159925,1,0,38617,1,0
@@ -91989,6 +91988,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 160696,,160695,1,0,39561,0,0
 160697,"The Tidehunter",160674,0,4,0,9,8208
 160698,,160697,1,0,15282,0,0
+160777,"Overcoming Doubt",160757,1,0,19351,11,16
 160699,"Recruit all 8 characters into Fiona's travelling party in Eastern Plaguelands. (char specific hidden copy)",0,0,4,0,0,2
 160700,Fiona,160699,1,0,15624,0,0
 160701,"Gidwin Goldbraids",160699,1,0,15625,1,0
@@ -92067,7 +92067,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 160774,"Terrace of Ten Thunders",160757,1,0,19206,8,16
 160775,"Nectarbreeze Orchard",160757,1,0,19331,9,16
 160776,"The Battle for the Forest",160757,1,0,19350,10,16
-160777,"Overcoming Doubt",160757,1,0,19351,11,16
 160778,"Quests - Pandaria - Kun-Lai Summit - Alliance (char specific hidden copy)",0,0,4,0,0,2
 160779,"Westwind Rest",160778,1,0,19359,0,16
 160780,"The Yaungol Invasion",160778,1,0,19360,1,16
@@ -92290,6 +92289,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 160998,"A Pact with Death",160996,0,0,36956,1,16
 160999,"Undercover Sista",160996,0,0,37971,2,16
 161000,"Turtle Power",160996,0,0,37970,3,16
+161083,"Stick It To 'Em!",161073,1,0,40177,9,16
 161001,"A Friend of the Frogs",160996,0,0,36957,4,16
 161002,"Bring the Boom",160996,0,0,36958,5,16
 161003,"Everything Contained",160996,0,0,36979,6,16
@@ -92372,7 +92372,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 161080,"Storming the Manor",161073,1,0,40174,6,16
 161081,Drustfall,161073,1,0,40175,7,16
 161082,"Fighting With Fire",161073,1,0,40176,8,16
-161083,"Stick It To 'Em!",161073,1,0,40177,9,16
 161084,"Achievement - Uldir Wing 1 (char specific hidden copy)",0,0,4,0,0,2
 161085,Taloc,161084,1,0,40246,0,0
 161086,MOTHER,161084,1,0,40247,1,0
@@ -92831,6 +92830,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 161570,"The Coaglamation defeated",161567,1,0,67034,2,0
 161571,"Izo, the Grand Splicer defeated",161567,1,0,67035,3,0
 161572,"11.0 Dungeon - City of Threads (Heroic)",0,0,4,0,0,0
+161658,Legs,161652,1,0,67081,5,0
 161573,"Orator Krix'vizk defeated",161572,1,0,67032,0,0
 161574,"Fangs of the Queen defeated",161572,1,0,67033,1,0
 161575,"The Coaglamation defeated",161572,1,0,67034,2,0
@@ -92909,7 +92909,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 161655,Shoulder,161652,1,0,67078,2,0
 161656,Chest,161652,1,0,67079,3,0
 161657,Waist,161652,1,0,67080,4,0
-161658,Legs,161652,1,0,67081,5,0
 161659,Feet,161652,1,0,67082,6,0
 161660,Wrist,161652,1,0,67083,7,0
 161661,Hands,161652,1,0,67084,8,0
@@ -93228,6 +93227,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 161987,,161979,1,0,67374,1,0
 161988,"Earn a 3000 personal rating in Rated Battleground Blitz in Season 38 (TWW Season 1)",0,0,4,0,0,0
 161989,"3000 rating",161988,3000,0,67375,0,2
+162057,,162056,1,0,67408,0,0
 161990,"Earn a 2800 personal rating in Rated Battleground Blitz in Season 38 (TWW Season 1)",0,0,4,0,0,0
 161991,"2800 rating",161990,2800,0,67375,0,2
 161992,"Earn a 2600 personal rating in Rated Battleground Blitz in Season 38 (TWW Season 1)",0,0,4,0,0,0
@@ -93281,7 +93281,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 162041,,162040,1,0,67400,0,0
 162042,"Complete the Ara-kara, City of Echoes dungeon on Mythic or Mythic Keystone difficulty",0,0,4,0,0,4096
 162043,,162042,1,0,67401,0,0
-162133,,162131,1,0,67443,2,0
 162044,"Complete the Cinderbrew Meadery dungeon on Mythic or Mythic Keystone difficulty",0,0,4,0,0,4096
 162045,,162044,1,0,67402,0,0
 162046,"Complete the City of Threads dungeon on Mythic or Mythic Keystone difficulty",0,0,4,0,0,4096
@@ -93295,7 +93294,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 162054,"Complete The Stonevault dungeon on Mythic or Mythic Keystone difficulty",0,0,4,0,0,4096
 162055,,162054,1,0,67407,0,0
 162056,"Complete the Rookery dungeon on Mythic or Mythic Keystone difficulty",0,0,4,0,0,4096
-162057,,162056,1,0,67408,0,0
 162058,"Win Deephaul Ravine",0,1,4,0,0,8192
 162059,"Win Deephaul Ravine",162058,1,0,67324,0,2
 162060,"Complete 100 victories in Deephaul Ravine",0,100,5,0,0,8193
@@ -93362,6 +93360,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 162129,,162115,1,0,67440,6,0
 162130,,162115,1,0,67441,7,0
 162132,,162131,1,0,67442,0,0
+162133,,162131,1,0,67443,2,0
 162134,,162131,1,0,67444,4,0
 162137,,162131,1,0,67447,5,0
 162138,,162131,1,0,67448,3,0
@@ -93682,7 +93681,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 162472,,162471,0,0,67725,0,0
 162473,"Statistic - 11.0 Raid - Nerubian - Ulgrax - Normal",0,0,4,0,0,0
 162474,,162473,0,0,67666,0,2
-162571,,162568,1,0,64543,2,32
 162475,"Statistic - 11.0 Raid - Nerubian - Ulgrax - LFR",0,0,4,0,0,0
 162476,,162475,0,0,67667,0,2
 162477,"Allied Races: Earthen Unlocked",0,1,8,0,0,0
@@ -93759,6 +93757,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 162568,"Now THIS is Dragon Racing! (Hidden Copy)",0,0,4,0,0,0
 162569,,162568,1,0,64541,0,32
 162570,,162568,1,0,64542,1,32
+162571,,162568,1,0,64543,2,32
 162572,,162568,1,0,64544,3,32
 162573,,162568,1,0,64545,4,32
 162574,,162568,1,0,64546,5,32
@@ -94838,6 +94837,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 163804,,163793,1,0,68598,10,0
 163805,,163793,1,0,68599,11,0
 163806,,163793,1,0,68600,12,0
+163981,,163980,0,0,68705,0,0
 163807,"11.0 Z1 - Weekly Wrapper - Delves - Z1 and Z2 - (POC)",0,2,8,0,0,4096
 163808,,163807,1,0,68606,0,0
 163809,,163807,1,0,68607,1,0
@@ -94903,7 +94903,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 163887,"Friendhaver Grem",163885,0,0,68667,1,0
 163888,Kyrie,163885,0,0,68668,2,0
 163889,Ziriak,163885,0,0,68669,3,0
-163964,"Complete quests",0,0,4,0,0,0
 163890,"11.0 Z1 - Theater - Scenario - (KEF)/PRK - Comedy Act 4 ((KEF)/PRK) - Fix Attempt",0,0,4,0,0,0
 163891,"Overseer Roskarrag defeated",163890,0,0,68672,0,32
 163892,"Showing Critters /love",0,0,4,0,0,0
@@ -94974,6 +94973,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 163961,,163960,0,0,68695,0,0
 163962,"Delves completed",0,10,5,0,0,8193
 163963,,163962,0,0,68695,0,0
+163964,"Complete quests",0,0,4,0,0,0
 163965,"Fate of the Kirin Tor",163964,0,0,68696,0,48
 163966,"Farewell, friends",163964,0,0,68698,1,16
 163967,"Khaz Algor elite pets defeated",0,2,8,0,0,1
@@ -94989,7 +94989,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 163978,"Play performed",0,1,5,0,0,8193
 163979,,163978,0,0,68705,0,0
 163980,"Plays performed",0,5,5,0,0,8193
-163981,,163980,0,0,68705,0,0
 163982,"Plays performed",0,10,5,0,0,8193
 163983,,163982,0,0,68705,0,0
 163984,"Earthcrawl Mines",163974,1,0,69208,1,0
@@ -95047,7 +95046,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 164057,"Complete the delve achievements listed below.",0,0,4,0,0,0
 164058,,164057,0,0,68735,0,32
 164059,"Complete each story variant of Fungal Folly.",0,0,4,0,0,0
-164323,,164322,1,0,39136,0,0
 164060,"Complete each story variant of Kriegval's Rest.",0,0,4,0,0,0
 164061,"Earthenwork Stoneskitterer",163892,1,0,68732,9,0
 164062,"Cavern Skiplet",163892,1,0,68733,10,0
@@ -95207,7 +95205,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 164234,"Matriarch Charfuria",164227,0,0,68848,6,0
 164235,"Hungerer of the Deeps",164227,0,0,68849,7,0
 164236,"Spore-Infused Shalewing",164227,0,0,68850,8,0
-164410,,164409,1,0,38537,0,0
 164237,"Disturbed Earthgorger",164227,0,0,68851,9,0
 164238,"Beledar's Spawn",164227,0,0,68852,10,0
 164239,Deathtide,164227,0,0,68853,11,0
@@ -95294,6 +95291,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 164320,"The Unthinkable",164317,0,4,0,1,8208
 164321,,164320,1,0,39135,0,0
 164322,"Teaching the Meaning of Fear",164317,0,4,0,2,8208
+164323,,164322,1,0,39136,0,0
 164324,"The Heart of the Lich King",164317,1,8,0,3,8208
 164325,,164324,1,0,39137,0,0
 164326,,164324,1,0,39138,1,0
@@ -95380,6 +95378,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 164407,,164405,1,0,38535,1,0
 164408,"The Hand of Kargath",164402,1,0,38536,2,16
 164409,"Spinebreaker Post",164402,0,4,0,3,8208
+164410,,164409,1,0,38537,0,0
 164411,,164409,1,0,38538,1,0
 164412,,164409,1,0,38539,2,0
 164413,"The Mag'har",164402,1,0,38540,4,16
@@ -95975,6 +95974,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 166257,,166256,0,0,69203,0,0
 166258,"11.0 Z1 - Delves - Delver's Call - The Sinkhole - (STM)",0,0,4,0,0,4096
 166259,,166258,0,0,69204,0,0
+166503,"Page 14",152997,1,8,0,7,8192
 166260,"Statistic - Prioress Murrapray (Mythic)",0,0,4,0,0,0
 166261,,166260,0,0,68912,0,2
 166262,"11.0 Z1 - Delves - Delver's Call - Spiral Weave - (STM)",0,0,4,0,0,4096
@@ -96033,7 +96033,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 166374,"The Fangs, Hallowfall",166373,0,0,69255,0,16
 166375,"Sina's Yearning, Hallowfall",166373,0,0,69256,1,16
 166376,"Sanguine Grasps, Hallowfall",166373,0,0,69257,2,16
-166479,,163554,0,0,69321,18,0
 166377,"Dunelle's Kindness, Hallowfall",166373,0,0,69258,3,16
 166378,"Bleak Sand, Hallowfall",166373,0,0,69259,4,16
 166379,"Mereldar, Hallowfall",166373,0,0,69260,5,16
@@ -96111,6 +96110,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 166476,"11.0 Raid - Nerubian - Boss 07 - Achievement",0,0,4,0,0,0
 166477,"Anub'arash and Talazj gain the Bond of Friendship",166476,1,0,69319,0,0
 166478,,163554,0,0,69320,17,0
+166479,,163554,0,0,69321,18,0
 166480,,163554,0,0,69322,19,0
 166481,,163554,0,0,69323,20,0
 166482,,163554,0,0,69324,21,0
@@ -96128,7 +96128,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 166500,"Page 11",152997,1,8,0,6,8192
 166501,,166500,1,0,64347,0,2
 166502,,166500,1,0,69335,1,0
-166503,"Page 14",152997,1,8,0,7,8192
 166504,,166503,1,0,64348,0,2
 166505,,166503,1,0,69336,1,0
 166506,"Page 16",152997,1,8,0,8,8192
@@ -96857,6 +96856,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 167877,,167876,0,0,69806,0,0
 167878,"Drink the Potion",0,0,4,0,0,4096
 167879,"Drink the Rat Potion",167878,0,0,69807,0,0
+167969,"The Case of Pet Games",167967,0,0,69851,7,16
 167880,"11.0 Z3 - Max-Level Campaign - Finale Scenario - Step 1 - N Logic - SJC",0,0,4,0,0,32
 167881,"North Brazier Lit",167880,1,0,67322,0,0
 167882,"Earn 1000 honor in Isle of Dorn while in War Mode. (Test)",0,0,4,0,0,0
@@ -96925,7 +96925,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 167966,,167965,25,0,69855,0,0
 167967,"Complete all of the hidden Guest Relations local stories.",0,9,4,0,0,17
 167968,"The Case of a Good Book",167967,0,0,69850,1,16
-167969,"The Case of Pet Games",167967,0,0,69851,7,16
 167970,"The Case of an Old Soul",167967,0,0,69852,4,16
 167971,"The Loud and Smelly Case",167967,0,0,69853,2,16
 167974,"11.0 Raid - Nerubian - Ethereal - Achievement - AD",0,0,4,0,0,0
@@ -97401,6 +97400,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 168483,"Gemellus Defeated",168480,1,0,70058,2,0
 168484,"Degentrius Defeated",168480,1,0,70059,3,0
 168485,"12.0 Dungeon - Magister's Terrace (Heroic)",0,0,4,0,0,0
+168586,,168585,1,0,70169,0,0
 168486,"Arcanotron Custos Defeated",168485,1,0,70056,0,0
 168487,"Seranel Sunlash Defeated",168485,1,0,70057,1,0
 168488,"Gemellus Defeated",168485,1,0,70058,2,0
@@ -97479,7 +97479,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 168583,"Achievement - Keystone Hero: The War Within Dungeons Season 2",0,0,4,0,0,0
 168584,"Rating Requirement",168583,2500,0,70053,0,2
 168585,"Achievement - The War Within Season Two Enterprising Hero (Top 0.1%)",0,0,4,0,0,0
-168586,,168585,1,0,70169,0,0
 168587,,168585,1,1,70170,1,2
 168588,"Put an end to the Battle for Azeroth by completing the following achievements.",0,0,4,0,0,0
 168589,,168588,1,0,70192,0,32
@@ -98682,6 +98681,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 169951,"Exterminator Janx spoken to",169925,0,0,71188,0,32
 169952,"Successfully complete 100 puzzles within a delve.",0,25,4,0,0,1
 169953,,169952,100,0,69832,0,1
+170032,"Earthcrawl Mines",170031,1,0,71072,0,0
 169954,"Defeat every delve in Khaz Agar on Tier 4 or higher with lives remaining as a damage dealer.",0,0,4,0,0,0
 169955,"Earthcrawl Mines",169954,1,0,71057,0,0
 169956,"Fungal Folly",169954,1,0,70995,1,0
@@ -98759,7 +98759,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 170029,"Sidestreet Sluice",170016,1,0,71070,12,0
 170030,"Excavation Site 9",170016,1,0,71071,13,0
 170031,"Defeat every delve in Khaz Agar on Tier 8 or higher with lives remaining as a healer.",0,0,4,0,0,0
-170032,"Earthcrawl Mines",170031,1,0,71072,0,0
 170033,"Fungal Folly",170031,1,0,71073,1,0
 170034,"Kriegval's Rest",170031,1,0,71074,2,0
 170035,"Mycomancer Cavern",170031,1,0,71075,3,0
@@ -100248,6 +100247,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 206734,"Baxx the Purveyor",206732,1,0,102983,1,0
 206735,"Prezly Wavecutter",206732,1,0,102984,2,0
 206736,Creech,206732,1,0,102985,3,0
+206820,,206819,0,0,103044,0,0
 206737,"Achievement - Undermine - Defeat 11.1 trainers+bosses with Beast lvl 25",0,0,4,0,0,0
 206738,"Precision Powerdrill",206737,1,0,102986,0,0
 206739,"Baxx the Purveyor",206737,1,0,102987,1,0
@@ -100326,7 +100326,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 206817,"Boosts completed",0,25,5,0,0,8193
 206818,,206817,0,0,103044,0,0
 206819,"Boosts completed",0,100,5,0,0,8193
-206820,,206819,0,0,103044,0,0
 206821,,157129,1,0,103045,16,0
 206822,,157129,0,0,103046,17,0
 206823,,157129,1,0,103047,18,0
@@ -101114,7 +101113,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 207971,,164057,0,0,103746,12,32
 207972,,164057,0,0,103747,13,32
 207973,"Creatures killed within Nightfall events:",0,250,5,0,0,4097
-208128,,206104,0,0,103847,2,32
 207975,"Earn Achievement - 11.0.7 Plunderstorm 5k Plunder Earned && Be 11",0,0,4,0,0,0
 207976,NEVER,207975,1,0,490,0,0
 207977,,207973,250,0,103749,0,0
@@ -101199,6 +101197,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 208125,"Weaken the Gold Elemental",208124,0,0,103845,0,32
 208126,"12.0 Z1 - Level Up Campaign - Ch 3 - Q07a - Puzzle - Solved (SH) NOT USED NOT WORKING",0,0,4,0,0,4096
 208127,,208126,1,0,103846,0,0
+208128,,206104,0,0,103847,2,32
 208129,,206104,0,0,103848,3,32
 208130,,206104,0,0,103849,4,32
 208131,,206104,0,0,103850,5,32
@@ -101213,6 +101212,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 208148,"Stuck Goblins saved",208147,4,0,71244,0,32
 208163,"Gain Mastery of Timeways for 5 weeks during Turbulent Timeways III",0,1,8,0,0,0
 208164,"Gain Mastery of Timeways for 5 weeks during Turbulent Timeways III",208163,5,0,103867,0,1
+208349,,208348,0,0,103958,0,0
 208165,"12.0 Z4 - Level Up Campaign - Ch 3 - Q06b - Gather Void Bait and Slay Berserkers (HCR)",0,0,4,0,0,4096
 208166,,208165,5,0,103868,0,0
 208173,"11.1.5 Visions of N'zoth - Stormwind - Step 01",0,0,4,0,0,0
@@ -101374,7 +101374,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 208346,"Lil' Lapbugs",208339,0,4,0,3,8208
 208347,,208346,0,0,103957,0,0
 208348,"Rays of Sunshine",208339,0,4,0,4,8208
-208349,,208348,0,0,103958,0,0
 208350,"Hard K'arroc",208339,0,4,0,5,8208
 208351,,208350,0,0,103959,0,0
 208352,"A Slither of Snakes",208339,0,4,0,6,8208
@@ -101517,7 +101516,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 208543,,208542,0,0,104041,0,0
 208545,"[DNT] Triumvirate - Heroic",0,1,8,0,0,4096
 208546,,208545,0,0,104043,0,0
-208669,,208668,0,0,104115,0,0
 208548,"[DNT] Arcway - Normal",0,1,8,0,0,4096
 208549,,208548,0,0,104045,0,0
 208551,"[DNT] Arcway - Mythic",0,1,8,0,0,4096
@@ -101597,6 +101595,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 208666,"[DNT] LFR - Nighthold - Wing 4",0,0,4,0,0,4096
 208667,,208666,0,0,104114,0,0
 208668,"[DNT] Antorus - Wing 1l - Normal",0,0,4,0,0,4096
+208669,,208668,0,0,104115,0,0
 208670,"[DNT] Heroic - Trial of Valor",0,0,4,0,0,4096
 208671,,208670,0,0,104116,0,0
 208672,"[DNT] Mythic - Trial of Valor",0,0,4,0,0,4096
@@ -101838,7 +101837,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 208945,"Obtain Faceless Mask of the Long Night in a Revisited Vision",0,0,4,0,0,0
 208946,"The Faceless Mask of the Long Night is hidden somewhere in the Revisited N'Zoths Horrific visions.",208945,1,0,104666,0,0
 208947,"Obtain Faceless Mask of Vengeance",0,0,4,0,0,0
-209025,,209024,1,0,104297,0,32
 208948,"The Faceless Mask of Vengeance is hidden somewhere in the Revisited N'Zoths Horrific visions.",208947,1,0,104262,0,0
 208949,"Obtain Faceless Mask of Multitudes",0,0,4,0,0,0
 208950,"The Faceless Mask of Multitudes is hidden somewhere in the Revisited N'Zoths Horrific visions.",208949,1,0,104263,0,0
@@ -101912,6 +101910,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 209022,,209020,1,0,104295,1,32
 209023,,209020,1,0,104296,2,32
 209024,"Visions - Meta - Imagine a Dark, Dark World - Revisited",0,0,4,0,0,0
+209025,,209024,1,0,104297,0,32
 209026,,209024,1,0,104298,1,32
 209027,,209024,1,0,104299,2,32
 209028,"Vision - Meta - All Bridges Burned - Revisited",0,0,4,0,0,0
@@ -102478,6 +102477,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 209724,Foothold,209723,0,0,104633,0,16
 209725,"The Voidspire",209723,0,0,104634,1,16
 209726,"Dawn of a New Well",209723,0,0,109877,5,16
+209727,"Gathering of the Elves",209723,0,0,104636,2,16
 209729,"The Darkwell",209723,0,0,104638,4,16
 209730,"11.2 Raid - Manaforge - Automaton - Achievement - LGK",0,0,4,0,0,0
 209731,"Save all mice from atomization.",209730,1,0,104639,0,0
@@ -102775,7 +102775,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 210075,,210074,25,0,105036,0,2
 210076,"Obtain 50 skill points in Midnight Enchanting",0,0,4,0,0,0
 210077,,210076,50,0,105036,0,2
-210424,"Where War Slumbers",208230,0,0,105269,2,16
 210078,"Obtain 75 skill points in Midnight Enchanting",0,0,4,0,0,0
 210079,,210078,75,0,105036,0,2
 210080,"Obtain 60 skill points in Midnight Enchanting",0,0,4,0,0,0
@@ -103088,6 +103087,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 210421,,210420,1,0,105261,0,0
 210422,"11.2 Delves - Ethereals01 - V03 - Rewards Cutoff (Hufton)",0,0,4,0,0,0
 210423,,210422,8,0,105266,0,32
+210424,"Where War Slumbers",208230,0,0,105269,2,16
 210425,"Buy 6 Character Bank tabs",0,0,4,0,0,0
 210426,,210425,6,0,105270,0,1
 210427,"Unnamed Branch",46885,0,4,0,0,16
@@ -103492,7 +103492,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 210902,,210899,1,0,105471,2,0
 210903,,210899,1,0,105472,3,0
 210904,,210899,1,0,105473,4,0
-210997,,210996,1,0,105513,0,0
 210905,"Defeat 20 Glumtooth Kobolds - (JKM)",0,20,8,0,0,0
 210906,,210905,1,0,105474,0,0
 210907,,210905,1,0,105475,1,0
@@ -103585,6 +103584,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 210994,,210991,1,0,105511,2,0
 210995,,210991,1,0,105512,3,0
 210996,"Complete All Encounters in Operation: Floodgate",210990,0,4,0,1,0
+210997,,210996,1,0,105513,0,0
 210998,,210996,1,0,105514,1,0
 210999,,210996,1,0,105515,2,0
 211000,,210996,1,0,105516,3,0
@@ -104080,7 +104080,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 211545,,211539,0,0,105842,4,0
 211546,"[DNT] Slay enemies in HWT",0,15,5,0,0,4096
 211547,,211546,0,0,105843,0,0
-211628,"Temporal Decelerator Crystal",211624,0,0,105885,3,16
 211548,"12.0 Delves - DevouringHost01 - V03 - Speak to Intro NPC (Hufton)",0,0,4,0,0,0
 211549,"Speak with Grand Artificer Romuul",211548,0,0,105376,0,32
 211550,"12.0 Delves - DevouringHost01 - V03 - Learn: Bomb, Portal, Stone (Hufton)",0,0,4,0,0,0
@@ -104159,6 +104158,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 211625,"Temporal Decelerator Crystal",211624,0,0,105882,0,16
 211626,"Temporal Decelerator Crystal",211624,0,0,105883,1,16
 211627,"Temporal Decelerator Crystal",211624,0,0,105884,2,16
+211628,"Temporal Decelerator Crystal",211624,0,0,105885,3,16
 211629,,211624,0,0,105844,4,0
 211630,"Battered Aegis",211587,1,8,0,7,8192
 211631,"Battered Aegis",211630,0,0,105886,0,16
@@ -104330,6 +104330,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 211797,"11.2.5 Remix - Legion - Journey - Artifact Power 3,000,000",0,0,4,0,0,0
 211798,"Earn 3,000,000 Artifact Power",211797,0,4,0,0,1
 211799,,211798,3000000,0,105778,0,1
+211955,,211951,20,0,106219,3,0
 211800,"11.2.5 Remix - Legion - Journey - Artifact Power 5,000,000",0,0,4,0,0,0
 211801,"Earn 5,000,000 Artifact Power",211800,0,4,0,0,1
 211802,,211801,5000000,0,105778,0,1
@@ -104458,7 +104459,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 211934,"11.2.5 Remix - Legion - Journey - Tour - Azsuna",0,0,4,0,0,0
 211935,"Explore Azsuna",211934,1,0,106089,0,32
 211936,"Defeat Azsuna rare enemies",211934,1,0,106090,1,32
-212578,,76742,20,0,106470,136,2
 211937,"Recover Azsuna treasures",211934,1,0,106091,2,32
 211938,"11.2.5 Remix - Legion - Journey - Explore - Azsuna",0,0,4,0,0,0
 211939,Faronaar,211938,1,0,106092,0,0
@@ -104477,7 +104477,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 211952,,211951,2,0,106216,0,0
 211953,,211951,7,0,106217,1,0
 211954,,211951,13,0,106218,2,0
-211955,,211951,20,0,106219,3,0
 212006,"11.2.5 Remix - Legion - Journey - Vignettes - Azsuna",0,5,8,0,0,0
 212007,"Valiyaka the Stormbringer",212006,0,0,106152,0,0
 212008,"Horn of the Siren",212006,0,0,106153,1,0
@@ -104536,7 +104535,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 212063,"Raid Bosses defeated",212062,5,0,106193,0,1
 212064,"Honor earned",0,5,4,0,0,1
 212065,"Honor earned",212064,5000,0,106194,0,1
-212579,,76742,39000,0,106463,137,2
 212066,"Complete World Quests",0,5,4,0,0,0
 212067,"Complete World Quests",212066,5,0,107778,0,1
 212068,"11.2 Delves - Ethereal Challenge Room - V2 - Invader Duo",0,100,4,0,0,0
@@ -104553,6 +104551,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 212080,"Reach level 40",0,1,4,0,0,4096
 212081,,212080,40,0,106203,0,0
 212082,"Fortify the Runestones quest completed",0,1,8,0,0,8193
+212166,"The Oasis",212163,0,0,106262,2,0
 212083,"Attend the Silvermoon Court and complete the Fortify the Runestones quest",212082,1,0,106202,0,0
 212084,"Attend the Silvermoon Court and complete the Fortify the Runestones quest",212082,1,0,106204,1,0
 212085,"Attend the Silvermoon Court and complete the Fortify the Runestones quest",212082,1,0,106205,2,0
@@ -104628,7 +104627,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 212163,"11.2 Achievement - Exploration - Explore K'aresh (SHY)",0,0,4,0,0,0
 212164,"Eco-Dome: Primus",212163,0,0,106263,0,0
 212165,"Eco-Dome: Rhovan",212163,0,0,106264,1,0
-212166,"The Oasis",212163,0,0,106262,2,0
 212167,"Overlook Zo'Shuul",212163,0,0,106269,3,0
 212168,"Shadow Point",212163,0,0,106265,4,0
 212169,"Fracture of Lacuuna",212163,0,0,106266,5,0
@@ -104860,6 +104858,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 212435,,212434,100,0,103732,0,2
 212436,"Obtain 100 skill points in Midnight Blacksmithing",0,0,4,0,0,0
 212437,,212436,100,0,103372,0,2
+212509,,77774,42000,0,106466,140,2
 212438,"Obtain 100 skill points in Midnight Herbalism",0,0,4,0,0,0
 212439,,212438,100,0,103371,0,2
 212440,"Obtain 100 skill points in Midnight Tailoring",0,0,4,0,0,0
@@ -104931,7 +104930,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 212506,,77774,39000,0,106463,137,2
 212507,,77774,20,0,106471,138,2
 212508,,77774,20,0,106467,139,2
-212509,,77774,42000,0,106466,140,2
 212510,,77774,39000,0,106465,141,2
 212511,,77774,10,0,106469,142,2
 212512,,77774,20,0,106468,143,2
@@ -105000,6 +104998,8 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 212575,,76914,20,0,106468,143,2
 212576,,76742,39000,0,106464,134,2
 212577,,76742,39000,0,106462,135,2
+212578,,76742,20,0,106470,136,2
+212579,,76742,39000,0,106463,137,2
 212580,,76742,20,0,106471,138,2
 212581,,76742,20,0,106467,139,2
 212582,,76742,42000,0,106466,140,2
@@ -105172,7 +105172,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 212750,"12.0 Delves - Ethereals02 - V01 - Arcane Barrier destroyed (HCR)",0,0,4,0,0,0
 212751,"Arcane Barrier destroyed",212750,1,0,106523,0,32
 212752,"12.0 Delves - Ethereals02 - V01 - Boss slain (HCR)",0,0,4,0,0,0
-212927,Statecraft,212923,1,0,106594,3,16
 212753,"Chief-Arcanist Patram slain",212752,1,0,60399,0,32
 212754,"12.0 Delves - Ethereals02 - V01 - Captives Rescued (HCR)",0,0,4,0,0,0
 212755,,212754,8,0,106460,0,0
@@ -105248,6 +105247,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 212924,"An Ancient Gift",212923,1,0,106591,0,16
 212925,"The Waning Crescent",212923,1,0,106592,1,16
 212926,"Blood and Wine",212923,1,0,106593,2,16
+212927,Statecraft,212923,1,0,106594,3,16
 212928,"A Growing Crisis",212923,1,0,106595,4,16
 212929,"A Change of Seasons",212923,1,0,106596,5,16
 212930,"Breaking The Lightbreaker",212923,1,0,106597,6,16
@@ -105872,6 +105872,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 213553,,213552,1,0,107113,0,2
 213554,"Achievement - Maw of Souls Complete (Legion Remix)",0,1,8,0,0,0
 213555,,213554,1,0,106070,0,2
+213634,Nythendra,213633,1,0,107143,0,0
 213556,"Achievement - Maw of Souls Complete (Heroic+) (Legion Remix)",0,1,8,0,0,0
 213557,,213556,1,0,107114,0,2
 213558,"Achievement - Maw of Souls Complete (Mythic+) (Legion Remix)",0,1,8,0,0,0
@@ -105946,7 +105947,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 213631,"Achievement - Return to Karazhan (Mythic) (Legion Remix)",0,1,8,0,0,0
 213632,,213631,1,0,107142,0,2
 213633,"Achievement - Nightmare Wing 1 (Legion Remix)",0,0,4,0,0,0
-213634,Nythendra,213633,1,0,107143,0,0
 213635,"Elerethe Renferal",213633,1,0,107144,1,0
 213636,"Il'gynoth, the Heart of Corruption",213633,1,0,107145,2,0
 213637,"Achievement - Nightmare Wing 2 (Legion Remix)",0,0,4,0,0,0
@@ -106075,7 +106075,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 213760,"Class Mount, You Can't Take the Sky from Me",213754,1,0,107237,5,16
 213761,"Achievement - Legion Quest - Monk Campaign (JLW) (Legion Remix)",0,0,4,0,0,0
 213762,"Chapter 1, Tech It Up A Notch",213761,1,0,107238,0,16
-213846,,213841,1,0,107326,3,0
 213763,"Chapter 2, Rebuilding the Order",213761,1,0,107239,1,16
 213764,"Chapter 3, Brick By Brick",213761,1,0,107240,2,16
 213765,"Chapter 4, Storm Brew",213761,1,0,107241,3,16
@@ -106153,6 +106152,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 213843,,213841,1,0,107323,0,0
 213844,,213841,1,0,107324,1,0
 213845,,213841,1,0,107325,2,0
+213846,,213841,1,0,107326,3,0
 213847,,213841,1,0,107327,4,0
 213848,,213841,1,0,107328,5,0
 213849,,213841,1,0,107329,6,0
@@ -106229,7 +106229,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 213980,,213979,14,0,107389,0,0
 213981,"11.2 Raid Renown - Manaforge Vandals - Rank 15",0,0,4,0,0,0
 213982,,213981,15,0,107389,0,0
-214076,,214070,0,0,107462,5,0
 213983,"11.2.7 Catch Up - TWW - Visions of Azeroth (wrapper 2) (KRB)",0,0,4,0,0,4096
 213991,,213983,1,0,107397,0,0
 213992,,213983,1,0,107398,1,0
@@ -106313,6 +106312,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 214073,,214070,0,0,107459,2,0
 214074,,214070,0,0,107460,3,0
 214075,,214070,0,0,107461,4,0
+214076,,214070,0,0,107462,5,0
 214077,,214070,0,0,107463,6,0
 214078,,214070,0,0,107464,7,0
 214079,,214070,0,0,107465,8,0
@@ -106484,7 +106484,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 214252,,214249,1,0,107608,2,32
 214253,"Complete A Stone Falls from the Sky",0,0,4,0,0,4096
 214254,,214253,0,0,107611,0,0
-214440,,214439,20,0,107702,0,1
 214255,"11.2.5 Remix - Legion - Journey - Tour - Val'Sharah",0,0,4,0,0,0
 214256,,214255,1,0,107609,0,32
 214257,,214255,1,0,107610,1,32
@@ -106662,6 +106661,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 214437,,214432,0,0,107700,4,0
 214438,,214432,0,0,107701,5,0
 214439,"11.1 - Undermine Raid Max Renown",0,0,4,0,0,0
+214440,,214439,20,0,107702,0,1
 214441,"11.2 - Manaforge Raid Max Renown",0,0,4,0,0,0
 214442,,214441,15,0,107703,0,1
 214443,"11.2 Raid Renown - All Dead Drops Looted",0,0,4,0,0,0
@@ -106679,6 +106679,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 214455,"Major Payne",214452,1,0,107711,2,0
 214456,"Nearly Headless Jacob",214452,1,0,107712,3,0
 214457,Gutretch,214452,1,0,107713,4,0
+214695,,214694,1,0,103295,0,2
 214458,"Achievement - Midnight - Defeat 3.0 trainers with Critter",0,5,8,0,0,0
 214459,"Beegle Blastfuse",214458,1,0,107714,0,0
 214460,"Okrut Dragonwaste",214458,1,0,107715,1,0
@@ -106901,7 +106902,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 214692,"Defeat Fractillus on Heroic",0,0,4,0,0,0
 214693,,214692,1,0,103294,0,2
 214694,"Defeat Nexus-King Salhadaar on Heroic",0,0,4,0,0,0
-214695,,214694,1,0,103295,0,2
 214696,"Defeat Dimensius on Heroic",0,0,4,0,0,0
 214697,,214696,1,0,103296,0,2
 214698,"Defeat Plexus Sentinel on Normal",0,0,4,0,0,0
@@ -107562,6 +107562,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 215374,"Void Fissures closed",215373,15,0,109244,0,32
 215375,"12.0.5 Void Assaults - Eversong - Major Attack - Scenario 01 - Final Step Completion (JTL)",0,1,8,0,0,0
 215376,"Unshackled Ultradon slain",215375,1,0,108800,0,0
+215655,Kil'jaeden,215646,1,0,108494,8,0
 215377,"12.0.5 Void Assaults - Zul'aman - Major Attack 01 - Step 01 Completion (JTL)",0,1,8,0,0,0
 215378,,215377,1,0,108799,0,2
 215379,"12.0.5 Void Assaults - Zul'aman - Major Attack 01 - Step 02 Completion (JTL)",0,1000,4,0,0,0
@@ -107794,7 +107795,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 215652,"Demonic Inquisition",215646,1,0,108472,5,0
 215653,"Maiden of Vigilance",215646,1,0,108471,6,0
 215654,"Fallen Avatar",215646,1,0,108470,7,0
-215655,Kil'jaeden,215646,1,0,108494,8,0
 215656,"11.2.5 Remix - Legion - Journey - Raid - Tomb of Sargeras Mythic",0,0,4,0,0,0
 215657,Harjatan,215656,1,0,108513,0,0
 215658,"Mistress Sassz'ine",215656,1,0,108514,1,0
@@ -107865,14 +107865,15 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 215723,"Scarred Spear",215720,0,0,108607,0,0
 215724,"Ebon Banner",215720,0,0,108608,1,0
 215725,"Corrupted Lantern",215720,0,0,108609,2,0
-215726,"Zandalari Scroll",215720,0,0,108610,3,0
+215726,"Ancient Zandalari Scroll",215720,0,0,108610,3,0
 215727,"Evergreen Vine",215720,0,0,108611,4,0
-215728,"Defense Fragment",215720,0,0,108612,5,0
+215728,"Pylon Fragment",215720,0,0,108612,5,0
 215729,"Weathered Tome",215720,0,0,108613,6,0
 215730,"Heavy Anchor",215720,0,0,108614,7,0
 215731,"Sandy Tapestry",215720,0,0,108615,8,0
 215732,"Dried Roses",215720,0,0,108616,9,0
 215733,"Clefthoof Hide",215720,0,0,108617,10,0
+215813,,215807,10,0,108423,5,0
 215734,"12.0 Delves - Ethereals02 - V02 - Guard Captain slain (HCR)",0,0,4,0,0,0
 215735,"Guard Captain Meti slain",215734,1,0,108627,0,32
 215736,"11.2.5 Remix - Legion - Journey - Legion Assaults Complete 1",0,1,5,0,0,0
@@ -107952,7 +107953,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 215810,,215807,10,0,108422,2,0
 215811,,215807,10,0,108424,3,0
 215812,,215807,10,0,108418,4,0
-215813,,215807,10,0,108423,5,0
 215814,,214267,1,0,107624,3,32
 215815,"11.2.5 Remix - Legion - Achievement - Journey - Empowered Enemies Kill 1",0,0,4,0,0,0
 215816,,215815,1,0,108645,0,1
@@ -108306,7 +108306,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 216210,,216209,50,0,108784,0,1
 216211,"Win 25 Rated Battleground Blitz matches while at Elite rank during Midnight Season 1.",0,0,4,0,0,0
 216212,,216211,25,0,108785,0,1
-216288,"Lightbloom slain",216285,20,0,62705,2,1
 216213,"Win 100 Rated Solo Shuffle rounds while at Elite rank during Midnight Season 1.",0,0,4,0,0,0
 216214,,216213,100,0,108786,0,1
 216215,"11.2.5 Remix - Legion - Achievement - Journey - Withered Training",0,0,4,0,0,0
@@ -108378,6 +108377,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 216285,"Eliminate Lightbloom from the campus.",216251,180,9,0,0,0
 216286,"Lightbloom slain",216285,5,0,62703,0,1
 216287,"Lightbloom slain",216285,10,0,62704,1,1
+216288,"Lightbloom slain",216285,20,0,62705,2,1
 216289,"Lightbloom slain",216285,1,0,62794,3,1
 216290,"Lightbloom slain",216285,1,0,62701,4,1
 216291,"12.0 Delves - TwilightsBlade03 - V2 - Leyline Technician's Spectacles Acquired",0,0,4,0,0,0
@@ -109002,6 +109002,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 216957,"Luckydos delivered",0,1,5,0,0,8193
 216958,"Deliver luckydos to base camp",216957,1,0,109207,0,0
 216959,"Fallen berries collected",0,3,5,0,0,8193
+217052,"Lightbloom slain",217002,2,0,62701,4,1
 216960,"Collect kafa'kota berries from training climb",216959,1,0,109208,0,0
 216961,"Mount ridden",0,1,5,0,0,8193
 216962,"Ride mount back to town center",216961,1,0,109209,0,0
@@ -109077,7 +109078,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 217049,"Lightbloom slain",217002,10,0,62704,1,1
 217050,"Lightbloom slain",217002,20,0,62705,2,1
 217051,"Lightbloom slain",217002,1,0,62794,3,1
-217052,"Lightbloom slain",217002,2,0,62701,4,1
 217053,"Ethereal Conduit destroyed",0,0,4,0,0,0
 217054,"Ethereal Conduit destroyed",217053,1,0,109253,0,0
 217055,"12.0 Delves - Hextrol - V01 - Talk to NPC (MDE)",0,0,4,0,0,0
@@ -109868,6 +109868,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 218365,"Rituals in the Depths - Speaker's Rest",0,0,4,0,0,0
 218366,"Twilight Lieutenants Defeated in Lesser Portal Chambers (Optional)",218367,3,0,109626,0,0
 218367,"Unnamed Branch",218365,1,8,0,0,0
+218467,,14311,1,0,109687,31,2
 218368,"Void Reinforcements With 3 Steps - Speaker's Rest",0,0,4,0,0,0
 218369,"Lesser Portal Keepers Defeated",218368,3,0,109624,0,0
 218370,"Portal Master Korgal Defeated",218368,1,0,109625,1,0
@@ -109947,7 +109948,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 218464,,14311,1,0,109684,28,2
 218465,,14311,1,0,109685,29,2
 218466,,14311,1,0,109686,30,2
-218467,,14311,1,0,109687,31,2
 218468,,14311,1,0,109688,32,2
 218469,"Obtain the Galactic Gladiator's Goredrake from Midnight Season 1.",0,0,4,0,0,0
 218470,,218469,0,0,109689,0,2
@@ -110524,6 +110524,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 219493,,219485,1,0,110315,7,32
 219494,,219485,1,0,110316,8,32
 219495,,219485,1,0,110317,9,32
+219668,,219667,1,0,110441,0,2
 219496,"Midnight Dungeon Hero",0,0,4,0,0,0
 219497,,219496,1,0,110325,3,32
 219498,,219496,1,0,110318,7,32
@@ -110677,7 +110678,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 219665,"Charter Signatures Collected",0,0,4,0,0,4096
 219666,"Charter Signatures Collected",219665,10,0,110440,0,0
 219667,"Ki'katal the Harvester defeated (Mythic) (Guild)",0,0,4,0,0,0
-219668,,219667,1,0,110441,0,2
 219669,"Goldie Baronbottom defeated (Mythic) (Guild)",0,0,4,0,0,0
 219670,,219669,1,0,110442,0,2
 219671,"Izo, the Grand Splicer defeated (Mythic) (Guild)",0,0,4,0,0,0
@@ -110918,6 +110918,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 219917,"Second Trinket",219904,1,0,110570,12,0
 219918,Cloak,219904,1,0,110571,13,0
 219919,Weapon,219904,1,0,110572,14,0
+220127,,220117,1,0,110742,9,0
 219920,"Equip an Epic or better item, with a minimum item level of 233, in every slot.",0,0,4,0,0,0
 219921,Head,219920,1,0,110573,0,0
 219922,Neck,219920,1,0,110574,1,0
@@ -111087,7 +111088,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 220124,,220117,1,0,110739,6,0
 220125,,220117,1,0,110740,7,0
 220126,,220117,1,0,110741,8,0
-220127,,220117,1,0,110742,9,0
 220128,,220117,1,0,110743,10,0
 220129,,220117,1,0,110744,11,0
 220130,,220117,1,0,110745,12,0
@@ -111565,6 +111565,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 220752,,220751,0,0,111084,0,0
 220753,"Be one of the first 4000 players to defeat Nullaeus in his lair on Tier ?? without any other players in your party, before the release of the next season of delves.",0,0,4,0,0,0
 220754,,220753,1,0,113804,0,2
+220843,"Recruit 20 troops.",220842,20,0,111140,0,1
 220755,"Reach a High Watermark of 237 in Every Slot During Midnight Season 1 (Outgrow Adventurer Dawncrests)",0,0,4,0,0,0
 220756,,220755,237,0,106382,0,0
 220757,,220755,237,0,106383,1,0
@@ -111643,7 +111644,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 220840,"Recruit 20 Troops as a Mage.",0,0,4,0,0,0
 220841,"Recruit 20 troops.",220840,20,0,111139,0,1
 220842,"Recruit 20 Troops as a Monk.",0,0,4,0,0,0
-220843,"Recruit 20 troops.",220842,20,0,111140,0,1
 220844,"Recruit 20 Troops as a Paladin.",0,0,4,0,0,0
 220845,"Recruit 20 troops.",220844,20,0,111141,0,1
 220846,"Recruit 20 Troops as a Rogue.",0,0,4,0,0,0
@@ -112646,6 +112646,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 222289,"Areyn's Elrendar Red",222265,1,0,111957,1,0
 222290,"Kreynna's Khadgar's Imitation",222265,1,0,111958,2,0
 222291,"Lady Marilin's Arcwine Reserve",222265,1,0,111959,3,0
+222683,,222681,0,0,112217,1,0
 222292,"Landraelanis' Muskmelon Draught",222265,1,0,111960,4,0
 222293,"Limien's Arcane Infusion",222265,1,0,111961,5,0
 222294,"Duskwither's Dancing Merlot",222265,1,0,111962,6,0
@@ -112960,7 +112961,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 222675,,222674,0,0,111951,0,32
 222676,,222674,0,0,111953,1,32
 222682,,222681,0,0,112216,0,0
-222683,,222681,0,0,112217,1,0
 222684,,222681,0,0,112218,2,0
 222685,,222681,0,0,112219,3,0
 222686,"Latent Arcana obtained",0,50,5,0,0,8193
@@ -113048,6 +113048,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 222805,"Talked to Jin'dan Deadtusk",222804,0,0,112289,0,0
 222806,"Talked to Captain Tokka",222804,1,0,112290,1,0
 222807,"Talked to Alai'din",222804,0,0,112291,2,0
+222897,,71028,100,0,112340,11,0
 222808,"12.0 Delves - Die in a Delve",0,0,4,0,0,0
 222809,"Requires Delve",222808,0,0,112901,0,0
 222810,,216314,1,0,112292,0,0
@@ -113128,7 +113129,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 222894,,21672,100,0,112337,11,0
 222895,,21676,100,0,112338,11,0
 222896,,71019,100,0,112339,11,0
-222897,,71028,100,0,112340,11,0
 222898,,71037,100,0,112341,11,0
 222899,,71046,300,0,112342,11,0
 222900,,71055,100,0,112343,11,0
@@ -113354,7 +113354,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 223139,,223138,0,0,112479,0,0
 223140,,223138,0,0,112480,1,0
 223141,,223138,0,0,112481,2,0
-223344,,223343,1,0,112588,0,0
 223144,"Joined in the defense of the Sunwell against the forces of Xal'atath during Midnight.",0,1,8,0,0,0
 223145,,223144,0,0,112483,0,0
 223146,,223144,0,0,112484,1,0
@@ -113510,6 +113509,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 223335,,223334,1,0,112584,0,0
 223340,"Ohn'ahran Plains Quests",223339,1,0,112586,0,0
 223342,"Boss encounters cleared",223341,3,0,112587,0,1
+223344,,223343,1,0,112588,0,0
 223345,,223343,1,0,112589,1,0
 223346,,223343,1,0,112590,2,0
 223347,"Dragonpine lumber harvested",0,10,5,0,0,8193
@@ -114039,7 +114039,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224084,"Remix mixed up",0,1,8,0,0,8193
 224085,,224084,0,0,113031,0,0
 224123,"Tol'zenja the Spirit Caller prepare the site",0,1,4,0,0,0
-224124,"Tol'zenja the Spirit Caller prepares the site",224123,1,0,113041,0,0
+224124,"Wait for Tol'zenja the Spirit Caller to prepare the site",224123,1,0,113041,0,0
 224125,"Sacrificial Offerings delivered",0,1,8,0,0,0
 224127,"Stop serpents",0,0,4,0,0,0
 224128,"Summoning rituals disrupted",224127,4,0,113039,0,0
@@ -114050,7 +114050,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224135,"Summoned threat eliminated",224132,1,0,113047,2,0
 224136,"Summoned threat eliminated",224132,1,0,113042,3,0
 224141,"Shrines of Purifing Earth and Sky enabled",0,0,4,0,0,0
-224142,"Shrines of Purifying Earth and Sky enabled",224141,1,0,113050,0,0
+224142,"Wait for the shrines to activate",224141,1,0,113050,0,0
 224143,"Utilize the Shrines to collect Impuritiy Orbs",0,0,4,0,0,0
 224144,"Orbs collected with Shrine of Earth",224143,25000,9,0,0,0
 224145,,224144,1,0,113052,0,1
@@ -114084,7 +114084,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224221,"The Hoardmonger defeated",224220,1,0,106367,0,0
 224222,"Sentinel of Winter defeated",224220,1,0,106368,1,0
 224223,"Nalorakk defeated",224220,1,0,106369,2,0
-224224,"Enemy Forces",224220,758,9,0,3,0
+224224,"Enemy Forces",224220,729,9,0,3,0
 224225,,224224,1,0,50191,0,0
 224226,,224224,59,0,50192,1,0
 224227,,224224,9999,0,48468,2,0
@@ -114094,7 +114094,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224231,"Zaen Bladesorrow defeated",224229,1,0,95554,1,0
 224232,"Xathuux the Annihilator defeated",224229,1,0,95555,2,0
 224233,"Lithiel Cinderfury defeated",224229,1,0,95556,3,0
-224234,"Enemy Forces",224229,756,9,0,4,0
+224234,"Enemy Forces",224229,740,9,0,4,0
 224235,,224234,1,0,50191,0,0
 224236,,224234,7,0,50192,1,0
 224237,,224234,9999,0,48468,2,0
@@ -114285,7 +114285,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224424,,224423,1,0,113227,0,0
 224425,,224423,1,1,113228,1,2
 224426,"Ignite Pyres",0,0,4,0,0,0
-224427,"Wicked Spirits burnt",224898,2,0,113229,0,0
+224427,"Slay undead and burn their souls",224898,4,0,113229,0,0
 224428,"Achievement - The Blinding Vale Hero (10+)",0,0,4,0,0,0
 224429,"The Blinding Vale",224428,1,0,113230,0,2
 224430,"Achievement - Voidscar Arena Hero (10+)",0,0,4,0,0,0
@@ -114313,7 +114313,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224454,"Achievement - Keystone Legend: Midnight Dungeons Season 2",0,0,4,0,0,0
 224455,"Rating Requirement",224454,3000,0,113240,0,2
 224460,"Deliver the Staves of each Shrine",0,0,4,0,0,0
-224465,"Profaned Sarcophagus cleansed",224899,4,0,113248,0,0
+224465,"Gather flames to cleanse sarcophagi",224899,4,0,113248,0,0
 224472,"Energy Thrusters",211650,1,8,0,0,0
 224473,,224472,0,0,113252,1,0
 224474,Void,211650,1,8,0,1,0
@@ -114324,11 +114324,11 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224479,,224478,0,0,113255,1,0
 224480,Canister,211650,1,8,0,4,0
 224481,,224480,0,0,113256,1,0
-224482,"Stave of Shackles placed at Cache",224460,1,0,113258,0,0
-224483,"Stave of Venom placed at Cache",224460,1,0,113257,1,0
-224484,"Stave of Serpents placed at Cache",224460,1,0,113262,2,0
+224482,"Stave of Shackles claimed and placed at Cache",224460,1,0,113258,0,0
+224483,"Stave of Venom claimed and placed at Cache",224460,1,0,113257,1,0
+224484,"Stave of Serpents claimed and placed at Cache",224460,1,0,113262,2,0
 224500,"Supply Wagon departs",0,0,4,0,0,0
-224501,"The supply wagon departs",224500,1,0,113266,0,0
+224501,"Wait for the supply wagon to depart",224500,1,0,113266,0,0
 224502,"Cache of the Three - End Timer",0,0,4,0,0,0
 224503,"Cache of the Three Unlocked",224502,1,0,113267,0,0
 224504,"First barricade overcome",0,0,4,0,0,8192
@@ -114348,7 +114348,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224518,"Galvazzt defeated",224515,1,0,39862,2,0
 224519,"Avatar of Sethraliss defeated",224515,1,0,39863,3,0
 224520,"Supply Wagon destination reached",0,0,4,0,0,0
-224521,"Supply wagon escorted to its final destination.",224520,1,0,113271,0,0
+224521,"Escort the supply wagon to its final destination.",224520,1,0,113271,0,0
 224522,"8.0 Dungeon - Kings' Rest - Dungeon Tracker (Mythic)",0,0,4,0,0,0
 224523,"The Golden Serpent defeated",224522,0,0,40351,0,0
 224524,"Mchimba the Embalmer defeated",224522,0,0,40352,1,0
@@ -114533,7 +114533,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224747,,224746,1,0,112740,0,32
 224748,,224746,2,0,112855,1,0
 224749,"12.1 Medium02 - Portal to Vault created",0,0,4,0,0,0
-224750,"Portal to clutch created",224749,1,0,113415,0,0
+224750,"Wait for the clutch portal to open",224749,1,0,113415,0,0
 224752,,224751,0,0,113416,0,0
 224754,,224753,0,0,113417,0,0
 224755,"Catch Coiled Isle Pets",0,0,4,0,0,0
@@ -114573,7 +114573,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224795,"Character has earned 2500 Conquest during Midnight Season 2",0,0,4,0,0,0
 224796,,224795,250000,0,113439,0,1
 224800,"Tol'zenja is planning a course of action",0,0,4,0,0,0
-224801,"Tol'zenja is planning a course of action",224800,1,0,113441,0,0
+224801,"Wait for Tol'zenja to plan a course of action",224800,1,0,113441,0,0
 224802,"Void Machines Destroyed",222281,2,0,112271,0,33
 224803,"Void Machines Destroyed",222281,1,0,112182,1,33
 224804,"Purge Void Energy from Gnarldin",222283,4,0,113442,0,33
@@ -114629,10 +114629,10 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224888,"Corrupting Spirits",0,60,9,0,0,1
 224889,"Corruption Cleansed",224888,1,0,115278,0,1
 224890,"Regroup and prepare for the next battle.",0,1,5,0,0,0
-224898,"Wicked Souls burnt",224426,10000,9,0,0,0
-224899,"Profaned Sarcophagi cleansed",224426,10000,9,0,1,0
-224900,,224898,4,0,113488,1,0
-224901,,224898,6,0,113489,2,0
+224898,"Slay undead and burn their souls",224426,10000,9,0,0,0
+224899,"Gather flames to cleanse sarcophagi",224426,10000,9,0,1,0
+224900,"Slay undead and burn their souls",224898,7,0,113488,1,0
+224901,"Slay undead and burn their souls",224898,12,0,113489,2,0
 224904,,222428,1,0,112062,1,48
 224905,,222428,1,0,112063,2,48
 224906,,222428,1,0,112065,3,48
@@ -114709,10 +114709,11 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 224999,,224998,0,0,113543,0,0
 225002,"Ula'tek defeated",225001,1,0,113545,0,1
 225004,"Delves completed",225003,2,0,113546,0,1
-225005,"Nymrissa Wavecaller defeated",0,1,8,0,0,0
+225005,"Nymrissa Wavecaller defeated Normal",0,1,8,0,0,0
 225006,"Nymrissa Wavecaller defeated",225005,1,0,113547,0,1
+225007,"Nymrissa Wavecaller defeated Heroic",0,1,8,0,0,0
 225008,"Nymrissa Wavecaller defeated",225007,1,0,113548,0,1
-225183,,225182,1,0,113604,0,32
+225009,"Nymrissa Wavecaller defeated Mythic",0,1,8,0,0,0
 225010,"Nymrissa Wavecaller defeated",225009,1,0,113549,0,1
 225011,"Jul'jan defeated",0,1,8,0,0,0
 225012,"Jul'jan defeated",225011,1,0,113550,0,1
@@ -114725,12 +114726,12 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 225019,,225018,0,0,113552,0,0
 225020,,225018,0,0,113553,1,0
 225021,"12.1 Ulatek - Faction Feature - Temple - Medium Event 03 (Big Micro)",0,0,4,0,0,0
-225022,"The Underbelly cleared",225021,12000,9,0,0,0
+225022,"Clear the Underbelly",225021,12000,9,0,0,0
 225023,"The Underbelly cleared",225022,3,0,113554,0,1
 225024,,225022,1,0,113555,1,1
-225028,"Guardian of the Sacrifice",225021,1,0,113556,3,0
-225029,"Priest of the First Rattle",225021,1,0,113558,2,0
-225030,"Champion of the Scale",225021,1,0,113557,1,0
+225028,"Guardian of the Sacrifice slain",225021,1,0,113556,3,0
+225029,"Priest of the First Rattle slain",225021,1,0,113558,2,0
+225030,"Champion of the Scale slain",225021,1,0,113557,1,0
 225031,"[DNT] Research Sites: Collection - Bear Pet",0,1,8,0,0,0
 225032,"[DNT] Research Sites: Collection - Bear Pet",225031,0,0,113559,0,2
 225033,Chubs,225031,0,0,113560,1,2
@@ -114739,7 +114740,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 225036,"Corrosive Coins collected",0,1,8,0,0,0
 225037,"Corrosive Coins collected",225036,100,0,113570,0,1
 225038,"Prepare to attack the Underbelly",0,0,4,0,0,0
-225039,"Prepare to attack the Underhalls.",225038,1,0,113562,0,0
+225039,"Prepare to attack the Underbelly.",225038,1,0,113562,0,0
 225040,"Void Strikes completed",0,25,5,0,0,8193
 225041,,225040,0,0,113552,0,0
 225042,,225040,0,0,113553,1,0
@@ -114790,6 +114791,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 225180,"Consult allies about the Enchanted Naga Scroll",225176,1,0,113768,3,0
 225181,"Consult allies about the Torn Twilight Missive",225176,1,0,113769,4,0
 225182,"12.0.5 Void Assaults - Meta Achievement",0,0,4,0,0,0
+225183,,225182,1,0,113604,0,32
 225184,,225182,1,0,113605,1,32
 225185,,225182,1,0,113606,2,32
 225186,,225182,1,0,113607,3,32
@@ -114874,6 +114876,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 225323,"Bone Pile Investigated",225263,6,0,113679,0,0
 225325,"[DNT] <Hidden> Mythic+ Rating > 0 (Midnight, any season)",0,0,4,0,0,0
 225326,,225325,1,0,113678,0,0
+225487,,225486,50,0,113764,0,1
 225329,"Dance while defending each of the Shrines in the Cache of Three event in the Vaults of Atal'Utek.",0,0,4,0,0,0
 225330,"Many Faces Stone",225329,1,0,113681,0,0
 225331,"Stone of Shackles",225329,1,0,113682,1,0
@@ -114955,7 +114958,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 225484,"Achievement - Void Shmoid",0,250,5,0,0,0
 225485,,225484,250,0,113763,0,1
 225486,"Achievement - Everybody Gets One",0,50,5,0,0,0
-225487,,225486,50,0,113764,0,1
 225488,"Achievement - Battery Bombardment",0,50,5,0,0,0
 225489,,225488,50,0,113765,0,1
 225490,"12.0.5 Void Assaults - Eversong - Major Attack - Scenario 01 - Step 00 Completion (JTL)",0,0,4,0,0,0
@@ -115069,7 +115071,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 225650,"Summoning witnessed",225648,0,0,113844,0,0
 225651,"Protect Tol'zenja while he completes the preparations",0,4,4,0,0,0
 225652,,225654,16,0,113845,0,0
-225653,"Tol'zenja completes the preparations",225651,1,0,113846,1,0
+225653,"Survive while Tol'zenja completes the ritual",225651,1,0,113846,1,0
 225654,"Defend the ritual from attackers",225651,100,9,0,0,1
 225657,"Complete an Umbral Strike",0,3,5,0,0,4096
 225658,,225657,1,0,113848,0,0
@@ -116558,13 +116560,13 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 227196,,227156,0,0,114792,21,2
 227197,"Achievement - Season Master - Midnight Season 2",0,1,8,0,0,0
 227198,"1600+ Rated PVP rating",227197,1,8,0,0,0
-227199,"Attained 1600+ Rated PVP rating",227198,1600,0,108731,0,0
-227200,,227198,1600,0,108729,1,2
-227201,,227198,1600,0,108730,2,2
-227202,,227198,1600,0,108727,3,2
-227203,,227198,1600,0,108728,4,2
-227204,"Defeated Midnight Falls in March on Quel'Danas on Heroic or Mythic difficulty",227197,1,0,109881,1,0
-227205,"Attained 2000+ Mythic Plus rating",227197,2000,0,109029,2,0
+227199,"Attained 1600+ Rated PVP rating",227198,1600,0,114051,0,0
+227200,,227198,1600,0,114049,1,2
+227201,,227198,1600,0,114050,2,2
+227202,,227198,1600,0,114047,3,2
+227203,,227198,1600,0,114048,4,2
+227204,"Defeated Ula'tek in the Venomous Abyss on Heroic or Mythic difficulty",227197,1,0,116813,1,0
+227205,"Attained 2000+ Mythic Plus rating",227197,2000,0,113240,2,0
 227206,,219450,1,0,113946,7,0
 227207,,224234,1,0,113947,3,0
 227208,,224234,3,0,113948,4,0
@@ -117248,7 +117250,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 229086,"Defeat the Entombed Sentinels after each Sentinel uses Vitriolic Stasis to restore more than half its total health in The Venomous Abyss on Normal difficulty or higher.",0,0,4,0,0,0
 229087,"Breath of Ula'tek healed",229086,1,0,114938,0,0
 229088,,145187,0,0,112836,1,1
-229101,"Achievement - Glory of the Venomous Abyss Raider",0,0,4,0,0,0
+229101,"Achievement - Glory of the Venomous Raider",0,0,4,0,0,0
 229102,"Donate to taverns in Midnight zones.",0,0,4,0,0,0
 229103,"Eversong Woods, Silvermoon",229102,1,0,114942,0,0
 229104,"Eversong Woods, Tranquillien",229102,1,0,114943,1,0
@@ -117358,6 +117360,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 229344,"Blossoms flown through",229343,1,0,115003,0,1
 229345,"Blossoms flown through",0,30,5,0,0,8193
 229346,"Blossoms flown through",229345,1,0,115003,0,1
+229445,"Trading Post Trader",229444,1,0,115097,0,1
 229347,"Rare creatures defeated",0,5,5,0,0,8193
 229348,,229347,1,0,115005,0,1
 229349,"Mote of Omnial Inquiry",0,5,5,0,0,8193
@@ -117435,10 +117438,15 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 229442,"Bonus objectives completed",0,5,5,0,0,8193
 229443,,229442,0,0,115096,0,0
 229444,"Use the /amaze emote on Trading Post Merchants and Merchandise",0,0,4,0,0,1
-229445,"Trading Post Trader",229444,1,0,115097,0,1
 229446,"Trading Post mannequin",229444,1,0,115098,1,1
 229459,"Marla spoken to",229389,1,0,105376,0,0
 229491,"Gnarled Hearts extracted",225263,6,0,115150,1,0
+229492,"Goal scored",0,0,4,0,0,0
+229493,"Goals scored",229492,3,0,115151,0,2048
+229494,"[DND] Earn Achievement 63343 a",0,0,4,0,0,0
+229495,,229494,0,0,115152,0,0
+229496,"[DND] Earn Achievement 63343 b",0,0,4,0,0,0
+229497,,229496,0,0,115152,0,0
 229498,"Ethereal Operations Disrupted",0,100,9,0,0,4096
 229499,,229498,15,0,115153,4,1
 229500,,229498,12,0,115154,2,1
@@ -117609,13 +117617,13 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 229670,"12.1 Delves - Ulatek01 - V02 - Place Hearts",0,0,4,0,0,0
 229671,"Gnarldin Hearts placed",229670,4,0,115305,0,0
 229674,"12.1 Ulatek - Achievement - Treasures (ERW)",0,0,4,0,0,0
-229675,"Abandoned Amani Privateer's Cache",229674,0,0,115289,0,16
+229675,"Amani Privateer's Cache",229674,0,0,115289,0,16
 229676,"Fangbound Sack",229674,0,0,115313,1,16
 229677,"Sunken Diver's Chest",229674,0,0,115290,2,16
 229678,"Grave of Someone Forgotten",229674,0,0,115291,3,16
 229679,"Profane Ritual Spoils",229674,0,0,115292,4,16
 229680,"Brine-Crusted Chest",229674,0,0,115294,5,16
-229681,"Posessed Vase",229674,0,0,115295,6,16
+229681,"Possessed Vase",229674,0,0,115295,6,16
 229682,"Malfunctioning Staff",229674,0,0,115306,7,16
 229683,"Tarnished Amani Glaive",229674,0,0,115307,8,16
 229684,"Jaktu's Cursed Blade",229674,0,0,115309,9,16
@@ -117646,7 +117654,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 229801,"Vassti, the Exalted Broodmother",229799,1,0,115369,1,0
 229802,Ss'akrithos,229799,1,0,115370,2,0
 229803,"Venom Lancer Ori'kassi",229799,1,0,115371,3,0
-229804,"Malformed Leviathan",229799,1,0,115372,4,0
+229804,"Malformed Leviathan",229799,1,0,111353,4,0
 229805,"12.1 - Tortollan - Lost Arvillo - (POC)",0,1500,4,0,0,0
 229806,"Go Sunbathing",229805,1,0,115373,0,1
 229809,"Impress the members of the Lost Arvillo with your surfing skills",229805,1,0,115376,1,1
@@ -117764,7 +117772,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 229978,"[DND] D4 - Chess Set",0,0,4,0,0,0
 229979,,229978,0,0,115493,0,0
 229980,"12.1 Raid - Ulatek - Venomancer - Achievement - LGK",0,0,4,0,0,0
-229981,"Slay the Solid Snake Venom",229980,1,0,115494,0,0
+229981,"Slay the Solidified Snake Venom",229980,1,0,115494,0,0
 229982,"Summoner Defeated 2/3",0,0,4,0,0,0
 229983,"Last Say",229982,2,0,111620,0,0
 229984,,224213,4,0,115495,3,0
@@ -117781,7 +117789,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 229995,,224213,5,0,115506,15,0
 229996,,224213,25,0,115507,16,0
 229997,,224213,5,0,115508,17,0
-229998,,224213,15,0,115509,18,0
+229998,,224213,8,0,115509,18,0
 229999,,224213,5,0,115510,19,0
 230000,,224213,7,0,115511,20,0
 230001,,224213,25,0,115512,21,0
@@ -117798,7 +117806,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230015,,224224,7,0,115525,6,0
 230016,,224224,5,0,115526,7,0
 230017,,224224,8,0,115527,8,0
-230018,,224224,30,0,115528,9,0
+230018,,224224,50,0,115528,9,0
 230019,,224224,5,0,115529,10,0
 230020,,224224,7,0,115530,11,0
 230021,,224224,9,0,115531,12,0
@@ -117829,7 +117837,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230089,"Hallow's End: JZB - A - Voidstorm, Slayer's Rise - Candy Bucket (12.x)",230087,1,0,115578,1,0
 230185,"Player enters Map Area Val: The Forgotten Depths",0,0,4,0,0,4096
 230186,,230185,1,0,115678,0,0
-230419,"Balanced Offering",230409,1,0,115813,9,0
 230187,"12.1 Delves - Ethereals02 - V04 - Boss (Hufton)",0,0,4,0,0,0
 230188,"Disciple of Vashnik defeated",230187,0,0,60399,0,0
 230210,"EVERGREEN Delves - POI Controller - Deactivate Blob 01",0,0,4,0,0,0
@@ -117858,7 +117865,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230255,"Nexus-Captain Leth'ir",230254,1,0,115720,0,0
 230256,"Imperator Pertinax",230254,1,0,115721,1,0
 230260,,230259,0,0,115723,0,0
-230261,"Defeat Nek'zali after returning the frog to the Soulcoil Well in The Venomous Abyss on Normal difficulty or higher.",0,0,4,0,0,0
+230261,"Defeat Nek'zali, the Soulcoiler after returning Kupamanduka to the Soulcoil Well in The Venomous Abyss on Normal difficulty or higher.",0,0,4,0,0,0
 230262,Kupamanduka!,230261,1,0,115724,0,0
 230275,"The Forum, the Coiled Isles",229975,0,0,115766,1,16
 230278,"The Wreck of Sethralis's Scales, the Coiled Isles",229975,0,0,115768,2,16
@@ -117904,6 +117911,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230416,"Melancholic Offering",230409,1,0,115819,6,0
 230417,"Fragile Offering",230409,1,0,115817,7,0
 230418,"Eerie Offering",230409,1,0,115818,8,0
+230419,"Balanced Offering",230409,1,0,115813,9,0
 230426,"Midnight: Journey's End (Season 2)",0,0,4,0,0,0
 230427,,230426,10,0,115823,0,0
 230428,"Raise Valeera to level 80.",0,0,4,0,0,0
@@ -118163,7 +118171,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230859,"Vashnik the Malignant",230855,1,0,116114,3,0
 230860,Sszorak,230855,1,0,116115,4,0
 230861,"The Twin Fangs",230855,1,0,116116,5,0
-230862,"The Bargained Crown",230855,1,0,116117,6,0
+230862,"The Coiled Altar",230855,1,0,116117,6,0
 230863,Ula'tek,230855,1,0,116118,7,0
 230864,"The Venomous Abyss",0,0,4,0,0,0
 230865,"Nek'zali the Soulcoiler",230864,1,0,116119,0,0
@@ -118172,7 +118180,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230868,"Vashnik the Malignant",230864,1,0,116122,3,0
 230869,Sszorak,230864,1,0,116123,4,0
 230870,"The Twin Fangs",230864,1,0,116124,5,0
-230871,"The Bargained Crown",230864,1,0,116125,6,0
+230871,"The Coiled Altar",230864,1,0,116125,6,0
 230872,Ula'tek,230864,1,0,116126,7,0
 230873,"Mythic: The Venomous Abyss",0,0,4,0,0,0
 230874,"Nek'zali the Soulcoiler",230873,1,0,116127,0,0
@@ -118181,7 +118189,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230877,"Vashnik the Malignant",230873,1,0,116130,3,0
 230878,Sszorak,230873,1,0,116131,4,0
 230879,"The Twin Fangs",230873,1,0,116132,5,0
-230880,"The Bargained Crown",230873,1,0,116133,6,0
+230880,"The Coiled Altar",230873,1,0,116133,6,0
 230881,Ula'tek,230873,1,0,116040,7,0
 230882,"Mythic: Nek'zali the Soulcoiler",0,0,4,0,0,0
 230883,,230882,1,0,116127,0,2
@@ -118195,7 +118203,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230891,,230890,1,0,116131,0,2
 230892,"Mythic: The Twin Fangs",0,0,4,0,0,0
 230893,,230892,1,0,116132,0,2
-230894,"Mythic: The Bargained Crown",0,0,4,0,0,0
+230894,"Mythic: The Coiled Altar",0,0,4,0,0,0
 230895,,230894,1,0,116133,0,2
 230896,"Achievement - The Venomous Abyss - Wing 1",0,0,4,0,0,0
 230897,"Nek'zali the Soulcoiler",230896,1,0,116119,0,0
@@ -118206,7 +118214,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 230902,Sszorak,230900,1,0,116123,1,0
 230903,"The Twin Fangs",230900,1,0,116124,2,0
 230904,"Achievement - The Venomous Abyss - Wing 3",0,0,4,0,0,0
-230905,"The Bargained Crown",230904,1,0,116125,0,0
+230905,"The Coiled Altar",230904,1,0,116125,0,0
 230906,Ula'tek,230904,1,0,116126,1,0
 230907,"Statistic - 12.1 Raid - The Venomous Abyss - Nek'zali the Soulcoiler - LFR",0,0,4,0,0,0
 230908,,230907,0,0,116134,0,2
@@ -118549,8 +118557,8 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 231541,,229101,0,0,116580,0,32
 231542,,229101,0,0,116581,1,32
 231543,,229101,0,0,116582,2,32
-231544,,229101,0,0,116583,3,32
-231545,,229101,0,0,116584,4,32
+231544,,229101,0,0,116583,4,32
+231545,,229101,0,0,116584,7,32
 231546,"12.1 Raid - Ulatek - Boss 03 - Tortollans - Achievement - BDP",0,0,4,0,0,0
 231547,"Include Hoji in the fight",231546,1,0,116585,0,0
 231548,"Guild Achievement - The Venomous Abyss",0,0,4,0,0,0
@@ -118576,7 +118584,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 231569,Ula'tek,231568,1,0,116603,0,0
 231570,"Achievement - Ahead of the Curve: Ula'tek",0,0,4,0,0,0
 231571,,231570,1,0,116604,0,2
-231572,"Arenas won with PvP trinkets equipped",0,2,5,0,0,4096
+231572,"Arenas or Battlegrounds won with PvP trinkets equipped",0,2,5,0,0,4096
 231573,,231572,2,0,116615,0,2
 231574,"Achievement - Cutting Edge: Ula'tek",0,0,4,0,0,0
 231575,,231574,1,0,116605,0,2
@@ -118617,11 +118625,11 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 231615,,231608,0,0,116624,6,0
 231616,,231608,0,0,116625,7,0
 231621,"Defeat the Twin Fangs after feeding Ithraz the following items in order during Ravenous Feast on Normal difficulty or higher.",0,0,4,0,0,0
-231622,"Item 1 fed",231621,1,0,116628,0,0
-231623,"Item 2 fed",231621,1,0,116629,1,0
+231622,"Crunchy Appetizer fed",231621,1,0,116628,0,0
+231623,"Sumptuous Soup fed",231621,1,0,116629,1,0
 231625,,231624,1,0,116630,0,0
-231626,"Item 3 fed",231621,1,0,116631,2,0
-231627,"Item 4 fed",231621,1,0,116632,3,0
+231626,"Tasty Blob fed",231621,1,0,116631,2,0
+231627,"Jiggly Dessert fed",231621,1,0,116632,3,0
 231628,"Cursed Curios - Scourge",0,60,4,0,0,2
 231629,Survive,231628,1,0,115490,0,2
 231630,"Cursed Curios - Void",0,60,4,0,0,2
@@ -118643,16 +118651,18 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 231663,,220000,0,0,116656,9,0
 231664,"Cursed Curios - Old Gods",0,60,4,0,0,2
 231665,Survive,231664,1,0,115490,0,2
+231676,"Arenas won with PvP trinkets equipped",0,2,5,0,0,4096
 231677,,231676,2,0,116665,0,2
-231685,"Arenas won after using crowd control",0,2,5,0,0,4096
+231685,"Arenas or Battlegrounds won",0,2,5,0,0,4096
 231686,,231685,2,0,116683,0,2
-231701,"Cast a crowd control spell",0,0,4,0,0,4096
+231701,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
 231702,,231701,1,0,116682,0,0
+231711,"Arenas won after using crowd control",0,2,5,0,0,4096
 231712,,231711,2,0,116691,0,2
+231713,"Cast a crowd control spell",0,0,4,0,0,4096
 231714,,231713,1,0,116692,0,0
-231724,"Arenas won after using interrupt or dispel",0,2,5,0,0,4096
 231725,,231724,2,0,116699,0,2
-231726,"Cast an interrupt or dispel",0,0,4,0,0,4096
+231726,"Cast an interrupt or dispel in training grounds",0,0,4,0,0,6144
 231727,,231726,1,0,116700,0,0
 231730,"12.1 Achievement - Lore Objects - Coiled Isle (TJH)",0,0,4,0,0,0
 231731,"Head Mason's Tablet",231730,0,0,116702,0,0
@@ -118719,7 +118729,57 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 231822,,231803,0,0,116762,18,0
 231823,,231803,0,0,116763,19,0
 231824,"Zul'jan defeated",231803,0,0,116743,20,0
-209727,"Gathering of the Elves",209723,0,0,104636,2,16
+231879,,229101,0,0,116806,3,32
+231880,,229101,0,0,116807,5,32
+231881,,229101,0,0,116808,6,32
+231883,,231882,1,0,116809,0,0
+231884,,221217,0,0,116810,4,0
+231885,,221217,0,0,116811,5,0
+231912,"12.1 Raid - Ulatek - Honoring Da Spirits - Achievement - JRN",0,0,4,0,0,0
+231913,"Farmer Su'mekaya comforted",231912,1,0,116823,1,0
+231914,"Talon Queen Rah'ven comforted",231912,1,0,116824,0,0
+231915,"Stone Crafter Babooi'jin comforted",231912,1,0,116825,2,0
+231935,"Hexweaver Vola'ni comforted",231912,1,0,116827,3,0
+231936,"B'faloh comforted",231912,1,0,116828,4,0
+231937,"Chef Momo'jin comforted",231912,1,0,116829,5,0
+231938,"Trapper Haka'li comforted",231912,1,0,116830,6,0
+231939,"Scout Jino'ka comforted",231912,1,0,116831,7,0
+231940,"Shieldbearer Kora'man comforted",231912,1,0,116832,8,0
+231941,Slaipaan,227399,1,0,116833,8,0
+231942,Slaipaan,227399,1,0,116834,9,0
+231943,"Flying Debris",227463,1,0,116835,25,0
+231948,"Reversed the ritual performed on Slitherfang in the Altar of Fangs.",0,1,8,0,0,0
+231949,,231948,1,0,116838,0,2
+231960,"Equip PvP trinkets",0,2,4,0,0,4096
+231961,,231960,1,0,116843,0,2
+232042,,231685,2,0,116856,1,2
+232043,,231572,2,0,116855,1,0
+232044,,231724,2,0,116857,1,0
+232049,,222542,0,0,116858,8,0
+232050,,222704,0,0,116859,9,0
+232051,,222704,0,0,116860,10,0
+232052,,222704,0,0,116861,11,0
+232081,"Heroic: Nymrissa Wavecaller",0,0,4,0,0,0
+232082,,232081,1,0,116426,0,2
+232087,"Mythic: Nymrissa Wavecaller",0,0,4,0,0,0
+232088,,232087,1,0,116427,0,2
+232089,"Nymrissa Wavecaller",0,0,4,0,0,0
+232090,"Nymrissa Wavecaller",232089,1,0,116872,0,2
+232091,"12.1 Prey - Isle Unlock (NJS)",0,0,4,0,0,4096
+232092,,232091,1,0,116873,0,0
+232094,,232093,1,0,116874,0,2048
+232096,,232095,1,0,116875,0,2048
+232098,,232097,1,0,116876,0,0
+232100,,232099,1,0,116877,0,0
+232102,,232101,1,0,116878,0,0
+232104,,232103,1,0,116879,0,0
+232106,,232105,1,0,116880,0,0
+232108,,232107,1,0,116881,0,0
+232110,,232109,1,0,116882,0,0
+232112,,232111,1,0,116883,0,0
+232114,,232113,1,0,116884,0,0
+232116,,232115,1,0,116885,0,0
+232118,,232117,1,0,116886,0,0
 207626,"12.0 Max Campaign - Ch 5 - Battle of the Bridge - Army Assembly - Signal Attack (KCO)",0,0,4,0,0,0
 207627,"Unnamed Branch",207626,0,4,0,0,0
 207628,"Speak to Arator",207627,0,0,103514,0,0
@@ -118773,14 +118833,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 218349,"12.0 Max Campaign - Ch 5 - Battle of the Bridge - Shining Span - Group 4 Defeated (KCO)",0,0,4,0,0,0
 218350,"Unnamed Branch",218349,0,4,0,0,0
 218351,"Group 4 eliminated",218350,1,0,109617,0,0
-229492,"Goal scored",0,0,4,0,0,0
-229493,"Goals scored",229492,3,0,115151,0,2048
-229494,"[DND] Earn Achievement 63343 a",0,0,4,0,0,0
-229495,,229494,0,0,115152,0,0
-229496,"[DND] Earn Achievement 63343 b",0,0,4,0,0,0
-229497,,229496,0,0,115152,0,0
 12374,"Honor the flames of Kalimdor.",0,0,4,0,0,0
-141125,"Fish up 50 items.",0,0,4,0,0,0
 5438,"Catch a fish in each of the specific nodes listed below.",0,0,4,0,0,0
 3835,"Win Alterac Valley while your team controls both mines.",0,0,4,0,0,0
 2527,,0,0,4,0,0,0
@@ -118956,6 +119009,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 19798,,0,1,5,0,0,0
 20436,,0,1,5,0,0,0
 7754,"Complete the Alterac Valley achievements listed below.",0,0,4,0,0,0
+141125,"Fish up 50 items.",0,0,4,0,0,0
 157210,"Fish up 50 items.",0,0,4,0,0,0
 8923,"Complete the cooking achievements listed below.",0,0,4,0,0,0
 7572,"Defeat the bosses in the Trial of the Champion on Heroic Difficulty.",0,0,4,0,0,0
@@ -119465,6 +119519,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 80372,"Statistic - Herald (Normal)",0,0,4,0,0,0
 80374,"Statistic - Herald (Heroic)",0,0,4,0,0,0
 80376,"Statistic - Herald (Mythic)",0,0,4,0,0,0
+219262,"Slay Horde Players",0,25,5,0,0,4096
 72698,"Defeat the Jadefire Masters in the Battle of Dazar'alor on Mythic difficulty.",0,0,4,0,0,0
 72538,"Enemies slain",0,6,5,0,0,0
 87116,"Complete the dungeon",0,0,4,0,0,2
@@ -119615,7 +119670,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 167963,"Slay Horde Players",0,25,5,0,0,4096
 218916,"Slay Horde Players",0,25,5,0,0,4096
 218920,"Slay Horde Players",0,25,5,0,0,4096
-219262,"Slay Horde Players",0,25,5,0,0,4096
 82584,"Complete the Battle for Darkshore (A)",0,1,8,0,0,4096
 80194,"Slay Level 120 Alliance Players in Drustvar",0,10,5,0,0,4096
 79346,"Craft Drums of the Maelstrom",0,3,5,0,0,4096
@@ -119868,7 +119922,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 85400,"Complete 3 World Quests in Revendreth",0,3,5,0,0,4096
 88780,"Complete 3 World Quests in Revendreth",0,3,5,0,0,4096
 85419,"Complete the Terrors in Tirna Scithe World Quest or the Mists of Tirna Scithe Dungeon.",0,1,8,0,0,4096
-90908,"Tormentor defeated",0,1,4,0,0,0
 85422,"Complete the Terrors in Tirna Scithe World Quest or the Mists of Tirna Scithe Dungeon.",0,1,8,0,0,4096
 85425,"Complete the Terrors in Tirna Scithe World Quest or the Mists of Tirna Scithe Dungeon.",0,1,8,0,0,4096
 85431,"Complete the Disloyal Denizens World Quest or the Spires of Ascension Dungeon.",0,1,8,0,0,4096
@@ -119934,6 +119987,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 90606,Anima,0,375,5,0,0,4096
 90608,Anima,0,375,5,0,0,4096
 90610,Anima,0,375,5,0,0,4096
+90908,"Tormentor defeated",0,1,4,0,0,0
 90935,"Tormentor defeated",0,1,4,0,0,0
 90937,"Tormentor defeated",0,1,4,0,0,0
 90943,"Tormentor defeated",0,1,4,0,0,0
@@ -119961,6 +120015,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 135866,"Learned Fishing",0,0,4,0,0,4096
 139677,"Learned Fishing",0,0,4,0,0,4096
 231624,"Learned Fishing",0,0,4,0,0,4096
+231882,"Learned Fishing",0,0,4,0,0,4096
 138399,"Complete All Three Mythic Fated Shadowlands Raids",0,0,4,0,0,0
 136248,"Dungeon bosses defeated",0,0,4,0,0,1
 149645,"Dungeon bosses defeated",0,0,4,0,0,1
@@ -120409,7 +120464,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 217501,"Complete Cauldron of Echoes",0,0,4,0,0,4096
 217503,"Complete Cauldron of Echoes",0,0,4,0,0,4096
 210513,"Resurrect Players",0,100,9,0,0,4096
-225376,"Haranir Unlockable",0,1,4,0,0,0
 210630,"Complete World Quests in K'aresh",0,3,5,0,0,4096
 225077,"Complete World Quests in K'aresh",0,3,5,0,0,4096
 210732,"Undermine raid bosses defeated or Mythic Dungeons completed",0,4,5,0,0,4096
@@ -120480,6 +120534,7 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 222835,"New Criteria Tree",0,1,8,0,0,4096
 218531,"12.0 - Delves - Delver's Call - DevouringHost02",0,0,4,0,0,4096
 229836,"12.0 Midnight - Bonus Event Weekend, Season 1 - Complete 4 Dungeons on Mythic Difficulty",0,4,5,0,0,4096
+225376,"Haranir Unlockable",0,1,4,0,0,0
 230338,"12.0 Professions - Alchemy - Complete Crafting Orders Weekly",0,2,5,0,0,4096
 219455,"World Quests in Midnight completed",0,6,5,0,0,4096
 219460,"World Quests in Midnight completed",0,6,5,0,0,4096
@@ -120543,8 +120598,6 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 225193,"Slay World Boss",0,0,4,0,0,0
 224881,"Hositle Activites or Major Attacks",0,3,5,0,0,4096
 225001,"Lair Boss defeated",0,1,8,0,0,0
-225007,"Nymrissa Wavecaller defeated",0,1,8,0,0,0
-225009,"Nymrissa Wavecaller defeated",0,1,8,0,0,0
 225771,"12.1 Prey WQ Check",0,3,5,0,0,4096
 225538,"Complete 3 World Quests in the Coiled Isle",0,3,5,0,0,4096
 225807,"Complete 3 World Quests in the Coiled Isle",0,3,5,0,0,4096
@@ -120565,6 +120618,17 @@ ID,Description_lang,Parent,Amount,Operator,CriteriaID,OrderIndex,Flags
 229577,"12.0.7 Showdowns - Bonus Wrapper - WQs/Events - Val - Normal",0,5,5,0,0,12288
 229599,"12.0.7 Showdowns - Bonus Wrapper - WQs/Events - Naigtal - Normal",0,5,5,0,0,12288
 230484,"12.1 Ulatek - Fishing - N'Zoth Fish - Q02 - Kill - Complete a Curse Surge (EPR)",0,0,4,0,0,4096
-231676,"Arenas won with PvP trinkets equipped",0,2,5,0,0,4096
-231711,"Arenas won after using crowd control",0,2,5,0,0,4096
-231713,"Cast a crowd control spell",0,0,4,0,0,4096
+231724,"Arenas or Battlegrounds won",0,2,5,0,0,4096
+232093,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232095,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232097,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232099,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232101,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232103,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232105,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232107,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232109,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232111,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232113,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232115,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144
+232117,"Cast a crowd control spell in training grounds",0,0,4,0,0,6144

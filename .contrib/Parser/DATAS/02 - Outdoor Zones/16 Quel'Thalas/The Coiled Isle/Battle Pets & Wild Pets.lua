@@ -1,9 +1,22 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+
 root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 	m(MAP.MIDNIGHT.THE_COILED_ISLE, {
 		filter(BATTLE_PETS, {
+			i(270248, {	-- Autumn Snapling (PET!)
+				["crs"] = { 262248 },	-- Autumn Snapling
+				["coords"] = {
+					{ 67.9, 81.5, MAP.MIDNIGHT.THE_COILED_ISLE },
+				},
+			}),
+			i(270252, {	-- Nightfur Kapara (PET!)
+				["crs"] = { 262245 },	-- Nightfur Kapara
+				["coords"] = {
+					{ 62.0, 81.9, MAP.MIDNIGHT.THE_COILED_ISLE },	-- Walks around this general area
+				},
+			}),
 			i(270214, {	-- Poisoned Parasite (PET!)
 				["crs"] = { 262222 },	-- Poisoned Parasite
 				["coords"] = {

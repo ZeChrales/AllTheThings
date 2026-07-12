@@ -1,6 +1,7 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+
 root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 	m(MAP.MIDNIGHT.THE_COILED_ISLE, {
 		n(WORLD_QUESTS, {
@@ -8,6 +9,12 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			["groups"] = bubbleDownFiltered({
 				["isWorldQuest"] = true,
 			},FILTERFUNC_questID,{
+				q(95662, {	-- A Suspicious Stew
+					["coord"] = { 58.0, 48.8, MAP.MIDNIGHT.THE_COILED_ISLE },
+				}),
+				q(95381, {	-- Fire in the Sky
+					["coord"] = { 54.2, 43.3, MAP.MIDNIGHT.THE_COILED_ISLE },
+				}),
 				q(94967, {	-- Ki'clak Snack Attack
 					--["sourceQuest"] = 93906,	-- Untethering the Two
 					["coord"] = { 69.6, 56.5, MAP.MIDNIGHT.THE_COILED_ISLE },

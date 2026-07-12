@@ -481,6 +481,22 @@ local function HasExpandedSubgroup(group)
 		end
 	end
 end
+local function HandleExpandSelfAndMatchingSubGroups(group, expanded, remaining)
+	local g = group.g
+	local expanded = expanded or group.expanded
+	if not g or not expanded or app.IsComplete(group) then return end
+
+	remaining = remaining or (group.total - group.progress)
+	local o
+	for i=1,#g do
+		o = g[i]
+		if remaining == (o.total - o.progress) then
+			o.expanded = expanded
+			HandleExpandSelfAndMatchingSubGroups(o, expanded, remaining)
+			break
+		end
+	end
+end
 local function ForceExpandGroupsRecursively(group, expanded)
 	local g = group.g
 	-- app.PrintDebug("EGR.F",app:SearchLink(group),expanded)
@@ -971,10 +987,12 @@ end
 local function HandleLeftClickDefault(self, reference, window)
 	if self.index > 0 then
 		reference.expanded = not reference.expanded;
+		HandleExpandSelfAndMatchingSubGroups(reference, reference.expanded)
 		window:Update();
 	else
 		if not reference.expanded then
 			reference.expanded = true;
+			HandleExpandSelfAndMatchingSubGroups(reference, reference.expanded)
 			window:Update();
 		end
 		if window:IsMovable() then

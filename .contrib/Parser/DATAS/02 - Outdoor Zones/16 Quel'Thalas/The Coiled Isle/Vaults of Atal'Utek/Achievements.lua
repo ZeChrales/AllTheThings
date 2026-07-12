@@ -1,6 +1,7 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+
 root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 	m(MAP.MIDNIGHT.THE_COILED_ISLE, {
 		m(MAP.MIDNIGHT.VAULTS_OF_ATALUTEK, {
@@ -12,9 +13,12 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				ach(62604),	-- Dance While Everyone Watches
 				ach(63636, {	-- Fully Corroded
 					["cr"] = 269485,	-- Altar of Corrosion
+					["groups"] = { title(794) },	-- <Name> the Snake
 				}),
 				ach(63601),	-- Oppose the Foes
-				ach(63653),	-- Pro Poison Patroller
+				ach(63653, {	-- Pro Poison Patroller
+					i(276553),	-- Emerald Skyfang (MOUNT!)
+				}),
 				ach(62600),	-- Ritual Behavior
 				ach(63598),	-- Roll the Patrol
 				ach(63596),	-- Snake Stompin'

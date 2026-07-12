@@ -6,13 +6,12 @@ local FIELD_ACCOLADE = 3405;
 local DARK_PARTICLE = 267051;
 
 root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
-	["groups"] = sharedData({
-		["timeline"] = { ADDED_12_0_5 },
-	}, {
-		header(HEADERS.Achievement, 41052, {	-- Lingering Shadows
+	n(SHOWDOWN, {
+		["description"] = "Naigtal, is a world of giant mushrooms, rich in arcane energy, covered in vast oceans with ley lines running beneath them. The Azerothian forces on Naigtal during the War of Light and Shadow presume the natives to have been wiped out by the Legion.",
+		["timeline"] = { ADDED_12_0_7 },
+		["groups"] = {
 			m(NAIGTAL, {
 				["icon"] = 775461,
-				["timeline"] = { ADDED_12_0_7 },
 				["cr"] = 264322,	-- Greater Void Portal
 				["coord"] = { 51.4, 71.3, MAP.MIDNIGHT.VOIDSTORM },
 				["maps"] = {
@@ -99,10 +98,9 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								{ 48.5, 81.9, NAIGTAL },
 								{ 60.0, 22.1, VAL },
 							},
-							["timeline"] = { ADDED_12_0_7 },
 							["groups"] = sharedData({ ["modID"] = 6 }, {
 								i(277554),	-- Void Commander's Emblem (QI!)
-								--
+								-- Mythic appearances
 								i(276794),	-- Archmage's Cord of Light
 								i(276792),	-- Belt of the Illidari Vanguard
 								i(276788),	-- Kifaan's Spare Bindings
@@ -112,6 +110,16 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								i(276799),	-- Riftstalker's Shade Cloak
 								i(276790),	-- Runed Illidari Wraps
 								i(276791),	-- Tala'saan's Training Belt
+								-- Automatically rewards all Normal version appearances
+								i(276794, {["modID"] = 3 }),	-- Archmage's Cord of Light
+								i(276792, {["modID"] = 3 }),	-- Belt of the Illidari Vanguard
+								i(276788, {["modID"] = 3 }),	-- Kifaan's Spare Bindings
+								i(276789, {["modID"] = 3 }),	-- Lightveil Watcher's Vambraces
+								i(276793, {["modID"] = 3 }),	-- Longshot's Fletched Girdle
+								i(276787, {["modID"] = 3 }),	-- Reinforced Expedition Bands
+								i(276799, {["modID"] = 3 }),	-- Riftstalker's Shade Cloak
+								i(276790, {["modID"] = 3 }),	-- Runed Illidari Wraps
+								i(276791, {["modID"] = 3 }),	-- Tala'saan's Training Belt
 							}),
 						}),
 						q(97072, {	-- A Swampy Welcome to Naigtal
@@ -260,8 +268,8 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								{ 48.5, 81.9, NAIGTAL },
 							},
 							["Level"] = 90,
-							["groups"] = { i(275690) },	-- Riftstalker's Cache
 							["isWeekly"] = true,
+							["groups"] = { i(275690) },	-- Riftstalker's Cache
 						}),
 						q(96718, {	-- Showdown on Naigtal (Heroic)
 							["sourceQuest"] = 96052,	-- Through the Mana Rift
@@ -275,8 +283,8 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								{ 48.5, 81.9, NAIGTAL },
 							},
 							["Level"] = 90,
-							["groups"] = { i(275691) },	-- Riftstalker's Overflowing Cache
 							["isWeekly"] = true,
+							["groups"] = { i(275691) },	-- Riftstalker's Overflowing Cache
 						}),
 						q(97084, {	-- More Disruption: Naigtal
 							["sourceQuest"] = 96717,	-- Showdown on Naigtal
@@ -501,7 +509,12 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 						}),
 						o(659300, {	-- Squirming Mollusk
 							["coords"] = {
+								{ 24.7, 55.0, NAIGTAL },
 								{ 26.3, 47.1, NAIGTAL },
+								{ 37.3, 23.7, NAIGTAL },
+								{ 61.3, 72.1, NAIGTAL },
+								{ 61.5, 71.8, NAIGTAL },
+								{ 72.6, 31.3, NAIGTAL },
 								{ 76.2, 50.7, NAIGTAL },
 								{ 78.4, 68.8, NAIGTAL },
 							},
@@ -666,6 +679,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								i(274850),	-- Mercilus's Chain Waistguard
 								i(274844),	-- Sleetlink Hauberk
 							}),
+							filter(NECK_F, {
+								i(274826),	-- Coiling Smoke Chain
+								i(274827),	-- Draenic Drive Chain
+							}),
 							filter(PLATE, {
 								i(274857),	-- Chitonous Broodmother's Spaulders
 								i(274853),	-- Creature Crushers
@@ -677,8 +694,6 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								i(274852),	-- Sleetstone Chestplate
 							}),
 							filter(TRINKET_F, {
-								i(274826),	-- Coiling Smoke Chain
-								i(274827),	-- Draenic Drive Chain
 								i(274890),	-- Enchanted Spore
 								i(274893),	-- Frosty Klaxid Stinger
 								i(274891),	-- Mk XII Gear Drive
@@ -707,7 +722,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 					}),
 				},
 			}),
-		}),
+		},
 	}),
 }));
 
@@ -719,9 +734,12 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 				q(96679),	-- Completes with 'Bouncy Mushrooms' (questID 96744)
 				q(96680),	-- Completes with 'Aerospores' (questID 96745)
 				q(96681),	-- Completes with 'The Grappler' (questID 96845)
-				q(97473),	-- Looting 'Void Commander's Emblem' (itemID 277554) for 'Knocking Off the Top' (questID 97256)
 				q(95888),	-- Completes with 'Marsh Mana Spores' (questID 95888)
 				q(95889),	-- Completes with 'Forest Mana Spores' (questID 95575)
+				q(97473),	-- Looting 1st 'Void Commander's Emblem' (itemID 277554) for 'Knocking Off the Top' (questID 97256)
+				q(97474),	-- Looting 2nd 'Void Commander's Emblem' (itemID 277554) for 'Knocking Off the Top' (questID 97256)
+				q(97475),	-- Looting 3rd 'Void Commander's Emblem' (itemID 277554) for 'Knocking Off the Top' (questID 97256)
+				q(97476),	-- Looting 4th 'Void Commander's Emblem' (itemID 277554) for 'Knocking Off the Top' (questID 97256)
 			}),
 		},
 	}),
