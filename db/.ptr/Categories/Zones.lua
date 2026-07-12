@@ -169247,6 +169247,7 @@ ach(63640,{
 crit(116542,{achID=63639,id=4})}),
 ach(63382,{questID=97138}),
 ach(63432,{
+de(5130,{itemID=248962,spellID=1248177}),
 crit(115810,{achID=63432,id=1,providers={{"i",277946}}}),
 crit(115811,{achID=63432,id=2,providers={{"i",277938}}}),
 crit(115812,{achID=63432,id=3,providers={{"i",277939}}}),
@@ -169306,7 +169307,6 @@ crit(115294,{achID=63359,id=6,questID=95995}),
 crit(115309,{achID=63359,id=10,questID=95566}),
 crit(115310,{achID=63359,id=11,questID=95571}),
 crit(115298,{achID=63359,id=14,questID=95835}),
-crit(115302,{achID=63359,id=18,questID=95855}),
 crit(116540,{achID=63639,id=3})}),
 ach(63390,{
 crit(115368,{achID=63390,id=1,providers={{"n",255088}}}),
@@ -169357,14 +169357,19 @@ ach(63635,{
 title(789)}),
 ach(63632,{
 crit(116501,{achID=63635,id=2})}),
-ach(63634,{providers={{"s",1306926}},g={
+ach(63634,{cost={{"i",244790,1}},providers={{"s",1306926}},g={
 crit(116503,{achID=63635,id=4})}})}),
-h(-45,{isDaily=1,g={
+h(-45,{coords={
+[2512]={{51.6,49.8},{51.7,50.2}}},isDaily=1,qgs={257598,268394},g={
 q(94804,{coords={
 [2512]={{51.6,49.8}}},isDaily=1,qgs={257598}}),
+q(94796,{coords={
+[2512]={{51.6,49.8}}},isDaily=1,qgs={257598},g={
+i(278094)}}),
 q(97562,{coords={
-[2512]={{51.7,50.2}}},isDaily=1,qgs={268394},g={
-i(274587,{spellID=1237942})}})}}),
+[2512]={{51.7,50.2}}},isDaily=1,qgs={268394}}),
+q(97571,{coords={
+[2512]={{51.7,50.2}}},isDaily=1,qgs={268394}})}}),
 h(-58,{
 n(257598,{coords={
 [2512]={{51.6,49.8}}},g={
@@ -169865,6 +169870,7 @@ n(264854,{coords={
 crit(115279,{achID=63358,id=1})}}),
 n(258916,{coords={
 [2512]={{69.7,44.9}}},questID=94619,g={
+s(311582,280714,{f=7}),
 crit(115285,{achID=63358,id=9})}}),
 n(265262,{coords={
 [2512]={{43.9,50.8}}}}),
@@ -169899,7 +169905,9 @@ toy(279054),
 i(279055),
 crit(115289,{achID=63359,id=1})}})}}),
 o(649085,{coords={
-[2512]={{70.6,76.6}}}}),
+[2512]={{70.6,76.6}}},g={
+toy(274921),
+i(276144)}}),
 o(642316,{coords={
 [2512]={{58.1,43.5}}},questID=95594,g={
 i(278031),
@@ -169919,7 +169927,9 @@ o(642307,{coords={
 i(278003),
 crit(115314,{achID=63359,id=20})}}),
 o(645549,{coords={
-[2512]={{67.3,48.5}}},providers={{"n",263244},{"o",645553}}}),
+[2512]={{67.3,48.5}}},providers={{"n",263244},{"o",645553}},g={
+toy(279021),
+i(279049)}}),
 o(642071,{
 toy(277954),
 i(277961)}),
@@ -169942,6 +169952,9 @@ n(263187,{description="Activate Second."}),
 n(263185,{description="Activate Third."}),
 n(268062,{description="Activate Fourth."}),
 crit(115292,{achID=63359,id=5})}}),
+o(644813,{coords={
+[2512]={{29.5,67.2}}},questID=95855,g={
+crit(115302,{achID=63359,id=18})}}),
 o(644681,{coords={
 [2512]={{53.1,43.1}}},questID=95841,g={
 crit(115300,{achID=63359,id=16})}}),
@@ -169953,7 +169966,7 @@ i(275920),
 crit(115307,{achID=63359,id=9})}}),
 o(644654,{coords={
 [2512]={{64.7,36.6}}}}),
-ah(648564,{description="Steps must be followed in order to unlock gossip options.\n\n1. Talk to Vul'zahn and ask him if you can have the treasure.\n2. Talk to Witherbark Cook and ask him for the Bowl of Stew.. Talk to Apothecary Dezi and ask him to give you a Potion.\n4. Talk to Witherbark Cook and ask him to give you a Bowl of Stew.\n5. Talk to Vul'zahn, give him the Stew. He will give you the key.\n6. Open the treasure.",type="o",g={
+ah(648564,{description="Steps must be followed in order to unlock gossip options.\n\n1. Talk to Vul'zahn and ask him if you can have the treasure.\n2. Talk to Witherbark Cook and ask him for the Bowl of Stew.\n3. Talk to Apothecary Dezi and ask him to give you a Potion.\n4. Talk to Witherbark Cook and ask him to give you a Bowl of Stew.\n5. Talk to Vul'zahn, give him the Stew. He will give you the key.\n6. Open the treasure.",type="o",g={
 n(253837,{coords={
 [2512]={{57.2,48.5}}},g={
 i(271791)}}),
@@ -170001,8 +170014,9 @@ crit(116709,{achID=63662,id=8})}}),
 o(654586,{coords={
 [2512]={{70,66}}},questID=96945,g={
 crit(116704,{achID=63662,id=3})}}),
-q(98307,{
-crit(116710,{achID=63662,id=9})})}}),
+o(669314,{coords={
+[2512]={{71.9,44.9}}},questID=98307,g={
+crit(116710,{achID=63662,id=9})}})}}),
 o(622048,{coords={
 [2642]={{51.4,26.1}}}}),
 o(654991,{description="Spawns randomly around the temples."}),
@@ -170111,23 +170125,34 @@ i(280005,{coords={
 h(-64,{
 cu(3448)})}}),
 h(-58,{
+n(256688,{coords={
+[2512]={{69.6,52.1}}},g={
+i(280422,{f=55,spellID=1308717})}}),
 n(270399,{coords={
 [2512]={{58.6,45.9}}},g={
 de(27042,{cost={{"c",3316,500}},itemID=279508,spellID=1306839}),
 de(15283,{cost={{"c",3316,500}},itemID=263873,spellID=1270747}),
 de(27041,{cost={{"c",3316,500}},itemID=279452,spellID=1306738}),
 de(26484,{cost={{"c",3316,150}},itemID=279285,spellID=1306457}),
+de(5130,{cost={{"c",3316,150}},itemID=248962,spellID=1248177}),
 de(21833,{cost={{"c",3316,250}},itemID=271851,spellID=1289635}),
 de(26481,{cost={{"c",3316,150}},itemID=280218,spellID=1307950}),
 de(26377,{cost={{"c",3316,250}},itemID=279292,spellID=1306493})}}),
 n(256686,{coords={
 [2512]={{69.3,52.2}}},g={
-i(266435,{cost={{"i",267085,10}},f=37,spellID=1278220})}})}),
+i(266435,{cost={{"i",267085,10}},f=37,spellID=1278220})}}),
+n(258904,{coords={
+[2512]={{69.8,52.2}}},g={
+i(280409,{f=55,spellID=1308593})}})}),
 h(-62,{
 q(95662,{coords={
 [2512]={{58,48.8}}},isWorldQuest=1}),
 q(95381,{coords={
 [2512]={{54.2,43.3}}},isWorldQuest=1}),
+q(94574,{coords={
+[2512]={{63.2,38.8}}},isWorldQuest=1,g={
+o(619683,{
+i(265403)})}}),
 q(94967,{coords={
 [2512]={{69.6,56.5}}},isWorldQuest=1,g={
 i(267085)}}),
@@ -170137,6 +170162,8 @@ q(96066,{coords={
 [2512]={{56.9,49.4}}},isWorldQuest=1}),
 q(95429,{coords={
 [2512]={{69.4,53.4}}},isWorldQuest=1}),
+q(94573,{coords={
+[2512]={{69.5,47.7}}},isWorldQuest=1}),
 q(95451,{coords={
 [2512]={{58.1,47.7}}},isWorldQuest=1})}),
 h(-63,{
@@ -170144,8 +170171,8 @@ i(274470)}),
 h(-64,{
 flt(56,{
 o(656135,{description="Can be found in waters, and around coastal areas of The Coiled Isle.",g={
-i(274596,{spellID=1237942}),
-i(274597,{spellID=1237942})}})}),
+i(274596,{spellID=1225292}),
+i(274597,{spellID=1225292})}})}),
 h(-88,{
 flt(3,{
 s(309555,276038,{f=3}),
@@ -170182,6 +170209,8 @@ s(309536,276013,{f=6}),
 s(309540,276017,{f=6}),
 s(309544,276021,{f=6}),
 s(309528,276005,{f=6})}),
+flt(51,{
+i(276032,{f=51})}),
 flt(7,{
 s(309539,276016,{f=7}),
 s(309535,276012,{f=7}),
@@ -170196,6 +170225,7 @@ i(274493,{f=53,spellID=1294329}),
 i(274496,{f=53,spellID=1306743})})}),
 h(-101,{
 s(309576,276059,{f=21}),
+s(309562,276045,{f=25}),
 s(309565,276048,{f=20})})}),
 ah(2772,{icon=7903180,type="fa",g={
 faction(2772),
