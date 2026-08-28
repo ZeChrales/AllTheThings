@@ -118,7 +118,7 @@ root(ROOTS.Zones, {
 					visit_exploration(5866,{coord={31.2,17.2,THE_JADE_FOREST}}),	-- Ascent of Swirling Winds
 					visit_exploration(5863,{coord={43.2,23.6,THE_JADE_FOREST}}),	-- Banquet Grounds
 					visit_exploration(5857,{coord={40.0,75.3,THE_JADE_FOREST}}),	-- Camp Gormal
-					exploration(5905),	-- Camp Nooka Nooka
+					exploration(5905,{coord={25.6,38.2,THE_JADE_FOREST}}),	-- Camp Nooka Nooka
 					visit_exploration(5901,{coord={27.3,32.0,THE_JADE_FOREST}}),	-- Cave of Words
 					visit_exploration(6867,{coord={30.9,37.0,THE_JADE_FOREST}}),	-- Circle of Blood
 					visit_exploration(5910,{coord={30.7,33.9,THE_JADE_FOREST}}),	-- Circle of Bone
@@ -144,7 +144,7 @@ root(ROOTS.Zones, {
 					visit_exploration(5953,{coord={26.7,56.0,THE_JADE_FOREST}}),	-- Murky Bank
 					exploration(5854),	-- Nectarbreeze Orchard
 					exploration(5878),	-- Orchid Hollow
-					exploration(5899),	-- Path of Enlightenment
+					exploration(5899,{coord={31.7,36.4,THE_JADE_FOREST}}),	-- Path of Enlightenment
 					exploration(5851),	-- Paw'don Glade
 					exploration(5934),	-- Pearl Lake
 					visit_exploration(5935,{coord={57.7,81.7,THE_JADE_FOREST}}),	-- Pearlfin Village
@@ -2211,6 +2211,9 @@ root(ROOTS.Zones, {
 						["races"] = HORDE_ONLY,
 					}),
 					q(29755, {	-- Pei-Back
+						-- #if AFTER WOD
+						["description"] = "If you greatly overlevel MoP content, you might need to use the toy Soft Foam Sword or Whole-Body Shrinka.",
+						-- #endif
 						["sourceQuest"] = 29754,	-- To Bridge Earth and Sky
 						["provider"] = { "o", 214903 },	-- The Tan-Chao
 						["coord"] = { 43.8, 12.4, THE_JADE_FOREST },
@@ -2295,11 +2298,16 @@ root(ROOTS.Zones, {
 							}),
 						},
 					}),
-					q(31978, {	-- Priorities! (H1)
+					q(31978, {	-- Priorities! (H1) / (A+H)
 						["sourceQuest"] = 31769,	-- The Final Blow!
 						["qg"] = 66662,	-- Gi-Oh
 						["coord"] = { 31.9, 13.2, THE_JADE_FOREST },
+						-- Danny Donkey: This quest seemingly lost it's Horde exclusivity during DF.
+						-- #if BEFORE 10.2.7
 						["races"] = HORDE_ONLY,
+						-- #else
+						["description"] = "This Horde quest is now completable as Alliance, be ware it requires visiting the hostile Honeydew Village.",
+						-- #endif
 						["groups"] = {
 							objective(1, {	-- 0/6 Barrel of Honeybrew
 								["provider"] = { "o", 215695 },	-- Barrel of Honeybrew
@@ -3718,7 +3726,8 @@ root(ROOTS.Zones, {
 					n(66937, {	-- Akkalar <Shield of Kril'mandar>
 						["coord"] = { 59.6, 96.0, THE_JADE_FOREST },
 						["groups"] = {
-							i(90167),	-- Akkalar's Clamshell
+							i(90167), 	-- Akkalar's Clamshell
+							i(90174), 	-- Troubles From Without
 						},
 					}),
 					n(66932, {	-- Akkalou <Spawn of Kril'mandar>
@@ -4072,6 +4081,12 @@ root(ROOTS.Zones, {
 					}),
 				}),
 				n(ZONE_DROPS, {
+					i(82392, {	-- Gumweed
+						["crs"] = {
+							54557,	-- Amberglass Crab
+							59084,	-- Pearly Tortoise
+						},
+					}),
 					i(89682, {	-- Oddly-Shaped Horn
 						["coord"] = { 27.6, 59.6, THE_JADE_FOREST },
 						["cr"] = 58895,	-- Sungraze Behemoth

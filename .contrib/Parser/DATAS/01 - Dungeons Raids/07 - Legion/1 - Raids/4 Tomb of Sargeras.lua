@@ -279,6 +279,11 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
+InstanceHelper.LFRQueueNPC = {
+	["cr"] = 111246,	-- Archmage Timear
+	["coord"] = { 63.7, 55.0, LEGION_DALARAN },
+}
+
 root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { ADDED_7_2_0 } }, {
 	inst(875, {	-- Tomb of Sargeras
 		["coord"] = { 64.3, 21.0, BROKEN_SHORE },
@@ -430,10 +435,6 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					i(146412),	-- Vantus Rune Technique: Tomb of Sargeras [Rank 2]
 				}),
 			}),
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["cr"] = 111246,	-- Archmage Timear
-				["coord"] = { 63.7, 55.0, LEGION_DALARAN },
-			}),
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups({
 				ZoneDrops({}),
 				header(HEADERS.LFGDungeon, 1494, {	-- The Gates of Hell
@@ -498,8 +499,8 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 							47726,	-- Tomb of Sargeras: Aegwynn's Path (Heroic)
 							47727,	-- Tomb of Sargeras: Aegwynn's Path (Mythic)
 						},
-						["provider"] = { "n", 119723 },	-- Image of Aegwynn
-						["groups"] = { i(151248) },	-- Fragment of the Guardian's Seal (QI!)
+						["qg"] = 119723,	-- Image of Aegwynn
+						["qi"] = 151248,	-- Fragment of the Guardian's Seal (QI!)
 					}),
 				}),
 				ZoneDrops({}),
@@ -525,8 +526,8 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					q(47726, {	-- Tomb of Sargeras: Aegwynn's Path (Heroic)
 						["description"] = "Finishing this quest will grant you access to Maiden of Vigilance after killing Goroth on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
 						["altQuests"] = { 47727 },	-- Tomb of Sargeras: Aegwynn's Path (Mythic)
-						["provider"] = { "n", 119723 },	-- Image of Aegwynn
-						["groups"] = { i(151249) },	-- Fragment of the Guardian's Seal (QI!)
+						["qg"] = 119723,	-- Image of Aegwynn
+						["qi"] = 151249,	-- Fragment of the Guardian's Seal (QI!)
 					}),
 				}),
 				ZoneDrops({}),
@@ -545,8 +546,8 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					q(47727, {	-- Tomb of Sargeras: Aegwynn's Path (Mythic)
 						["description"] = "Finishing this quest will grant you access to Maiden of Vigilance after killing Goroth on Mythic difficulty each week.\n",
 						["altQuests"] = { 47727 },	-- Tomb of Sargeras: Aegwynn's Path (Mythic)
-						["provider"] = { "n", 119723 },	-- Image of Aegwynn
-						["groups"] = { i(151250) },	-- Fragment of the Guardian's Seal (QI!)
+						["qg"] = 119723,	-- Image of Aegwynn
+						["qi"] = 151250,	-- Fragment of the Guardian's Seal (QI!)
 					}),
 				}),
 				ZoneDrops({}),

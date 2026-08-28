@@ -204,11 +204,21 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
+InstanceHelper.BossObjects = {
+	[COSMOS] = { 546729 },	-- Treasure Chest
+}
+
 InstanceHelper.UpgradeMapping = {
+	-- #IF AFTER 12.1
+	[DIFFICULTY.RAID.LFR] = 0,
+	[DIFFICULTY.RAID.NORMAL] = 0,
+	[DIFFICULTY.RAID.HEROIC] = 0,
+	-- #ELSE
 	[DIFFICULTY.RAID.LFR] = 3,
 	[DIFFICULTY.RAID.NORMAL] = 5,
 	[DIFFICULTY.RAID.HEROIC] = 6,
-};
+	-- #ENDIF
+}
 
 local TokenModID = {
 	[DIFFICULTY.RAID.LFR] = 149,
@@ -351,11 +361,7 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 					}),
 				}),
 				ach(61370),	-- Mythic: The Voidspire (automated)
-				-- Multiple Raids this tier... Duplicate Glory and Tier Set Achievements?
 				ach(62352),	-- Nothing to See Here
-				ach(61380, {	-- Glory of the Midnight Raider (automated)
-					i(260887),	-- Tenebrous Harrower (MOUNT!)
-				}),
 				ach(61843),	-- Quel'Dressed
 				ach(61606),	-- The Voidspire Guild Run
 				ach(61607),	-- Heroic: The Voidspire Guild Run

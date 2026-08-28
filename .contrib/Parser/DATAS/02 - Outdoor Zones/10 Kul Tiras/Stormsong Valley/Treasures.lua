@@ -80,7 +80,9 @@ root(ROOTS.Zones, m(KUL_TIRAS, bubbleDown({ ["timeline"] = { ADDED_8_0_1 } }, {
 					{ 78.7, 57.4, STORMSONG_VALLEY },
 					{ 79.1, 43.3, STORMSONG_VALLEY },
 					{ 79.6, 55.2, STORMSONG_VALLEY },
+					{ 80.0, 55.5, STORMSONG_VALLEY },
 					{ 81.7, 50.1, STORMSONG_VALLEY },
+					{ 81.8, 50.7, STORMSONG_VALLEY },
 					{ 82.2, 44.0, STORMSONG_VALLEY },
 					{ 83.1, 44.1, STORMSONG_VALLEY },
 					{ 84.2, 54.5, STORMSONG_VALLEY },
@@ -147,7 +149,6 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.BFA, bubbleDownSelf({ ["time
 	m(KUL_TIRAS, {
 		m(STORMSONG_VALLEY, {
 			n(TREASURES, {
-				q(51945),	-- Stormsong Valley repeatable random chest
 				q(53652),	-- Reported as "Alliance BfA: Opened a chest in Stormsong Valley and got this"
 			}),
 		}),

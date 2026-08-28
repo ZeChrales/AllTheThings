@@ -152,7 +152,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDownSelf({ ["timeli
 					q(53079, {	-- Reinforcements
 						["sourceQuests"] = { 51771 },	-- War of Shadows
 						["provider"] = { "n", 138708 },	-- Garona Halforceen
-						["coord"] = { 58.4, 62.6, ZULDAZAR },
+						["coords"] = {
+							{ 51.7, 99.7, DAZARALOR },
+							{ 58.4, 62.6, ZULDAZAR },
+						},
 						["races"] = HORDE_ONLY,
 					}),
 					q(51803, {	-- The Kul Tiras Campaign
@@ -427,7 +430,8 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDownSelf({ ["timeli
 						["races"] = HORDE_ONLY,
 						["isBreadcrumb"] = true,
 						["DisablePartySync"] = true,
-						["lockCriteria"] = { 1, "questID", 51722 },	-- This HQT is likely the lock criterium according to Jewel
+						-- Seems to be an unknown account-wide HQT in similar BFA era which matches for players who have this quest locked, will use for this until someone reports it's wrong :D
+						["lockCriteria"] = { 1, "questID", 52969 },
 					}),
 					q(51916, {	-- Uniting Zandalar		(Also grants credit for the two Alliance Quests "Uniting Kul Tiras" (ID 51918 & ID 52450))
 						["description"] = "This version of the quest is offered to the first character on your account to reach Friendly with Zandalari Empire, Talanji's Expedition, and Voldunai. Your alts will get a different quest with the same name when they reach level 120, but all characters get credit for both quests.",
@@ -448,6 +452,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDownSelf({ ["timeli
 					}),
 					q(52451, {	-- Uniting Zandalar		(Also grants credit for the two Alliance Quests "Uniting Kul Tiras" (ID 51918 & ID 52450))
 						["description"] = "This version of the quest is offered to alts that share an account with a character that already completed the original 'Uniting Zandalar.' All characters get credit for both quests.",
+						["sourceQuests"] = { 52428 },	-- Infusing the Heart
 						["provider"] = { "n", 135691 },	-- Nathanos Blightcaller
 						["coord"] = { 58.4, 62.6, ZULDAZAR },
 						["races"] = HORDE_ONLY,

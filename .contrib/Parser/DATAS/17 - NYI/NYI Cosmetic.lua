@@ -517,13 +517,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(230082),	-- Prowler's Lively Mask
 				i(230041),	-- Prowler's Lively Shoulder Cape
 
-				------ Prowler's Midnight Set ------
-				i(230152),	-- Ensemble: Prowler's Midnight Headgear
-				q(85118),	-- Ensemble: Prowler's Midnight Headgear
-				i(230054),	-- Prowler's Midnight Cowl
-				i(230074),	-- Prowler's Midnight Mask
-				i(230033),	-- Prowler's Midnight Shoulder Cape
-
 				------ Prowler's Plum Set ------
 				i(230178),	-- Ensemble: Prowler's Plum Headgear
 				q(85137),	-- Ensemble: Prowler's Plum Headgear
@@ -831,12 +824,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(244191),	-- Sickly Leggings of the Banshee
 				i(244213),	-- Sickly Shroud of the Banshee
 
-				------ Brick Sweatsuit Set ------
-				i(242462),	-- Ensemble: Brick Sweatsuit
-				q(90646),	-- Ensemble: Brick Sweatsuit
-				i(242443),	-- Brick Sweatpants
-				i(242414),	-- Brick Sweatshirt
-
 				------ Deep Sweatsuit Set ------
 				i(242460),	-- Ensemble: Deep Sweatsuit
 				q(90644),	-- Ensemble: Deep Sweatsuit
@@ -1015,9 +1002,7 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 		-- 11.2.5
 		expansion(EXPANSION.TWW, patch(2,5), bubbleDownSelf({ ["timeline"] = { CREATED_11_2_5 } }, {
 			n(ARMOR, {
-				i(252750),	-- Aquatic Winter Toque
 				i(251670),	-- Battered Wearable Pot Lid
-				i(252742),	-- Brick Winter Toque
 				i(249718),	-- Bronze Food Fanatic Backpack
 				i(252741),	-- Camo Winter Toque
 				i(252715),	-- Deep Winter Toque
@@ -1026,10 +1011,7 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(249717),	-- Golden Food Fanatic Backpack
 				i(252713),	-- Grassy Winter Toque
 				i(250291),	-- Hot and Fresh Portable Bakery
-				i(252710),	-- Midnight Winter Toque
 				i(252747),	-- Plum Winter Toque
-				i(250293),	-- Red Hot Portable Bakery
-				i(252751),	-- Snowy Winter Toque
 				i(251669),	-- Sturdy Wearable Pot Lid
 				i(251985),	-- Trapper's Black Quiver
 				i(251986),	-- Trapper's Blue Quiver
@@ -1140,10 +1122,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(260412),	-- Rusty Chainkini
 			}),
 			n(SETS, {
-				------ Sorcerer's Aquatic Garb Set ------
-				i(258019),	-- Ensemble: Sorcerer's Aquatic Garb
-				i(257794),	-- Sorcerer's Aquatic Cape
-				i(257775),	-- Sorcerer's Aquatic Cowl
 
 				------ Sorcerer's Azure Garb Set ------
 				i(257971),	-- Ensemble: Sorcerer's Azure Garb
@@ -1170,25 +1148,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(257784),	-- Sorcerer's Deep Cape
 				i(257764),	-- Sorcerer's Deep Cowl
 
-				------ Sorcerer's Grassy Garb Set ------
-				i(257974),	-- Ensemble: Sorcerer's Grassy Garb
-				i(257782),	-- Sorcerer's Grassy Cape
-				i(257762),	-- Sorcerer's Grassy Cowl
-
-				------ Sorcerer's Midnight Garb Set ------
-				i(257970),	-- Ensemble: Sorcerer's Midnight Garb
-				i(257779),	-- Sorcerer's Midnight Cape
-				i(257759),	-- Sorcerer's Midnight Cowl
-
 				------ Sorcerer's Plum Garb Set ------
 				i(258003),	-- Ensemble: Sorcerer's Plum Garb
 				i(257791),	-- Sorcerer's Plum Cape
 				i(257772),	-- Sorcerer's Plum Cowl
-
-				------ Sorcerer's Snowy Garb Set ------
-				i(258020),	-- Ensemble: Sorcerer's Snowy Garb
-				i(257795),	-- Sorcerer's Snowy Cape
-				i(257776),	-- Sorcerer's Snowy Cowl
 
 				------ Corrupted Regalia of the Crusader Set ------
 				i(258186),	-- Ensemble: Corrupted Regalia of the Crusader
@@ -1308,9 +1271,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(266972),	-- [PH] Hara'ti Shoulders - Yellow
 				i(266974),	-- [PH] Hara'ti Tabard - Blue
 				i(266973),	-- [PH] Hara'ti Tabard - Yellow
-				i(262852),	-- Aquatic Dunecloth Belt
-				i(262834),	-- Aquatic Dunecloth Skirt
-				i(262870),	-- Aquatic Dunecloth Vest
 				i(262838),	-- Azure Dunecloth Belt
 				i(262820),	-- Azure Dunecloth Skirt
 				i(262856),	-- Azure Dunecloth Vest
@@ -1326,9 +1286,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(266090),	-- Basic Purple Quiver
 				i(266091),	-- Basic Rugged Quiver
 				i(266092),	-- Basic Sea Green Quiver
-				i(262844),	-- Brick Dunecloth Belt
-				i(262826),	-- Brick Dunecloth Skirt
-				i(262862),	-- Brick Dunecloth Vest
 				i(262587),	-- Brown Lunch Bag
 				i(248933),	-- Burden of War
 				i(262843),	-- Camo Dunecloth Belt
@@ -1343,17 +1300,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(262842),	-- Deep Dunecloth Belt
 				i(262824),	-- Deep Dunecloth Skirt
 				i(262860),	-- Deep Dunecloth Vest
-				i(263575),	-- Ensemble: Elder Moss Outfit
-				i(263574),	-- Ensemble: Osseoclad's Wear
-				i(263576),	-- Ensemble: Rampant Thorn Armor
 				i(258032),	-- Ensemble: Skilled Preyseeker's Attire
-				i(263520),	-- Ensemble: Sprawling's Garb
 				i(262840),	-- Grassy Dunecloth Belt
 				i(262822),	-- Grassy Dunecloth Skirt
 				i(262859),	-- Grassy Dunecloth Vest
-				i(262837),	-- Midnight Dunecloth Belt
-				i(262819),	-- Midnight Dunecloth Skirt
-				i(262855),	-- Midnight Dunecloth Vest
 				i(262849),	-- Plum Dunecloth Belt
 				i(262831),	-- Plum Dunecloth Skirt
 				i(262867),	-- Plum Dunecloth Vest
@@ -1362,12 +1312,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(262830),	-- Rosy Dunecloth Skirt
 				i(262865),	-- Rosy Dunecloth Vest
 				i(262588),	-- Sack Lunch
-				i(262853),	-- Snowy Dunecloth Belt
-				i(262835),	-- Snowy Dunecloth Skirt
-				i(262871),	-- Snowy Dunecloth Vest
-				i(258031),	-- Vaunted Preyseeker's Knapsack
-				i(258029),	-- Vaunted Preyseeker's Plumed Helm
-				i(258027),	-- Vaunted Preyseeker's Shoulder-Spikes
 			}),
 			filter(TABARDS, {
 				i(242635),	-- Twilight's Blade - Armor - Tabard
@@ -1402,10 +1346,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(258719),	-- Elaborate Golden Mageweave Shoulders
 				i(258688),	-- Elaborate Golden Mageweave Vest
 				i(258684),	-- Elaborate Golden Mageweave Vestments
-
-				------ Rootlands Weaponry ------
-				i(263577),	-- Arsenal: Rootlands Weaponry
-				q(93962),	-- Arsenal: Rootlands Weaponry
 			}),
 			n(WEAPONS, {
 				i(262734),	-- [DNT] Mace of the Great Dark

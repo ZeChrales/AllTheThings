@@ -1,5 +1,5 @@
 ﻿---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,crit,en,flt,h,i,mnt,p,q,s,settings,toy,x=_.CreateAchievement,_.CreateAchievementCriteria,_.CreateEnsemble,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateMount,_.CreateSpecies,_.CreateQuest,_.CreateItemSource,_.Settings,_.CreateToy,_.CreateExpansion;
 categories.Promotions=
@@ -28,7 +28,7 @@ q(65285,{altQuests={65284},coords={
 toy(33219,{b=1,description="Obtained if you set up a 6 Month WoW Subscription between 13th February 2022 until 13th August 2022.",q=3,u=3})}}),
 q(65562,{altQuests={65561},coords={
 [210]={{42.6,71.6}}},crs={5111,6740,6741,6746,6929,16618,16739,19046,19232},maps={84,85,87,88,103,110,111,998},qgs={17249},u=2,g={
-s(134092,23705,{b=1,description="Obtained if you set up a 6 Month WoW Subscription between 13th February 2022 until 13th August 2022 or a 12 Month WoW Subscription between 11th November 2022 until 15th January 2023.",f=9,q=4,u=3})}}),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
+s(134092,23705,{b=1,description="Obtained if you set up a 6 Month WoW Subscription between 13th February 2022 until 13th August 2022 or a 12 Month WoW Subscription between 11th November 2022 until 15th January 2023.",f=9,q=4,u=3})}}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
 mnt(42777,{b=1,description="Obtained if you paid 267$ to set up a 6 Month WoW Subscription between 25th January 2022 until 25th July 2022.",itemID=33225,lvl=40,q=4,u=2}))}}),
 x(3,{u=3,g={
 q(72523,{altQuests={72522},coords={
@@ -46,17 +46,17 @@ p(4235,{b=1,itemID=200060,npcID=196534,q=3,spellID=388541,u=3})}}),
 mnt(416158,{b=1,description="Obtained if you set up a 12 Month WoW Subscription after 27th October 2023.",itemID=207097,lvl=20,q=4,u=2}),
 p(4273,{b=1,description="Obtained if you set up a 6 Month WoW Subscription after 10th January 2024.",itemID=209877,npcID=211012,q=3,spellID=423843,u=2}),
 mnt(49290,{description="Obtained if you set up a 3 Month WoW Subscription between 10th October 2022 until 8th January 2024.",u=2}),
-mnt(74856,{b=1,description="Obtained if you set up a 3 Month WoW Subscription between 8th January 2024 until 8th April 2024.",itemID=74269,lvl=20,q=4,u=2}),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(471440,{awp=30400,b=1,description="Can be bought for ¥1888 ($265 USD) or a discounted price of ¥588 ($82 USD) for owners of the original for a limited time in the Ingame Shop.",itemID=232614,lvl=70,q=4,rwp=40400,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(1217476,{awp=30400,description="Rewarded from the Treasure Workshop.",rwp=40400,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-i(235378,{awp=30400,description="Can be bought for ¥200 RMB (~$27 USD) for a limited time in the Ingame Shop.",rwp=40400,u=2,g={(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(459784,{itemID=227362,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(42777,{itemID=49284,lvl=40,q=4,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(42776,{itemID=49283,lvl=20,q=3,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(46199,{itemID=49286,lvl=20,q=4,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(46197,{itemID=49285,lvl=20,q=3,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-i(45047,{b=1,f=55,q=3,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-i(35223,{b=1,f=55,q=3,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
+mnt(74856,{b=1,description="Obtained if you set up a 3 Month WoW Subscription between 8th January 2024 until 8th April 2024.",itemID=74269,lvl=20,q=4,u=2}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(471440,{awp=30400,b=1,description="Can be bought for ¥1888 ($265 USD) or a discounted price of ¥588 ($82 USD) for owners of the original for a limited time in the Ingame Shop.",itemID=232614,lvl=70,q=4,rwp=40400,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(1217476,{awp=30400,description="Rewarded from the Treasure Workshop.",rwp=40400,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(235378,{awp=30400,description="Can be bought for ¥200 RMB (~$27 USD) for a limited time in the Ingame Shop.",rwp=40400,u=2,g={(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(459784,{itemID=227362,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(42777,{itemID=49284,lvl=40,q=4,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(42776,{itemID=49283,lvl=20,q=3,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(46199,{itemID=49286,lvl=20,q=4,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(46197,{itemID=49285,lvl=20,q=3,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(45047,{b=1,f=55,q=3,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(35223,{b=1,f=55,q=3,u=2})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
 i(46779,{b=1,f=55,q=1,u=2}))}}))}}),
 x(4,{u=3,g={
 p(4585,{b=1,description="Obtained if you set up a 12 Month WoW Subscription after 9th July 2024.",itemID=224002,npcID=224065,q=3,u=2}),
@@ -64,48 +64,32 @@ mnt(463045,{description="Obtained if you set up a 12 Month WoW Subscription afte
 p(4685,{b=1,description="Obtained if you set up a 6/12 Month WoW Subscription after 31st January 2025.",itemID=231312,npcID=232536,q=3,u=2})}}),
 x(5,{u=3,g={
 p(4850,{description="Obtained if you set up a 6/12 Month WoW Subscription after 15th July 2025.",npcID=245603,u=3}),
-h(-691,{awp=50502,u=3,g={(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(107203,{b=1,itemID=76755,lvl=20,q=4,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(1241429,{itemID=246264,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(107516,{b=1,itemID=76889,lvl=20,q=4,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-mnt(107517,{b=1,itemID=76902,lvl=20,q=4,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-p(329,{b=1,itemID=71726,npcID=54438,q=3,spellID=101606,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-p(333,{b=1,itemID=72134,npcID=54730,q=3,spellID=102317,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-toy(72159,{b=1,q=3,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-toy(79769,{b=1,q=3,u=3}))}}),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-i(235378,{awp=50502,u=3,g={(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
-i(267279,{f=55,u=3}))}}))}}),
+h(-691,{awp=50502,u=3,g={(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(107203,{b=1,itemID=76755,lvl=20,q=4,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(1241429,{itemID=246264,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(107516,{b=1,itemID=76889,lvl=20,q=4,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(107517,{b=1,itemID=76902,lvl=20,q=4,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+p(329,{b=1,itemID=71726,npcID=54438,q=3,spellID=101606,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+p(333,{b=1,itemID=72134,npcID=54730,q=3,spellID=102317,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+toy(72159,{b=1,q=3,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+toy(79769,{b=1,q=3,u=3}))}}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(235378,{awp=50502,u=3,g={(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(267279,{b=1,f=55,q=4,u=3}))}}))}}),
 h(-521,{u=3,g={
-x(1,{description="These rewards were made available to anyone who purchased an original Collector's Edition of World of Warcraft.\n\nThere may still be copies online, but expect to lose a sizable chunk of real world currency for it.",u=3,g={
-h(-45,{rwp=20001,u=2,g={
-q(8547,{awp=20001,maps={94},providers={{"i",20938}},races={10},u=3}),
-q(12781,{awp=30002,c={6},maps={23},providers={{"i",39713}},u=3}),
-q(9278,{awp=20001,c={11},maps={97},providers={{"i",22888}},u=3}),
-q(5841,{maps={27},providers={{"i",14647}},races={3,7},u=2}),
-q(5805,{maps={37},providers={{"i",14646}},races={1},u=2}),
-q(5842,{maps={57},providers={{"i",14648}},races={4},u=2}),
-q(5843,{maps={1},providers={{"i",14649}},races={2,8},u=2}),
-q(5844,{maps={7},providers={{"i",14650}},races={6},u=2}),
-q(5847,{maps={18},providers={{"i",14651}},races={5},u=2}),
-q(91888,{awp=11505,coords={
+x(1,{awp=11505,description="These rewards were made available to anyone who purchased an original Collector's Edition of World of Warcraft.\n\nThere may still be copies online, but expect to lose a sizable chunk of real world currency for it.",u=3,g={
+h(-45,{rwp=40006,u=2,g={
+q(91888,{coords={
 [224]={{28.2,75.8}}},crs={5111,6740,6741,6746,6929,16618,16739,19046,19232},description="These rewards were made available to anyone who purchased a 2024 employee 30th anniversary collector's edition.\n\nThere may still be copies online, but expect to a sizable chunk of real world currency for it.",maps={84,85,87,88,103,110,111,998},qgs={17249},rwp=30002,u=2,g={
-ach(662,{awp=30002,u=2}),
-ach(663,{awp=30002,u=2}),
-ach(664,{awp=30002,u=2}),
+ach(662,{awp=30002,u=3}),
+ach(663,{awp=30002,u=3}),
+ach(664,{awp=30002,u=3}),
 p(93,{awp=11101,b=1,itemID=13584,npcID=11326,q=3,spellID=17708,u=3}),
 p(92,{awp=11101,b=1,itemID=13583,npcID=11325,q=3,spellID=17707,u=3}),
-p(94,{awp=11101,b=1,itemID=13582,npcID=11327,q=3,spellID=17709,u=3})}})}}),
-h(-47,{description="Every character you created was able to select between one of the three pets by completing the 'Welcome!' quest for your race.",rwp=20001,sourceQuests={5805,5841,5842,5843,5844,5847,8547,9278,12781},u=2,g={
-ach(662,{awp=30002,providers={{"i",13584}},rwp=30002,u=2}),
-ach(663,{awp=30002,providers={{"i",13583}},rwp=30002,u=2}),
-ach(664,{awp=30002,providers={{"i",13582}},rwp=30002,u=2}),
-p(93,{awp=11101,b=1,itemID=13584,npcID=11326,q=3,spellID=17708,u=3}),
-p(92,{awp=11101,b=1,itemID=13583,npcID=11325,q=3,spellID=17707,u=3}),
-p(94,{awp=11101,b=1,itemID=13582,npcID=11327,q=3,spellID=17709,u=3})}})}}),
+p(94,{awp=11101,b=1,itemID=13582,npcID=11327,q=3,spellID=17709,u=3})}})}})}}),
 q(63865,{awp=20501,coords={
-[210]={{42.6,71.6}}},crs={5111,6740,6741,6746,6929,16618,16739,19046,19232},description="These rewards were made available to anyone who purchased a Collector's Edition of The Burning Crusade.\n\nThere may still be copies online, but expect to a sizable chunk of real world currency for it.\n\nNOTE: Non-EU accounts will not receive Lurky's Egg if redeemed.",maps={84,85,87,88,103,110,111,998},qgs={17249},rwp=30002,u=2,g={
+[210]={{42.6,71.6}}},crs={5111,6740,6741,6746,6929,16618,16739,19046,19232},description="These rewards were made available to anyone who purchased a Collector's Edition of The Burning Crusade.\n\nThere may still be copies online, but expect to a sizable chunk of real world currency for it.\n\nNOTE: Non-EU accounts will not receive Lurky's Egg if redeemed.",maps={84,85,87,88,103,110,111,998},qgs={17249},rwp=30400,u=2,g={
 p(131,{b=1,itemID=25535,npcID=18381,q=3,spellID=32298,u=2}),
-ach(665,{awp=30002,u=2}),(function(t)if GetCVar("portal")~="EU" then	t.u=1;end	return t;end)(
+ach(665,{awp=30002,rwp=30002,u=2}),(function(t)if GetCVar("portal")~="EU" then	t.u=1 end	return t end)(
 p(111,{b=1,description="This was only available in the EU.",itemID=30360,npcID=15358,q=3,spellID=24988,u=2}))}}),
 h(-524,{awp=20501,description="These rewards were made available to anyone who purchased a Deluxe Edition of The Burning Crusade Classic.",rwp=20505,u=2,g={
 q(63450,{coords={
@@ -114,11 +98,11 @@ toy(184871,{b=1,q=3,u=2}),
 toy(38233,{b=1,q=3,u=2}),
 mnt(348459,{b=1,itemID=184865,lvl=20,q=4,u=2})}})}}),
 h(-694,{awp=50502,description="These rewards were made available to anyone who purchased the Outland Heroic Pack of The Burning Crusade Classic Anniversary.",u=3,g={
-mnt(1266345,{itemID=260438,lvl=30,u=3}),
-toy(260622,{u=3}),
-toy(260221,{u=3}),
-mnt(1266866,{itemID=260759,lvl=70,u=3}),
-p(4962,{itemID=260433,npcID=255820,u=3})}}),
+mnt(1266345,{b=1,itemID=260438,lvl=30,q=4,u=3}),
+toy(260622,{b=1,q=3,u=3}),
+toy(260221,{b=1,q=3,u=3}),
+mnt(1266866,{b=1,itemID=260759,lvl=70,q=4,u=3}),
+p(4962,{b=1,itemID=260433,npcID=255820,q=3,u=3})}}),
 x(3,{awp=20403,description="These rewards were made available to anyone who purchased a Collector's Edition of Wrath of the Lich King.\n\nThere may still be copies online, but expect to a sizable chunk of real world currency for it.",u=3,g={
 ach(683,{providers={{"i",39286}},rwp=30305,u=2}),
 p(188,{b=1,itemID=39286,npcID=28883,q=3,rwp=30305,spellID=52615,u=2,g={
@@ -138,15 +122,15 @@ h(-526,{awp=30400,rwp=40402,u=2,g={
 h(-522,{description="These rewards were made available to anyone who purchased Blazing Heroic Edition.",u=2,g={
 p(4274,{b=1,itemID=209945,npcID=211025,q=3,spellID=423868,u=2}),
 mnt(423869,{u=2}),
-s(220352,224380,{awp=40400,b=1,f=4,q=4,u=2}),
-s(220355,224383,{awp=40400,f=4,q=4,u=2}),
-s(220354,224382,{awp=40400,f=4,q=4,u=2}),
-s(220350,224378,{awp=40400,b=1,f=4,q=4,u=2}),
-s(220349,224377,{awp=40400,b=1,f=4,q=4,u=2}),
-s(220351,224379,{awp=40400,b=1,f=4,q=4,u=2}),
-s(220347,224375,{awp=40400,b=1,f=4,q=4,u=2}),
-s(220353,224381,{awp=40400,b=1,f=4,q=4,u=2}),
-s(220348,224376,{awp=40400,b=1,f=4,q=4,u=2}),
+s(220352,224380,{awp=40400,b=1,f=4,loc=40,q=4,u=2}),
+s(220355,224383,{awp=40400,f=4,loc=41,q=4,u=2}),
+s(220354,224382,{awp=40400,f=4,loc=42,q=4,u=2}),
+s(220350,224378,{awp=40400,b=1,f=4,loc=42,q=4,u=2}),
+s(220349,224377,{awp=40400,b=1,f=4,loc=43,q=4,u=2}),
+s(220351,224379,{awp=40400,b=1,f=4,loc=44,q=4,u=2}),
+s(220347,224375,{awp=40400,b=1,f=4,loc=45,q=4,u=2}),
+s(220353,224381,{awp=40400,b=1,f=4,loc=46,q=4,u=2}),
+s(220348,224376,{awp=40400,b=1,f=4,loc=47,q=4,u=2}),
 toy(216893,{awp=40400,b=1,q=3,u=2})}})}}),
 x(5,{awp=50004,description="These rewards were made available to anyone who purchased a Collector's Edition of Mists of Pandaria.\n\nThe rewards can be purchased from the in-game shop.",u=3,g={
 ach(6849,{providers={{"i",85870}},rwp=50407,u=2}),
@@ -157,7 +141,7 @@ h(-527,{awp=40402,rwp=60002,u=3,g={
 h(-522,{description="These rewards were made available to anyone who purchased Sha-Infused Heroic Pack.",u=3,g={
 i(235561,{b=1,f=101,q=3,u=3}),
 toy(235464,{b=1,q=3,u=3}),
-en(267294,{u=3}),
+en(267294,{b=1,q=4,u=3}),
 mnt(473487,{u=3}),
 mnt(473478,{u=3})}})}}),
 h(-530,{description="These rewards are available to anyone who purchases Diablo 3 Collection.",u=1,g={
@@ -220,7 +204,7 @@ h(-550,{awp=20403,rwp=30002,u=2,g={
 ach(1637,{providers={{"i",37297}},u=2}),
 p(179,{b=1,description="Win a battleground during the Spirit of Competition event to get this.",itemID=37297,npcID=27217,q=3,spellID=48406,u=2}),
 ach(1636,{providers={{"i",36941}},u=2}),
-s(145354,36941,{b=1,description="Participate in a battleground during the Spirit of Competition event to get this.",f=9,OnUpdate=function(t)if _.IsQuestFlaggedCompleted(12187)then	if not settings.AccountWide.Quests then	t.u=2;else	t.u=nil;end	end	end,q=3,u=2}),(function(t)if GetCVar("portal")~="CN" then	t.u=1;end	return t;end)(
+s(145354,36941,{b=1,description="Participate in a battleground during the Spirit of Competition event to get this.",f=9,OnUpdate=function(t)if _.IsQuestFlaggedCompleted(12187)then	if not settings.AccountWide.Quests then	t.u=2 else	t.u=nil end	end	end,q=3,u=2}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
 p(180,{b=1,description="Only available on Chinese realms.\n\nThroughout each day of the event in China, the code is mailed to 500 random players. Only players who have achieved various in-game milestones during the event are eligible for a chance to receive the code. Some milestones include having an Arena rating of 1650+, increasing reputation for certain Outland factions from less than revered to exalted, or raising a crafting profession from 350 or less to 375.",itemID=37298,npcID=27346,q=3,spellID=48408,u=2}))}}),
 h(-551,{awp=20001,u=2,g={
 flt(101,{u=2,g={
@@ -248,12 +232,12 @@ p(183,{awp=20402,b=1,itemID=38050,npcID=27914,q=3,spellID=49964,u=2,g={
 i(38186,{b=1,description="To obtain this, summon your Soul-Trader pet and kill players or NPCs which are no less than 8 levels below you.",f=55,q=1,u=2}),
 i(38291,{b=1,cost={{"i",38186,100}},f=55,q=3,u=2}),
 i(38300,{b=1,cost={{"i",38186,50}},f=55,q=3,u=2}),
-s(145439,38160,{b=1,cost={{"i",38186,1000}},f=2,q=1,u=2}),
-s(201596,38162,{b=1,cost={{"i",38186,250}},f=2,q=1,u=2}),
-s(201595,38161,{b=1,cost={{"i",38186,250}},f=2,q=1,u=2}),
-s(145442,38163,{b=1,cost={{"i",38186,100}},f=2,q=1,u=2}),
-s(145458,38286,{b=1,cost={{"i",38186,500}},f=2,q=1,u=2}),
-s(201597,38285,{b=1,cost={{"i",38186,100}},f=2,q=1,u=2})}}),
+s(145439,38160,{b=1,cost={{"i",38186,1000}},f=2,loc=42,q=1,u=2}),
+s(201596,38162,{b=1,cost={{"i",38186,250}},f=2,loc=47,q=1,u=2}),
+s(201595,38161,{b=1,cost={{"i",38186,250}},f=2,loc=44,q=1,u=2}),
+s(145442,38163,{b=1,cost={{"i",38186,100}},f=2,loc=40,q=1,u=2}),
+s(145458,38286,{b=1,cost={{"i",38186,500}},f=2,loc=41,q=1,u=2}),
+s(201597,38285,{b=1,cost={{"i",38186,100}},f=2,loc=45,q=1,u=2})}}),
 p(242,{awp=30202,b=1,itemID=49343,npcID=36511,pb=1,q=3,spellID=68810,u=2,g={
 crit(23598,{achID=8397,awp=50400,id=22,pb=1})}}),
 p(241,{awp=30202,b=1,itemID=49287,npcID=36482,q=4,spellID=68767,u=2})}}),
@@ -269,8 +253,8 @@ mnt(74856,{awp=40300,b=1,itemID=74269,lvl=20,q=4,u=2}),
 mnt(102514,{awp=40300,itemID=72582,lvl=20,q=4,u=2}),
 mnt(113120,{awp=40302,itemID=79771,lvl=20,q=4,u=2}),
 mnt(136505,{awp=50200,itemID=93671,lvl=20,q=4,u=2}),
-mnt(65917,{awp=30200,b=1,itemID=46778,lvl=40,q=4,rwp=30200,u=2}),
-mnt(65917,{awp=30200,itemID=49290,lvl=40,q=4,u=2}),
+i(46778,{awp=30200,b=1,f=100,lvl=40,q=4,rwp=30200,u=2}),
+i(49290,{awp=30200,f=100,lvl=40,q=4,u=2}),
 mnt(93623,{awp=40003,itemID=68008,lvl=60,q=4,u=2}),
 mnt(42776,{awp=20103,b=1,itemID=33224,lvl=20,q=3,rwp=30200,u=2}),
 mnt(42776,{awp=30200,itemID=49283,lvl=20,q=3,u=2}),
@@ -325,5 +309,5 @@ toy(32566,{awp=20100,b=1,q=3,u=2}),
 toy(71628,{awp=40300,q=3,u=2}),
 toy(72161,{awp=40300,b=1,q=3,u=2}),
 toy(38578,{awp=20501,b=1,model=200314,modelScale=2,q=3,u=2}),
-toy(69215,{awp=40100,b=1,q=3,u=2})}})}})}});
-end);
+toy(69215,{awp=40100,b=1,q=3,u=2})}})}})}})
+end)

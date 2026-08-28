@@ -5,751 +5,61 @@
 root(ROOTS.Unsorted, {
 	expansion(EXPANSION.MID, {
 		expansion(EXPANSION.MID, patch(1,0), bubbleDownSelf({ ["timeline"] = { ADDED_12_1_0 } }, {
-			i(158368),	-- Sethraliss' Defiled Relic
 			i(169391),	-- Bubble-Eyed Rolly
 			i(205801),	-- Handguards of the Onyx Crucible
 			i(238534),	-- Vial of Harandar Oddities
-			i(241151),	-- Coiled Stargorger Lure
-			i(243337),	-- Bound-Left Silvermoon Drapes
-			i(243338),	-- Bound-Right Silvermoon Drapes
-			i(244344),	-- Griftah's Mystical Polter-Urn
-			i(245539),	-- Elegant Enchanted Vanity
-			i(246958),	-- Mastercrafted Fungal Row Planter
 			i(247776),	-- Glowing Zangarshroom Cup
-			i(248404),	-- Stack of Kafa Mugs
-			i(248963),	-- Spirit-Touched Amani Mask
-			i(249219),	-- Ouroboric Curse
-			i(249223),	-- Corrosive Bilespear
-			i(249227),	-- Dundun's Favor
-			i(249228),	-- Soul-Cracking Dreamcatcher
-			i(249923),	-- Sin'dorei Golden Welcome
-			i(251630),	-- Recipe: Amani Cornucopia
-			i(253397),	-- Revered Deepstone Table
-			i(253449),	-- Bound Silvermoon Drapes
-			i(253455),	-- Unearthed Sarcophagus Lid
-			i(253473),	-- Unearthed Sarcophagus Base
-			i(253481),	-- Masterful Sin'dorei Gravestone
-			i(254561),	-- Ogre Champion's Prized Skull
-			i(255649),	-- Amani Water Well
 			i(255702),	-- [PH] Snake Corpse
-			i(258027),	-- Vaunted Preyhunter's Shoulder-Spikes
-			i(258029),	-- Vaunted Preyhunter's Plumed Helm
-			i(258031),	-- Vaunted Preyhunter's Knapsack
 			i(260238),	-- Pus-filled Murloc Eye
 			i(260242),	-- Femur of Ba'tik
 			i(260243),	-- Vileroot
-			i(260417),	-- Gnarldin Supplies
-			i(260419),	-- Cursed Zandalari Coin
-			i(260420),	-- Swamp Apple
-			i(260424),	-- Lumpy Gallstone
 			i(260425),	-- Morsel of Crab Meat
 			i(260426),	-- Bloodied Whetstone
 			i(263185),	-- Rotted Plank
 			i(263192),	-- Unattainable Artifact of Desire
-			i(263317),	-- Amani Wicker Crate
-			i(263520),	-- Ensemble: Sprawling Garb
-			i(263708),	-- Amani Anvil
-			i(263874),	-- Emerald-Encrusted Amani Ritual Skull
-			i(263875),	-- Griftah's Resizing Hex-Skull
-			i(263880),	-- Cherished Pet's Rug
 			i(264162),	-- Enchanted Snowflake
-			i(265033),	-- Zul'Aman Brazier Post
-			i(265386),	-- Zul'Aman Amani Awning
 			i(265399),	-- Ritually-Charred Bones
 			i(265400),	-- Calcified Turtle Heart
 			i(265402),	-- Fistful of Gnat Wings
 			i(265620),	-- Rehydrated Zandalari Peppers
-			i(265622),	-- Knotted Swamp Stick
 			i(265626),	-- Shattered Teapot
 			i(265790),	-- Cache of Mistcrests
-			i(266169),	-- Soulcoiler Canopy
 			i(266327),	-- Pristine Spinal Barb
 			i(267045),	-- Quivering Egg
-			i(267080),	-- Amani Blueflame Chandelier
-			i(267207),	-- Amani Territorial Totem
-			i(267233),	-- Dehydrated Troll Eye Necklace
-			i(267378),	-- Venom Scholar's Focus
 			i(268095),	-- Fresh Poultice
-			i(268113),	-- Jan'alai's Breath
 			-- WB
-			i(268199),	-- Tidepiercer's Bubble Popper
-			i(268262),	-- Bubblefin Splash Guard
-			i(268263),	-- Frostscale's Mystic Frond
-			i(268226),	-- Swelling Sea Spaulders
-			i(268221),	-- Tidebound Sorcereress's Robes
-			i(268217),	-- Rising Tide Wristguards
-			i(268238),	-- Grips of Swirling Fury
-			i(268232),	-- Cincture of the Abyssal Grotto
-			i(268244),	-- Forgotten Grotto Girdle
-			i(268225),	-- Spelunker's Drenched Legguards
-			i(268247),	-- Breakwater Boots
-			i(268266),	-- Alluring Bubbleband
-			i(270167),	-- Wavecaller's Seastone
 			i(268281),	-- Ula'guts
 			i(268519),	-- Heirloom Blossom Nectar
 			i(268585),	-- Pup Treat
-			i(268628),	-- Zapgut Gland
 			i(268823),	-- Scroll of Seeking
 			i(268826),	-- Ballast Stone
 			i(268871),	-- Specifically Sized Rock
-			i(268929),	-- Hastily Written Note
-			i(268951),	-- Familiar Threshadon Tooth Necklace
-			i(268952),	-- Hastily Written Note
-			i(268953),	-- Familiar Amani Headdress
-			i(268964),	-- Familiar Amani Headdress
-			i(268965),	-- Familiar Threshadon Tooth Necklace
-			i(268968),	-- Hastily Written Note
-			i(269029),	-- Bag of Totally Legitimate Amani Goods
-			i(269578),	-- Poison Dart Frog Gland
-			i(269637),	-- Serpent-Caller Spike
 			i(269720),	-- Corrosive Hekte
-			i(269861),	-- A Tattered Amani Scroll
-			i(269868),	-- Miniature Hand-Crafted Mask
-			i(269918),	-- Venom-Corroded Gallstone
-			i(269935),	-- Forgotten Trinket
-			i(270191),	-- Lil'Kruul's Hilt
-			i(270210),	-- Bird Feathers
-			i(270211),	-- Furiostraza's Filter
-			i(270249),	-- Cursed Spawn
-			i(270253),	-- Jaundiced Slitherer
-			i(270267),	-- Twilight Missive
 			i(270274),	-- Home-Grown Wax
 			i(270335),	-- Mostly Smooth Seastone
 			i(270346),	-- Big Meaty Claw
-			i(270347),	-- Venomous Warmonger's Cloak
-			i(270348),	-- Venomous Warmonger's Drape
-			i(270349),	-- Venomous Warmonger's Cape
-			i(270350),	-- Venomous Warmonger's Shawl
-			i(270351),	-- Venomous Warmonger's Garb
-			i(270352),	-- Venomous Warmonger's Slippers
-			i(270353),	-- Venomous Warmonger's Gloves
-			i(270354),	-- Venomous Warmonger's Mask
-			i(270355),	-- Venomous Warmonger's Pants
-			i(270356),	-- Venomous Warmonger's Mantle
-			i(270357),	-- Venomous Warmonger's Cord
-			i(270358),	-- Venomous Warmonger's Bindings
-			i(270359),	-- Venomous Warmonger's Jerkin
-			i(270360),	-- Venomous Warmonger's Boots
-			i(270361),	-- Venomous Warmonger's Handwraps
-			i(270362),	-- Venomous Warmonger's Hood
-			i(270363),	-- Venomous Warmonger's Breeches
-			i(270364),	-- Venomous Warmonger's Shoulderguard
-			i(270365),	-- Venomous Warmonger's Belt
-			i(270366),	-- Venomous Warmonger's Wraps
-			i(270367),	-- Venomous Warmonger's Chestguard
-			i(270368),	-- Venomous Warmonger's Greaves
-			i(270369),	-- Venomous Warmonger's Grips
-			i(270370),	-- Venomous Warmonger's Helm
-			i(270371),	-- Venomous Warmonger's Leggings
-			i(270372),	-- Venomous Warmonger's Epaulets
-			i(270373),	-- Venomous Warmonger's Cinch
-			i(270374),	-- Venomous Warmonger's Armguards
-			i(270375),	-- Venomous Warmonger's Cuirass
-			i(270376),	-- Venomous Warmonger's Sabatons
-			i(270377),	-- Venomous Warmonger's Gauntlets
-			i(270378),	-- Venomous Warmonger's Faceplate
-			i(270379),	-- Venomous Warmonger's Legguards
-			i(270380),	-- Venomous Warmonger's Spaulders
-			i(270381),	-- Venomous Warmonger's Clasp
-			i(270382),	-- Venomous Warmonger's Bracers
-			i(270383),	-- Venomous Warmonger's Splitter
-			i(270384),	-- Venomous Warmonger's Slicer
-			i(270385),	-- Venomous Warmonger's Chopper
-			i(270386),	-- Venomous Warmonger's Shank
-			i(270387),	-- Venomous Warmonger's Dagger
-			i(270388),	-- Venomous Warmonger's Mace
-			i(270390),	-- Venomous Warmonger's Cudgel
-			i(270392),	-- Venomous Warmonger's Crusher
-			i(270394),	-- Venomous Warmonger's Wand
-			i(270395),	-- Venomous Warmonger's Warglaive
-			i(270396),	-- Venomous Warmonger's Bow
-			i(270397),	-- Venomous Warmonger's Spear
-			i(270398),	-- Venomous Warmonger's Polearm
-			i(270399),	-- Venomous Warmonger's Battlestaff
-			i(270400),	-- Venomous Warmonger's Stave
-			i(270401),	-- Venomous Warmonger's Greatblade
-			i(270402),	-- Venomous Warmonger's Claymore
-			i(270403),	-- Venomous Warmonger's Horn
-			i(270404),	-- Venomous Warmonger's Shield
-			i(270405),	-- Venomous Warmonger's Rage
-			i(270406),	-- Venomous Warmonger's Decapitator
-			i(270407),	-- Venomous Warmonger's Spellblade
-			i(270408),	-- Venomous Warmonger's Sword
-			i(270445),	-- Venomous Aspirant's Shield
-			i(270446),	-- Venomous Aspirant's Sigil
-			i(270447),	-- Venomous Aspirant's Claymore
-			i(270448),	-- Venomous Aspirant's Warblade
-			i(270449),	-- Venomous Aspirant's Greatblade
-			i(270450),	-- Venomous Aspirant's Stave
-			i(270451),	-- Venomous Aspirant's Polearm
-			i(270452),	-- Venomous Aspirant's Spear
-			i(270453),	-- Venomous Aspirant's Bow
-			i(270454),	-- Venomous Aspirant's Warglaive
-			i(270455),	-- Venomous Aspirant's Wand
-			i(270456),	-- Venomous Aspirant's Spellblade
-			i(270457),	-- Venomous Aspirant's Sword
-			i(270458),	-- Venomous Aspirant's Blade
-			i(270459),	-- Venomous Aspirant's Crusher
-			i(270460),	-- Venomous Aspirant's Cudgel
-			i(270461),	-- Venomous Aspirant's Mace
-			i(270464),	-- Venomous Aspirant's Dagger
-			i(270465),	-- Venomous Aspirant's Shank
-			i(270466),	-- Venomous Aspirant's Chopper
-			i(270467),	-- Venomous Aspirant's Splitter
-			i(270468),	-- Venomous Aspirant's Plate Armguards
-			i(270469),	-- Venomous Aspirant's Plate Cuffs
-			i(270470),	-- Venomous Aspirant's Plate Greatbelt
-			i(270471),	-- Venomous Aspirant's Plate Girdle
-			i(270472),	-- Venomous Aspirant's Plate Pauldrons
-			i(270473),	-- Venomous Aspirant's Plate Shoulders
-			i(270474),	-- Venomous Aspirant's Plate Wargreaves
-			i(270475),	-- Venomous Aspirant's Plate Legguards
-			i(270476),	-- Venomous Aspirant's Plate Headguard
-			i(270477),	-- Venomous Aspirant's Plate Helm
-			i(270478),	-- Venomous Aspirant's Plate Handguards
-			i(270479),	-- Venomous Aspirant's Plate Gauntlets
-			i(270480),	-- Venomous Aspirant's Plate Stompers
-			i(270481),	-- Venomous Aspirant's Plate Warboots
-			i(270482),	-- Venomous Aspirant's Plate Armor
-			i(270483),	-- Venomous Aspirant's Chestplate
-			i(270484),	-- Venomous Aspirant's Chain Bracer
-			i(270485),	-- Venomous Aspirant's Chain Wristwraps
-			i(270486),	-- Venomous Aspirant's Chain Clasp
-			i(270487),	-- Venomous Aspirant's Chain Belt
-			i(270488),	-- Venomous Aspirant's Chain Shoulderguards
-			i(270489),	-- Venomous Aspirant's Chain Spaulders
-			i(270490),	-- Venomous Aspirant's Chain Wargreaves
-			i(270491),	-- Venomous Aspirant's Chain Leggings
-			i(270492),	-- Venomous Aspirant's Chain Headguard
-			i(270493),	-- Venomous Aspirant's Chain Helm
-			i(270494),	-- Venomous Aspirant's Chain Handguards
-			i(270495),	-- Venomous Aspirant's Chain Gauntlets
-			i(270496),	-- Venomous Aspirant's Chain Stompers
-			i(270497),	-- Venomous Aspirant's Chain Sabatons
-			i(270498),	-- Venomous Aspirant's Chain Tunic
-			i(270499),	-- Venomous Aspirant's Chain Vest
-			i(270500),	-- Venomous Aspirant's Leather Armguards
-			i(270501),	-- Venomous Aspirant's Leather Wristwraps
-			i(270502),	-- Venomous Aspirant's Leather Cord
-			i(270503),	-- Venomous Aspirant's Leather Belt
-			i(270504),	-- Venomous Aspirant's Leather Mantle
-			i(270505),	-- Venomous Aspirant's Leather Spaulders
-			i(270506),	-- Venomous Aspirant's Leather Leggings
-			i(270507),	-- Venomous Aspirant's Leather Breeches
-			i(270508),	-- Venomous Aspirant's Leather Mask
-			i(270509),	-- Venomous Aspirant's Leather Helm
-			i(270510),	-- Venomous Aspirant's Leather Grips
-			i(270511),	-- Venomous Aspirant's Leather Gloves
-			i(270512),	-- Venomous Aspirant's Leather Footpads
-			i(270513),	-- Venomous Aspirant's Leather Boots
-			i(270514),	-- Venomous Aspirant's Leather Tunic
-			i(270515),	-- Venomous Aspirant's Leather Vest
-			i(270516),	-- Venomous Aspirant's Silk Bindings
-			i(270517),	-- Venomous Aspirant's Silk Wristwraps
-			i(270518),	-- Venomous Aspirant's Silk Belt
-			i(270519),	-- Venomous Aspirant's Silk Cord
-			i(270520),	-- Venomous Aspirant's Silk Shawl
-			i(270521),	-- Venomous Aspirant's Silk Mantle
-			i(270522),	-- Venomous Aspirant's Silk Legwraps
-			i(270523),	-- Venomous Aspirant's Silk Leggings
-			i(270524),	-- Venomous Aspirant's Silk Cover
-			i(270525),	-- Venomous Aspirant's Silk Hood
-			i(270526),	-- Venomous Aspirant's Silk Handwraps
-			i(270527),	-- Venomous Aspirant's Silk Gloves
-			i(270528),	-- Venomous Aspirant's Silk Footwraps
-			i(270529),	-- Venomous Aspirant's Silk Treads
-			i(270530),	-- Venomous Aspirant's Silk Shirt
-			i(270531),	-- Venomous Aspirant's Silk Robe
-			i(270532),	-- Venomous Aspirant's Pendant
-			i(270533),	-- Venomous Aspirant's Choker
-			i(270534),	-- Venomous Aspirant's Necklace
-			i(270535),	-- Venomous Aspirant's Signet
-			i(270536),	-- Venomous Aspirant's Band
-			i(270537),	-- Venomous Aspirant's Ring
-			i(270538),	-- Venomous Aspirant's Greatcloak
-			i(270539),	-- Venomous Aspirant's Cape
-			i(270540),	-- Venomous Aspirant's Cloak
-			i(270541),	-- Venomous Aspirant's Drape
-			i(270542),	-- Venomous Warmonger's Blade
-			i(270549),	-- Venomous Warmonger's Battleaxe
-			i(270550),	-- Venomous Warmonger's Cleaver
-			i(270551),	-- Venomous Warmonger's Reaper
-			i(270552),	-- Venomous Aspirant's Battleaxe
-			i(270553),	-- Venomous Aspirant's Cleaver
-			i(270554),	-- Venomous Aspirant's Reaper
-			i(270555),	-- Venomous Aspirant's Emblem
-			i(270556),	-- Venomous Aspirant's Medallion
-			i(270557),	-- Venomous Aspirant's Sigil of Adaptation
-			i(270558),	-- Venomous Aspirant's Insignia of Alacrity
-			i(270559),	-- Venomous Aspirant's Badge of Ferocity
-			i(270560),	-- Venomous Gladiator's Weapon Token
-			i(270563),	-- Venomous Gladiator's Cloak
-			i(270564),	-- Venomous Gladiator's Drape
-			i(270565),	-- Venomous Gladiator's Shawl
-			i(270566),	-- Venomous Gladiator's Cloak
-			i(270567),	-- Venomous Gladiator's Drape
-			i(270568),	-- Venomous Gladiator's Shawl
-			i(270569),	-- Venomous Gladiator's Cloak
-			i(270570),	-- Venomous Gladiator's Drape
-			i(270571),	-- Venomous Gladiator's Shawl
-			i(270572),	-- Venomous Gladiator's Cloak
-			i(270573),	-- Venomous Gladiator's Drape
-			i(270574),	-- Venomous Gladiator's Shawl
-			i(270575),	-- Venomous Gladiator's Ring
-			i(270576),	-- Venomous Gladiator's Band
-			i(270577),	-- Venomous Gladiator's Signet
-			i(270578),	-- Venomous Gladiator's Cloak
-			i(270579),	-- Venomous Gladiator's Drape
-			i(270580),	-- Venomous Gladiator's Shawl
-			i(270581),	-- Venomous Gladiator's Cloak
-			i(270582),	-- Venomous Gladiator's Drape
-			i(270583),	-- Venomous Gladiator's Shawl
-			i(270584),	-- Venomous Gladiator's Cloak
-			i(270585),	-- Venomous Gladiator's Drape
-			i(270586),	-- Venomous Gladiator's Shawl
-			i(270587),	-- Venomous Gladiator's Necklace
-			i(270588),	-- Venomous Gladiator's Pendant
-			i(270589),	-- Venomous Gladiator's Amulet
-			i(270590),	-- Venomous Gladiator's Cloak
-			i(270591),	-- Venomous Gladiator's Drape
-			i(270592),	-- Venomous Gladiator's Shawl
-			i(270593),	-- Venomous Gladiator's Cloak
-			i(270594),	-- Venomous Gladiator's Drape
-			i(270595),	-- Venomous Gladiator's Shawl
-			i(270596),	-- Venomous Gladiator's Cloak
-			i(270597),	-- Venomous Gladiator's Drape
-			i(270598),	-- Venomous Gladiator's Shawl
-			i(270599),	-- Venomous Gladiator's Cloak
-			i(270600),	-- Venomous Gladiator's Drape
-			i(270601),	-- Venomous Gladiator's Shawl
-			i(270602),	-- Venomous Gladiator's Badge of Ferocity
-			i(270603),	-- Venomous Gladiator's Insignia of Alacrity
-			i(270604),	-- Venomous Gladiator's Sigil of Adaptation
-			i(270605),	-- Venomous Gladiator's Medallion
-			i(270606),	-- Venomous Gladiator's Emblem
-			i(270607),	-- Venomous Gladiator's Cloak
-			i(270608),	-- Venomous Gladiator's Drape
-			i(270609),	-- Venomous Gladiator's Shawl
-			i(270610),	-- Venomous Gladiator's Cloak
-			i(270611),	-- Venomous Gladiator's Drape
-			i(270612),	-- Venomous Gladiator's Shawl
-			i(270613),	-- Venomous Gladiator's Silk Robe
-			i(270614),	-- Venomous Gladiator's Silk Gown
-			i(270615),	-- Venomous Gladiator's Silk Slippers
-			i(270616),	-- Venomous Gladiator's Silk Treads
-			i(270617),	-- Venomous Gladiator's Silk Gloves
-			i(270618),	-- Venomous Gladiator's Silk Handwraps
-			i(270619),	-- Venomous Gladiator's Silk Hat
-			i(270620),	-- Venomous Gladiator's Silk Cap
-			i(270621),	-- Venomous Gladiator's Silk Leggings
-			i(270622),	-- Venomous Gladiator's Silk Trousers
-			i(270623),	-- Venomous Gladiator's Silk Mantle
-			i(270624),	-- Venomous Gladiator's Silk Amice
-			i(270625),	-- Venomous Gladiator's Silk Cord
-			i(270626),	-- Venomous Gladiator's Silk Belt
-			i(270627),	-- Venomous Gladiator's Silk Wristwraps
-			i(270628),	-- Venomous Gladiator's Silk Armbands
-			i(270629),	-- Venomous Gladiator's Silk Robe
-			i(270630),	-- Venomous Gladiator's Silk Vestments
-			i(270631),	-- Venomous Gladiator's Silk Slippers
-			i(270632),	-- Venomous Gladiator's Silk Treads
-			i(270633),	-- Venomous Gladiator's Silk Gloves
-			i(270634),	-- Venomous Gladiator's Silk Handwraps
-			i(270635),	-- Venomous Gladiator's Silk Hood
-			i(270636),	-- Venomous Gladiator's Silk Guise
-			i(270637),	-- Venomous Gladiator's Silk Leggings
-			i(270638),	-- Venomous Gladiator's Silk Trousers
-			i(270639),	-- Venomous Gladiator's Silk Mantle
-			i(270640),	-- Venomous Gladiator's Silk Amice
-			i(270641),	-- Venomous Gladiator's Silk Cord
-			i(270642),	-- Venomous Gladiator's Silk Belt
-			i(270643),	-- Venomous Gladiator's Silk Wristwraps
-			i(270644),	-- Venomous Gladiator's Silk Armbands
-			i(270645),	-- Venomous Gladiator's Silk Raiment
-			i(270646),	-- Venomous Gladiator's Silk Vestments
-			i(270647),	-- Venomous Gladiator's Silk Slippers
-			i(270648),	-- Venomous Gladiator's Silk Treads
-			i(270649),	-- Venomous Gladiator's Silk Gloves
-			i(270650),	-- Venomous Gladiator's Silk Handwraps
-			i(270651),	-- Venomous Gladiator's Silk Hood
-			i(270652),	-- Venomous Gladiator's Silk Guise
-			i(270653),	-- Venomous Gladiator's Silk Leggings
-			i(270654),	-- Venomous Gladiator's Silk Trousers
-			i(270655),	-- Venomous Gladiator's Silk Mantle
-			i(270656),	-- Venomous Gladiator's Silk Amice
-			i(270657),	-- Venomous Gladiator's Silk Cord
-			i(270658),	-- Venomous Gladiator's Silk Belt
-			i(270659),	-- Venomous Gladiator's Silk Wristwraps
-			i(270660),	-- Venomous Gladiator's Silk Armbands
-			i(270661),	-- Venomous Gladiator's Leather Vest
-			i(270662),	-- Venomous Gladiator's Leather Jerkin
-			i(270663),	-- Venomous Gladiator's Leather Boots
-			i(270664),	-- Venomous Gladiator's Leather Treads
-			i(270665),	-- Venomous Gladiator's Leather Gloves
-			i(270666),	-- Venomous Gladiator's Leather Grips
-			i(270667),	-- Venomous Gladiator's Leather Helm
-			i(270668),	-- Venomous Gladiator's Leather Mask
-			i(270669),	-- Venomous Gladiator's Leather Breeches
-			i(270670),	-- Venomous Gladiator's Leather Legwraps
-			i(270671),	-- Venomous Gladiator's Leather Spaulders
-			i(270672),	-- Venomous Gladiator's Leather Shoulderpads
-			i(270673),	-- Venomous Gladiator's Leather Belt
-			i(270674),	-- Venomous Gladiator's Leather Strap
-			i(270675),	-- Venomous Gladiator's Leather Wristwraps
-			i(270676),	-- Venomous Gladiator's Leather Wristguards
-			i(270677),	-- Venomous Gladiator's Leather Vest
-			i(270678),	-- Venomous Gladiator's Leather Vestments
-			i(270679),	-- Venomous Gladiator's Leather Boots
-			i(270680),	-- Venomous Gladiator's Leather Treads
-			i(270681),	-- Venomous Gladiator's Leather Gloves
-			i(270682),	-- Venomous Gladiator's Leather Grips
-			i(270683),	-- Venomous Gladiator's Leather Helm
-			i(270684),	-- Venomous Gladiator's Leather Mask
-			i(270685),	-- Venomous Gladiator's Leather Breeches
-			i(270686),	-- Venomous Gladiator's Leather Legwraps
-			i(270687),	-- Venomous Gladiator's Leather Spaulders
-			i(270688),	-- Venomous Gladiator's Leather Shoulderpads
-			i(270689),	-- Venomous Gladiator's Leather Belt
-			i(270690),	-- Venomous Gladiator's Leather Strap
-			i(270691),	-- Venomous Gladiator's Leather Wristwraps
-			i(270692),	-- Venomous Gladiator's Leather Wristguards
-			i(270693),	-- Venomous Gladiator's Leather Vest
-			i(270694),	-- Venomous Gladiator's Leather Jerkin
-			i(270695),	-- Venomous Gladiator's Leather Boots
-			i(270696),	-- Venomous Gladiator's Leather Treads
-			i(270697),	-- Venomous Gladiator's Leather Gloves
-			i(270698),	-- Venomous Gladiator's Leather Grips
-			i(270699),	-- Venomous Gladiator's Leather Helm
-			i(270700),	-- Venomous Gladiator's Leather Mask
-			i(270701),	-- Venomous Gladiator's Leather Breeches
-			i(270702),	-- Venomous Gladiator's Leather Legwraps
-			i(270703),	-- Venomous Gladiator's Leather Spaulders
-			i(270704),	-- Venomous Gladiator's Leather Shoulderpads
-			i(270705),	-- Venomous Gladiator's Leather Belt
-			i(270706),	-- Venomous Gladiator's Leather Strap
-			i(270707),	-- Venomous Gladiator's Leather Wristwraps
-			i(270708),	-- Venomous Gladiator's Leather Wristguards
-			i(270709),	-- Venomous Gladiator's Leather Vest
-			i(270710),	-- Venomous Gladiator's Leather Jerkin
-			i(270711),	-- Venomous Gladiator's Leather Boots
-			i(270712),	-- Venomous Gladiator's Leather Treads
-			i(270713),	-- Venomous Gladiator's Leather Gloves
-			i(270714),	-- Venomous Gladiator's Leather Grips
-			i(270715),	-- Venomous Gladiator's Leather Helm
-			i(270716),	-- Venomous Gladiator's Leather Mask
-			i(270717),	-- Venomous Gladiator's Leather Breeches
-			i(270718),	-- Venomous Gladiator's Leather Legwraps
-			i(270719),	-- Venomous Gladiator's Leather Spaulders
-			i(270720),	-- Venomous Gladiator's Leather Shoulderpads
-			i(270721),	-- Venomous Gladiator's Leather Belt
-			i(270722),	-- Venomous Gladiator's Leather Strap
-			i(270723),	-- Venomous Gladiator's Leather Wristwraps
-			i(270724),	-- Venomous Gladiator's Leather Wristguards
-			i(270725),	-- Venomous Gladiator's Armored Scales
-			i(270726),	-- Venomous Gladiator's Scaleguard
-			i(270727),	-- Venomous Gladiator's Chain Sabatons
-			i(270728),	-- Venomous Gladiator's Chain Boots
-			i(270729),	-- Venomous Gladiator's Chain Gauntlets
-			i(270730),	-- Venomous Gladiator's Chain Handguards
-			i(270731),	-- Venomous Gladiator's Chain Helm
-			i(270732),	-- Venomous Gladiator's Chain Faceguard
-			i(270733),	-- Venomous Gladiator's Chain Leggings
-			i(270734),	-- Venomous Gladiator's Chain Breeches
-			i(270735),	-- Venomous Gladiator's Chain Monnion
-			i(270736),	-- Venomous Gladiator's Chain Shoulderguard
-			i(270737),	-- Venomous Gladiator's Chain Belt
-			i(270738),	-- Venomous Gladiator's Chain Girdle
-			i(270739),	-- Venomous Gladiator's Chain Wristguards
-			i(270740),	-- Venomous Gladiator's Chain Bracers
-			i(270741),	-- Venomous Gladiator's Chain Vest
-			i(270742),	-- Venomous Gladiator's Chain Tunic
-			i(270743),	-- Venomous Gladiator's Chain Sabatons
-			i(270744),	-- Venomous Gladiator's Chain Boots
-			i(270745),	-- Venomous Gladiator's Chain Gauntlets
-			i(270746),	-- Venomous Gladiator's Chain Handguards
-			i(270747),	-- Venomous Gladiator's Chain Helm
-			i(270748),	-- Venomous Gladiator's Chain Faceguard
-			i(270749),	-- Venomous Gladiator's Chain Leggings
-			i(270750),	-- Venomous Gladiator's Chain Breeches
-			i(270751),	-- Venomous Gladiator's Chain Monnion
-			i(270752),	-- Venomous Gladiator's Chain Shoulderguard
-			i(270753),	-- Venomous Gladiator's Chain Belt
-			i(270754),	-- Venomous Gladiator's Chain Girdle
-			i(270755),	-- Venomous Gladiator's Chain Wristguards
-			i(270756),	-- Venomous Gladiator's Chain Bracers
-			i(270757),	-- Venomous Gladiator's Chain Vest
-			i(270758),	-- Venomous Gladiator's Chain Tunic
-			i(270759),	-- Venomous Gladiator's Chain Sabatons
-			i(270760),	-- Venomous Gladiator's Chain Boots
-			i(270761),	-- Venomous Gladiator's Chain Gauntlets
-			i(270762),	-- Venomous Gladiator's Chain Handguards
-			i(270763),	-- Venomous Gladiator's Chain Helm
-			i(270764),	-- Venomous Gladiator's Chain Faceguard
-			i(270765),	-- Venomous Gladiator's Chain Leggings
-			i(270766),	-- Venomous Gladiator's Chain Breeches
-			i(270767),	-- Venomous Gladiator's Chain Monnion
-			i(270768),	-- Venomous Gladiator's Chain Shoulderguard
-			i(270769),	-- Venomous Gladiator's Chain Belt
-			i(270770),	-- Venomous Gladiator's Chain Girdle
-			i(270771),	-- Venomous Gladiator's Chain Wristguards
-			i(270772),	-- Venomous Gladiator's Chain Bracers
-			i(270773),	-- Venomous Gladiator's Chestguard
-			i(270774),	-- Venomous Gladiator's Chestplate
-			i(270775),	-- Venomous Gladiator's Plate Warboots
-			i(270776),	-- Venomous Gladiator's Plate Stompers
-			i(270777),	-- Venomous Gladiator's Plate Gauntlets
-			i(270778),	-- Venomous Gladiator's Plate Handguards
-			i(270779),	-- Venomous Gladiator's Plate Helm
-			i(270780),	-- Venomous Gladiator's Plate Helmet
-			i(270781),	-- Venomous Gladiator's Plate Legguards
-			i(270782),	-- Venomous Gladiator's Plate Wargreaves
-			i(270783),	-- Venomous Gladiator's Plate Shoulders
-			i(270784),	-- Venomous Gladiator's Plate Pauldrons
-			i(270785),	-- Venomous Gladiator's Plate Girdle
-			i(270786),	-- Venomous Gladiator's Plate Greatbelt
-			i(270787),	-- Venomous Gladiator's Plate Wristguards
-			i(270788),	-- Venomous Gladiator's Plate Vambraces
-			i(270789),	-- Venomous Gladiator's Chestguard
-			i(270790),	-- Venomous Gladiator's Chestplate
-			i(270791),	-- Venomous Gladiator's Plate Warboots
-			i(270792),	-- Venomous Gladiator's Plate Stompers
-			i(270793),	-- Venomous Gladiator's Plate Gauntlets
-			i(270794),	-- Venomous Gladiator's Plate Handguards
-			i(270795),	-- Venomous Gladiator's Plate Helm
-			i(270796),	-- Venomous Gladiator's Plate Helmet
-			i(270797),	-- Venomous Gladiator's Plate Legguards
-			i(270798),	-- Venomous Gladiator's Plate Tasses
-			i(270799),	-- Venomous Gladiator's Plate Shoulders
-			i(270800),	-- Venomous Gladiator's Plate Pauldrons
-			i(270801),	-- Venomous Gladiator's Plate Girdle
-			i(270802),	-- Venomous Gladiator's Plate Greatbelt
-			i(270803),	-- Venomous Gladiator's Plate Wristguards
-			i(270804),	-- Venomous Gladiator's Plate Vambraces
-			i(270805),	-- Venomous Gladiator's Chestguard
-			i(270806),	-- Venomous Gladiator's Chestplate
-			i(270807),	-- Venomous Gladiator's Plate Warboots
-			i(270808),	-- Venomous Gladiator's Plate Stompers
-			i(270809),	-- Venomous Gladiator's Plate Gauntlets
-			i(270810),	-- Venomous Gladiator's Plate Handguards
-			i(270811),	-- Venomous Gladiator's Plate Helm
-			i(270812),	-- Venomous Gladiator's Plate Helmet
-			i(270813),	-- Venomous Gladiator's Plate Legguards
-			i(270814),	-- Venomous Gladiator's Plate Wargreaves
-			i(270815),	-- Venomous Gladiator's Plate Shoulders
-			i(270816),	-- Venomous Gladiator's Plate Pauldrons
-			i(270817),	-- Venomous Gladiator's Plate Girdle
-			i(270818),	-- Venomous Gladiator's Plate Greatbelt
-			i(270819),	-- Venomous Gladiator's Plate Wristguards
-			i(270820),	-- Venomous Gladiator's Plate Vambraces
-			i(270821),	-- Venomous Gladiator's Shank
-			i(270822),	-- Venomous Gladiator's Spine
-			i(270823),	-- Venomous Gladiator's Incisors
-			i(270824),	-- Venomous Gladiator's Rippers
-			i(270825),	-- Venomous Gladiator's Crusher
-			i(270826),	-- Venomous Gladiator's Mace
-			i(270827),	-- Venomous Gladiator's Cudgel
-			i(270828),	-- Venomous Gladiator's Chopper
-			i(270829),	-- Venomous Gladiator's Splitter
-			i(270830),	-- Venomous Gladiator's Slicer
-			i(270831),	-- Venomous Gladiator's Blade
-			i(270832),	-- Venomous Gladiator's Sword
-			i(270833),	-- Venomous Gladiator's Spellblade
-			i(270834),	-- Venomous Gladiator's Edge
-			i(270835),	-- Venomous Gladiator's Battleaxe
-			i(270836),	-- Venomous Gladiator's Cleaver
-			i(270837),	-- Venomous Gladiator's Reaper
-			i(270838),	-- Venomous Gladiator's Bow
-			i(270839),	-- Venomous Gladiator's Spitter
-			i(270843),	-- Venomous Gladiator's Spear
-			i(270844),	-- Venomous Gladiator's Spike
-			i(270845),	-- Venomous Gladiator's Staff
-			i(270846),	-- Venomous Gladiator's Stave
-			i(270847),	-- Venomous Gladiator's Scepter
-			i(270848),	-- Venomous Gladiator's Sigil
-			i(270849),	-- Venomous Gladiator's Scaleshield
-			i(270850),	-- Venomous Gladiator's Spikeshield
-			i(270851),	-- Venomous Gladiator's Claymore
-			i(270852),	-- Venomous Gladiator's Warblade
-			i(270853),	-- Venomous Gladiator's Greatblade
 			i(270871),	-- Jan'alai's Breath
-			i(270898),	-- Snakeskin Lining
-			i(270899),	-- Snakeskin Lining
-			i(270900),	-- Pattern: Snakeskin Lining
 			i(271053),	-- Cleansing Water
-			i(271130),	-- Venom Infusion
 			i(271131),	-- Test Weapon
-			i(271132),	-- Essence Trap
 			i(271133),	-- Marked Serpent Rune PH
 			i(271135),	-- Amorphous Totem PH
 			i(271155),	-- Test Weapon 2
-			i(271423),	-- Diver's Key
-			i(271424),	-- Diver's Key Fragment
-			i(271434),	-- Venom Rite Mantle
-			i(271435),	-- Slippers of the Hissing Cult
 			i(271436),	-- Slitherscale Girdle
-			i(271438),	-- Temple Delver's Mystic Helm
-			i(271440),	-- Greaves of the Noxious Depths
 			i(271441),	-- Crushing Coiler Coif
 			i(271444),	-- Pauldrons of the Forgotten Sacrifice
-			i(271445),	-- Fanged Brute's Greatbelt
-			i(271638),	-- Bound Serpent's Jade Eye
-			i(271679),	-- Set Keystone Level: 2
 			i(271680),	-- Sinseared Repeater
 			i(271681),	-- Perennial Frostbound Charm
-			i(271693),	-- Congealed Venom
-			i(271717),	-- Cup of Kafa
-			i(271815),	-- Luminescent Pearl
-			i(271850),	-- Venomous Tendril
-			i(271863),	-- Ophidian Bile
-			i(271864),	-- Rotten Pneuma
-			i(271865),	-- Scavenged Weapon
-			i(271866),	-- Well-Worn Hatchet
-			i(271867),	-- Venom-Etched Sword
-			i(271868),	-- Splintering Spear
-			i(271881),	-- Dropped Key
-			i(271883),	-- Concentrated Silvermoon Health Potion
-			i(271884),	-- Concentrated Silvermoon Health Potion
-			i(271886),	-- Liquid Luster
-			i(271887),	-- Liquid Luster
-			i(271888),	-- Recipe: Liquid Luster
-			i(271889),	-- Alluring Nostrum
-			i(271890),	-- Alluring Nostrum
-			i(271944),	-- Set Keystone Map: Altar of Fangs
-			i(271947),	-- Set Keystone Map: Murder Row
-			i(271952),	-- Set Keystone Map: Voidscar Arena
-			i(271958),	-- Set Keystone Map: Den of Nalorakk
-			i(271960),	-- Set Keystone Map: The Blinding Vale
 			i(271991),	-- Venomous Equipment Chest
-			i(271996),	-- Crumpled Scroll
-			i(271997),	-- Abused Relic
-			i(271998),	-- Discarded Potion
-			i(272005),	-- Venomous Gladiator's Tabard
-			i(272006),	-- Venomous Gladiator's Tabard
-			i(272007),	-- Venomous Gladiator's Prestigious Cloak
-			i(272010),	-- Venomous Gladiator's Prestigious Cloak
-			i(272147),	-- Colubrine Band
-			i(272148),	-- Anguine Gyre
-			i(272149),	-- Hex Loop
-			i(272150),	-- Ouroboric Signet
-			i(272191),	-- [PH] 12.1 Darkmoon Sigil
-			i(272192),	-- [PH] 12.1 Darkmoon Sigil
-			i(272194),	-- Vantus Rune: Tides
-			i(272195),	-- Vantus Rune: Tides
-			i(272225),	-- Galerider's Mantle
-			i(272226),	-- Miststalker's Shroud
-			i(272227),	-- Pyrewalker's Veil
-			i(272228),	-- Whispering Periapt
-			i(272229),	-- Serpentine Talisman
-			i(272230),	-- Pledgebearer's Pall
-			i(272231),	-- Galerider's Doublet
-			i(272232),	-- Galerider's Buskins
-			i(272233),	-- Galerider's Gloves
-			i(272234),	-- Galerider's Miter
-			i(272235),	-- Galerider's Treads
-			i(272236),	-- Galerider's Mantlet
-			i(272237),	-- Galerider's Obi
-			i(272238),	-- Galerider's Wraps
-			i(272239),	-- Miststalker's Brigandine
-			i(272240),	-- Miststalker's Striders
-			i(272241),	-- Miststalker's Grips
-			i(272242),	-- Miststalker's Cowl
-			i(272243),	-- Miststalker's Cuisses
-			i(272244),	-- Miststalker's Spaulders
-			i(272245),	-- Miststalker's Cinch
-			i(272246),	-- Miststalker's Wristbands
-			i(272247),	-- Pyrewalker's Byrnie
-			i(272248),	-- Pyrewalker's Chausses
-			i(272249),	-- Pyrewalker's Chain Clasps
-			i(272250),	-- Pyrewalker's Gaze
-			i(272251),	-- Pyrewalker's Chausses
-			i(272252),	-- Pyrewalker's Mantle
-			i(272253),	-- Pyrewalker's Mail Skirt
-			i(272254),	-- Pyrewalker's Mesh Wraps
-			i(272255),	-- Pledgebearer's Cuirass
-			i(272256),	-- Pledgebearer's Sabatons
-			i(272257),	-- Pledgebearer's Gauntlets
-			i(272258),	-- Pledgebearer's Mask
-			i(272259),	-- Pledgebearer's Poleyns
-			i(272260),	-- Pledgebearer's Pauldrons
-			i(272261),	-- Pledgebearer's Girdle
-			i(272262),	-- Pledgebearer's Splints
-			i(272266),	-- Forgotten Eidolon's Dagger
-			i(272267),	-- Uncoffined Labrys
-			i(272268),	-- Mask-Etcher
-			i(272269),	-- Soulsealer's Headstone
-			i(272270),	-- Bonedust Pestle
-			i(272271),	-- Spiritbound Focus
-			i(272272),	-- Harrowed Partisan
-			i(272273),	-- Unshrined Ceremonial Scepter
-			i(272274),	-- Realm Splitter
-			i(272275),	-- Soulsinger's Horn
-			i(272276),	-- Wailing Bulwark
-			i(272277),	-- Spirit-Reaver
-			i(272278),	-- Recurve Wisp-Shooter
-			i(272280),	-- Exhumed Soul-Cleaver
-			i(272283),	-- Swordsman's Emanation
 			i(272358),	-- Seaside Firefly Jar
-			i(272360),	-- Ula'tek Ritual Stone
-			i(272362),	-- Venombound Ropes
-			i(273000),	-- Corrosive Soul
 			i(273004),	-- Corrosive Reroll
-			i(273056),	-- Odious Alloy
-			i(273057),	-- Odious Alloy
-			i(273059),	-- Hunter's Ritual Stone
-			i(273060),	-- Hunter's Ritual Stone
-			i(273061),	-- Plans: Hunter's Ritual Stone
-			i(273062),	-- Coiled Snake-Eye
-			i(273063),	-- Coiled Snake-Eye
-			i(273064),	-- Schematic: Coiled Snake-Eye
-			i(273065),	-- Polished Ammolite
-			i(273066),	-- Polished Ammolite
-			i(273067),	-- Design: Polished Ammolite
-			i(273068),	-- Adorned Fang
-			i(273069),	-- Adorned Fang
-			i(273070),	-- Pattern: Adorned Fang
-			i(273071),	-- Enchant Weapon - Rite of the Hash'ey
-			i(273072),	-- Enchant Weapon - Rite of the Hash'ey
-			i(273288),	-- Sou'jin Soup
-			i(273303),	-- Ritual Gem
 			i(273311),	-- Kobold Candle Collection
 			i(273312),	-- Large Exodar Crystal
 			i(273313),	-- Stormstout Brewery Lantern
-			i(273649),	-- Stormbound Emblem of Dazar
-			i(273773),	-- Handwraps of Blasphemous Rites
-			i(273774),	-- Snakeskin Spaulders
-			i(273775),	-- Hydra Scale Wristguards
-			i(273776),	-- Ancient General's Obsidian Pillars
-			i(273777),	-- Poison-Proof Stompers
-			i(273778),	-- Polished Lightwood Channeler
-			i(273779),	-- Nocuous Focal Fang
-			i(273780),	-- Venom-Etched Crescent
-			i(273781),	-- Strand of Warding Fangs
-			i(273782),	-- Vile Writhefang Glaive
-			i(273783),	-- Toxin-Coated Warstaff
-			i(273784),	-- Ancestral Amani Recurve
-			i(273785),	-- Primordial Robe of Rites
-			i(273786),	-- Leggings of Entwined Serpents
-			i(273787),	-- Aged Interwoven Scaleplate
-			i(273789),	-- Chestguard of Corroded Scales
-			i(273791),	-- Spare Speaker's Hood
-			i(273792),	-- Band of the Amani Warlord
-			i(273793),	-- Hydraspine Twinblade
-			i(273794),	-- Knot of Writhing Serpents
-			i(273795),	-- Coiled Fangstone
-			i(273796),	-- Vile Vial of Volatile Venom
-			i(273797),	-- Tattered Amani War Banner
 			i(273818),	-- [DNT] Knowledge Tome: Midnight Herbalism
-			i(273838),	-- Spirit of Tok'jara
 			i(273848),	-- Snake Scales
 			i(273881),	-- Anti-Venom Shell
-			i(274145),	-- Sheaf of Papers
-			i(274146),	-- Tortollan Belongings
-			i(274147),	-- Bottle of Sand
-			i(274148),	-- Packet of Fishing Lures
 			i(274272),	-- Amani Equipment Chest
 			i(274372),	-- Big ol' Bag of Polished Pet Charms
-			i(274374),	-- Trovehunter's Bounty
-			i(274416),	-- Warded Key
 			i(274421),	-- Crate of Community Coupons
 			i(274423),	-- Unborn Val'kyr
 			i(274437),	-- Venom Ward
@@ -765,73 +75,15 @@ root(ROOTS.Unsorted, {
 			i(274457),	-- Emperor Crab
 			i(274458),	-- Kun-Lai Runt
 			i(274459),	-- Squirky
-			i(274464),	-- Black Housing Dye
 			i(274465),	-- Aggitated Crate of Zandalari Fury
 			i(274467),	-- Crazy Carrot
-			i(274468),	-- Blue Housing Dye
-			i(274469),	-- Brown Housing Dye
-			i(274471),	-- Orange Housing Dye
-			i(274472),	-- Purple Housing Dye
-			i(274473),	-- Red Housing Dye
-			i(274474),	-- White Housing Dye
-			i(274475),	-- Yellow Housing Dye
-			i(274476),	-- Spark of Tides
-			i(274481),	-- Keepsake Corruption
-			i(274494),	-- Chiral Marrowgrafter
-			i(274495),	-- Pulse Seeker's Oculus
-			i(274497),	-- Spirit-Rending Poison
-			i(274498),	-- Spirit Ward
-			i(274499),	-- Toxiferous Transfusion
-			i(274505),	-- Shrine of Akil'zon, Loa of Victory
-			i(274518),	-- Amani Decorative Plinth
-			i(274521),	-- Amani Road Marker
-			i(274523),	-- Woven Forest Troll Rug
-			i(274525),	-- Steamy Romance Tablet
-			i(274527),	-- Amani Building Peg
-			i(274529),	-- Forest Troll Fence
-			i(274531),	-- Forest Troll Fencepost
-			i(274533),	-- Witch Doctor's Punch Bowl
-			i(274535),	-- Shrine of Nalorakk, Loa of War
-			i(274537),	-- Shrine of Jan'alai, Loa of Fire
-			i(274539),	-- Shrine of Halazzi, Loa of the Hunt
-			i(274579),	-- Undamaged Trap Needle
-			i(274587),	-- Spotted Killifish
-			i(274588),	-- Toxic Tlhapi
-			i(274589),	-- Ula-tek Snakehead
-			i(274590),	-- Sulfurous Sludgefish
-			i(274591),	-- Coiled Stargorger
-			i(274592),	-- Dirty Darter
-			i(274593),	-- Blightswarmer
-			i(274594),	-- Polluted Puffer
-			i(274595),	-- Pristine Polygon
 			i(274680),	-- Loa-Blessed Orb
-			i(274707),	-- Crystallized Venomblight Manaflux
-			i(274708),	-- Nebulous Voidcache: Nymrissa Wavecaller
 			i(274713),	-- Cache of Amani Treasures
-			i(274763),	-- Fleeting Liquid Luster
 			i(274764),	-- Fleeting Liquid Luster
 			i(274767),	-- Seaside Lounge Chair
-			i(274777),	-- Neutralized Venom Clot
-			i(274781),	-- Cursebound Globe
 			i(274784),	-- Seaside Tiki Frondtree
 			i(274786),	-- Seaside Waterfall Basin
 			i(274788),	-- Seaside Depths Porthole
-			i(274796),	-- Envenomed Deathblade
-			i(274801),	-- Envenomed Snakefang
-			i(274803),	-- Envenomed Trollsplitter
-			i(274804),	-- Envenomed Elfcleaver
-			i(274805),	-- Envenomed Chopper
-			i(274806),	-- Envenomed Gut-Puncher
-			i(274807),	-- Envenomed Ritualizer
-			i(274808),	-- Envenomed Umbral Claymore
-			i(274809),	-- Envenomed Soul Collector
-			i(274810),	-- Envenomed Spring's Frenzy
-			i(274811),	-- Envenomed Sacrificial Dagger
-			i(274812),	-- Envenomed Hunter's Spear
-			i(274813),	-- Envenomed Hammer
-			i(274815),	-- Envenomed Pages
-			i(274816),	-- Envenomed False Promise
-			i(274817),	-- Gold Starfish
 			i(274897),	-- Seaside Charcoal Grill
 			i(274899),	-- Seaside Tiki Market Stand
 			i(274901),	-- Seaside Cushioned Chair
@@ -839,257 +91,43 @@ root(ROOTS.Unsorted, {
 			i(274905),	-- Seaside Straw Umbrella
 			i(274907),	-- Seaside Painted Surfboard
 			i(274909),	-- Seaside Murloc Tiki Totem
-			i(274965),	-- Ancient Curio
-			i(274970),	-- Ancient Curio
 			i(274988),	-- Seaside Tiki Gazebo
 			i(274991),	-- Seaside Fire Pit
-			i(275013),	-- Tokka's Multi-Ward
 			i(275030),	-- Slugg's Favorite Fishing Rod
-			i(275038),	-- Stormstout Ingredients
-			i(275047),	-- Stormstout Brewery Lantern
-			i(275048),	-- Decrepit Key
 			i(275053),	-- Kobold Candle Collection
-			i(275054),	-- Wooden Toy Sword
-			i(275060),	-- Forgotten Relic
 			i(275062),	-- Illusion: Venomcoil
-			i(275063),	-- [PH] Taretha Axe - Black
 			i(275064),	-- [PH] Taretha Axe - Blue
 			i(275065),	-- [PH] Taretha Axe - Purple
-			i(275066),	-- [PH] Taretha Axe - White
-			i(275068),	-- Venomous Legend's Pennant
-			i(275070),	-- Sharpened Lightwood Slasher
-			i(275230),	-- Azure Bracelet of Friendship
-			i(275231),	-- Obsidian Bracelet of Friendship
-			i(275232),	-- Leafy Bracelet of Friendship
 			i(275233),	-- Rosy Bracelet of Friendship
 			i(275234),	-- Violet Bracelet of Friendship
-			i(275235),	-- Ruby Bracelet of Friendship
 			i(275236),	-- Silver Bracelet of Friendship
-			i(275237),	-- Crystal Bracelet of Friendship
-			i(275258),	-- Venom-Spiced Cutlets
-			i(275259),	-- Hearty Venom-Spiced Cutlets
-			i(275260),	-- Puffer Plate
-			i(275261),	-- Sweet-And-Sour Skewers
-			i(275262),	-- Hearty Puffer Plate
-			i(275263),	-- Hearty Sweet-And-Sour Skewers
-			i(275264),	-- Amani Cornucopia
-			i(275265),	-- Loa's Gathering
-			i(275266),	-- Feast of Knowledge
-			i(275267),	-- Hearty Amani Cornucopia
-			i(275268),	-- Hearty Loa's Gathering
-			i(275269),	-- Hearty Feast of Knowledge
-			i(275273),	-- Recipe: Sweet-And-Sour Skewer
 			i(275274),	-- Alchemy
-			i(275275),	-- Recipe: Concocted Poisonous Residue
 			i(275276),	-- Alchemy
 			i(275278),	-- Alchemy
-			i(275280),	-- Gamey Flank
-			i(275281),	-- Folded Wing
-			i(275282),	-- Smooth Loin
-			i(275284),	-- Slobbery Tongue
-			i(275285),	-- Malleable Root
-			i(275286),	-- Leafy Appendage
-			i(275287),	-- Cellular Slab
-			i(275288),	-- Photosynthesized Scrap
-			i(275289),	-- Winged Stalk
-			i(275302),	-- Venomous Gladiator's Goredrake
-			i(275303),	-- Amani Forgemaster's Workbench
-			i(275305),	-- Amani Forgemaster's Glaive
-			i(275306),	-- Plans: Amani Forgemaster's Glaive
-			i(275308),	-- Plans: Amani Forgemaster's Rack
-			i(275312),	-- Formula: Furious Tiki Mask
-			i(275314),	-- Formula: Enchanted Eversong Trout
-			i(275320),	-- Schematic: Aetherlume Field Lamp
-			i(275324),	-- Technique: Inscribed Amani Mural
-			i(275326),	-- Technique: Chiseled Amani Tablet
-			i(275328),	-- Technique: Turquoise Amani Tapestry
-			i(275334),	-- Pattern: Stretched Snakeskin Rack
-			i(275338),	-- Pattern: Rolled Bed Linens
-			i(275342),	-- Pattern: Tortollan Slingsack
-			i(275380),	-- Venomous Combatant's Heraldry
-			i(275383),	-- Venomous Aspirant's Heraldry
-			i(275385),	-- Venomous Gladiator's Heraldry
-			i(275432),	-- Vicious Lightbloom Boar
-			i(275433),	-- Vicious Lightbloom Boar
-			i(275488),	-- Preyhunter's Polished Brigandine
-			i(275489),	-- Preyhunter's Polished Greatbelt
-			i(275490),	-- Preyhunter's Polished Greatboots
-			i(275491),	-- Preyhunter's Polished Handguards
-			i(275492),	-- Preyhunter's Polished Helmet
-			i(275493),	-- Preyhunter's Polished Pauldrons
-			i(275494),	-- Preyhunter's Polished Tassets
-			i(275495),	-- Preyhunter's Polished Vambraces
-			i(275496),	-- Preyhunter's Refined Cord
-			i(275497),	-- Preyhunter's Refined Crown
-			i(275498),	-- Preyhunter's Refined Cuffs
-			i(275499),	-- Preyhunter's Refined Epaulet
-			i(275500),	-- Preyhunter's Refined Gloves
-			i(275501),	-- Preyhunter's Refined Slippers
-			i(275502),	-- Preyhunter's Refined Tights
-			i(275503),	-- Preyhunter's Refined Vestments
-			i(275504),	-- Preyhunter's Rugged Bindings
-			i(275505),	-- Preyhunter's Rugged Clasp
-			i(275506),	-- Preyhunter's Rugged Grips
-			i(275507),	-- Preyhunter's Rugged Haubergeon
-			i(275508),	-- Preyhunter's Rugged Legguards
-			i(275509),	-- Preyhunter's Rugged Plume
-			i(275510),	-- Preyhunter's Rugged Sabatons
-			i(275511),	-- Preyhunter's Rugged Shoulderguards
-			i(275512),	-- Preyhunter's Sleek Armlets
-			i(275513),	-- Preyhunter's Sleek Belt
-			i(275514),	-- Preyhunter's Sleek Boots
-			i(275515),	-- Preyhunter's Sleek Gauntlets
-			i(275516),	-- Preyhunter's Sleek Jerkin
-			i(275517),	-- Preyhunter's Sleek Mask
-			i(275518),	-- Preyhunter's Sleek Shoulderpads
-			i(275519),	-- Preyhunter's Sleek Trousers
-			i(275522),	-- Preyhunter's Refined Shawl
-			i(275523),	-- Preyhunter's Sleek Capelet
-			i(275524),	-- Preyhunter's Rugged Stole
-			i(275525),	-- Preyhunter's Polished Cloak
-			i(275526),	-- Preyhunter's Band
-			i(275527),	-- Preyhunter's Signet
-			i(275528),	-- Preyhunter's Ring
-			i(275529),	-- Preyhunter's Circle
-			i(275530),	-- Preyhunter's Clasp
-			i(275531),	-- Preyhunter's Choker
-			i(275532),	-- Preyhunter's Hatchet
-			i(275533),	-- Preyhunter's Kukri
-			i(275534),	-- Preyhunter's Shiv
-			i(275535),	-- Preyhunter's Cudgel
-			i(275536),	-- Preyseeker's Scepter
-			i(275537),	-- Preyhunter's Hammer
-			i(275538),	-- Preyhunter's Scimitar
-			i(275539),	-- Preyhunter's Ritual Blade
-			i(275540),	-- Preyhunter's Longsword
-			i(275541),	-- Preyhunter's Warglaive
-			i(275542),	-- Preyhunter's Longbow
-			i(275543),	-- Preyhunter's Spear
-			i(275544),	-- Preyhunter's Staff
-			i(275545),	-- Preyhunter's Spire
-			i(275546),	-- Preyhunter's Falchion
-			i(275547),	-- Preyhunter's Lantern
-			i(275548),	-- Preyhunter's Tower Shield
+			i(276883),	-- A Message From Kul'amara
+			i(276905),	-- Beginning Fragment of Ulantu's Log
+			i(276912),	-- Middle Fragment of Ulantu's Log
+			i(276914),	-- End Fragment of Ulantu's Log
+			i(277525),	-- Ulantu's Belongings
+			i(279574),	-- Preyhunter's Hero Chest
 			i(275551),	-- [PH] Broomstick Spice - Orange
 			i(275570),	-- [PH] Broomstick Spice - Green
 			i(275571),	-- [PH] Broomstick Spice - Grey
 			i(275572),	-- [PH] Broomstick Spice - Hallow
 			i(275573),	-- [PH] Broomstick Spice - Pink
 			i(275574),	-- [PH] Broomstick Spice - Red
-			i(275578),	-- Soulcoiler Sconce
-			i(275628),	-- Cauldron of Ula'tek
-			i(275631),	-- Corrosive Writhling
-			i(275632),	-- Volatile Venomfang
 			i(275634),	-- Artisan's Consortium Flyer
-			i(275654),	-- Caustic Venomfang
 			i(275655),	-- Venom Serpent - White
-			i(275657),	-- Apophic Soul Crusher
-			i(275659),	-- Hexflame Reaver
-			i(275660),	-- Preyhunter's Courser
-			i(275676),	-- R0CKY-To-Go
-			i(275683),	-- G-00
-			i(275684),	-- Schematic: DU5TY, Lazy Looter
-			i(275695),	-- Design: Piercing Amani Lapis
-			i(275697),	-- Design: Roaring Amani Garnet
-			i(275702),	-- Preyhunter's Prismguard
 			i(275703),	-- ArcaneGolem2 Pet - Red
-			i(275704),	-- Preyhunter's Riftbreaker
-			i(275726),	-- Preyhunter's Champion Chest
-			i(275728),	-- Preyhunter's Champion Sack
-			i(275822),	-- Preyhunter's Veteran Chest
-			i(275825),	-- Ula'tek's Sssacrificial Rain
-			i(275853),	-- Zul'Aman Burning Pinecone
-			i(275855),	-- Zul'Aman Swamp Palm Sprout
-			i(275857),	-- Zul'Aman Creeping Pangoroot
-			i(275899),	-- Venom-Soaked Satchel
-			i(275910),	-- Scalebound Herald's Flute
-			i(275911),	-- Venom-Covered Chest
-			i(275917),	-- Preyhunter's Veteran Sack
-			i(275918),	-- Preyhunter's Adventurer Chest
-			i(275919),	-- Preyhunter's Adventurer Sack
-			i(275936),	-- Delve-O-Bot 7001: Midnight Software Update Chip
-			i(275978),	-- Delver's Starter Kit
-			i(275986),	-- Delver's Cosmetic Surprise Bag
-			i(275988),	-- Corrosive Victory
-			i(276033),	-- Loa Watcher's Pendant
-			i(276034),	-- Entangling Brood Ring
-			i(276035),	-- Soulcoiler's Signet
-			i(276042),	-- Templetusk Shield
-			i(276043),	-- Vilefang Censer
-			i(276044),	-- Loa-Infused Battlestaff
-			i(276046),	-- Superclutch Smasher
-			i(276047),	-- Swamp Whomper
-			i(276049),	-- Snakeslayer's Claymore
-			i(276050),	-- Victorious Spiritstaff
-			i(276051),	-- Fangmouth Warspear
-			i(276052),	-- Venomshot Greatbow
-			i(276053),	-- Snakehunter's Warglaive
-			i(276054),	-- Serpentvine Machete
-			i(276055),	-- Soulweaver's Curseblade
-			i(276057),	-- Cryptbound Scepter
-			i(276058),	-- Ruinous Slitherslicer
-			i(276060),	-- Hexxer's Blastin' Rod
-			i(276061),	-- Witch Doctor's Bloodletter
-			i(276062),	-- Hydra Neckchopper
-			i(276104),	-- Aspiring Preyhunter's Chest
-			i(276117),	-- Clouded Blood-Pearl
-			i(276124),	-- Ancient Knucklebone
-			i(276126),	-- Serpent's Feather
 			i(276138),	-- Any Ingredient [DNT
 			i(276142),	-- Corrosive Palimpsest
-			i(276162),	-- Corroded Soul Crusher
-			i(276163),	-- Apophic Patagia
-			i(276164),	-- Corroded Patagia
-			i(276165),	-- Ophidian Patagia
-			i(276166),	-- Twin-Headed Twinblade
-			i(276167),	-- Ori'kassi's Lance
-			i(276168),	-- Fang of Ss'akrithos
-			i(276169),	-- Malformed Barrier
-			i(276171),	-- Ophidian Circle
-			i(276172),	-- Headdress of Mutagenesis
-			i(276173),	-- Clutchguard Sandals
-			i(276174),	-- Leviathan's Oozing Scalemail
-			i(276175),	-- Broodmother's Embrace
-			i(276178),	-- Venom Lancer's Gauntlets
-			i(276186),	-- Totally Not Stolen Powder
-			i(276187),	-- Venomous Jeweler's Setting
-			i(276189),	-- Effigy of Dundun
-			i(276198),	-- Shellman's 195
-			i(276205),	-- Legitimate Shipment of Swivel Guns
-			i(276206),	-- Leagally Sourced Cannon Shot
-			i(276207),	-- Preyhunter's Masquerade
-			i(276229),	-- Preyhunter's Trophy Stand
-			i(276230),	-- Pepe
 			i(276234),	-- Vibrant Venomfang
-			i(276246),	-- Mechanically Indistinguishable Pepe
-			i(276258),	-- Companion Command Crystal
-			i(276286),	-- Gnarled Heart
-			i(276297),	-- Rustbolt Jetpack
-			i(276312),	-- Griftah's Torch of Rotation
-			i(276405),	-- [PH] Rainbow Axe - 1h - Blue
-			i(276406),	-- [PH] Rainbow Axe - 1h - Green
 			i(276407),	-- [PH] Rainbow Axe - 1h - Purple
-			i(276408),	-- [PH] Rainbow Axe - 1h - Red
-			i(276409),	-- [PH] Rainbow Axe - 2h - Blue
-			i(276410),	-- [PH] Rainbow Axe - 2h - Green
 			i(276411),	-- [PH] Rainbow Axe - 2h - Purple
-			i(276412),	-- [PH] Rainbow Axe - 2h - Red
-			i(276413),	-- [PH] Rainbow Mace- 1h - Blue
-			i(276414),	-- [PH] Rainbow Mace- 1h - Green
 			i(276415),	-- [PH] Rainbow Mace- 1h - Purple
-			i(276416),	-- [PH] Rainbow Mace- 1h - Red
-			i(276417),	-- [PH] Rainbow Mace- 2h - Blue
-			i(276418),	-- [PH] Rainbow Mace- 2h - Green
 			i(276420),	-- [PH] Rainbow Mace- 2h - Purple
-			i(276421),	-- [PH] Rainbow Mace- 2h - Red
-			i(276531),	-- Cursebreaker's Vambraces
-			i(276532),	-- Cursebreaker's Bracers
-			i(276533),	-- Cursebreaker's Wristwraps
-			i(276534),	-- Cursebreaker's Cuffs
-			i(276536),	-- Corrosive Reticule
 			i(276547),	-- Afflicted Soul
 			i(276548),	-- Tormented Soul
-			i(276549),	-- Wind Serpent - Yellow
 			i(276550),	-- Wind Serpent - White
 			i(276552),	-- Wind Serpent - Pink
 			i(276611),	-- Clam Stuffed Crab
@@ -1107,7 +145,6 @@ root(ROOTS.Unsorted, {
 			i(276626),	-- Long Centaur Wall
 			i(276628),	-- Scroll of Deep Breath
 			i(276629),	-- Scroll of the Sailfish
-			i(276645),	-- Soggy Shipping Manifest
 			i(276650),	-- Short Centaur Wall
 			i(276652),	-- Tapered Centaur Wall
 			i(276654),	-- Ball
@@ -1126,41 +163,13 @@ root(ROOTS.Unsorted, {
 			i(276748),	-- Scroll of the Salty Souvenir: West
 			i(276749),	-- Scroll of the Salty Souvenir: South
 			i(276800),	-- [PH]Writhes Mount - Yellow
-			i(276803),	-- [PH]Writhes Mount - Pink
-			i(276804),	-- The Writhing Brood
-			i(276881),	-- Breath of Blight
-			i(276882),	-- Breath of Ruin
-			i(277121),	-- Cozy Bird Nest
 			i(277137),	-- Wriggling Venom-Soaked Satchel
-			i(277138),	-- Silvermoon Dragonhawk Incubator
-			i(277142),	-- Westfall Pet Cage
-			i(277144),	-- Crossroads Pet Cage
-			i(277149),	-- Crude Pet Cage
 			i(277157),	-- Barnacle-Encrusted Chest
-			i(277160),	-- Cozy Lightbloom Lilypad
-			i(277163),	-- Loyal Companion's Plinth
 			i(277192),	-- Umbral Ashes
 			i(277261),	-- [PH] Pygmy Owl
 			i(277266),	-- The First Troll Legend
 			i(277270),	-- Kirin Tor Kitty
 			i(277282),	-- Kirin Tor Cat
-			i(277292),	-- Venomous Gladiator's Rib
-			i(277293),	-- Venomous Gladiator's Warglaive
-			i(277294),	-- Venomous Gladiator's Polearm
-			i(277295),	-- Venomous Gladiator's Greatstaff
-			i(277296),	-- Venomous Gladiator's Longbow
-			i(277298),	-- Venomous Gladiator's Fetish
-			i(277299),	-- Venomous Gladiator's Shield
-			i(277300),	-- Venomous Gladiator's Dagger
-			i(277301),	-- Venomous Gladiator's Fangs
-			i(277302),	-- Venomous Gladiator's Blaster
-			i(277303),	-- Venomous Gladiator's Greatsword
-			i(277304),	-- Venomous Gladiator's Smasher
-			i(277305),	-- Venomous Gladiator's Sword
-			i(277306),	-- Venomous Gladiator's Barb
-			i(277307),	-- Venomous Gladiator's Basher
-			i(277308),	-- Venomous Gladiator's Greataxe
-			i(277312),	-- Venomous Gladiator's Axe
 			i(277318),	-- Catsramas
 			i(277319),	-- Cat'Thuzad
 			i(277321),	-- Mewkahen
@@ -1177,58 +186,13 @@ root(ROOTS.Unsorted, {
 			i(277480),	-- Gorgoneion Gaze
 			i(277481),	-- Lithic Plumage
 			i(277482),	-- Ouroboric Cycle
-			i(277506),	-- Corrosive Soul
 			i(277527),	-- Hex Candle
 			i(277530),	-- Balm of Flies
-			i(277803),	-- Venom-Cursed Spellcarver
-			i(277809),	-- Venom-Cursed Claymore
-			i(277821),	-- Ula'tek Snakehead Lure
-			i(277847),	-- Unbroken Trap Hinge
-			i(277848),	-- Untouched Crab Lure
-			i(277849),	-- Mushed Crab
-			i(277920),	-- Vibrant Crownfeather
-			i(277935),	-- Pungent Leech Leg
-			i(277937),	-- Balanced Offering
-			i(277938),	-- Virulent Offering
-			i(277939),	-- Volatile Offering
-			i(277940),	-- Fragile Offering
-			i(277941),	-- Eerie Offering
-			i(277942),	-- Odious Offering
-			i(277943),	-- Pestilent Offering
-			i(277944),	-- Phlegmatic Offering
-			i(277945),	-- Melancholic Offering
-			i(277946),	-- Choleric Offering
-			i(277951),	-- Venomous Aspirant's Slicer
-			i(277955),	-- Ethereal Bead Strand
-			i(277968),	-- Contract: Zul'jarra's Forces
-			i(277969),	-- Contract: Zul'jarra's Forces
-			i(277970),	-- Venomous Warmonger's Warblade
-			i(277975),	-- Arcanostorage Sphere
-			i(277985),	-- Mysterious Offering
-			i(277989),	-- Ghostcaller's Bell
 			i(277990),	-- Cursemail Gauntlets
-			i(277991),	-- Shrieking Tacklebox
-			i(277992),	-- Crab Trap Pieces
-			i(277993),	-- Spiritsurge Incense
-			i(277996),	-- Summoning Salt
-			i(277997),	-- Malevolent Fishing Codex
-			i(277998),	-- Lump of Crystalline Malachite
-			i(277999),	-- Ritual Dagger
-			i(278000),	-- Sealed Vial of Mysterious Green Liquid
-			i(278001),	-- Forgotten Amani Fishing Rod
-			i(278038),	-- Arathor Toy Sword
 			i(278044),	-- Hanging Candles
-			i(278048),	-- Corrosive Relic
 			i(278050),	-- Corrosive Bijou
-			i(278070),	-- Handful of Esoteric Ingredients
-			i(278084),	-- Handful of Esoteric Ingredients
-			i(278095),	-- Liver Pulp
 			i(278099),	-- Malt
 			i(278100),	-- Grain
-			i(278101),	-- Ensemble: Preyhunter's Polished Armor
-			i(278103),	-- Ensemble: Preyhunter's Rugged Armor
-			i(278104),	-- Ensemble: Preyhunter's Sleek Armor
-			i(278105),	-- Ensemble: Preyhunter's Refined Armor
 			i(278106),	-- DNT Coiled Color Changer
 			i(278110),	-- DNT Ula'tek Pole Dummy A
 			i(278111),	-- DNT Ula'tek Pole Dummy B
@@ -1236,19 +200,6 @@ root(ROOTS.Unsorted, {
 			i(278113),	-- DNT Ula'tek Pole Dummy D
 			i(278114),	-- DNT Ula'tek Pole Dummy E
 			i(278115),	-- DNT Ula'tek Pole Dummy F
-			i(278123),	-- Sturdy Silvermoon Crate Lid
-			i(278126),	-- Mysterious Sin'dorei Candlestick
-			i(278130),	-- Gilded Silvermoon Compass
-			i(278134),	-- Sturdy Silvermoon Crate
-			i(278145),	-- Stonecarved Sin'dorei Jar
-			i(278148),	-- Adorned Sin'dorei Satchel
-			i(278151),	-- Hanging Blood Knights Shield
-			i(278154),	-- Hooked Net Trap
-			i(278193),	-- Aqiri Mandible
-			i(278241),	-- Arsenal: Preyseeker's Lost Armaments
-			i(278245),	-- Royal Attendant's Coffin
-			i(278261),	-- Arsenal: Preyhunter's Lost Armaments
-			i(278276),	-- Spoils of Azta'rec
 			i(278283),	-- Nebulous Voidcache: Entombed Sentinels
 			i(278284),	-- Nebulous Voidcache: Ula'tek
 			i(278285),	-- Nebulous Voidcache: Soulcoiler Nek'zali
@@ -1257,31 +208,10 @@ root(ROOTS.Unsorted, {
 			i(278288),	-- Nebulous Voidcache: Sszorak
 			i(278289),	-- Nebulous Voidcache: The Twin Fangs
 			i(278290),	-- Nebulous Voidcache: The Bargained Crown
-			i(278329),	-- Thalassian Recipe in a Bottle
-			i(278330),	-- Schematic: R0CKY
-			i(278331),	-- Recipe: Sweet-And-Sour Skewers
-			i(278333),	-- Schematic: R0CKY-To-Go
 			i(278335),	-- Cerulean Pearl
 			i(278337),	-- Amber Pearl
 			i(278339),	-- Cursebound Pearl
 			i(278340),	-- Blighted Pearl
-			i(278369),	-- Preyhunter's Scaled Effigy
-			i(278372),	-- Preyhunter's Fanged Effigy
-			i(278374),	-- Preyhunter's Fanged Bust
-			i(278376),	-- Preyhunter's Terror Effigy
-			i(278378),	-- Preyhunter's Scaled Bust
-			i(278380),	-- Preyhunter's Terror Bust
-			i(278470),	-- Malefic Venom
-			i(278472),	-- Noxious Corrosive Coin
-			i(278517),	-- Lost Med'jai Amulet
-			i(278523),	-- Feather of Tok'jara
-			i(278534),	-- Eye of Szarith
-			i(278536),	-- Mummified Lynx's Paw
-			i(278557),	-- Otoola's Recognition
-			i(278572),	-- Pale Hexscale
-			i(278573),	-- Crested Burnished Leafmimic
-			i(278574),	-- Crested Aqua Leafmimic
-			i(278575),	-- Crested Verdant Leafmimic
 			i(278576),	-- Crested Violet Leafmimic
 			i(278577),	-- Nightfall Assassin's Tunic
 			i(278578),	-- Nightfall Assassin's Mask
@@ -1349,7 +279,6 @@ root(ROOTS.Unsorted, {
 			i(278652),	-- Ensemble: Elite Venomous Gladiator's Warlock Armor
 			i(278653),	-- Ensemble: Elite Venomous Gladiator's Warrior Armor
 			i(278654),	-- Arsenal: Elite Venomous Gladiator's Weapons
-			i(278694),	-- Stormstout Hanging Lantern
 			i(278776),	-- Brown Mogu Mask
 			i(278777),	-- Blue Mogu Mask
 			i(278778),	-- Green Mogu Mask
@@ -1385,7 +314,6 @@ root(ROOTS.Unsorted, {
 			i(278843),	-- Ensemble: Pyrewalker's Battlegear
 			i(278844),	-- Ensemble: Pledgebearer's Warplate
 			i(278845),	-- Arsenal: Amani Weaponry
-			i(278848),	-- Pustulent Blightswarmer
 			i(278869),	-- Lil' Blue Perdition
 			i(278870),	-- Lil' Green Perdition
 			i(278871),	-- Lil' Purple Perdition
@@ -1394,13 +322,10 @@ root(ROOTS.Unsorted, {
 			i(278874),	-- Lil' Dark Armageddon
 			i(278875),	-- Lil' Green Armageddon
 			i(278876),	-- Lil' Red Armageddon
-			i(278982),	-- Hatchery of Hissing Eggs
 			i(278993),	-- Big Blue Armageddon
 			i(278994),	-- Big Green Armageddon
 			i(279001),	-- Big Dark Armageddon
 			i(279002),	-- Big Red Armageddon
-			i(279011),	-- Venomjade Necklace
-			i(279012),	-- Cracked Keystone
 			i(279013),	-- [ph] SpiceWitch Chest - Blue
 			i(279014),	-- [ph] SpiceWitch Feet - Blue
 			i(279015),	-- [ph] SpiceWitch Waist - Blue
@@ -1409,8 +334,6 @@ root(ROOTS.Unsorted, {
 			i(279018),	-- [ph] SpiceWitch Head - Blue
 			i(279019),	-- [ph] SpiceWitch Shoulders - Blue
 			i(279022),	-- [ph] Ensemble: SpiceWitch Blue Attire
-			i(279052),	-- Ancient Amani Mask
-			i(279053),	-- Ancient Amani Mask
 			i(279056),	-- [ph] SpiceWitch Chest - Green
 			i(279057),	-- [ph] SpiceWitch Feet - Green
 			i(279058),	-- [ph] SpiceWitch Waist - Green
@@ -1439,28 +362,20 @@ root(ROOTS.Unsorted, {
 			i(279088),	-- [ph] SpiceWitch Head - Hallow (Hair Vis)
 			i(279089),	-- [ph] SpiceWitch Shoulders - Hallow
 			i(279090),	-- [ph] Ensemble: SpiceWitch Hallow Attire
-			i(279091),	-- Oozing Goby
-			i(279092),	-- Anguish-Touched Pouch
-			i(279093),	-- Giggling Skull
-			i(279094),	-- Grotesque Sturgeon
 			i(279095),	-- [ph] SpiceWitch Chest - Orange
 			i(279096),	-- [ph] SpiceWitch Feet - Orange
 			i(279097),	-- [ph] SpiceWitch Waist - Orange
 			i(279098),	-- [ph] SpiceWitch Gloves- Orange
 			i(279099),	-- [ph] SpiceWitch Legs - Orange
-			i(279100),	-- Many-Eyed Flounder
 			i(279101),	-- [ph] SpiceWitch Head - Orange
 			i(279102),	-- [ph] SpiceWitch Head - Orange (Hair Vis)
 			i(279103),	-- [ph] SpiceWitch Shoulders - Orange
 			i(279104),	-- [ph] Ensemble: SpiceWitch Orange Attire
-			i(279105),	-- Twin-Headed Snipefish
-			i(279106),	-- Loathsome Anglerfish
 			i(279107),	-- [ph] SpiceWitch Chest - Pink
 			i(279108),	-- [ph] SpiceWitch Feet - Pink
 			i(279109),	-- [ph] SpiceWitch Waist - Pink
 			i(279110),	-- [ph] SpiceWitch Gloves- Pink
 			i(279111),	-- [ph] SpiceWitch Legs - Pink
-			i(279112),	-- Clumped Asteroidea
 			i(279114),	-- [ph] SpiceWitch Head - Pink
 			i(279133),	-- [ph] SpiceWitch Head - Pink (Hair Vis)
 			i(279134),	-- [ph] SpiceWitch Shoulders - Pink
@@ -1476,65 +391,25 @@ root(ROOTS.Unsorted, {
 			i(279145),	-- Vial of Venom
 			i(279146),	-- Lopped Rattle
 			i(279147),	-- Unrecognizable bone
-			i(279148),	-- Strip of Snake Hide
 			i(279149),	-- [ph] SpiceWitch Head 02 - Blue
 			i(279150),	-- [ph] SpiceWitch Head 02 - Blue (Hair Vis)
 			i(279151),	-- [ph] SpiceWitch Head 02 - Green
-			i(279152),	-- Intact Snake Head
-			i(279153),	-- Large Trophy
-			i(279154),	-- Large Leaf
 			i(279155),	-- [ph] SpiceWitch Head 02 - Green (Hair Vis)
 			i(279156),	-- [ph] SpiceWitch Head 02 - Grey
-			i(279157),	-- Frayed Nomad's Cord
 			i(279158),	-- [ph] SpiceWitch Head 02 - Grey (Hair Vis)
 			i(279159),	-- [ph] SpiceWitch Head 02 - Hallow
-			i(279160),	-- Mud-Caked Footwraps
 			i(279161),	-- [ph] SpiceWitch Head 02 - Hallow (Hair Vis)
 			i(279162),	-- [ph] SpiceWitch Head 02 - Orange
 			i(279163),	-- [ph] SpiceWitch Head 02 - Orange (Hair Vis)
 			i(279164),	-- [ph] SpiceWitch Head 02 - Pink
 			i(279165),	-- [ph] SpiceWitch Head 02 - Pink (Hair Vis)
 			i(279166),	-- Pumice Hand Chalk
-			i(279197),	-- Slitherfang
-			i(279207),	-- Blackened Sludgefish
-			i(279209),	-- Plainsrunner's Sun Tunic
-			i(279210),	-- Explosive Tlhapi
-			i(279211),	-- Pillar of the Fanged Altar
-			i(279217),	-- Venom-Cursed Eagle's Shroud
-			i(279220),	-- Venom-Cursed Lynx's Mane
-			i(279222),	-- Venom-Cursed Dragonhawk's Mantle
-			i(279223),	-- Venom-Cursed Bear's Greatcloak
-			i(279224),	-- Ensemble: Venom-Cursed Eagle's Raiment
-			i(279227),	-- Ensemble: Venom-Cursed Lynx's Garb
-			i(279228),	-- Ensemble: Venom-Cursed Dragonhawk's Scales
-			i(279230),	-- Ensemble: Venom-Cursed Bear's Guard
 			i(279284),	-- Nebulous Voidcache: Delver's Trove
-			i(279287),	-- Corroded Pouch
-			i(279288),	-- Corroded Satchel
-			i(279289),	-- Well Urned Rest
-			i(279290),	-- Fang Lover's
-			i(279345),	-- Corroded Satchel
-			i(279358),	-- Arsenal: Venom-Cursed Arms
-			i(279359),	-- Concocted Poisonous Residue
 			i(279360),	-- Amani Forgemaster's Rack
-			i(279361),	-- Keen Hex Mask
-			i(279362),	-- Furious Tiki Mask
 			i(279363),	-- Enchanted Eversong Trout
 			i(279364),	-- Coiled Hookshot
 			i(279365),	-- Fine Captain's Bottle
-			i(279366),	-- Aetherlume Field Lamp
-			i(279367),	-- Piercing Amani Lapis
 			i(279368),	-- Inscribed Amani Mural
-			i(279369),	-- Chiseled Amani Tablet
-			i(279370),	-- Roaring Amani Garnet
-			i(279371),	-- Flat Snakeskin Canopy
-			i(279372),	-- Stretched Snakeskin Rack
-			i(279373),	-- Mounted Moby
-			i(279374),	-- Rolled Bed Linens
-			i(279375),	-- Tortollan Slingsack
-			i(279376),	-- Opalescent Amani Peridot
-			i(279382),	-- Venom-Cursed Fragment
-			i(279384),	-- Bonemail Gauntlet
 			i(279428),	-- Midnight Gloomcap
 			i(279429),	-- Azure Gloomcap
 			i(279430),	-- Sepia Gloomcap
@@ -1542,7 +417,6 @@ root(ROOTS.Unsorted, {
 			i(279432),	-- Cloudy Gloomcap
 			i(279433),	-- Deep Gloomcap
 			i(279434),	-- Camo Gloomcap
-			i(279435),	-- Brick Gloomcap
 			i(279436),	-- Lively Gloomcap
 			i(279437),	-- Faded Gloomcap
 			i(279438),	-- Carrot Gloomcap
@@ -1550,25 +424,11 @@ root(ROOTS.Unsorted, {
 			i(279440),	-- Plum Gloomcap
 			i(279441),	-- Crimson Gloomcap
 			i(279442),	-- Violet Gloomcap
-			i(279443),	-- Aquatic Gloomcap
 			i(279444),	-- Snowy Gloomcap
 			i(279445),	-- Sunny Gloomcap
-			i(279449),	-- Hex Troll Mask Fragment
 			i(279455),	-- K'areshi Tea Cup
 			i(279458),	-- Rock Goblet
-			i(279475),	-- Mutagenitor's Feather
-			i(279476),	-- Vassti's Claw
-			i(279477),	-- Ss'akrithos's Forked Tongue
-			i(279478),	-- Ori'kassi's Barbed Tail
-			i(279479),	-- Leviathan's Eye
-			i(279483),	-- Three-Eyed Fish
-			i(279520),	-- Fabled Veteran's Cache
-			i(279522),	-- Surplus Bag of Party Favors
-			i(279523),	-- Overflowing Abundant Satchel
 			i(279524),	-- Brewer's Purple Kilt
-			i(279525),	-- Avid Learner's Supply Pack
-			i(279526),	-- Victorious Stormarion Pinnacle Cache
-			i(279528),	-- Mag'har Laborer's Tunic
 			i(279529),	-- Brewer's Purple Shoulder Cape
 			i(279530),	-- Brewer's Purple Belt
 			i(279531),	-- Brewer's Purple Beret
@@ -1576,12 +436,6 @@ root(ROOTS.Unsorted, {
 			i(279533),	-- Brewer's Red Shoulder Cape
 			i(279534),	-- Brewer's Red Kilt
 			i(279535),	-- Brewer's Red Belt
-			i(279536),	-- Painted Raptor-Tooth Shirt
-			i(279538),	-- Spore-Pocked Lab Coat
-			i(279539),	-- Junior Artificer's Work Vest
-			i(279540),	-- Tinker's Padded Vest
-			i(279541),	-- Priestess' Moon Tunic
-			i(279542),	-- Runecloth Clergy Coat
 			i(279543),	-- Sky Shaman's Tunic
 			i(279544),	-- Witch Doctor's Undervest
 			i(279545),	-- Wild Seer's Mantle
@@ -1589,9 +443,7 @@ root(ROOTS.Unsorted, {
 			i(279547),	-- Junkyard Crafter's Vest
 			i(279548),	-- Villager's Labor Vest
 			i(279549),	-- Witch-Hunter's Undercoat
-			i(279550),	-- Potion of Venomous Return
 			i(279551),	-- Radical's Gilded Vestment
-			i(279574),	-- Preyhunter's Hero Chest
 			i(279579),	-- Cruel Warrior's Blade
 			i(279590),	-- Venomous Champion's Illustrious Banner
 			i(279610),	-- Bundle of Adventurer Dawncrests
@@ -1612,36 +464,7 @@ root(ROOTS.Unsorted, {
 			i(279625),	-- Nebulous Voidcache: Voidscar Arena
 			i(279818),	-- Basic Iron Sabatons
 			i(279819),	-- Basic Steel Sabatons
-			i(279917),	-- Soulcoiler Skull
-			i(279919),	-- Soulcoiler Jaw
-			i(279922),	-- Altar of Corrosion
-			i(279997),	-- Insidious Venomstone
-			i(280003),	-- Excising Knife
-			i(280004),	-- Corroded Key
-			i(280006),	-- Spirit Loupe
-			i(280007),	-- Mask Fragment
-			i(280047),	-- Feathered Bell
-			i(280089),	-- Mask Fragment
-			i(280090),	-- Mask Fragment
-			i(280091),	-- Latent Purifier
-			i(280097),	-- Venomous Aspirant's Insignia of Alacrity
-			i(280118),	-- Venomous Aspirant's Medallion
-			i(280123),	-- Sharp Axe Holster
 			i(280131),	-- Nebulous Voidcache: Prey
-			i(280142),	-- Small Wooden Floor Tile
-			i(280144),	-- Large Wooden Floor Tile
-			i(280146),	-- Small Triangular Tile
-			i(280148),	-- Large Triangular Tile
-			i(280150),	-- Tall Round Column
-			i(280152),	-- Short Round Column
-			i(280154),	-- Short Square Column
-			i(280156),	-- Tall Square Column
-			i(280158),	-- Small Wooden Wall Tile
-			i(280160),	-- Large Wooden Wall Tile
-			i(280162),	-- Wide Wooden Staircase
-			i(280164),	-- Spiraling Wooden Stairs
-			i(280178),	-- Poison Dart Frog
-			i(280189),	-- Cauldron Concoction
 			i(280215),	-- Tortollan Tarp Tent
 			i(280221),	-- Sealeather Sack
 			i(280223),	-- Collector's Tortollan Display Rack
@@ -1670,6 +493,44 @@ root(ROOTS.Unsorted, {
 			i(280271),	-- Longwick Rope
 			i(280273),	-- Droopy Longwick Rope
 			i(280275),	-- Hanging Longwick Rope
+			i(244347),	-- Purified Troll Urn
+			i(248101),	-- Traditional Brewfest Stein
+			i(253396),	-- Purified Crude Axe
+			i(255652),	-- Purified Troll Loop
+			i(258540),	-- Purified Troll Ring
+			i(272142),	-- Purified Earthen Pot
+			i(280333),	-- Pirate's Eyepatch
+			i(280335),	-- Brewfest Crate
+			i(280337),	-- Traditional Brewfest Banner
+			i(280339),	-- Brewfest Fence
+			i(280341),	-- Brewfest Fencepost
+			i(280343),	-- Hanging Brewfest Wreath
+			i(280102),	-- Handful of Corrosive Coins
+			i(280513),	-- Color-Curious Candle
+			i(280581),	-- Wintry Witchwick's Rider
+			i(280842),	-- Shadowhunters' Hexblade
+			i(280873),	-- Protected Tortollan Scroll Case
+			i(281021),	-- Eerie Lure
+			i(274765),	-- Fleeting Alluring Nostrum
+			i(280846),	-- Beguiling Memories of the Sea
+			i(274677),	-- Sky Blue Riverside Room Plans
+			i(274678),	-- Verdant Riverside Room Plans
+			n(PROFESSIONS, {
+				prof(ENGINEERING, {
+					i(273064),	-- Schematic: Coiled Snake-Eye (RECIPE!)
+					i(273062),	-- Coiled Snake-Eye+
+					i(273063),	-- Coiled Snake-Eye++
+				}),
+				prof(JEWELCRAFTING, {
+					i(273067),	-- Design: Polished Ammolite (RECIPE!)
+					i(273065),	-- Polished Ammolite+
+					i(273066),	-- Polished Ammolite++
+				}),
+				prof(LEATHERWORKING, {
+					i(273068),	-- Adorned Fang+
+					i(273069),	-- Adorned Fang++
+				}),
+			}),
 
 			--[[ If Darkal Needs
 			n(CLASS, {
@@ -1833,51 +694,6 @@ root(ROOTS.Unsorted, {
 				i(269753),	-- Artisan Katana
 				i(269754),	-- Offhand Artisan Nunchuck
 				i(269755),	-- Large Artisan Katana
-				i(271054),	-- Sunlit Petalweave Crown
-				i(271055),	-- Sunlit Petalweave Mantle
-				i(271056),	-- Sunlit Petalweave Halter
-				i(271057),	-- Sunlit Petalweave Belt
-				i(271058),	-- Sunlit Petalweave Skirt
-				i(271059),	-- Sunlit Petalweave Boots
-				i(271060),	-- Sunlit Petalweave Gloves
-				i(271061),	-- Sunlit Petalweave Cloak
-				i(271062),	-- Ensemble: Sunlit Petalweave
-				i(271063),	-- Scarlet Petalweave Crown
-				i(271064),	-- Scarlet Petalweave Mantle
-				i(271065),	-- Scarlet Petalweave Halter
-				i(271066),	-- Scarlet Petalweave Belt
-				i(271067),	-- Scarlet Petalweave Skirt
-				i(271068),	-- Scarlet Petalweave Boots
-				i(271069),	-- Scarlet Petalweave Gloves
-				i(271070),	-- Scarlet Petalweave Cloak
-				i(271071),	-- Ensemble: Scarlet Petalweave
-				i(271072),	-- Blush Petalweave Crown
-				i(271073),	-- Blush Petalweave Mantle
-				i(271074),	-- Blush Petalweave Halter
-				i(271075),	-- Blush Petalweave Belt
-				i(271076),	-- Blush Petalweave Skirt
-				i(271077),	-- Blush Petalweave Boots
-				i(271078),	-- Blush Petalweave Gloves
-				i(271079),	-- Blush Petalweave Cloak
-				i(271080),	-- Ensemble: Blush Petalweave
-				i(271081),	-- Azure Petalweave Crown
-				i(271082),	-- Azure Petalweave Mantle
-				i(271083),	-- Azure Petalweave Halter
-				i(271084),	-- Azure Petalweave Belt
-				i(271085),	-- Azure Petalweave Skirt
-				i(271086),	-- Azure Petalweave Boots
-				i(271087),	-- Azure Petalweave Gloves
-				i(271088),	-- Azure Petalweave Cloak
-				i(271089),	-- Ensemble: Azure Petalweave
-				i(271437),	-- Righteous Lawbringer's Headgear
-				i(271439),	-- Righteous Lawbringer's Tunic
-				i(271442),	-- Righteous Lawbringer's Buckle
-				i(271443),	-- Righteous Lawbringer's Trousers
-				i(271446),	-- Righteous Lawbringer's Boots
-				i(271447),	-- Righteous Lawbringer's Epaulets
-				i(271448),	-- Righteous Lawbringer's Cloak
-				i(271449),	-- Righteous Lawbringer's Gloves
-				i(271450),	-- Ensemble: Righteous Lawbringer
 				i(271568),	-- Bloodwatch Outlaw's Headgear
 				i(271569),	-- Bloodwatch Outlaw's Tunic
 				i(271570),	-- Bloodwatch Outlaw's Buckle
@@ -1896,61 +712,23 @@ root(ROOTS.Unsorted, {
 				i(271583),	-- Duskwatch Outlaw's Cloak
 				i(271584),	-- Duskwatch Outlaw's Gloves
 				i(271585),	-- Ensemble: Duskwatch Outlaw
-				i(271586),	-- Badlands Lawbringer's Headgear
-				i(271587),	-- Badlands Lawbringer's Tunic
-				i(271588),	-- Badlands Lawbringer's Buckle
-				i(271589),	-- Badlands Lawbringer's Trousers
-				i(271590),	-- Badlands Lawbringer's Boots
-				i(271591),	-- Badlands Lawbringer's Epaulets
-				i(271592),	-- Badlands Lawbringer's Cloak
-				i(271593),	-- Badlands Lawbringer's Gloves
-				i(271594),	-- Ensemble: Badlands Lawbringer
-				i(271595),	-- Midnight Outlaw's Headgear
-				i(271596),	-- Midnight Outlaw's Tunic
-				i(271597),	-- Midnight Outlaw's Buckle
-				i(271598),	-- Midnight Outlaw's Trousers
-				i(271599),	-- Midnight Badland Brigands Boots
-				i(271600),	-- Midnight Outlaw's Epaulets
-				i(271601),	-- Midnight Outlaw's Cloak
-				i(271602),	-- Midnight Outlaw's Gloves
-				i(271603),	-- Ensemble: Midnight Outlaw
-				i(271682),	-- Midnight Outlaw's Hat
-				i(271683),	-- Midnight Outlaw's Bandana
-				i(271684),	-- Badlands Lawbringer's Hat
-				i(271685),	-- Badlands Lawbringer's Bandana
-				i(271686),	-- Righteous Lawbringer's Hat
-				i(271687),	-- Righteous Lawbringer's Bandana
 				i(271688),	-- Bloodwatch Outlaw's Hat
 				i(271689),	-- Bloodwatch Outlaw's Bandana
 				i(271690),	-- Duskwatch Outlaw's Hat
 				i(271691),	-- Duskwatch Outlaw's Bandana
 				i(273132),	-- Stylish Violet Top Hat
 				i(273133),	-- Stylish Crimson Top Hat
-				i(273151),	-- Slinger's Shot Pouch
-				i(273768),	-- Slinger's Fur-Lined Quiver
-				i(273769),	-- Ensemble: Slinger's Munitions
-				i(273858),	-- Badlands Lawbringer's Treads
-				i(273859),	-- Badlands Lawbringer's Britches
-				i(273860),	-- Badlands Lawbringer's Undercoat
 				i(273861),	-- Bloodwatch Outlaw's Britches
 				i(273862),	-- Bloodwatch Outlaw's Treads
 				i(273863),	-- Bloodwatch Outlaw's Undercoat
-				i(273864),	-- Righteous Lawbringer's Britches
-				i(273865),	-- Righteous Lawbringer's Treads
-				i(273866),	-- Righteous Lawbringer's Tunic
-				i(273867),	-- Midnight Outlaw's Britches
-				i(273868),	-- Midnight Badland Brigands Treads
-				i(273869),	-- Midnight Outlaw's Undercoat
 				i(273870),	-- Duskwatch Outlaw's Britches
 				i(273871),	-- Duskwatch Outlaw's Treads
 				i(273872),	-- Duskwatch Outlaw's Undercoat
-				i(274050),	-- Bandit's Midnight Highboot
 				i(274051),	-- Bandit's Azure Highboot
 				i(274052),	-- Bandit's Sepia Highboot
 				i(274053),	-- Bandit's Grassy Highboot
 				i(274055),	-- Bandit's Deep Highboot
 				i(274056),	-- Bandit's Camo Highboot
-				i(274057),	-- Bandit's Brick Highboot
 				i(274058),	-- Bandit's Lively Highboot
 				i(274059),	-- Bandit's Faded Highboot
 				i(274060),	-- Bandit's Carrot Highboot
@@ -1958,8 +736,6 @@ root(ROOTS.Unsorted, {
 				i(274062),	-- Bandit's Plum Highboot
 				i(274063),	-- Bandit's Crimson Highboot
 				i(274064),	-- Bandit's Violet Highboot
-				i(274065),	-- Bandit's Aquatic Highboot
-				i(274066),	-- Bandit's Snowy Highboot
 				i(274067),	-- Bandit's Sunny Highboot
 				i(274073),	-- Lively Extravaganza Rocketstaff
 				i(274074),	-- Suntouched Extravaganza Rocketstaff
@@ -1967,35 +743,24 @@ root(ROOTS.Unsorted, {
 				i(274081),	-- Suntouched Extravaganza Rocketmace
 				i(274086),	-- Lively Extravaganza Sparkwheel
 				i(274087),	-- Suntouched Extravaganza Sparkwheel
-				i(274403),	-- Badlands Lawbringer's Brand
-				i(274404),	-- Righteous Lawbringer's Brand
 				i(274405),	-- Duskwatch Outlaw's Brand
 				i(274406),	-- Bloodwatch Outlaw's Brand
-				i(274433),	-- Badlands Lawbringer's Knife
-				i(274434),	-- Righteous Lawbringer's Knife
 				i(274435),	-- Duskwatch Outlaw's Knife
 				i(274436),	-- Bloodwatch Outlaw's Knife
 				i(274542),	-- Bloodwatch Outlaw's Hand Cannon
-				i(274619),	-- Gunslinger's Midnight Lid
 				i(274621),	-- Gunslinger's Azure Lid
 				i(274622),	-- Gunslinger's Sepia Lid
 				i(274623),	-- Gunslinger's Grassy Lid
 				i(274625),	-- Gunslinger's Deep Lid
 				i(274626),	-- Gunslinger's Camo Lid
-				i(274627),	-- Gunslinger's Brick Lid
 				i(274628),	-- Gunslinger's Lively Lid
 				i(274629),	-- Gunslinger's Faded Lid
-				i(274630),	-- Gunslinger's Carrot Lid
 				i(274631),	-- Gunslinger's Rosy Lid
 				i(274632),	-- Gunslinger's Plum Lid
 				i(274633),	-- Gunslinger's Crimson Lid
 				i(274634),	-- Gunslinger's Violet Lid
-				i(274635),	-- Gunslinger's Aquatic Lid
-				i(274636),	-- Gunslinger's Snowy Lid
 				i(274637),	-- Gunslinger's Sunny Lid
 				i(274715),	-- Duskwatch Outlaw's Hand Cannon
-				i(274716),	-- Righteous Lawbringer's Hand Cannon
-				i(274717),	-- Badlands Lawbringer's Hand Cannon
 				i(275999),	-- Flowering Mantle
 				i(276291),	-- Forgotten Saber of the Ice Temple
 			}),
@@ -2012,20 +777,9 @@ root(ROOTS.Unsorted, {
 				i(272353),	-- Auspicious Verdant Basin
 				i(272354),	-- Auspicious Stone Lion
 			}),
-			n(FLIGHT_PATHS, {
-				fp(3270),	-- Steam Ravine
-				fp(3268),	-- The Devouring Ingress
-				fp(3267),	-- Umbral Base Camp
-				fp(3269),	-- Void Acropolis
-			}),
 			filter(MISC, {
-				-- Delve
-				i(275910),	-- Beacon of Hope
-				--
 				i(270273),	-- Viny Lasso
-				i(276346),	-- Fel-Singed Salvage
 				i(276347),	-- Cracked Legion Communicator
-				i(276348),	-- Marsh Wrangler's Vinewhip
 				i(276351),	-- Muckfaded Crystalline Figure
 				i(276352),	-- Scuffed Prayer Bangle
 				i(276354),	-- Frozen Fel Core
@@ -2042,7 +796,6 @@ root(ROOTS.Unsorted, {
 			}),
 			filter(MOUNTS, {
 				-- Trading Post
-				i(274681),	-- Badlands Buzzard
 				i(273650),	-- Green Rocket Mount [PH]
 				i(273652),	-- Pink Rocket Mount [PH]
 				-- NYI?
@@ -2050,45 +803,29 @@ root(ROOTS.Unsorted, {
 				mount(1294677),	-- [PH] Horse with Hat
 			}),
 			filter(QUEST_ITEMS, {
-				i(274580),	-- Primessence of Fel
 				i(274913),	-- Brazier Pieces
 				i(274924),	-- Spore-Infused Lungs
-				i(274581),	-- Primessence of Shadow
-				i(274582),	-- Primessence of Life
-				i(274583),	-- Primessence of Arcane
-				i(274584),	-- Primessence of Light
-				i(274585),	-- Primessence of Death
-				i(274620),	-- Singularian Cryocore
-				i(274640),	-- Arcfluxion Hydrospore
 				i(274783),	-- Fel Embers
 				i(274798),	-- Remote Detonator
-				i(275699),	-- Veraan's Soul Lattice Report
-				i(276255),	-- Forgotten Memorial Tribute
-				i(276276),	-- Mana Spore
-				i(277116),	-- Warmonger's Voidplate
-				i(276342),	-- Fragmented Soul Lattice
 			}),
 			filter(TOYS, {
 				i(264368),	-- ??
 			}),
+			i(276245),	-- Shadow Spirehawk
 		})),
 		expansion(EXPANSION.MID, patch(0,5), bubbleDownSelf({ ["timeline"] = { ADDED_12_0_5 } }, {
 			filter(COSMETIC, {
 				n(ARMOR, {
-					i(270295),	-- Crown of Aquatic Springflowers
 					i(270280),	-- Crown of Azure Springflowers
-					i(270287),	-- Crown of Brick Springflowers
 					i(270286),	-- Crown of Camo Springflowers
 					i(270290),	-- Crown of Carrot Springflowers
 					i(270293),	-- Crown of Crimson Springflowers
 					i(270285),	-- Crown of Deep Springflowers
 					i(270283),	-- Crown of Grassy Springflowers
 					i(270288),	-- Crown of Lively Springflowers
-					i(270279),	-- Crown of Midnight Springflowers
 					i(270292),	-- Crown of Plum Springflowers
 					i(270291),	-- Crown of Rosy Springflowers
 					i(270281),	-- Crown of Sepia Springflowers
-					i(270296),	-- Crown of Snowy Springflowers
 					i(270294),	-- Crown of Violet Springflowers
 				}),
 				n(SETS, {
@@ -2188,7 +925,6 @@ root(ROOTS.Unsorted, {
 				i(272893),	-- Icy Harness
 				i(259472),	-- Lost Revantusk Possessions
 				i(267381),	-- Official G.G.R. Rehydration Container
-				i(273013),	-- Void-Permeated Hide Scrap
 				i(267380),	-- Volatile Pink Brightbursts
 				i(260892),	-- "Arcane Ranger" Kit
 				i(262757),	-- "Greater Metamorph" Enhancement
@@ -2207,11 +943,7 @@ root(ROOTS.Unsorted, {
 				i(259474),	-- Lost Amani Toy
 				i(259475),	-- Misplaced Loa Statue
 			}),
-			filter(TOYS, {
-				i(267472),	-- Gnomatic Projector (TOY!)
-			}),
 			i(274427),	-- Sha Loot Box
-			i(274578),	-- Offering of Unalloyed Abundance
 		})),
 		expansion(EXPANSION.MID, patch(0,1), bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1 } }, {
 			n(WEAPONS, {
@@ -2943,8 +1675,6 @@ root(ROOTS.Unsorted, {
 				i(159898),	-- Sour Stormberries
 				i(159899),	-- Cinnamon Raisin Pretzel
 				i(159900),	-- Caraway Rye Loaf
-				i(159919),	-- Salted Tideway Cod
-				i(159920),	-- Fermented Greatshark
 				i(160483),	-- Steamed Clams
 				i(160518),	-- Great Turtle Soup
 				i(160554),	-- Stormsong Sourdough
@@ -2958,8 +1688,6 @@ root(ROOTS.Unsorted, {
 				i(161346),	-- Saurid Sticks
 				i(161347),	-- Riverbeast Stew
 				i(161348),	-- Carnivorous Chili Poppers \\ Carniverous Chili Poppers
-				i(161373),	-- Seared Simmerfin
-				i(161383),	-- Jancunda Nigiri
 				i(161384),	-- Farraki Fritters
 				i(162117),	-- Marie's Famous Cookies
 				i(159750),	-- Tangy Haw'liday Cider
@@ -2969,7 +1697,6 @@ root(ROOTS.Unsorted, {
 				i(162555),	-- Zocalo Cheddar
 				i(162556),	-- Zeb'ahari Kiwi \\ Zeb'Ahri Kiwi
 				i(162557),	-- Salted Frog Legs
-				i(162559),	-- Hearty Swamp Gumbo
 				i(162561),	-- Glowfly Wedge Salad
 				i(162562),	-- Crunchy Direbat Skewer
 				i(162563),	-- Succulent Dunemelon
@@ -2991,9 +1718,6 @@ root(ROOTS.Unsorted, {
 				i(163058),	-- Jellied Deepsea Eel
 				i(163060),	-- Fried Sweetbread
 				i(163061),	-- Roasted Lasher Seeds
-				i(163075),	-- Stormshore Haddock
-				i(163076),	-- Murkfathom Herring
-				i(163077),	-- Glacier Bay Halibut
 				i(163081),	-- Spicy Barbecued Buzzard Wing
 				i(163083),	-- Col. Tenders Spiced Chicken
 				i(163100),	-- Kul Tiran Meatballs
@@ -3169,9 +1893,7 @@ root(ROOTS.Unsorted, {
 				i(163086),	-- Crimsonwood Dentures
 				i(163088),	-- Perfectly Ordinary Broomstick
 				i(163090),	-- Cured Billow-Weed
-				i(163093),	-- Witch's Ritual Chalk
 				i(163095),	-- Golden Troll Berserker \\ Finely Crafted Tin Soldier
-				i(163097),	-- Carved Rabbit Effigy
 				i(163111),	-- Blackstone Cat Statue
 				i(163112),	-- Imp's Tongue Charm
 				i(163113),	-- Corroded Copper Kettle \\ Copper Tea Kettle
@@ -3225,7 +1947,6 @@ root(ROOTS.Unsorted, {
 				i(163773),	-- Dark Mirror
 				i(163774),	-- Blackrock Plating
 				i(163830),	-- Gale Rider
-				i(163929),	-- Aether of the Abyss
 				i(164253),	-- Steel Strongbox
 				i(164254),	-- Steel Strongbox
 				i(164263),	-- Steel Strongbox
@@ -3253,7 +1974,6 @@ root(ROOTS.Unsorted, {
 				i(161017),	-- Secott's Storm Silver Bucket
 				i(161084),	-- Recovered Stormsong Produce
 				i(161324),	-- Zeth'jir Tidespear
-				i(161345),	-- Abhorrent Essence of the Abyss
 				i(161878),	-- Tiny Coin Purse
 			}),
 			filter(MISC, {	-- Grey
@@ -3358,12 +2078,9 @@ root(ROOTS.Unsorted, {
 				i(158845),	-- PH Flavor - Unused \\ PH Flavor - Bear
 				i(158846),	-- PH Flavor - Unused \\ PH Flavor - Basilisk
 				i(158847),	-- PH Flavor - Unused \\ PH Flavor - Bog Plant
-				i(158850),	-- Vibrant Plumage \\ PH Flavor - Pig
 				i(158852),	-- PH Flavor - Unused \\ PH Flavor - Fox
 				i(158854),	-- PH Flavor - Unused \\ PH Flavor - Goat
 				i(158727),	-- Decayed Equipment
-				i(161209),	-- Coven Dream Catcher
-				i(161210),	-- Homemade Child's Doll
 				i(161212),	-- Wavespeaker's Star Chart
 				i(158797),	-- Jar of Truffles
 				i(163847),	-- Silver Monkey Torso
@@ -3455,7 +2172,6 @@ root(ROOTS.Unsorted, {
 				i(162386),	-- Design: Honorable Combatant's Staff of Intuition
 				i(162387),	-- Design: Honorable Combatant's Staff of Intuition
 				i(163783),	-- Mount Mugamba Spring Water \\ Mount Mugaba Spring Water
-				i(163784),	-- Seafoam Coconut Water
 				i(163785),	-- Canteen of Rivermarsh Rainwater
 				i(163786),	-- Filtered Gloomwater
 				i(163834),	-- Forgotten Techniques of Kul Tiras
@@ -3774,7 +2490,6 @@ root(ROOTS.Unsorted, {
 				i(163386),	-- Bloodied Sentinel's Glaive
 				i(163562),	-- Blightcaller's Easy Death
 				i(163647),	-- Azerite Shard
-				i(163856),	-- Ancient Pilgrimage Scrollcasing
 				i(151611),	-- Dreadtick Mandible
 				i(153571),	-- Poisoned Blow Dart
 				i(155676),	-- Ancient Journal
@@ -3906,16 +2621,6 @@ root(ROOTS.Unsorted, {
 			i(166253),	-- Mana Crystal
 			i(166281),	-- Page of Dark Magic
 			i(166382),	-- Add Keystone Affix: Infested
-			i(166383),	-- Set Keystone Map: Atal'dazar
-			i(166390),	-- Set Keystone Map: Freehold
-			i(166391),	-- Set Keystone Map: Kings' Rest
-			i(166392),	-- Set Keystone Map: Shrine of the Storm
-			i(166393),	-- Set Keystone Map: Siege of Boralus
-			i(166394),	-- Set Keystone Map: Temple of Sethraliss
-			i(166395),	-- Set Keystone Map: The MOTHERLODE!!
-			i(166396),	-- Set Keystone Map: The Underrot
-			i(166397),	-- Set Keystone Map: Tol Dagor
-			i(166398),	-- Set Keystone Map: Waycrest Manor
 			i(166399),	-- Add Keystone Affix: Infested
 			i(166421),	-- PH Alliance Warfront Skullcleaver
 			i(166423),	-- PH Horde Warfront Claymore
@@ -4059,7 +2764,6 @@ root(ROOTS.Unsorted, {
 			i(167674),	-- Stone Statue
 			i(167675),	-- Stone Statue
 			i(167696),	-- Build-a-Computer Kit
-			i(167739),	-- Fathom Ray Roe
 			i(167746),	-- Mist Blossom
 			i(168021),	-- Nullifier Transport Relay
 			i(168187),	-- Highborne Relic
@@ -4087,7 +2791,6 @@ root(ROOTS.Unsorted, {
 			i(168655),	-- Greater Mystical Flask
 			i(168662),	-- Maroon Pigment
 			i(168755),	-- Unpublished Research
-			i(168789),	-- Perpetual Motion Device
 			i(168797),	-- Stack of Undeliverable Mail
 			i(168812),	-- Air Freshner
 			i(168815),	-- Kelpberry Cask
@@ -4163,10 +2866,8 @@ root(ROOTS.Unsorted, {
 			i(169946),	-- Saltwater Taffy
 			i(169947),	-- Candied Zin-Azshari Sea Grapes
 			i(169948),	-- Filtered Zanj'ir Water
-			i(169949),	-- Bioluminescent Ocean Punch
 			i(169950),	-- Shattered Timequartz
 			i(169951),	-- Broken Hourglass
-			i(169952),	-- Sea Salt Java
 			i(169953),	-- Bent Timedial
 			i(169954),	-- Steeped Kelp Tea
 			i(169955),	-- Stopped Watch
@@ -4183,7 +2884,6 @@ root(ROOTS.Unsorted, {
 			i(169987),	-- Inert Dragonscale
 			i(170000),	-- Battered Bastion
 			i(170002),	-- Split Differential
-			i(170003),	-- Grinding Gearbox
 			i(170004),	-- Cracked Turbo
 			i(170009),	-- Fading Memento
 			i(170010),	-- Crumbling Memento

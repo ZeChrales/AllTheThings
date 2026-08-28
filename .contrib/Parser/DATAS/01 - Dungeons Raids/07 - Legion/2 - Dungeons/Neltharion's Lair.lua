@@ -2,7 +2,7 @@
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 
-root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
+root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { ADDED_7_0_3_LAUNCH } }, {
 	inst(767, {	-- Neltharion's Lair
 		["mapID"] = 731,
 		["coord"] = { 49.5, 68.5, HIGHMOUNTAIN },
@@ -52,12 +52,12 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 				q(42454, {	-- The Hammer of Khaz'goroth
 					["sourceQuest"] = 39781,	-- Neltharion's Lair: Death to the Underking
 					["provider"] = { "o", 250548 },	-- Hammer of Khaz'goroth
+					["qi"] = 137649,	-- The Hammer of Khaz'goroth (QI!)
 					["groups"] = {
-						i(137649),	-- The Hammer of Khaz'goroth (QI!)
-						i(141007),	-- Earthguard Handwraps
-						i(141008),	-- Earthguard Grips
-						i(141009),	-- Earthguard Gloves
 						i(141010),	-- Earthguard Gauntlets
+						i(141009),	-- Earthguard Gloves
+						i(141008),	-- Earthguard Grips
+						i(141007),	-- Earthguard Handwraps
 					},
 				}),
 			}),
@@ -315,4 +315,4 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 			}),
 		},
 	}),
-}));
+})));

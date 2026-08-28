@@ -80,11 +80,9 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, {
 				}),
 				q(63979, {	-- Things Best Kept Dark
 					["sourceQuests"] = { 63976 },	-- The Al'ley Cat of Oribos
-					["provider"] = { "n", 178908 },	-- Al'dalil
+					["qg"] = 178908,	-- Al'dalil
 					["coord"] = { 57.1, 31.1, 1672 },	-- Broker's Den
-					["groups"] = {
-						i(186182),	-- Cartel So Shipping Manifest (QI!)
-					},
+					["qi"] = 186182,	-- Cartel So Shipping Manifest (QI!)
 				}),
 				q(63980, {	-- Seeking Smugglers
 					["sourceQuests"] = {
@@ -263,7 +261,7 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, {
 							i(185814),	-- Auctioneer's Counting Bracers
 							i(185777),	-- Fang of Alcruux
 							i(185794, {	-- Gavel Pounders
-								["timeline"] = { ADDED_9_1_0, REMOVED_11_2_0_SEASONSTART },
+								["timeline"] = { ADDED_9_1_0 },
 							}),
 							i(185821),	-- Gluttonous Rondel
 							i(246282, {	-- Order Bashers
@@ -273,7 +271,7 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, {
 								["timeline"] = { ADDED_11_2_0_SEASONSTART },
 							}),
 							i(185840, {	-- Seal of the Panoply
-								["timeline"] = { ADDED_9_1_0, REMOVED_11_2_0_SEASONSTART },
+								["timeline"] = { ADDED_9_1_0 },
 							}),
 							i(185809),	-- Venza's Powderbelt
 						},
@@ -405,7 +403,7 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, {
 							i(185796),	-- Dragonbane Diadem
 							i(185823),	-- Fatebreaker, Destroyer of Futures
 							i(185776, {	-- Hooktail's Commanding Gaze
-								["timeline"] = { ADDED_9_1_0, REMOVED_11_2_0_SEASONSTART },
+								["timeline"] = { ADDED_9_1_0 },
 							}),
 							i(185797),	-- Rakishly Tipped Tricorne
 							i(185841),	-- Timetwister Tulwar

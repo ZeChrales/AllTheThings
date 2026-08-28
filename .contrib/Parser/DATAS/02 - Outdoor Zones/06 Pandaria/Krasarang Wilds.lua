@@ -408,6 +408,9 @@ root(ROOTS.Zones, {
 						["lvl"] = 81,
 					})),
 					q(30376, {	-- Hope Springs Eternal
+						-- #if AFTER TWW
+						["description"] = "This quest is reportedly bugged and is not always offered. However, turning in either version of 'Warn Stoneplow' also completes this quest.",
+						-- #endif
 						["sourceQuests"] = {
 							30174,	-- For Family
 							30273,	-- In the House of the Red Crane
@@ -1115,7 +1118,7 @@ root(ROOTS.Zones, {
 						},
 					}),
 					n(50787, {	-- Arness the Scale
-						["coord"] = { 58.7, 43.8, KRASARANG_WILDS },	-- manually verified October 19, 2020
+						["coord"] = { 56.1, 47.0, KRASARANG_WILDS },	-- manually verified July 26, 2026
 						["groups"] = {
 							i(90723),	-- Arnness's Scaled Leggings
 						},

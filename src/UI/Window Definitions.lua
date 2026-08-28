@@ -9,6 +9,7 @@ local CreateFrame,GetCursorPosition,IsModifierKeyDown
 	= CreateFrame,GetCursorPosition,IsModifierKeyDown;
 local C_AddOns_GetAddOnMetadata
 	= C_AddOns.GetAddOnMetadata;
+local wipearray = app.wipearray
 
 ---@class ATTGameTooltip: GameTooltip
 local GameTooltip = GameTooltip;
@@ -506,6 +507,11 @@ local function ForceExpandGroupsRecursively(group, expanded)
 		ForceExpandGroupsRecursively(g[i], expanded);
 	end
 end
+local IgnoreSavedExpansionTypes = {
+	Instance = true,
+	Difficulty = true,
+	DifficultyGroup = true,
+}
 -- Only considers the default rules for ignoring expansion and does not check any skip conditions
 local function PassivelyExpandGroupsRecursively(group, expanded)
 	local g = group.g
@@ -513,8 +519,10 @@ local function PassivelyExpandGroupsRecursively(group, expanded)
 	if g and
 		-- incomplete things actually exist below itself
 		((group.total or 0) > (group.progress or 0)) and
+		-- not something Filled
+		not (group.filledReagent or group.filledCost or group.filledUpgrade) and
 		-- account/debug mode is active or it is not a 'saved' thing for this character
-		(app.MODE_DEBUG_OR_ACCOUNT or not group.saved)
+		(app.MODE_DEBUG_OR_ACCOUNT or not group.saved or IgnoreSavedExpansionTypes[group.__type])
 	then
 		group.expanded = expanded
 		if not expanded then return end
@@ -529,8 +537,10 @@ local function ConditionallyExpandGroupsRecursively(group, expanded)
 	if g and
 		-- incomplete things actually exist below itself
 		((group.total or 0) > (group.progress or 0)) and
+		-- not something Filled
+		not (group.filledReagent or group.filledCost or group.filledUpgrade) and
 		-- account/debug mode is active or it is not a 'saved' thing for this character
-		(app.MODE_DEBUG_OR_ACCOUNT or not group.saved)
+		(app.MODE_DEBUG_OR_ACCOUNT or not group.saved or IgnoreSavedExpansionTypes[group.__type])
 	then
 		-- check the skip condition for this group
 		local doSkipType = ShouldSkipAutoExpandForKey[group.key or "KEYLESS"](group)
@@ -810,99 +820,6 @@ local function RedrawRowTooltip()
 			OnLeave(row)
 			OnEnter(row)
 		end
-	end
-end
-local function UpdateVisibleRowData(self)
-	-- app.PrintDebug(app.Modules.Color.Colorize("Refresh:", app.Colors.TooltipDescription),self.Suffix)
-	-- If there is no raw data, then return immediately.
-	local rowData = self.rowData;
-	if not rowData then return; end
-	local height = self:GetHeight();
-	if height > 80 then
-		self.ScrollBar:Show();
-		self.CloseButton:Show();
-	elseif height > 40 then
-		self.ScrollBar:Hide();
-		self.CloseButton:Show();
-	else
-		self.ScrollBar:Hide();
-		self.CloseButton:Hide();
-	end
-
-	-- Make it so that if you scroll all the way down, you have the ability to see all of the text every time.
-	local totalRowCount = #rowData;
-	if totalRowCount > 0 then
-		local container = self.Container;
-		local rows = container.rows;
-		local firstRowHeight = rows[1]:GetHeight()
-		local rowHeight = rows[2]:GetHeight()
-		local maxRows = math.floor((container:GetHeight() - firstRowHeight) / rowHeight) + 1
-		local rowCount = math.min(maxRows, #rowData)
-		self:SetMinMaxValues(rowCount, totalRowCount)
-		self.rowCount = rowCount
-
-		-- Should this window attempt to scroll to specific data?
-		if self.ScrollInfo then
-			local field, value = self.ScrollInfo[1], self.ScrollInfo[2]
-			-- app.PrintDebug("ScrollInfo",field,value)
-			wipe(self.HightlightDatas)
-			local foundAt, ref
-			for i=2,totalRowCount do
-				ref = rowData[i]
-				if ref and ref[field] == value then
-					if not foundAt then foundAt = i end
-					self.HightlightDatas[ref] = true
-				end
-			end
-			self.ScrollInfo = nil
-
-			if foundAt then
-				-- app.PrintDebug("Index",foundAt)
-				-- Actually do the scroll if it was determined above
-				-- Estimate the expected scroll position based on row heights in the current window
-				-- app.PrintDebug("Possible Rows:",maxRows)
-				local scrollIndex = math.max(1, math.min(foundAt - (maxRows / 2), totalRowCount - maxRows))
-				local currentScroll = self.ScrollBar.CurrentIndex
-				-- app.PrintDebug("Scrolling to:",scrollIndex,"from",currentScroll)
-				if currentScroll ~= scrollIndex then
-					self.ScrollBar:SetValue(scrollIndex)
-					return
-				end
-			end
-		end
-
-		-- Redraw the data into the rows
-		self:Redraw()
-
-		-- Apply the Indent adjustment if there are any rows to indent
-		if rowCount > 1 then
-			local minIndent = rows[2].indent
-			for i=3,rowCount do
-				local indent = rows[i].indent
-				if indent and minIndent > indent then
-					minIndent = indent
-				end
-			end
-
-			local shift = math.floor(rowHeight / 2 + 0.1)
-			local row
-			local indentOffset = AdjustRowIndents and (minIndent - 2) or 0
-			for i=2,rowCount do
-				row = rows[i];
-				if row.indent then
-					row.Texture:SetPoint("LEFT", row, "LEFT", (row.indent - indentOffset) * shift, 0);
-				end
-			end
-		end
-
-		-- Hide the extra rows if any exist in the row container
-		for i=math.max(2, rowCount + 1),#rows do
-			-- Ignoring cleaning rows beyond already cleaned ones seems fine as long as people don't be weird
-			if SetRowData(self, rows[i], nil) then break end
-		end
-
-		-- app.PrintDebugPrior("UpdateVisibleRowDataComplete:",self.Suffix,rowCount,"/",#rows)
-		RedrawRowTooltip()
 	end
 end
 local function StopMovingOrSizing(self)
@@ -1315,66 +1232,12 @@ local function RowOnEnter(self)
 		tooltipInfo[#tooltipInfo + 1] = { left = reference.text or RETRIEVING_DATA }
 	end
 
-	local title = reference.title;
-	if title then
-		local left, right = app.DESCRIPTION_SEPARATOR:split(title);
-		if right then
-			tooltipInfo[#tooltipInfo + 1] = {
-				left = left,
-				right = right,
-				r = 1, g = 1, b = 1
-			};
-		else
-			tooltipInfo[#tooltipInfo + 1] = {
-				left = title,
-				r = 1, g = 1, b = 1
-			};
-		end
-	end
-
 	-- Process all Information Types
 	if tooltip.ATT_AttachComplete == nil then
-		-- an item used for a faction which is repeatable
-		if reference.itemID and reference.factionID and reference.repeatable then
-			tooltipInfo[#tooltipInfo + 1] = {
-				left = L.ITEM_GIVES_REP .. (app.WOWAPI.GetFactionName(reference.factionID) or ("Faction #" .. reference.factionID)) .. "'",
-				color = app.Colors.TooltipDescription,
-				wrap = true,
-			};
-		end
 		app.ProcessInformationTypes(tooltipInfo, reference);
 	end
 
 	-- Further conditional texts that can be displayed
-	if reference.timeRemaining then
-		tooltipInfo[#tooltipInfo + 1] = {
-			left = app.GetColoredTimeRemaining(reference.timeRemaining),
-		}
-	end
-
-	-- Show info about if this Thing cannot be collected due to a custom collectibility
-	-- restriction on the Thing which this character does not meet
-	local customCollect = reference.customCollect
-	if customCollect then
-		local customCollectEx, c
-		local requires = L.REQUIRES;
-		for i=1,#customCollect do
-			c = customCollect[i]
-			customCollectEx = L.CUSTOM_COLLECTS_REASONS[c];
-			local icon_color_str = customCollectEx.icon.." |c"..customCollectEx.color..(customCollectEx.text or "[MISSING_LOCALE_KEY]");
-			if not app.CurrentCharacter.CustomCollects[c] then
-				tooltipInfo[#tooltipInfo + 1] = {
-					left = "|cffc20000" .. requires .. ":|r " .. icon_color_str,
-					right = customCollectEx.desc or "",
-				}
-			else
-				tooltipInfo[#tooltipInfo + 1] = {
-					left = requires .. ": " .. icon_color_str,
-					right = customCollectEx.desc or "",
-				}
-			end
-		end
-	end
 
 	if app.Settings:GetTooltipSetting("Show:TooltipHelp") then
 		if reference.g then
@@ -1967,86 +1830,6 @@ local function ProcessGroup(data, object)
 		ProcessGroup(data, g[i]);
 	end
 end
-local function UpdateWindow(self, force)
-	local data = self.data;
-	if not data then return; end
-	local visible = self:IsShown();
-	force = force or self.HasPendingUpdate;
-	-- app.PrintDebug(app.Modules.Color.Colorize("Update:", app.DefaultColors.ATT),self.Suffix,
-	-- 	force and "FORCE" or "SOFT",
-	-- 	visible and "VISIBLE" or "HIDDEN",
-	-- 	self.HasPendingUpdate and "PENDING" or "")
-	if force or visible then
-		local rowData = self.rowData
-		if not rowData then
-			rowData = {};
-			self.rowData = rowData
-		else
-			wipe(rowData)
-		end
-
-		local didUpdate
-		data.expanded = true;
-		if not self.doesOwnUpdate and force then
-			self:ToggleExtraFilters(true)
-			-- app.PrintDebug(app.Modules.Color.Colorize("TLUG", app.Colors.Time),self.Suffix)
-			app.TopLevelUpdateGroup(data);
-			self.HasPendingUpdate = nil;
-			-- app.PrintDebugPrior("Done")
-			self:ToggleExtraFilters()
-			didUpdate = true
-		end
-
-		-- Should the groups in this window be expanded prior to processing the rows for display
-		if self.ExpandInfo then
-			-- app.PrintDebug("ExpandInfo",self.Suffix,self.ExpandInfo.Expand,self.ExpandInfo.Force)
-			ExpandGroupsRecursively(data, self.ExpandInfo.Expand, self.ExpandInfo.Force);
-			self.ExpandInfo = nil;
-		end
-
-		-- cache a couple heavily referenced functions within ProcessGroup
-		VisibilityFilter, SortGroup = self.VisibilityFilter or app.VisibilityFilter, app.SortGroup
-		ProcessGroup(rowData, data);
-		-- app.PrintDebug("Update:RowData",#rowData)
-
-		-- Does this user have everything?
-		if data.total then
-			if data.total <= data.progress then
-				if #rowData < 1 then
-					data.back = 1;
-					rowData[#rowData + 1] = data;
-				end
-				if self.missingData then
-					-- an update on the same settings which moves the window to completion can play the sound
-					if visible and self.AllowCompleteSound and self._SettingsRefresh == app._SettingsRefresh then
-						app.Audio:PlayCompleteSound();
-					end
-					self.missingData = nil;
-				end
-				-- only add this info row if there is actually nothing visible in the list
-				-- always a header row
-				-- print("any data",#self.Container,#rowData,#data)
-				if #rowData < 2 and not app.ThingKeys[data.key] then
-					rowData[#rowData + 1] = app.CreateRawText(L.NO_ENTRIES, {
-						OnClick = app.UI.OnClick.IgnoreRightClick,
-						preview = app.asset("Discord_2_128"),
-						description = L.NO_ENTRIES_DESC,
-					});
-				end
-			else
-				self._SettingsRefresh = app._SettingsRefresh
-				self.missingData = true;
-			end
-		else
-			self.missingData = nil;
-		end
-
-		-- app.PrintDebugPrior("Update:Done")
-		app.HandleEvent("OnWindowUpdated", self, self.Suffix, didUpdate)
-		return true;
-	end
-	-- app.PrintDebugPrior("Update:None")
-end
 local function ApplyAlphaForWindow(self)
 	if self:IsMouseOver() then
 		self:SetAlpha(1.0);
@@ -2055,7 +1838,7 @@ local function ApplyAlphaForWindow(self)
 	end
 end
 local function RefreshAndCallback(self, ...)
-	UpdateVisibleRowData(self, ...);
+	self:OriginalDefaultRefresh(...)
 	if self.RegisteredRefreshCallbacks then
 		local TLUG = self.data.TLUG;
 		if TLUG ~= self.__lastTLUG then
@@ -2176,7 +1959,179 @@ local FieldDefaults = {
 	AssignChildren = function(self)
 		app.AssignChildren(self.data);
 	end,
-	DefaultUpdate = UpdateWindow,
+	DefaultUpdate = function(self, force)
+		local data = self.data;
+		if not data then return; end
+		local visible = self:IsShown();
+		force = force or self.HasPendingUpdate;
+		-- app.PrintDebug(app.Modules.Color.Colorize("Update:", app.DefaultColors.ATT),self.Suffix,
+		-- 	force and "FORCE" or "SOFT",
+		-- 	visible and "VISIBLE" or "HIDDEN",
+		-- 	self.HasPendingUpdate and "PENDING" or "")
+		if force or visible then
+			local rowData = self.rowData
+			if not rowData then
+				rowData = {};
+				self.rowData = rowData
+			else
+				wipearray(rowData)
+			end
+
+			local didUpdate
+			data.expanded = true;
+			if not self.doesOwnUpdate and force then
+				self:ToggleExtraFilters(true)
+				-- app.PrintDebug(app.Modules.Color.Colorize("TLUG", app.Colors.Time),self.Suffix)
+				app.TopLevelUpdateGroup(data);
+				self.HasPendingUpdate = nil;
+				-- app.PrintDebugPrior("Done")
+				self:ToggleExtraFilters()
+				didUpdate = true
+			end
+
+			-- Should the groups in this window be expanded prior to processing the rows for display
+			if self.ExpandInfo then
+				-- app.PrintDebug("ExpandInfo",self.Suffix,self.ExpandInfo.Expand,self.ExpandInfo.Force)
+				ExpandGroupsRecursively(data, self.ExpandInfo.Expand, self.ExpandInfo.Force);
+				self.ExpandInfo = nil;
+			end
+
+			-- cache a couple heavily referenced functions within ProcessGroup
+			VisibilityFilter, SortGroup = self.VisibilityFilter or app.VisibilityFilter, app.SortGroup
+			ProcessGroup(rowData, data);
+			-- app.PrintDebug("Update:RowData",#rowData)
+
+			-- Does this user have everything?
+			if data.total then
+				if data.total <= data.progress then
+					if #rowData < 1 then
+						data.back = 1;
+						rowData[#rowData + 1] = data;
+					end
+					if self.missingData then
+						-- an update on the same settings which moves the window to completion can play the sound
+						if visible and self.AllowCompleteSound and self._SettingsRefresh == app._SettingsRefresh then
+							app.Audio:PlayCompleteSound();
+						end
+						self.missingData = nil;
+					end
+					-- only add this info row if there is actually nothing visible in the list
+					-- always a header row
+					-- print("any data",#self.Container,#rowData,#data)
+					if #rowData < 2 and not app.ThingKeys[data.key] then
+						rowData[#rowData + 1] = app.CreateRawText(L.NO_ENTRIES, {
+							OnClick = app.UI.OnClick.IgnoreRightClick,
+							preview = app.asset("Discord_2_128"),
+							description = L.NO_ENTRIES_DESC,
+						});
+					end
+				else
+					self._SettingsRefresh = app._SettingsRefresh
+					self.missingData = true;
+				end
+			else
+				self.missingData = nil;
+			end
+
+			-- app.PrintDebugPrior("Update:Done")
+			app.HandleEvent("OnWindowUpdated", self, self.Suffix, didUpdate)
+			return true;
+		end
+		-- app.PrintDebugPrior("Update:None")
+	end,
+	DefaultRefresh = function(self)
+		-- app.PrintDebug(app.Modules.Color.Colorize("Refresh:", app.Colors.TooltipDescription),self.Suffix)
+		-- If there is no raw data, then return immediately.
+		local rowData = self.rowData;
+		if not rowData then return; end
+		local height = self:GetHeight();
+		if height > 80 then
+			self.ScrollBar:Show();
+			self.CloseButton:Show();
+		elseif height > 40 then
+			self.ScrollBar:Hide();
+			self.CloseButton:Show();
+		else
+			self.ScrollBar:Hide();
+			self.CloseButton:Hide();
+		end
+
+		-- Make it so that if you scroll all the way down, you have the ability to see all of the text every time.
+		local totalRowCount = #rowData;
+		if totalRowCount > 0 then
+			local container = self.Container;
+			local rows = container.rows;
+			local firstRowHeight = rows[1]:GetHeight()
+			local rowHeight = rows[2]:GetHeight()
+			local maxRows = math.floor((container:GetHeight() - firstRowHeight) / rowHeight) + 1
+			local rowCount = math.min(maxRows, #rowData)
+			self:SetMinMaxValues(rowCount, totalRowCount)
+			self.rowCount = rowCount
+
+			-- Should this window attempt to scroll to specific data?
+			if self.ScrollInfo then
+				local field, value = self.ScrollInfo[1], self.ScrollInfo[2]
+				-- app.PrintDebug("ScrollInfo",field,value)
+				wipe(self.HightlightDatas)
+				local foundAt, ref
+				for i=2,totalRowCount do
+					ref = rowData[i]
+					if ref and ref[field] == value then
+						if not foundAt then foundAt = i end
+						self.HightlightDatas[ref] = true
+					end
+				end
+				self.ScrollInfo = nil
+
+				if foundAt then
+					-- app.PrintDebug("Index",foundAt)
+					-- Actually do the scroll if it was determined above
+					-- Estimate the expected scroll position based on row heights in the current window
+					-- app.PrintDebug("Possible Rows:",maxRows)
+					local scrollIndex = math.max(1, math.min(foundAt - (maxRows / 2), totalRowCount - maxRows))
+					local currentScroll = self.ScrollBar.CurrentIndex
+					-- app.PrintDebug("Scrolling to:",scrollIndex,"from",currentScroll)
+					if currentScroll ~= scrollIndex then
+						self.ScrollBar:SetValue(scrollIndex)
+						return
+					end
+				end
+			end
+
+			-- Redraw the data into the rows
+			self:Redraw()
+
+			-- Apply the Indent adjustment if there are any rows to indent
+			if rowCount > 1 then
+				local minIndent = rows[2].indent
+				for i=3,rowCount do
+					local indent = rows[i].indent
+					if indent and minIndent > indent then
+						minIndent = indent
+					end
+				end
+
+				local shift = math.floor(rowHeight / 2 + 0.1)
+				local row
+				local indentOffset = AdjustRowIndents and (minIndent - 2) or 0
+				for i=2,rowCount do
+					row = rows[i];
+					if row.indent then
+						row.Texture:SetPoint("LEFT", row, "LEFT", (row.indent - indentOffset) * shift, 0);
+					end
+				end
+			end
+
+			-- Hide the extra rows if any exist in the row container
+			for i=math.max(2, rowCount + 1),#rows do
+				-- Ignoring cleaning rows beyond already cleaned ones seems fine as long as people don't be weird
+				if SetRowData(self, rows[i], nil) then break end
+			end
+
+			-- app.PrintDebugPrior("UpdateVisibleRowDataComplete:",self.Suffix,rowCount,"/",#rows)
+			RedrawRowTooltip()
+		end
+	end,
 	DefaultRedraw = function(self)
 		-- app.PrintDebug(app.Modules.Color.Colorize("Redraw:", app.DefaultColors.TooltipLore),self.Suffix,
 		-- 	self.rowData and #self.rowData,
@@ -2220,9 +2175,11 @@ local FieldDefaults = {
 	end,
 
 	-- Refresh Callbacks
-	DefaultRefresh = UpdateVisibleRowData,
 	RegisterRefreshCallback = function(self, ...)
 		-- Once a window registers for refresh callbacks, then we inject the functionality to replace the Default Refresh.
+		if not self.OriginalDefaultRefresh then
+			self.OriginalDefaultRefresh = self.DefaultRefresh
+		end
 		self.DefaultRefresh = RefreshAndCallback;
 		self.RegisterRefreshCallback = RegisterRefreshCallback;
 		self:RegisterRefreshCallback(...);
@@ -2263,7 +2220,7 @@ local function ShowPrecallShowWindows()
 		-- app.PrintDebug("Precall Show",k)
 		app.Windows[k]:Show()
 	end
-	app.FunctionRunner.Run(app.RemoveEventHandler, ShowPrecallShowWindows)
+	app.RemoveEventHandler(ShowPrecallShowWindows)
 end
 app.AddEventHandler("OnRefreshCollectionsDone", ShowPrecallShowWindows)
 local function SetupCommandsForDefinition(definition)
@@ -2655,32 +2612,6 @@ local function BuildWindow(suffix)
 		window:DefaultRedraw();
 	end
 
-	-- Delayed call starts two nested coroutines so that calls can chain, if necessary.
-	-- The delay is refreshed to its full duration if multiple calls are made in the same frame.
-	local delays = {};
-	window.DelayedCall = function(self, method, delay, force)
-		delays[method] = delay or 60;
-		window:StartATTCoroutine("DelayedCall::" .. method, function()
-			while delays[method] > 0 or InCombatLockdown() do
-				delays[method] = delays[method] - 1;
-				coroutine.yield();
-			end
-			window:StartATTCoroutine("DelayedCall::" .. method .. "PT2", function()
-				coroutine.yield();
-				window[method](window, force);
-			end);
-		end);
-	end
-	function window:DelayedRebuild()
-		self:DelayedCall("Rebuild", 0);
-	end
-	function window:DelayedRefresh()
-		self:DelayedCall("Refresh", 0);
-	end
-	function window:DelayedUpdate(force)
-		self:DelayedCall("Update", 10, force);
-	end
-
 	-- The Close Button.
 	local closeButton = CreateFrame("Button", nil, window, "UIPanelCloseButton");
 	closeButton:SetScript("OnClick", OnCloseButtonPressed);
@@ -2731,6 +2662,31 @@ local function BuildWindow(suffix)
 	container:Show();
 
 	if not definition.IgnoreQuestUpdates and app.IsClassic then
+		-- Delayed call starts two nested coroutines so that calls can chain, if necessary.
+		-- The delay is refreshed to its full duration if multiple calls are made in the same frame.
+		local delays = {};
+		window.DelayedCall = function(self, method, delay, force)
+			delays[method] = delay or 60;
+			window:StartATTCoroutine("DelayedCall::" .. method, function()
+				while delays[method] > 0 or InCombatLockdown() do
+					delays[method] = delays[method] - 1;
+					coroutine.yield();
+				end
+				window:StartATTCoroutine("DelayedCall::" .. method .. "PT2", function()
+					coroutine.yield();
+					window[method](window, force);
+				end);
+			end);
+		end
+		function window:DelayedRebuild()
+			self:DelayedCall("Rebuild", 0);
+		end
+		function window:DelayedRefresh()
+			self:DelayedCall("Refresh", 0);
+		end
+		function window:DelayedUpdate(force)
+			self:DelayedCall("Update", 10, force);
+		end
 		local delayedRefresh = function()
 			window:DelayedRefresh();
 		end;
@@ -2740,16 +2696,11 @@ local function BuildWindow(suffix)
 		window:RegisterEvent("QUEST_WATCH_UPDATE");
 		window:RegisterEvent("QUEST_ITEM_UPDATE");
 		window:RegisterEvent("BAG_UPDATE_DELAYED");
-		local delayedUpdateWithTrigger = function()
-			window:Redraw();
-			window:DelayedUpdate(true);
-		end;
-		handlers.QUEST_TURNED_IN = delayedUpdateWithTrigger;
-		handlers.QUEST_ACCEPTED = delayedUpdateWithTrigger;
-		handlers.QUEST_REMOVED = delayedUpdateWithTrigger;
-		window:RegisterEvent("QUEST_ACCEPTED");
-		window:RegisterEvent("QUEST_REMOVED");
-		window:RegisterEvent("QUEST_TURNED_IN");
+
+		-- this is horrid, essentially ANY interaction with the quest log (clicking a quest, etc.) causes a
+		-- spam of coroutine creation across many ATT windows
+		-- in order to simply perform updates against the windows to ensure we update Objective groups for active Quests
+		-- since QUEST_LOG_UPDATE does not specify any payload
 		local delayedUpdate = function()
 			window:DelayedUpdate();
 		end;
@@ -2814,7 +2765,7 @@ function app:CreateWindow(suffix, definition)
 	end
 
 	if definition.Suffix and definition.Suffix ~= suffix then
-		app.report("WARN: Window re-using Definition from another Window:",suffix,"==>",definition.Suffix)
+		app.report("Window re-using Definition from another Window",suffix,"==>",definition.Suffix)
 	end
 	definition.Suffix = suffix
 	-- Dynamic Categories are neat, but currently only a Classic Feature (for now?)
@@ -3024,7 +2975,7 @@ OnInitForPopout = function(self, group)
 	if not group.isBaseSearchResult then
 		local skipFull = app.GetRelativeValue(group, "skipFull")
 		-- clone/search initially so as to not let popout operations modify the source data
-		group = app.CloneClassInstance(group);
+		group = app.__CreateObject(group);
 		self:SetData(group);
 		group.visible = true;
 		group.skipFull = skipFull

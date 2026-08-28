@@ -166,7 +166,12 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.ZoneDrops
 
-root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
+InstanceHelper.LFRQueueNPC = {
+	["cr"] = 111246,	-- Archmage Timear
+	["coord"] = { 63.7, 55.0, LEGION_DALARAN },
+}
+
+root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { ADDED_7_0_3_LAUNCH } }, {
 	inst(768, {	-- The Emerald Nightmare
 		["coord"] = { 56.3, 36.9, VALSHARAH },
 		["maps"] = {
@@ -273,10 +278,6 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 					i(137751),	-- Vantus Rune Technique: Xavius [Rank 2] (RECIPE!)
 				}),
 			}),
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["cr"] = 111246,	-- Archmage Timear
-				["coord"] = { 63.7, 55.0, LEGION_DALARAN },
-			}),
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups({
 				ZoneDrops({}),
 				header(HEADERS.LFGDungeon, 1287, {	-- Darkbough
@@ -352,7 +353,7 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 							44285,	-- The Emerald Nightmare: Piercing the Veil (Mythic)
 						},
 						["qg"] = 106482,	-- Malfurion Stormrage
-						["groups"] = { i(141303) },	-- Essence of Clarity (QI!)
+						["qi"] = 141303,	-- Essence of Clarity (QI!)
 					}),
 				}),
 				Boss(NYTHENDRA),
@@ -377,7 +378,7 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 						["description"] = "Finishing this quest will grant you immediate access to Cenarius on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
 						["altQuests"] = { 44285 },	-- The Emerald Nightmare: Piercing the Veil (Mythic)
 						["qg"] = 106482,	-- Malfurion Stormrage
-						["groups"] = { i(141304) },	-- Essence of Clarity (QI!)
+						["qi"] = 141304,	-- Essence of Clarity (QI!)
 					}),
 				}),
 				Boss(NYTHENDRA),
@@ -396,7 +397,7 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 					q(44285, {	-- The Emerald Nightmare: Piercing the Veil [Mythic]
 						["description"] = "Finishing this quest will grant you immediate access to Cenarius on Mythic difficulty each week.\n",
 						["qg"] = 106482,	-- Malfurion Stormrage
-						["groups"] = { i(141305) },	-- Essence of Clarity (QI!)
+						["qi"] = 141305,	-- Essence of Clarity (QI!)
 					}),
 				}),
 				Boss(NYTHENDRA, {
@@ -433,9 +434,9 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 			}),
 		},
 	}),
-}));
+})));
 
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.LEGION, bubbleDownSelf({ ["timeline"] = { ADDED_7_0_3 } }, {
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.LEGION, bubbleDownSelf({ ["timeline"] = { ADDED_7_0_3_LAUNCH } }, {
 	inst(768, {
 		q(44142),	-- Nythendra
 		q(44143),	-- Il'gynoth, Heart of Corruption

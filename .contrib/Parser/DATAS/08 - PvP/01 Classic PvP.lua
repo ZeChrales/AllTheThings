@@ -29,7 +29,7 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 	["description"] = "In order to collect these, you need to have the original title associated with the gear.",
 	["groups"] = {
 		n(HONOR_TITLES, {
-			["timeline"] = { ADDED_1_11_1, REMOVED_2_0_1 },
+			["timeline"] = { ADDED_1_4_0, REMOVED_2_0_1 },
 			-- #if BEFORE 2.0.1
 			["maps"] = {
 				ALTERAC_VALLEY,
@@ -54,9 +54,10 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 				pvprank(14),	-- Grand Marshal / High Warlord
 			},
 		}),
+		n(FACTION_HEADER_ALLIANCE, {symselector=SymSelector.CLASSIC_PVP_ALLIANCE}),
 		n(FACTION_HEADER_ALLIANCE, bubbleDownSelf({
 			["timeline"] = {
-				ADDED_1_11_1,
+				ADDED_1_4_0,
 				-- #if NOT ANYCLASSIC
 				REMOVED_2_0_1,
 				-- #endif
@@ -576,6 +577,7 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 				-- #ENDIF
 			},
 		})),
+		n(FACTION_HEADER_HORDE, {symselector=SymSelector.CLASSIC_PVP_HORDE}),
 		n(FACTION_HEADER_HORDE, bubbleDownSelf({
 			["timeline"] = {
 				ADDED_1_11_1,
@@ -858,14 +860,14 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 				i(15200),	-- Senior Sergeant's Insignia (30)
 
 				-- Trinkets
-				i(18853, { ["classes"] = { DRUID }   }),	-- Insignia of the Horde
-				i(18846, { ["classes"] = { HUNTER }  }),	-- Insignia of the Horde
-				i(18850, { ["classes"] = { MAGE } 	 }),	-- Insignia of the Horde
-				i(18851, { ["classes"] = { PRIEST }  }),	-- Insignia of the Horde
-				i(18849, { ["classes"] = { ROGUE }   }),	-- Insignia of the Horde
-				i(18845, { ["classes"] = { SHAMAN }	 }),	-- Insignia of the Horde
-				i(18852, { ["classes"] = { WARLOCK } }),	-- Insignia of the Horde
-				i(18834, { ["classes"] = { WARRIOR } }),	-- Insignia of the Horde
+				i(18853, { ["classes"] = { DRUID }	}),	-- Insignia of the Horde
+				i(18846, { ["classes"] = { HUNTER }	}),	-- Insignia of the Horde
+				i(18850, { ["classes"] = { MAGE }	}),	-- Insignia of the Horde
+				i(18851, { ["classes"] = { PRIEST }	}),	-- Insignia of the Horde
+				i(18849, { ["classes"] = { ROGUE }	}),	-- Insignia of the Horde
+				i(18845, { ["classes"] = { SHAMAN }	}),	-- Insignia of the Horde
+				i(18852, { ["classes"] = { WARLOCK }	}),	-- Insignia of the Horde
+				i(18834, { ["classes"] = { WARRIOR }	}),	-- Insignia of the Horde
 				-- #ELSE
 				n(WEAPONS, {
 					moh(5, i(18831)),	-- High Warlord's Battle Axe
@@ -1058,14 +1060,14 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 				i(15200),	-- Senior Sergeant's Insignia (30)
 
 				-- Trinkets
-				i(18853, { ["classes"] = { DRUID }   }),	-- Insignia of the Horde
-				i(18846, { ["classes"] = { HUNTER }  }),	-- Insignia of the Horde
-				i(18850, { ["classes"] = { MAGE } 	 }),	-- Insignia of the Horde
-				i(18851, { ["classes"] = { PRIEST }  }),	-- Insignia of the Horde
-				i(18849, { ["classes"] = { ROGUE }   }),	-- Insignia of the Horde
-				i(18845, { ["classes"] = { SHAMAN }	 }),	-- Insignia of the Horde
-				i(18852, { ["classes"] = { WARLOCK } }),	-- Insignia of the Horde
-				i(18834, { ["classes"] = { WARRIOR } }),	-- Insignia of the Horde
+				i(18853, { ["classes"] = { DRUID }	}),	-- Insignia of the Horde
+				i(18846, { ["classes"] = { HUNTER }	}),	-- Insignia of the Horde
+				i(18850, { ["classes"] = { MAGE }	}),	-- Insignia of the Horde
+				i(18851, { ["classes"] = { PRIEST }	}),	-- Insignia of the Horde
+				i(18849, { ["classes"] = { ROGUE }	}),	-- Insignia of the Horde
+				i(18845, { ["classes"] = { SHAMAN }	}),	-- Insignia of the Horde
+				i(18852, { ["classes"] = { WARLOCK }	}),	-- Insignia of the Horde
+				i(18834, { ["classes"] = { WARRIOR }	}),	-- Insignia of the Horde
 				-- #ENDIF
 			},
 		})),
@@ -1084,7 +1086,7 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 					{ 61.8, 83.8, ASHENVALE },
 					-- #endif
 				},
-				["timeline"] = { REMOVED_3_3_3 },
+				["timeline"] = { ADDED_1_8_0, REMOVED_3_3_3 },
 				["cost"] = {
 					-- #if AFTER TBC
 					{ "i", 20560, 1 },	-- Alterac Valley Mark of Honor
@@ -1121,7 +1123,7 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 					{ 61.8, 83.8, ASHENVALE },
 					-- #endif
 				},
-				["timeline"] = { REMOVED_3_3_3 },
+				["timeline"] = { ADDED_1_8_0, REMOVED_3_3_3 },
 				["cost"] = {
 					-- #if AFTER TBC
 					{ "i", 20560, 1 },	-- Alterac Valley Mark of Honor
@@ -1158,7 +1160,7 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 					{ 46.7, 8.4, THE_BARRENS },
 					-- #endif
 				},
-				["timeline"] = { REMOVED_3_3_3 },
+				["timeline"] = { ADDED_1_8_0, REMOVED_3_3_3 },
 				["cost"] = {
 					-- #if AFTER TBC
 					{ "i", 20560, 1 },	-- Alterac Valley Mark of Honor
@@ -1195,7 +1197,7 @@ root(ROOTS.PVP, run(MarkOfWHOOOWHATNow, pvp(expansion(EXPANSION.CLASSIC, {
 					{ 46.7, 8.4, THE_BARRENS },
 					-- #endif
 				},
-				["timeline"] = { REMOVED_3_3_3 },
+				["timeline"] = { ADDED_1_8_0, REMOVED_3_3_3 },
 				["cost"] = {
 					-- #if AFTER TBC
 					{ "i", 20560, 1 },	-- Alterac Valley Mark of Honor

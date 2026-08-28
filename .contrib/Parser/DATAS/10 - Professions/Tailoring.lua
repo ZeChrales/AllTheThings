@@ -419,7 +419,7 @@ root(ROOTS.Professions, prof(TAILORING, bubbleDownSelf({ ["requireSkill"] = TAIL
 			["sourceQuests"] = { 39667 },	-- Where's Lyndras: Leyflame Larceny
 			["provider"] = { "n", 96444 },	-- Violet Hold Guard
 			["coord"] = { 65.2, 67.4, LEGION_DALARAN },
-			["maps"] = { 732 },	-- Assault of Violet Hold (Legion)
+			["maps"] = { 732 },	-- Assault on Violet Hold (Legion)
 			["groups"] = {
 				i(135556),	-- Violet Hold Prison Key (QI!)
 			},
@@ -1506,7 +1506,7 @@ root(ROOTS.Professions, prof(TAILORING, bubbleDownSelf({ ["requireSkill"] = TAIL
 			}),
 			o(525902, {	-- Wooden Weaving Sword
 				["coord"] = { 69.8, 51.0, MAP.MIDNIGHT.HARANDAR },
-				["questID"] = 89081, --or 62655???,
+				["questID"] = 89081,	--or 62655???,
 				["groups"] = {
 					i(238615),	-- Wooden Weaving Sword
 				},

@@ -232,9 +232,12 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 	}),
 	prof(BLACKSMITHING, {
 		n(DISCOVERY, {
-			applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR, spell(143255, bubbleDownSelf({ ["timeline"] = { ADDED_5_4_0 } }, {	-- Balanced Trillium Ingot
+			applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR,
+			header(HEADERS.Spell, 143255, bubbleDownSelf({ ["timeline"] = { ADDED_5_4_0 } }, {	-- Balanced Trillium Ingot
 				["cost"] = ClassicCost({{ "i", 72095, 1 }}),	-- 1x Trillium Bar
-				["groups"] = {
+				["groups"] = sharedData({
+					["provider"] = { "s", 143255 },	-- Balanced Trillium Ingot
+				},{
 					r(142959),	-- Avenger's Trillium Legplates
 					r(142968),	-- Avenger's Trillium Waistplate
 					r(142963),	-- Blessed Trillium Belt
@@ -276,11 +279,14 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 					r(143186),	-- Crafted Malevolent Gladiator's Warboots of Cruelty
 					r(142958),	-- Protector's Trillium Legguards
 					r(142967),	-- Protector's Trillium Waistguard
-				},
+				}),
 			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138646, bubbleDownSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Lightning Steel Ingot
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			header(HEADERS.Spell, 138646, bubbleDownSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Lightning Steel Ingot
 				["cost"] = ClassicCost({{ "i", 72096, 10 }}),	-- 10x Ghost Iron Bar
-				["groups"] = {
+				["groups"] = sharedData({
+					["provider"] = { "s", 138646 },	-- Lightning Steel Ingot
+				},{
 					r(137792),	-- Crafted Dreadful Gladiator's Armplates of Alacrity
 					r(137791),	-- Crafted Dreadful Gladiator's Armplates of Proficiency
 					r(137781),	-- Crafted Dreadful Gladiator's Bracers of Meditation
@@ -319,44 +325,68 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 					r(137771),	-- Haunted Steel Headguard
 					r(137768),	-- Haunted Steel Treads
 					r(137770),	-- Haunted Steel Warboots
-				},
+				}),
 			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138888, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Fireguard, Reborn
-				r(138890),	-- Blazeguard, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138890, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Blazeguard, Reborn
-				r(138892),	-- Blazefury, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138876, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- The Planar Edge, Reborn
-				r(138878),	-- Black Planar Edge, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138878, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Black Planar Edge, Reborn
-				r(138880),	-- Wicked Edge of the Planes, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138882, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Drakefist Hammer, Reborn
-				r(138885),	-- Dragonmaw, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138885, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Dragonmaw, Reborn
-				r(138886),	-- Dragonstrike, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138889, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Lionheart Blade, Reborn
-				r(138891),	-- Lionheart Champion, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138891, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Lionheart Champion, Reborn
-				r(138893),	-- Lionheart Executioner, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138877, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Lunar Crescent, Reborn
-				r(138879),	-- Mooncleaver, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138879, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Mooncleaver, Reborn
-				r(138881),	-- Bloodmoon, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138883, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Thunder, Reborn
-				r(138884),	-- Deep Thunder, Reborn
-			}))),
-			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, spell(138884, sharedDataSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Deep Thunder, Reborn
-				r(138887),	-- Stormherald, Reborn
-			}))),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138890, {	-- Blazeguard, Reborn
+				["provider"] = { "s", 138888 },	-- Fireguard, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138892, {	-- Blazefury, Reborn
+				["provider"] = { "s", 138890 },	-- Blazeguard, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138878, {	-- Black Planar Edge, Reborn
+				["provider"] = { "s", 138876 },	-- The Planar Edge, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138880, {	-- Wicked Edge of the Planes, Reborn
+				["provider"] = { "s", 138878 },	-- Black Planar Edge, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138885, {	-- Dragonmaw, Reborn
+				["provider"] = { "s", 138882 },	-- Drakefist Hammer, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138886, {	-- Dragonstrike, Reborn
+				["provider"] = { "s", 138885 },	-- Dragonmaw, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138891, {	-- Lionheart Champion, Reborn
+				["provider"] = { "s", 138889 },	-- Lionheart Blade, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138893, {	-- Lionheart Executioner, Reborn
+				["provider"] = { "s", 138891 },	-- Lionheart Champion, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138879, {	-- Mooncleaver, Reborn
+				["provider"] = { "s", 138877 },	-- Lunar Crescent, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138881, {	-- Bloodmoon, Reborn
+				["provider"] = { "s", 138879 },	-- Mooncleaver, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138884, {	-- Deep Thunder, Reborn
+				["provider"] = { "s", 138883 },	-- Thunder, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			r(138887, {	-- Stormherald, Reborn
+				["provider"] = { "s", 138884 },	-- Deep Thunder, Reborn
+				["timeline"] = { ADDED_5_2_0 },
+			})),
 		}),
 		n(ARMOR, {
 			applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR, i(98607, {["timeline"] = {ADDED_5_4_0}})),	-- Avenger's Trillium Legplates
@@ -853,7 +883,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 		}),
 	}),
 	prof(HERBALISM, {
-		spell(2366, {	-- Herb Gathering
+		header(HEADERS.Spell, 2366, {	-- Herb Gathering
 			i(89639),	-- Desecrated Herb
 			i(97624, {["timeline"] = {ADDED_5_3_0}}),	-- Desecrated Herb Pod
 			i(79011),	-- Fool's Cap
@@ -993,7 +1023,9 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 			i(76139),	-- Wild Jade
 		}),
 		n(DISCOVERY, {
-			spell(131691, {	-- Imperial Amethyst
+			header(HEADERS.Spell, 131691, sharedData({	-- Imperial Amethyst
+				["provider"] = { "s", 131691 },
+			},{
 				r(107693),	-- Accurate Imperial Amethyst
 				r(130657),	-- Assassin's Imperial Amethyst
 				r(107694),	-- Defender's Imperial Amethyst
@@ -1008,28 +1040,36 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 				r(130658),	-- Tense Imperial Amethyst
 				r(107703),	-- Timeless Imperial Amethyst
 				r(107704),	-- Veiled Imperial Amethyst
-			}),
-			spell(131686, {	-- Primordial Ruby
+			})),
+			header(HEADERS.Spell, 131686, sharedData({	-- Primordial Ruby
+				["provider"] = { "s", 131686 },
+			},{
 				r(107705),	-- Bold Primordial Ruby
 				r(107706),	-- Brilliant Primordial Ruby
 				r(107707),	-- Delicate Primordial Ruby
 				r(107708),	-- Flashing Primordial Ruby
 				r(107709),	-- Precise Primordial Ruby
-			}),
-			spell(131593, {	-- River's Heart
+			})),
+			header(HEADERS.Spell, 131593, sharedData({	-- River's Heart
+				["provider"] = { "s", 131593 },
+			},{
 				r(106947),	-- Rigid River's Heart
 				r(106950),	-- Solid River's Heart
 				r(106949),	-- Sparkling River's Heart
 				r(106948),	-- Stormy River's Heart
-			}),
-			spell(131695, {	-- Sun's Radiance
+			})),
+			header(HEADERS.Spell, 131695, sharedData({	-- Sun's Radiance
+				["provider"] = { "s", 131695 },
+			},{
 				r(107710),	-- Fractured Sun's Radiance
 				r(107711),	-- Mystic Sun's Radiance
 				r(107712),	-- Quick Sun's Radiance
 				r(107713),	-- Smooth Sun's Radiance
 				r(107714),	-- Subtle Sun's Radiance
-			}),
-			spell(131690, {	-- Vermilion Onyx
+			})),
+			header(HEADERS.Spell, 131690, sharedData({	-- Vermilion Onyx
+				["provider"] = { "s", 131690 },
+			},{
 				r(107715),	-- Adept Vermilion Onyx
 				r(107716),	-- Artful Vermilion Onyx
 				r(107717),	-- Champion's Vermilion Onyx
@@ -1052,8 +1092,10 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 				r(107734),	-- Tenuous Vermilion Onyx
 				r(107735),	-- Wicked Vermilion Onyx
 				r(107736),	-- Willful Vermilion Onyx
-			}),
-			spell(131688, {	-- Wild Jade
+			})),
+			header(HEADERS.Spell, 131688, sharedData({	-- Wild Jade
+				["provider"] = { "s", 131688 },
+			},{
 				r(106960),	-- Balanced Wild Jade
 				r(106957),	-- Effulgent Wild Jade
 				r(107737),	-- Energized Wild Jade
@@ -1072,7 +1114,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 				r(106962),	-- Turbid Wild Jade
 				r(106961),	-- Vivid Wild Jade
 				r(106958),	-- Zen Wild Jade
-			}),
+			})),
 		}),
 		filter(BATTLE_PETS, {
 			i(82774),	-- Jade Owl (PET!)
@@ -1367,9 +1409,12 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 	}),
 	prof(LEATHERWORKING, {
 		n(DISCOVERY, {
-			applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR, spell(142976, bubbleDownSelf({ ["timeline"] = { ADDED_5_4_0 } }, {	-- Hardened Magnificent Hide
+			applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR,
+			header(HEADERS.Spell, 142976, bubbleDownSelf({ ["timeline"] = { ADDED_5_4_0 } }, {	-- Hardened Magnificent Hide
 				["cost"] = ClassicCost({{ "i", 72163, 2 }}),	-- 2x Magnificent Hide
-				["groups"] = {
+				["groups"] = sharedData({
+					["provider"] = { "s", 142976 },	-- Hardened Magnificent Hide
+				},{
 					r(143146),	-- Crafted Malevolent Gladiator's Armbands of Meditation
 					r(143145),	-- Crafted Malevolent Gladiator's Armbands of Prowess
 					r(143112),	-- Crafted Malevolent Gladiator's Armwraps of Accuracy
@@ -1452,11 +1497,14 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 					r(142952),	-- Pennyroyal Leggings
 					r(142965),	-- Snow Lily Belt
 					r(142956),	-- Snow Lily Britches
-				},
+				}),
 			}))),
-			spell(140040, bubbleDownSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Magnificence of Leather
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			header(HEADERS.Spell, 140040, bubbleDownSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Magnificence of Leather
 				["cost"] = ClassicCost({{ "i", 72120, 20 }}),	-- 20x Mist-Touched Leather
-				["groups"] = applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, {
+				["groups"] = sharedData({
+					["provider"] = { "s", 140040 },	-- Magnificence of Leather
+				},{
 					r(137832),	-- Crafted Dreadful Gladiator's Armwraps of Accuracy
 					r(137845),	-- Crafted Dreadful Gladiator's Armwraps of Alacrity
 					r(137822),	-- Crafted Dreadful Gladiator's Belt of Cruelty
@@ -1505,10 +1553,13 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 					r(138593),	-- Spirit Keeper Footguards
 					r(138594),	-- Spirit Keeper Helm
 				}),
-			})),
-			spell(140041, bubbleDownSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Magnificence of Scales
+			}))),
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			header(HEADERS.Spell, 140041, bubbleDownSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Magnificence of Scales
 				["cost"] = ClassicCost({{ "i", 79101, 20 }}),	-- 20x Prismatic Scale
-				["groups"] = applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, {
+				["groups"] = sharedData({
+					["provider"] = { "s", 140041 },	-- Magnificence of Scales
+				},{
 					r(138596),	-- Cloud Serpent Helm
 					r(138595),	-- Cloud Serpent Sabatons
 					r(137866),	-- Crafted Dreadful Gladiator's Armbands of Meditation
@@ -1547,7 +1598,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 					r(138591),	-- Dreadrunner Sabatons
 					r(140185),	-- Magnificent Hide Pack
 				}),
-			})),
+			}))),
 		}),
 		n(ARMOR, {
 			n(BACK, {
@@ -1821,7 +1872,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 		}),
 	}),
 	prof(MINING, {
-		spell(2575, {	-- Mining
+		header(HEADERS.Spell, 2575, {	-- Mining
 			i(72094),	-- Black Trillium Ore
 			i(97512, {["timeline"] = {ADDED_5_3_0}}),	-- Ghost Iron Nugget
 			i(72092),	-- Ghost Iron Ore
@@ -1844,16 +1895,19 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 			i(76139),	-- Wild Jade
 			--]]
 		}),
-		spell(2656, {	-- Smelting
+		header(HEADERS.Spell, 2656, {	-- Smelting
 			i(72096),	-- Ghost Iron Bar
 			i(72095),	-- Trillium Bar
 		}),
 	}),
 	prof(TAILORING, {
 		n(DISCOVERY, {
-			applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR, spell(143011, bubbleDownSelf({ ["timeline"] = { ADDED_5_4_0 } }, {	-- Celestial Cloth
+			applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR,
+			header(HEADERS.Spell, 143011, bubbleDownSelf({ ["timeline"] = { ADDED_5_4_0 } }, {	-- Celestial Cloth
 				["cost"] = ClassicCost({{ "i", 82441, 10 }}),	-- 10x Bolt of Windwool Cloth
-				["groups"] = {
+				["groups"] = sharedData({
+					["provider"] = { "s", 143011 },	-- Celestial Cloth
+				},{
 					r(142964),	-- Belt of the Night Sky
 					r(143053),	-- Crafted Malevolent Gladiator's Cape of Cruelty
 					r(143054),	-- Crafted Malevolent Gladiator's Cape of Prowess
@@ -1894,11 +1948,14 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 					r(142955),	-- Leggings of the Night Sky
 					r(142960),	-- White Cloud Belt
 					r(142951),	-- White Cloud Leggings
-				},
+				}),
 			}))),
-			spell(125557, bubbleDownSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Imperial Silk
+			applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING,
+			header(HEADERS.Spell, 125557, bubbleDownSelf({ ["timeline"] = { ADDED_5_2_0 } }, {	-- Imperial Silk
 				["cost"] = ClassicCost({{ "i", 82441, 8 }}),	-- 8x Bolt of Windwool Cloth
-				["groups"] = applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING, {
+				["groups"] = sharedData({
+					["provider"] = { "s", 125557 },	-- Imperial Silk
+				},{
 					r(137907),	-- Crafted Dreadful Gladiator's Cape of Cruelty
 					r(137908),	-- Crafted Dreadful Gladiator's Cape of Prowess
 					r(137936),	-- Crafted Dreadful Gladiator's Cloak of Alacrity
@@ -1940,7 +1997,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE,
 					r(138599),	-- Falling Blossom Sandals
 					r(138597),	-- Falling Blossom Treads
 				}),
-			})),
+			}))),
 		}),
 		n(ARMOR, {
 			applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR, i(98612, {["timeline"] = {ADDED_5_4_0}})),	-- Belt of the Night Sky

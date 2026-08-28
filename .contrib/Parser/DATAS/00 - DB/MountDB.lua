@@ -2,8 +2,12 @@ local Items = ItemDBConditional;
 local MountDB = MountDB;
 local i = function(itemID, spellID)
 	local item = { ["mountID"] = spellID, ["ignoreBonus"] = true, ["_wipe"] = { "spellID" } }
-	Items[itemID] = item
-	MountDB[spellID] = itemID == 0 and item or Items[itemID]
+	if itemID > 0 then
+		Items[itemID] = item
+	end
+	if spellID > 0 then
+		MountDB[spellID] = itemID == 0 and item or Items[itemID]
+	end
 end
 -- If the mount is obtained from an item, use i(itemID, mountID);
 -- Otherwise use i(0, mountID); example if the mount is obtained from store.
@@ -16,12 +20,17 @@ end
 -- CLASSIC WOW --
 -----------------
 -- SEASON OF DISCOVERY --
+-- #if SEASON_OF_DISCOVERY
 i(211499, 429857);	-- Trainee's Outrider Wolf
 i(211498, 429856);	-- Trainee's Sentinel Nightsaber
 
 -- Phase 2
 i(216570, 436329);	-- Reins of the Golden Sabercat
 i(216492, 436288);	-- Whistle of the Mottled Blood Raptor
+
+-- Phase 4
+i(13325, 17458);	-- Fluorescent Green Mechanostrider
+i(228746, 463005);	-- Fluorescent Green Mechanostrider (100% speed upgrade)
 
 -- Phase 6
 i(233351, 473847); -- Light Green Qiraji Resonating Crystal
@@ -39,6 +48,7 @@ i(236665, 1220568); -- Reins of Famine
 -- Phase 8
 i(239694, 1229305); -- Covenant of Light
 i(239695, 1229308); -- Scarlet Steed
+-- #endif
 
 -- TBC Classic --
 i(184865, 348459);	-- Reawakened Phase-Hunter
@@ -51,11 +61,17 @@ i(273150, 1291813); -- Voidfeather Dragonhawk
 -- #endif
 
 -- Wrath Classic --
-i(192455, 372677);	-- Kalu'ak Whalebone Glider
-i(201699, 394209);	-- Festering Emerald Drake
-i(207097, 416158);	-- Nightmarish Emerald Drake
 i(0, 440915);		-- Auspicious Arborwyrm
 i(0, 423869);		-- Avatar of Flame
+i(0, 1217476);		-- Blazing Royal Fire Hawk		(CN Only Classic Version)
+i(201699, 394209);	-- Festering Emerald Drake
+-- #if AFTER 5.5.2
+i(226805, 459486);	-- Golden Ashes of Al'ar		(CN Only)
+-- #else
+i(0, 459486);		-- Golden Ashes of Al'ar		(CN Only)
+-- #endif
+i(192455, 372677);	-- Kalu'ak Whalebone Glider
+i(207097, 416158);	-- Nightmarish Emerald Drake
 -- #if AFTER 5.5.3
 i(265937, 446902);	-- Polly Roger
 -- #else
@@ -66,30 +82,28 @@ i(232614, 471440);	-- Skybound Spectral Tiger		(CN Only)
 -- #else
 i(0, 471440);		-- Skybound Spectral Tiger		(CN Only)
 -- #endif
-i(0, 1217476);		-- Blazing Royal Fire Hawk		(CN Only Classic Version)
--- #if AFTER 5.5.2
-i(226805, 459784);	-- Golden Ashes of Al'ar		(CN Only Classic Version)
--- #else
-i(0, 459784);		-- Golden Ashes of Al'ar		(CN Only Classic Version)
--- #endif
 
 -- Cata Classic --
 i(0, 463045);		-- Lava Drake
 i(0, 473487);		-- Sha-Touched Cloud Serpent
 i(0, 473478);		-- Sha-Touched Riding Tiger
-i(0, 466948);	-- Chaos-Born Dreadwing
-i(0, 466983);	-- Chaos-Born Gryphon
-i(0, 466980);	-- Chaos-Born Hippogryph
-i(0, 466977);	-- Chaos-Born Wind Rider
+i(0, 466948);		-- Chaos-Born Dreadwing
+i(0, 466983);		-- Chaos-Born Gryphon
+i(0, 466980);		-- Chaos-Born Hippogryph
+i(0, 466977);		-- Chaos-Born Wind Rider
 
 --- MOP CLASSIC ---
 i(0, 1229672);		-- Archmage's Great Crow
+i(265944, 1250045);	-- Ashened Cataclysm (CN ONLY)
 i(248741, 1247591);	-- Celestial Riding Crane
 i(248744, 1247597);	-- Celestial Riding Ox
 i(248743, 1247596);	-- Celestial Riding Serpent
 i(248742, 1247598);	-- Celestial Riding Tiger
 i(0, 1257674);		-- Embertuft Groveglider
+i(268706, 1283471);	-- Golden Ashened Cataclysm (CN ONLY)
+i(226812, 459538);	-- Harmonius Greetings Bear (CN ONLY)
 i(277652, 1302506);	-- Juvenile Frostwyrm
+i(0, 1257516);		-- Lana'thel's Sanguine Cascade
 i(0, 1224647);		-- Meeksi Brewrobber
 i(0, 1224643);		-- Meeksi Gentlepaw
 i(0, 1224645);		-- Meeksi Rufflemane
@@ -97,16 +111,27 @@ i(0, 1224596);		-- Meeksi Teapuff
 i(0, 1224646);		-- Meeksi Wanderpaw
 i(0, 1257676);		-- Petalbranch Groveglider
 i(0, 1229670);		-- Prophet's Great Crow
+i(275928, 1298510);	-- Reins of the Fire Drake
+i(267300, 1280068);	-- Scorching Courage
+i(268924, 1284044);	-- Scorching Imperial Quilen (CN ONLY)
+i(258883, 1249659);	-- Sha-scarred Drake
 i(0, 1257677);		-- Shadowbough Groveglider
 i(0, 1257673);		-- Snowfall Groveglider
+i(276082, 1298515);	-- Spectral Gryphon
+i(276081, 1298516);	-- Spectral Wind Rider
+i(272920, 1291315);	-- Spring Panda (CN ONLY)
 i(276075, 1298512);	-- Stormcrow
-i(254735, 1258573);	-- Thunderhoof Celestial (CN ONLY)
+i(0, 1301737);		-- Sunflash Driftmoth
+i(254735, 1285725);	-- Thunderhoof Celestial (CN ONLY)
 
 --- NYI ---
-i(0, 388516);		-- Hao-Yue, River Foreseer
 i(198632, 387319);	-- Big Battle Bear
 i(198630, 387320);	-- Blazing Hippogryph
+i(199931, 388516);	-- Hao-Yue, River Foreseer
+i(264986, 1272988);	-- Inarius' Charger
 i(198631, 387308);	-- Magic Rooster
+i(245612, 1239240);	-- Orgrimmar Sentinel
+i(245584, 1239204);	-- Stormwind Skyseeker
 i(198633, 387321);	-- Wooly White Rhino
 i(198629, 387323);	-- X-51 Nether-Rocket
 i(198628, 387311);	-- X-51 Nether-Rocket X-TREME
@@ -210,7 +235,6 @@ i(5874, 6896);		-- Black Ram
 i(1041, 578);		-- Black Wolf
 i(5875, 6897);		-- Blue Ram
 i(20221, 24576);	-- Chromatic Mount [Item: Foror's Fabled Steed]
-i(13325, 17458);	-- Fluorescent Green Mechanostrider
 i(12327, 16060);	-- Golden Sabercat
 i(1134, 459);		-- Gray Wolf
 i(8589, 10795);		-- Ivory Raptor
@@ -534,8 +558,12 @@ i(46755, 65641);	-- Great Golden Kodo [TAUREN]
 i(46745, 65637);	-- Great Red Elekk [NON-DRAENEI]
 i(46756, 65637);	-- Great Red Elekk [DRAENEI]
 i(45586, 63636);	-- Ironforge Ram
+-- #if ANYCLASSIC
+i(265787, 65917);	-- Magic Rooster Egg
+-- #else
 i(46778, 65917);	-- Magic Rooster Egg [BoP]
 i(49290, 65917);	-- Magic Rooster Egg [BoE]
+-- #endif
 i(47101, 66846);	-- Ochre Skeletal Warhorse
 i(49636, 69395);	-- Onyxian Drake
 i(45595, 63640);	-- Orgrimmar Wolf
@@ -1825,7 +1853,7 @@ i(210145, 424611);	-- [PH] YellowBlack-Furred Bakar
 -- #if BEFORE 11.0.5
 i(211075, 428013);	-- Deathbringer's Shadowcycle
 -- #endif
-i(211086, 428065);	-- Jeweled Jade Scarab
+i(211086, 428065);	-- Jade Resonating Crystal
 
 ------------------
 -- PATCH 10.2.5 --
@@ -1915,8 +1943,8 @@ i(213604, 435125);	-- Tropical Riding Crane
 i(223285, 448851);	-- Underlight Corrupted Behemoth
 --- NYI ---
 i(223470, 449141);	-- [PH] Alliance Wolf Mount Red
-i(223282, 448845);	-- [PH] Blue Old God Fish Mount
 i(223460, 449133);	-- [PH] Nightsaber Horde Mount White
+i(223282, 448845);	-- Blue Old God Fish Mount
 i(223284, 448849);	-- Underlight Shorestalker
 
 ------------------
@@ -1926,15 +1954,13 @@ i(229128, 464443);	-- Harmonious Salutations Bear
 i(217985, 441324);	-- Remembered Golden Gryphon
 i(217987, 441325);	-- Remembered Wind Rider
 --- NYI ---
-i(0, 405623);		-- Armadillo Roller
-i(223570, 449416);	-- Ebonhide Ramolith
-i(226044, 457659);	-- Plunderlord's Weathered Crocolisk
 i(223321, 448984);	-- [PH] ArathiLynxMount (Black Fur, Black Armor)
 i(223319, 448980);	-- [PH] ArathiLynxMount (Gold Fur, Yellow Armor)
 i(223320, 448981);	-- [PH] ArathiLynxMount (White Fur, Purple Armor)
 i(223272, 447938);	-- [PH] CaveBorerWormMount (Blue Skin, Purple Saddle)
 i(223273, 447956);	-- [PH] CaveBorerWormMount (Forest Skin, Blue Saddle)
 i(223275, 447958);	-- [PH] CaveBorerWormMount (Nocturne Skin, Red Saddle)
+i(223268, 0);		-- [PH] DwarvenMechBoss (Gold)
 i(223159, 448265);	-- [PH] Firebee Mount (Blue Variant)
 i(223152, 447149);	-- [PH] Firebee Mount (Grey Skin, Silver Saddle)
 i(223154, 447156);	-- [PH] Firebee Mount (White Skin, White Saddle)
@@ -1944,26 +1970,28 @@ i(224413, 452768);	-- [PH] Goliathus (Blue)
 i(224414, 452777);	-- [PH] Goliathus (Green)
 i(224416, 452780);	-- [PH] Goliathus (Purple)
 i(223271, 447214);	-- [PH] Gryphon_Air_Mount (White Skin, Gold Saddle)
+i(223502, 0);		-- [PH] MoleMount (Brown Skin, Red Saddle, Teeth Tusks, Nose Pointed)
 i(223500, 449260);	-- [PH] MoleMount (Gray Skin, Purple Saddle, Teeth Tusks, Nose Base)
 i(221852, 447466);	-- [PH] MoleMount (Pink Skin, Blue Saddle, Teeth Rodent, Nose Large Pointed)
 i(223503, 449271);	-- [PH] MoleMountBasic (Blue Skin, Purple Saddle, Teeth Tusks, Nose Base)
 i(223504, 449283);	-- [PH] MoleMountBasic (Green Skin, Black Saddle, Teeth Tusks, Nose Star)
 i(223506, 449265);	-- [PH] MoleMountBasic (Yellow Skin, Blue Saddle, Teeth Rodent, Nose Large Pointed)
 i(222898, 447898);	-- [PH] Mount - Unicorn Moose (Blue) (Gold Saddle) (Player Mount)
-i(222901, 447910);	-- [PH] Mount - Shalehorn (Brown) (Copper Saddle) (Player Mount) / Item: [PH] Mount - Unicorn Moose (Brown) (Copper Saddle) (Player Mount)
-i(222902, 447911);	-- [PH] Mount - Shalehorn (Crimson) (Dark Saddle) (Player Mount)  / Item: [PH] Mount - Unicorn Moose (Crimson) (Dark Saddle) (Player Mount)
-i(222903, 447912);	-- [PH] Mount - Shalehorn (Ivory) (Silver Saddle) (Player Mount)  / Item: [PH] Mount - Unicorn Moose (Ivory) (Silver Saddle) (Player Mount)
-i(222904, 447913);	-- [PH] Mount - Shalehorn (Yellow) (White Saddle) (Player Mount)  / Item: [PH] Mount - Unicorn Moose (Yellow) (White Saddle) (Player Mount)
+i(222901, 447910);	-- [PH] Mount - Shalehorn (Brown) (Copper Saddle) (Player Mount)
+i(222902, 447911);	-- [PH] Mount - Shalehorn (Crimson) (Dark Saddle) (Player Mount)
+i(222903, 447912);	-- [PH] Mount - Shalehorn (Ivory) (Silver Saddle) (Player Mount)
+i(222904, 447913);	-- [PH] Mount - Shalehorn (Yellow) (White Saddle) (Player Mount)
 i(224149, 451488);	-- [PH] NerubianWarbeastMount (Orange)
 i(223573, 449421);	-- [PH] Proto Ram Earthen (Sand Skin, Grand Horns, Dark Saddle)
 i(223574, 449419);	-- [PH] Proto Ram Earthen (White Skin, Grand Horns, White Saddle)
 i(223587, 449465);	-- [PH] Silver Armored Fel Bat Gladiator Mount
 i(223277, 448682);	-- [PH] SpiderUndergroundMount (Green)
+i(0, 405623);		-- Armadillo Roller
 i(220786, 0);		-- Delver's Dirigible
 i(207104, 0);		-- Morsel Sniffer Reins
 i(219012, 0);		-- Placeholder Delve Exclusive Mount
-i(223268, 0);		-- [PH] DwarvenMechBoss (Gold)
-i(223502, 0);		-- [PH] MoleMount (Brown Skin, Red Saddle, Teeth Tusks, Nose Pointed)
+i(226044, 457659);	-- Plunderlord's Weathered Crocolisk
+i(223570, 449416);	-- Reins of the Ebonhide Ramolith
 
 ------------------
 -- PATCH 11.0.2 --
@@ -2314,16 +2342,18 @@ i(246736, 1243598);	-- Ivory Grimlynx
 i(246594, 1243003);	-- Light-Forged Mechsuit
 i(257240, 1261391);	-- Relinquished Scarlet Charger
 i(224148, 451487);	-- Retrained Skyrazor
+-- #if ANYCLASSIC
+i(254736, 1285724);	-- Stormgilded Celestial (CN ONLY)
+-- #else
 i(254736, 1258574);	-- Stormgilded Celestial (CN ONLY)
+-- #endif
 --- NYI ---
-i(0, 1252141);		-- [DNT] Jellyfish
-i(0, 1238827);		-- Swift Spectral Dragonhawk
 i(257157, 1261325);	-- [DNT] 12.0 Black Hawkstrider
+i(0, 1252141);		-- [DNT] Jellyfish
 i(260896, 1267004);	-- Accented Pseudoshell
 i(250921, 1251665);	-- Amani Blessed Bear
 i(262707, 1269279);	-- Blooded Snapvine
 i(260894, 1266997);	-- Cabbage Pseudoshell
-i(262496, 1268919);	-- Delver's Arcane Golem
 i(264273, 1271549);	-- Fel Spirehawk
 i(262706, 1269277);	-- Ferocious Snapvine
 i(263449, 1270520);	-- Fluffy Comfy Flying Quilt
@@ -2333,6 +2363,8 @@ i(262909, 1269556);	-- Hypo-Speed X6000
 i(260895, 1267002);	-- Lavender Pseudoshell
 i(262708, 1269280);	-- Savage Snapvine
 i(253587, 0);		-- Scale of Aln'sharan
+i(0, 1238827);		-- Swift Spectral Dragonhawk
+i(254735, 1258573);	-- Thunderhoof Celestial (CN ONLY)
 
 ------------------
 -- PATCH 12.0.1 --
@@ -2428,7 +2460,7 @@ i(270041, 1287357);	-- Void-Touched Snapdragon
 i(269828, 1286606);	-- Void-Corrupted Eagle Talon
 i(270058, 1287359);	-- Void-Corrupted Lynx
 i(257225, 1261362);	-- Witherbark Warbear Harness
---- Unsorted ---
+--- NYI ---
 i(268878, 1283906);	-- [PH] Giant Eagle Sunwalker Mount Blue
 i(268875, 1283911);	-- [PH] Giant Eagle Sunwalker Mount White
 i(268362, 1282274);	-- Gilnean Copper Charger
@@ -2437,7 +2469,6 @@ i(262344, 1267077);	-- Scarlet Lady
 i(269640, 1285897);	-- Sha-Warped Owl
 i(269012, 1284679);	-- Sha-Warped Riding Wolf
 i(269659, 1266982);	-- The Sire's Palanquin
---- NYI ---
 i(260421, 1266285);	-- Void-Corrupted Amani Warbear Kit
 i(268833, 1283837);	-- Zothwing Darkseeker
 i(268834, 1283838);	-- Zothwing Deepseeker
@@ -2445,6 +2476,7 @@ i(268834, 1283838);	-- Zothwing Deepseeker
 ------------------
 -- PATCH 12.0.7 --
 ------------------
+i(274681, 1294767);	-- Badlands Buzzard
 i(273651, 1292344);	-- Bilgewater X-TREME Firework Rocket
 i(210140, 404018);	-- Black-Furred Bakar
 i(273317, 1292102);	-- Blackwater X-TREME Firework Rocket
@@ -2452,56 +2484,66 @@ i(246731, 1243582);	-- Dusk Grimlynx
 i(274650, 1294663);	-- Netherforged Nullframe
 i(192778, 350220);	-- Liquid Hot Magma Slug
 i(269240, 1284973);	-- Luminous Sporeglider
+i(274260, 1293456);	-- Rabbit'ath
 i(258884, 1264184);	-- Spawn of Vyranoth
-i(0, 1279352);	-- Stoneforged Sentinel
+i(267078, 1279352);	-- Stoneforged Sentinel
 i(275464, 1298439);	-- Sun Festival's Painted Roc
+i(273655, 1292356);	-- Sunflare Driftmoth
 i(275664, 1297427);	-- Tortured Gorger
 i(274649, 1294648);	-- Voidmancer's Starcarver
---- UNSORTED ---
+--- NYI ---
 i(0, 1294677);	-- [PH] Horse with Hat
 i(0, 1261369);	-- Amani Hex Bear
-i(274681, 1294767);	-- Badlands Buzzard
 i(273650, 1292342);	-- Green Rocket Mount [PH]
 i(273652, 1292345);	-- Pink Rocket Mount [PH]
+i(276245, 1299156);	-- Shadow Spirehawk
+i(272920, 1291315);	-- Spring Panda
 
 ------------------
 -- PATCH 12.1.0 --
 ------------------
-i(275656, 1297224);	-- Auriferous Venomfang
-i(275652, 1297220);	-- Crimson Venomfang
-i(276553, 1299965);	-- Emerald Skyfang
-i(276802, 1300778);	-- Indigo Coiled Horror
-i(275658, 1297405);	-- Primeval Skyfriend
-i(275653, 1297216);	-- Sea-Dwelling Isle Serpent
-i(277192, 1301775);	-- Umbral Ashes
-i(276801, 1300777);	-- Venomous Coiler
-i(276551, 1299963);	-- Violet-Backed Skyfang
---- UNSORTED ---
 i(275657, 1297404);	-- Apophic Soul Crusher
-i(275551, 1296724);	-- Autumnal Witchwick's Rider
-i(275573, 1296988);	-- Blushing Witchwick's Rider
+i(275656, 1297224);	-- Auriferous Venomfang
 i(276881, 1301070);	-- Breath of Blight
 i(276882, 1301074);	-- Breath of Ruin
-i(275574, 1296989);	-- Carmine Witchwick's Rider
 i(275654, 1297217);	-- Caustic Venomfang
 i(276162, 1298808);	-- Corroded Soul Crusher
 i(278574, 1305206);	-- Crested Aqua Leafmimic
 i(278573, 1305204);	-- Crested Ember Leafmimic
 i(278575, 1305207);	-- Crested Verdant Leafmimic
-i(278576, 1305209);	-- Crested Violet Leafmimic
+i(275652, 1297220);	-- Crimson Venomfang
+i(262496, 1268919);	-- Delver's Arcane Golem
+i(276553, 1299965);	-- Emerald Skyfang
+i(274164, 142515);	-- Hearthkeeper's Wandering Caravan
 i(275659, 1297407);	-- Hexflame Reaver
-i(275571, 1296986);	-- Moonlit Witchwick's Rider
-i(275570, 1296985);	-- Mossy Witchwick's Rider
+i(276802, 1300778);	-- Indigo Coiled Horror
 i(275660, 1297408);	-- Preyhunter's Fury
+i(275658, 1297405);	-- Primeval Skyfriend
 i(276803, 1300779);	-- Ruby Writhe
-i(275572, 1296987);	-- Scarlet Witchwick's Rider
+i(275653, 1297216);	-- Sea-Dwelling Isle Serpent
 i(273838, 1292668);	-- Spirit of Tok'jara
-i(0, 1295958);	-- Swift Spectral Eagle
 i(276804, 1300776);	-- The Writhing Brood
 i(276549, 1299961);	-- Topaz Skyfang
+i(277192, 1301775);	-- Umbral Ashes
+i(276801, 1300777);	-- Venomous Coiler
 i(275302, 1266211);	-- Venomous Gladiator's Goredrake
-i(280599, 1309376);	-- Veteran Adventurer's Loyal Companion
 i(275433, 1296670);	-- Vicious Lightbloom Boar [A]
 i(275432, 1296672);	-- Vicious Lightbloom Boar [H]
-i(277261, 1301817);	-- Whoofle Bramblewing
-i(280581, 1309340);	-- Wintry Witchwick's Rider
+i(276551, 1299963);	-- Violet-Backed Skyfang
+--- NYI ---
+i(276800, 1300780);	-- [PH]Writhes Mount - Yellow
+i(275551, 1296724);	-- Autumnal Witchwick's Rider	(SHOP OR TRADING POST)
+i(275573, 1296988);	-- Blushing Witchwick's Rider	(SHOP OR TRADING POST)
+i(275574, 1296989);	-- Carmine Witchwick's Rider	(SHOP OR TRADING POST)
+i(278576, 1305209);	-- Crested Violet Leafmimic		(SHOP OR TRADING POST)
+i(275571, 1296986);	-- Moonlit Witchwick's Rider	(SHOP OR TRADING POST)
+i(275570, 1296985);	-- Mossy Witchwick's Rider		(SHOP OR TRADING POST)
+i(275572, 1296987);	-- Scarlet Witchwick's Rider	(SHOP OR TRADING POST)
+i(0, 1295958);	-- Swift Spectral Eagle
+i(274037, 1293028);	-- Tuskarr Hermit Crab
+i(275655, 1297223);	-- Venom Serpent - White
+i(280599, 1309376);	-- Veteran Adventurer's Loyal Companion
+i(277261, 1301817);	-- Whoofle Bramblewing			(SHOP OR TRADING POST)
+i(276552, 1299964);	-- Wind Serpent - Pink
+i(276550, 1299962);	-- Wind Serpent - White
+i(280581, 1309340);	-- Wintry Witchwick's Rider		(SHOP OR TRADING POST)

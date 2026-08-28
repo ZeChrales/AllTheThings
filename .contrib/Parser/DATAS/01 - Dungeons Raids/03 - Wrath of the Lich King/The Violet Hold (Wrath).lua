@@ -4,6 +4,7 @@
 
 root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_ONE, bubbleDownSelf({ ["timeline"] = { ADDED_3_0_2 } }, {
 	inst(283, {	-- The Violet Hold (Wrath)
+		["description"] = "The bosses are random on all difficulties.",
 		["mapID"] = THE_VIOLET_HOLD_WRATH,
 		["coord"] = { 66.6, 67.9, NORTHREND_DALARAN },
 		["lvl"] = lvlsquish(75, 75, 15),
@@ -96,7 +97,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_O
 						i(43406),	-- Cloak of the Gushing Wound (7.3.5 - Used to be only Heroic Mode)
 						-- #endif
 						i(43363),	-- Screeching Cape
-						i(43375),	-- Trousers of the Arrakoa
+						i(43375),	-- Trousers of the Arakkoa
 						-- #if AFTER 7.3.5
 						i(157567, {	-- Bodyguard's Treads
 							["timeline"] = { ADDED_7_3_5 },
@@ -213,7 +214,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_O
 							["timeline"] = { ADDED_7_3_5 },
 						}),
 						i(37874),	-- Gauntlets of Capture (7.3.5 - Used to be only Heroic Mode)
-						i(37886),	-- Handgrips of the Savage Emmisary (7.3.5 - Used to be only Heroic Mode)
+						i(37886),	-- Handgrips of the Savage Emissary (7.3.5 - Used to be only Heroic Mode)
 						-- #endif
 						i(35651),	-- Plate Claws of the Dragon
 						-- #if AFTER 7.3.5
@@ -252,7 +253,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_O
 							i(43406),	-- Cloak of the Gushing Wound
 							-- #if AFTER 7.3.5
 							i(43363),	-- Screeching Cape (7.3.5 - Used to be only Normal Mode)
-							i(43375),	-- Trousers of the Arrakoa (7.3.5 - Used to be only Normal Mode)
+							i(43375),	-- Trousers of the Arakkoa (7.3.5 - Used to be only Normal Mode)
 							-- #endif
 							i(157567, {	-- Bodyguard's Treads
 								["timeline"] = { ADDED_7_3_5 },
@@ -374,7 +375,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_O
 								["timeline"] = { ADDED_7_3_5 },
 							}),
 							i(37874),	-- Gauntlets of Capture
-							i(37886),	-- Handgrips of the Savage Emmisary
+							i(37886),	-- Handgrips of the Savage Emissary
 							-- #if AFTER 7.3.5
 							i(35651),	-- Plate Claws of the Dragon (7.3.5 - Used to be only Normal Mode)
 							-- #endif

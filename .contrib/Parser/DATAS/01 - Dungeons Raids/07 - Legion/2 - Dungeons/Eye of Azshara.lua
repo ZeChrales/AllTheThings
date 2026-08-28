@@ -2,7 +2,7 @@
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 
-root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
+root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { ADDED_7_0_3_LAUNCH } }, {
 	inst(716, {	-- Eye of Azshara
 		["mapID"] = 713,
 		["coord"] = { 61.2, 41.1, AZSUNA },
@@ -19,13 +19,13 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 			n(QUESTS, {
 				q(42213, {	-- Eye of Azshara: The Tidestone of Golganneth
 					["sourceQuest"] = 38286,	-- Eye of Azshara: Wrath of Azshara
-					["provider"] = { "n", 106780 },	-- Tidestone of Golganneth
+					["qg"] = 106780,	-- Tidestone of Golganneth
 					["modelScale"] = 3,
+					["qi"] = 137206,	-- Tidestone of Golganneth (QI!)
 					["groups"] = {
-						i(137206),	-- Tidestone of Golganneth (QI!)
-						i(140622),	-- Hardshell Greatbelt
-						i(140623),	-- Brightscale Waistguard
 						i(140624),	-- Bitterbrine Binding
+						i(140623),	-- Brightscale Waistguard
+						i(140622),	-- Hardshell Greatbelt
 						i(140625),	-- Waistband of the Hatecoil Oracles
 					},
 				}),
@@ -299,4 +299,4 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, {
 			}),
 		},
 	}),
-}));
+})));

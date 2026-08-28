@@ -405,6 +405,7 @@ TWW_COOKING = bubbleDown({ ["timeline"] = { ADDED_11_0_2 } }, {
 MID_COOKING = bubbleDown({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
 	r(471005),	-- Midnight Cooking
 	r(818),		-- Cooking Fire
+	r(1295534, {["timeline"] = { ADDED_12_1_0 }}),	-- Amani Cornucopia
 	r(1226183),	-- Arcano Cutlets
 	r(1226194),	-- Argentleaf Tea
 	r(1226197),	-- Azeroot Tea
@@ -431,7 +432,9 @@ MID_COOKING = bubbleDown({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
 	r(1226199),	-- Mana-Infused Stew
 	r(1265601),	-- Multicraft
 	r(1226178),	-- Null and Void Plate
+	r(1296450, {["timeline"] = { ADDED_12_1_0 }}),	-- Plant Protein
 	r(1226204),	-- Portable Snack
+	r(1296449, {["timeline"] = { ADDED_12_1_0 }}),	-- Practically Pork
 	r(1226168),	-- Quel'dorei Medley
 	r(1226203),	-- Quick Sandwich
 	r(1265693),	-- Resourcefulness

@@ -322,6 +322,11 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
+InstanceHelper.LFRQueueNPC = {
+	["cr"] = 111246,	-- Archmage Timear
+	["coord"] = { 63.7, 55.0, LEGION_DALARAN },
+}
+
 root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { ADDED_7_3_0 } }, {
 	inst(946, {	-- Antorus, the Burning Throne
 		["coord"] = { 54.9, 62.3, ANTORAN_WASTES },
@@ -413,8 +418,8 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					["groups"] = { i(152901) },	-- Violet Spellwing (MOUNT!)
 				})),
 				q(49077, {	-- Moments of Reflection
-					["provider"] = { "n", 129429 },	-- Alor'idal Crystal
-					["groups"] = { i(153555) },	-- Alor'idal Crystal (QI!)
+					["qg"] = 129429,	-- Alor'idal Crystal
+					["qi"] = 153555,	-- Alor'idal Crystal (QI!)
 				}),
 			}),
 			Difficulty(DIFFICULTY.RAID.MULTI.ALL).AddGroups({
@@ -465,10 +470,6 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 				BossOnly(ARGUS, {
 					i(153115),	-- Scythe of the Unmaker [BLUE]
 				}),
-			}),
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["cr"] = 111246,	-- Archmage Timear
-				["coord"] = { 63.7, 55.0, LEGION_DALARAN },
 			}),
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups({
 				ZoneDrops({}),
@@ -549,7 +550,7 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 							49076,	-- Antorus, the Burning Throne: Dark Passage (Mythic)
 						},
 						["qg"] = 125512,	-- High Exarch Turalyon
-						["groups"] = { i(152902) },	-- Rune of Passage (QI!)
+						["qi"] = 152902,	-- Rune of Passage (QI!)
 					}),
 					q(49133, {	-- Antorus, the Burning Throne: The Heart of Argus (Normal)
 						["description"] = "Finishing this quest will grant you immediate access to Aggramar on Normal difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Heroic or Mythic version first.|r\n",
@@ -559,7 +560,7 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 							49135,	-- Antorus, the Burning Throne: The Heart of Argus (Mythic)
 						},
 						["qg"] = 125682,	-- Prophet Velen
-						["groups"] = { i(152908) },	-- Sigil of the Dark Titan (QI!)
+						["qi"] = 152908,	-- Sigil of the Dark Titan (QI!)
 					}),
 				}),
 				Boss(WORLDBREAKER),
@@ -591,14 +592,14 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 						["description"] = "Finishing this quest will grant you immediate access to Imonar the Soulhunter on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
 						["altQuests"] = { 49076 },	-- Antorus, the Burning Throne: Dark Passage (Mythic)
 						["qg"] = 125512,	-- High Exarch Turalyon
-						["groups"] = { i(152906) },	-- Rune of Passage (QI!)
+						["qi"] = 152906,	-- Rune of Passage (QI!)
 					}),
 					q(49134, {	-- Antorus, the Burning Throne: The Heart of Argus (Heroic)
 						["description"] = "Finishing this quest will grant you immediate access to Aggramar on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
 						["sourceQuests"] = { 49075 },	-- Antorus, the Burning Throne: Dark Passage (Heroic)
 						["altQuests"] = { 49135 },	-- Antorus, the Burning Throne: The Heart of Argus (Mythic)
 						["qg"] = 125682,	-- Prophet Velen
-						["groups"] = { i(152909) },	-- Sigil of the Dark Titan (QI!)
+						["qi"] = 152909,	-- Sigil of the Dark Titan (QI!)
 					}),
 				}),
 				Boss(WORLDBREAKER),
@@ -619,13 +620,13 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					q(49076, {	-- Antorus, the Burning Throne: Dark Passage (Mythic)
 						["description"] = "Finishing this quest will grant you immediate access to Imonar the Soulhunter on Mythic difficulty each week.\n",
 						["qg"] = 125512,	-- High Exarch Turalyon
-						["groups"] = { i(152907) },	-- Rune of Passage (QI!)
+						["qi"] = 152907,	-- Rune of Passage (QI!)
 					}),
 					q(49135, {	-- Antorus, the Burning Throne: The Heart of Argus (Mythic)
 						["description"] = "Finishing this quest will grant you immediate access to Aggramar on Mythic difficulty each week.\n",
 						["sourceQuests"] = { 49076 },	-- Antorus, the Burning Throne: Dark Passage (Mythic)
 						["qg"] = 125682,	-- Prophet Velen
-						["groups"] = { i(152910) },	-- Sigil of the Dark Titan (QI!)
+						["qi"] = 152910,	-- Sigil of the Dark Titan (QI!)
 					}),
 				}),
 				Boss(WORLDBREAKER, {

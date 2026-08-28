@@ -987,10 +987,12 @@ root(ROOTS.Zones, {
 							33160,	-- Time Keeper Kairoz
 						},
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 					}),
 					q(33337, {	-- A Vision in Time
 						["sourceQuests"] = { 33338 },	-- Empowering the Hourglass
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["groups"] = {
 							i(105930),	-- Vision of Time
 						},
@@ -998,6 +1000,7 @@ root(ROOTS.Zones, {
 					q(33378, {	-- Courting Destiny
 						["sourceQuests"] = { 33377 },	-- Hidden Threads
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["groups"] = {
 							i(105934),	-- Vision of Time
 						},
@@ -1009,6 +1012,7 @@ root(ROOTS.Zones, {
 					q(33338, {	-- Empowering the Hourglass
 						["sourceQuests"] = { 33336 },	-- The Essence of Time
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["isWeekly"] = true,
 						["groups"] = {
 							i(105715),	-- Epoch Stone (QI!)
@@ -1017,6 +1021,7 @@ root(ROOTS.Zones, {
 					q(33377, {	-- Hidden Threads
 						["sourceQuests"] = { 33376 },	-- Seeking Fate
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["groups"] = {
 							i(105933),	-- Vision of Time
 						},
@@ -1024,6 +1029,7 @@ root(ROOTS.Zones, {
 					q(33332, {	-- Hints From The Past
 						["sourceQuests"] = { 33228 },	-- Time In Your Hands
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 					}),
 					q(33231, {	-- Journey to the Timeless Isle (A)
 						["sourceQuests"] = {
@@ -1050,11 +1056,13 @@ root(ROOTS.Zones, {
 					}),
 					q(33222, {	-- Little Tommy Newcomer
 						["qg"] = 73626,	-- Little Tommy Newcomer
+						["coord"] = { 34.7, 60.3, TIMELESS_ISLE },
 						["isDaily"] = true,
 					}),
 					q(33379, {	-- One Final Turn
 						["sourceQuests"] = { 33378 },	-- Courting Destiny
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["groups"] = {
 							i(105935),	-- Vision of Time
 						},
@@ -1062,6 +1070,7 @@ root(ROOTS.Zones, {
 					q(33374, {	-- Path of the Mistwalker
 						["sourceQuests"] = { 33341 },	-- Wayshrines Of The Celestials
 						["qg"] = 73303,	-- Emperor Shaohao
+						["coord"] = { 42.8, 55.6, TIMELESS_ISLE },
 						["isDaily"] = true,
 						["groups"] = {
 							i(103642),	-- Book of the Ages
@@ -1072,6 +1081,7 @@ root(ROOTS.Zones, {
 					q(33375, {	-- Refining The Vision
 						["sourceQuests"] = { 33337 },	-- A Vision in Time
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["groups"] = {
 							i(105931),	-- Vision of Time
 						},
@@ -1108,6 +1118,7 @@ root(ROOTS.Zones, {
 					q(33376, {	-- Seeking Fate
 						["sourceQuests"] = { 33375 },	-- Refining The Vision
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["groups"] = {
 							i(105932),	-- Vision of Time
 						},
@@ -1115,6 +1126,7 @@ root(ROOTS.Zones, {
 					q(33334, {	-- Strong Enough To Survive
 						["sourceQuests"] = { 33333 },	-- Timeless Treasures
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["isWeekly"] = true,
 					}),
 					q(33343, {	-- The Archiereus Of Flame
@@ -1130,6 +1142,7 @@ root(ROOTS.Zones, {
 					q(33336, {	-- The Essence of Time
 						["sourceQuests"] = { 33161 },	-- A Timeless Tour
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["groups"] = {
 							i(105715),	-- Epoch Stone (QI!)
 						},
@@ -1137,6 +1150,7 @@ root(ROOTS.Zones, {
 					q(33335, {	-- The Last Emperor
 						["sourceQuests"] = { 33228 },	-- Time In Your Hands
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 					}),
 					q(33228, {	-- Time In Your Hands
 						["sourceQuests"] = {
@@ -1144,6 +1158,7 @@ root(ROOTS.Zones, {
 							33160,	-- Time Keeper Kairoz
 						},
 						["qg"] = 72870,	-- Kairoz
+						["coords"] = { 34.6, 53.6, TIMELESS_ISLE },
 						["groups"] = {
 							i(104013),	-- Timeless Cloth Armor Cache
 							i(104012),	-- Timeless Leather Armor Cache
@@ -1259,6 +1274,10 @@ root(ROOTS.Zones, {
 						["questID"] = 32967,
 						["isDaily"] = true,
 						["coord"] = { 44.0, 70.0, TIMELESS_ISLE },
+						["providers"] = {
+							{ "n", 73297 },	-- Fishgorged Crane (Dead)
+							{ "n", 72095 },	-- Fishgorged Crane
+						},
 						["groups"] = {
 							i(104268),	-- Pristine Stalker Hide
 						},
@@ -1371,6 +1390,7 @@ root(ROOTS.Zones, {
 						["description"] = "Travel around the zone and kill Death Adders — whenever one respawns, there's a chance it will respawn as an Imperial Python instead of the normal mob.",
 						["questID"] = 33303,
 						["isDaily"] = true,
+						["provider"] = { "n", 72841 },	-- Death Adder
 						["coords"] = {	-- listing basically all the coordinates, just because they're so spread out!
 							{ 30.8, 36.2, TIMELESS_ISLE },
 							{ 29.0, 43.6, TIMELESS_ISLE },
@@ -1395,6 +1415,7 @@ root(ROOTS.Zones, {
 						["description"] = "Travel around the area where the Celestial bosses spawn and kill Ironfur Great Bulls — whenever one respawns, there's a chance it will respawn as an Ironfur Steelhorn instead of the normal mob.",
 						["questID"] = 33296,
 						["isDaily"] = true,
+						["provider"] = { "n", 72844 },	-- Ironfur Great Bull
 						["coords"] = {
 							{ 43.8, 43.8, TIMELESS_ISLE },
 							{ 41.1, 37.6, TIMELESS_ISLE },
@@ -1443,9 +1464,37 @@ root(ROOTS.Zones, {
 						["questID"] = 33302,
 						["isDaily"] = true,
 						["coords"] = {
-							{ 23.6, 28.6, TIMELESS_ISLE },
-							{ 68.8, 74.8, TIMELESS_ISLE },
+							{ 23.5, 27.9, TIMELESS_ISLE },
+							{ 30.7, 31.3, TIMELESS_ISLE },
+							{ 21.8, 31.4, TIMELESS_ISLE },	-- (x2)
+							{ 22.4, 35.4, TIMELESS_ISLE },	-- (x4)
+							{ 20.6, 47.6, TIMELESS_ISLE },
+							{ 18.0, 54.3, TIMELESS_ISLE },	-- (x2)
+							{ 16.2, 60.6, TIMELESS_ISLE },
+							{ 18.4, 57.9, TIMELESS_ISLE },
+							{ 18.4, 62.5, TIMELESS_ISLE },
+							{ 21.1, 63.5, TIMELESS_ISLE },
+							{ 20.8, 71.3, TIMELESS_ISLE },
+							{ 17.8, 73.7, TIMELESS_ISLE },
+							{ 20.2, 77.7, TIMELESS_ISLE },
+							{ 25.1, 74.9, TIMELESS_ISLE },
+							{ 27.5, 74.7, TIMELESS_ISLE },
+							{ 27.1, 80.2, TIMELESS_ISLE },
+							{ 29.8, 84.3, TIMELESS_ISLE },
+							{ 32.7, 85.4, TIMELESS_ISLE },
+							{ 36.0, 87.9, TIMELESS_ISLE },
+							{ 38.6, 86.7, TIMELESS_ISLE },
+							{ 40.9, 90.5, TIMELESS_ISLE },
+							{ 45.2, 89.5, TIMELESS_ISLE },
+							{ 52.4, 86.4, TIMELESS_ISLE },
+							{ 62.1, 83.0, TIMELESS_ISLE },
+							{ 62.5, 79.8, TIMELESS_ISLE },
+							{ 65.8, 78.4, TIMELESS_ISLE },
+							{ 69.1, 74.9, TIMELESS_ISLE },
+							{ 69.9, 71.1, TIMELESS_ISLE },
+							{ 70.6, 65.0, TIMELESS_ISLE },	-- (x2)
 						},
+						["provider"] = { "n", 72766 },	-- Ancient Spineclaw
 						["groups"] = {
 							i(104293),	-- Scuttler's Shell
 							i(104168),	-- Spineclaw Crab (PET!)
@@ -1515,6 +1564,17 @@ root(ROOTS.Zones, {
 					n(72769, {	-- Spirit of Jadefire
 						["questID"] = 33293,
 						["isDaily"] = true,
+						["coords"] = {
+							{ 56.2, 30.4, 555 },
+							{ 62.6, 36.0, 555 },
+							{ 73.8, 31.0, 555 },
+							{ 70.6, 62.6, 555 },
+							{ 64.0, 47.8, 555 },
+							{ 65.2, 64.8, 555 },
+							{ 54.8, 68.0, 555 },
+							{ 48.2, 62.2, 555 },
+							{ 43.1, 41.2, TIMELESS_ISLE },	-- cave entrance
+						},
 						["groups"] = {
 							i(104258),	-- Glowing Green Ash
 							i(104307),	-- Jadefire Spirit (PET!)
@@ -1653,7 +1713,10 @@ root(ROOTS.Zones, {
 						["description"] = "Coordinates are for the side of the hill, where you start to jump across the pillars toward the treasure.",
 						["isWeekly"] = true,
 						["questID"] = 32969,
-						["coord"] = { 51.5, 73.4, TIMELESS_ISLE },
+						["coords"] = {
+							{ 49.7, 69.5, TIMELESS_ISLE },
+							{ 51.5, 73.4, TIMELESS_ISLE },
+						},
 					}),
 					o(221036, {	-- Gleaming Treasure Satchel
 						["description"] = "Starting at around |cFFFFFFFF71.5, 79.8|r, mount up and do a running jump off the corner of the back platform. Landing successfully on the beam may take a couple tries, depending on the angle and the point at which you jump. Once you're on the beam, dismount and walk carefully toward the treasure.",
@@ -1939,7 +2002,12 @@ root(ROOTS.Zones, {
 							crit(24021, {	-- Sunken Treasure
 								["achievementID"] = 8727,	-- Where There's Pirates, There's Booty
 							}),
-							i(134024),	-- Cursed Swabby Helmet (TOY!)
+							i(134024, {	-- Cursed Swabby Helmet (TOY!)
+								["timeline"] = { ADDED_7_0_3 },
+							}),
+							i(104038, {	-- Cursed Swabby Helmet (TOY!)
+								["timeline"] = { ADDED_5_4_0, DELETED_7_0_3 },
+							}),
 						},
 					}),
 				}),

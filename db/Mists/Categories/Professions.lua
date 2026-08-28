@@ -1,5 +1,5 @@
 ﻿---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,ah,cat,crit,cu,faction,flt,h,heir,i,p,prof,q,qo,r,s,sp,title,x=_.CreateAchievement,_.CreateHeader,_.CreateCategory,_.CreateAchievementCriteria,_.CreateCurrencyClass,_.CreateFaction,_.CreateFilter,_.CreateCustomHeader,_.CreateHeirloom,_.CreateItem,_.CreateSpecies,_.CreateProfession,_.CreateQuest,_.CreateQuestObjective,_.CreateRecipe,_.CreateItemSource,_.CreateSpell,_.CreateTitle,_.CreateExpansion;
 categories.Professions=
@@ -742,8 +742,7 @@ q(33026,{coords={
 q(33027,{coords={
 [376]={{53.6,51.2}}},qgs={64231},requireSkill=185,sourceQuests={33026},u=54,g={
 r(145062,{learnedAt=600,requireSkill=185,u=54})}})}})}})}})}),
-prof(333,{
-h(-12,{requireSkill=333})}),
+prof(333),
 prof(202,{
 x(1,{requireSkill=202,g={
 h(-45,{awp=40300,requireSkill=202,g={
@@ -912,7 +911,7 @@ ach(4917,{requireSkill=356}),
 ach(5851,{awp=40200,requireSkill=356})}}),
 ah(67414,{awp=40001,description="Fishing Daily Quest Reward",providers={{"i",67414},{"i",112623}},requireSkill=356,type="i",g={
 p(211,{awp=40003,b=1,itemID=44983,npcID=33226,q=3,requireSkill=356,spellID=62561}),
-s(143883,33820,{awp=40003,b=1,f=4,q=3,requireSkill=356}),
+s(143883,33820,{awp=40003,b=1,f=4,loc=40,q=3,requireSkill=356}),
 s(176031,45991,{awp=40003,b=1,f=57,learnedAt=300,q=3,requireSkill=356}),
 s(176032,45992,{awp=40003,b=1,f=57,learnedAt=300,q=3,requireSkill=356}),
 i(67410,{awp=40003,requireSkill=356}),
@@ -2809,6 +2808,5 @@ q(10832,{altQuests={10831,10833},coords={
 qo(1,{cost={{"i",31742,1}},crs={22408},providers={{"i",31741}},requireSkill=197,u=2}),
 r(26797,{requireSkill=197,u=2})}})}})}}),
 x(3,{requireSkill=197}),
-x(4,{awp=40003,requireSkill=197,g={
-h(-12,{requireSkill=197})}})})}});
-end);
+x(4,{requireSkill=197})})}})
+end)

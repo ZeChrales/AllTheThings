@@ -20,12 +20,15 @@ THE_SCEPTER_OF_THE_SHIFTING_SANDS = createHeader({
 	},
 	description = {
 		en = "In addition to all players on a realm working towards completing the War Effort, one player had to create the Scepter of the Shifting Sands - a very difficult task that could only be solved by a server's top guild back when the questline was added. After the war effort was finished and the army of the Alliance and the Horde arrived in Silithus, the Scepter of the Shifting Sands could be used on the Scarab Gong. Doing so resulted in the opening of Ahn'Qiraj. The first player to bang the Scarab Gong on each server would be rewarded with the Scarab Lord title (in Burning Crusade, the title will not be available in Classic!) and the Black Qiraji Resonating Crystal mount. Anyone else who followed them within 10 hours was rewarded with the title as well.\n\nAlthough it is still possible to complete the questline for the Scepter of the Shifting Sands after the gates have been opened on your server, doing so will not reward neither the Black Qiraji Resonating Crystal nor the Scarab Lord title.",
+		es = "Además de que todos los jugadores de un reino trabajaran para completar el Esfuerzo de Guerra, un jugador tenía que crear el El cetro del Mar de Dunas, una tarea muy difícil que solo podía ser resuelta por la mejor hermandad de un servidor cuando se añadió la cadena de misiones. Una vez finalizado el esfuerzo de guerra y llegados los ejércitos de la Alianza y la Horda a Silithus, el El cetro del Mar de Dunas podía usarse en el Gong del Escarabajo. Al hacerlo, se abría Ahn'Qiraj. El primer jugador en golpear el Gong del Escarabajo en cada servidor era recompensado con el título de Señor del Escarabajo (en Burning Crusade, ¡el título no estará disponible en Classic!) y la montura Cristal resonador negro Qiraji. Cualquiera que lo siguiera en las siguientes 10 horas también era recompensado con el título.\n\nAunque todavía es posible completar la cadena de misiones del El cetro del Mar de Dunas después de que se hayan abierto las puertas en tu servidor, hacerlo no otorgará ni el Cristal resonador negro Qiraji ni el título de Señor del Escarabajo.",
+		mx = "Además de que todos los jugadores de un reino trabajaran para completar el Esfuerzo de Guerra, un jugador tenía que crear el El cetro del Mar de Dunas, una tarea muy difícil que solo podía ser completada por la mejor hermandad de un servidor cuando se añadió la cadena de misiones. Una vez finalizado el esfuerzo de guerra y llegaran los ejércitos de la Alianza y la Horda a Silithus, el El cetro del Mar de Dunas podía usarse en el Gong del Escarabajo. Al hacerlo, se abría Ahn'Qiraj. El primer jugador en golpear el Gong del Escarabajo en cada servidor era recompensado con el título de Señor del Escarabajo (en Burning Crusade, ¡el título no estará disponible en Classic!) y la montura Cristal resonador negro Qiraji. Cualquiera que lo siguiera en las siguientes 10 horas también era recompensado con el título.\n\nAunque todavía es posible completar la cadena de misiones del El cetro del Mar de Dunas después de que se hayan abierto las puertas en tu servidor, hacerlo no otorgará ni el Cristal resonador negro Qiraji ni el título de Señor del Escarabajo.",
 		cn = "除了服务器上所有玩家共同努力完成备战任务外，还需要一名玩家制作出流沙节杖 —— 这是一项极为艰巨的任务，在该任务线刚推出时，只有服务器上顶尖的公会才能完成。当备战任务结束，联盟与部落的军队抵达希利苏斯后，流沙节杖可用于敲响甲虫之锣。敲响铜锣后，安其拉之门就会开启。每个服务器上第一个敲响甲虫之锣的玩家将获得 “甲虫之王” 称号（在《燃烧的远征》中，经典旧世的这个称号不会再出现！）以及黑色其拉共鸣水晶坐骑。在随后 10 小时内敲响铜锣的其他玩家也能获得该称号。\n\n尽管在服务器上安其拉之门开启后，玩家仍可完成流沙节杖的任务线，但完成后既不会获得黑色其拉共鸣水晶坐骑，也不会获得 “甲虫之王” 称号。",
 	},
 });
 
 root(ROOTS.WorldEvents, n(THE_SCEPTER_OF_THE_SHIFTING_SANDS,
-	applyclassicphase(PHASE_FIVE, bubbleDown({ ["timeline"] = { REMOVED_4_0_3 } }, {
+	applyclassicphase(PHASE_FIVE, {
+		["timeline"] = { ADDED_1_9_0, REMOVED_4_0_3 },
 		["maps"] = {
 			CAVERNS_OF_TIME,
 			TANARIS,
@@ -68,14 +71,12 @@ root(ROOTS.WorldEvents, n(THE_SCEPTER_OF_THE_SHIFTING_SANDS,
 					["groups"] = {
 						ach(416, {	-- Scarab Lord (Achievement)
 							["sourceQuest"] = 8743,	-- Bang a Gong!
-							["timeline"] = { REMOVED_4_0_3 },
+							["timeline"] = { ADDED_1_9_0, REMOVED_4_0_3 },
 						}),
 						title(33, {	-- Scarab Lord Crieve
 							["timeline"] = { ADDED_2_0_3, REMOVED_4_0_3 },	-- Added in Burning Crusade Prepatch
 						}),
-						i(21176, {	-- Black Qiraji Battle Tank (MOUNT!)
-							["timeline"] = { REMOVED_4_0_3 },
-						}),
+						i(21176),	-- Black Qiraji Battle Tank (MOUNT!)
 						mount(239770, {	-- Black Qiraji War Tank (MOUNT!)  (This a high resolution version given to players in the end of Legion)
 							["timeline"] = { ADDED_7_3_5, REMOVED_7_3_5 },	-- when it's added, it's already removed because it's only given to players who already have the original removed
 						}),
@@ -138,11 +139,14 @@ root(ROOTS.WorldEvents, n(THE_SCEPTER_OF_THE_SHIFTING_SANDS,
 					["lvl"] = 60,
 				}),
 				q(8599, {	-- Love Song for Narain
-					["sourceQuest"] = 8597,	-- Draconic for Dummies
+					["sourceQuest"] = 8576,	-- Translating the Ledger
 					["providers"] = {
 						{ "n", 15526 },	-- Meridith the Mermaiden
 						{ "i", 21032 },	-- Meridith's Love Letter
 					},
+					-- #if BEFORE CATA
+					["description"] = "You must be on the quest 'Draconic for Dummies' for this quest to be available.",
+					-- #endif
 					["coord"] = { 59.4, 96.0, TANARIS },
 					["lvl"] = 60,
 				}),
@@ -368,8 +372,9 @@ root(ROOTS.WorldEvents, n(THE_SCEPTER_OF_THE_SHIFTING_SANDS,
 					["groups"] = {
 						objective(1, {	-- 0/1 Draconic For Dummies: Volume II
 							["provider"] = { "i", 21111 },	-- Draconic For Dummies: Volume II
+						}),
+						i(21112, {	-- Magical Book Binding
 							["cost"] = {
-								{ "i", 21112, 1 },	-- Magical Book Binding
 								{ "i", 21103, 1 },	-- Draconic for Dummies [Chapter I] (Doctor Weavil)
 								{ "i", 21104, 1 },	-- Draconic for Dummies [Chapter II] (Blasted Lands Demons)
 								{ "i", 21105, 1 },	-- Draconic for Dummies [Chapter III] (Winterspring Demons)
@@ -379,67 +384,10 @@ root(ROOTS.WorldEvents, n(THE_SCEPTER_OF_THE_SHIFTING_SANDS,
 								{ "i", 21109, 1 },	-- Draconic for Dummies [Chapter VII] (Blackwing Lair)
 								{ "i", 21110, 1 },	-- Draconic for Dummies [Chapter VIII] (Ragnaros)
 							},
+							["groups"] = {
+								i(21111),	-- Draconic For Dummies: Volume II
+							},
 						}),
-						{
-							["itemID"] = 21103,	-- Draconic for Dummies [Chapter I]
-							["coord"] = { 77.8, 17.0, DUSTWALLOW_MARSH },
-							["cr"] = 15552,	-- Doctor Weavil
-						},
-						{
-							["itemID"] = 21104,	-- Draconic for Dummies [Chapter II]
-							["coord"] = { 44.6, 56.0, BLASTED_LANDS },
-							["crs"] = {
-								12396,	-- Doomguard Commander
-								8716,	-- Dreadlord
-								8717,	-- Felguard Elite
-							},
-						},
-						{
-							["itemID"] = 21105,	-- Draconic for Dummies [Chapter III]
-							["coords"] = {
-								{ 65.0, 80.2, WINTERSPRING },
-								{ 51.6, 84.4, WINTERSPRING },
-								{ 54.6, 87.4, WINTERSPRING },
-							},
-							["crs"] = {
-								10201,	-- Lady Hederine
-								7461,	-- Hederine Initiate
-								7463,	-- Hederine Slayer
-							},
-						},
-						{
-							["itemID"] = 21106,	-- Draconic for Dummies [Chapter IV]
-							["_allowObjectProvider"] = true,
-							["provider"] = { "o", 180666 },	-- Draconic for Dummies
-							["coord"] = { 77.0, 38.0, UNDERCITY },
-						},
-						{
-							["itemID"] = 21107,	-- Draconic for Dummies [Chapter V]
-							["_allowObjectProvider"] = true,
-							["provider"] = { "o", 180665 },	-- Draconic for Dummies
-							["coords"] = {
-								-- #if AFTER WRATH
-								{ 75.35, 29.73, STORMWIND_CITY },
-								-- #else
-								{ 72.0, 6.0, STORMWIND_CITY },
-								-- #endif
-							},
-						},
-						{
-							["itemID"] = 21108,	-- Draconic for Dummies [Chapter VI]
-							["cr"] = 10184,	-- Onyxia
-						},
-						{
-							["itemID"] = 21109,	-- Draconic for Dummies [Chapter VII]
-							["_allowObjectProvider"] = true,
-							["provider"] = { "o", 180667 },	-- Draconic for Dummies
-							["description"] = "Located in Blackwing Lair on one of the tables on the ramp after the first wyrmguard overseer pull.",
-							["coord"] = { 32.0, 42.9, BLACKWING_LAIR },
-						},
-						{
-							["itemID"] = 21110,	-- Draconic for Dummies [Chapter VIII]
-							["cr"] = 11502,	-- Ragnaros
-						},
 						i(21517),	-- Gnomish Turban of Psychic Might
 					},
 				}),
@@ -520,5 +468,5 @@ root(ROOTS.WorldEvents, n(THE_SCEPTER_OF_THE_SHIFTING_SANDS,
 				}),
 			}),
 		},
-	}))
+	})
 ));

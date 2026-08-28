@@ -380,6 +380,9 @@ i(104302);	-- Blackflame Daggers
 i(103685);	-- Celestial Defender's Medallion
 i(102467);	-- Censer of Eternal Agony
 i(104318);	-- Crashin' Thrashin' Flyer Controller
+-- #if BEFORE 7.0.3
+i(104038);	-- Cursed Swabby Helmet
+-- #endif
 i(104309);	-- Eternal Kiln
 i(104324);	-- Foot Ball
 i(101571);	-- Moonfang Shroud
@@ -1584,10 +1587,9 @@ i(248485);	-- Wormhole Generator: Quel'Thalas
 ------------------
 i(268456);	-- Animated Bench
 i(268455);	-- Enchanted Hourglass
+i(267472);	-- Gnomatic Projector
 i(272287);	-- Nap Mat
 i(272339);	-- Umbral Champion's Illustrious Banner
---- Unsorted ---
-i(267472);	-- Gnomatic Projector
 
 ------------------
 -- PATCH 12.0.7 --
@@ -1607,22 +1609,24 @@ i(264368);	-- ??
 -- PATCH 12.1.0 --
 ------------------
 i(280201);	-- Book of Storytime
+i(276258);	-- Companion Command Crystal
+i(275988);	-- Corrosive Victory
 i(280419);	-- Cursed Badge of the Soulcoilers
+i(276189);	-- Effigy of Dundun
 i(279021);	-- Forgotten Memento
+i(274817);	-- Gold Starfish
+i(275683);	-- G-00
 i(279054);	-- Idol of Blue Water and Blue Sky
 i(276925);	-- Idol of Ula'tek
 i(277954);	-- Jaktu's Cursed Blade
 i(268504);	-- Malfunctioning Staff
-i(274921);	-- Pearl of Jubilation
---- Unsorted ---
-i(279052);	-- Ancient Amani Mask
-i(276258);	-- Companion Command Crystal
-i(275988);	-- Corrosive Victory
-i(276189);	-- Effigy of Dundun
-i(275683);	-- G-00
-i(274817);	-- Gold Starfish
 i(278557);	-- Otoola's Recognition
-i(276207);	-- Preyhunter's Masquerade
+i(274921);	-- Pearl of Jubilation
 i(276229);	-- Preyhunter's Trophy Stand
 i(275825);	-- Ula'tek's Sssacrificial Rain
+--- Unsorted ---
+i(279052);	-- Ancient Amani Mask
+i(276207);	-- Preyhunter's Masquerade
+i(274730);	-- Tuskarr Ice Fishing Tent
+i(274967);	-- Varian's Dragon Throne
 i(279590);	-- Venomous Champion's Illustrious Banner

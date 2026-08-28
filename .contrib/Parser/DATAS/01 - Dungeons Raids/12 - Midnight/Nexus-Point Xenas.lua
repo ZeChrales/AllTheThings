@@ -19,6 +19,11 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS)
 local BossOnly, Difficulty =
 InstanceHelper.BossOnly, InstanceHelper.Difficulty
 
+-- TODO: M+ tooltip
+-- InstanceHelper.BossObjects = {
+-- 	[MPLUS] = { 574409 },	-- Challenger's Cache
+-- }
+
 root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
 	inst(1316, {	-- Nexus-Point Xenas
 		["coord"] = { 64.4, 61.8, MAP.MIDNIGHT.VOIDSTORM },
@@ -63,17 +68,23 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 					i(251157),	-- Searing Spaulders
 				}),
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS).AddGroups({
-				BossOnly(LOTHRAXION, {
-					ach(61646),	-- Heroic: Nexus-Point Xenas
-				}),
+			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS, {
+				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_1_0, ADDED_12_2_0 },
+				["groups"] = {
+					BossOnly(LOTHRAXION, {
+						ach(61646),	-- Heroic: Nexus-Point Xenas
+					}),
+				},
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MYTHIC).AddGroups({
-				BossOnly(LOTHRAXION, {
-					ach(61647),	-- Mythic: Nexus-Point Xenas
-					ach(61618),	-- Mythic: Nexus-Point Xenas Guild Run
-				}),
-			}),
+			Difficulty(DIFFICULTY.DUNGEON.MYTHIC, {
+                ["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_1_0, ADDED_12_2_0 },
+                ["groups"] = {
+					BossOnly(LOTHRAXION, {
+						ach(61647),	-- Mythic: Nexus-Point Xenas
+						ach(61618),	-- Mythic: Nexus-Point Xenas Guild Run
+					}),
+                },
+            }),
 		},
 	}),
 })));

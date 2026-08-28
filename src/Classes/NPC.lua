@@ -67,7 +67,7 @@ if C_TooltipInfo_GetHyperlink then
 					end
 				end
 				-- return a secret name but don't cache it for re-use
-				if app.WOWAPI.issecretvalue(title) then
+				if issecretvalue(title) then
 					-- app.PrintDebug("returning secret name", title)
 					return title
 				end
@@ -261,11 +261,13 @@ local BlockedDisplayID = {
 	[27823] = 0,	-- empty blue thing
 	[28016] = 0,	-- empty blue thing
 	[52318] = 0,	-- generic bunny
+	[54893] = 0,	-- nothing
 	[56187] = 0,	-- generic bunny
 	[64062] = 0,	-- generic bunny
 	[110046] = 0,	-- nothing
 	[111386] = 0,	-- nothing
 	[112684] = 0,	-- nothing
+	[129163] = 0,	-- nothing
 	[143866] = 0,	-- nothing
 }
 local AllowedDisplayID = setmetatable({}, {

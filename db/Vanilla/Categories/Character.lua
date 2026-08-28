@@ -1,6 +1,6 @@
-﻿if not (not C_Seasons or C_Seasons.GetActiveSeason() ~= 2) then return; end
+﻿if not (not C_Seasons or C_Seasons.GetActiveSeason() ~= 2) then return end
 ---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,cl,crit,faction,flt,h,i,mnt,r,s=_.CreateAchievement,_.CreateCharacterClass,_.CreateAchievementCriteria,_.CreateFaction,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateMount,_.CreateRecipe,_.CreateItemSource;
 categories.Character=
@@ -25,11 +25,10 @@ ach(10,{rwp=90001}),
 ach(11,{rwp=90001}),
 ach(879,{providers={{"i",8586},{"i",12302},{"i",12303},{"i",12330},{"i",12351},{"i",12353},{"i",12354},{"i",13317},{"i",13326},{"i",13327},{"i",13328},{"i",13329},{"i",15292},{"i",15293}},rwp=10400,u=2}),
 ach(522),
-ach(16433,{awp=11403,OnUpdate=function(t)if t.collectible and _.Level>=60 then	local i,spellID=1,select(10,UnitBuff("player",1));while spellID do	if spellID==364001 then	t:SetAchievementCollected(t.achievementID,true);return false;end	i=i + 1;spellID=select(10,UnitBuff("player",i));end;t:SetAchievementCollected(t.achievementID,false);end	end,rwp=11500,u=2}),
+ach(16433,{awp=11403,OnUpdate=function(t)if t.collectible and _.Level>=60 then	local i,spellID=1,select(10,UnitBuff("player",1))while spellID do	if spellID==364001 then	t:SetAchievementCollected(t.achievementID,true)return false end	i=i + 1 spellID=select(10,UnitBuff("player",i))end t:SetAchievementCollected(t.achievementID,false)end	end,rwp=11500,u=2}),
 flt(100,{
 ach(2142),
 ach(2141)})}),
-h(-17),
 h(-31,{sharedDescription="This is a hidden reputation. It might not count towards reputation achievements.",g={
 faction(469,{icon=374217,r=2}),
 faction(67,{icon=374221,r=1}),
@@ -38,29 +37,29 @@ faction(892,{collectible=false,r=1})}}),
 h(-11,{
 cl(11,{
 h(-88,{
-s(158324,6124,{f=4,filterForRWP=5,q=0,rwp=90105}),
-s(158323,6123,{f=4,filterForRWP=5,q=0,rwp=90105}),
-s(158335,6139,{f=4,filterForRWP=5,q=0,rwp=90105})}),
+s(158324,6124,{f=4,filterForRWP=5,loc=46,q=0,rwp=90105}),
+s(158323,6123,{f=4,filterForRWP=5,loc=42,q=0,rwp=90105}),
+s(158335,6139,{f=4,filterForRWP=5,loc=42,q=0,rwp=90105})}),
 h(-101,{
 s(156040,35,{f=28,q=1}),
 s(157420,3661,{f=28,q=1})})}),
 cl(3,{
 h(-88,{
-s(156067,129,{f=2,filterForRWP=6,q=1,rwp=90105}),
-s(156071,147,{f=4,filterForRWP=6,q=0,rwp=90105}),
-s(158326,6126,{f=4,q=0,rwp=40003}),
-s(158333,6137,{f=4,filterForRWP=6,q=0,rwp=90105}),
-s(158327,6127,{f=4,q=1,rwp=40003}),
-s(158334,6138,{f=2,filterForRWP=6,q=1,rwp=90105})}),
+s(156067,129,{f=2,filterForRWP=6,loc=47,q=1,rwp=90105}),
+s(156071,147,{f=4,filterForRWP=6,loc=46,q=0,rwp=90105}),
+s(158326,6126,{f=4,loc=46,q=0,rwp=40003}),
+s(158333,6137,{f=4,filterForRWP=6,loc=46,q=0,rwp=90105}),
+s(158327,6127,{f=4,loc=47,q=1,rwp=40003}),
+s(158334,6138,{f=2,filterForRWP=6,loc=47,q=1,rwp=90105})}),
 h(-101,{
 s(156861,2508,{f=31,q=1}),
 s(156857,2504,{f=32,q=1,rwp=90001})})}),
 cl(8,{
 h(-88,{
-s(156055,55,{f=4,q=1,rwp=90105}),
-s(156289,1395,{f=4,q=0,rwp=90105}),
-s(156056,56,{f=4,q=0,rwp=90105}),
-s(158336,6140,{f=4,q=0,rwp=90105})}),
+s(156055,55,{f=4,loc=47,q=1,rwp=90105}),
+s(156289,1395,{f=4,loc=46,q=0,rwp=90105}),
+s(156056,56,{f=4,loc=42,q=0,rwp=90105}),
+s(158336,6140,{f=4,loc=42,q=0,rwp=90105})}),
 h(-101,{
 s(156040,35,{f=28,q=1}),
 s(157420,3661,{f=28,q=1})})}),
@@ -68,34 +67,34 @@ cl(2,{
 flt(100,{
 mnt(13819,{c={2},lvl=40,races={1,3}})}),
 h(-88,{
-s(156046,43,{f=2,filterForRWP=7,q=1,rwp=90105}),
-s(156047,44,{f=4,filterForRWP=7,q=0,rwp=90105}),
-s(158318,6118,{f=4,q=0,rwp=40003})}),
+s(156046,43,{f=2,filterForRWP=7,loc=47,q=1,rwp=90105}),
+s(156047,44,{f=4,filterForRWP=7,loc=46,q=0,rwp=90105}),
+s(158318,6118,{f=4,loc=46,q=0,rwp=40003})}),
 h(-101,{
 s(156041,36,{f=23,q=1}),
 s(156774,2362,{f=8,q=0})})}),
 cl(5,{
 h(-88,{
-s(156290,1396,{f=4,q=0,rwp=90105}),
-s(156052,51,{f=4,q=1,rwp=90105}),
-s(156053,52,{f=4,q=0,rwp=90105}),
-s(158315,6098,{f=4,q=0,rwp=90105}),
-s(158319,6119,{f=4,q=0,rwp=90105}),
-s(158340,6144,{f=4,q=0,rwp=90105})}),
+s(156290,1396,{f=4,loc=46,q=0,rwp=90105}),
+s(156052,51,{f=4,loc=47,q=1,rwp=90105}),
+s(156053,52,{f=4,loc=46,q=0,rwp=90105}),
+s(158315,6098,{f=4,loc=42,q=0,rwp=90105}),
+s(158319,6119,{f=4,loc=42,q=0,rwp=90105}),
+s(158340,6144,{f=4,loc=42,q=0,rwp=90105})}),
 h(-101,{
 s(156040,35,{f=28,q=1}),
 s(157420,3661,{f=28,q=1})})}),
 cl(4,{
 h(-88,{
-s(156050,48,{f=4,filterForRWP=5,q=0,rwp=90105}),
-s(156049,47,{f=5,q=1,rwp=90105}),
-s(156065,121,{f=5,q=1,rwp=90105}),
-s(156064,120,{f=4,filterForRWP=5,q=0,rwp=90105})}),
+s(156050,48,{f=4,filterForRWP=5,loc=46,q=0,rwp=90105}),
+s(156049,47,{f=5,loc=47,q=1,rwp=90105}),
+s(156065,121,{f=5,loc=47,q=1,rwp=90105}),
+s(156064,120,{f=4,filterForRWP=5,loc=46,q=0,rwp=90105})}),
 h(-101,{
 s(156616,2092,{f=20,q=1})})}),
 cl(7,{
 h(-88,{
-s(156073,153,{f=5,q=0,rwp=40003})}),
+s(156073,153,{f=5,loc=46,q=0,rwp=40003})}),
 h(-101,{
 s(156041,36,{f=23,q=1}),
 s(156774,2362,{f=8,q=0})})}),
@@ -103,20 +102,20 @@ cl(9,{
 flt(100,{
 mnt(5784,{c={9},lvl=40})}),
 h(-88,{
-s(156290,1396,{f=4,q=0,rwp=90105}),
-s(156057,57,{f=4,q=0,rwp=90105}),
-s(158329,6129,{f=4,q=0,rwp=90105}),
-s(156058,59,{f=4,q=1,rwp=90105})}),
+s(156290,1396,{f=4,loc=46,q=0,rwp=90105}),
+s(156057,57,{f=4,loc=42,q=0,rwp=90105}),
+s(158329,6129,{f=4,loc=42,q=0,rwp=90105}),
+s(156058,59,{f=4,loc=47,q=1,rwp=90105})}),
 h(-101,{
 s(156040,35,{f=28,q=1})})}),
 cl(1,{
 h(-88,{
-s(156069,140,{f=2,filterForRWP=7,q=1,rwp=90105}),
-s(156068,139,{f=4,filterForRWP=7,q=0,rwp=90105}),
-s(156045,40,{f=2,filterForRWP=7,q=1,rwp=90105}),
-s(158322,6122,{f=2,filterForRWP=7,q=1,rwp=90105}),
-s(156044,39,{f=4,filterForRWP=7,q=0,rwp=90105}),
-s(158321,6121,{f=4,filterForRWP=7,q=0,rwp=90105})}),
+s(156069,140,{f=2,filterForRWP=7,loc=47,q=1,rwp=90105}),
+s(156068,139,{f=4,filterForRWP=7,loc=46,q=0,rwp=90105}),
+s(156045,40,{f=2,filterForRWP=7,loc=47,q=1,rwp=90105}),
+s(158322,6122,{f=2,filterForRWP=7,loc=47,q=1,rwp=90105}),
+s(156044,39,{f=4,filterForRWP=7,loc=46,q=0,rwp=90105}),
+s(158321,6121,{f=4,filterForRWP=7,loc=46,q=0,rwp=90105})}),
 h(-101,{
 s(160475,12282,{f=22,q=1,rwp=90001}),
 s(156039,25,{f=25,q=1}),
@@ -202,5 +201,5 @@ r(7809,{b=1,c={9},itemID=16346,lvl=20,q=1,rank=2}),
 r(7810,{b=1,c={9},itemID=16347,lvl=30,q=1,rank=3}),
 r(7811,{b=1,c={9},itemID=16348,lvl=40,q=1,rank=4}),
 r(11774,{b=1,c={9},itemID=16349,lvl=50,q=1,rank=5}),
-r(11775,{b=1,c={9},itemID=16350,lvl=60,q=1,rank=6})}})})}});
-end);
+r(11775,{b=1,c={9},itemID=16350,lvl=60,q=1,rank=6})}})})}})
+end)

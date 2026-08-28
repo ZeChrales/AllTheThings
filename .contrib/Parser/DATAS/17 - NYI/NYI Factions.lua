@@ -58,6 +58,7 @@ root(ROOTS.NeverImplemented, n(FACTIONS, {
 			faction(550),	-- Engineering - Goblin
 			faction(40),	-- Escortee
 			faction(62),	-- Forlorn Spirit
+			faction(1041),	-- Frenzy
 			faction(31),	-- Friendly
 			faction(65),	-- Furbolg
 			faction(575),	-- Furbolg, Uncorrupted
@@ -766,6 +767,14 @@ root(ROOTS.NeverImplemented, n(FACTIONS, {
 		-- 12.0.5
 		expansion(EXPANSION.MID, patch(0,5), bubbleDownSelf({ ["timeline"] = { CREATED_12_0_5 } }, {
 			faction(2793),	-- Ritual Sites (Paragon)
+		})),
+
+		-- 12.1.0
+		expansion(EXPANSION.MID, patch(1,0), bubbleDownSelf({ ["timeline"] = { CREATED_12_1_0 } }, {
+			faction(2775),	-- [DEPRECATED] Ofi the Sly
+			faction(2776),	-- [DEPRECATED] Untrustworthy Ghost
+			faction(2839),	-- Delves: Season 3
+			faction(2771),	-- Zul'jarra's Forces (Paragon)
 		})),
 	}),
 }));

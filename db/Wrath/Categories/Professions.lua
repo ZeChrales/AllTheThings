@@ -1,5 +1,5 @@
 ﻿---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,ah,cat,crit,flt,h,i,prof,q,qo,r,sp,title,x=_.CreateAchievement,_.CreateHeader,_.CreateCategory,_.CreateAchievementCriteria,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateProfession,_.CreateQuest,_.CreateQuestObjective,_.CreateRecipe,_.CreateSpell,_.CreateTitle,_.CreateExpansion;
 categories.Professions=
@@ -19,8 +19,7 @@ ach(116,{awp=30000}),
 ach(730,{awp=30003,rwp=80001,sym={{"meta_achievement",125,130,135}}}),
 ach(735,{awp=30003})})}),
 prof(171,{
-x(1,{requireSkill=171,g={
-h(-45,{requireSkill=171})}}),
+x(1,{requireSkill=171}),
 x(2,{awp=20005,requireSkill=171,g={
 q(10906,{altQuests={10905,10907},coords={
 [1944]={{52.2,36.4},{53.8,65.8}}},isBreadcrumb=1,learnedAt=325,lvl=68,nextQuests={10902},qgs={16588,18802},requireSkill=171,rwp=40300}),
@@ -211,8 +210,7 @@ crit(6499,{achID=1779,id=1,providers={{"s",45562}},u=30}),
 crit(6502,{achID=1779,id=1,providers={{"s",45560}},u=30}),
 crit(9421,{achID=1779,id=1,providers={{"i",44954}},u=30}),
 crit(6593,{achID=1779,id=1,providers={{"i",43034}},u=30})}})}})}),
-prof(333,{
-h(-12,{requireSkill=333})}),
+prof(333),
 prof(202,{
 x(1,{requireSkill=202,g={
 h(-47,{requireSkill=202,g={
@@ -1643,5 +1641,5 @@ q(10832,{altQuests={10831,10833},coords={
 [1955]={{66.6,68.4}}},description="Upon finishing this quest, you will become a Spellfire Tailor.",lvl=60,maps={1953},qgs={22213},requireSkill=197,u=17,g={
 qo(1,{cost={{"i",31742,1}},crs={22408},providers={{"i",31741}},requireSkill=197,u=17}),
 r(26797,{requireSkill=197,u=17})}})}})}}),
-x(3,{requireSkill=197})})}});
-end);
+x(3,{requireSkill=197})})}})
+end)

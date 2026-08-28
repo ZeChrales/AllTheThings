@@ -53,10 +53,16 @@ local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
 InstanceHelper.UpgradeMapping = {
+	-- #IF AFTER 12.1
+	[DIFFICULTY.RAID.LFR] = 0,
+	[DIFFICULTY.RAID.NORMAL] = 0,
+	[DIFFICULTY.RAID.HEROIC] = 0,
+	-- #ELSE
 	[DIFFICULTY.RAID.LFR] = 3,
 	[DIFFICULTY.RAID.NORMAL] = 5,
 	[DIFFICULTY.RAID.HEROIC] = 6,
-};
+	-- #ENDIF
+}
 
 root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_SEASONSTART } }, {
 	inst(1308, {	-- March on Quel'Danas
@@ -88,9 +94,6 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 				ach(61371),	-- Mythic: March on Quel'Danas (automated)
 				-- Multiple Raids this tier... Duplicate Glory and Tier Set Achievements?
 				ach(62352),	-- Nothing to See Here
-				ach(61380, {	-- Glory of the Midnight Raider (automated)
-					i(260887),	-- Tenebrous Harrower (MOUNT!)
-				}),
 				ach(61843),	-- Quel'Dressed
 				ach(61609),	-- March on Quel'Danas Guild Run
 				ach(61610),	-- Heroic: March on Quel'Danas Guild Run
@@ -140,10 +143,14 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 			}),
 			Difficulty(DIFFICULTY.RAID.MULTI.NORMAL_PLUS).AddGroups({
 				BossOnly(BELOREN, {
-					ach(61381),	-- Eggsistential Crisis
+					ach(61381, {	-- Eggsistential Crisis
+						["providers"] = { "n", 255969 },	-- Sunwell Egg
+					}),
 				}),
 				BossOnly(LURA, {
-					ach(62406),	-- All the Things She Said
+					ach(62406, {	-- All the Things She Said
+						["providers"] = { "n", 261683 },	-- Void Torch
+					}),
 				}),
 			}),
 			Difficulty(DIFFICULTY.RAID.NORMAL).AddGroupsWithUpgrades({

@@ -1,5 +1,5 @@
 ﻿---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,ah,cq,crit,de,en,h,hqt,i,m,mnt,n,o,p,prof,q,r,s,title,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateCharacterUnlockQuest,_.CreateAchievementCriteria,_.CreateDecor,_.CreateEnsemble,_.CreateCustomHeader,_.CreateHQT,_.CreateItem,_.CreateMap,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfession,_.CreateQuest,_.CreateRecipe,_.CreateItemSource,_.CreateTitle,_.CreateToy,_.CreateExpansion;
 categories.Secrets=
@@ -81,47 +81,47 @@ o(269830,{coords={
 [52]={{30.5,27.5}}},description="|cFFFFFFFFStep 9:|r This step will take us to |cFFFFD700Westfall|r. Head to |cFFFFFFFF30.53, 27.56|r. |cFFFFD700Gift of the Mind-Seekers|r will be on the ground here in a broken boat. Click this to obtain your mount. Congratulations on getting the |cFFFFD700Riddler's Mind-Worm|r.\n\nWe would like to thank the |cFFFFD700Secret Finding Discord|r again for solving this puzzle.",isWeekly=1,model=942865,questID=47214,sourceQuests={47213},g={
 mnt(243025,{b=1,itemID=147835,lvl=10})}})}}),
 ah(254763,{awp=70300,description="This secret is a prerequisite for Baa'l. It requires having collected |cff0070d0Uuna's Doll|r, which drops from |cff883325The Many-Faced Devourer|r, a Rare Elite in Antoran Wastes.",displayID=76829,lore="Uuna was found bound to an Ur'zul, and was released into the Shadowlands, where she wandered in the utter darkness.",modelScale=1.1,type="s",g={
-q(50098,{description="1. Summon Uuna and wait for her to say one of the following lines:\n'|cffffffffMama? Mama! Why is it so dark? It's scary here...|r'\n'|cffffffffCan anybody hear me?|r'\n'|cffffffffC-c-cold...|r'\n",icon=134506,g={
-q(50099,{description="2. |cffffffff/whistle|r at Uuna.\n",sourceQuests={50098}}),
-q(50100,{description="3. When she asks you questions, |cffffffff/roar|r at her.\n",sourceQuests={50098}}),
-q(50101,{description="4. Resummon Uuna and |cffffffff/cry|r at her. She will tell you that she wishes she could see you better, but it's too dark where she is.",sourceQuests={50098}})}}),
-q(50102,{coords={
+hqt(50098,{description="1. Summon Uuna and wait for her to say one of the following lines:\n'|cffffffffMama? Mama! Why is it so dark? It's scary here...|r'\n'|cffffffffCan anybody hear me?|r'\n'|cffffffffC-c-cold...|r'\n",icon=134506,g={
+hqt(50099,{description="2. |cffffffff/whistle|r at Uuna.\n",sourceQuests={50098}}),
+hqt(50100,{description="3. When she asks you questions, |cffffffff/roar|r at her.\n",sourceQuests={50098}}),
+hqt(50101,{description="4. Resummon Uuna and |cffffffff/cry|r at her. She will tell you that she wishes she could see you better, but it's too dark where she is.",sourceQuests={50098}})}}),
+hqt(50102,{coords={
 [111]={{54,44.7}}},description="Take Uuna to A'dal in Shattrath City. The light of the Naaru is too bright, and she will run away.",icon=134506,sourceQuests={50098}}),
-q(50103,{coords={
+hqt(50103,{coords={
 [63]={{18.9,41.6}}},description="Take Uuna to the moonlight by Ashenvale's Lake Falathim.",icon=134506,sourceQuests={50102}}),
-q(50104,{coords={
+hqt(50104,{coords={
 [882]={{25.1,59.8},{32.6,74.9}}},description="Most classes will need 2 |cffffffffGoblin Glider Kits|r to reach Nuu, who is in a house on a floating island in southwest Eredath.\n\nStart near the entrance to Seat of the Triumvirate and glide to the small rock, and then use your second glider to coast to the island further to the south.",icon=133632,sourceQuests={50103}}),
-q(50105,{coords={
+hqt(50105,{coords={
 [106]={{56.5,56.6}}},description="Take Uuna to Blood Watch on Bloodmyst Isle.",icon=134506,sourceQuests={50104}}),
-q(50106,{coords={
+hqt(50106,{coords={
 [539]={{56,41.1}}},description="Take Uuna to the small campsite northwest of Path of the Light in Draenor's Shadowmoon Valley. She will pick up the flower crown that is resting on one of the chairs around the campfire.",icon=134506,sourceQuests={50105}}),
-q(50107,{description="Wait for a little while after Uuna picks up the flower crown. Void tendrils will eventually erupt from the ground and take her captive.",icon=134506,sourceQuests={50106}}),
-q(50108,{coords={
+hqt(50107,{description="Wait for a little while after Uuna picks up the flower crown. Void tendrils will eventually erupt from the ground and take her captive.",icon=134506,sourceQuests={50106}}),
+hqt(50108,{coords={
 [539]={{52.1,47.7}}},description="Die and ask a Spirit Healer if they have seen Uuna. The Spirit Healer will give you permission to enter the spirit realm to try to find her. Resurrect (no need to do it through the Spirit Healer, just return to your corpse) and continue to the next step.",icon=134506,sourceQuests={50107}}),
-q(50109,{coords={
+hqt(50109,{coords={
 [115]={{66.2,74.5}}},description="Click on the Shadow Tear in Dragonblight's Emerald Dragonshrine to look for Uuna in the spirit realm. Once inside, do the following:\n\n1. |cffffffff/cheer|r at Uuna.\n2. Place a |cffffffffCooking Fire|r next to her.\n3. Survive the gauntlet for 3 minutes, running into the |cff883325Soul-Eaters|r to scare them away.\n4. When Uuna wraps her arms around herself and cries, |cffffffff/hug|r her.",icon=134506,providers={{"o",280747}},sourceQuests={50108}}),
 h(-508,{
-q(50140,{coords={
+hqt(50140,{coords={
 [390]={{8,59}}},icon=134506,sourceQuests={50109}}),
-q(50141,{coords={
+hqt(50141,{coords={
 [680]={{62.3,83.7}}},icon=134506,sourceQuests={50140}}),
-q(50142,{coords={
+hqt(50142,{coords={
 [627]={{72.4,45.9}}},icon=134506,sourceQuests={50141}}),
-q(50143,{coords={
+hqt(50143,{coords={
 [115]={{57.8,54.6}}},icon=134506,sourceQuests={50142}}),
-q(50144,{coords={
+hqt(50144,{coords={
 [198]={{59,24.1}}},icon=134506,sourceQuests={50143}}),
-q(50145,{coords={
+hqt(50145,{coords={
 [379]={{44.8,52.3}}},icon=134506,sourceQuests={50144}}),
-q(50146,{coords={
+hqt(50146,{coords={
 [33]={{37.5,67.4}},
 [36]={{21.1,38.4}}},icon=134506,sourceQuests={50145}}),
-q(50147,{coords={
+hqt(50147,{coords={
 [539]={{70.7,46.7}}},icon=134506,sourceQuests={50146}})})}})}),
 x(8,{
 ah(277461,{awp=80001,description="***Quest tracking enabled is required to see all the steps.*** \n\n***Before you can complete the last step of Baa'l, an upgraded Uuna is required, so it is recommended that you complete that secret first.***\n\nOther things you may want to have on hand for this secret:\n-Goblin Gliders (if you don't have flying)\n-Invisibility potions\n-Underlight Angler or potions to increase your swim speed\n",displayID=80456,modelScale=1.1,type="s",g={
-q(52819,{coords={
-[863]={{51.8,59}}},description="|cFFFFFFFFStep 1:|r Head to Nazmir. The note is high up on the side of the temple in the middle of the zone. If you don't have flying, you can access the top of the temple via a bridge that starts at |cFFFFFFFF46.3, 53.9|r.\n\nThe note reads: \"Begin at the beginning\"\n",providers={{"o",293849}}}),
+o(293849,{coords={
+[863]={{51.8,59}}},description="|cFFFFFFFFStep 1:|r Head to Nazmir. The note is high up on the side of the temple in the middle of the zone. If you don't have flying, you can access the top of the temple via a bridge that starts at |cFFFFFFFF46.3, 53.9|r.\n\nThe note reads: \"Begin at the beginning\"\n",questID=52819}),
 o(293837,{coords={
 [646]={{37.5,71.6}}},description="|cFFFFFFFFStep 2:|r Head to Broken Shore. At the coordinates provided, there is a small stone table with various non-interactable objects — some candles, parchment, a quill, a purple crystal ball, and some scattered grey pebbles. One of the pebbles is pale, almost the same color as the table, and it's the only thing on the table you can interact with. You may need to zoom in to see it.\n\nThe text reads: \"<An ordinary pebble, unremarkable in every way.>\"\n",modelScale=0.5,questID=52809,sourceQuests={52819}}),
 o(293838,{coords={
@@ -176,11 +176,11 @@ o(280844,{coords={
 [388]={{37.7,63}}},description="|cFFFFFFFFLetter 7:|r Go to |cFFFFFFFF37.7, 63.0|r in |cFFFFD700Townlong Steppes|r. The final |cFFFFD700Letter from Ms. Graham|r is located near a bell on the back part of the temple. Click it. The note reads...\r\r|cFFFFFFFFMice look so sad when they have a Cleft lip.\n\nHoping you succeed,\n~Ana|r\n",model=1661948,questID=50187,sourceQuests={40288}}),
 o(280845,{coords={
 [114]={{27.6,27.1}}},description="|cFFFFFFFFThe Gift:|r Go to |cFFFFFFFF27.6, 27.1|r in |cFFFFD700Coldarra, Borean Tundra|r. The |cFFFFFFFFBlue Crystal Monocle|r is in a container on the highest Nexus ring.\n",questID=50181,sourceQuests={50187},g={
-s(93108,156724,{b=1,f=2,spellID=260931})}})}}),
+s(93108,156724,{b=1,f=2,loc=40,spellID=260931})}})}}),
 ah(156727,{coords={
 [542]={{35.3,33.6}}},description="Go to |cFFFFD700Skyreach|r in |cFFFFD700Spires of Arak|r. Behind the final boss of the instance, |cFFFFD700High Sage Viryx|r, you will find a console that you are able to interact with. Use the four glowing yellow balls to move the sun across the board (the north ball, for instance, makes the sun move up).\n\nThe directions and order in which you must move the sun are:\n\n|cFFFFFFFFRight -> Up -> Down -> Up -> Right -> Right -> Up -> Left -> Down -> Up -> Left -> Down|r\n\nLoot the chest that spawns to obtain the |cFFFFFFFFGreen Crystal Monocle|r\n",icon=133146,type="i",g={
 o(280883,{questID=50185,g={
-s(93111,156727,{b=1,f=2,spellID=260933})}})}}),
+s(93111,156727,{b=1,f=2,loc=40,spellID=260933})}})}}),
 ah(156725,{description="Fish NPCs across Vashj'ir sell sea-themed currencies which need to be exchanged between the various NPCs in order to obtain the currencies required to purchase the |cFFFFD700Red Crystal Monocle|r.\n\nThe currencies expire after a period of time so it is advised that you purchase the items in the order listed.\n",type="i",g={
 o(13000002,{description="Exchange the following items with the NPC until you receive 5 |cFFFFD700Scintillating Murloc Skin Lotion|r.\n",g={
 o(13000003,{description="Exchange the following items with the NPC until you receive 50 |cFFFFD700Glittergill Glitter|r.\n",g={
@@ -235,10 +235,10 @@ o(13000029,{coords={
 [204]={{16,82.2}}},description="|cFFFFFFFFStep 5:|r Purchase 5 |cFFFFD700Captured Cavitation Bubble|r from |cFFFFD700The Blackfish|r at |cFFFFFFFF16.0, 82.2|r in |cFFFFD700Abyssal Depths|r, Vashj'ir.\n\nThe NPC is near the southwest corner of the Abandoned Reef.\n"})}}),
 o(13000030,{coords={
 [205]={{44.6,20.2}}},description="Exchange the 3 items with |cFFFFD700Sir Finley Mrrgglton|r at |cFFFFFFFF44.6, 20.2|r in |cFFFFD700Shimmering Expanse|r, Vashj'ir for the |cFFFFD700Red Crystal Monocle|r.\n\nThe NPC is at surface level on one of the islets, atop a watchtower.\n",g={
-s(93109,156725,{b=1,f=2,spellID=260929})}})}}),
+s(93109,156725,{b=1,f=2,loc=40,spellID=260929})}})}}),
 ah(156726,{description="Go to |cFFFFD700Halls of Origination|r in |cFFFFD700Uldum|r. After the first boss in Halls of Origination, there is a large room with an elevator. While wearing the |cFFFFD700Talisman of True Treasure Tracking|r, you can click a Stellar Refraction Device that spawns colorful constellations in the room below the elevator.\n\nTo access the puzzle, head north from the elevator and there will be an open way with a staircase to the floor below.\n\nYour objective here is to transform all constellations to the same color. To do this, there are three special refractors that change their colors when clicked on.\n\n|cFFFFD700The Hivemind HoO Puzzle Helper|r addon is recommended to complete this step, as it simply requires you to input the current colors of the constellations, then gives you directions on how to click the refractors to solve it.\n\nWhen all constellations have the same color, a chest will spawn on top of the Stellar Refraction Device containing the |cFFFFFFFFYellow Crystal Monocle|r.\n\n|cFFCC33FFBe careful to not accidentally click the Refraction Device when looting the monocle, as this will restart the puzzle and despawn the chest|r.\n",icon=133146,providers={{"i",27944}},type="i",g={
 o(280886,{questID=50183,g={
-s(93110,156726,{b=1,f=2,sourceQuests={50183},spellID=260930})}})}})}}),
+s(93110,156726,{b=1,f=2,loc=40,sourceQuests={50183},spellID=260930})}})}})}}),
 o(13000033,{description="|cFFFFFFFFSTEP 3:|r Hivemind requires a five-man group. Four members must each collect a different monocle before the group can continue with the secret. You must be in a party and have the same warmode. Four party members with different monocles must go to four different withered in suramar while one stay in Dalaran",g={
 n(132595,{coords={
 [680]={{71.8,62.5}}},description="Red Monocle",providers={{"i",156725}}}),
@@ -262,14 +262,27 @@ hqt(58076,{coords={
 hqt(58098,{coords={
 [37]={{44.2,53}}},description="|cFFFFFFFFStep 2:|r Go inside the house in Elwynn Forest to find the |cFFFFD700Empty Dish|r.\n",DisablePartySync=1,lc={1,"questID",58099},providers={{"o",339211}},sourceQuests={58076}}),
 hqt(58099,{coords={
-[42]={{46.7,70.1}}},description="|cFFFFFFFFStep 3:|r This step requires collecting various meats throughout |cffffd200Return to Karazhan|r and placing them in the Opera Hall to mimic a section of the Amara's Wish sheet music.\n\n|cffde1c1cOnce the items are picked up, you have 5 minutes to place them into the puzzle. Once placed, they despawn after 5 minutes and 20 seconds. Because of these time limits, it may be wise to ensure you have cleared the trash in the dungeon and have acquainted yourself with the locations of all the meats you need to pick up.\n\nTurn on Debug Mode to see descriptions for the locations of each meat and how to place them in the correct order!|r\n\nYou will need to collect items from Moroes' room as well as the hallways near Maiden of Virtue, and then take the items back to the audience area of the Opera Hall to place them.\n",providers={{"n",160370},{"n",160371},{"n",160372},{"n",160373},{"n",160374}},sourceQuests={58098},g={
-i(173787,{b=1,description="Two are required.\n\n|cFFFFFFFF1.|r The first Fishy Bits can be found in the hallway prior to Maiden of Virtue. Near the middle of hall on the left side, there is a doorway flanked by two lion statues. The Fishy Bits are just past the lion statues and before the left-hand bust directly after them, against the wall.\n\n|cFFFFFFFF2.|r The second Fishy Bits can be found in Moroes' room, very close to the boss's platform. It's between the bottom right corner of the platform and the upper left corner of the small right-hand table.\n",npcID=160374,spellID=312285}),
-i(173780,{b=1,description="Two are required.\n\n|cFFFFFFFF1.|r Progress through the dungeon, killing the Opera boss, and head towards Maiden of Virtue. When you exit the Opera Hall, in the area before you turn towards Maiden, there is a wide hallway with two rugs, one red and one purple. The first Marbled Steak can be found on the right-hand edge of the purple rug.\n\n|cFFFFFFFF2.|r The second Marbled Steak is just before Maiden of Virtue in the last little room off to the left of the hallway. The Marbled Steak is in the upper-left corner of the antechamber, behind what looks like a very large, high-backed chair.\n",npcID=160370,spellID=312278}),
-i(173783,{b=1,description="Two are required.\n\n|cFFFFFFFF1.|r The first Juicy Drumstick can be found close to the second Marbled Steak, in the last room before Maiden of Virtue. Head all the way into the room, and you will see the Juicy Drumstick on an ottoman in front of another high-backed chair. It's next to a tall candelabra and a portrait of a woman.\n\n|cFFFFFFFF2.|r The second Juicy Drumstick can be found in Moroes' room, in front of the boss's platform. It's closer to the small left-hand table, near the bottom edge of the big black and gold carpet.\n",npcID=160371,spellID=312281}),
-i(173779,{b=1,description="Can be found about halfway down the hallway prior to Maiden of Vigilance. There is a section on the right-hand side with a rectangular table and three chairs between two bookshelves, all covered in cobwebs. The Meaty Morsel is on a tiny round table between the first bookshelf and chair.\n",npcID=160373,spellID=312277}),
-i(173777,{b=1,description="Can be found in Moroes' room, on the right side of the long table. There are a couple on the table, but the easiest one to spot is on a gold platter sitting between a large roast pig and fish.\n",npcID=160372,spellID=312275}),
+[42]={{46.7,70.1}}},cost={{"i",173777,1},{"i",173779,1},{"i",173783,2},{"i",173780,2},{"i",173787,2}},description="|cFFFFFFFFStep 3:|r This step requires collecting various meats throughout |cffffd200Return to Karazhan|r and placing them in the Opera Hall to mimic a section of the Amara's Wish sheet music.\n\n|cffde1c1cOnce the items are picked up, you have 5 minutes to place them into the puzzle. Once placed, they despawn after 5 minutes and 20 seconds. Because of these time limits, it may be wise to ensure you have cleared the trash in the dungeon and have acquainted yourself with the locations of all the meats you need to pick up.\n\nTurn on Debug Mode to see descriptions for the locations of each meat and how to place them in the correct order!|r\n\nYou will need to collect items from Moroes' room as well as the hallways near Maiden of Virtue, and then take the items back to the audience area of the Opera Hall to place them.\n",providers={{"n",160370},{"n",160371},{"n",160372},{"n",160373},{"n",160374}},sourceQuests={58098},g={
+n(160374,{description="Two are required.\n\n|cFFFFFFFF1.|r The first Fishy Bits can be found in the hallway prior to Maiden of Virtue. Near the middle of hall on the left side, there is a doorway flanked by two lion statues. The Fishy Bits are just past the lion statues and before the left-hand bust directly after them, against the wall.\n\n|cFFFFFFFF2.|r The second Fishy Bits can be found in Moroes' room, very close to the boss's platform. It's between the bottom right corner of the platform and the upper left corner of the small right-hand table.\n",g={
+i(173787,{b=1,spellID=312285})}}),
+n(160370,{description="Two are required.\n\n|cFFFFFFFF1.|r Progress through the dungeon, killing the Opera boss, and head towards Maiden of Virtue. When you exit the Opera Hall, in the area before you turn towards Maiden, there is a wide hallway with two rugs, one red and one purple. The first Marbled Steak can be found on the right-hand edge of the purple rug.\n\n|cFFFFFFFF2.|r The second Marbled Steak is just before Maiden of Virtue in the last little room off to the left of the hallway. The Marbled Steak is in the upper-left corner of the antechamber, behind what looks like a very large, high-backed chair.\n",g={
+i(173780,{b=1,spellID=312278})}}),
+n(160371,{description="Two are required.\n\n|cFFFFFFFF1.|r The first Juicy Drumstick can be found close to the second Marbled Steak, in the last room before Maiden of Virtue. Head all the way into the room, and you will see the Juicy Drumstick on an ottoman in front of another high-backed chair. It's next to a tall candelabra and a portrait of a woman.\n\n|cFFFFFFFF2.|r The second Juicy Drumstick can be found in Moroes' room, in front of the boss's platform. It's closer to the small left-hand table, near the bottom edge of the big black and gold carpet.\n",g={
+i(173783,{b=1,spellID=312281})}}),
+n(160373,{description="Can be found about halfway down the hallway prior to Maiden of Vigilance. There is a section on the right-hand side with a rectangular table and three chairs between two bookshelves, all covered in cobwebs. The Meaty Morsel is on a tiny round table between the first bookshelf and chair.\n",g={
+i(173779,{b=1,spellID=312277})}}),
+n(160372,{description="Can be found in Moroes' room, on the right side of the long table. There are a couple on the table, but the easiest one to spot is on a gold platter sitting between a large roast pig and fish.\n",g={
+i(173777,{b=1,spellID=312275})}}),
 o(9999921,{description="After you have all the meats collected, head back to the audience area of the Opera Hall. To orient yourself in the room, you want to have your back to the stage.\n\nYou will be placing each meat relative to two very tiny piles of kibble on the left side of the room (again, while faced away from the stage). You will probably need to zoom in to see them. Each tile on the floor represents a box in a 12-by-12 grid.\n\n|cff413f43 00|r = Empty cell\n|cff4db62c 00|r = Pile of Kibble\n|cffeea016 00|r = Fishy Bits\n|cffeee116 00|r = Juicy Drumstick\n|cff16ceee 00|r = Meaty Morsel\n|cffce16ee 00|r = Marbled Steak\n|cff9e5ced 00|r = Slathered Rib\n\n|cff413f43 00 00 00 00 00 00 00 00 00 00 00 00|r\n|cff413f43 00 00 00 00 00 00 00 00 00 00 00 00|r\n|cff413f43 00 00 00 00 00 00 00 00|r|cffeee116 00|r|cff413f43 00 00 00|r\n|cff413f43 00 00 00 00 00 00 00|r|cff9e5ced 00|r|cff413f43 00|r|cffeea016 00|r|cff413f43 00 00|r\n|cff413f43 00|r|cff4db62c 00|r|cff413f43 00 00 00 00 00 00 00 00 00 00|r\n|cff413f43 00 00 00 00 00 00 00 00 00 00 00 00|r\n|cff413f43 00 00 00 00 00 00|r|cffce16ee 00|r|cff413f43 00 00 00 00 00|r\n|cff413f43 00 00 00 00 00|r|cff16ceee 00|r|cff413f43 00 00 00 00 00 00|r\n|cff413f43 00|r|cff4db62c 00|r|cff413f43 00 00|r|cffeea016 00|r|cff413f43 00 00 00 00 00 00 00|r\n|cff413f43 00 00 00|r|cffce16ee 00|r|cff413f43 00 00 00 00 00 00 00 00|r\n|cff413f43 00 00|r|cffeee116 00|r|cff413f43 00 00 00 00 00 00 00 00 00|r\n|cff413f43 00 00 00 00 00 00 00 00 00 00 00 00|r\n\nIf you have placed all the meats properly, Jenafur will spawn as soon as you finish. You can use |cFFFFFFFF/tar Jenafur|r to find her in the room, and then all you have to do is walk over and pet her for her to be added to your collection.\n"}),
 p(2795,{npcID=159783})}})}}),
+ah(161479,{awp=80001,type="i",g={
+i(161344,{description="These are a World Drop in any zone and can be bought from the Auction House. Once you collect 20, combine them.",maps={862,863,864,895,896,942},spellID=275121}),
+i(161345,{b=1,coords={
+[942]={{73.5,23.6}}},cost={{"i",161344,20}},description="Use this on the \"Abyssal Icon\" located at 73.5, 23.6 in Stormsong Valley. The cave entrance is behind a waterfall.",lvl=50,questID=53428,spellID=277122}),
+n(140474,{coords={
+[942]={{73.5,23.6}}},cost={{"i",161345,1}},g={
+mnt(275623,{b=1,itemID=161479,lvl=45,questID=53429}),
+i(163929,{b=1,questID=53477,spellID=280636})}})}}),
 ah(279213,{awp=80001,description="You must find each of the four parts from various treasures in the Zone and combine them to form this battle pet.",displayID=86805,modelScale=0.8,type="s",g={
 h(-47,{maps={896},g={
 p(2411,{b=1,cost={{"i",163796,1},{"i",163790,1},{"i",163791,1},{"i",163789,1}},itemID=163497,npcID=143189,spellID=279213})}}),
@@ -408,7 +421,7 @@ n(205876,{coords={
 n(205876,{coords={
 [2022]={{63.9,44.8}}},nomerge=1,questID=76187})})}}),
 ah(376873,{awp=100002,cost={{"i",202042,1}},description="***Debugg Mode enabled is required to see all the steps. Fishing is required for this Secret!***\n\nYou need to buy an Immaculate Bag of Swog Treasures to get the Aquatic Shades, which costs 1 Gold Coin of the Isles. If you're unlucky, this means fishing up a total of 75 Copper Coins of the Isles to trade up!",displayID=102074,modelScale=0.8,type="s",g={
-q(72676,{coords={
+hqt(72676,{coords={
 [2022]={{19.6,36.5}}},description="Head to The Bubble Bath Dive Bar, off the coast of The Waking Shores. While wearing the Aquatic Shades, find an empty dance floor and walk onto it; you'll receive the debuff Dance Dance 'Til You're Dead. Stay on the dance floor until this debuff wears off."}),
 o(385001,{coords={
 [2022]={{20,40}}},description="Once you wake up from your dance hangover, loot the Empty Fish Barrel. It's directly in front of you.",sourceQuests={72676},g={
@@ -419,14 +432,14 @@ i(202072,{b=1,coords={
 i(202066,{cost={{"i",202073,25}},description="Now that your barrel is half full, the fishing gets harder. You're looking for lava fish now.",requireSkill=356,sourceQuests={72676},spellID=396699,g={
 i(202073,{b=1,coords={
 [2022]={{35.8,64.6}}},description="You'll need 25 of these fish. Keep in mind, they're rarer drops, so this will take longer than the Frigid Floe Fish."})}}),
-q(72808,{cost={{"i",202074,1}},description="Only one fish to go! Top it off with an epic fish from Algeth'ar Academy.",requireSkill=356,sourceQuests={72676},g={
+hqt(72808,{cost={{"i",202074,1}},description="Only one fish to go! Top it off with an epic fish from Algeth'ar Academy.",requireSkill=356,sourceQuests={72676},g={
 i(202074,{b=1,coords={
 [2025]={{56,44.5}}},description="Just one! But it'll take a while. Having good Perception on your Profession gear may help."}),
 i(202068,{spellID=396698})}}),
 i(202069,{coords={
 [2022]={{20,40}}},description="Head back to where you originally picked up the empty barrel, and place the Overflowing Fish Barrel on the ground.",spellID=396703}),
-q(72738,{coords={
-[2022]={{20,40}}},lvl=10,qgs={199563},sourceQuests={72808},g={
+hqt(72738,{coords={
+[2022]={{20,40}}},providers={{"n",199563}},sourceQuests={72808},g={
 mnt(376873,{b=1,itemID=198870,lvl=10})}})}}),
 ah(193373,{awp=100007,description="Below is a detailed explanation on how to obtain the Phoenix Wishwing pet.\n\n***This secret requires you to have debug mode enabled to see the steps. To enable debug mode right click the ATT icon on the minimap, navigate to the general tab and check the \"|Cff15abffDebug Mode|r |cFFFFFFFF(Show Everything)|r\" box.***",displayID=106643,type="i",g={
 o(13000040,{description="|cFFFFFFFFStep 1:|r Obtain the Phoenix Ash Talisman from Zektar in Spires of Arak.",providers={{"i",199203}},g={
@@ -443,7 +456,7 @@ h(-12,{
 ach(18644,{sym={{"select","questID",77289,77288,77291,77292,77290,77293,77296,77294,77297,77298,77299,78208,78207,77300,77302,77301,77295}},g={
 p(4263,{b=1,itemID=208151,npcID=208643,spellID=418079})}}),
 ach(18643,{sym={{"select","questID",77289,77288,77291,77292,77290,77293,77296,77294,77297,77298,77299,78208,78207,77300,77302,77301,77295}},g={
-s(189592,208150,{f=2})}}),
+s(189592,208150,{f=2,loc=40})}}),
 ach(18642,{coords={
 [114]={{33.6,58.4}}},cost={{"i",207580,1}},questID=76987,g={
 title(512),
@@ -452,7 +465,7 @@ ach(18645,{
 crit(60754,{achID=18645,providers={{"i",206696}}}),
 crit(60755,{achID=18645,providers={{"i",208092}}}),
 crit(60756,{achID=18645,providers={{"i",207730}}}),
-s(189591,208149,{f=2})}),
+s(189591,208149,{f=2,loc=40})}),
 ach(18646,{
 mnt(418078,{b=1,itemID=208152}),
 title(519)}),
@@ -849,13 +862,13 @@ q(30526,{coords={
 [376]={{42.4,50.2}}},lvl=15,minReputation={1272,21600},qgs={59533},g={
 i(80144),
 de(4488,{awp=110207,itemID=248663,sourceQuests={30526},spellID=1247392})}}),
-q(46952,{awp=70200,coords={
+hqt(46952,{an="i:147420",awp=70200,coords={
 [582]={{58.8,53.8}},
-[590]={{44.6,84.8}}},description="Find a Loose Pebble on the streets of (Legion) Dalaran. Build an Herb Garden in your garrison.\nSpeak with Dog and show him the Pebble. Do not throw the Pebble at Dog.",qgs={87553},qis={147420},sourceQuests={30526,34193,36404}}),
-q(83093,{awp=110002,coords={
+[590]={{44.6,84.8}}},description="Find a Loose Pebble on the streets of (Legion) Dalaran. Build an Herb Garden in your garrison.\nSpeak with Dog and show him the Pebble. Do not throw the Pebble at Dog.",providers={{"i",147420},{"n",87553}},sourceQuests={30526,34193,36404}}),
+hqt(83093,{an="o:452438",awp=110002,coords={
 [2248]={{31.4,51.3}}},description="Interact with the bowl near Dalaran's crash site to bring Dog out of hiding.",providers={{"o",452438}},sourceQuests={46952}}),
-q(83094,{awp=110002,coords={
-[2248]={{31.4,51.3}}},description="Interact with Dog and <Pet his head> to get him as a pet.",qgs={225486},sourceQuests={83093},g={
+hqt(83094,{an="n:225486",awp=110002,coords={
+[2248]={{31.4,51.3}}},description="Interact with Dog and <Pet his head> to get him as a pet.",providers={{"n",225486}},sourceQuests={83093},g={
 p(4596,{b=1,itemID=224766,npcID=225537,spellID=453741})}})}}),
 ah(40967,{awp=110005,description="***Using Debug Mode is recommended.***\n",type="a",g={
 o(182030,{coords={
@@ -1001,13 +1014,13 @@ hqt(93765,{awp=120001,coords={
 [680]={{82.5,67.4}}},description="Head to the southeast of Suramar near the coordinates. Use your Torch of Pyrreth to find a wandering invisible ghost, once found, an extra action button will spawn an Orb of Shadows.\n\nYou must take this orb to Golk the Rumble in the center of Azsuna at the second coordinates and talk to them. The player carrying the orb cannot take damage, jump, or swim, and enemies will spark periodically to attack them, a group of players and water walking of some kind will make this easier. Don't be over water for too long though or your buff will drop. The Starry-Eyed Goggles will stop the Darkness debuff.\n\nFully lights up the 12 O'Clock Basin.",g={
 i(262432,{b=1,g={
 en(246973,{questID=91636,spellID=1244440,tmogSetID=5152,g={
-s(293225,246968,{f=2}),
-s(293223,246966,{f=2}),
-s(293228,246971,{f=2}),
-s(293226,246969,{f=2}),
-s(293224,246967,{f=2}),
-s(293227,246970,{f=2}),
-s(293229,246972,{f=2})}})}}),
+s(293225,246968,{f=2,loc=45}),
+s(293223,246966,{f=2,loc=44}),
+s(293228,246971,{f=2,loc=40}),
+s(293226,246969,{f=2,loc=42}),
+s(293224,246967,{f=2,loc=46}),
+s(293227,246970,{f=2,loc=41}),
+s(293229,246972,{f=2,loc=47})}})}}),
 i(262559,{b=1,spellID=1268983})}}),
 o(616681,{awp=120001,coords={
 [46]={{68.5,20.9}}},cost={{"i",262559,1}},description="In the center of the Karazhan Catacombs clock room, can only be seen with buffs from the Oddsight Focus, Starry-Eyed Goggles, and having posession of the Spare Key.",providers={{"i",228966},{"i",260533}},g={
@@ -1099,7 +1112,7 @@ q(92082,{coords={
 toy(249713,{b=1}),
 mnt(353264,{b=1,itemID=186639})}})}}),
 ah(162690,{awp=80001,description="***Quest tracking enabled is required to see all the steps.***\n\nYou will need uncommon quality Windwool Hood, Deathsilk Shoulders, Netherweave Tunic, Frostwoven Leggings, as well as Proximo's Rudius, Rough Wooden Staff, Punctured Pelt, and Formula: Enchant Ring - Striking later on in the secret. It is recommended that you have flying and the Ever-Shifting Mirror toy for ease of travel between Draenor and Outland.",type="i",g={
-o(9999946,{description="Souls fEast on the enDless shrieKing, in darKNess they writhe and scream, yOu WiLl join thEm, toGether forEver morE!",displayID=80456,questID=52829,sourceQuests={52828}}),
+hqt(52829,{an="n:141941",description="Summon Baa'l from Pet Journal.\n\nSouls fEast on the enDless shrieKing, in darKNess they writhe and scream, yOu WiLl join thEm, toGether forEver morE!",displayID=80456,sourceQuests={52828}}),
 o(294096,{coords={
 [542]={{35.5,32}}},description="Your journey continues in Spires of Arak. You must have summoned Baa'l at least once before you can continue. \n\nInside the small basket \n\nThe Orb Reads: \n\n\"<Something is written here.>\n\nPassive Ice Veins\"",model=1046021,questID=52830,sourceQuests={52829}}),
 o(294097,{coords={
@@ -1144,7 +1157,7 @@ o(294115,{coords={
 [69]={{60.8,67.8}}},description="Feralas\n\nMiddle of the remains and table, sticking out of the ground.\n\nThe Ashed Torch reads:\n\n\"<Something is written here.>\n\n...a daft tormenter's fog.\"",model=341882,modelScale=2,questID=52915,sourceQuests={52914}}),
 o(294312,{coords={
 [14]={{38.2,90.1},{85.4,73.6}}},description="Head to the past version of Arathi Highlands, and click on the note on the table inside Grimmy's house.\n\nGrimmy's List of Friends reads:\n\n\"List of My Friends?\nFirst is SN, you always smelled so good\nSecond is TM, you smelled like burning\nwood\nThird is FD, though you smelled like fel\nLast is OM, I hated that fishy smell\"",model=305392,modelScale=0.5,questID=52916,sourceQuests={52915}}),
-q(52917,{description="Equip the Windwool Hood, Deathsilk Shoulders, Netherweave Tunic, and Frostwoven Leggings, and talk to Grimmy. Select his dialogue \"It's me, your friend. Got any secrets to tell me about?\"",qgs={138578},sourceQuests={52916}}),
+hqt(52917,{description="Equip the Windwool Hood, Deathsilk Shoulders, Netherweave Tunic, and Frostwoven Leggings, and talk to Grimmy. Select his dialogue \"It's me, your friend. Got any secrets to tell me about?\"",providers={{"n",138578}},sourceQuests={52916}}),
 o(294314,{coords={
 [14]={{85.3,73.7}}},description="After selecting the Grimmy dialogue, a note appears on his bedstand. Click it. Grimmy's List of Enemies reads:\n\n\"You flaunted your virility, and red was\nnever to my liking\nThough I wanted to slap you, I always\nfound you striking.\n\nYou Always though you knew what was\nbest, but not everyone likes greens,\nThough I waved your way, I pictured\nyour shredded hide in my dreams.\n??\nYour bread was bad, you diseased lout,\nit made me sick.\nI woudl cheerily beat you with a stick.\n??\nLast you, I'm not eve going to think of\na rhyme for you, Mugs.\nI will dance on your grave, you were\nuniquely terrible.\"\n\nGo to each of the following NPCs with Proximo's Rudius, Rough Wooden Staff, Punctured Pelt, and Formula: Enchant Ring - Striking, and emote to them.",model=305391,questID=52918,sourceQuests={52917}}),
 n(47121,{coords={
@@ -1163,5 +1176,5 @@ o(294335,{coords={
 [14]={{88.4,69.2}}},description="Go outside and find the Rotten Potato. You will need to get exactly 144 stacks of Rotten Potato by clicking the potato. After getting 144 stacks of the buff, go back and talk to Grimmy and select his new dialogue option\"How do I smell?\"\n\nGrimmy's new dialogue says:\n\n\"Oh, my, just like my mother used to after she made her famous pie.\n\nVery well, I will show you...my life's work!\n\nIt's in the chest out back, and it's all yours!\n\nI hope it was worth it!\"",model=2020463,modelScale=0.5,questID=52921,sourceQuests={52920}}),
 o(294703,{coords={
 [14]={{85.1,73.3}}},description="After asking Grimmy how you smell, go outside behind and above his house, and on the hill will be Grimmy's Rusty Lockbox waiting for you to open it.",questID=52922,sourceQuests={52921},g={
-s(98614,162690,{f=2,lvl=45})}})}})}});
-end);
+s(98614,162690,{f=2,loc=45,lvl=45})}})}})}})
+end)

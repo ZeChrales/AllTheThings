@@ -1,5 +1,5 @@
 ﻿---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,ah,artifact,cat,cl,cq,crit,cu,de,en,faction,flt,h,heir,i,mnt,n,o,p,pn,prof,q,r,s,title,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateArtifact,_.CreateCategory,_.CreateCharacterClass,_.CreateCharacterUnlockQuest,_.CreateAchievementCriteria,_.CreateCurrencyClass,_.CreateDecor,_.CreateEnsemble,_.CreateFaction,_.CreateFilter,_.CreateCustomHeader,_.CreateHeirloom,_.CreateItem,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfessionNode,_.CreateProfession,_.CreateQuest,_.CreateRecipe,_.CreateItemSource,_.CreateTitle,_.CreateToy,_.CreateExpansion;
 categories.Professions=
@@ -1349,14 +1349,14 @@ de(9237,{awp=110207,itemID=253163,spellID=1255715})}),
 ach(19409,{sym={{"partial_achievement",19410}}}),
 ach(19515,{sym={{"partial_achievement",19410}},g={
 en(219125,{b=1,questID=81544,spellID=442778,tmogSetID=3547,g={
-s(217931,218750,{f=2}),
-s(218167,218986,{f=2}),
-s(218026,218845,{f=2}),
-s(218061,218880,{f=2}),
-s(218001,218820,{f=2}),
-s(218107,218926,{f=2}),
-s(217966,218785,{f=2}),
-s(218132,218951,{f=2})}})}}),
+s(217931,218750,{f=2,loc=42}),
+s(218167,218986,{f=2,loc=43}),
+s(218026,218845,{f=2,loc=40}),
+s(218061,218880,{f=2,loc=46}),
+s(218001,218820,{f=2,loc=44}),
+s(218107,218926,{f=2,loc=41}),
+s(217966,218785,{f=2,loc=47}),
+s(218132,218951,{f=2,loc=45})}})}}),
 ach(19410,{
 crit(63282,{achID=19410,id=1,learnedAt=100,requireSkill=171}),
 crit(63283,{achID=19410,id=2,learnedAt=100,requireSkill=164}),
@@ -2443,7 +2443,8 @@ i(198606,{awp=100002,b=1,isWeekly=1,requireSkill=164,spellID=384418}),
 i(204434,{awp=100002,requireSkill=164})}}),
 q(75569,{awp=100100,coords={
 [2112]={{36.5,62.5}}},isWeekly=1,lvl=10,maxReputation={2544,5},qgs={203516},requireSkill=164,g={
-i(198606,{awp=100002,b=1,isWeekly=1,requireSkill=164,spellID=384418})}}),
+i(205117,{awp=100002,requireSkill=164}),
+i(198606,{b=1,isWeekly=1,requireSkill=164,spellID=384418})}}),
 q(77935,{awp=100200,coords={
 [2112]={{36.8,63.1}}},cost={{"i",190484,3}},isWeekly=1,lvl=10,maxReputation={2544,5},qgs={210162},requireSkill=164,g={
 i(198606,{awp=100002,b=1,isWeekly=1,requireSkill=164,spellID=384418})}}),
@@ -2753,7 +2754,7 @@ ach(1999,{awp=30002,cost={{"c",402,10}},rank=10,requireSkill=185}),
 ach(2000,{awp=30002,cost={{"c",402,25}},rank=25,requireSkill=185}),
 ach(2001,{awp=30002,cost={{"c",402,50}},rank=50,requireSkill=185}),
 ach(2002,{awp=30002,cost={{"c",402,100}},rank=100,requireSkill=185})}}),
-x(1,{requireSkill=185,g={
+x(1,{awp=30002,requireSkill=185,g={
 ach(123,{requireSkill=185}),
 ach(122,{requireSkill=185}),
 ach(121,{requireSkill=185})}}),
@@ -3826,17 +3827,17 @@ prof(202,{
 h(-12,{awp=100107,requireSkill=202,g={
 ach(18901,{requireSkill=202,g={
 en(209062,{b=1,questID=78030,requireSkill=202,spellID=422554,tmogSetID=3123,g={
-s(190119,208787,{f=2,requireSkill=202}),
-s(190120,208788,{f=2,requireSkill=202}),
-s(190121,208789,{f=2,requireSkill=202}),
-s(190122,208790,{f=2,requireSkill=202}),
-s(190127,208795,{f=2,requireSkill=202}),
-s(190128,208796,{f=2,requireSkill=202}),
-s(190123,208791,{f=2,requireSkill=202}),
-s(190124,208792,{f=2,requireSkill=202}),
-s(190125,208793,{f=2,requireSkill=202}),
-s(190126,208794,{f=2,requireSkill=202}),
-s(190129,208797,{f=2,requireSkill=202})}}),
+s(190119,208787,{f=2,loc=40,requireSkill=202}),
+s(190120,208788,{f=2,loc=40,requireSkill=202}),
+s(190121,208789,{f=2,loc=40,requireSkill=202}),
+s(190122,208790,{f=2,loc=40,requireSkill=202}),
+s(190127,208795,{f=2,loc=40,requireSkill=202}),
+s(190128,208796,{f=2,loc=40,requireSkill=202}),
+s(190123,208791,{f=2,loc=40,requireSkill=202}),
+s(190124,208792,{f=2,loc=40,requireSkill=202}),
+s(190125,208793,{f=2,loc=40,requireSkill=202}),
+s(190126,208794,{f=2,loc=40,requireSkill=202}),
+s(190129,208797,{f=2,loc=40,requireSkill=202})}}),
 crit(61677,{achID=18901,id=1,providers={{"s",30574}}}),
 crit(61678,{achID=18901,id=2,providers={{"s",41317}}}),
 crit(61679,{achID=18901,id=3,providers={{"i",35197}}}),
@@ -3917,10 +3918,10 @@ r(15628,{b=1,itemID=11828,requireSkill=202,skillID=2506,u=2})}})}})}}),
 x(4,{awp=100107,requireSkill=202,g={
 ach(18908,{requireSkill=202,g={
 en(209063,{b=1,questID=78031,requireSkill=202,spellID=422556,tmogSetID=3124,g={
-s(190141,208813,{f=2,requireSkill=202}),
-s(190142,208814,{f=2,requireSkill=202}),
-s(190143,208815,{f=2,requireSkill=202}),
-s(190140,208812,{f=2,requireSkill=202})}}),
+s(190141,208813,{f=2,loc=40,requireSkill=202}),
+s(190142,208814,{f=2,loc=40,requireSkill=202}),
+s(190143,208815,{f=2,loc=40,requireSkill=202}),
+s(190140,208812,{f=2,loc=40,requireSkill=202})}}),
 crit(61820,{achID=18908,id=1,providers={{"s",81714}}}),
 crit(61821,{achID=18908,id=2,providers={{"s",81715}}}),
 crit(61822,{achID=18908,id=3,providers={{"s",81716}}}),
@@ -3931,12 +3932,12 @@ crit(61826,{achID=18908,id=7,providers={{"s",81725}}})}})}}),
 x(5,{awp=100107,requireSkill=202,g={
 ach(18905,{requireSkill=202,g={
 en(209064,{b=1,questID=78032,requireSkill=202,spellID=422557,tmogSetID=3125,g={
-s(190130,208802,{f=2,requireSkill=202}),
-s(190131,208803,{f=2,requireSkill=202}),
-s(190132,208804,{f=2,requireSkill=202}),
-s(190133,208805,{f=2,requireSkill=202}),
-s(190134,208806,{f=2,requireSkill=202}),
-s(190135,208807,{f=2,requireSkill=202})}}),
+s(190130,208802,{f=2,loc=40,requireSkill=202}),
+s(190131,208803,{f=2,loc=40,requireSkill=202}),
+s(190132,208804,{f=2,loc=40,requireSkill=202}),
+s(190133,208805,{f=2,loc=40,requireSkill=202}),
+s(190134,208806,{f=2,loc=40,requireSkill=202}),
+s(190135,208807,{f=2,loc=40,requireSkill=202})}}),
 crit(61781,{achID=18905,id=1,providers={{"s",127117}}}),
 crit(61782,{achID=18905,id=2,providers={{"s",127118}}}),
 crit(61783,{achID=18905,id=3,providers={{"s",127119}}}),
@@ -3949,10 +3950,10 @@ ach(18895,{providers={{"s",421011}},requireSkill=202})}}),
 x(7,{requireSkill=202,g={
 ach(18906,{awp=100107,requireSkill=202,g={
 en(209066,{b=1,questID=78034,requireSkill=202,spellID=422579,tmogSetID=3126,g={
-s(190136,208808,{f=2,requireSkill=202}),
-s(190137,208809,{f=2,requireSkill=202}),
-s(190138,208810,{f=2,requireSkill=202}),
-s(190139,208811,{f=2,requireSkill=202})}}),
+s(190136,208808,{f=2,loc=40,requireSkill=202}),
+s(190137,208809,{f=2,loc=40,requireSkill=202}),
+s(190138,208810,{f=2,loc=40,requireSkill=202}),
+s(190139,208811,{f=2,loc=40,requireSkill=202})}}),
 crit(61789,{achID=18906,id=1,providers={{"s",198991}}}),
 crit(61788,{achID=18906,id=1,providers={{"s",198939}}}),
 crit(61790,{achID=18906,id=1,providers={{"i",137711}}}),
@@ -4144,10 +4145,10 @@ r(283401,{learnedAt=150,requireSkill=202,skillID=2499})}})}})}}),
 x(9,{awp=100107,requireSkill=202,g={
 ach(18907,{requireSkill=202,g={
 en(209067,{b=1,questID=78035,requireSkill=202,spellID=422580,tmogSetID=3127,g={
-s(190144,208817,{f=2,requireSkill=202}),
-s(190145,208818,{f=2,requireSkill=202}),
-s(190146,208819,{f=2,requireSkill=202}),
-s(190147,208820,{f=2,requireSkill=202})}}),
+s(190144,208817,{f=2,loc=40,requireSkill=202}),
+s(190145,208818,{f=2,loc=40,requireSkill=202}),
+s(190146,208819,{f=2,loc=40,requireSkill=202}),
+s(190147,208820,{f=2,loc=40,requireSkill=202})}}),
 crit(61816,{achID=18907,id=1,providers={{"s",310501}}}),
 crit(61817,{achID=18907,id=2,providers={{"s",310504}}}),
 crit(61818,{achID=18907,id=3,providers={{"s",310507}}}),
@@ -4666,7 +4667,7 @@ ach(4917,{requireSkill=356}),
 ach(5851,{awp=40200,requireSkill=356})}}),
 ah(67414,{awp=40001,description="Fishing Daily Quest Reward",providers={{"i",67414},{"i",112623}},requireSkill=356,type="i",g={
 p(211,{awp=40003,b=1,itemID=44983,npcID=33226,requireSkill=356,spellID=62561}),
-s(15661,33820,{awp=40003,b=1,f=4,requireSkill=356,spellID=43699}),
+s(15661,33820,{awp=40003,b=1,f=4,loc=40,requireSkill=356,spellID=43699}),
 s(22166,45991,{awp=40003,b=1,f=57,requireSkill=356,spellID=59731}),
 s(22167,45992,{awp=40003,b=1,f=57,requireSkill=356,spellID=59731}),
 i(67410,{awp=40003,requireSkill=356}),
@@ -4692,14 +4693,22 @@ i(97981,{awp=50300,b=1,lvl=40,requireSkill=356,rwp=70003,u=2})}})}}),
 x(6,{awp=60003,requireSkill=356,g={
 h(-12,{requireSkill=356,g={
 ach(9503,{requireSkill=356}),
-ach(9456,{cost={{"i",111671,100}},requireSkill=356}),
-ach(9457,{cost={{"i",111670,100}},requireSkill=356}),
-ach(9458,{cost={{"i",111674,100}},requireSkill=356}),
+ach(9462,{requireSkill=356}),
+ach(9456,{cost={{"i",111671,100}},requireSkill=356,g={
+crit(25816,{achID=9462,id=6})}}),
+ach(9457,{cost={{"i",111670,100}},requireSkill=356,g={
+crit(25815,{achID=9462,id=5})}}),
+ach(9458,{cost={{"i",111674,100}},requireSkill=356,g={
+crit(25814,{achID=9462,id=4})}}),
 ach(9547,{cost={{"i",118414,20}},requireSkill=356}),
-ach(9459,{cost={{"i",111675,100}},requireSkill=356}),
-ach(9455,{cost={{"i",111673,100}},requireSkill=356}),
-ach(9460,{cost={{"i",111676,100}},requireSkill=356}),
-ach(9461,{cost={{"i",111672,100}},requireSkill=356})}})}}),
+ach(9459,{cost={{"i",111675,100}},requireSkill=356,g={
+crit(25813,{achID=9462,id=3})}}),
+ach(9455,{cost={{"i",111673,100}},requireSkill=356,g={
+crit(25817,{achID=9462,id=7})}}),
+ach(9460,{cost={{"i",111676,100}},requireSkill=356,g={
+crit(25812,{achID=9462,id=2})}}),
+ach(9461,{cost={{"i",111672,100}},requireSkill=356,g={
+crit(25811,{achID=9462,id=1})}})}})}}),
 x(7,{awp=70003,requireSkill=356,g={
 h(-12,{requireSkill=356,g={
 ach(10594,{requireSkill=356}),
@@ -5631,6 +5640,9 @@ q(39932,{coords={
 [627]={{41.6,37.2}}},lvl=10,qgs={92195},requireSkill=773,sourceQuests={39931}}),
 q(39933,{coords={
 [627]={{41.6,37.2}}},lvl=10,qgs={92195},requireSkill=773,sourceQuests={39932},g={
+o(244679,{coords={
+[627]={{46.3,39.7},{47,38.7},{47.3,41.1},{47.4,40.3},{47.5,40.8},{47.6,40.3},{48.1,41.8},{48.4,39.4},{48.6,39.4},{48.6,40.8},{48.7,38.4},{48.7,41.5},{48.9,39.9},{49.8,39.5},{49.9,39.1}}},requireSkill=773,g={
+i(129092,{requireSkill=773})}}),
 r(192854,{learnedAt=60,requireSkill=773,skillID=2508})}}),
 q(40056,{c={12},coords={
 [627]={{41.6,37.2}}},lvl=10,qgs={92195},requireSkill=773,sourceQuests={39933}}),
@@ -5857,7 +5869,9 @@ i(204435,{requireSkill=773})}}),
 i(198607,{b=1,isWeekly=1,requireSkill=773,spellID=384426})}}),
 q(75573,{awp=100100,coords={
 [2112]={{36.5,62.5}}},isWeekly=1,lvl=10,maxReputation={2544,5},qgs={203516},requireSkill=773,g={
-i(198607,{awp=100002,b=1,isWeekly=1,requireSkill=773,spellID=384426})}}),
+o(398829,{awp=100002,requireSkill=773,g={
+i(205124,{requireSkill=773})}}),
+i(198607,{b=1,isWeekly=1,requireSkill=773,spellID=384426})}}),
 q(77889,{awp=100200,coords={
 [2112]={{36.8,63.1}}},isWeekly=1,lvl=10,maxReputation={2544,5},qgs={210162},requireSkill=773,g={
 i(208886,{awp=100002,requireSkill=773}),
@@ -7339,7 +7353,7 @@ cu(2025,{requireSkill=165})}}),
 q(66385,{isWeekly=1,providers={{"i",193913}},requireSkill=165,g={
 cu(2025,{requireSkill=165})}}),
 q(70522,{coords={
-[2022]={{79.4,32.5},{80.6,33.8}}},crs={190056,193806,195241,196420},description="Drops from any Proto Drake.\nCoordinates link to the spot(s) we found best.",isWeekly=1,providers={{"i",198975}},requireSkill=165,g={
+[2022]={{79.4,32.5},{80.6,33.8}}},crs={184869,190056,193806,195241,196420},description="Drops from any Proto Drake.\nCoordinates link to the spot(s) we found best.",isWeekly=1,providers={{"i",198975}},requireSkill=165,g={
 cu(2025,{requireSkill=165})}}),
 q(70523,{coords={
 [2025]={{31.3,76.5},{32.4,73.5},{35.4,72.8},{36.6,72.8}}},crs={188277,191203,191317},description="Drops from any Sylvern or Vorquin.\nCoordinates link to the spot(s) we found best.",isWeekly=1,providers={{"i",198976}},requireSkill=165,g={
@@ -7594,7 +7608,7 @@ r(184497,{requireSkill=186})}}),
 q(38804,{coords={
 [680]={{28,26.4}}},lvl=10,qgs={93776},requireSkill=186,sourceQuests={38801},g={
 r(184498,{requireSkill=186})}})}}),
-ah(191970,{awp=70003,crs={93237},maps={630,634,641,646,650,680},requireSkill=186,type="s",g={
+ah(191970,{awp=70003,crs={93237},maps={630,634,641,646,650,680},requireSkill=186,symselector=2,type="s",g={
 q(38806,{lvl=45,providers={{"i",124502}},requireSkill=186,g={
 r(184504,{requireSkill=186})}}),
 q(38807,{coords={
@@ -8031,7 +8045,7 @@ q(40134,{lvl=10,qgs={94409},requireSkill=393,sourceQuests={40133},g={
 i(129900,{requireSkill=393}),
 i(129901,{requireSkill=393}),
 i(129903,{requireSkill=393}),
-s(74444,130064,{f=2,requireSkill=393})}}),
+s(74444,130064,{f=2,loc=40,requireSkill=393})}}),
 q(40135,{lvl=10,qgs={94409},requireSkill=393,sourceQuests={40133},g={
 r(194162,{requireSkill=393})}})}}),
 ah(194163,{awp=70003,requireSkill=393,type="s",g={
@@ -9132,5 +9146,5 @@ cu(3160,{requireSkill=197})}}),
 q(93543,{isWeekly=1,providers={{"i",259203}},requireSkill=197,g={
 cu(3160,{requireSkill=197})}}),
 q(93542,{isWeekly=1,providers={{"i",259202}},requireSkill=197,g={
-cu(3160,{requireSkill=197})}})}})}})})}});
-end);
+cu(3160,{requireSkill=197})}})}})}})})}})
+end)

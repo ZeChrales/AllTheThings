@@ -28,7 +28,8 @@ function app:SetupReportDialog(id, reportMessage, text, replace)
 		-- print("Setup Report", id, reportMessage)
 		reports[id] = {
 			msg = reportMessage,
-			text = (type(text) == "table" and app.TableConcat(text, nil, "", "\n") or text)
+			-- FYI: Safely-handling secrets through here doesn't matter anyway since the EditBox:SetText method doesn't allow secrets! Cool
+			text = (type(text) == "table" and app.TableConcatWithSecrets(text, "\n") or text)
 		};
 		return true;
 	end
@@ -204,7 +205,7 @@ end, {
 -- Allows a user to use /att debug-events
 -- to enable Debug Printing of Event messages
 app.ChatCommands.Add("debug-events", function(args)
-	app.DebugEvents()
+	app.HandleEvent("OnToggle-DebugEvents")
 	app.print("Debug Events:",app.DebuggingEvents and "ACTIVE" or "OFF")
 	-- debug prints may/not be toggled due to this, so print status anyway
 	app.print("Debug Printing:",app.Debugging and "ACTIVE" or "OFF")
@@ -213,6 +214,35 @@ end, {
 	"Usage : /att debug-events",
 	"Allows toggling the debug printing and monitoring of all game events that ATT handles.",
 })
+-- Add a Command that lets players toggle how ATT loads to potentially facilitate script timeout restrictions
+app.ChatCommands.Add("use-progressive-loading", function(args)
+	local newLoadStyle = AllTheThingsSavedVariables.LoadStyle == 1 and 0 or 1
+	AllTheThingsSavedVariables.LoadStyle = newLoadStyle
+	-- ATT Loading Style : [Progressive/Instant]
+	app.print(newLoadStyle == 1 and (UNIT_NAMEPLATES_THREAT_DISPLAY_PROGRESSIVE or "Progressive") or (SPELL_CAST_TIME_INSTANT_NO_MANA or "Instant"),(LFG_LIST_LOADING or "Loading..."))
+	app.print("/rl ->",RELOADUI)
+	return true
+end, {
+	"Usage : /att use-progressive-loading",
+	"Allows changing some load behavior of ATT to spread out the load sequence across many more game frames, potentially allowing successful loading in some game environments or locations where tighter addon restrictions may temporarily exist.",
+})
+local ForceDebugPrint
+app.AddEventHandler("OnToggle-DebugEvents", function()
+	app.DebuggingEvents = not app.DebuggingEvents
+	app.events.__ToggleOnEventFunc()
+	-- enable/disable Debugging for prints if not already enabled
+	if app.DebuggingEvents then
+		if not app.Debugging then
+			ForceDebugPrint = true
+			app.Debugging = true
+		end
+	else
+		if ForceDebugPrint and app.Debugging then
+			ForceDebugPrint = nil
+			app.Debugging = nil
+		end
+	end
+end, true)
 
 -- Allows a user to open a popout window for their target via /att [t|target]
 app.ChatCommands.Add({"t", "target"}, function(args)

@@ -222,7 +222,7 @@ namespace ATT
                 }
 
                 // Export all of the Items to the Item DB folder.
-                File.WriteAllText(Path.Combine(directory, "AllItemFiltersByID.lua"), filterBuilder.AppendLine().Append("};").ToString(), Encoding.UTF8);
+                File.WriteAllText(Path.Combine(directory, "AllItemFiltersByID.lua"), filterBuilder.AppendLine().Append("}").ToString(), Encoding.UTF8);
                 File.WriteAllText(Path.Combine(directory, "AllItemsByID.lua"), builder2.ToString(), Encoding.UTF8);
                 File.WriteAllText(Path.Combine(directory, "AllItems.lua"), ATT.Export.ExportRawLua(allItems).ToString(), Encoding.UTF8);
                 File.WriteAllText(Path.Combine(directory, "ItemsMissingData.lua"), ATT.Export.ExportRawLua(itemsMissingData).ToString(), Encoding.UTF8);
@@ -350,11 +350,7 @@ namespace ATT
                     case "displayID":
                     case "sourceText":
                     case "creatureID":
-                    case "cr":
-                    case "crs":
                     case "npcID":
-                    case "qg":
-                    case "qgs":
                     case "modelRotation":
                     case "modelScale":
                     case "model":
@@ -623,9 +619,14 @@ namespace ATT
                             return;
                         }
                         // Config-defined fields
-                        if (Objects.SINGULAR_PLURAL_FIELDS_LONG.TryGetValue(field, out string pluarlFieldName))
+                        if (Objects.SINGULAR_PLURAL_FIELDS_LONG.TryGetValue(field, out string pluralFieldName))
                         {
-                            Objects.MergeSingularFieldAsArray<long>(item, pluarlFieldName, value);
+                            Objects.MergeSingularFieldAsArray<long>(item, pluralFieldName, value);
+                            return;
+                        }
+                        if (Objects.PLURAL_FIELDS_LONG.Contains(field))
+                        {
+                            Objects.MergeUniqueIntegerArrayData(item, field, value);
                             return;
                         }
                         break;
@@ -1185,7 +1186,7 @@ namespace ATT
             /// </summary>
             /// <param name="data"></param>
             /// <returns></returns>
-            public static decimal GetSpecificItemID(IDictionary<string, object> data)
+            public static decimal GetSpecificItemID(IDictionary<string, object> data, bool doCache = true)
             {
                 if (data.TryGetValue("_modItemID", out decimal modItemID))
                 {
@@ -1200,7 +1201,10 @@ namespace ATT
                 data.TryGetValue("bonusID", out long bonusID);
 
                 modItemID = GetSpecificItemID(itemID, modID, bonusID);
-                data["_modItemID"] = modItemID;
+                if (doCache)
+                {
+                    data["_modItemID"] = modItemID;
+                }
                 return modItemID;
             }
             #endregion

@@ -2,6 +2,10 @@
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 
+-- TODO with InstanceHelper
+-- InstanceHelper.BossObjects = {
+-- 	[MPLUS] = { 546729 },	-- Treasure Chest
+-- }
 root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { ADDED_7_3_0 } }, {
 	inst(945, {	-- Seat of the Triumvirate
 		["mapID"] = 903,
@@ -18,7 +22,7 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 				q(48230, {	-- Fragment of the Past
 					["description"] = "You must complete |cffffff00Seat of the Triumvirate: The Crest of Knowledge|r before this item will drop.",
 					["sourceQuest"] = 47654,	-- Seat of the Triumvirate: The Crest of Knowledge
-					["provider"] = { "i", 152204 },	-- Glowing Key Fragment
+					["qs"] = 152204,	-- Glowing Key Fragment (QS!)
 					["maps"] = { EREDATH },
 					["crs"] = {
 						122316,	-- Saprish
@@ -45,19 +49,19 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 						{ 51.7, 74.4, THE_VINDICAAR_KROKUUN_UPPER },
 						{ 62.6, 39.4, EREDATH },
 					},
-					["groups"] = { i(152205) },	-- Glowing key Fragment (QI!)
+					["qi"] = 152205,	-- Glowing key Fragment (QI!)
 				}),
 				q(48271, {	-- Recovering the Pieces
 					["sourceQuest"] = 48864,	-- The Broken Blacksmith
 					["qg"] = 125246,	-- Gaal <Blacksmith>
 					["coord"] = { 56.9, 68.6, KROKUUN },
-					["groups"] = { i(152201) },	-- Armory Key Fragment (QI!)
+					["qi"] = 152201,	-- Armory Key Fragment (QI!)
 				}),
 				q(48261, {	-- The Power to Reforge
 					["sourceQuest"] = 48864,	-- The Broken Blacksmith
 					["qg"] = 125246,	-- Gaal <Blacksmith>
 					["coord"] = { 56.9, 68.6, KROKUUN },
-					["groups"] = { i(152200) },	-- Dendrite Cluster (QI!)
+					["qi"] = 152200,	-- Dendrite Cluster (QI!)
 				}),
 				q(48803, {	-- Forging a Key to the Past
 					["sourceQuests"] = {
@@ -71,15 +75,16 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					["sourceQuest"] = 48803,	-- Forging a Key to the Past
 					["qg"] = 125246,	-- Gaal <Blacksmith>
 					["coord"] = { 56.9, 68.6, KROKUUN },
+					["qi"] = 152203,	-- Reforged Armory Key (QI!)
 					["groups"] = {
-						iensemble(152241),	-- Ensemble: Light-Woven Triumvirate Regalia
-						iensemble(152242),	-- Ensemble: Burnished Triumvirate Armor
-						iensemble(152243),	-- Ensemble: Sterling Triumvirate Chainmail
-						iensemble(152244),	-- Ensemble: Venerated Triumvirate Battleplate
-						i(152203),	-- Reforged Armory Key (QI!)
 						o(272918, {	-- Gilded Triumvirate Chest
 							i(152202),	-- Armor of the Triumvirate (QI!)
 						}),
+						--
+						iensemble(152242),	-- Ensemble: Burnished Triumvirate Armor
+						iensemble(152241),	-- Ensemble: Light-Woven Triumvirate Regalia
+						iensemble(152243),	-- Ensemble: Sterling Triumvirate Chainmail
+						iensemble(152244),	-- Ensemble: Venerated Triumvirate Battleplate
 					},
 				}),
 			}),
@@ -228,6 +233,7 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					cr(122313, e(1979, {	-- Zuraal the Ascended
 						ach(12004, {	-- Welcome the Void
 							["crs"] = { 126283 },	-- Urjad
+							["timeline"] = { ADDED_7_3_0, REMOVED_12_0_1_LAUNCH },
 						}),
 						i(151312),	-- Ampoule of Pure Void
 						i(151315),	-- Bracers of Dark Binding
@@ -245,6 +251,7 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					cr(122316, e(1980, {	-- Saprish
 						ach(12005, {	-- Let It All Out
 							["crs"] = { 126312 },	-- Sealed Void Cache
+							["timeline"] = { ADDED_7_3_0, REMOVED_12_0_1_LAUNCH },
 						}),
 						i(151321),	-- Darkfang Scale Wristguards
 						i(151327),	-- Girdle of the Shadowguard
@@ -274,7 +281,9 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 						i(151288),	-- Void-Resistant Seedpod
 					})),
 					cr(122314, e(1982, {	-- L'ura
-						ach(12009),	-- Darker Side
+						ach(12009, {	-- Darker Side
+							["timeline"] = { ADDED_7_3_0, REMOVED_12_0_1_LAUNCH },
+						}),
 						ach(12008),	-- Mythic: Seat of the Triumvirate
 						i(151311),	-- Band of the Triumvirate
 						i(151302),	-- Cord of Unraveling Reality

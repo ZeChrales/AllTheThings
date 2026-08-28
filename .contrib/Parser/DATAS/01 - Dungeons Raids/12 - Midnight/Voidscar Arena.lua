@@ -19,8 +19,20 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS)
 local BossOnly, Difficulty =
 InstanceHelper.BossOnly, InstanceHelper.Difficulty
 
+-- TODO: M+ container: 642094
+
+local InRetailSeason
+-- #IF AFTER 12.1
+InRetailSeason = {	-- MID S2
+	DIFFICULTY.DUNGEON.MULTI.NORMAL_PLUS,
+	DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS,
+	DIFFICULTY.DUNGEON.MYTHIC,
+}
+-- #ENDIF
+
 root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
 	inst(1313, {	-- Voidscar Arena
+		InRetailSeason=InRetailSeason,
 		["coord"] = { 53.7, 34.8, MAP.MIDNIGHT.VOIDSTORM },
 		["maps"] = {
 			2572,	-- Voidscar Arena
@@ -62,17 +74,23 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 					i(251231),	-- Singularity Slicer
 				}),
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS).AddGroups({
-				BossOnly(CHARONUS, {
-					ach(61509),	-- Heroic: Voidscar Arena
-				}),
+			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS, {
+				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
+                ["groups"] = {
+					BossOnly(CHARONUS, {
+						ach(61509),	-- Heroic: Voidscar Arena
+					}),
+				},
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MYTHIC).AddGroups({
-				BossOnly(CHARONUS, {
-					ach(61510),	-- Mythic: Voidscar Arena
-					ach(61620),	-- Mythic: Voidscar Arena Guild Run
-				}),
-			}),
+			Difficulty(DIFFICULTY.DUNGEON.MYTHIC, {
+                ["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
+                ["groups"] = {
+					BossOnly(CHARONUS, {
+						ach(61510),	-- Mythic: Voidscar Arena
+						ach(61620),	-- Mythic: Voidscar Arena Guild Run
+					}),
+                },
+            }),
 		},
 	}),
 })));

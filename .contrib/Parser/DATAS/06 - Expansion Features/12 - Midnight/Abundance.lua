@@ -67,6 +67,12 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeli
 				ach(62325),	-- Abundance: Treasures Aplenty
 				ach(61681),	-- Abundance: You Should See Him in a Crown
 			}),
+			n(MAILBOX, {
+				i(274578, {	-- Offering of Unalloyed Abundance
+					["description"] = "Granted at the start of 12.0.5 to players who did not receive appropriate amounts of Unalloyed Abundance for their efforts prior to that point.",
+					["timeline"] = { ADDED_12_0_5 },
+				}),
+			}),
 			n(QUESTS, {
 				q(91930, {	-- The Abundant Lands
 					--["sourceQuest"] = XXXXX,	-- Finished Midnight Campaign
@@ -121,6 +127,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeli
 						}),
 						i(263466, {	-- Overflowing Abundant Satchel (Season 1)
 							["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },
+							["sym"] = SYM.MIDNIGHT.QUELTHALAS_ZONE_REWARDS,
+						}),
+						i(279523, {	-- Overflowing Abundant Satchel (Season 2)
+							["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
 							["sym"] = SYM.MIDNIGHT.QUELTHALAS_ZONE_REWARDS,
 						}),
 					},
@@ -275,13 +285,15 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 			q(91475, { ["isRepeatable"] = true }),	-- Abundance: Abundant Voidburrow
 			q(87350, { ["isRepeatable"] = true }),	-- Abundance: Loaknit Den
 			q(91457, { ["isRepeatable"] = true }),	-- Abundance: Watha'nan Crypts
-			q(88770),	-- Popped after entering Loaknit Den
-			q(94426),	-- Popped after Loaknit Den
-			q(91432),	-- Popped after entering Wath'nan Crypts
+			--
+			q(91303),	-- First time spending Shard of Dundun in Harandar (Abundant Grove)
+			q(91496),	-- First time spending Shard of Dundun in Voidstorm (Abundant Voidburrow)
+			q(90092),	-- First time spending Shard of Dundun in Zul'Aman (Loaknit Den)
+			q(91432),	-- First time spending Shard of Dundun in Eversong Woods (Watha'nan Crypts)
+			--
+			q(88770),	-- Unlocked Abundance
 			q(94952),	-- Accepted 'Abudant Offerings' (questID 89507)
-			q(90092),	-- First time spending Shard of Dundun in Zul'Aman
-			q(91303),	-- First time spending Shard of Dundun in Harandar
-			q(91496),	-- First time spending Shard of Dundun in Voidstorm
+			q(94426),	-- Popped after Abundance (unknown exact trigger, can be any zone)
 		}),
 	}),
 }));

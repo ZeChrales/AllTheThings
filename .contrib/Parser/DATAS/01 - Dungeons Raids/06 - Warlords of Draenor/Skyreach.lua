@@ -52,11 +52,21 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, BossWithHeader =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.BossWithHeader
 
+local InRetailSeason
+-- #IF AFTER 12.1
+InRetailSeason = nil
+-- #ELSEIF AFTER 12.0
+InRetailSeason = {DIFFICULTY.DUNGEON.HEROIC, DIFFICULTY.DUNGEON.MYTHIC, DIFFICULTY.DUNGEON.KEYSTONE}	-- MID S1
+-- #ELSE
+InRetailSeason = nil
+-- #ENDIF
+
 root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADDED_6_0_3_LAUNCH } }, {
 	inst(476, {	-- Skyreach
 		["coord"] = { 35.5, 33.6, SPIRES_OF_ARAK },
 		["maps"] = { 601, 602 },
 		["lvl"] = 96,
+		InRetailSeason=InRetailSeason,
 		["groups"] = {
 			Difficulty(DIFFICULTY.DUNGEON.MULTI.NORMAL_PLUS).AddGroups({
 				BossOnly(RANJIT),
@@ -98,7 +108,9 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 			}),
 			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS).AddGroups({
 				BossOnly(RANJIT, {
-					ach(9033),	-- Ready for Raiding IV
+					ach(9033, {	-- Ready for Raiding IV
+						["timeline"] = { ADDED_6_0_3_LAUNCH, REMOVED_12_0_1_LAUNCH },
+					}),
 					i(258046, {	-- Chakram-Breaker Greatsword
 						["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },
 						["ItemAppearanceModifierID"] = 0,
@@ -153,6 +165,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				BossOnly(RUKHRAN, {
 					ach(9035, {	-- I Saw Solis
 						["crs"] = { 76227 },	-- Solar Flare
+						["timeline"] = { ADDED_6_0_3_LAUNCH, REMOVED_12_0_1_LAUNCH },
 					}),
 					i(258048, {	-- Beakbreaker Scimitar
 						["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },
@@ -192,9 +205,11 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 					ach(9372),	-- Heroic: Skyreach Guild Run
 					ach(9034, {	-- Magnify... Enhance
 						["crs"] = { 86919 },	-- Empowered Construct
+						["timeline"] = { ADDED_6_0_3_LAUNCH, REMOVED_12_0_1_LAUNCH },
 					}),
 					ach(9036, {	-- Monomania
 						["crs"] = { 76292 },	-- Skyreach Shield Construct
+						["timeline"] = { ADDED_6_0_3_LAUNCH, REMOVED_12_0_1_LAUNCH },
 					}),
 					i(258050, {	-- Arcanic of the High Sage
 						["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },

@@ -872,7 +872,13 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						{ 34.0, 84.6, ORGRIMMAR },
 						-- #endif
 					},
-					["timeline"] = { REMOVED_7_3_5 },
+					["timeline"] = {
+						-- #if ANYCLASSIC
+						-- CRIEVE NOTE: This was removed before it was supposed to in Classic.
+						REMOVED_4_0_3,
+						-- #endif
+						REMOVED_7_3_5
+					},
 					["requireSkill"] =
 						-- #if AFTER BFA
 						TAILORING,
@@ -965,7 +971,12 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					["lvl"] = 30,
 				},
 				{	-- Myzrael's Tale [A & H]
-					["provider"] = { "o", 2702 },	-- Stone of Inner Binding
+					["providers"] = {
+						{ "o", 2702 },	-- Stone of Inner Binding
+						-- #If AFTER BFA
+						{ "o", 290322},	-- Stone of Inner Binding
+						-- #endif
+					},
 					["allianceQuestData"] = q(26346),	-- Myzrael's Tale [A]
 					["hordeQuestData"] = q(26911),	-- Myzrael's Tale [H]
 					["sourceQuest"] = 26042,	-- Breaking the Keystone

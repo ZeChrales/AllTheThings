@@ -265,6 +265,7 @@ root(ROOTS.Professions, prof(FISHING, bubbleDownSelf({ ["requireSkill"] = FISHIN
 	expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { ADDED_6_0_3_LAUNCH } }, {
 		n(ACHIEVEMENTS, {
 			ach(9503),	-- Draenor Fisherman
+			ach(9462),	-- Draenor Angler
 			ach(9456),	-- Abyssal Gulper Eel Angler
 			ach(9457),	-- Blackwater Whiptail Angler
 			ach(9458),	-- Blind Lake Sturgeon Angler
@@ -877,6 +878,11 @@ root(ROOTS.Professions, prof(FISHING, bubbleDownSelf({ ["requireSkill"] = FISHIN
 				["timeline"] = { ADDED_12_0_1_LAUNCH },
 				["groups"] = { i(264002) },	-- Midnight Fisher's Shop Sign (DECOR!)
 			}),
+			ach(63510, bubbleDownSelf({ ["timeline"] = { ADDED_12_1_0 } }, {	-- The Briny Best
+				["groups"] = {
+					title(779),	-- Briny <Name>
+				},
+			})),
 		}),
 		filter(RECIPES, {
 			i(244791),	-- Recipe: Amani Angler's Ward

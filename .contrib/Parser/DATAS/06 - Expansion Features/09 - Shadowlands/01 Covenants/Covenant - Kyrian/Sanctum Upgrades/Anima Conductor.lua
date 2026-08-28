@@ -39,6 +39,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] 
 						n(REWARDS, {
 							["groups"] = {
 								currency(GRATEFUL, {
+									["customCollect"] = IGNORED_VALUE,
 									["description"] = "Grateful Offerings can be collected once you have unlocked the Anima Conductor in for your covenant.\n Once unlocked, you can loot them from Covenant Callings (higher Conductor => more Offerings), Patterns Within Patterns Weekly Quest in Zereth Morthis and from special rares & treasures, based on the channeling of your Anima Conductor.",
 								}),
 							},
@@ -75,7 +76,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] 
 							n(QUESTS, {
 								q(61179, {	-- Forge Ahead
 									["provider"] = { "n", 158773 },	-- Capheus
-									["coord"] = { 64.2, 20.0, BASTION },
+									["coords"] = {
+										{ 38.2, 67.8, ARCHONS_RISE },
+										{ 64.2, 20.0, BASTION },
+									},
 								}),
 							}),
 							n(QUESTS, sharedData({ ["isDaily"] = true }, {

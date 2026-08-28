@@ -236,7 +236,6 @@ root(ROOTS.Sourceless, bubbleDownFiltered({
 					i(161250),	-- Jambani Leggings
 				}),
 				filter(MAIL, {
-					i(161238),	-- Torcalin Bands
 					i(161146),	-- Torcalin Harness
 					i(161148),	-- Torcalin Shoulderguards
 					i(161226),	-- Torcalin Helm
@@ -303,6 +302,7 @@ root(ROOTS.Sourceless, bubbleDownFiltered({
 		expansion(EXPANSION.WOD, {
 			-- 6.0.2
 			expansion(EXPANSION.WOD, patch(0,2), bubbleDownSelf({ ["timeline"] = { ADDED_6_0_2 } }, {
+				i(118186),	-- Frostwolf Wisdom Stick
 				i(107644),	-- Napmaster's Sleep Mask
 			})),
 		}),

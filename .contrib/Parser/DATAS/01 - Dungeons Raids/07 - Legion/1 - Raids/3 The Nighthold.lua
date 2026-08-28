@@ -197,6 +197,11 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
+InstanceHelper.LFRQueueNPC = {
+	["cr"] = 111246,	-- Archmage Timear
+	["coord"] = { 63.7, 55.0, LEGION_DALARAN },
+}
+
 root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { ADDED_7_1_0 } }, {
 	inst(786, {	-- The Nighthold
 		["coords"] = {
@@ -355,10 +360,6 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					i(139651),	-- Vantus Rune Technique: Gul'dan [Rank 1] (RECIPE!)
 					i(137763),	-- Vantus Rune Technique: Gul'dan [Rank 2] (RECIPE!)
 				}),
-			}),
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["cr"] = 111246,	-- Archmage Timear
-				["coord"] = { 63.7, 55.0, LEGION_DALARAN },
 			}),
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups({
 				ZoneDrops({}),
@@ -524,11 +525,9 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 							45382,	-- The Nighthold: Talisman of the Shal'dorei (Heroic)
 							45383,	-- The Nighthold: Talisman of the Shal'dorei (Mythic)
 						},
-						["provider"] = { "n", 110791 },	-- First Arcanist Thalyssra
-						["groups"] = {
-							i(143656),	-- Echo of Time (QI!)
-							ig(141324),	-- Talisman of the Shal'dorei (Normal)
-						},
+						["qg"] = 110791,	-- First Arcanist Thalyssra
+						["qi"] = 143656,	-- Echo of Time (QI!)
+						["groups"] = { ig(141324) },	-- Talisman of the Shal'dorei (Normal)
 					}),
 				}),
 				Boss(SKORPYRON),
@@ -669,11 +668,9 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					q(45382, {	-- The Nighthold: Talisman of the Shal'dorei (Heroic)
 						["description"] = "Finishing this quest will grant you immediate access to Spellblade Aluriel, Krosus, and/or Elisande on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
 						["altQuests"] = { 45383 },	-- The Nighthold: Talisman of the Shal'dorei (Mythic)
-						["provider"] = { "n", 110791 },	-- First Arcanist Thalyssra
-						["groups"] = {
-							i(143657),	-- Echo of Time (QI!)
-							ig(141325),	-- Talisman of the Shal'dorei (Heroic)
-						},
+						["qg"] = 110791,	-- First Arcanist Thalyssra
+						["qi"] = 143657,	-- Echo of Time (QI!)
+						["groups"] = { ig(141325) },	-- Talisman of the Shal'dorei (Heroic)
 					}),
 				}),
 				Boss(SKORPYRON),
@@ -806,11 +803,9 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 				n(QUESTS, {
 					q(45383, {	-- The Nighthold: Talisman of the Shal'dorei (Mythic)
 						["description"] = "Finishing this quest will grant you immediate access to Spellblade Aluriel, Krosus, and/or Elisande on Mythic difficulty each week.\n",
-						["provider"] = { "n", 110791 },	-- First Arcanist Thalyssra
-						["groups"] = {
-							i(143658),	-- Echo of Time (QI!)
-							ig(141326),	-- Talisman of the Shal'dorei (Mythic)
-						},
+						["qg"] = 110791,	-- First Arcanist Thalyssra
+						["qi"] = 143658,	-- Echo of Time (QI!)
+						["groups"] = { ig(141326) },	-- Talisman of the Shal'dorei (Mythic)
 					}),
 				}),
 				Boss(SKORPYRON, {

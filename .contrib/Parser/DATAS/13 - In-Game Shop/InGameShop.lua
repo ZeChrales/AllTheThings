@@ -218,6 +218,15 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		i(248073, {	-- Smoldering Valor
 			["timeline"] = { ADDED_11_2_7 },
 		}),
+		i(78916, {	-- Soul of the Aspects (PET!)
+			["timeline"] = {
+				-- #if ANYCLASSIC
+				CREATED_4_3_0,
+				-- #else
+				ADDED_4_3_0,
+				-- #endif
+			},
+		}),
 		i(208751, {	-- Squally (PET!)
 			["timeline"] = { ADDED_11_2_7 },
 			["groups"] = {
@@ -232,14 +241,8 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 				})),
 			},
 		}),
-		i(78916, {	-- Soul of the Aspects (PET!)
-			["timeline"] = {
-				-- #if ANYCLASSIC
-				CREATED_4_3_0,
-				-- #else
-				ADDED_4_3_0,
-				-- #endif
-			},
+		i(272956, {	-- Sunflicker Driftmoth (PET!)
+			["timeline"] = { ADDED_12_0_7 },
 		}),
 		-- #if ANYCLASSIC
 		i(224002, {	-- Swoopy
@@ -659,6 +662,20 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 			["timeline"] = { ADDED_10_0_7 },
 		}),
 
+		------ Vibrant Petalweave Collection ------
+		iensemble(271089, {	-- Ensemble: Azure Petalweave
+			["timeline"] = { ADDED_12_1_0 },
+		}),
+		iensemble(271080, {	-- Ensemble: Blush Petalweave
+			["timeline"] = { ADDED_12_1_0 },
+		}),
+		iensemble(271071, {	-- Ensemble: Scarlet Petalweave
+			["timeline"] = { ADDED_12_1_0 },
+		}),
+		iensemble(271062, {	-- Ensemble: Sunlit Petalweave
+			["timeline"] = { ADDED_12_1_0 },
+		}),
+
 		------ Single Pieces ------
 		-- #if AFTER 11.2.5
 		iensemble(255827, {	-- Collection: Wings of Awakening
@@ -921,6 +938,9 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 			["timeline"] = { ADDED_4_3_0 },
 		}),
 		-- #endif
+		i(274164, {	-- Hearthkeeper's Wandering Caravan (MOUNT!)
+			["timeline"] = { ADDED_12_1_0 },
+		}),
 		i(239076, {	-- Herald of Sa'bak (MOUNT!)
 			["description"] = "Also obtained if you set up a 6-Month WoW Subscription.",
 			["timeline"] = { ADDED_11_1_7 },
@@ -1053,7 +1073,10 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		mount(326390, {	-- Steamscale Incinerator (MOUNT!)
 			["timeline"] = { ADDED_8_3_7 },
 		}),
-		mount(1279352, {	-- Stoneforged Sentinel (MOUNT!)
+		i(267078, {	-- Stoneforged Sentinel (MOUNT!)
+			["timeline"] = { ADDED_12_0_7 },
+		}),
+		i(273655, {	-- Sunflare Driftmoth (MOUNT!)
 			["timeline"] = { ADDED_12_0_7 },
 		}),
 		-- #if AFTER 11.2.0

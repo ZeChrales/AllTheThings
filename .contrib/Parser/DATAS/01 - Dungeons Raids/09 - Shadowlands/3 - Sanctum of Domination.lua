@@ -177,7 +177,7 @@ local EncounterToLoot = {
 		i(186324),	-- Frame of the False Margrave
 		i(186379),	-- Interplanar Keystone
 		i(187542, {	-- Jaithys, the Prison Blade
-			["timeline"] = { ADDED_9_1_0, REMOVED_10_0_2_LAUNCH },	-- This Item Doesnt Seem to Drop Anymore	-- 13th March 2024 by Cromation
+			["timeline"] = { ADDED_9_1_0, REMOVED_10_0_2_LAUNCH },	-- This Item Doesn't Seem to Drop Anymore	-- 13th March 2024 by Cromation
 		}),
 		i(186410, {	-- Jaithys, the Prison Blade
 			-- #if BEFORE 10.0.2
@@ -225,6 +225,16 @@ local ZoneDropLoot = {
 local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, ZoneDropLoot)
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
+
+InstanceHelper.BossObjects = {
+	[SYLVANAS] = { 369898 },	-- Domination-Etched Treasure Cache
+}
+-- #if AFTER 10.1.5
+InstanceHelper.LFRQueueNPC = {	-- Queue NPC
+	["crs"] = { 205959 },	-- Ta'elfar <Trader of Histories>
+	["coord"] = { 41.3, 71.0, ORIBOS },
+}
+-- #endif
 
 root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDED_9_1_0 } }, {
 	inst(1193, {	-- Sanctum of Domination
@@ -630,12 +640,6 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 					i(181383),	-- Unrelenting Cold
 				}),
 			}),
-			-- #if AFTER 10.1.5
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["crs"] = { 205959 },	-- Ta'elfar <Trader of Histories>
-				["coord"] = { 41.3, 71.0, ORIBOS },
-			}),
-			-- #endif
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups(bubbleDown({ ["timeline"] = { ADDED_9_1_0, REMOVED_10_0_2_LAUNCH, ADDED_10_1_5 } }, {
 				ZoneDrops(),
 				header(HEADERS.Achievement, 15122, {	-- The Jailer's Vanguard
@@ -702,10 +706,8 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 			Difficulty(DIFFICULTY.RAID.NORMAL).AddGroups({
 				n(QUESTS, {
 					q(64597, {	-- Sanctum of Domination - Damned If You Don't [N]
-						["provider"] = { "n", 178592 },	-- Highlord Bolvar Fordragon
-						["groups"] = {
-							i(187529),	-- Phylactery Shard (QI!)
-						},
+						["qg"] = 178592,	-- Highlord Bolvar Fordragon
+						["qi"] = 187529,	-- Phylactery Shard (QI!)
 					}),
 				}),
 				ZoneDrops(),
@@ -748,10 +750,8 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 			Difficulty(DIFFICULTY.RAID.HEROIC).AddGroups({
 				n(QUESTS, {
 					q(64598, {	-- Sanctum of Domination - Damned If You Don't [H]
-						["provider"] = { "n", 178592 },	-- Highlord Bolvar Fordragon
-						["groups"] = {
-							i(187530),	-- Phylactery Shard (QI!)
-						},
+						["qg"] = 178592,	-- Highlord Bolvar Fordragon
+						["qi"] = 187530,	-- Phylactery Shard (QI!)
 					}),
 				}),
 				ZoneDrops(),
@@ -780,10 +780,8 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 			Difficulty(DIFFICULTY.RAID.MYTHIC).AddGroups({
 				n(QUESTS, {
 					q(64599, {	-- Sanctum of Domination - Damned If You Don't [M]
-						["provider"] = { "n", 178592 },	-- Highlord Bolvar Fordragon
-						["groups"] = {
-							i(187531),	-- Phylactery Shard (QI!)
-						},
+						["qg"] = 178592,	-- Highlord Bolvar Fordragon
+						["qi"] = 187531,	-- Phylactery Shard (QI!)
 					}),
 				}),
 				ZoneDrops(),

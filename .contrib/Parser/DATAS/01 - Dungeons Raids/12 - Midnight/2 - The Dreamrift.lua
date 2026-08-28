@@ -55,10 +55,16 @@ local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
 InstanceHelper.UpgradeMapping = {
+	-- #IF AFTER 12.1
+	[DIFFICULTY.RAID.LFR] = 0,
+	[DIFFICULTY.RAID.NORMAL] = 0,
+	[DIFFICULTY.RAID.HEROIC] = 0,
+	-- #ELSE
 	[DIFFICULTY.RAID.LFR] = 3,
 	[DIFFICULTY.RAID.NORMAL] = 5,
 	[DIFFICULTY.RAID.HEROIC] = 6,
-};
+	-- #ENDIF
+}
 
 root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_SEASONSTART } }, {
 	inst(1314, {	-- The Dreamrift
@@ -71,10 +77,6 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 		["groups"] = {
 			n(ACHIEVEMENTS, {
 				-- Myrhial Check Automation
-				-- Multiple Raids this tier... Duplicate Glory and Tier Set Achievements?
-				ach(61380, {	-- Glory of the Midnight Raider (automated)
-					i(260887),	-- Tenebrous Harrower (MOUNT!)
-				}),
 				ach(61843),	-- Quel'Dressed
 			}),
 			Difficulty(DIFFICULTY.RAID.MULTI.ALL).AddGroups({

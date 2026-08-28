@@ -1,6 +1,7 @@
 ---------------------------------------------
 --      H O U S I N G    M O D U L E       --
 ---------------------------------------------
+
 root(ROOTS.Housing, m(FOUNDERS_POINT, {
 	["timeline"] = { ADDED_11_2_7 },
 	["groups"] = {
@@ -54,7 +55,7 @@ root(ROOTS.Housing, m(FOUNDERS_POINT, {
 			["qg"] = 248854,	-- The Last Architect
 			-- this allows proper merging with 'coord' used below
 			["coords"] = {{ 52.7, 37.5, FOUNDERS_POINT }},
-		},{
+		}, {
 			q(92437, {	-- Decor Treasure Hunt
 				["coord"] = { 63.2, 38.3, FOUNDERS_POINT },	-- Treasure
 				["groups"] = { i(245375) },	-- Sturdy Wooden Bookcase (DECOR!)
@@ -278,6 +279,9 @@ root(ROOTS.Housing, m(FOUNDERS_POINT, {
 		}));
 		-- TODO: Instead of duplicate rewards on vendors + source quest, maybe we can link them via crs and rely on Filler? need to test...
 		n(VENDORS, {
+			n(257297, {	-- "Fen" Rucket <Artisanal Room "Planner">
+				["coord"] = { 63.6, 79.6, FOUNDERS_POINT },
+			}),
 			n(255222, {	-- "High Tides" Ren <Decor Vendor>
 				["coord"] = { 62.4, 80.1, FOUNDERS_POINT },
 			}),
@@ -293,17 +297,35 @@ root(ROOTS.Housing, m(FOUNDERS_POINT, {
 			n(255216, {	-- Balen Starfinder <Decor Vendor>
 				["coord"] = { 52.2, 37.8, FOUNDERS_POINT },
 			}),
+			n(263258, {	-- Cousin Shortkaf <Kafa Trader>
+				["coord"] =  { 55.1, 43.6, FOUNDERS_POINT },
+				["timeline"] = { ADDED_12_1_0 },
+			}),
 			n(255213, {	-- Faarden the Builder <Decor Vendor>
 				["coord"] = { 52.0, 38.4, FOUNDERS_POINT },
 			}),
+			n(257321, {	-- Fel'orei Moonstrider <Westfall Decor Vendor>
+				["coord"] = { 52.0, 38.5, FOUNDERS_POINT },
+			}),
+			n(267856, {	-- J-3T 3000
+				["coord"] =  { 55.2, 43.6, FOUNDERS_POINT },
+				["timeline"] = { ADDED_12_1_0 },
+			}),
 			n(255942, {	-- Jendry Clockson <Donut Vendor>
 				["groups"] = { i(260588) },	-- Jendry's Donut
+			}),
+			n(255104, {	-- Jorvan Longmoor <General Contractor>
+				["coord"] = { 54.0, 39.6, FOUNDERS_POINT },
 			}),
 			n(256750, {	-- Klasa <Preowned Parts>
 				["coord"] = { 58.3, 61.7, FOUNDERS_POINT },
 			}),
 			n(255519, {	-- Lestia Goldenstrike <Lumberjack>
 				["coord"] = { 51.9, 38.7, FOUNDERS_POINT },
+			}),
+			n(267795, {	-- Perry Winkles <Pet Decor Vendor>
+				["coord"] = { 53.8, 41.7, FOUNDERS_POINT },
+				["timeline"] = { ADDED_12_1_0 },
 			}),
 			n(255221, {	-- Trevor Grenner <Decor Vendor>
 				["coord"] = { 53.5, 40.9, FOUNDERS_POINT },

@@ -52,30 +52,3 @@ title(250),	-- Grievous Skirmisher %s
 title(980),	-- Skirmisher %s
 title(995),	-- Malevolent Skirmisher %s
 title(996),	-- Tyrannical Skirmisher %s
-5.5.3.64141
-title(736),	-- %s, the Mistborne
-title(737),	-- %s, Heir to the Mist
-5.5.3.64308
-title(738),	-- %s, the Thundering Stampede
-title(739),	-- %s, the Momentous Terror
-12.0.0.63534
-title(0),	-- Loa-speaker %s
-12.1.0.68209
-title(767),	-- Venomous Gladiator %s
-title(768),	-- Venomous Legend %s
-title(769),	-- Venomous Marshal %s
-title(770),	-- Venomous Warlord %s
-title(774),	-- Snake Eater %s
-title(775),	-- %s the Poisonous
-title(776),	-- %s, Fabled Vanquisher of Azta'rec
-title(779),	-- Briny %s
-title(781),	-- %s, Voice of the Fangs
-title(782),	-- %s, Nalorakk's Favored
-title(783),	-- Street Sovereign %s
-title(784),	-- %s, Eyes of the Vale
-title(785),	-- Voidscar Champion %s
-title(786),	-- %s, the Uncrowned Conqueror
-title(787),	-- %s, Flame of Life
-title(788),	-- %s, Wrath of Sethraliss
-title(790),	-- %s, Famed Slayer of Ula'tek
-title(791),	-- %s, Venom's End

@@ -36,7 +36,13 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			q(93687, {	-- Taste True Power
 				--["sourceQuests"] = { ??? },	-- ??
 				["provider"] = { "n", 243229 },	-- Eldara Dawnrunner
-				["timeline"] = { ADDED_12_0_1_SEASONSTART },
+				["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },
+				["coord"] = { 40.2, 64.8, MAP.MIDNIGHT.SILVERMOON_CITY },
+			}),
+			q(96614, {	-- Forged Through Fire
+				--["sourceQuests"] = { ??? },	-- ??
+				["provider"] = { "n", 243229 },	-- Eldara Dawnrunner
+				["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
 				["coord"] = { 40.2, 64.8, MAP.MIDNIGHT.SILVERMOON_CITY },
 			}),
 			-- Crests, Season 1
@@ -70,10 +76,33 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
 				["coord"] = { 48.6, 62.0, MAP.MIDNIGHT.SILVERMOON_CITY },
 			}),
+			q(96635, {	-- Upgrade Practicum
+				["sourceQuests"] = { 96633 },	-- Equipment Seminar
+				["provider"] = { "n", 239676 },	-- Vaskarn
+				["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
+				["coord"] = { 48.6, 62.0, MAP.MIDNIGHT.SILVERMOON_CITY },
+			}),
+			q(96637, {	-- Veteran Symposium
+				["sourceQuests"] = { 96635 },	-- Upgrade Practicum
+				["provider"] = { "n", 239676 },	-- Vaskarn
+				["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
+				["coord"] = { 48.6, 62.0, MAP.MIDNIGHT.SILVERMOON_CITY },
+			}),
+			q(96649, {	-- Mistcrest Capstone
+				["sourceQuests"] = { 96637 },	-- Veteran Symposium
+				["provider"] = { "n", 239676 },	-- Vaskarn
+				["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
+				["coord"] = { 48.6, 62.0, MAP.MIDNIGHT.SILVERMOON_CITY },
+			}),
 			-- Sparks
 			q(93942, {	-- Spark of Radiance
 				["provider"] = { "i", 232875 },	-- Spark of Radiance
-				["timeline"] = { ADDED_12_0_1_SEASONSTART },
+				["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },
+				["coord"] = { 40.2, 64.8, MAP.MIDNIGHT.SILVERMOON_CITY },
+			}),
+			q(96446, {	-- Spark of Tides
+				["provider"] = { "i", 274476 },	-- Spark of Tides
+				["timeline"] = { ADDED_12_1_0 },
 				["coord"] = { 40.2, 64.8, MAP.MIDNIGHT.SILVERMOON_CITY },
 			}),
 			--
@@ -99,6 +128,34 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				["description"] = "Automatically acquired on reaching level 90 if you have another level 90 character who has completed the campaign.",
 				["timeline"] = { ADDED_12_0_5 },
 			}),
+			-- Hunt for Xal'atath
+			q(98172, {	-- Trailing Xal'atath
+				["provider"] = { "n", 270645 },	-- Vareesa Windrunner
+				["coord"] = { 49.1, 64.6, MAP.MIDNIGHT.SILVERMOON_CITY },
+				["isWeekly"] = true,
+				["timeline"] = { ADDED_12_1_0 },
+				["groups"] = {
+					i(279573),	-- Fading Voidwhisper (QI!)
+					--
+					i(279576),	-- Void Vestige
+				},
+			}),
+			-- Nebulous Voidcores
+			q(97945, {	-- In the Catalyst's Shadow
+				["qg"] = 243907,	-- Decimus
+				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
+				["timeline"] = { ADDED_12_1_0 },
+			}),
+			q(97978, {	-- Prismatic Potential
+				["sourceQuest"] = 97945,	-- In the Catalyst's Shadow
+				["qg"] = 269987,	-- Orin Straylight
+				["coord"] = { 40.0, 64.8, MAP.MIDNIGHT.SILVERMOON_CITY },
+				["timeline"] = { ADDED_12_1_0 },
+				["groups"] = {
+					--spell(1305977),	-- Nebulous Voidcores
+					i(265695),	-- Elementary Voidcore Shard (QI!)
+				},
+			}),
 		}),
 		-- PVP 4 Part Quest
 		n(QUESTS, sharedData({
@@ -107,7 +164,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 		}, {
 			-- Season 1
 			q(94835, {	-- Early Morning Training
-				["timeline"] = { ADDED_12_0_1, REMOVED_12_1_0 },
+				["timeline"] = { ADDED_12_0_1, REMOVED_12_0_5 },	-- removed on 7th week of season
 				["groups"] = { i(267076) },	-- Novice Combatant's Medallion
 			}),
 			q(94836, {	-- Late Night Training: Week 1 of 3
@@ -117,6 +174,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			q(94837, {	-- Midnight Training: Week 2 of 3
 				["sourceQuests"] = { 94836 },	-- Late Night Training: Week 1 of 3
 				["timeline"] = { ADDED_12_0_1, REMOVED_12_1_0 },
+				["groups"] = { i(267491) },	-- Novice Combatant's Cloak
 			}),
 			q(94838, {	-- Final Training: Week 3 of 3
 				["sourceQuests"] = { 94837 },	-- Midnight: Week 2 of 3
@@ -125,6 +183,14 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			-- Season 2
 			q(98234, {	-- Week 1 of 3: Gladiator's Distinction
 				["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
+				["groups"] = {
+					i(280097),	-- Venomous Aspirant's Insignia of Alacrity
+					i(280118),	-- Venomous Aspirant's Medallion
+				},
+			}),
+			q(98295, {	-- Week 1 of 3: Crowd Control
+				["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
+				["groups"] = { i(267491) },	-- Novice Combatant's Cloak
 			}),
 		})),
 		-- Dungeons
@@ -180,26 +246,13 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			q(95843, { ["timeline"] = { ADDED_12_0_5 } }),	-- Midnight: Ritual Sites
 			q(93889),	-- Midnight: Saltheril's Soiree
 			q(93892),	-- Midnight: Stormarion Assault
+			q(98232, { ["timeline"] = { ADDED_12_1_0 } }),	-- Midnight: Vaults of Atal'Utek
 			q(93766),	-- Midnight: World Quests
 			q(95842, { ["timeline"] = { ADDED_12_0_5 } }),	-- Midnight: Void Assaults
 		})),
-		-- Hunt for Xal'atath
-		n(QUESTS, sharedData({
-			["provider"] = { "n", 270645 },	-- Vareesa Windrunner
-			["coord"] = { 49.1, 64.6, MAP.MIDNIGHT.SILVERMOON_CITY },
-			["isWeekly"] = true,
-			["timeline"] = { ADDED_12_1_0 },	-- Exo Note: Unsure if it will be removed at 12.2.0 Launch.
-			["groups"] = {
-				i(279576),	-- Void Vestige
-			},
-		}, {
-			q(98172, {	-- Trailing Xal'atath
-				i(279573),	-- Fading Voidwhisper (QI!)
-			}),
-		})),
 		n(SPECIAL, bubbleDownSelf({ ["timeline"] = { ADDED_12_1_0 } }, {
 			campsite(155, {	-- Silvermoon City (CAMPSITE!)
-				["cost"] = { { "i", 279575, 4 } },	-- 4x Silvermoon Citizen's Emblem
+				["cost"] = { { "i", 279575, 1 } },	-- 1x Silvermoon Citizen's Emblem
 			}),
 			campsite(158, {	-- Silvermoon in Void (CAMPSITE!)
 				["cost"] = { { "i", 279576, 4 } },	-- 4x Void Vestige
@@ -213,11 +266,13 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 		m(MAP.MIDNIGHT.SILVERMOON_CITY, {
 			n(QUESTS, {
 				q(93067),	-- "Stay a while and listen" objectID 551501 (In Memoriam) @ 35.2, 70.3
-				q(93275, name(HEADERS.Item,232875,{["isWeekly"]=true})),	-- Weekly lockout for Spark of Radiance
+				q(93275, name(HEADERS.Item,232875,{["isWeekly"]=true,["timeline"]={ADDED_12_0_1_SEASONSTART,REMOVED_12_1_0}})),	-- Weekly lockout for Spark of Radiance
+				q(96447, name(HEADERS.Item,274476,{["isWeekly"]=true,["timeline"]={ADDED_12_1_0}})),	-- Weekly lockout for Spark of Tides
 				q(93789),	-- Apex Cache (season 1) was opened / bonus roll for something?
 				q(94419, {["timeline"]={ADDED_12_0_1_SEASONSTART,REMOVED_12_1_0}}),	-- player receive 10x Veteran Dawncrest during questID 94418 (Crest Transmutation)
 				q(94410),	-- After turning in Unity Against the Void? Spark lockout?
 				q(93742, name(HEADERS.Currency, 3378, {["timeline"] = { ADDED_12_0_1_SEASONSTART }})),	-- Looted Dawnlight Manaflux after Midnight Season 1: Catalyst Unbound
+				q(96662, {["timeline"] = { ADDED_12_1_0 }}),	-- Accepting 96649 to do crest downgrade
 			}),
 		}),
 	}),

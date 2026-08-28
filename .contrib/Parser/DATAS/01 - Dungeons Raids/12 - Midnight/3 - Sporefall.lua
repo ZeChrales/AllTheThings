@@ -7,7 +7,7 @@ local ROTMIRE = 2711;
 
 ------ EncounterToCRS ------
 local EncounterToCRS = {
-	[ROTMIRE] = { 256116 },	-- Rotmire (wrong ID still)
+	[ROTMIRE] = { 254176 },	-- Rotmire
 };
 
 ------ EncounterToLoot ------
@@ -46,7 +46,7 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, {
 	inst(1305, {	-- Sporefall
 		["coord"] = { 73.5, 66.4, MAP.MIDNIGHT.HARANDAR },
 		["maps"] = {
-			2427, -- Sporefall
+			2427,	-- Sporefall
 		},
 		["isRaid"] = true,
 		["timeline"] = { ADDED_12_0_7 },
@@ -126,7 +126,7 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, {
 				}),
 				--ZoneDrops({}),
 				Boss(ROTMIRE, {
-					ach(63241), -- Mythic: Rotmire
+					ach(63241),	-- Mythic: Rotmire
 					ach(63247),	-- Mythic: Rotmire Guild Run
 				}),
 			}),

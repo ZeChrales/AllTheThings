@@ -60,7 +60,7 @@ root(ROOTS.Zones, m(DRAGON_ISLES, bubbleDown({ ["timeline"] = { ADDED_10_0_2_LAU
 				{"select","mapID",DRAGON_ISLES},{"pop"},{"where","headerID",ZONE_REWARDS},{"pop"},
 					{"where","headerID",WEAPONS},{"finalize"},
 				-- World Drops > DF
-				{"select","expansionID",EXPANSION.DF},{"pop"},{"where","headerID",WEAPONS},
+				SymSelector.select("DRAGONFLIGHT_WORLDDROP_WEAPONS"),
 			},
 			["groups"] = {
 				i(202172),	-- Overflowing Satchel of Coins
@@ -167,15 +167,6 @@ root(ROOTS.Zones, m(DRAGON_ISLES, bubbleDown({ ["timeline"] = { ADDED_10_0_2_LAU
 			i(197931),	-- Waking Shores Cleaver
 			i(192025),	-- World Breaker's Maul
 			i(197924),	-- Wyrm Poacher's Emberblade
-		}),
-		filter(COSMETIC, {
-			i(201447),	-- Primalist Tomorrow's Breezeblade
-			i(201444),	-- Primalist Tomorrow's Earthblade
-			i(201445),	-- Primalist Tomorrow's Emberblade
-			i(201446),	-- Primalist Tomorrow's Firewall
-			i(201442),	-- Primalist Tomorrow's Frostblade
-			i(201443),	-- Primalist Tomorrow's Icewall
-			i(201448),	-- Primalist Tomorrow's Windwall
 		}),
 	}),
 })));

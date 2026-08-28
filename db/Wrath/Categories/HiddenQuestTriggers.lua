@@ -1,11 +1,13 @@
 ﻿---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildHiddenDataCache", function(categories)
 local ah,h,hqt,inst,m,prof,x=_.CreateHeader,_.CreateCustomHeader,_.CreateHQT,_.CreateInstance,_.CreateMap,_.CreateProfession,_.CreateExpansion;
 categories.HiddenQuestTriggers={
 x(1,{
+h(-61,{
+hqt(78650)}),
 inst(760,{isRaid=1,savedInstanceID=249,g={
-hqt(76175)}}),
+hqt(76175,{repeatable=1})}}),
 m(1414,{maps={1464},g={
 m(1413,{
 hqt(55296)})}}),
@@ -75,8 +77,8 @@ h(-413,{
 h(-45,{
 hqt(13700),
 hqt(13701),
-hqt(13686),
-hqt(13687)})})}})}}),
+hqt(13686,{repeatable=1}),
+hqt(13687,{repeatable=1})})})}})}}),
 h(-34,{awp=30300,g={
 hqt(24887),
 hqt(24895)}}),
@@ -94,6 +96,28 @@ hqt(13960,{e=13})}})}}),
 h(-579,{awp=30300,e=9,g={
 h(-45,{e=9,g={
 hqt(24661,{e=9})}})}})}),
+m(2537,{
+m(2512,{
+m(2509,{
+ah(63598,{type="a",g={
+hqt(96041,{repeatable=1}),
+hqt(96037,{repeatable=1}),
+hqt(96032,{repeatable=1}),
+hqt(96042,{repeatable=1}),
+hqt(96039,{repeatable=1}),
+hqt(96043,{repeatable=1}),
+hqt(96034,{repeatable=1}),
+hqt(96036,{repeatable=1}),
+hqt(96035,{repeatable=1}),
+hqt(96040,{repeatable=1}),
+hqt(95639,{repeatable=1}),
+hqt(95640,{repeatable=1}),
+hqt(95641,{repeatable=1}),
+hqt(95881,{repeatable=1}),
+hqt(95616,{repeatable=1}),
+hqt(95617,{repeatable=1}),
+hqt(95619,{repeatable=1}),
+hqt(97503,{repeatable=1})}})})})}),
 prof(171),
 h(-521,{u=3,g={
 x(1,{awp=11505,u=3,g={
@@ -335,5 +359,5 @@ hqt(11937),
 hqt(47465),
 hqt(47464),
 hqt(47466),
-hqt(28997)})};
-end);
+hqt(28997)})}
+end)

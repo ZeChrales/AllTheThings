@@ -85,8 +85,9 @@ is(22739, 28271, MAGE);				-- Tome of Polymorph: Turtle
 -----------------
 -- PATCH 3.0.3 --
 -----------------
-is(44714, 61316, MAGE);				-- Tome of Dalaran Brilliance [REMOVED]
+-- #if BEFORE CATA
 is(44602, 61024, MAGE);				-- Tome of Dalaran Intellect [REMOVED]
+-- #endif
 is(44709, 61305, MAGE);				-- Tome of Polymorph: Black Cat
 --- NYI ---
 is(44600, 61025, MAGE);				-- Tome of Polymorph: Serpent
@@ -99,8 +100,15 @@ is(44793, 61721, MAGE);				-- Tome of Polymorph: Rabbit
 -----------------
 -- PATCH 3.3.5 --
 -----------------
---- NYI ---
 is(44811, 61780, MAGE);				-- Tome of Polymorph: Turkey
+
+-----------------
+-- PATCH 4.0.1 --
+-----------------
+-- #if AFTER CATA
+is(44602, 61316, MAGE);				-- Tome of Dalaran Brilliance (Tome of Dalaran Intellect existing copies replaced with this) [REMOVED]
+is(44714, 61316, MAGE);				-- Tome of Dalaran Brilliance (Vendor version) [REMOVED]
+-- #endif
 
 -----------------
 -- PATCH 5.0.4 --
@@ -1036,6 +1044,30 @@ iq(262744, 93807);					-- "Riftwalk" Kit
 iq(262745, 93809);					-- "Stealth" Kit
 iq(262742, 93805);					-- "Swift" Kit
 
+------------------
+-- PATCH 12.1.0 --
+------------------
+ihqt(275986);						-- Delver's Cosmetic Surprise Bag
+ihqt(275978, 96975);				-- Delver's Starter Kit
+ihqt(274500, 96459);				-- Demystifyin': Alchemy
+ihqt(274515, 96511);				-- Demystifyin': Blacksmithing
+ihqt(274511, 96512);				-- Demystifyin': Enchanting
+ihqt(274516, 96513);				-- Demystifyin': Engineering
+ihqt(274513, 96514);				-- Demystifyin': Herbalism
+ihqt(274514, 96515);				-- Demystifyin': Inscription
+ihqt(274510, 96516);				-- Demystifyin': Jewelcrafting
+ihqt(274507, 96517);				-- Demystifyin': Leatherworking
+ihqt(274509, 96518);				-- Demystifyin': Mining
+ihqt(274508, 96519);				-- Demystifyin': Skinning
+ihqt(274512, 96520);				-- Demystifyin': Tailoring
+is(0, 1286801);						-- Path of Blooming Verdure
+is(0, 1286804);						-- Path of Brutal Combatant
+--is(0, 393256);					-- Path of the Clutch Defender (under 10.0)
+is(0, 1286809);						-- Path of Devious Smuggler
+is(0, 1286828);						-- Path of Sacret Temple
+is(0, 1286831);						-- Path of the Slumbering Conqueror
+is(0, 1286812);						-- Path of Venomous Evolution
+is(0, 1286807);						-- Path of Worthy Aspirant
 ------------
 -- UNUSED --
 ------------

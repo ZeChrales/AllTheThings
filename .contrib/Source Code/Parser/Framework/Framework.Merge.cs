@@ -513,7 +513,7 @@ namespace ATT
                                 {
                                     if (keyValuePair.Value is Dictionary<string, object> data)
                                     {
-                                        if (!ObjectDB.TryGetValue(keyValuePair.Key, out Dictionary<string, object> dataEntry))
+                                        if (!ObjectDB.TryGetValue(keyValuePair.Key, out IDictionary<string, object> dataEntry))
                                         {
                                             ObjectDB[keyValuePair.Key] = dataEntry = new Dictionary<string, object>();
                                         }
@@ -695,6 +695,14 @@ namespace ATT
             var dict = new Dictionary<string, object>();
             foreach (var key in table.Keys) dict[ConvertFieldName(key.ToString())] = ParseObject(table[key], key);
             return dict;
+        }
+
+        public static object[] ParseAsArray(LuaTable table)
+        {
+            var arr = new object[table.Keys.Count];
+            int i = 0;
+            foreach (var key in table.Keys) arr[i++] = ParseObject(table[key], key);
+            return arr;
         }
 
         static object ParseObject(object data, object key)

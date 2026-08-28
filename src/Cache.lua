@@ -744,6 +744,10 @@ local function cacheCreatureID(group, creatureID)
 		CacheField(group, "creatureID", creatureID);
 	end
 end
+local function cacheQuestStarterItem(group, qsItemID)
+	CacheField(group, "itemIDAsCost", qsItemID);
+	CacheField(group, "qItemID", qsItemID);
+end
 fieldConverters.creatureID = cacheCreatureID;
 fieldConverters.npcID = cacheCreatureID;
 fieldConverters.crs = function(group, value)
@@ -754,6 +758,11 @@ end
 fieldConverters.qgs = function(group, value)
 	for i=1,#value do
 		cacheCreatureID(group, value[i]);
+	end
+end
+fieldConverters.qss = function(group, value)
+	for i=1,#value do
+		cacheQuestStarterItem(group, value[i])
 	end
 end
 
@@ -784,17 +793,14 @@ local providerTypeConverters = {
 	["c"] = function(group, providerID)
 		CacheField(group, "currencyIDAsCost", providerID);
 	end,
-	["i"] = function(group, providerID, index)
-		CacheField(group, "itemIDAsCost", providerID);
-		CacheField(group, "qItemID", providerID);
-	end,
+	["i"] = cacheQuestStarterItem,
 };
-local function cacheProvider(group, provider, index)
-	providerTypeConverters[provider[1]](group, provider[2], index);
+local function cacheProvider(group, provider)
+	providerTypeConverters[provider[1]](group, provider[2]);
 end
 fieldConverters.providers = function(group, value)
 	for i=1,#value do
-		cacheProvider(group, value[i], i);
+		cacheProvider(group, value[i]);
 	end
 end
 
@@ -835,7 +841,10 @@ fieldConverters.guildAchievementID = cacheAchievementID;
 end
 do	-- HeaderID Key Cache
 -- CRIEVE NOTE: I'm not sure if this one super necessary, maybe only for debugging?
--- headerID is used by a small amount of symlinks as well currently
+-- headerID is used by many pvp sub routine symlinks still
+-- potentially could slap NPC providers on every group of Items sold by a given vendor and NPC Filler would just handle it
+-- plus it would show the Source information for the Header
+-- however it would be nice to somehow automate or batch the relationship between vendor NPCs and their provided groups
 local function cacheHeaderID(group, headerID)
 	CacheField(group, "headerID", headerID);
 end
@@ -938,7 +947,11 @@ fieldConverters.qis = function(group, value)		-- Referenced in Modules/Search
 end
 
 -- These are used to provide sourcePaths for the various types:
+-- Also prevents these Things from thinking they are 'missing' since it allows searching for themselves
 -- If some day we want sourcePath to be more dynamic, we can do that in the InformationType.
+fieldConverters.criteriaID = function(group, value)
+	CacheField(group, "criteriaID", value);
+end
 fieldConverters.decorID = function(group, value)
 	CacheField(group, "decorID", value);
 end
@@ -955,25 +968,23 @@ end
 fieldConverters.encounterID = function(group, value)
 	CacheField(group, "encounterID", value);
 end
--- expansionID is used by many items which are containers for expansion-wide content availability
-fieldConverters.expansionID = function(group, value)
-	CacheField(group, "expansionID", value);
+-- symselector will make it easier to select specific headers when many share the same ID without having to traverse huge grouping selections
+fieldConverters.symselector = function(group, value)
+	CacheField(group, "symselector", value);
 end
 end
-
+do	-- PvP Rank Key Cache
+fieldConverters.pvprankID = function(group, value)
+	CacheField(group, "pvprankID", value);
+end
+end
 --[[
 do	-- Chopping Block
 fieldConverters.achievementCategoryID = function(group, value)
 	CacheField(group, "achievementCategoryID", value);
 end
-fieldConverters.criteriaID = function(group, value)
-	CacheField(group, "criteriaID", value);
-end
 fieldConverters.heirloomUnlockID = function(group, value)
 	CacheField(group, "heirloomUnlockID", value);
-end
-fieldConverters.pvprankID = function(group, value)
-	CacheField(group, "pvprankID", value);
 end
 fieldConverters.raceID = function(group, value)
 	CacheField(group, "raceID", value);

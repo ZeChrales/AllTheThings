@@ -173,6 +173,7 @@ local DefaultFields = {
 	end,
 	-- some calculated properties can let fall-through to the merge source of a group instead of needing to re-calculate in every copy
 	isCost = function(t)
+		if t.isOwnedCost then return true end
 		local merge = t.__merge
 		if not merge then return end
 		return merge.isCost
@@ -269,6 +270,39 @@ local DefaultFields = {
 		end
 		return canretry
 	end,
+	-- Future ProviderDB implementation for global object 'provider' content
+	-- providerinfo = function(t)
+	-- 	local k = t.key
+	-- 	local id = t[k]
+	-- 	local providersByType = app.ProviderDB[k]
+	-- 	return providersByType and providersByType[id] or nil
+	-- end,
+	-- Legacy Shim to handle code references to 'providers' after ProviderDB implementation
+	-- providers = function(t)
+	-- 	-- If cached, return immediately
+	-- 	local providers = t._providers
+	-- 	if providers ~= nil then return providers or nil end
+
+	-- 	local info = t.providerinfo
+	-- 	if not info then
+	-- 		t._providers = false	-- sentinel
+	-- 		return
+	-- 	end
+
+	-- 	-- Build synthetic legacy provider list
+	-- 	providers = {}
+
+	-- 	for providerType,idList in pairs(info) do
+	-- 		for i=1,#idList do
+	-- 			providers[#providers+1] = { providerType, idList[i] }
+	-- 		end
+	-- 	end
+
+	-- 	-- Cache it
+	-- 	t._providers = providers
+
+	-- 	return providers
+	-- end,
 };
 
 
@@ -1059,6 +1093,8 @@ app.CreateRawText = app.CreateClass("RawText", "strKey", {
 
 local DLOBaseOverrides = {
 	visible = true,
+	total = 0,
+	progress = 0,
 }
 -- Returns an object which contains no data, but can return values from an overrides table, and be loaded/created when a specific field is attempted to be referenced
 -- i.e. Create a data group which contains no information but will attempt to populate itself when [loadField] is referenced

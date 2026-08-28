@@ -25,8 +25,20 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS)
 local BossOnly, Difficulty =
 InstanceHelper.BossOnly, InstanceHelper.Difficulty
 
+-- TODO: M+ container: 642090
+
+local InRetailSeason
+-- #IF AFTER 12.1
+InRetailSeason = {	-- MID S2
+	DIFFICULTY.DUNGEON.MULTI.NORMAL_PLUS,
+	DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS,
+	DIFFICULTY.DUNGEON.MYTHIC,
+}
+-- #ENDIF
+
 root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
 	inst(1309, {	-- The Blinding Vale
+		InRetailSeason=InRetailSeason,
 		["coord"] = { 27.2, 78.0, MAP.MIDNIGHT.HARANDAR },
 		["maps"] = { 2500 },
 		["groups"] = {
@@ -81,18 +93,24 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 					i(251199),	-- Worldroot Canopy
 				}),
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS).AddGroups({
-				BossOnly(ZIEKKET, {
-					ach(61648),	-- Heroic: The Blinding Vale
-				}),
+			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS, {
+				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
+                ["groups"] = {
+					BossOnly(ZIEKKET, {
+						ach(61648),	-- Heroic: The Blinding Vale
+					}),
+				},
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MYTHIC).AddGroups({
-				BossOnly(ZIEKKET, {
-					ach(61649),	-- Mythic: The Blinding Vale
-					ach(61619),	-- Mythic: The Blinding Vale Guild Run
-					i(268728),	-- Saptor Salve (TOY!)
-				}),
-			}),
+			Difficulty(DIFFICULTY.DUNGEON.MYTHIC, {
+                ["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
+                ["groups"] = {
+					BossOnly(ZIEKKET, {
+						ach(61649),	-- Mythic: The Blinding Vale
+						ach(61619),	-- Mythic: The Blinding Vale Guild Run
+						i(268728),	-- Saptor Salve (TOY!)
+					}),
+                },
+            }),
 		},
 	}),
 })));

@@ -22,6 +22,11 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS)
 local BossOnly, Difficulty =
 InstanceHelper.BossOnly, InstanceHelper.Difficulty
 
+-- TODO: M+ tooltip
+-- InstanceHelper.BossObjects = {
+-- 	[MPLUS] = { 574410 },	-- Challenger's Cache
+-- }
+
 root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
 	inst(1315, {	-- Maisara Caverns
 		["coord"] = { 44.0, 39.6, MAP.MIDNIGHT.ZULAMAN },
@@ -65,17 +70,23 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 					i(250258),	-- Vessel of Tortured Souls
 				}),
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS).AddGroups({
-				BossOnly(RAKTUL, {
-					ach(61644),	-- Heroic: Maisara Caverns
-				}),
+			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS, {
+				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_1_0, ADDED_12_2_0 },
+				["groups"] = {
+					BossOnly(RAKTUL, {
+						ach(61644),	-- Heroic: Maisara Caverns
+					}),
+				},
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MYTHIC).AddGroups({
-				BossOnly(RAKTUL, {
-					ach(61645),	-- Mythic: Maisara Caverns
-					ach(61616),	-- Mythic: Maisara Caverns Guild Run
-				}),
-			}),
+			Difficulty(DIFFICULTY.DUNGEON.MYTHIC, {
+                ["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_1_0, ADDED_12_2_0 },
+                ["groups"] = {
+					BossOnly(RAKTUL, {
+						ach(61645),	-- Mythic: Maisara Caverns
+						ach(61616),	-- Mythic: Maisara Caverns Guild Run
+					}),
+                },
+            }),
 		},
 	}),
 })));

@@ -471,7 +471,7 @@ local function FillGroupDirect(group, FillData, doDGU)
 	-- mark this group as being filled since it actually received filled content (unless it's ignored for being skipped)
 	if not ignoreSkip then
 		local groupHash = group.hash;
-		if groupHash then
+		if groupHash and not FillStopTypes[group.__type] then
 			-- app.PrintDebug("FGA-Included",groupHash,#groups)
 			FillData.Included[groupHash] = true;
 		end
@@ -621,7 +621,8 @@ local function FillGroups(group, options)
 	if skipFull then return end
 
 	-- Check if this group is inside a Window or not
-	local groupWindow = app.GetRelativeRawWithField(group, "window");
+	local groupWindow = not group.__FillImmediate and app.GetRelativeRawWithField(group, "window");
+	group.__FillImmediate = nil
 	local fillers = options and options.Fillers
 	if not fillers then
 		local fillScope = groupWindow and (groupWindow.Suffix == "MiniList" and "LIST" or "POPOUT") or "TOOLTIP"

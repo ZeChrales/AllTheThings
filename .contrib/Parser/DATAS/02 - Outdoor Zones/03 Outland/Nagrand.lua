@@ -165,7 +165,7 @@ root(ROOTS.Zones, {
 					visit_exploration(3611,{coord={62.9,65.0,NAGRAND}}),	-- Clan Watch
 					exploration(3636),	-- Elemental Plateau
 					exploration(3624),	-- Forge Camp: Fear
-					exploration(3625),	-- Forge Camp: Hate
+					exploration(3625,{coord={24.7,38.4,NAGRAND}}),	-- Forge Camp: Hate
 					exploration(3613),	-- Garadar
 					exploration(3628),	-- Halaa
 					exploration(3666),	-- Halaani Basin
@@ -1534,7 +1534,7 @@ root(ROOTS.Zones, {
 						["qg"] = 18471,	-- Gurgthock
 						["coord"] = { 42.8, 20.7, NAGRAND },
 						["groups"] = {
-							objective(1, {	-- 0/1 	The Warmaul Champion Defeated
+							objective(1, {	-- 0/1	The Warmaul Champion Defeated
 								["provider"] = { "n", 18402 },	-- Warmaul Champion
 							}),
 						},

@@ -1,6 +1,6 @@
-﻿if not (C_Seasons and C_Seasons.GetActiveSeason() == 2) then return; end
+﻿if not (C_Seasons and C_Seasons.GetActiveSeason() == 2) then return end
 ---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,cat,h,i,prof,q,r,x=_.CreateAchievement,_.CreateCategory,_.CreateCustomHeader,_.CreateItem,_.CreateProfession,_.CreateQuest,_.CreateRecipe,_.CreateExpansion;
 categories.Professions=
@@ -218,13 +218,11 @@ q(82662,{altQuests={5283,5301,82665},awp=11502,coords={
 q(82665,{altQuests={5283,5301,82662},awp=11502,coords={
 [1454]={{79.6,23.6}}},cost={{"i",7945,2},{"i",7941,2},{"i",3855,4},{"i",217281,4}},description="Upon finishing this quest, you will become a Weaponsmith and be locked out of becoming an Armorsmith.",lvl=40,qgs={11178},r=1,requireSkill=164,u=1607})}})}})}),
 prof(185,{
-h(-12,{requireSkill=185}),
 x(1,{requireSkill=185,g={
-ach(123,{OnUpdate=function(t)if C_Seasons and C_Seasons.GetActiveSeason()==2 then	t.u=1607;end	end,requireSkill=185}),
-ach(122,{OnUpdate=function(t)if C_Seasons and C_Seasons.GetActiveSeason()==2 then	t.u=1606;end	end,requireSkill=185}),
+ach(123,{OnUpdate=function(t)if C_Seasons and C_Seasons.GetActiveSeason()==2 then	t.u=1607 end	end,requireSkill=185}),
+ach(122,{OnUpdate=function(t)if C_Seasons and C_Seasons.GetActiveSeason()==2 then	t.u=1606 end	end,requireSkill=185}),
 ach(121,{requireSkill=185})}})}),
-prof(333,{
-h(-12,{requireSkill=333})}),
+prof(333),
 prof(202,{
 x(1,{requireSkill=202,g={
 h(-47,{requireSkill=202,g={
@@ -246,7 +244,6 @@ x(5,{requireSkill=129}),
 x(6,{requireSkill=129}),
 x(7,{requireSkill=129})}}),
 prof(356,{
-h(-12,{requireSkill=356}),
 x(1,{requireSkill=356,g={
 ach(126,{requireSkill=356}),
 ach(127,{requireSkill=356}),
@@ -389,5 +386,5 @@ q(90116,{coords={
 r(1227723,{b=1,itemID=239149,learnedAt=260,q=3,requireSkill=197,u=1612})}}),
 q(90120,{coords={
 [1423]={{94.6,83.6}}},qgs={240631},requireSkill=197,u=1612,g={
-r(1227724,{b=1,itemID=239150,learnedAt=300,q=4,requireSkill=197,u=1612})}})}})}})}});
-end);
+r(1227724,{b=1,itemID=239150,learnedAt=300,q=4,requireSkill=197,u=1612})}})}})}})}})
+end)

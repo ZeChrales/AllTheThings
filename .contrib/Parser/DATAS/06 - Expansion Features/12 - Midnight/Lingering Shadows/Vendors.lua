@@ -16,10 +16,117 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 		["groups"] = {
 			n(VENDORS, {
 				n(255473, {	-- Maren Silverwing <Quartermaster>
+					["description"] = "|cffFF0000Items purchased from this Vendor will block you|r from completing the neighboring Cosmetic Vendor in ATT Completionist Mode.\nThis is a |cff00CCFFBlizzard|r restriction.",
 					["coord"] = { 48.0, 49.2, MAP.MIDNIGHT.SILVERMOON_CITY },
 					["groups"] = {
+						-- Midnight Season 2, All Caches are Warbound from the start! Hurray!
+						-- Exo Note: Not sure about the symlinks so, I didn't add those. Remove the note once they are figured out.
+						i(281407, {	-- Cache of Void-Touched Armaments: Belts (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281405, {	-- Cache of Void-Touched Armaments: Boots (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281409, {	-- Cache of Void-Touched Armaments: Bracers (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281410, {	-- Cache of Void-Touched Armaments: Chest (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281411, {	-- Cache of Void-Touched Armaments: Cloak (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281408, {	-- Cache of Void-Touched Armaments: Gloves (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281413, {	-- Cache of Void-Touched Armaments: Head (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281406, {	-- Cache of Void-Touched Armaments: Legs (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281415, {	-- Cache of Void-Touched Armaments: Necklaces (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281416, {	-- Cache of Void-Touched Armaments: Rings (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281412, {	-- Cache of Void-Touched Armaments: Shoulder (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281414, {	-- Cache of Void-Touched Armaments: Weapons (Adventurer)
+							["cost"] = { { "c", FIELD_ACCOLADE, 200 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281429, {	-- Cache of Void-Touched Armaments (Veteran)
+							-- Exo Note: My best guess is that this one will serve as a base for the symlink, just like i263928 was for Season 1
+							["cost"] = { { "c", FIELD_ACCOLADE, 500 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281419, {	-- Cache of Void-Touched Armaments: Belts (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281417, {	-- Cache of Void-Touched Armaments: Boots (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281421, {	-- Cache of Void-Touched Armaments: Bracers (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281422, {	-- Cache of Void-Touched Armaments: Chest (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281423, {	-- Cache of Void-Touched Armaments: Cloak (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281420, {	-- Cache of Void-Touched Armaments: Gloves (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281425, {	-- Cache of Void-Touched Armaments: Head (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281418, {	-- Cache of Void-Touched Armaments: Legs (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281427, {	-- Cache of Void-Touched Armaments: Necklaces (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281428, {	-- Cache of Void-Touched Armaments: Rings (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281424, {	-- Cache of Void-Touched Armaments: Shoulder (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+						i(281426, {	-- Cache of Void-Touched Armaments: Weapons (Veteran)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_1_0 },
+						}),
+
+						-- Midnight Season 1 (Removed at the launch of Season 2)
 						i(263928, {	-- Cache of Void-Touched Armaments (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 75 } },
+							["timeline"] = { REMOVED_12_1_0 },
 							["groups"] = {
 								n(ARMOR, {
 									clWithoutLock(DEATHKNIGHT, {
@@ -217,80 +324,82 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 								}),
 							},
 						}),
-						i(263929, {	-- Cache of Void-Touched Armaments (Heroic)
+						-- TODO: these all have new itemIDs. also add them to accountbound items DB
+						i(280781, {	-- Cache of Void-Touched Armaments (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 500 } },
+							["timeline"] = { REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = { { "select", "itemID", 263928 },{"pop"} },	-- Cache of Void-Touched Armaments (Champion)
 						}),
-						i(276380, {	-- Cache of Void-Touched Armaments: Belts (Heroic)
+						i(280784, {	-- Cache of Void-Touched Armaments: Belts (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WAIST"),
 						}),
-						i(276378, {	-- Cache of Void-Touched Armaments: Boots (Heroic)
+						i(280782, {	-- Cache of Void-Touched Armaments: Boots (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FEET"),
 						}),
-						i(276382, {	-- Cache of Void-Touched Armaments: Bracers (Heroic)
+						i(280786, {	-- Cache of Void-Touched Armaments: Bracers (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WRIST"),
 						}),
-						i(276383, {	-- Cache of Void-Touched Armaments: Chest (Heroic)
+						i(280787, {	-- Cache of Void-Touched Armaments: Chest (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_BODY","INVTYPE_CHEST","INVTYPE_ROBE"),
 						}),
-						i(276384, {	-- Cache of Void-Touched Armaments: Cloak (Heroic)
+						i(280788, {	-- Cache of Void-Touched Armaments: Cloak (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_CLOAK"),
 						}),
-						i(276381, {	-- Cache of Void-Touched Armaments: Gloves (Heroic)
+						i(280785, {	-- Cache of Void-Touched Armaments: Gloves (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HAND"),
 						}),
-						i(276386, {	-- Cache of Void-Touched Armaments: Head (Heroic)
+						i(280790, {	-- Cache of Void-Touched Armaments: Head (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HEAD"),
 						}),
-						i(276379, {	-- Cache of Void-Touched Armaments: Legs (Heroic)
+						i(280783, {	-- Cache of Void-Touched Armaments: Legs (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_LEGS"),
 						}),
-						i(277126, {	-- Cache of Void-Touched Armaments: Necklaces (Heroic)
+						i(280792, {	-- Cache of Void-Touched Armaments: Necklaces (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_NECK"),
 						}),
-						i(277127, {	-- Cache of Void-Touched Armaments: Rings (Heroic)
+						i(280793, {	-- Cache of Void-Touched Armaments: Rings (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FINGER"),
 						}),
-						i(276385, {	-- Cache of Void-Touched Armaments: Shoulder (Heroic)
+						i(280789, {	-- Cache of Void-Touched Armaments: Shoulder (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_SHOULDER"),
 						}),
-						i(277125, {	-- Cache of Void-Touched Armaments: Weapons (Heroic)
+						i(280791, {	-- Cache of Void-Touched Armaments: Weapons (Heroic-Warbound)
 							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WEAPON","INVTYPE_SHIELD","INVTYPE_2HWEAPON","INVTYPE_WEAPONMAINHAND","INVTYPE_RANGED","INVTYPE_RANGEDRIGHT","INVTYPE_WEAPONOFFHAND","INVTYPE_HOLDABLE"),
 						}),
@@ -301,75 +410,157 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 							["skipFill"] = true,	-- don't fill in minilist, but it's still nice to see the available content in tooltip
 							["groups"] = { currency(FIELD_ACCOLADE), },
 						}),
+						-- TODO: add all blow items to accountbound items DB
 						i(278006, {	-- Warbound Cache of Void-Touched Armaments: Belts (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WAIST"),
 						}),
 						i(278004, {	-- Warbound Cache of Void-Touched Armaments: Boots (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FEET"),
 						}),
 						i(278008, {	-- Warbound Cache of Void-Touched Armaments: Bracers (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WRIST"),
 						}),
 						i(278009, {	-- Warbound Cache of Void-Touched Armaments: Chest (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_BODY","INVTYPE_CHEST","INVTYPE_ROBE"),
 						}),
 						i(278010, {	-- Warbound Cache of Void-Touched Armaments: Cloak (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_CLOAK"),
 						}),
 						i(278007, {	-- Warbound Cache of Void-Touched Armaments: Gloves (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HAND"),
 						}),
 						i(278012, {	-- Warbound Cache of Void-Touched Armaments: Head (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HEAD"),
 						}),
 						i(278005, {	-- Warbound Cache of Void-Touched Armaments: Legs (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_LEGS"),
 						}),
 						i(278014, {	-- Warbound Cache of Void-Touched Armaments: Necklaces (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_NECK"),
 						}),
 						i(278015, {	-- Warbound Cache of Void-Touched Armaments: Rings (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FINGER"),
 						}),
 						i(278011, {	-- Warbound Cache of Void-Touched Armaments: Shoulder (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_SHOULDER"),
 						}),
 						i(278013, {	-- Warbound Cache of Void-Touched Armaments: Weapons (Champion)
 							["cost"] = { { "c", FIELD_ACCOLADE, 100 } },
-							["timeline"] = { ADDED_12_0_7 },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WEAPON","INVTYPE_SHIELD","INVTYPE_2HWEAPON","INVTYPE_WEAPONMAINHAND","INVTYPE_RANGED","INVTYPE_RANGEDRIGHT","INVTYPE_WEAPONOFFHAND","INVTYPE_HOLDABLE"),
+						}),
+
+						-- Items that were added and then removed in favor of the sensible choice of being Warbound Items
+
+						i(263929, {	-- Cache of Void-Touched Armaments (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 500 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = { { "select", "itemID", 263928 },{"pop"} },	-- Cache of Void-Touched Armaments (Champion)
+						}),
+						i(276380, {	-- Cache of Void-Touched Armaments: Belts (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WAIST"),
+						}),
+						i(276378, {	-- Cache of Void-Touched Armaments: Boots (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FEET"),
+						}),
+						i(276382, {	-- Cache of Void-Touched Armaments: Bracers (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WRIST"),
+						}),
+						i(276383, {	-- Cache of Void-Touched Armaments: Chest (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_BODY","INVTYPE_CHEST","INVTYPE_ROBE"),
+						}),
+						i(276384, {	-- Cache of Void-Touched Armaments: Cloak (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_CLOAK"),
+						}),
+						i(276381, {	-- Cache of Void-Touched Armaments: Gloves (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HAND"),
+						}),
+						i(276386, {	-- Cache of Void-Touched Armaments: Head (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_HEAD"),
+						}),
+						i(276379, {	-- Cache of Void-Touched Armaments: Legs (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_LEGS"),
+						}),
+						i(277126, {	-- Cache of Void-Touched Armaments: Necklaces (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_NECK"),
+						}),
+						i(277127, {	-- Cache of Void-Touched Armaments: Rings (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_FINGER"),
+						}),
+						i(276385, {	-- Cache of Void-Touched Armaments: Shoulder (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
+							["skipFill"] = true,
+							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_SHOULDER"),
+						}),
+						i(277125, {	-- Cache of Void-Touched Armaments: Weapons (Heroic)
+							["cost"] = { { "c", FIELD_ACCOLADE, 750 } },
+							["timeline"] = { ADDED_12_0_7, REMOVED_12_0_7 },
 							["skipFill"] = true,
 							["sym"] = sym_cachevoidtouched_invtype("INVTYPE_WEAPON","INVTYPE_SHIELD","INVTYPE_2HWEAPON","INVTYPE_WEAPONMAINHAND","INVTYPE_RANGED","INVTYPE_RANGEDRIGHT","INVTYPE_WEAPONOFFHAND","INVTYPE_HOLDABLE"),
 						}),

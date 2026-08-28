@@ -20,7 +20,7 @@ PET_BATTLE_DUNGEONS = createHeader({
 });
 -- Content that requires Pet Battling
 root(ROOTS.Character, petbattle(n(PET_BATTLES, {
-	n(ACHIEVEMENTS, bubbleDown({ ["timeline"] = { ADDED_5_0_4 } }, {
+	n(ACHIEVEMENTS, timelineSelf({ ["timeline"] = { ADDED_5_0_4 } }, {
 		pvp(n(PVP, {
 			ach(12290, bubbleDownSelf({ ["timeline"] = { ADDED_7_3_5 } }, {	-- Family Brawler
 				-- Meta Achievement should symlink the contained Achievements from Source
@@ -36,46 +36,20 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 					12279,	-- Mechanical Brawler
 					12285,	-- Undead Brawler
 				}},
-				["groups"] = {
-					i(156666),	-- Master Trainer's Tabard
-				},
+				["groups"] = { i(156666) },	-- Master Trainer's Tabard
 			})),
-			ach(12280, {	-- Aquatic Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12281, {	-- Beast Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12284, {	-- Critter Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12287, {	-- Dragonkin Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12282, {	-- Elemental Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12286, {	-- Flying Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12289, {	-- Humanoid Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12283, {	-- Magic Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12279, {	-- Mechanical Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(12285, {	-- Undead Brawler
-				["timeline"] = { ADDED_7_3_5 },
-			}),
-			ach(8297, {	-- Merciless Pet Brawler (10)
-				["timeline"] = { ADDED_5_3_0 },
-			}),
-			ach(8298, {	-- Vengeful Pet Brawler (50)
-				["timeline"] = { ADDED_5_3_0 },
-			}),
+			ach(12280, { ["timeline"] = { ADDED_7_3_5 } }),	-- Aquatic Brawler
+			ach(12281, { ["timeline"] = { ADDED_7_3_5 } }),	-- Beast Brawler
+			ach(12284, { ["timeline"] = { ADDED_7_3_5 } }),	-- Critter Brawler
+			ach(12287, { ["timeline"] = { ADDED_7_3_5 } }),	-- Dragonkin Brawler
+			ach(12282, { ["timeline"] = { ADDED_7_3_5 } }),	-- Elemental Brawler
+			ach(12286, { ["timeline"] = { ADDED_7_3_5 } }),	-- Flying Brawler
+			ach(12289, { ["timeline"] = { ADDED_7_3_5 } }),	-- Humanoid Brawler
+			ach(12283, { ["timeline"] = { ADDED_7_3_5 } }),	-- Magic Brawler
+			ach(12279, { ["timeline"] = { ADDED_7_3_5 } }),	-- Mechanical Brawler
+			ach(12285, { ["timeline"] = { ADDED_7_3_5 } }),	-- Undead Brawler
+			ach(8297, { ["timeline"] = { ADDED_5_3_0 } }),	-- Merciless Pet Brawler (10)
+			ach(8298, { ["timeline"] = { ADDED_5_3_0 } }),-- Vengeful Pet Brawler (50)
 			ach(8300, bubbleDownSelf({ ["timeline"] = { ADDED_5_3_0 } }, {	-- Brutal Pet Brawler (250)
 				i(94191),	-- Stunted Direhorn (PET!)
 			})),
@@ -160,9 +134,7 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 			crit(23595),	-- Winterspring Cub
 			crit(23600),	-- Xu-Fu, Cub of Xuen
 		})),
-		ach(8080, {	-- Fabled Pandaren Tamer
-			["timeline"] = { ADDED_5_2_0 },
-		}),
+		ach(8080, { ["timeline"] = { ADDED_5_2_0 } }),	-- Fabled Pandaren Tamer
 		ach(6608, {	-- Family Reunion
 			crit(19750),	-- Humanoid
 			crit(19751),	-- Dragonkin
@@ -183,14 +155,11 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 		ach(6462),	-- Master Pet Battler (250)
 		ach(6591),	-- Grand Master Pet Battler (1000)
 		ach(6592),	-- Legendary Pet Battler (5000)
-		ach(9070, {	-- Overstuffed
-			["timeline"] = { ADDED_6_0_3_LAUNCH },
-		}),
-		ach(7936, {	-- Pandaren Spirit Tamer
-			["timeline"] = { ADDED_5_1_0 },
-		}),
+		ach(9070, { ["timeline"] = { ADDED_6_0_3_LAUNCH } }),	-- Overstuffed
+		ach(9463, { ["timeline"] = { ADDED_6_0_3_LAUNCH } }),	-- Draenic Pet Battler
+		ach(7936, { ["timeline"] = { ADDED_5_1_0 } }),	-- Pandaren Spirit Tamer
 		ach(12927, {	-- Polished Pet Charmer
-			["cost"] = {{"i", POLISHED_PET_CHARM, 500}},
+			["cost"] = { { "i", POLISHED_PET_CHARM, 500 } },
 			["timeline"] = { ADDED_8_0_1_LAUNCH },
 		}),
 		ach(6578),	-- Pro Pet Group (15)
@@ -205,7 +174,7 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 		ach(6580),	-- Rookie Pet Crew (30)
 		ach(6583),	-- Rookie Pet Mob (75)
 		ach(9712, {	-- Shiny Pet Charmer
-			["cost"] = {{"i", 116415, 500 }},	-- 500x Shiny Pet Charms
+			["cost"] = { { "i", 116415, 500 } },	-- 500x Shiny Pet Charms
 			["timeline"] = { ADDED_6_0_3_LAUNCH, REMOVED_10_2_5 },
 		}),
 		ach(6851, {	-- Take 'Em All On!
@@ -318,8 +287,9 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 			-- #endif
 		}),
 	}),
-	n(PET_BATTLE_DUNGEONS, bubbleDownSelf({ ["timeline"] = { ADDED_7_2_0 } }, {
-		ach(14021, bubbleDownSelf({ ["timeline"] = { ADDED_8_3_0 } }, {	-- The Shadows Revealed
+	n(PET_BATTLE_DUNGEONS, timelineSelf({ ["timeline"] = { ADDED_7_2_0 } }, {
+		ach(14021, {	-- The Shadows Revealed
+			["timeline"] = { ADDED_8_3_0 },
 			["sym"] = {{ "meta_achievement",
 				11765,	-- Pet Battle Challenge: Wailing Caverns
 				11856,	-- Pet Battle Challenge: Deadmines
@@ -330,15 +300,15 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 			["groups"] = {
 				i(174871),	-- Mayhem Mind Melder (TOY!)
 			},
-		})),
-		q(58458, bubbleDownSelf({ ["timeline"] = { ADDED_8_3_0 } }, {	-- Pet Battle Challenge: Blackrock Depths
+		}),
+		header(HEADERS.Quest, 58458, {	-- Pet Battle Challenge: Blackrock Depths
 			["sourceQuest"] = 58457,	-- Shadows of Blackrock
 			["provider"] = { "n", 161782 },	-- Burt Macklyn
 			["coord"] = { 33.1, 23.1, BLACKROCK_MOUNTAIN_LEVEL3 },
 			["maps"] = {
 				1578,	-- Pet Dungeon
 			},
-			["isWeekly"] = true,
+			["timeline"] = { ADDED_8_3_0 },
 			["groups"] = {
 				ach(14020, {	-- Pet Battle Challenge: Blackrock Depths
 					i(174830),	-- Shadowy Disguise (TOY!)
@@ -369,6 +339,13 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 						spell(314215),	-- Manapoof Link: Blackrock Depths
 					},
 				}),
+				q(58458, {	-- Pet Battle Challenge: Blackrock Depths
+					["sourceQuest"] = 58457,	-- Shadows of Blackrock
+					["provider"] = { "n", 161782 },	-- Burt Macklyn
+					["coord"] = { 33.1, 23.1, BLACKROCK_MOUNTAIN_LEVEL3 },
+					["isWeekly"] = true,
+					["groups"] = { i(174360) },	-- Shadowy Gem
+				}),
 				n(160210, {	-- Tasha Riley
 					["coord"] = { 41.1, 49.1, 1578 },
 					["description"] = "Speak with Tasha after you finish the last fight and join the COUNCIL OF CHAOS to get title.",
@@ -394,16 +371,15 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 					},
 				}),
 			},
-		})),
-		q(46292, bubbleDownSelf({ ["timeline"] = { ADDED_7_2_5 } }, {	-- Pet Battle Challenge: Deadmines
-			["sourceQuest"] = 46291,	-- The Deadmines Strike Back
+		}),
+		header(HEADERS.Quest, 46292, {	-- Pet Battle Challenge: Deadmines
 			["provider"] = { "n", 119390 },	-- Marcus "Bagman" Brown
 			["coord"] = { 41.6, 71.2, WESTFALL },
 			["maps"] = {
 				835,	-- Pet Dungeon 1
 				836,	-- Pet Dungeon 2
 			},
-			["isWeekly"] = true,
+			["timeline"] = { ADDED_7_2_5 },
 			["groups"] = {
 				ach(11856, {	-- Pet Battle Challenge: Deadmines
 					i(151632),	-- Mining Monkey (PET!)
@@ -420,6 +396,13 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 					["groups"] = {
 						spell(244502),	-- Manapoof Link: Westfall
 					},
+				}),
+				q(46292, {	-- Pet Battle Challenge: Deadmines
+					["sourceQuest"] = 46291,	-- The Deadmines Strike Back
+					["provider"] = { "n", 119390 },	-- Marcus "Bagman" Brown
+					["coord"] = { 41.6, 71.2, WESTFALL },
+					["isWeekly"] = true,
+					["groups"] = { i(151191) },	-- Old Bottle Cap
 				}),
 				n(119390, {	-- Marcus "Bagman" Brown
 					["coord"] = { 41.6, 71.2, WESTFALL },
@@ -439,18 +422,17 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 					},
 				}),
 			},
-		})),
-		q(54186, bubbleDownSelf({ ["timeline"] = { ADDED_8_1_0 } }, {	-- Pet Battle Challenge: Gnomeregan
-			["sourceQuest"] = 54185,	-- Gnomeregan's New Guardians
+		}),
+		header(HEADERS.Quest, 54186, {	-- Pet Battle Challenge: Gnomeregan
 			["provider"] = { "n", 147070 },	-- Micro Zoox
-			["coord"] = { 31.2, 37.4, NEW_TINKERTOWN },
+			["coord"] = { 31.2, 37.4, NEW_TINKERTOWN_LOWER },
 			["maps"] = {
-				NEW_TINKERTOWN_LOWER,
+				NEW_TINKERTOWN,
 				840,	-- Pet Dungeon
 				841,	-- Pet Dungeon
 				842,	-- Pet Dungeon
 			},
-			["isWeekly"] = true,
+			["timeline"] = { ADDED_8_1_0 },
 			["groups"] = {
 				ach(13269, {	-- Pet Battle Challenge: Gnomeregan
 					i(165894),	-- Mini Spider Tank (PET!)
@@ -479,6 +461,13 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 						spell(286079),	-- Manapoof Link: Gnomeregan
 					},
 				}),
+				q(54186, {	-- Pet Battle Challenge: Gnomeregan
+					["sourceQuest"] = 54185,	-- Gnomeregan's New Guardians
+					["provider"] = { "n", 147070 },	-- Micro Zoox
+					["coord"] = { 31.2, 37.4, NEW_TINKERTOWN_LOWER },
+					["isWeekly"] = true,
+					["groups"] = { i(165835) },-- Pristine Gizmo
+				}),
 				n(147070, {	-- Micro Zoox
 					["coord"] = { 31.8, 71.6, NEW_TINKERTOWN_LOWER },
 					["groups"] = {
@@ -500,15 +489,14 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 					},
 				}),
 			},
-		})),
-		q(56492, bubbleDownSelf({ ["timeline"] = { ADDED_8_2_0 } }, {	-- Pet Battle Challenge: Stratholme
-			["sourceQuest"] = 56491,	-- Tiny Terrors of Stratholme
+		}),
+		header(HEADERS.Quest, 56492, {	-- Pet Battle Challenge: Stratholme
 			["provider"] = { "n", 150987 },	-- Sean Wilkers
 			["coord"] = { 43.1, 19.9, EASTERN_PLAGUELANDS },
 			["maps"] = {
 				1505,	-- Pet Dungeon
 			},
-			["isWeekly"] = true,
+			["timeline"] = { ADDED_8_2_0 },
 			["groups"] = {
 				ach(13627, {	-- Pet Battle Challenge: Stratholme
 					i(169670),	-- Minimancer (PET!)
@@ -549,11 +537,16 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 						spell(301941),	-- Manapoof Link: Stratholme
 					},
 				}),
+				q(56492, {	-- Pet Battle Challenge: Stratholme
+					["sourceQuest"] = 56491,	-- Tiny Terrors of Stratholme
+					["provider"] = { "n", 150987 },	-- Sean Wilkers
+					["coord"] = { 43.1, 19.9, EASTERN_PLAGUELANDS },
+					["isWeekly"] = true,
+					["groups"] = { i(169665) },	-- Cleansed Remains
+				}),
 				q(56914, {	-- Angry Residents
 					["isWeekly"] = true,
-					["groups"] = {
-						i(169665),	-- Cleansed Remains
-					},
+					["groups"] = { i(169665) },	-- Cleansed Remains
 				}),
 				n(150987, {	-- Sean Wilkers
 					["coord"] = { 43.1, 20.0, EASTERN_PLAGUELANDS },
@@ -576,15 +569,16 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 					},
 				}),
 			},
-		})),
-		q(45539, {	-- Pet Battle Challenge: Wailing Caverns
-			["sourceQuest"] = 45423,	-- Wailing Critters
+		}),
+		header(HEADERS.Quest, 45539, {	-- Pet Battle Challenge: Wailing Caverns
 			["provider"] = { "n", 116781 },	-- Muyani
-			["coord"] = { 38.8, 68.2, NORTHERN_BARRENS },
+			["coords"] = {
+				{ 38.8, 68.2, NORTHERN_BARRENS },
+				{ 23.2, 81.8, 11 },	-- Wailing Caverns
+			},
 			["maps"] = {
 				825,	-- Pet Dungeon
 			},
-			["isWeekly"] = true,
 			["groups"] = {
 				ach(11765, {	-- Pet Battle Challenge: Wailing Caverns
 					i(147543),	-- Son of Skum (PET!)
@@ -608,10 +602,21 @@ root(ROOTS.Character, petbattle(n(PET_BATTLES, {
 						spell(244506),	-- Manapoof Link: Wailing Caverns
 					},
 				}),
-				i(143753, {	-- Damp Pet Supplies
-					i(143754),	-- Cavern Moccasin (PET!)
-					i(143756),	-- Everliving Spore (PET!)
-					i(143755),	-- Young Venomfang (PET!)
+				q(45539, {	-- Pet Battle Challenge: Wailing Caverns
+					["sourceQuest"] = 45423,	-- Wailing Critters
+					["provider"] = { "n", 116781 },	-- Muyani
+					["coords"] = {
+						{ 38.8, 68.2, NORTHERN_BARRENS },
+						{ 23.2, 81.8, 11 },	-- Wailing Caverns
+					},
+					["isWeekly"] = true,
+					["groups"] = {
+						i(143753, {	-- Damp Pet Supplies
+							i(143754),	-- Cavern Moccasin (PET!)
+							i(143756),	-- Everliving Spore (PET!)
+							i(143755),	-- Young Venomfang (PET!)
+						}),
+					},
 				}),
 			},
 		}),
@@ -997,3 +1002,10 @@ root(ROOTS.NeverImplemented, {
 	}),
 });
 -- #endif
+
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.BFA, bubbleDownSelf({ ["timeline"] = { ADDED_8_3_0 } }, {
+	n(PET_BATTLES, {
+		q(81957),	-- Complete the Blackrock Pet Battle Dungeon for the first time.
+		q(81958),	-- Joining their team
+	})
+})));

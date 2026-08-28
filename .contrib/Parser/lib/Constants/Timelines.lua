@@ -1,8 +1,8 @@
 -------------------------
 --     CLASSIC WOW     --
 -------------------------
-CREATED_1_0_1 = "created 1.0.1";					-- These are Beta??
-ADDED_1_0_1 = "added 1.0.1";					-- These are Beta??
+CREATED_1_0_1 = "created 1.0.1";						-- These are Beta??
+ADDED_1_0_1 = "added 1.0.1";							-- These are Beta??
 ----
 CREATED_1_1_0 = "created 1.1.0.4044";					-- World of Warcraft launch on November 7th, 2004
 ADDED_1_1_0 = "added 1.1.0.4044";						-- World of Warcraft launch on November 7th, 2004
@@ -188,9 +188,13 @@ REMOVED_1_15_6 = "removed 1.15.6.58844";					-- World of Warcraft Classic 1.15.6
 CREATED_1_15_7 = "created 1.15.7.60141";					-- World of Warcraft Classic 1.15.7 launch on April 8th, 2025
 ADDED_1_15_7 = "added 1.15.7.60141";						-- World of Warcraft Classic 1.15.7 launch on April 8th, 2025
 REMOVED_1_15_7 = "removed 1.15.7.60141";					-- World of Warcraft Classic 1.15.7 launch on April 8th, 2025
+--- All vanilla flavors are grouped in the same build again ---
 CREATED_1_15_8 = "created 1.15.8.63829";					-- World of Warcraft Classic Anniversary 1.15.8 launch on October 21st, 2025
 ADDED_1_15_8 = "added 1.15.8.63829";						-- World of Warcraft Classic Anniversary 1.15.8 launch on October 21st, 2025
 REMOVED_1_15_8 = "removed 1.15.8.63829";					-- World of Warcraft Classic Anniversary 1.15.8 launch on October 21st, 2025
+CREATED_1_15_9 = "created 1.15.9.68808";					-- World of Warcraft Classic 1.15.9 launch on July 21st, 2026
+ADDED_1_15_9 = "added 1.15.9.68808";						-- World of Warcraft Classic 1.15.9 launch on July 21st, 2026
+REMOVED_1_15_9 = "removed 1.15.9.68808";					-- World of Warcraft Classic 1.15.9 launch on July 21st, 2026
 --- AFTER SEASON OF DISCOVERY ---
 REMOVED_SOD_END = "removed 1.16.0";
 
@@ -295,6 +299,9 @@ REMOVED_2_5_5_PHASE_2 = "removed 2.5.5.67511";			-- The Burning Crusade Classic 
 CREATED_2_5_6 = "created 2.5.6.68502";					-- The Burning Crusade Classic 2.5.6 launch on July 7th, 2026
 ADDED_2_5_6 = "added 2.5.6.68502";						-- The Burning Crusade Classic 2.5.6 launch on July 7th, 2026
 REMOVED_2_5_6 = "removed 2.5.6.68502";					-- The Burning Crusade Classic 2.5.6 launch on July 7th, 2026
+CREATED_2_5_6_PHASE_3 = "created 2.5.6.69110";			-- The Burning Crusade Classic 2.5.5 phase 3 launch on August 27th, 2026
+ADDED_2_5_6_PHASE_3 = "added 2.5.6.69110";				-- The Burning Crusade Classic 2.5.5 phase 3 launch on August 27th, 2026
+REMOVED_2_5_6_PHASE_3 = "removed 2.5.6.69110";			-- The Burning Crusade Classic 2.5.5 phase 3 launch on August 27th, 2026
 --- DYNAMIC CLASSIC TIMELINES ---
 REMOVED_TBC_PHASE_TWO = REMOVED_2_5_5_PHASE_2;
 
@@ -689,9 +696,9 @@ CREATED_12_0_7 = "created 12.0.7.68182";				-- Midnight 12.0.7 launch on June 16
 ADDED_12_0_7 = "added 12.0.7.68182";					-- Midnight 12.0.7 launch on June 16th, 2026
 REMOVED_12_0_7 = "removed 12.0.7.68182";				-- Midnight 12.0.7 launch on June 16th, 2026
 
-CREATED_12_1_0 = "created 12.1.0";						-- Midnight 12.1.0 launch in summer 2026
-ADDED_12_1_0 = "added 12.1.0";							-- Midnight 12.1.0 launch in summer 2026
-REMOVED_12_1_0 = "removed 12.1.0";						-- Midnight 12.1.0 launch in summer 2026
+CREATED_12_1_0 = "created 12.1.0.69214";				-- Midnight 12.1.0 launch on August 11th, 2026
+ADDED_12_1_0 = "added 12.1.0.69214";					-- Midnight 12.1.0 launch on August 11th, 2026
+REMOVED_12_1_0 = "removed 12.1.0.69214";				-- Midnight 12.1.0 launch on August 11th, 2026
 CREATED_12_1_5 = "created 12.1.5";						-- Midnight 12.1.5 launch in autumn 2026
 ADDED_12_1_5 = "added 12.1.5";							-- Midnight 12.1.5 launch in autumn 2026
 REMOVED_12_1_5 = "removed 12.1.5";						-- Midnight 12.1.5 launch in autumn 2026

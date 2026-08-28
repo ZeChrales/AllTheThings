@@ -663,7 +663,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.WOD, applyclassicphase(WOD_PHASE_ONE,
 				["requireSkill"] = HERBALISM
 			}),
 		}),
-		spell(2366, {	-- Herb Gathering
+		header(HEADERS.Spell, 2366, {	-- Herb Gathering
 			DRAENOR_HERBALISM,
 			i(109625),	-- Broken Fireweed Stem
 			i(109624),	-- Broken Frostweed Stem
@@ -710,6 +710,9 @@ root(ROOTS.Craftables, expansion(EXPANSION.WOD, applyclassicphase(WOD_PHASE_ONE,
 			i(245441),	-- Orcish Fencepost (DECOR!)
 			i(244319),	-- Wooden Shipping Crate (DECOR!)
 		})),
+		filter(REAGENTS, {
+			i(114931),	-- Cerulean Pigment
+		}),
 		filter(HELD_IN_OFF_HAND, {
 			i(113270, {	-- Shadowtome
 				["timeline"] = { CREATED_9_0_1 },
@@ -956,7 +959,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.WOD, applyclassicphase(WOD_PHASE_ONE,
 				["requireSkill"] = MINING,
 			}),
 		}),
-		spell(2575, {	-- Mining
+		header(HEADERS.Spell, 2575, {	-- Mining
 			DRAENOR_MINING,
 			i(109992),	-- Blackrock Fragment
 			i(109118),	-- Blackrock Ore
@@ -966,7 +969,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.WOD, applyclassicphase(WOD_PHASE_ONE,
 		}),
 	}),
 	prof(SKINNING, {
-		spell(8613, {	-- Skinning
+		header(HEADERS.Spell, 8613, {	-- Skinning
 			DRAENOR_SKINNING,
 			i(110609),	-- Raw Beast Hide
 			i(110610),	-- Raw Beast Hide Scraps
@@ -1048,6 +1051,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.WOD, applyclassicphase(WOD_PHASE_ONE,
 		}),
 		filter(REAGENTS, {
 			i(111556),	-- Hexweave Cloth
+			i(111557),	-- Sumptuous Fur
 			i(128012, {["timeline"] = {ADDED_6_2_0, REMOVED_10_0_5}}),	-- Hexweave Essence
 			i(202218, {["timeline"] = {ADDED_10_0_5}}),	-- Impressive Hexweave Essence
 			i(127715, {["timeline"] = {ADDED_6_2_0, REMOVED_10_0_5}}),	-- Mighty Hexweave Essence

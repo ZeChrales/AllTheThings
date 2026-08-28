@@ -33,7 +33,9 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				}),
 				filter(FINGER_F, {
 					i(276037),	-- Counter-Curse Circlet
+					i(276034),	-- Entangling Brood Ring
 					i(276036),	-- Ever-Constricting Band
+					i(276035),	-- Soulcoiler's Signet
 				}),
 				filter(LEATHER, {
 					i(276006),	-- Shadowclaw Footpads
@@ -57,6 +59,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				}),
 				filter(NECK_F, {
 					i(276032),	-- Bad Juju Necklace
+					i(276033),	-- Loa Watcher's Pendant
 				}),
 				filter(PLATE, {
 					i(276016),	-- Stonehide Casque
@@ -69,15 +72,55 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					i(276000),	-- Stonehide Vambraces
 				}),
 				filter(TRINKET_F, {
+					i(274494),	-- Chiral Marrowgrafter
 					i(274493),	-- Effigy of Ula'Tek's Faithful
+					i(280047),	-- Feathered Bell
+					i(280091),	-- Latent Purifier
 					i(274496),	-- Ophidian Bone Whistle
+					i(274495),	-- Pulse Seeker's Oculus
+					i(280123),	-- Sharp Axe Holster
+					i(274498),	-- Spirit Ward
+					i(274497),	-- Spirit-Rending Poison
+					i(274499),	-- Toxiferous Transfusion
 				}),
 			}),
 			n(WEAPONS, {
+				i(276057),	-- Cryptbound Scepter
+				i(276051),	-- Fangmouth Warspear
 				i(276059),	-- Headhunter's Hacker
+				i(276060),	-- Hexxer's Blastin' Rod
+				i(276062),	-- Hydra Neckchopper
+				i(276044),	-- Loa-Infused Battlestaff
+				i(276058),	-- Ruinous Slitherslicer
+				i(276054),	-- Serpentvine Machete
+				i(276053),	-- Snakehunter's Warglaive
+				i(276049),	-- Snakeslayer's Claymore
+				i(276055),	-- Soulweaver's Curseblade
+				i(276046),	-- Superclutch Smasher
+				i(276047),	-- Swamp Whomper
+				i(276042),	-- Templetusk Shield
 				i(276045),	-- Trailblazing Soulblade
+				i(276052),	-- Venomshot Greatbow
+				i(276050),	-- Victorious Spiritstaff
+				i(276043),	-- Vilefang Censer
 				i(276048),	-- Vipersbane Dagger
+				i(276061),	-- Witch Doctor's Bloodletter
 			}),
+			--
+			i(271424, {	-- Diver's Key Fragment
+				["cr"] = 263081,	-- Glittering Grouper Brinetail
+				["coords"] = {
+					{ 61.2, 14.0, MAP.MIDNIGHT.THE_COILED_ISLE },
+					{ 63.6, 13.2, MAP.MIDNIGHT.THE_COILED_ISLE },
+					{ 65.4, 5.6, MAP.MIDNIGHT.THE_COILED_ISLE },
+					{ 67.2, 5.0, MAP.MIDNIGHT.THE_COILED_ISLE },
+				},
+			}),
+			i(282183, {	-- Fabled Coiled Isle Veteran's Cache (Season 2)
+				["timeline"] = { ADDED_12_1_0 },
+				--["sym"] = SYM.MIDNIGHT.THE_COILED_ISLE_ZONE_REWARDS,
+			}),
+			i(275899),	-- Venom-Soaked Satchel (Rewarded for completing the Curse Surge by killing the "boss" of the event)
 		}),
 	}),
 }));

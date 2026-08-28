@@ -201,7 +201,6 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			o(587912, {	-- Giant Grab Bag
 				["coords"] = {
 					{ 26.0, 35.9, MAP.MIDNIGHT.ZULAMAN },
-					{ 26.4, 38.4, MAP.MIDNIGHT.ZULAMAN },
 					{ 26.4, 38.5, MAP.MIDNIGHT.ZULAMAN },
 					{ 27.6, 37.7, MAP.MIDNIGHT.ZULAMAN },
 					{ 27.6, 39.1, MAP.MIDNIGHT.ZULAMAN },
@@ -238,7 +237,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 			o(583971, {	-- Stonewash Supplies
 				["description"] = "Spawns randomly around the coastal areas of the zone.",
 			}),
-			o(582179, {	-- Twilight Ordinance
+			o(582179, {	-- Twilight Ordnance
 				["description"] = "Spawns randomly (mostly) around the area of Broken Throne.",
 				["coords"] = {
 					{ 20.9, 62.5, MAP.MIDNIGHT.ZULAMAN },

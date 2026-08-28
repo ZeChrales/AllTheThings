@@ -1,5 +1,6 @@
 local Items = ItemDBConditional;
 local i = function(itemID, illusionID, questID)
+	if itemID < 1 then return end
 	Items[itemID] = { ["illusionID"] = illusionID, ["questID"] = questID, ["type"] = "illusionID" };
 end
 -----------------
@@ -204,3 +205,8 @@ i(0, 8674);					-- Internal Testing Visual Enchant
 -- PATCH 12.0.7 --
 ------------------
 i(276546, 8704);	-- Summer Sun Blossom
+
+------------------
+-- PATCH 12.1.0 --
+------------------
+i(0, 8697);					-- Venomcoil

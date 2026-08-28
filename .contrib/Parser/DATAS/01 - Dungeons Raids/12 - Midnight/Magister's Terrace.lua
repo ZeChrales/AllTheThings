@@ -1,5 +1,5 @@
 -----------------------------------------------------
---   D U N G E O N S  &  R A I D S  M O D U L E    --
+--   D U N G E O N S   &   R A I D S   M O D U L E   --
 -----------------------------------------------------
 
 ------ Encounter Constants ------
@@ -75,17 +75,23 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 					i(251120),	-- Wraps of Umbral Descent
 				}),
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS).AddGroups({
-				BossOnly(DEGENTRIUS, {
-					ach(61213),	-- Heroic: Magisters' Terrace
-				}),
+			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS, {
+				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_1_0, ADDED_12_2_0 },
+				["groups"] = {
+					BossOnly(DEGENTRIUS, {
+						ach(61213),	-- Heroic: Magisters' Terrace
+					}),
+				},
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MYTHIC).AddGroups({
-				BossOnly(DEGENTRIUS, {
-					ach(61214),	-- Mythic: Magisters' Terrace
-					ach(61615),	-- Mythic: Magisters' Terrace Guild Run
-					i(260231),	-- Lucent Hawkstrider (MOUNT!)
-				}),
+			Difficulty(DIFFICULTY.DUNGEON.MYTHIC, {
+				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_1_0, ADDED_12_2_0 },
+				["groups"] = {
+					BossOnly(DEGENTRIUS, {
+						ach(61214),	-- Mythic: Magisters' Terrace
+						ach(61615),	-- Mythic: Magisters' Terrace Guild Run
+						i(260231),	-- Lucent Hawkstrider (MOUNT!)
+					}),
+				},
 			}),
 		},
 	}),

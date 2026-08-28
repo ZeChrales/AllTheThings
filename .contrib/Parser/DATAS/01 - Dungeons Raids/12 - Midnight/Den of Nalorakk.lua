@@ -19,8 +19,18 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS)
 local BossOnly, Difficulty =
 InstanceHelper.BossOnly, InstanceHelper.Difficulty
 
+local InRetailSeason
+-- #IF AFTER 12.1
+InRetailSeason = {	-- MID S2
+	DIFFICULTY.DUNGEON.MULTI.NORMAL_PLUS,
+	DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS,
+	DIFFICULTY.DUNGEON.MYTHIC,
+}
+-- #ENDIF
+
 root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
 	inst(1311, {	-- Den of Nalorakk
+		InRetailSeason=InRetailSeason,
 		["coord"] = { 30.0, 84.5, MAP.MIDNIGHT.ZULAMAN },
 		["maps"] = {
 			2564,	--
@@ -64,17 +74,23 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 					i(245573),	-- Salmon
 				}),
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS).AddGroups({
-				BossOnly(NALORAKK, {
-					ach(61642),	-- Heroic: Den of Nalorakk
-				}),
+			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS, {
+				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
+                ["groups"] = {
+					BossOnly(NALORAKK, {
+						ach(61642),	-- Heroic: Den of Nalorakk
+					}),
+				},
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.MYTHIC).AddGroups({
-				BossOnly(NALORAKK, {
-					ach(61643),	-- Mythic: Den of Nalorakk
-					ach(61605),	-- Mythic: Den of Nalorakk Guild Run
-				}),
-			}),
+			Difficulty(DIFFICULTY.DUNGEON.MYTHIC, {
+                ["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
+                ["groups"] = {
+					BossOnly(NALORAKK, {
+						ach(61643),	-- Mythic: Den of Nalorakk
+						ach(61605),	-- Mythic: Den of Nalorakk Guild Run
+					}),
+                },
+            }),
 		},
 	}),
 })));

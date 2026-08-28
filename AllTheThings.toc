@@ -3,7 +3,7 @@
 ## Name: AllTheThings
 ## Author: Crieve
 ## Version: @project-version@
-## Interface: 11508, 11509, 20505, 20506, 38001, 40402, 50504, 120007, 120100
+## Interface: 11508, 11509, 20506, 30405, 38002, 40402, 50504, 120100, 120105
 ## X-Wago-ID: yQKyY5K7
 ## X-Curse-Project-ID: 267285
 ## Category-enUS: Collections
@@ -53,8 +53,8 @@ lib\Callback.lua
 
 # Base ATT functionalities
 src\base.lua
-src\Commands.lua
 src\Events.lua
+src\Commands.lua
 src\DataHandling.lua
 
 # Not really a lib concept...
@@ -73,6 +73,7 @@ src\Modules\RetrievingData.lua
 src\Modules\Catalyst.lua
 src\Modules\Collection.lua
 src\Modules\CustomCollect.lua
+src\Modules\DynamicCategories.lua
 src\Modules\FactionData.lua
 src\Modules\Fill.lua
 src\Modules\Color.lua

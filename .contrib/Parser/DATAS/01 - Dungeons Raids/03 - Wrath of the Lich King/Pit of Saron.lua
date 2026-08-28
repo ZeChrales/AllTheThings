@@ -2,6 +2,11 @@
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 
+-- TODO with InstanceHelper
+-- InstanceHelper.BossObjects = {
+-- 	[MPLUS] = { 574411 },	-- Challenger's Cache
+-- }
+
 root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_FOUR, bubbleDown({ ["timeline"] = { ADDED_3_3_0 } }, {
 	inst(278, {	-- Pit of Saron
 		["mapID"] = PIT_OF_SARON,
@@ -203,7 +208,9 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 				["lvl"] = lvlsquish(80, 80, 30),
 				["groups"] = {
 					n(ACHIEVEMENTS, {
-						ach(4525),	-- Don't Look Up
+						ach(4525, {	-- Don't Look Up
+							["timeline"] = { ADDED_3_3_0, REMOVED_12_0_1_LAUNCH },
+						}),
 					}),
 					n(ZONE_DROPS, {
 						a(i(50379)),	-- Battered Hilt [A]
@@ -215,7 +222,9 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 					e(608, {	-- Forgemaster Garfrost
 						["creatureID"] = 36494,	-- Forgemaster Garfrost
 						["groups"] = {
-							ach(4524),	-- Doesn't Go to Eleven
+							ach(4524, {	-- Doesn't Go to Eleven
+								["timeline"] = { ADDED_3_3_0, REMOVED_12_0_1_LAUNCH },
+							}),
 							-- #if AFTER 7.3.5
 							i(49802),	-- Garfrost's Two-Ton Hammer (7.3.5 - Used to be only Normal Mode)
 							i(49801),	-- Unspeakable Secret (7.3.5 - Used to be only Normal Mode)

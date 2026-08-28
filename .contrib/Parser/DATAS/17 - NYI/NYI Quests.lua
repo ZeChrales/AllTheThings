@@ -800,6 +800,7 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(30316, { ["name"] = "Longshot", }),	-- Longshot
 			q(30377, { ["name"] = "Minimum Safe Distance", }),	-- Minimum Safe Distance
 			q(31655, { ["name"] = "Mishi Tracking 1", }),	-- Mishi Tracking 1
+			q(31172, { ["name"] = "Monk Training", }),	-- Monk Training
 			q(30009, { ["name"] = "Muster of Fort Grookin", }),	-- Muster of Fort Grookin
 			q(29696, { ["name"] = "My Stars!", }),	-- My Stars!
 			q(29814, { ["name"] = "Need a Chaser", }),	-- Need a Chaser
@@ -2732,8 +2733,6 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(44005, { ["name"] = "Tracking Quest: Reaction to Warrior Artifacts", }),	-- Tracking Quest: Reaction to Warrior Artifacts
 			q(42426, { ["name"] = "Tracking Quest: Test Enabled", }),	-- Tracking Quest: Test Enabled
 			q(40885, { ["name"] = "Transplanting Their Cores", }),	-- Transplanting Their Cores
-			q(43416, { ["name"] = "Treasure", }),	-- Treasure
-			q(44179, { ["name"] = "Treasure", }),	-- Treasure
 			q(43833, { ["name"] = "Treasure 003 - Felsoul Lower", }),	-- Treasure 003 - Felsoul Lower
 			q(43843, { ["name"] = "Treasure 010 - Falanaar Outdoor Ruins", }),	-- Treasure 010 - Falanaar Outdoor Ruins
 			q(43308, { ["name"] = "Treasure 071 - Outskirts", }),	-- Treasure 071 - Outskirts
@@ -9934,16 +9933,12 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(92876),	--
 			q(92943),	--
 			q(93183),	--
-			q(93321),	--
 			q(93322),	--
-			q(93324),	--
 			q(93326),	--
 			q(93327),	--
 			q(93331),	--
 			q(93333),	--
 			q(93334),	--
-			q(93336),	--
-			q(93337),	--
 			q(93398),	--
 			q(93400),	--
 			q(93401),	--

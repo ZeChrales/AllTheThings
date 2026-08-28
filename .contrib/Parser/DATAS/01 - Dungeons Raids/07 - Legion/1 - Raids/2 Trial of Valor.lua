@@ -79,6 +79,11 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
+InstanceHelper.LFRQueueNPC = {
+	["cr"] = 111246,	-- Archmage Timear
+	["coord"] = { 63.7, 55.0, LEGION_DALARAN },
+}
+
 root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { ADDED_7_1_0 } }, {
 	inst(861, {	-- Trial of Valor
 		["coord"] = { 70.4, 69.4, STORMHEIM },
@@ -115,42 +120,25 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 			n(QUESTS, {
 				q(44868, {	-- Trial of Valor: Odyn's Judgment
 					["sourceQuest"] = 44729,	-- Trial of Valor: Odyn's Favor
-					["provider"] = { "n", 114263 },	-- Odyn
+					["qg"] = 114263,	-- Odyn
 				}),
 				q(45088, {	-- Trial of Valor: The Lost Army
-					["provider"] = { "n", 114263 },	-- Odyn
+					["qg"] = 114263,	-- Odyn
+					["qi"] = 142487,	-- Valarjar Soul Fragment (QI!)
 					["groups"] = {
-						i(142487),	-- Valarjar Soul Fragment (QI!)
-						--
-						iensemble(143506, {	-- Ensemble: Vestment of the Chosen Dead
-							["classes"] = CLOTH_CLASSES,
-						}),
-						iensemble(143510, {	-- Ensemble: Garb of the Chosen Dead
-							["classes"] = LEATHER_CLASSES,
-						}),
-						iensemble(143514, {	-- Ensemble: Chains of the Chosen Dead
-							["classes"] = MAIL_CLASSES,
-						}),
-						iensemble(143518, {	-- Ensemble: Funerary Plate of the Chosen Dead
-							["classes"] = PLATE_CLASSES,
-						}),
+						iensemble(143514, { ["classes"] = MAIL_CLASSES }),	-- Ensemble: Chains of the Chosen Dead
+						iensemble(143518, { ["classes"] = PLATE_CLASSES }),	-- Ensemble: Funerary Plate of the Chosen Dead
+						iensemble(143510, { ["classes"] = LEATHER_CLASSES }),	-- Ensemble: Garb of the Chosen Dead
+						iensemble(143506, { ["classes"] = CLOTH_CLASSES }),	-- Ensemble: Vestment of the Chosen Dead
 					},
 				}),
 			}),
 			Difficulty(DIFFICULTY.RAID.MULTI.ALL).AddGroups({
 				CommonBossDrops({
-					iensemble(143509, {	-- Ensemble: Vestment of the Chosen Dead
-						["classes"] = CLOTH_CLASSES,
-					}),
-					iensemble(143513, {	-- Ensemble: Garb of the Chosen Dead
-						["classes"] = LEATHER_CLASSES,
-					}),
-					iensemble(143517, {	-- Ensemble: Chains of the Chosen Dead
-						["classes"] = MAIL_CLASSES,
-					}),
-					iensemble(143521, {	-- Ensemble: Funerary Plate of the Chosen Dead
-						["classes"] = PLATE_CLASSES,
-					}),
+					iensemble(143517, { ["classes"] = MAIL_CLASSES }),	-- Ensemble: Chains of the Chosen Dead
+					iensemble(143521, { ["classes"] = PLATE_CLASSES }),	-- Ensemble: Funerary Plate of the Chosen Dead
+					iensemble(143513, { ["classes"] = LEATHER_CLASSES }),	-- Ensemble: Garb of the Chosen Dead
+					iensemble(143509, { ["classes"] = CLOTH_CLASSES }),	-- Ensemble: Vestment of the Chosen Dead
 				}),
 				BossOnly(ODYN, {
 					i(142110),	-- Vantus Rune Technique: Odyn [Rank 1] (RECIPE!)
@@ -164,10 +152,6 @@ root(ROOTS.Instances, expansion(EXPANSION.LEGION, bubbleDown({ ["timeline"] = { 
 					i(142112),	-- Vantus Rune Technique: Helya [Rank 1] (RECIPE!)
 					i(142106),	-- Vantus Rune Technique: Helya [Rank 2] (RECIPE!)
 				}),
-			}),
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["cr"] = 111246,	-- Archmage Timear
-				["coord"] = { 63.7, 55.0, LEGION_DALARAN },
 			}),
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups({
 				ZoneDrops({}),

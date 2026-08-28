@@ -185,6 +185,17 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
+InstanceHelper.LFRQueueNPC = {
+	["crs"] = {
+		177193,	-- Kiku
+		177208,	-- Eppu
+	},
+	["coords"] = {
+		{ 74.0, 13.4, BORALUS },	-- Kiku
+		{ 68.0, 33.6, THE_GREAT_SEAL },	-- Eppu
+	},
+}
+
 root(ROOTS.Instances, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"] = { ADDED_8_2_0 } }, {
 	inst(1179, {	-- The Eternal Palace
 		["coord"] = { 50.5, 11.9, NAZJATAR },
@@ -296,7 +307,6 @@ root(ROOTS.Instances, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"] = { ADD
 			})),
 			Difficulty(DIFFICULTY.RAID.MULTI.ALL).AddGroups({
 				CommonBossDrops({
-					i(169329),	-- Eternal Ornament (QI!)
 					i(168625),	-- Vantus Rune Technique: The Eternal Palace [Rank 1] (RECIPE!)
 					i(168626),	-- Vantus Rune Technique: The Eternal Palace [Rank 2] (RECIPE!)
 					i(168627),	-- Vantus Rune Technique: The Eternal Palace [Rank 3] (RECIPE!)
@@ -323,16 +333,6 @@ root(ROOTS.Instances, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"] = { ADD
 					i(169694),	-- Aqueous Reliquary
 					i(169348),	-- Zanj'ir Poker (PET!)
 				}),
-			}),
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["crs"] = {
-					177193,	-- Kiku
-					177208,	-- Eppu
-				},
-				["coords"] = {
-					{ 74.0, 13.4, BORALUS },	-- Kiku
-					{ 68.0, 33.6, THE_GREAT_SEAL },	-- Eppu
-				},
 			}),
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups({
 				ZoneDrops({}),

@@ -51,6 +51,50 @@ FANTA = createHeader({
 		mx = "Visita https://www.coca-cola.com/us/en/offerings/fanta/wanta-fanta/come-get-it, juega un minijuego y consigue 1 premio por semana. El sorteo empieza el 1 de abril de 2026 y acaba a las 23:59 (hora del este) del 30 de julio de 2026 o cuando se hayan reclamado todos los premios, lo que ocurra primero. Hay 2392 premios de cada tipo disponibles por semana. Se reinicia semanalmente a las 00:00 (ET). No es necesario realizar ninguna compra.",
 	},
 });
+LUNARNEWYEAR = createHeader({
+	readable = "Lunar New Year Adventure",
+	icon = 7360957,
+	text = {
+		en = "Lunar New Year Adventure",
+		-- TODO: de = "",
+		es = "Aventura del Año Nuevo Lunar",
+		mx = "Aventura del Año Nuevo Lunar",
+		-- TODO: fr = "",
+		-- TODO: it = "",
+		-- TODO: ko = "",
+		-- TODO: pt = "",
+		-- TODO: ru = "",
+		-- TODO: cn = "",
+		-- TODO: tw = "",
+	},
+	description = {
+		en = "Lunar New Year Adventure is a China-exclusive promotional event for World of Warcraft, taking place from 5 February to 13 March 2026. The main event functioned similar to the Treasures of Azeroth event.",
+		es = "La Aventura del Año Nuevo Lunar es un evento promocional exclusivo para China de World of Warcraft, que se llevó a cabo del 5 de febrero al 13 de marzo de 2026. El evento principal funcionó de manera similar al evento Tesoros de Azeroth.",
+		mx = "La Aventura del Año Nuevo Lunar es un evento promocional exclusivo para China de World of Warcraft, que se llevó a cabo del 5 de febrero al 13 de marzo de 2026. El evento principal funcionó de manera similar al evento Tesoros de Azeroth.",
+	},
+});
+AZURESPAN_TREASURETROVE = createHeader({
+	readable = "Azure Span Treasure Trove",
+	icon = 7360957,
+	text = {
+		en = "Azure Span Treasure Trove",
+		-- TODO: de = "",
+		es = "Tesoro Escondido de las Tierras Azures",
+		mx = "Tesoro escondido del Trecho Azur",
+		-- TODO: fr = "",
+		-- TODO: it = "",
+		-- TODO: ko = "",
+		-- TODO: pt = "",
+		-- TODO: ru = "",
+		-- TODO: cn = "",
+		-- TODO: tw = "",
+	},
+	description = {
+		en = "Azure Span Treasure Trove is a China-exclusive promotional event for World of Warcraft, taking place from Aug 14 - Sep 11 2026.",
+		es = "Tesoro Escondido de las Tierras Azures es un evento promocional exclusivo para China de World of Warcraft, que tendrá lugar del 14 de agosto al 11 de septiembre de 2026.",
+		mx = "Tesoro escondido del Trecho Azur es un evento promocional exclusivo para China de World of Warcraft, que tendrá lugar del 14 de agosto al 11 de septiembre de 2026.",
+	},
+});
 
 root(ROOTS.Promotions, {
 	n(MIDNIGHT_SEASONAL_PROMOTIONS, {
@@ -77,65 +121,60 @@ root(ROOTS.Promotions, {
 				["timeline"] = { "removed 12.0.1.66198" },
 				["groups"] = { i(260785) },	-- The Dark Portal (DECOR!)
 			}),
-			cnONLY(i(235378, {	-- Landro's Loot Box (CN Only)
-				-- #if AFTER 12.0.0
-				-- #if BEFORE 12.1.0
-				["description"] = "The first lottery draw costs ¥1, and the price increases progressively with each subsequent draw. A total of 13 draws costing ¥1,271 will allow you to obtain all prizes. ",
-				-- #endif
-				-- #endif
-				["timeline"] = { "added 12.0.0", "removed 12.1.0" },	-- 13th March 2026
+			n(LUNARNEWYEAR, sharedDataSelf({
+				["timeline"] = { ADDED_12_0_0, REMOVED_12_0_1_LAUNCH },
+				["u"] = REAL_MONEY,
+			}, {
 				["groups"] = {
-					-- 3rd Price
+					-- Board game rewards
+					cnONLY(i(257515)),	-- Lil' Coalee (PET!)
+					cnONLY(i(38311)),	-- Tabard of the Void
+					cnONLY(i(235343)),	-- Topsy Turvy Joker's Mask (COSMETIC!)
+					-- Shop rewards TODO: missing cost and the currency used
 					cnONLY(i(253404)),	-- Auspicious Pixiu (PET!)
-					cnONLY(i(251542)),	-- Azure Drakefire
-					cnONLY(i(256141)),	-- Fortune's Waving Cat (TOY!)
-					cnONLY(i(253244)),	-- Lunar Celebrant's Aquarium (DECOR!)
-					cnONLY(i(253257)),	-- Lunar Celebrant's Privacy Screen (DECOR!)
-					cnONLY(i(253296)),	-- Lunar Celebrant's Tea Set (DECOR!)
-					cnONLY(i(269743)),	-- Landro's Golden Loot Box (2nd Price as well)
-					-- 2nd Price
-					cnONLY(i(258840)),	-- Gilded Fountain (TOY!)
-					cnONLY(i(253402)),	-- Scorching Polearm (COSMETIC!)
-				--	cnONLY(i(269743)),	-- Landro's Golden Loot Box
-					-- 1st Price
 					cnONLY(iensemble(257547)),	-- Ensemble: Scorching Conqueror (COSMETIC!)
-					cnONLY(i(258136)),	-- Azure Thunder Coil Pillar (TOY!)
-					--[[
-				--	add cnONLY(i()),	-- Azure Dragon Soaring Flame
-					cnONLY(i(258136)),	-- Azure Thunder Coil Pillar (TOY!) 	MAYBE OTHER BOX
-				--	add cnONLY(i()),	-- Blazing Fire Sandbox Horse
-					cnONLY(i(254735)),	-- Thunderhoof Celestial (MOUNT!)
-					cnONLY(i(253254)),	-- Lunar Celebrant's Cradle (DECOR!)
-					cnONLY(i(253255)),	-- Lunar Celebrant's Wide Pillow Roll (DECOR!)
-					cnONLY(i(253256)),	-- Lunar Celebrant's Pillow Roll (DECOR!)
-					cnONLY(i(253290)),	-- Lunar Celebrant's Ornate Vanity (DECOR!)
-					cnONLY(i(253291)),	-- Lunar Celebrant's Compact (DECOR!)
+					cnONLY(i(253244)),	-- Lunar Celebrant's Aquarium (DECOR!)
 					cnONLY(i(253292)),	-- Lunar Celebrant's Bamboo Canister (DECOR!)
+					cnONLY(i(253291)),	-- Lunar Celebrant's Compact (DECOR!)
+					cnONLY(i(253254)),	-- Lunar Celebrant's Cradle (DECOR!)
+					cnONLY(i(253290)),	-- Lunar Celebrant's Ornate Vanity (DECOR!)
+					cnONLY(i(253256)),	-- Lunar Celebrant's Pillow Roll (DECOR!)
+					cnONLY(i(253257)),	-- Lunar Celebrant's Privacy Screen (DECOR!)
 					cnONLY(i(253293)),	-- Lunar Celebrant's Tea Tray (DECOR!)
 					cnONLY(i(253294)),	-- Lunar Celebrant's Teacup (DECOR!)
-					cnONLY(i(253295)),	-- Lunar Celebrant's Teapot (DECOR!)--]]
-				},
-			})),
-			cnONLY(i(269743, {	-- Landro's Golden Loot Box
-				-- #if AFTER 12.0.0
-				-- #if BEFORE 12.1.0
-				["description"] = "Drops from either the '3rd Price' after buying a lottery ticket from the Spring Festival promotional event or bought with Points after receiving the '2nd Prize'.",
-				-- #endif
-				-- #endif
-				["timeline"] = { "added 12.0.0", "removed 12.1.0" },	-- 13th March 2026
-				["groups"] = {
-					cnONLY(i(251542)),	-- Azure Drakefire
-					cnONLY(i(258135)),	-- Gilded Coil Spire (TOY!) [BoE]
-					cnONLY(i(269009)),	-- Golden Ashened Cataclysm (MOUNT!) [BoE]
-					cnONLY(i(254736)),	-- Stormgilded Celestial (MOUNT!) [BoE]
-					cnONLY(i(255973)),	-- Sandbox Horse
-					-- Old Loot
-					cnONLY(i(46779)),	-- Path of Cenarius
-					cnONLY(i(49283)),	-- Reins of the Spectral Tiger (MOUNT!)
-					cnONLY(i(49286)),	-- X-51 Nether-Rocket X-TREME (MOUNT!)
-					cnONLY(i(49285)),	-- X-51 Nether-Rocket (MOUNT!)
-				},
-			})),
+					cnONLY(i(253295)),	-- Lunar Celebrant's Teapot (DECOR!)
+					cnONLY(i(253296)),	-- Lunar Celebrant's Tea Set (DECOR!)
+					cnONLY(i(253297)),	-- Lunar Celebrant's Vase with Maple Branch (DECOR!)
+					cnONLY(i(253255)),	-- Lunar Celebrant's Wide Pillow Roll (DECOR!)
+					cnONLY(i(258840)),	-- Gilded Fountain (TOY!)
+					cnONLY(i(253402)),	-- Scorching Polearm (COSMETIC!)
+					cnONLY(i(254735, {	-- Thunderhoof Celestial (MOUNT!)
+						["groups"] = {
+							cnONLY(i(258136)),	-- Azure Thunder Coil Pillar (TOY!)
+							},
+						})),
+					-- Piramid Gacha Golden Landro box
+					cnONLY(i(269743, {	-- Landro's Golden Loot Box
+						-- #if AFTER 12.0.0
+						-- #if BEFORE 12.0.1
+						["description"] = "The loot box from 2025 was brought back with new rewards. The 2026 variant works similar where players can obtain up to 8 boxes for ¥1000 RMB (~$135 USD), while teaming up with other players and collectively spend at least ¥3000 RMB (~$405 USD), each member will receive an additional 4 boxes as a bonus.",
+						-- #endif
+						-- #endif
+						["groups"] = {
+							cnONLY(i(251542)),	-- Azure Drakefire
+							cnONLY(i(258135)),	-- Gilded Coil Spire (TOY!) [BoE]
+							cnONLY(i(269009)),	-- Golden Ashened Cataclysm (MOUNT!) [BoE]
+							cnONLY(i(254736)),	-- Stormgilded Celestial (MOUNT!) [BoE]
+							cnONLY(i(255973)),	-- Sandbox Horse
+							-- Old Loot
+							cnONLY(i(46779)),	-- Path of Cenarius
+							cnONLY(i(49283)),	-- Reins of the Spectral Tiger (MOUNT!)
+							cnONLY(i(49286)),	-- X-51 Nether-Rocket X-TREME (MOUNT!)
+							cnONLY(i(49285)),	-- X-51 Nether-Rocket (MOUNT!)
+							},
+						})),
+					},
+			}));
 			i(264396, {	-- Naturally Elegant Doormat (DECOR!)
 				["description"] = "Visit |cFFFFD700zillow.com/warcraft|r\n\nFind the Doormat on the page\n\nClick on 'Claim Loot!' and authorize the Account connection.",
 				["timeline"] = { "added 12.0.1.65899", "removed 12.1.0.99999" },	-- TODO: Timeline out. Available through September 30, 2026.
@@ -145,7 +184,7 @@ root(ROOTS.Promotions, {
 				["timeline"] = { "added 12.0.1.65899", "removed 12.1.0.99999" },	-- TODO: Timeline out. Available through September 30, 2026.
 			}),
 			ach(62400, {	-- Craft Your World
-				["description"] = "Open Options\n\nGo to Gameplay -> Social\n\nCheck Connect to Pinterest\n\nSign in through the in-game browser and authorize the connection.",
+				["description"] = "Open Options\n\nGo to Gameplay -> Social\n\nCheck Connect to Pinterest\n\nSign in through the in-game browser and authorize the connection.\n\nNote: If any sort of Parental Controls have been set up on your account, this will not be visible in the Options menu unless they are fully removed via Battle Net support ticket.",
 				["timeline"] = { "added 12.0.1.66017" },
 				["groups"] = { i(268695) },	-- Pin-o-Matic Camera (TOY!)
 			}),
@@ -163,7 +202,7 @@ root(ROOTS.Promotions, {
 			}),
 			i(260360, {	-- Gummi the Glow Wyrm (PET!)
 				["description"] = "Trolli + Xbox promotional item. Available between March 1st 2026 - September 30th 2026 by purchasing Trolli Gummi Pop products in any retail store, photoing your receipt and uploading it as confirmation to trolli.com/xbox. Sometime later you should receive a code to your email to redeem on Battle.net or in the launcher.\n\nYou must have a U.S. address and phone number to participate.\n\nThe code is usable in any region.",
-				["timeline"] = { "added 12.0.1.66192", "removed 12.1.0.99999" },
+				["timeline"] = { "added 12.0.1.66192", "removed 12.1.0.99999" },	-- TODO: Timeline out. Available through September 30, 2026.
 				["u"] = REAL_MONEY,
 			}),
 			-- Season 1
@@ -182,22 +221,22 @@ root(ROOTS.Promotions, {
 			}),
 			i(264283, {	-- Backboard and Hoop Playset (DECOR!)
 				["description"] = "Available from the Pinterest Craft Your World promotion. Enter password 'Horde Board' at craftyourworldpromo.com to receive a code to the email you provided.",
-				["timeline"] = { ADDED_12_0_1_LAUNCH, "removed 12.0.1.66709" },	-- Removed 6 April 2026 at 11:59pm (BST)
+				["timeline"] = { ADDED_12_0_1_LAUNCH },	-- Its removal was announced for 6 April 2026 at 11:59pm (BST) but it is still active and working (last check 17/8/26)
 			}),
 			i(264282, {	-- Bluebird's Golden Cage (DECOR!)
 				["description"] = "Available from the Pinterest Craft Your World promotion. Enter password 'Azeroth Inspiration' at craftyourworldpromo.com to receive a code to the email you provided.",
-				["timeline"] = { ADDED_12_0_1_LAUNCH, "removed 12.0.1.66709" },	-- Removed 6 April 2026 at 11:59pm (BST)
+				["timeline"] = { ADDED_12_0_1_LAUNCH },	-- Its removal was announced for 6 April 2026 at 11:59pm (BST) but it is still active and working (last check 17/8/26)
 			}),
 			i(264281, {	-- Preserved Gift of Gilneas (DECOR!)
 				["description"] = "Available from the Pinterest Craft Your World promotion. Enter password 'Kalimdor Collage' at craftyourworldpromo.com to receive a code to the email you provided.",
-				["timeline"] = { ADDED_12_0_1_LAUNCH, "removed 12.0.1.66709" },	-- Removed 6 April 2026 at 11:59pm (BST)
+				["timeline"] = { ADDED_12_0_1_LAUNCH },	-- Its removal was announced for 6 April 2026 at 11:59pm (BST) but it is still active and working (last check 17/8/26)
 			}),
 			i(262660, {	-- Egg Farmer's Backpack (COSMETIC!)
 				["description"] = "Available in a limited quantity from ign.com/rewards/claim-a-code-to-get-world-of-warcraft-in-game-content, you'll receive a code to redeem on Battle.net.",
 				["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_0_1_SEASONSTART },
 			}),
 			n(FANTA, sharedDataSelf({
-				["timeline"] = { "added 12.0.1.66709", "removed 12.0.7.99999" },
+				["timeline"] = { "added 12.0.1.66709", "removed 12.0.7.68887" },
 			}, {
 				i(262438),	-- Fantastical Goblin Waveshredder (MOUNT!)
 				i(264278),	-- Sturdy Portable Ice Chest (DECOR!)
@@ -220,13 +259,93 @@ root(ROOTS.Promotions, {
 			}),
 			i(265389, {	-- Cuddly Cotton Candy Grrgle (DECOR!)
 				["description"] = "Obtained through watching Twitch Streamers with Drops enabled for at least 4 hours between June 16th, 10:00 a.m. & July 14th, 10:00 p.m. PDT.\n\nYour Twitch account has to be connected with your Battle.net Account & you have to redeem the drop on Twitch before receiving it in your in-game collection as gift.",
-				["timeline"] = { ADDED_12_0_7, "removed 12.0.7.99999" },
+				["timeline"] = { ADDED_12_0_7, "removed 12.0.7.68453" },	-- Removed July 15th
+			}),
+			i(273655, {	-- Sunflare Driftmoth (MOUNT!)
+			["timeline"] = { ADDED_12_0_7 },
+				["description"] = "Obtained if you set up a 6-Month WoW Subscription since Patch 12.0.7.",
+				["timeline"] = { ADDED_12_0_7 },
+				["u"] = REAL_MONEY,
 			}),
 			i(272339, {	-- Umbral Champion's Illustrious Banner (TOY!)
 				["description"] = "Break the Meta: Midnight Season 1\n\nBreak the Meta is focused on teams pushing keys as high as they can with off-meta specs and classes.\n\nComplete at least 2 BTM-Eligible timed keystones at |cFFFFFFFFlevel +10|r or higher will receive an exclusive Toy to use in-game!.\n\nThe Event starts on July 14th at 8:00 AM PDT and lasts for 1 week.\nFor more details & requirements check out: raider.io/events/break-the-meta-midnight-season-1/event-info-rules",
-				["timeline"] = { ADDED_12_0_7, "removed 12.0.7.99999" },	-- Removed July 21st
+				["timeline"] = { ADDED_12_0_7, "removed 12.0.7.68453" },	-- Removed July 21st
 			}),
+			iensemble(257974, {	-- Ensemble: Sorcerer's Grassy Garb (COSMETIC!)
+				["description"] = "Obtained through watching Twitch Streamers with Drops enabled for at least 4 hours between August 11th, 10:00 a.m. & September 8th, 10:00 a.m. PDT.\n\nYour Twitch account has to be connected with your Battle.net Account & you have to redeem the drop on Twitch before receiving it in your in-game collection as gift.",
+				["timeline"] = { ADDED_12_1_0, "removed 12.1.0.99999" },
+			}),
+			n(AZURESPAN_TREASURETROVE, sharedDataSelf({
+				["timeline"] = { ADDED_12_1_0, REMOVED_12_1_5 },
+				["u"] = REAL_MONEY,
+			}, {
+				["groups"] = {
+					--[[
+					Azure Span Treasure Trove (CN-exclusive promo, Aug 14 - Sep 11 2026)
+					=====================================================================
+					Chinese-region-only gacha/mystery-box promotion by Thunderfire Games/NetEase,
+					Tuskarr/Iskaara themed.
+					https://www.wowhead.com/news/azure-span-treasure-trove-chinese-exclusive-tuskaar-themed-promotion-382411
+					https://www.wowhead.com/news/chinese-exclusive-azure-span-treasure-trove-models-datamined-382436
+
+					-- Frostshell Walker (Midnight and Classic mount)
+					-- Ground-only, 100% increased swim speed. Retail version carries a Tuskarr NPC
+					-- granting 10x Tide-Oath Augment Rune per day. Classic version's NPC instead
+					-- teleports the owner to a capital city every 30 min (independent CD, works
+					-- like a second Hearthstone) -- Shrine of Seven Stars/Two Moons on MoP Classic,
+					-- Dalaran on Titan Reforged Time.
+					i(ITEMID_TODO, { -- Frostshell Walker
+					}),
+					-- Little Mei, Lover of Fish (Midnight and Classic pet)
+					i(ITEMID_TODO, { -- Little Mei, Lover of Fish
+					}),
+					-- Yaya, the Fish-Basket Beaver (Midnight and Classic pet)
+					i(ITEMID_TODO, { -- Yaya, the Fish-Basket Beaver
+					}),
+					-- Backstroke Timbertooth (Midnight and Classic pet)
+					i(ITEMID_TODO, { -- Backstroke Timbertooth
+					}),
+					-- Tuskarr Ice-Fishing Tent (Midnight and Classic toy)
+					-- Summons a tent, lasts 15 min, usable with up to 2 other players, 1hr CD.
+					i(ITEMID_TODO, { -- Tuskarr Ice-Fishing Tent
+					}),
+					-- Visage of the Cursed (Classic toy, Death Knight only)
+					-- Changes undead minion appearances on a 1 min CD: Army of the Dead -> Undead
+					-- Vrykul, Gargoyles -> Val'kyr, Ghouls -> Abominations. Multiple color variants each.
+					i(ITEMID_TODO, { -- Visage of the Cursed
+					}),
+					-- Tuskarr Boat (Midnight and Classic toy)
+					-- Sail across water and fish, similar to Anglers Fishing Raft (item 85500).
+					i(ITEMID_TODO, { -- Tuskarr Boat
+					}),
+					-- Kalu'ak Fisher's Collection (Midnight transmog, 3-piece backpack set)
+					i(ITEMID_TODO, { -- Shark Backpack
+					}),
+					i(ITEMID_TODO, { -- Walrus Fisher's Backpack (carried item, exact name TBD)
+					}),
+					i(ITEMID_TODO, { -- Penguin Backpack
+					}),
+					-- Big Kinook's Spare Long-Handled Ladle (Midnight and Classic weapon transmog)
+					i(ITEMID_TODO, { -- Big Kinook's Spare Long-Handled Ladle
+					}),
+					-- Iskaara Fishing Rack (Midnight decor)
+					i(ITEMID_TODO, { -- Iskaara Fishing Rack
+					}),
+					-- Iskaara Whale-Bone Hanging Rack (Midnight decor)
+					i(ITEMID_TODO, { -- Iskaara Whale-Bone Hanging Rack
+					}),
+					-- Iskaara Hearth (Midnight decor)
+					i(ITEMID_TODO, { -- Iskaara Hearth
+					}),
+					--]]
+				},
+			}));
 			-- Season 2
+			i(250293, {	-- Red Hot Portable Bakery
+				["description"] = "McDonald's UK exclusive promotion. Available from 25th August 2026 until 28th September 2026.\n\nItem is redeemable for 1500 points in the McDonald's UK app. You can get 1000 points for the registration, then 1 point per 1p spent.",
+				["timeline"] = { "added 12.1.0.69465", "removed 12.1.0.99999" },	-- Removed 28th September 2026
+				["u"] = REAL_MONEY,
+			}),
 
 			-- Season 3
 

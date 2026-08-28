@@ -46,6 +46,10 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },
 					["sym"] = SYM.MIDNIGHT.QUELTHALAS_ZONE_REWARDS,
 				}),
+				i(279525, {	-- Avid Learner's Supply Pack (Season 2)
+					["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
+					["sym"] = SYM.MIDNIGHT.QUELTHALAS_ZONE_REWARDS,
+				}),
 			}),
 			n(QUESTS, {	-- Legends Never Die
 				header(HEADERS.AchCriteria, 61574.01, {	-- Wey'nan's Ward
@@ -54,6 +58,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						["provider"] = { "n", 238170 },	-- Zur'ashar Kassameh
 						["coord"] = { 54.2, 53.1, MAP.MIDNIGHT.HARANDAR },
 						["groups"] = { i(263037) },	-- Replica Wey'nan's Ward (DECOR!)
+						["lockCriteria"] = { 1, "achID", 61574 },	-- Legends Never Die
 					}),
 				}),
 				header(HEADERS.AchCriteria, 61574.02, {	-- The Cauldron of Echoes
@@ -62,6 +67,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						["provider"] = { "n", 238170 },	-- Zur'ashar Kassameh
 						["coord"] = { 54.2, 53.1, MAP.MIDNIGHT.HARANDAR },
 						["groups"] = { i(263315) },	-- Bubbling Haranir Cauldron (DECOR!)
+						["lockCriteria"] = { 1, "achID", 61574 },	-- Legends Never Die
 					}),
 				}),
 				header(HEADERS.AchCriteria, 61574.03, {	-- Aln'hara's Bloom
@@ -70,6 +76,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						["provider"] = { "n", 238170 },	-- Zur'ashar Kassameh
 						["coord"] = { 54.2, 53.1, MAP.MIDNIGHT.HARANDAR },
 						["groups"] = { i(263196) },	-- Harandar Glowvine Lantern (DECOR!)
+						["lockCriteria"] = { 1, "achID", 61574 },	-- Legends Never Die
 					}),
 				}),
 				header(HEADERS.AchCriteria, 61574.04, {	-- The Echoless Flame
@@ -78,6 +85,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						["provider"] = { "n", 238170 },	-- Zur'ashar Kassameh
 						["coord"] = { 54.2, 53.1, MAP.MIDNIGHT.HARANDAR },
 						["groups"] = { i(264262) },	-- Haranir Whistling Arrow (DECOR!)
+						["lockCriteria"] = { 1, "achID", 61574 },	-- Legends Never Die
 					}),
 				}),
 				header(HEADERS.AchCriteria, 61574.05, {	-- Russula's Outreach
@@ -86,21 +94,25 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						["provider"] = { "n", 238170 },	-- Zur'ashar Kassameh
 						["coord"] = { 54.2, 53.1, MAP.MIDNIGHT.HARANDAR },
 						["groups"] = { i(262906) },	-- Harandar Anvil (DECOR!)
+						["lockCriteria"] = { 1, "achID", 61574 },	-- Legends Never Die
 					}),
 				}),
 				header(HEADERS.AchCriteria, 61574.06, {	-- Root of the World
 					q(88998, {	-- Root of the World
-						["sourceQuest"] = 90740,	-- A Legend to Know
+						["sourceQuest"] = 89268,	-- Lost Legends
 						["provider"] = { "n", 238170 },	-- Zur'ashar Kassameh
 						["coord"] = { 54.2, 53.1, MAP.MIDNIGHT.HARANDAR },
+						["groups"] = { i(263041) },	-- Replica Root of the World (DECOR!)
+						["lockCriteria"] = { 1, "achID", 61574 },	-- Legends Never Die
 					}),
 				}),
 				header(HEADERS.AchCriteria, 61574.07, {	-- Sky's Hope
 					q(88999, {	-- Sky's Hope
-						-- not 100% sure on this but it wasn't available with 'Root of the World'
 						["sourceQuest"] = 90743,	-- Ritual Reinforcement
 						["provider"] = { "n", 238170 },	-- Zur'ashar Kassameh
 						["coord"] = { 54.2, 53.1, MAP.MIDNIGHT.HARANDAR },
+						["groups"] = { i(253443) },	-- Replica Sky's Hope (DECOR!)
+						["lockCriteria"] = { 1, "achID", 61574 },	-- Legends Never Die
 					}),
 				}),
 			}),
@@ -214,12 +226,12 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				})),
 				header(HEADERS.Achievement, 42278, {	-- The Empty Cradle
 					q(90738, {	-- To the Blossoming Terrace
-						["qg"] = 243759, -- Aksem
+						["qg"] = 243759,	-- Aksem
 						["sourceQuest"] =  90735,	-- The Stolen Staff
 						["coord"] = { 53.4, 49.5, MAP.MIDNIGHT.HARANDAR },
 					}),
 					q(90736, {	-- That's Not Yours
-						["qg"] = 243762, -- Shul'ka Seila
+						["qg"] = 243762,	-- Shul'ka Seila
 						["sourceQuest"] =  90738,	-- To the Blossoming Terrace
 						["coord"] = { 58.8, 47.7, MAP.MIDNIGHT.HARANDAR },
 						["groups"] = {
@@ -237,12 +249,12 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						}
 					}),
 					q(90737, {	-- Nested Clues
-						["qg"] = 243762, -- Shul'ka Seila
+						["qg"] = 243762,	-- Shul'ka Seila
 						["sourceQuest"] =  90738,	-- To the Blossoming Terrace
 						["coord"] = { 58.8, 47.7, MAP.MIDNIGHT.HARANDAR },
 					}),
 					q(90739, {	-- The Root of Things
-						["qg"] = 243762, -- Shul'ka Seila
+						["qg"] = 243762,	-- Shul'ka Seila
 						["sourceQuests"] = {
 							90736,	-- That's Not Yours
 							90737,	-- Nested Clues
@@ -364,12 +376,12 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					o(579180, {	-- Ways of the Roots--Part 1: Serving
 						["sourceQuest"] = 88998,	-- Root of the World
 						["questID"] = 93488,
-						["coord"] = { 40.8, 36.2, MAP.MIDNIGHT.HARANDAR },
+						["coord"] = { 40.8, 36.3, MAP.MIDNIGHT.HARANDAR },
 					}),
 					o(579182, {	-- Ways of the Roots--Part 2: Growing
 						["sourceQuest"] = 88998,	-- Root of the World
 						["questID"] = 93487,
-						["coord"] = { 41.5, 34.2, MAP.MIDNIGHT.HARANDAR },
+						["coord"] = { 41.5, 34.1, MAP.MIDNIGHT.HARANDAR },
 					}),
 					o(579183, {	-- Ways of the Roots--Part 3: Pruning
 						["sourceQuest"] = 88998,	-- Root of the World

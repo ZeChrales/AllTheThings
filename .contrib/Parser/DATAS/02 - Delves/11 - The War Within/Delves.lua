@@ -153,14 +153,11 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 						i(212171),	-- Zekvir's Raptorial Spine
 					}),
 				})),
-				n(DELVE_COMPLETION, {	-- ToDO: check if still available in 11.1
+				n(DELVE_COMPLETION, {
 					n(TREASURES, {
-						filter(COSMETIC, {
-							i(212163),	-- Soporific Shroom Cap
-						}),
-						n(WEAPONS, {
-							i(218126),	-- Befouler's Syringe
-						}),
+						i(218126),	-- Befouler's Syringe
+						i(212163),	-- Soporific Shroom Cap (COSMETIC!)
+						i(225547),	-- Toxic Victory (TOY!)
 					}),
 				}),
 				n(EXPLORATION, {
@@ -1103,16 +1100,18 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 			}),
 		}),
 		n(BOUNTIFUL, bubbleDownFiltered({
+			-- #if BEFORE MID
 			["cost"] = { { "c", RESTORED_COFFER_KEY, 1 } },
+			-- #endif
 		},FILTERFUNC_itemID,{
 			["provider"] = { "o", 413590 },	-- Bountiful Coffer
 			["groups"] = {
-				i(220520, {["timeline"]={ REMOVED_11_1_0}}),	-- Radiant Echo
-				i(235897, {["timeline"]={ ADDED_11_1_0_SEASONSTART, REMOVED_11_2_0}}),	-- Radiant Echo
-				i(246771, {["timeline"]={ ADDED_11_2_0_SEASONSTART}}),	-- Radiant Echo
-				i(228958, {["timeline"]={ REMOVED_11_1_0}}),	-- Radiant Echo (QS!)
-				i(235896, {["timeline"]={ ADDED_11_1_0_SEASONSTART, REMOVED_11_2_0}}),	-- Radiant Echo (QS!)
-				i(246772, {["timeline"]={ ADDED_11_2_0_SEASONSTART}}),	-- Radiant Echo (QS!)
+				i(220520, {["timeline"]={ REMOVED_11_1_0 }}),	-- Radiant Echo
+				i(235897, {["timeline"]={ ADDED_11_1_0_SEASONSTART, REMOVED_11_2_0 }}),	-- Radiant Echo
+				i(246771, {["timeline"]={ ADDED_11_2_0_SEASONSTART }}),	-- Radiant Echo
+				i(228958, {["timeline"]={ REMOVED_11_1_0 }}),	-- Radiant Echo (QS!)
+				i(235896, {["timeline"]={ ADDED_11_1_0_SEASONSTART, REMOVED_11_2_0 }}),	-- Radiant Echo (QS!)
+				i(246772, {["timeline"]={ ADDED_11_2_0_SEASONSTART }}),	-- Radiant Echo (QS!)
 				n(ARMOR, {
 					filter(BACK_F, {
 						n(DELVES_TWW_S1, bubbleDown({ ["timeline"] = { REMOVED_11_1_0_SEASONSTART } }, {

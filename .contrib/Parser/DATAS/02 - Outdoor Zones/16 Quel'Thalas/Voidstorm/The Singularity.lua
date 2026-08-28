@@ -29,7 +29,16 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					}, {	-- RENOWN 6 --
 					}, {	-- RENOWN 7 --
 						q(93933, {	-- Guarded Treasures
-							i(264507),	-- Crucible of Erratic Energies
+							["timeline"] = { REMOVED_12_1_0 },
+							["groups"] = {
+								i(264507),	-- Crucible of Erratic Energies
+							},
+						}),
+						q(97621, {	-- The Singularity Anchor
+							["timeline"] = { ADDED_12_1_0 },
+							["groups"] = {
+								i(264507),	-- Crucible of Erratic Energies
+							},
 						}),
 					}, {	-- RENOWN 8 --
 					}, {	-- RENOWN 9 --
@@ -207,7 +216,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 							}, {	-- RENOWN 13 --
 							}, {	-- RENOWN 14 --
 								i(263492, {	-- Blitzcreek (PET!)
-									["cost"] = { { "c", VOIDLIGHT_MARL, 3000 } },
+									["cost"] = { { "c", VOIDLIGHT_MARL, 2500 } },
 								}),
 							}, {	-- RENOWN 15 --
 								i(266980, {	-- Pauldrons of the Darkened Collapsed Star

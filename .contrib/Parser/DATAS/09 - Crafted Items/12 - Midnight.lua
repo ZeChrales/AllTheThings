@@ -2,7 +2,8 @@
 --    C R A F T A B L E S   M O D U L E    --
 ---------------------------------------------
 root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
-	i(232875),	-- Spark of Radiance
+	i(232875, {["timeline"] = { REMOVED_12_1_0 }}),	-- Spark of Radiance
+	i(274476, {["timeline"] = { ADDED_12_1_0 }}),	-- Spark of Tides
 	n(DECOR, {
 		o_repeated({	-- Dornic Fir Lumber
 			["maps"] = {
@@ -27,6 +28,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 	}),
 	prof(ALCHEMY, {
 		filter(CONSUMABLES, {
+			i(271889, {["timeline"] = { ADDED_12_1_0 }}),	-- Alluring Nostrum+
+			i(271890, {["timeline"] = { ADDED_12_1_0 }}),	-- Alluring Nostrum++
 			i(241299),	-- Amani Extract+
 			i(241298),	-- Amani Extract++
 			i(241319, {	-- Cauldron of Sin'dorei Flasks+
@@ -41,6 +44,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 				i(245933),	-- Fleeting Flask of the Magisters++
 				i(245929),	-- Fleeting Flask of the Shattered Sun++
 			}),
+			i(271883, {["timeline"] = { ADDED_12_1_0 }}),	-- Concentrated Silvermoon Health Potion+
+			i(271884, {["timeline"] = { ADDED_12_1_0 }}),	-- Concentrated Silvermoon Health Potion++
 			i(241293),	-- Draught of Rampant Abandon+
 			i(241292),	-- Draught of Rampant Abandon++
 			i(241339),	-- Enlightenment Tonic+
@@ -67,6 +72,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(241286),	-- Light's Preservation++
 			i(241301),	-- Lightfused Mana Potion+
 			i(241300),	-- Lightfused Mana Potion++
+			i(271886, {["timeline"] = { ADDED_12_1_0 }}),	-- Liquid Luster+
+			i(271887, {["timeline"] = { ADDED_12_1_0 }}),	-- Liquid Luster++
 			i(241295),	-- Potion of Devoured Dreams+
 			i(241294),	-- Potion of Devoured Dreams++
 			i(241289),	-- Potion of Recklessness+
@@ -84,6 +91,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 				i(245911),	-- Fleeting Draught of Rampant Abandon+
 				i(245897),	-- Fleeting Light's Potential+
 				i(245917),	-- Fleeting Lightfused Mana Potion+
+				i(274763, {["timeline"] = {ADDED_12_1_0}}),	-- Fleeting Liquid Luster+
 				i(245905),	-- Fleeting Potion of Devoured Dreams+
 				i(245903),	-- Fleeting Potion of Recklessness+
 				i(245919),	-- Fleeting Silvermoon Health Potion+
@@ -92,6 +100,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 				i(245910),	-- Fleeting Draught of Rampant Abandon++
 				i(245898),	-- Fleeting Light's Potential++
 				i(245916),	-- Fleeting Lightfused Mana Potion++
+				i(274764, {["timeline"] = {ADDED_12_1_0}}),	-- Fleeting Liquid Luster++
 				i(245904),	-- Fleeting Potion of Devoured Dreams++
 				i(245902),	-- Fleeting Potion of Recklessness++
 				i(245918),	-- Fleeting Silvermoon Health Potion++
@@ -99,6 +108,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		}),
 		n(DECOR, {
 			i(262355),	-- Entropic Illuminant (DECOR!)
+			i(279359, {["timeline"] = { ADDED_12_1_0 }}),	-- Ersatz Venom Splatter (DECOR!)
 			i(262356),	-- Haranir Preserving Agents (DECOR!)
 			i(262354),	-- Riftstone (DECOR!)
 			i(253506),	-- Rootbound Vat (DECOR!)
@@ -217,6 +227,10 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(260232),	-- Thalassian Skeleton Key
 		}),
 		n(DECOR, {
+			i(275305, {["timeline"] = { ADDED_12_1_0 }}),	-- Amani Forgemaster's Decorative Spear (DECOR!)
+			i(279329, {["timeline"] = { ADDED_12_1_0 }}),	-- Amani Forgemaster's Rack (DECOR!)
+			i(275303, {["timeline"] = { ADDED_12_1_0 }}),	-- Amani Forgemaster's Workbench (DECOR!)
+			i(263709, {["timeline"] = { ADDED_12_1_0 }}),	-- Amani Forgemaster's Workbench (DECOR!)
 			i(262451),	-- Gilded Silvermoon Anvil (DECOR!)
 			i(262457),	-- Gilded Silvermoon Hanger (DECOR!)
 			i(262452),	-- Masterwork Crafting Hammer (DECOR!)
@@ -361,6 +375,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		filter(REAGENTS, {
 			i(238202),	-- Gloaming Alloy+
 			i(238203),	-- Gloaming Alloy++
+			i(273059, {["timeline"] = { ADDED_12_1_0 }}),	-- Hunter's Ritual Stone+
+			i(273060, {["timeline"] = { ADDED_12_1_0 }}),	-- Hunter's Ritual Stone++
 			i(238197),	-- Refulgent Copper Ingot+
 			i(238198),	-- Refulgent Copper Ingot++
 			i(238204),	-- Sterling Alloy+
@@ -400,6 +416,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		}),
 	}),
 	prof(COOKING, {
+		i(275264, {["timeline"] = { ADDED_12_1_0 }}),	-- Amani Cornucopia
 		i(242287),	-- Arcano Cutlets
 		i(242298),	-- Argentleaf Tea
 		i(242301),	-- Azeroot Tea
@@ -412,6 +429,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		i(242277),	-- Crimson Calamari
 		i(242292),	-- Eversong Pudding
 		i(242309),	-- Farstrider Rations
+		i(275266, {["timeline"] = { ADDED_12_1_0 }}),	-- Feast of Knowledge
 		i(242286),	-- Fel-Kissed Filet
 		i(242294),	-- Felberry Figs
 		i(255848),	-- Flora Frenzy
@@ -420,6 +438,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		i(242281),	-- Glitter Skewers
 		i(255846),	-- Harandar Celebration
 		i(242295),	-- Hearthflame Supper
+		i(275267, {["timeline"] = { ADDED_12_1_0 }}),	-- Hearty Amani Cornucopia
 		i(242759),	-- Hearty Arcano Cutlets
 		i(242768),	-- Hearty Bloodthistle-Wrapped Cutlets
 		i(242769),	-- Hearty Bloom Skewers
@@ -431,6 +450,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		i(242764),	-- Hearty Eversong Pudding
 		i(242776),	-- Hearty Farstrider Rations
 		i(228721),	-- Hearty Feast
+		i(275269, {["timeline"] = { ADDED_12_1_0 }}),	-- Hearty Feast of Knowledge
 		i(242758),	-- Hearty Fel-Kissed Filet
 		i(242766),	-- Hearty Felberry Figs
 		i(268680),	-- Hearty Flora Frenzy
@@ -441,9 +461,11 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		i(266996),	-- Hearty Harandar Celebration
 		i(242767),	-- Hearty Hearthflame Supper
 		i(268679),	-- Hearty Impossibly Royal Roast
+		i(275268, {["timeline"] = { ADDED_12_1_0 }}),	-- Hearty Loa's Gathering
 		i(242770),	-- Hearty Mana-Infused Stew
 		i(242754),	-- Hearty Null and Void Plate
 		i(242775),	-- Hearty Portable Snack
+		i(275262, {["timeline"] = { ADDED_12_1_0 }}),	-- Hearty Puffer Plate
 		i(242744),	-- Hearty Quel'dorei Medley
 		i(242774),	-- Hearty Quick Sandwich
 		i(242747),	-- Hearty Royal Roast
@@ -453,16 +475,20 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		i(242771),	-- Hearty Spiced Biscuits
 		i(242755),	-- Hearty Sun-Seared Lumifin
 		i(242765),	-- Hearty Sunwell Delight
+		i(275263, {["timeline"] = { ADDED_12_1_0 }}),	-- Hearty Sweet-And-Sour Skewers
 		i(242750),	-- Hearty Tasty Smoked Tetra
 		i(242760),	-- Hearty Twilight Angler's Medley
+		i(275259, {["timeline"] = { ADDED_12_1_0 }}),	-- Hearty Venom-Spiced Cutlets
 		i(242756),	-- Hearty Void-Kissed Fish Rolls
 		i(242757),	-- Hearty Warped Wise Wings
 		i(242762),	-- Hearty Wise Tails
 		i(255847),	-- Impossibly Royal Roast
+		i(275265, {["timeline"] = { ADDED_12_1_0 }}),	-- Loa's Gathering
 		i(242297),	-- Mana Lily Tea
 		i(242303),	-- Mana-Infused Stew
 		i(242282),	-- Null and Void Plate
 		i(242308),	-- Portable Snack
+		i(275260, {["timeline"] = { ADDED_12_1_0 }}),	-- Puffer Plate
 		i(242272),	-- Quel'dorei Medley
 		i(242307),	-- Quick Sandwich
 		i(242275),	-- Royal Roast
@@ -473,10 +499,12 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		i(242304),	-- Spiced Biscuits
 		i(242283),	-- Sun-Seared Lumifin
 		i(242293),	-- Sunwell Delight
+		i(275261, {["timeline"] = { ADDED_12_1_0 }}),	-- Sweet-And-Sour Skewers
 		i(242278),	-- Tasty Smoked Tetra
 		i(253403),	-- Thalassian Fillet
 		i(242300),	-- Tranquility Bloom Tea
 		i(242288),	-- Twilight Angler's Medley
+		i(275258, {["timeline"] = { ADDED_12_1_0 }}),	-- Venom-Spiced Cutlets
 		i(242284),	-- Void-Kissed Fish Rolls
 		i(242285),	-- Warped Wise Wings
 		i(242290),	-- Wise Tails
@@ -554,11 +582,14 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		n(DECOR, {
 			i(262459),	-- Animated Sin'dorei Hammer (DECOR!)
 			i(262458),	-- Animated Sin'dorei Pick (DECOR!)
+			i(279335, {["timeline"] = { ADDED_12_1_0 }}),	-- Enchanted Voidwell Fish (DECOR!)
 			i(268038),	-- Endless Codex of Blooming Light (DECOR!)
 			i(268039),	-- Endless Codex of Nature's Grace (DECOR!)
 			i(268041),	-- Endless Codex of the Voidtouched (DECOR!)
 			i(262450),	-- Ensorcelled Broom (DECOR!)
 			i(262455),	-- Font of Gleaming Water (DECOR!)
+			i(279362, {["timeline"] = { ADDED_12_1_0 }}),	-- Furious Tiki Mask (DECOR!)
+			i(279332, {["timeline"] = { ADDED_12_1_0 }}),	-- Keen Hex Mask (DECOR!)
 			i(262468),	-- Ren'dorei Postal Repository (DECOR!)
 			i(262590),	-- Rootflame Campfire (DECOR!)
 			i(246693),	-- Self-Pouring Thalassian Sunwine (DECOR!)
@@ -762,6 +793,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(244027),	-- Enchant Weapon - Flames of the Sin'dorei++
 			i(243970),	-- Enchant Weapon - Jan'alai's Precision+
 			i(243971),	-- Enchant Weapon - Jan'alai's Precision++
+			i(273071, {["timeline"] = { ADDED_12_1_0 }}),	-- Enchant Weapon - Rite of the Hash'ey+
+			i(273072, {["timeline"] = { ADDED_12_1_0 }}),	-- Enchant Weapon - Rite of the Hash'ey++
 			i(243968),	-- Enchant Weapon - Strength of Halazzi+
 			i(243969),	-- Enchant Weapon - Strength of Halazzi++
 			i(243998),	-- Enchant Weapon - Worldsoul Aegis+
@@ -832,7 +865,10 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(257750),	-- Laced Zoomshots++
 		}),
 		n(DECOR, {
+			i(279341, {["timeline"] = { ADDED_12_1_0 }}),	-- Aetherlume Field Lamp (DECOR!)
 			i(246460),	-- Ambient Aethercharged Crystal (DECOR!)
+			i(279337, {["timeline"] = { ADDED_12_1_0 }}),	-- Coiled Amani Hookshot (DECOR!)
+			i(279339, {["timeline"] = { ADDED_12_1_0 }}),	-- Proudmoore Ship-in-a-Bottle (DECOR!)
 			i(262617),	-- Ren'dorei Crafting Framework (DECOR!)
 			i(263049),	-- Ren'dorei Lightpost (DECOR!)
 			i(262465),	-- Ren'dorei Stargazer (DECOR!)
@@ -909,7 +945,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			FirstCraft(90273, 1229888);	-- Quel'dorei Bracelets
 			FirstCraft(90285, 1229892);	-- Quel'dorei Clonkers
 			FirstCraft(90277, 1229884);	-- Quel'dorei Mail Shroud
-			fc(1261492),	-- Thalassian Competitor's Mail Footlinks (12.0.1 questID 90258 & 90281 | 12.0.5 questID 95581)
+			FirstCraft(95581, 1261492),	-- Thalassian Competitor's Mail Footlinks (12.0.1 questID 90258 & 90281 | 12.0.5 questID 95581) (confirmed 95581 in #errors 13.07.2026)
 			FirstCraft(90257, 1229914);	-- Thalassian Competitor's Mail Links
 			FirstCraft(90253, 1229910);	-- Thalassian Competitor's Mail Visor
 			-- Plate Equipment
@@ -954,6 +990,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(248486),	-- Emergency Soul Link+
 			i(269586),	-- Emergency Soul Link++
 			i(248137),	-- M3DDY
+			i(275676, {["timeline"] = { ADDED_12_1_0 }}),	-- R0CKY-To-Go
 			i(248409),	-- W-47CH D0G
 			i(257751),	-- Weighted Boomshots+
 			i(257752),	-- Weighted Boomshots++
@@ -1044,6 +1081,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			r(1229928),	-- Wormhole Generator: Quel'Thalas
 		}),
 		filter(TOYS, {
+			i(275683, {["timeline"] = { ADDED_12_1_0 }}),	-- G-00 (TOY!)
 			i(248485),	-- Wormhole Generator: Quel'Thalas (TOY!)
 		}),
 		n(WEAPONS, {
@@ -1059,6 +1097,29 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		}),
 	}),
 	prof(FISHING, {
+		container(278329, {	-- Thalassian Recipe in a Bottle
+			["timeline"] = { ADDED_12_1_0 },
+			--["sym"] = {{"select","itemID",
+				-- Available from the Bottle but has another Source
+				-- TODO
+			--}},
+			["groups"] = {
+				-- Only known source is the Bottle
+				i(275695),	-- Design: Piercing Amani Lapis (RECIPE!)
+				i(275334),	-- Pattern: Stretched Snakeskin Rack (RECIPE!)
+				i(275338),	-- Pattern: Twilight's Blade Bedroll (RECIPE!)
+				i(275306),	-- Plans: Amani Forgemaster's Decorative Spear (RECIPE!)
+				i(275308),	-- Plans: Amani Forgemaster's Rack (RECIPE!)
+				i(275273),	-- Recipe: Sweet-And-Sour Skewers (RECIPE!)
+				i(278331),	-- Recipe: Sweet-And-Sour Skewers (RECIPE!)
+				i(275320),	-- Schematic: Aetherlume Field Lamp (RECIPE!)
+				i(275684),	-- Schematic: DU5TY, Lazy Looter (RECIPE!)
+				i(278330),	-- Schematic: R0CKY (RECIPE!)
+				i(278333),	-- Schematic: R0CKY-To-Go (RECIPE!)
+				i(275326),	-- Technique: Chiseled Amani Tablet (RECIPE!)
+				i(275324),	-- Technique: Inscribed Amani Mural (RECIPE!)
+			},
+		}),
 		filter(BATTLE_PETS, {
 			i(260942),	-- Bubbly Snapling (PET!)
 		}),
@@ -1080,25 +1141,42 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(266387),	-- Sanctum Magister's Pylon (COSMETIC!)
 		}),
 		n(DISCOVERY, {
+			r(1295411, {["timeline"] = { ADDED_12_1_0 }}),	-- Blightswarmer
 			r_withQuest(1225274, 88614),	-- Blood Hunter
 			r_withQuest(1225266, 88606),	-- Bloomtail Minnow
+			r(1295408, {["timeline"] = { ADDED_12_1_0 }}),	-- Coiled Stargorger
+			r(1295409, {["timeline"] = { ADDED_12_1_0 }}),	-- Dirty Darter
 			r_withQuest(1225283, 88620),	-- Eversong Trout
 			r_withQuest(1225276, 88612),	-- Fungalskin Pike
+			r(1305973, {["timeline"] = { ADDED_12_1_0 }}),	-- Giggling Skull
 			r_withQuest(1225275, 88619),	-- Gore Guppy
+			r(1305975, {["timeline"] = { ADDED_12_1_0 }}),	-- Grotesque Sturgeon
 			r(1225337, {["learnedAt"]=150}),	-- Harandar
 			r_withQuest(1225267, 88618),	-- Hollow Grouper
+			r(1305979, {["timeline"] = { ADDED_12_1_0 }}),	-- Loathsome Anglerfish
 			r_withQuest(1225284, 88613),	-- Lucky Loa
 			r_withQuest(1225270, 88603),	-- Lynxfish
+			r(1305976, {["timeline"] = { ADDED_12_1_0 }}),	-- Many-Eyed Flounder
 			r_withQuest(1225268, 88617),	-- Null Voidfish
-			r_withQuest(1225273, 88610),	-- Ominous Octopu
+			r_withQuest(1225273, 88610),	-- Ominous Octopus
+			r(1305972, {["timeline"] = { ADDED_12_1_0 }}),	-- Oozing Goby
+			r(1295410, {["timeline"] = { ADDED_12_1_0 }}),	-- Polluted Puffer
 			r_withQuest(1225277, 88609),	-- Restored Songfish
 			r_withQuest(1225269, 88604),	-- Root Crab
 			r_withQuest(1225271, 88615),	-- Shimmersiren
 			r_withQuest(1225272, 88607),	-- Shimmer Spinefish
 			r_withQuest(1225245, 88602),	-- Sin'dorei Swarmer
+			r(1295404, {["timeline"] = { ADDED_12_1_0 }}),	-- Spotted Killifish
+			r(1295407, {["timeline"] = { ADDED_12_1_0 }}),	-- Sulfurous Sludgefish
 			r_withQuest(1225278, 88621),	-- Sunwell Fish
 			r_withQuest(1225281, 88611),	-- Tender Lumifin
+			r(1295422, {["timeline"] = { ADDED_12_1_0 }}),	-- Temple Fishing
+			r(1295420, {["learnedAt"]=75}),	-- The Coiled Isle
+			r(1295405, {["timeline"] = { ADDED_12_1_0 }}),	-- Toxic Tlhapi
+			r(1305978, {["timeline"] = { ADDED_12_1_0 }}),	-- Twin-Headed Snipefish
 			r_withQuest(1225280, 88605),	-- Twisted Tetra
+			r(1295406, {["timeline"] = { ADDED_12_1_0 }}),	-- Ula'tek Snakehead
+			r(1295421, {["timeline"] = { ADDED_12_1_0 }}),	-- Venom Fishing
 			r(1225336, {["learnedAt"]=225}),	-- Voidstorm
 			r_withQuest(1225279, 88616),	-- Warping Wise
 			r_withQuest(1225282, 88608),	-- Wyrmfish
@@ -1148,38 +1226,63 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		i(238494),	-- Another's Treasure
 		i(238371),	-- Arcane Wyrmfish
 		i(243302),	-- Aquarius Bloom
+		i(279207, { ["timeline"] = { ADDED_12_1_0 } }),	-- Blackened Sludgefish
+		i(274593, { ["timeline"] = { ADDED_12_1_0 } }),	-- Blightswarmer
 		i(238377),	-- Blood Hunter
 		i(241147),	-- Blood Hunter Lure
 		i(243342),	-- Bloom Bauble
 		i(238369),	-- Bloomtail Minnow
+		i(274591, { ["timeline"] = { ADDED_12_1_0 } }),	-- Coiled Stargorger
+		i(241151, { ["timeline"] = { ADDED_12_1_0 } }),	-- Coiled Stargorger Lure
 		i(238489),	-- Definitely Not a Rock
+		i(274592, { ["timeline"] = { ADDED_12_1_0 } }),	-- Dirty Darter
 		i(262787),	-- Dredged Journal Entry
 		i(238383),	-- Eversong Trout
+		i(279210, { ["timeline"] = { ADDED_12_1_0 } }),	-- Explosive Tlhapi
 		i(238375),	-- Fungalskin Pike
+		i(279093, { ["timeline"] = { ADDED_12_1_0 } }),	-- Giggling Skull
 		i(238382),	-- Gore Guppy
+		i(279094, { ["timeline"] = { ADDED_12_1_0 } }),	-- Grotesque Sturgeon
 		i(238381),	-- Hollow Grouper
 		i(263938),	-- Idol of Peril (QS!)
+		i(279106, { ["timeline"] = { ADDED_12_1_0 } }),	-- Loathsome Anglerfish
 		i(238376),	-- Lucky Loa
 		i(238366),	-- Lynxfish
+		i(279100, { ["timeline"] = { ADDED_12_1_0 } }),	-- Many-Eyed Flounder
 		i(238380),	-- Null Voidfish
 		i(238373),	-- Ominous Octopus
 		i(241149),	-- Ominous Octopus Lure
-		i(262651, {["timeline"] = {ADDED_12_0_5}}),	-- Pointed Spikesnail
+		i(279091, { ["timeline"] = { ADDED_12_1_0 } }),	-- Oozing Goby
+		i(262651, { ["timeline"] = { ADDED_12_0_5 } }),	-- Pointed Spikesnail
+		i(274594, { ["timeline"] = { ADDED_12_1_0 } }),	-- Polluted Puffer
+		i(278848, { ["timeline"] = { ADDED_12_1_0 } }),	-- Pustulent Blightswarmer
 		i(238372),	-- Restored Songfish
 		i(238367),	-- Root Crab
 		i(238378),	-- Shimmersiren
 		i(238370),	-- Shimmer Spinefish
 		i(238365),	-- Sin'dorei Swarmer
+		i(274587, { ["timeline"] = { ADDED_12_1_0 } }),	-- Spotted Killifish
+		i(274590, { ["timeline"] = { ADDED_12_1_0 } }),	-- Sulfurous Sludgefish
 		i(238384),	-- Sunwell Fish
 		i(238374),	-- Tender Lumifin
+		i(275013, { ["timeline"] = { ADDED_12_1_0 } }),	-- Tokka's Multi-Ward
+		i(274588, { ["timeline"] = { ADDED_12_1_0 } }),	-- Toxic Tlhapi
+		i(279105, { ["timeline"] = { ADDED_12_1_0 } }),	-- Twin-Headed Snipefish
 		i(238368),	-- Twisted Tetra
+		i(274589, { ["timeline"] = { ADDED_12_1_0 } }),	-- Ula'tek Snakehead
+		i(277821, { ["timeline"] = { ADDED_12_1_0 } }),	-- Ula'tek Snakehead Lure
 		i(238379),	-- Warping Wise
-		i(262650, {["timeline"] = {ADDED_12_0_5}}),	-- Writhing Wiggleworm
+		i(262650, { ["timeline"] = { ADDED_12_0_5 } }),	-- Writhing Wiggleworm
 	}),
 	prof(HERBALISM, {
 		n(DISCOVERY, {
 			r_withQuest(1223138, 87747),	-- Argentleaf
 			r_withQuest(1223137, 87741),	-- Azeroot
+			r_withQuest(1301647, 97233, ADDED_12_1_0),	-- Cursed Argentleaf
+			r_withQuest(1301649, 97232, ADDED_12_1_0),	-- Cursed Azeroot
+			r_withQuest(1301651, 97230, ADDED_12_1_0),	-- Cursed Mana Lily
+			r_withQuest(1301654, 97231, ADDED_12_1_0),	-- Cursed Sanguithorn
+			r_withQuest(1301655, 97229, ADDED_12_1_0),	-- Cursed Tranquility Bloom
 			r_withQuest(1224882, 87749),	-- Lightfused Argentleaf
 			r_withQuest(1224885, 87743),	-- Lightfused Azeroot
 			r_withQuest(1224884, 87755),	-- Lightfused Mana Lily
@@ -1191,6 +1294,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			r_withQuest(1223151, 87736),	-- Lush Sanguithorn
 			r_withQuest(1223148, 87730),	-- Lush Tranquility Bloom
 			r_withQuest(1223139, 87753),	-- Mana Lily
+			r(1301657, {["timeline"] = { ADDED_12_1_0 }}),	-- Overload Cursed Herb
 			r(1225128),	-- Overload Lightfused Herb
 			r(1225137),	-- Overload Primal Herb
 			r(1225144),	-- Overload Voidbound Herb
@@ -1253,6 +1357,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			}),
 		}),
 		n(DECOR, {
+			i(280757, {["timeline"] = { ADDED_12_1_0 }}),	-- Chiseled Amani Tablet (DECOR!)
 			i(262464),	-- Floating Void-Touched Tome (DECOR!)
 			i(262597),	-- Gilded Eversong Book (DECOR!)
 			i(253508),	-- Harandar Signpost (DECOR!)
@@ -1265,6 +1370,7 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(262615),	-- Sin'dorei Phoenix Quill (DECOR!)
 			i(262612),	-- Sturdy Ren'dorei Cask (DECOR!)
 			i(262601),	-- Wild Hanging Scroll (DECOR!)
+			i(280752, {["timeline"] = { ADDED_12_1_0 }}),	-- "Cursed Gaze of Ula'tek" Mural (DECOR!)
 		}),
 		n(FIRST_CRAFTS_HEADER, sharedData({
 			["requireSkill"] = INSCRIPTION,
@@ -1365,6 +1471,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(245800),	-- Contract: The Silvermoon Court++
 			i(245793),	-- Contract: The Singularity+
 			i(245794),	-- Contract: The Singularity++
+			i(277968, {["timeline"] = { ADDED_12_1_0 }}),	-- Contract: Zul'jarra's Forces+
+			i(277969, {["timeline"] = { ADDED_12_1_0 }}),	-- Contract: Zul'jarra's Forces++
 			i(245755, {	-- Thalassian Treatise on Alchemy
 				["questID"] = 95127,
 				["isWeekly"] = true,
@@ -1422,6 +1530,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			}),
 			i(245879),	-- Vantus Rune: Radiant+
 			i(245880),	-- Vantus Rune: Radiant++
+			i(272194, {["timeline"] = { ADDED_12_1_0 }}),	-- Vantus Rune: Tides+
+			i(272195, {["timeline"] = { ADDED_12_1_0 }}),	-- Vantus Rune: Tides++
 			i(245856),	-- Ace of Blood
 			i(245857),	-- Two of Blood
 			i(245858),	-- Three of Blood
@@ -1557,8 +1667,11 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		n(DECOR, {
 			i(262471),	-- Bejeweled Sin'dorei Lyre (DECOR!)
 			i(262469),	-- Brilliant Phoenix Harp (DECOR!)
+			i(279356, {["timeline"] = { ADDED_12_1_0 }}),	-- Opalescent Amani Peridot (DECOR!)
+			i(279343, {["timeline"] = { ADDED_12_1_0 }}),	-- Piercing Amani Lapis (DECOR!)
 			i(262613),	-- Replica Haranir Mural (DECOR!)
 			i(248965),	-- Resplendent Highborne Statue (DECOR!)
+			i(280762, {["timeline"] = { ADDED_12_1_0 }}),	-- Roaring Amani Garnet (DECOR!)
 			i(262454),	-- Shining Sin'dorei Hourglass (DECOR!)
 			i(262461),	-- Tenebrous Ren'dorei Armillary (DECOR!)
 		}),
@@ -1880,11 +1993,15 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		}),
 		n(DECOR, {
 			i(262449),	-- Embossed Sin'dorei Fur Rug (DECOR!)
+			i(266170, {["timeline"] = { ADDED_12_1_0 }}),	-- Flat Snakeskin Canopy (DECOR!)
+			i(279371, {["timeline"] = { ADDED_12_1_0 }}),	-- Flat Snakeskin Canopy (DECOR!)
 			i(265791),	-- Haranir Canopy Bed (DECOR!)
 			i(253457),	-- Leather-Bound Haranir Wall Shelf (DECOR!)
+			i(279348, {["timeline"] = { ADDED_12_1_0 }}),	-- Mounted Moby (DECOR!)
 			i(264244),	-- Plush Haranir Leather Pillow (DECOR!)
 			i(262589),	-- Simple Haranir Table (DECOR!)
 			i(262600),	-- Stitched Haranir Rug (DECOR!)
+			i(279346, {["timeline"] = { ADDED_12_1_0 }}),	-- Stretched Snakeskin Rack (DECOR!)
 			i(243090),	-- Sturdy Haranir Chair (DECOR!)
 		}),
 		n(FIRST_CRAFTS_HEADER, sharedData({
@@ -2047,9 +2164,13 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 		n(DISCOVERY, {
 			r_withQuest(1225348, 88471),	-- Brilliant Silver
 			r_withQuest(1225357, 88466),	-- Brilliant Silver Seam
+			r_withQuest(1301486, 97228, ADDED_12_1_0),	-- Cursed Brilliant Silver
+			r_withQuest(1301492, 97226, ADDED_12_1_0),	-- Cursed Refulgent Copper
+			r_withQuest(1301494, 97227, ADDED_12_1_0),	-- Cursed Umbral Tin
 			r_withQuest(1225359, 88484),	-- Lightfused Brilliant Silver
 			r_withQuest(1225351, 88487),	-- Lightfused Refulgent Copper
 			r_withQuest(1225367, 88488),	-- Lightfused Umbral Tin
+			r(1301495, {["timeline"] = { ADDED_12_1_0 }}),	-- Overload Cursed Deposits
 			r(1225818),	-- Overload Lightfused Deposits
 			r(1225817),	-- Overload Primal Deposits
 			r(1225820),	-- Overload Voidbound Deposits
@@ -2183,6 +2304,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(262591),	-- Luxurious Silvermoon Lounge Cushion (DECOR!)
 			i(262592),	-- Plush Silvermoon Bed (DECOR!)
 			i(262599),	-- Silvermoon Curtains (DECOR!)
+			i(279353, {["timeline"] = { ADDED_12_1_0 }}),	-- Tortollan Slingsack (DECOR!)
+			i(279350, {["timeline"] = { ADDED_12_1_0 }}),	-- Twilight's Blade Bedroll (DECOR!)
 			i(262611),	-- Voidstrider Saddlebag (DECOR!)
 		}),
 		n(FIRST_CRAFTS_HEADER, sharedData({
@@ -2303,6 +2426,8 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			i(239701),	-- Bright Linen Bolt++
 			i(239702),	-- Imbued Bright Linen Bolt+
 			i(239703),	-- Imbued Bright Linen Bolt++
+			i(270898, {["timeline"] = { ADDED_12_1_0 }}),	-- Snakeskin Lining+
+			i(270899, {["timeline"] = { ADDED_12_1_0 }}),	-- Snakeskin Lining++
 			i(239201),	-- Sunfire Silk Bolt+
 			i(239202),	-- Sunfire Silk Bolt++
 			i(240164),	-- Sunfire Silk Lining+
@@ -2331,10 +2456,15 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, bubbleDownSelf({ ["time
 			q(93631, name(HEADERS.NPC, 250582)),	-- Skinning Bloated Snapdragon
 			q(95459, name(HEADERS.NPC, 256770)),	-- Skinning Bilemaw the Gluttonous
 			q(93638, name(HEADERS.NPC, 249844)),	-- Skinning Chironex
+			q(97385, name(HEADERS.NPC, 257906), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Coin-Eye Skully
 			q(93633, name(HEADERS.NPC, 255348)),	-- Skinning Dame Bloodshed
+			q(97415, name(HEADERS.NPC, 261142), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Destra
 			q(88545, name(HEADERS.NPC, 245688)),	-- Skinning Gloomclaw
 			q(95517, name(HEADERS.NPC, 249849)),	-- Skinning Ha'kalawe
 			q(93632, name(HEADERS.NPC, 246633)),	-- Skinning Harried Hawkstrider
+			q(97417, name(HEADERS.NPC, 265262), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Hisstara <The Raiser>
+			q(97419, name(HEADERS.NPC, 265237), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Lockjaw <The Snapper>
+			q(98365, name(HEADERS.NPC, 255088), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Looming Mutagenitor
 			q(88531, name(HEADERS.NPC, 245690)),	-- Skinning Lumenfin
 			q(88524, name(HEADERS.NPC, 247101)),	-- Skinning Netherscythe
 			q(93634, name(HEADERS.NPC, 242032)),	-- Skinning Oophaga
@@ -2345,8 +2475,12 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, bubbleDownSelf({ ["time
 			q(95519, name(HEADERS.NPC, 248741)),	-- Skinning Rhazul
 			q(95515, name(HEADERS.NPC, 256922)),	-- Skinning Screammaxa the Matriarch
 			q(95518, name(HEADERS.NPC, 250180)),	-- Skinning Serrasa
+			q(97437, name(HEADERS.NPC, 268049), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Siltmouth
 			q(88526, name(HEADERS.NPC, 245699)),	-- Skinning Silverscale
 			q(95470, name(HEADERS.NPC, 242031)),	-- Skinning Spinefrill
+			q(98368, name(HEADERS.NPC, 258254), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Ss'akrithos <The Boundless Ophidian>
+			q(97416, name(HEADERS.NPC, 261109), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Sss'alik
+			q(98363, name(HEADERS.NPC, 263456), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Szarith The Fanged
 			q(95446, name(HEADERS.NPC, 250876)),	-- Skinning Terrinor
 			q(93637, name(HEADERS.NPC, 242033)),	-- Skinning Tiny Vermin
 			q(93639, name(HEADERS.NPC, 238498)),	-- Skinning Territorial Voidscythe
@@ -2354,6 +2488,7 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, bubbleDownSelf({ ["time
 			q(95471, name(HEADERS.NPC, 242035)),	-- Skinning The Devouring Invader
 			q(93636, name(HEADERS.NPC, 242024)),	-- Skinning The Snapping Scourge
 			q(88532, name(HEADERS.NPC, 247096)),	-- Skinning Umbrafang
+			q(98364, name(HEADERS.NPC, 255927), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Venom Lancer Ori'kassi / (triggered from Malformed Leviathan for me)
 		})),
 		prof(TAILORING, {
 			q(89422),	-- 0/20 Arcanoweave Expertise

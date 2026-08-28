@@ -1,6 +1,6 @@
-﻿if not (not C_Seasons or C_Seasons.GetActiveSeason() ~= 2) then return; end
+﻿if not (not C_Seasons or C_Seasons.GetActiveSeason() ~= 2) then return end
 ---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,cat,crit,faction,h,i,n,o,p,prof,q,qo,r,s,toy=_.CreateAchievement,_.CreateCategory,_.CreateAchievementCriteria,_.CreateFaction,_.CreateCustomHeader,_.CreateItem,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfession,_.CreateQuest,_.CreateQuestObjective,_.CreateRecipe,_.CreateItemSource,_.CreateToy;
 categories.Holidays=
@@ -53,12 +53,11 @@ qo(1,{coords={
 [1453]={{54.4,65.8}}},crs={14481},e=13,providers={{"i",7228}}})}}),
 q(915,{awp=10400,e=13,isYearly=1,lvl=10,maps={1454},providers={{"i",18597},{"n",14444}},r=1,rwp=40001,sourceQuests={910,911,1800},g={
 qo(1,{coords={
-[1454]={{52.6,69.6}}},crs={14480},e=13,providers={{"i",7228}}})}})}}),
-h(-58,{e=13})}}),
+[1454]={{52.6,69.6}}},crs={14480},e=13,providers={{"i",7228}}})}})}})}}),
 h(-37,{e=1,maps={1412,1429},g={
 h(-31,{e=1,g={
-faction(909,{e=1,icon=_.asset("Event_dmf"),OnTooltip=function(t,tooltipInfo)local reputation=t.reputation;if reputation<42000 then	local addRepInfo=_.Modules.FactionData.AddReputationTooltipInfo;local repPerTierTurnIn=100;local tierOneMaxRep=500;if reputation<tierOneMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 1 Quests",repPerTierTurnIn,tierOneMaxRep);else	local tierTwoMaxRep=1050;if reputation<tierTwoMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 2 Quests",repPerTierTurnIn,tierTwoMaxRep);else	local tierThreeMaxRep=1700;if reputation<tierThreeMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 3 Quests",repPerTierTurnIn,tierThreeMaxRep);else	local tierFourMaxRep=2500;if reputation<tierFourMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 4 Quests",repPerTierTurnIn,tierFourMaxRep);else	local tierFiveMaxRep=5001;if reputation<tierFiveMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 5 Quests",repPerTierTurnIn,tierFiveMaxRep);end	end	end	end	end	local repPerDeckTurnIn=150;addRepInfo(tooltipInfo,reputation,"Turn in Decks.",repPerDeckTurnIn,42000);end	end,g={
-crit(8823,{achID=2336,id=1,u=13})}})}}),
+faction(909,{e=1,icon=_.asset("Event_dmf"),OnTooltip=function(t,tooltipInfo)local reputation=t.reputation if reputation<42000 then	local addRepInfo=_.Modules.FactionData.AddReputationTooltipInfo local repPerTierTurnIn=100 local tierOneMaxRep=500 if reputation<tierOneMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 1 Quests",repPerTierTurnIn,tierOneMaxRep)else	local tierTwoMaxRep=1050 if reputation<tierTwoMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 2 Quests",repPerTierTurnIn,tierTwoMaxRep)else	local tierThreeMaxRep=1700 if reputation<tierThreeMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 3 Quests",repPerTierTurnIn,tierThreeMaxRep)else	local tierFourMaxRep=2500 if reputation<tierFourMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 4 Quests",repPerTierTurnIn,tierFourMaxRep)else	local tierFiveMaxRep=5001 if reputation<tierFiveMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 5 Quests",repPerTierTurnIn,tierFiveMaxRep)end	end	end	end	end	local repPerDeckTurnIn=150 addRepInfo(tooltipInfo,reputation,"Turn in Decks.",repPerDeckTurnIn,42000)end	end,g={
+crit(8823,{achID=2336,id=8,u=13})}})}}),
 h(-45,{e=1,g={
 q(7930,{coords={
 [1412]={{37.3,37.7}},
@@ -274,7 +273,6 @@ i(19451,{b=1,e=1,q=1}),
 i(19452,{b=1,e=1,lvl=10,q=1}),
 i(19453,{b=1,e=1,q=1}),
 i(19454,{b=1,e=1,q=1})}})}}),
-h(-56,{e=1}),
 h(-58,{e=1,g={
 n(14860,{coords={
 [1412]={{36.4,36},{37.6,39.6}},
@@ -315,10 +313,9 @@ i(19267,{cost={{"i",19275,1},{"i",19274,1},{"i",19273,1},{"i",19272,1},{"i",1927
 i(19277,{cost={{"i",19284,1},{"i",19283,1},{"i",19282,1},{"i",19281,1},{"i",19280,1},{"i",19279,1},{"i",19278,1},{"i",19276,1}},e=1,q=4,u=13}),
 i(19257,{cost={{"i",19265,1},{"i",19264,1},{"i",19263,1},{"i",19262,1},{"i",19261,1},{"i",19260,1},{"i",19259,1},{"i",19258,1}},e=1,q=4,u=13})}})}}),
 h(-574,{e=14,g={
-h(-12,{e=14}),
 h(-19,{e=14,g={
-s(164648,21525,{b=1,crs={1853,10899,11486},e=14,f=2,filterForRWP=2,maps={234,250,251,252,253,254,255,476},q=2}),
-s(164647,21524,{b=1,crs={9019,9237,10997},e=14,f=2,filterForRWP=2,maps={242,250,251,252,253,254,255,317},q=2})}}),
+s(164648,21525,{b=1,crs={1853,10899,11486},e=14,f=2,filterForRWP=2,loc=40,maps={234,250,251,252,253,254,255,476},q=2}),
+s(164647,21524,{b=1,crs={9019,9237,10997},e=14,f=2,filterForRWP=2,loc=40,maps={242,250,251,252,253,254,255,317},q=2})}}),
 h(-39,{description="These recipes are mailed to characters with the corresponding profession(s) at the start of the event.",e=14,g={
 r(21945,{e=14,itemID=17724,learnedAt=190,q=1,requireSkill=197}),
 toy(17712,{b=1,description="Greatfather Winter will mail this to you 24 hours after you complete the 'A Smokywood Pastures Thank You!' quest.",e=14,q=1,sourceQuests={6984,7045}})}}),
@@ -550,23 +547,22 @@ i(20397,{b=1,e=16,f=55,q=1}),
 i(20413,{b=1,e=16,f=55,q=1}),
 i(20411,{b=1,e=16,f=55,q=1}),
 i(20414,{b=1,e=16,f=55,q=1}),
-i(20562,{b=1,e=16,f=55,q=1}),
-i(20561,{b=1,e=16,f=55,q=1}),
-i(20392,{b=1,e=16,f=55,q=1}),
-i(20391,{b=1,e=16,f=55,q=1}),
-i(20565,{b=1,e=16,f=55,q=1}),
-i(20566,{b=1,e=16,f=55,q=1}),
-i(20563,{b=1,e=16,f=55,q=1}),
-i(20564,{b=1,e=16,f=55,q=1}),
-i(20569,{b=1,e=16,f=55,q=1}),
-i(20570,{b=1,e=16,f=55,q=1}),
-i(20571,{b=1,e=16,f=55,q=1}),
-i(20572,{b=1,e=16,f=55,q=1}),
-i(20567,{b=1,e=16,f=55,q=1}),
-i(20568,{b=1,e=16,f=55,q=1}),
-i(20574,{b=1,e=16,f=55,q=1}),
-i(20573,{b=1,e=16,f=55,q=1})}}),
-h(-56,{e=16}),
+i(20562,{b=1,e=16,f=55,loc=40,q=1}),
+i(20561,{b=1,e=16,f=55,loc=40,q=1}),
+i(20392,{b=1,e=16,f=55,loc=40,q=1}),
+i(20391,{b=1,e=16,f=55,loc=40,q=1}),
+i(20565,{b=1,e=16,f=55,loc=40,q=1}),
+i(20566,{b=1,e=16,f=55,loc=40,q=1}),
+i(20563,{b=1,e=16,f=55,loc=40,q=1}),
+i(20564,{b=1,e=16,f=55,loc=40,q=1}),
+i(20569,{b=1,e=16,f=55,loc=40,q=1}),
+i(20570,{b=1,e=16,f=55,loc=40,q=1}),
+i(20571,{b=1,e=16,f=55,loc=40,q=1}),
+i(20572,{b=1,e=16,f=55,loc=40,q=1}),
+i(20567,{b=1,e=16,f=55,loc=40,q=1}),
+i(20568,{b=1,e=16,f=55,loc=40,q=1}),
+i(20574,{b=1,e=16,f=55,loc=40,q=1}),
+i(20573,{b=1,e=16,f=55,loc=40,q=1})}}),
 h(-63,{e=16,g={
 i(20400,{b=1,e=16,f=113,q=2})}})}}),
 h(-577,{e=17,g={
@@ -601,12 +597,12 @@ s(164851,22206,{b=1,crs={8929,10811,10901,11488},e=9,f=1,maps={234,242,317,476},
 h(-45,{e=9,g={
 q(9029,{coords={
 [1416]={{89.3,75.1}}},e=9,isYearly=1,providers={{"o",181073}},rwp=30300,sourceQuests={8984,9028},g={
-s(164887,22281,{b=1,e=9,f=2,q=1}),
-s(164888,22282,{b=1,e=9,f=2,q=1}),
-s(164883,22277,{b=1,e=9,f=2,q=1}),
-s(164884,22278,{b=1,e=9,f=2,q=1}),
-s(164886,22280,{b=1,e=9,f=2,q=1}),
-s(164882,22276,{b=1,e=9,f=2,q=1})}}),
+s(164887,22281,{b=1,e=9,f=2,loc=42,q=1}),
+s(164888,22282,{b=1,e=9,f=2,loc=42,q=1}),
+s(164883,22277,{b=1,e=9,f=2,loc=42,q=1}),
+s(164884,22278,{b=1,e=9,f=2,loc=42,q=1}),
+s(164886,22280,{b=1,e=9,f=2,loc=42,q=1}),
+s(164882,22276,{b=1,e=9,f=2,loc=42,q=1})}}),
 q(9024,{coords={
 [1453]={{54.6,65.6}}},e=9,isYearly=1,qgs={16105},r=2,rwp=30300,sourceQuests={8903},g={
 qo(1,{e=9,providers={{"i",21833}}}),
@@ -686,7 +682,7 @@ i(22239,{b=1,e=9,f=55,q=1}),
 i(22238,{b=1,e=9,f=55,q=1})}}),
 i(22218,{e=9,f=55,q=1}),
 i(22261,{e=9,q=1}),
-s(164885,22279,{e=9,f=2,q=1,rwp=70205}),
+s(164885,22279,{e=9,f=2,loc=42,q=1,rwp=70205}),
 i(22200,{b=1,e=9,q=1}),
 p(122,{b=1,e=9,itemID=22235,petTypeID=1,q=1,spellID=27570}),
 i(22259,{b=1,e=9,f=55,q=1,rwp=30302})}}),
@@ -770,15 +766,15 @@ q(8863,{coords={
 i(21537,{b=1,e=18,f=55,q=1})}}),
 q(8864,{coords={
 [1450]={{53.6,35.3}}},cost={{"i",21100,5}},e=18,qgs={15864},repeatable=1,rwp=30008,g={
-s(164469,21157,{b=1,e=18,f=2,q=1}),
-s(164652,21538,{b=1,e=18,f=2,q=1}),
-s(164653,21539,{b=1,e=18,f=2,q=1}),
+s(164469,21157,{b=1,e=18,f=2,loc=42,q=1}),
+s(164652,21538,{b=1,e=18,f=2,loc=42,q=1}),
+s(164653,21539,{b=1,e=18,f=2,loc=42,q=1}),
 i(21640,{b=1,e=18,q=1})}}),
 q(8865,{coords={
 [1450]={{53.6,35.3}}},cost={{"i",21100,5}},e=18,isYearly=1,qgs={15864},rwp=30008,g={
-s(164654,21541,{b=1,e=18,f=2,q=1}),
-s(164657,21544,{b=1,e=18,f=2,q=1}),
-s(164656,21543,{b=1,e=18,f=2,q=1}),
+s(164654,21541,{b=1,e=18,f=2,loc=42,q=1}),
+s(164657,21544,{b=1,e=18,f=2,loc=42,q=1}),
+s(164656,21543,{b=1,e=18,f=2,loc=42,q=1}),
 i(21640,{b=1,e=18,q=1})}}),
 q(8878,{coords={
 [1450]={{53.8,35.3}}},cost={{"i",21100,5}},e=18,lvl=50,qgs={15909},repeatable=1,rwp=30008,g={
@@ -1068,12 +1064,12 @@ q(9365,{coords={
 [1438]={{56.6,92.3}},
 [1453]={{38.5,61.1}},
 [1455]={{63.6,24.7}}},e=11,isYearly=1,lvl=50,qgs={16817},r=2,sourceQuests={9324,9325,9326},g={
-s(165275,23323,{b=1,e=11,f=4,filterForRWP=2,q=1})}}),
+s(165275,23323,{b=1,e=11,f=4,filterForRWP=2,loc=40,q=1})}}),
 q(9339,{coords={
 [1454]={{46.8,38}},
 [1456]={{21.3,26.4}},
 [1458]={{67.6,8.3}}},e=11,isYearly=1,lvl=50,qgs={16818},r=1,sourceQuests={9330,9331,9332},g={
-s(165275,23323,{b=1,e=11,f=4,filterForRWP=2,q=1})}}),
+s(165275,23323,{b=1,e=11,f=4,filterForRWP=2,loc=40,q=1})}}),
 q(9389,{coords={
 [1438]={{56.6,92.3}},
 [1453]={{38.5,61.1}},
@@ -1210,17 +1206,8 @@ qo(3,{coords={
 [1425]={{62.2,53.5}}},e=11}),
 qo(4,{coords={
 [1427]={{33,73.5}}},e=11}),
-s(165276,23324,{b=1,e=11,f=4,q=1}),
-i(23247,{e=11,q=1})}})}}),
-h(-58,{e=11})}}),
-h(-583,{e=15,g={
-o(113768,{description="These eggs can be found spread out in all of the starting zones.",e=15,maps={1411,1412,1420,1426,1429,1438},g={
-s(163749,19028,{e=15,f=2,q=1,rwp=70205}),
-s(158706,6835,{e=15,f=4,filterForRWP=2,q=1,rwp=70205}),
-s(158704,6833,{e=15,f=10,filterForRWP=2,q=1}),
-i(7807,{e=15,f=55,q=1}),
-i(7808,{e=15,f=55,q=1}),
-i(7806,{e=15,f=55,q=1})}})}}),
+s(165276,23324,{b=1,e=11,f=4,loc=41,q=1}),
+i(23247,{e=11,q=1})}})}})}}),
 h(-586,{e=133889,maps={1425,1434,1444,1446,1447},g={
 i(13756,{description="Can be caught in open sea water in Azshara, Tanaris, The Hinterlands, Feralas, and STV from 20th March to 22nd September.",e=133889,f=55,lvl=35,q=1})}}),
 h(-587,{e=133899,maps={1425,1434,1444,1446,1447},g={
@@ -1245,18 +1232,18 @@ i(19979,{b=1,e=6,f=53,q=3}),
 crit(406,{achID=306,e=6,id=1})}}),
 q(8225,{coords={
 [1434]={{27.4,76.9}}},cost={{"i",19803,1}},e=6,qgs={15079},repeatable=1,requireSkill=356,g={
-s(164088,19969,{b=1,e=6,f=4,q=2,requireSkill=356})}}),
+s(164088,19969,{b=1,e=6,f=4,loc=47,q=2,requireSkill=356})}}),
 q(8224,{coords={
 [1434]={{27.4,76.9}}},cost={{"i",19806,1}},e=6,qgs={15079},repeatable=1,requireSkill=356,g={
 i(19971,{b=1,e=6,q=2,requireSkill=356})}}),
 q(8221,{coords={
 [1434]={{27.4,76.9}}},cost={{"i",19805,1}},e=6,qgs={15079},repeatable=1,requireSkill=356,g={
-s(164090,19972,{b=1,e=6,f=4,q=2,requireSkill=356})}})}}),
+s(164090,19972,{b=1,e=6,f=4,loc=40,q=2,requireSkill=356})}})}}),
 prof(356,{e=6,g={
 o(180248,{e=6,g={
 i(19803,{b=1,e=6,q=2}),
 i(19806,{b=1,e=6,q=2}),
 i(19805,{b=1,e=6,q=2}),
 s(163999,19808,{e=6,f=23,lvl=40,q=2}),
-i(19807,{b=1,e=6,q=1})}})}})}})}});
-end);
+i(19807,{b=1,e=6,q=1})}})}})}})}})
+end)

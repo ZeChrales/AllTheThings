@@ -390,7 +390,7 @@ i(0, 1250356);		-- Rich Desolate Deposit
 ------------------
 -- PATCH 12.0.1 --
 ------------------
-i(0, 471013);   	-- Midnight Mining
+i(0, 471013);		-- Midnight Mining
 i(0, 1265815);		-- Artisan Miner's Moxie
 i(0, 1285705);		-- Dazzling Thorium
 i(0, 1265729);		-- Deftness
@@ -428,3 +428,11 @@ i(0, 1225353);		-- Wild Refulgent Copper
 i(0, 1225368);		-- Wild Umbral Tin
 --- SPECIALIZATION ---
 i(0, 1225392);		-- Overload Infused Deposit
+
+------------------
+-- PATCH 12.1.0 --
+------------------
+i(0, 1301486);		-- Cursed Brilliant Silver
+i(0, 1301492);		-- Cursed Refulgent Copper
+i(0, 1301494);		-- Cursed Umbral Tin
+i(0, 1301495);		-- Overload Cursed Deposits

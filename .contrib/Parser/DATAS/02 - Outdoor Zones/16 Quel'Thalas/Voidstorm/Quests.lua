@@ -1634,54 +1634,55 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				["sourceQuests"] = { 94625 },	-- An Elementary Voidcore (TODO: unsure if weekly is good questID as source)
 				["provider"] = { "n", 243907 },	-- Decimus
 				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
+				["timeline"] = { REMOVED_12_1_0 },
 			}),
 			q(95268, {	-- New Tools, New Heights
 				["sourceQuests"] = { 94675 },	-- Voidforge Reforged
 				["provider"] = { "n", 243907 },	-- Decimus
 				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
-				["timeline"] = { ADDED_12_0_5 },
+				["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 },
 				["groups"] = { i(269668) },	-- Hungering Oblivium (QI!)
 			}),
 			q(95373, {	-- A Nebulous Endeavour
 				["sourceQuests"] = { 94675 },	-- Voidforge Reforged
 				["provider"] = { "n", 243907 },	-- Decimus
 				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
-				["timeline"] = { ADDED_12_0_5 },
+				["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 },
 				["repeatable"] = true,
 			}),
 			q(95279, {	-- Nebulous Voidcores: Gold
 				["sourceQuests"] = { 95373 },	-- A Nebulous Endeavour
 				["provider"] = { "n", 243907 },	-- Decimus
 				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
-				["timeline"] = { ADDED_12_0_5 },
+				["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 },
 				["repeatable"] = true,
 			}),
 			q(95290, {	-- Nebulous Voidcores: Voidlight Marl
 				["sourceQuests"] = { 95373 },	-- A Nebulous Endeavour
 				["provider"] = { "n", 243907 },	-- Decimus
 				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
-				["timeline"] = { ADDED_12_0_5 },
+				["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 },
 				["repeatable"] = true,
 			}),
 			q(95304, {	-- Nebulous Voidcores: Veteran Dawncrest
 				["sourceQuests"] = { 95373 },	-- A Nebulous Endeavour
 				["provider"] = { "n", 243907 },	-- Decimus
 				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
-				["timeline"] = { ADDED_12_0_5 },
+				["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 },
 				["repeatable"] = true,
 			}),
 			q(95269, {	-- Feeding the Nilhammer
 				["sourceQuests"] = { 95268 },	-- New Tools, New Heights
 				["provider"] = { "n", 243907 },	-- Decimus
 				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
-				["timeline"] = { ADDED_12_0_5 },
+				["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 },
 				["isWeekly"] = true,
 				["groups"] = { i(269668) },	-- Hungering Oblivium (QI!)
 			}),
 			q(95271, {	-- The Ascendant Nilhammer
 				["provider"] = { "n", 243907 },	-- Decimus
 				["coord"] = { 51.2, 68.4, MAP.MIDNIGHT.VOIDSTORM },
-				["timeline"] = { ADDED_12_0_5 },
+				["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 },
 				["groups"] = { i(268650) },	-- Ascendant Voidshard
 			}),
 		}),

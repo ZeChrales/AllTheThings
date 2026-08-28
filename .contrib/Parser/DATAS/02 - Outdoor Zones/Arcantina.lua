@@ -83,6 +83,27 @@ root(ROOTS.Zones, m(ARCANTINA, {
 					i(253544),	-- Weathered History of the Warchiefs (DECOR!)
 				},
 			}),
+			q(95780, {	-- Hope for the Orhpans
+				["qg"] = 259335,	-- Vanessa VanCleef
+				["coord"] = { 60.2, 50.1, ARCANTINA },
+				["timeline"] = { ADDED_12_1_0 },
+				["groups"] = { i(278038) },	-- Arathor Toy Sword (DECOR!)
+			}),
+			q(95779, {	-- Moments in a Mug
+				["qg"] = 259343,	-- Chen Stormstout
+				["coord"] = { 43.2, 61.5, ARCANTINA },
+				["timeline"] = { ADDED_12_1_0 },
+				["groups"] = {
+					o_repeated({
+						i(275038),	-- Stormstout Ingredients (QI!)
+						o(667558),	-- Ingredients
+						o(654975),	-- Ingredients
+						o(667556),	-- Grain
+					}),
+					--
+					i(278694),	-- Stormstout Hanging Lantern (DECOR!)
+				},
+			}),
 			q(92320, {	-- Still Behind Enemy Portals
 				["provider"] = { "n", 250401 },	-- Marius Felbane
 				["coord"] = { 59.0, 78.0, ARCANTINA },
@@ -162,9 +183,8 @@ root(ROOTS.Zones, m(ARCANTINA, {
 			}),
 			h(q(90718, {	-- Request of the Arcantina
 				["sourceQuests"] = {
-					92520, -- Wake of the Darkwell
-					92319, -- A Favor to Axe
-					92322, -- Timear Foresees a Proof of Demise!
+					92520,	-- Wake of the Darkwell
+					92319,	-- A Favor to Axe
 				},
 				["qg"] = 240265,	-- Chief Telemancer Oculeth
 				["coord"] = { 47.4, 69.6, MAP.MIDNIGHT.SILVERMOON_CITY },
@@ -175,12 +195,12 @@ root(ROOTS.Zones, m(ARCANTINA, {
 			o(572030, {	-- Ebon Banner
 				["sourceQuest"] = 92321,	-- A Frostbitten Tally
 				["description"] = "On the left side of Lady Deathwhisper's room.",
-				["maps"] = { 186 },
+				["maps"] = { 186 },	-- Icecrown Citadel
 				["groups"] = { i(250873) },	-- Ebon Banner
 			}),
 			o(572033, {	-- Evergreen Vine
 				["sourceQuest"] = 92323,	-- Where the Fire Once Burned
-				["questID"] = 92379,	-- ??
+				["maps"] = { FIRELANDS },
 				["groups"] = { i(250876) },	-- Evergreen Vine
 			}),
 			o(572036, {	-- Heavy Anchor
@@ -205,6 +225,18 @@ root(ROOTS.Zones, m(ARCANTINA, {
 				["maps"] = { HELLFIRE_CITADEL_RAMPARTS },
 				["groups"] = { i(250872) },	-- Scarred Spear
 			}),
+			o(654977, {	-- Stormstout Brewery Lantern
+				["sourceQuest"] = 95779,	-- Moments in a Mug
+				["maps"] = { 441 },	-- Stormstout Brewery, Stormstout Brewhall
+				["timeline"] = { ADDED_12_1_0 },
+				["groups"] = { i(275047) },	-- Stormstout Brewery Lantern
+			}),
+			o(655007, {	-- Wooden Toy Sword
+				["coord"] = { 74.2, 53.0, SHATTRATH_CITY },
+				["sourceQuest"] = 95780,	-- Hope for the Orhpans
+				["timeline"] = { ADDED_12_1_0 },
+				["groups"] = { i(275054) },	-- Wooden Toy Sword
+			}),
 		}),
 		n(TREASURES, {	-- Highly Decorated placement Objects
 			o(572450, {	-- Ancient Zandalari Scroll
@@ -228,7 +260,7 @@ root(ROOTS.Zones, m(ARCANTINA, {
 				["coord"] = { 39.8, 49.7, ARCANTINA },
 			}),
 			o(572451, {	-- Evergreen Vine
-				["questID"] = 94976,	-- ??
+				["questID"] = 92379,
 				["cost"] = { { "i", 250876, 1 } },	-- Evergreen Vine
 				["coord"] = { 37.2, 29.5, ARCANTINA },
 			}),
@@ -252,14 +284,27 @@ root(ROOTS.Zones, m(ARCANTINA, {
 				["cost"] = { { "i", 250872, 1 } },	-- Scarred Spear
 				["coord"] = { 67.0, 52.8, ARCANTINA },
 			}),
+			o(654980, {	-- Stormstout Brewery Lantern
+				["questID"] = 95782,
+				["cost"] = { { "i", 275047, 1 } },	-- Stormstout Brewery Lantern
+				["coord"] = { 63.6, 45.0, ARCANTINA },
+				["timeline"] = { ADDED_12_1_0 },
+			}),
 			o(572454, {	-- Weathered Tome
 				["questID"] = 92381,
 				["cost"] = { { "i", 250878, 1 } },	-- Weathered Tome
 				["coord"] = { 62.1, 42.6, ARCANTINA },
 			}),
+			o(655006, {	-- Wooden Toy Sword
+				["questID"] = 95783,
+				["cost"] = { { "i", 275054, 1 } },	-- Wooden Toy Sword
+				["coord"] = { 56.5, 60.2, ARCANTINA },
+				["timeline"] = { ADDED_12_1_0 },
+			}),
 		}),
 		n(TREASURES, bubbleDownFiltered({
-			["isDaily"] = true
+			["isDaily"] = true,
+			["timeline"] = { REMOVED_12_1_0 },
 		},FILTERFUNC_questID,{
 			o_repeated({	-- Giant Growth Potion
 				i(6662),	-- Elixir of Giant Growth
@@ -275,9 +320,6 @@ root(ROOTS.Zones, m(ARCANTINA, {
 					["coord"] = { 18.4, 44.1, ARCANTINA },
 					["questID"] = 92351,
 				}),
-				-- o(614767, {	-- Giant Growth Potion
-				-- 	["coord"] = { 46.7, 61.5, ARCANTINA },
-				-- }),
 			}),
 			o_repeated({	-- Inky Black Potion
 				i(124640),	-- Inky Black Potion
@@ -293,9 +335,6 @@ root(ROOTS.Zones, m(ARCANTINA, {
 					["coord"] = { 36.7, 54.8, ARCANTINA },
 					["questID"] = 92354,
 				}),
-				-- o(614789, {	-- Inky Black Potion [Likely wrong ObjectID]
-				-- 	["coord"] = { 59.8, 60.1, ARCANTINA },
-				-- }),
 			}),
 			o_repeated({	-- Pygmy Oil
 				i(40195),	-- Pygmy Oil
@@ -311,9 +350,6 @@ root(ROOTS.Zones, m(ARCANTINA, {
 					["coord"] = { 74.8, 61.9, ARCANTINA },
 					["questID"] = 92357,
 				}),
-				-- o(553966, {	-- Pygmy Oil
-				-- 	["coord"] = { 33.7, 15.2, ARCANTINA },
-				-- }),
 			}),
 			o_repeated({	-- Reflecting Prism
 				i(112384),	-- Reflecting Prism
@@ -344,18 +380,6 @@ root(ROOTS.Zones, m(ARCANTINA, {
 					["coord"] = { 68.0, 52.2, ARCANTINA },
 					["questID"] = 92363,
 				}),
-				-- o(614803, {	-- Savory Deviate Delight
-				-- 	["coord"] = { 34.0, 28.3, ARCANTINA },
-				-- }),
-				-- o(614821, {	-- Savory Deviate Delight
-				-- 	["coord"] = { 69.4, 52.2, ARCANTINA },
-				-- }),
-				-- o(614822, {	-- Savory Deviate Delight
-				-- 	["coord"] = { 68.0, 52.2, ARCANTINA },
-				-- }),
-				-- o(627107, {	-- Savory Deviate Delight
-				-- 	["coord"] = { 68.0, 52.2, ARCANTINA },
-				-- }),
 			}),
 		})),
 		n(VENDORS, {
@@ -408,6 +432,10 @@ root(ROOTS.Zones, m(ARCANTINA, {
 					i(253176, {	-- Ancient Zandalari Ritual Scroll (DECOR!)
 						["cost"] = { { "c", VOIDLIGHT_MARL, 150 } },
 					}),
+					i(278038, {	-- Arathor Toy Sword (DECOR!)
+						["timeline"] = { ADDED_12_1_0 },
+						["cost"] = { { "c", VOIDLIGHT_MARL, 150 } },
+					}),
 					i(253598, {	-- Banner of the Ebon Blade (DECOR!)
 						["cost"] = { { "c", VOIDLIGHT_MARL, 500 } },
 					}),
@@ -438,6 +466,10 @@ root(ROOTS.Zones, m(ARCANTINA, {
 					}),
 					i(253542, {	-- Scarred Orcish Spear (DECOR!)
 						["cost"] = { { "c", VOIDLIGHT_MARL, 150 } },
+					}),
+					i(278694, {	-- Stormstout Hanging Lantern (DECOR!)
+						["cost"] = { { "c", VOIDLIGHT_MARL, 250 } },
+						["timeline"] = { ADDED_12_1_0 },
 					}),
 					i(253544, {	-- Weathered History of the Warchiefs (DECOR!)
 						["cost"] = { { "c", VOIDLIGHT_MARL, 150 } },

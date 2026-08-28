@@ -500,7 +500,7 @@ end
 -- For directly applying the full Update operation at the specified group, and propagating the difference upwards in the parent hierarchy,
 -- then triggering a delayed soft-update of the Window containing the group if any. 'got' indicates that this group was 'gotten'
 -- and was the cause for the update
-local function DirectGroupUpdate(group, got)
+local function DirectGroupUpdate(group)
 	-- DGU OnUpdate needs to run regardless of filtering
 	if group.DGUOnUpdate then
 		-- app.PrintDebug("DGU:OnUpdate",group.hash)
@@ -541,7 +541,7 @@ local function DirectGroupUpdate(group, got)
 			app.FillGroups(group)
 		end
 		-- app.PrintDebug("DGU:Update",app:SearchLink(group),">",DGUDelay,window.Suffix,window.Update,window.isQuestChain)
-		DelayedCallback(window.Update, DGUDelay, window, window.isQuestChain, got)
+		DelayedCallback(window.Update, DGUDelay, window, window.isQuestChain)
 		window:ToggleExtraFilters()
 	elseif group.DGU_Fill then
 		-- group wants to fill, but isn't yet in a window... so do a delayed DGU again
@@ -578,16 +578,16 @@ local function DirectGroupRefresh(group, immediate)
 			DelayedCallback(window.Update, DGUDelay, window)
 		end
 	else
-		-- app.PrintDebug("DGR:Refresh",group.hash,">",DGUDelay,"No window!")
+		-- app.PrintDebug("DGR:Refresh",group.hash,">",DGUDelay,"No window!",app:SearchLink(group),app.GenerateSourceHash(group))
 		-- app.PrintTable(group)
 		-- this scenario happens when the meta-group of a DLO used in /att list triggers a DGR on itself
 		-- due to it being completely detached from the actual 'list' window
 		-- perhaps this is niche enough of an occurrence that we can just try to refresh the 'list' window
 		-- in this situation
-		local window = app.Windows.list
-		if window then
-			DelayedCallback(window.Update, DGUDelay, window)
-		end
+		-- local window = app.Windows.List
+		-- if window and window:IsVisible() then
+		-- 	DelayedCallback(window.Update, DGUDelay, window)
+		-- end
 	end
 end
 app.DirectGroupRefresh = DirectGroupRefresh
@@ -638,14 +638,17 @@ local function UpdateSearchResults(searchResults, updateFunc)
 	local hashes = {}
 	local found = {}
 	local HandleEvent = app.HandleEvent
+	updateFunc = updateFunc or DirectGroupUpdate
 	-- Directly update the Source groups of the search results, and collect their hashes for updates in other windows
 	local result
 	for i=1,#searchResults do
 		result = searchResults[i]
 		hashes[result.hash] = true
 		found[#found + 1] = result
-		-- Make sure any update events are handled for this Thing
-		HandleEvent("OnSearchResultUpdate", result)
+		if updateFunc == DirectGroupUpdate then
+			-- Make sure any update events are handled for this Thing if it actually needs an Update
+			HandleEvent("OnSearchResultUpdate", result)
+		end
 	end
 
 	-- loop through visible ATT windows and collect matching groups
@@ -661,12 +664,13 @@ local function UpdateSearchResults(searchResults, updateFunc)
 
 	-- apply direct updates to all found groups
 	-- app.PrintDebug("Updating",#found,"groups")
-	updateFunc = updateFunc or DirectGroupUpdate
 	for i=1,#found do
 		updateFunc(found[i])
 	end
-	-- TODO: use event
-	app.WipeSearchCache()
+	if updateFunc == DirectGroupUpdate then
+		-- TODO: use event
+		app.WipeSearchCache()
+	end
 	-- app.PrintDebug("UpdateSearchResults Done",#searchResults,"=>",#found)
 end
 -- Pulls all cached fields for the field/id and passes the results into UpdateSearchResults
@@ -765,7 +769,7 @@ local SourceSpecificFields = {
 				check = phase.state or 0
 			else
 				-- otherwise it's an invalid unobtainable filter
-				app.report("Invalid Unobtainable Filter:",u)
+				app.report("Invalid Unobtainable Filter",u)
 				return
 			end
 			-- track the highest unobtainable value, which is the most obtainable (according to PHASES)
@@ -921,10 +925,6 @@ app.MergeProperties = MergeProperties
 -- TODO: this priority-based object creation will move to Classes/base.lua -- CloneClassInstance does not suffice in its current state
 local function CreateObject(t, rootOnly)
 	-- app.PrintDebug("CO",t);
-	-- Commented this part out because there aren't enough class definitions exposed to the logic yet
-	-- Retail class design is still wildin' and doesn't use the CreateClass functionality
-	--local object = app.CloneClassInstance(t, rootOnly);
-	--if object and getmetatable(object) then return object; end
 	if not t then return {}; end
 	-- already an object, so need to create a new instance of the same data
 	if t.key then
@@ -1111,8 +1111,9 @@ NestObjects = function(p, g, newCreate)
 	if pg then
 		MergeObjects(pg, g, newCreate);
 	elseif #g > 0 then
-		p.g = {};
-		MergeObjects(p.g, g, newCreate);
+		pg = {}
+		p.g = pg
+		MergeObjects(pg, g, newCreate);
 	end
 end
 -- Nests multiple Objects under another Object using an optional set of functions to determine priority on the adding of objects, only creating the 'g' group if necessary

@@ -5,13 +5,16 @@
 root(ROOTS.Zones, {
 	m(KUL_TIRAS, {
 		n(TREASURES, {
-			o_repeated(sharedData({	-- Small Treasure Chest
+			o_repeated(bubbleDownFiltered({	-- Small Treasure Chest
 				["isDaily"] = true,
-			},{
+			},FILTERFUNC_questID,{
 				-- Items
 				i(161207),	-- Admiral's Black Rum
+				i(163097),	-- Carved Rabbit Effigy
+				i(161209),	-- Coven Dream Catcher
 				i(163092),	-- Embroidered Falconry Hood
 				i(163091),	-- Jeweled Spyglass
+				i(161210),	-- Homemade Child's Doll
 				i(163096),	-- Lead-Glass Hand Mirror
 				i(161201),	-- Mermaid's Looking Glass
 				i(161204),	-- Oily Glass Eyeball
@@ -20,6 +23,7 @@ root(ROOTS.Zones, {
 				i(161203),	-- Shanty Sheet Music
 				i(161211),	-- Ship-in-a-Bottle
 				i(161199),	-- Silver-Plated Tankard
+				i(163093),	-- Witch's Ritual Chalk
 				-- Objects
 				o(291225, {	-- Small Treasure Chest
 					["questID"] = 51907,
@@ -32,6 +36,7 @@ root(ROOTS.Zones, {
 					["questID"] = 51911,
 					["coords"] = {
 						{ 25.5, 40.5, DRUSTVAR },
+						{ 25.6, 36.6, DRUSTVAR },
 					},
 				}),
 				o(291217, {	-- Small Treasure Chest
@@ -45,7 +50,29 @@ root(ROOTS.Zones, {
 					},
 				}),
 				o(291224, {	-- Small Treasure Chest
-					["coord"] = { 31.0, 17.1, DRUSTVAR },
+					["questID"] = 51902,
+					["coords"] = {
+						{ 31.0, 17.1, DRUSTVAR },
+						{ 33.3, 16.7, DRUSTVAR },
+					},
+				}),
+				o(291228, {	-- Small Treasure Chest
+					["questID"] = 51912,
+					["coords"] = {
+						{ 18.5, 54.3, DRUSTVAR },
+					},
+				}),
+				o(291229, {	-- Small Treasure Chest
+					["questID"] = 51913,
+					["coords"] = {
+						{ 32.0, 57.6, DRUSTVAR },
+					},
+				}),
+				o(291230, {	-- Small Treasure Chest
+					["questID"] = 51914,
+					["coords"] = {
+						{ 38.1, 63.5, DRUSTVAR },
+					},
 				}),
 				o(291204, {	-- Small Treasure Chest
 					["coord"] = { 55.3, 27.1, DRUSTVAR },
@@ -71,6 +98,7 @@ root(ROOTS.Zones, {
 					["questID"] = 51930,
 					["coords"] = {
 						{ 66.1, 45.3, STORMSONG_VALLEY },
+						{ 66.8, 43.7, STORMSONG_VALLEY },
 					},
 				}),
 				o(291254, {	-- Small Treasure Chest
@@ -78,11 +106,13 @@ root(ROOTS.Zones, {
 					["coords"] = {
 						{ 59.3, 42.5, STORMSONG_VALLEY },
 						{ 62.0, 40.1, STORMSONG_VALLEY },
+						{ 61.2, 40.3, STORMSONG_VALLEY },
 					},
 				}),
 				o(291255, {	-- Small Treasure Chest
 					["questID"] = 51938,
 					["coords"] = {
+						{ 74.1, 32.1, STORMSONG_VALLEY },
 						{ 76.2, 37.1, STORMSONG_VALLEY },
 					},
 				}),
@@ -110,6 +140,7 @@ root(ROOTS.Zones, {
 					["coords"] = {
 						{ 47.7, 64.7, STORMSONG_VALLEY },
 						{ 49.8, 66.1, STORMSONG_VALLEY },
+						{ 50.4, 62.6, STORMSONG_VALLEY },
 						{ 66.2, 40.4, STORMSONG_VALLEY },
 					},
 				}),
@@ -117,11 +148,13 @@ root(ROOTS.Zones, {
 					["questID"] = 51941,
 					["coords"] = {
 						{ 39.0, 58.2, STORMSONG_VALLEY },
+						{ 42.0, 60.7, STORMSONG_VALLEY },
 					},
 				}),
 				o(291263, {	-- Small Treasure Chest
 					["questID"] = 51942,
 					["coords"] = {
+						{ 51.2, 47.8, 1183 },
 						{ 57.8, 54.1, 1183 },
 					},
 				}),
@@ -129,6 +162,7 @@ root(ROOTS.Zones, {
 					["questID"] = 51943,
 					["coords"] = {
 						{ 34.3, 75.9, STORMSONG_VALLEY },
+						{ 34.1, 69.4, STORMSONG_VALLEY },
 					},
 				}),
 				o(291265, {	-- Small Treasure Chest
@@ -136,6 +170,14 @@ root(ROOTS.Zones, {
 					["coords"] = {
 						{ 26.2, 61.9, STORMSONG_VALLEY },
 						{ 31.4, 40.6, STORMSONG_VALLEY },
+						{ 32.1, 51.6, STORMSONG_VALLEY },
+					},
+				}),
+				o(291266, {	-- Small Treasure Chest
+					["questID"] = 51945,
+					["coords"] = {
+						{ 37.9, 44.1, STORMSONG_VALLEY },
+						{ 39.0, 44.7, STORMSONG_VALLEY },
 					},
 				}),
 				o(291267, {	-- Small Treasure Chest
@@ -236,13 +278,11 @@ root(ROOTS.Zones, {
 					["coords"] = {
 						{ 76.3, 80.9, TIRAGARDE_SOUND },
 						{ 76.6, 81.2, TIRAGARDE_SOUND },
-						{ 76.8, 83.4, TIRAGARDE_SOUND },
 						{ 76.8, 83.5, TIRAGARDE_SOUND },
 						{ 77.0, 85.5, TIRAGARDE_SOUND },
 						{ 77.4, 85.3, TIRAGARDE_SOUND },
 						{ 77.5, 82.7, TIRAGARDE_SOUND },
 						{ 77.7, 85.0, TIRAGARDE_SOUND },
-						{ 78.0, 80.4, TIRAGARDE_SOUND },
 						{ 78.0, 80.5, TIRAGARDE_SOUND },
 					},
 				}),

@@ -299,6 +299,7 @@ i(162684);	-- Etched Dock Cleat
 i(162976);	-- Exile's Abandoned Memoirs
 i(161206);	-- Faded Treasure Map
 i(158210);	-- Fearsome Claw
+i(159920);	-- Fermented Greatshark
 i(158838);	-- Fibrous Sludge
 i(158760);	-- Fin Ray
 i(158801);	-- Finely Serrated Tooth
@@ -309,6 +310,7 @@ i(158874);	-- Frothing Vapor
 i(158770);	-- Gelatinous Roe
 i(158865);	-- Ghastly Ooze
 i(158856);	-- Giant Frog Leg
+i(163077);	-- Glacier Bay Halibut
 i(158777);	-- Glimmering Ember
 i(158795);	-- Glittering Chill
 i(163078);	-- Glittering Earring
@@ -319,6 +321,7 @@ i(158855);	-- Grim Skull Fetish
 i(152698);	-- Grimestone Stew
 i(158860);	-- Grindstone Molar
 i(158765);	-- Hardshell Mollusk
+i(162559);	-- Hearty Swamp Gumbo
 i(158806);	-- Hooked Talon
 i(155600);	-- How to Make Money and Influence Subordinates
 i(155605);	-- Huge Femur
@@ -329,6 +332,7 @@ i(155631);	-- Inert Stone
 i(158749);	-- Intricate Ossicles
 i(157844);	-- Iridescent Speck
 i(158794);	-- Ivory Tusk
+i(161383);	-- Jancunda Nigiri
 i(158830);	-- Jade Sigilstone
 i(158859);	-- Jagged Fang
 i(163321);	-- Jason's Rusty Blade
@@ -345,6 +349,7 @@ i(163593);	-- Map of Zandalar Trade Winds
 i(163028);	-- Masterwork Statue of the First Trolls
 i(158751);	-- Matted Pelt
 i(158778);	-- Mucose Tendril
+i(163076);	-- Murkfathom Herring
 i(158867);	-- Needlepoint Bill
 i(158866);	-- Oily Blubber
 i(163520);	-- Orange Glowing Puffer
@@ -371,12 +376,15 @@ i(158756);	-- Rotary Gasket
 i(158758);	-- Royal Jelly
 i(163030);	-- Rusted Mining Pick
 i(157842);	-- Rusty Gear
+i(159919);	-- Salted Tideway Cod
 i(161053);	-- Salty Dog Crackers
 i(162630);	-- Sandy Ornate Relic
 i(163087);	-- Satchel of Blood Oranges
 i(158849);	-- Sawtooth Jawbone
 i(163695);	-- Scroll of Inner Truth
 i(163707);	-- Scroll of Torga's Swiftness
+i(163784);	-- Seafoam Coconut Water
+i(161373);	-- Seared Simmerfin
 i(163106);	-- Seasoned Stag Jerky
 i(162025);	-- Sermon of the High Exarch
 i(158752);	-- Severed Foot
@@ -401,6 +409,7 @@ i(158848);	-- Spoiled Feast
 i(155609);	-- Springy Eyeball
 i(155610);	-- Stinging Nettle
 i(158869);	-- Stone Tusk
+i(163075);	-- Stormshore Haddock
 i(169127);	-- Tastefully Scented Grease
 i(158746);	-- Tattered White Flag
 i(161200);	-- Teardrop Pearl
@@ -419,6 +428,7 @@ i(158872);	-- Unstable Essence
 i(158857);	-- Untainted Wicker
 i(163851);	-- Venerated Golden Censer
 i(158796);	-- Venomous Tentacle
+i(158850);	-- Vibrant Plumage
 i(155636);	-- Viscous Ink
 i(158864);	-- Viscous Webbing
 i(163901);	-- Waterproof Flintbox
@@ -462,6 +472,7 @@ i(166859);	-- Zinj'alor Blue Diamond
 -----------------
 -- PATCH 8.2.0 --
 -----------------
+i(169949);	-- Bioluminescent Ocean Punch
 i(168793);	-- Bottle of Homemade Wine
 i(169146);	-- Brittle Thrust Booster
 i(169130);	-- Bent Cogwheel
@@ -486,11 +497,13 @@ i(170054);	-- Decrypted Message 001-316
 i(169976);	-- Disintegrating Leaf
 i(170097);	-- Discarded Quel'dorei Tome
 i(169149);	-- Dulled Micro-Serrated Incisor
+i(167739);	-- Fathom Ray Roe
 i(170005);	-- Fractured Pearl
 i(169138);	-- Fractured Personality Module
 i(169962);	-- Frayed Fetish
 i(169123);	-- Functional Fiddleswitch
 i(169122);	-- Gibraltian Monkey Wrench
+i(170003);	-- Grinding Gearbox
 i(170013);	-- Inanimate Rock
 i(169988);	-- Inert Mineral Dust
 i(168792);	-- Kobold's Candle
@@ -500,6 +513,7 @@ i(238810);	-- Mana-Blessed Fin
 i(170031);	-- Moldy Tome
 i(169663);	-- Muddy Chassis
 i(168795);	-- Old Boot
+i(168789);	-- Perpetual Motion Device
 i(168796);	-- Recycled Scroll
 i(169660);	-- Resistance Roller
 i(168009);	-- Rotten Direbloom Petal
@@ -507,6 +521,7 @@ i(168786);	-- Rotten Food
 i(170098);	-- Rusted Girandole Earring
 i(169145);	-- Rusted Precision Gripper
 i(169661);	-- Scrap Heap
+i(169952);	-- Sea Salt Java
 i(170001);	-- Seized Engine
 i(169143);	-- Seized Sparksaw
 i(168791);	-- Shiny Rocks
@@ -945,7 +960,6 @@ i(184391);	-- Hollow Phylactery Shard
 i(181550);	-- Hopebreaker's Field Injector
 i(180307);	-- Horrific Stone Visage
 i(180227);	-- Horror Novel
-i(180173);	-- House Grinchin Ring
 i(182968);	-- Humerus
 i(183822);	-- Icecrown Survival Kit
 i(180888);	-- Illegible Journal
@@ -2879,6 +2893,7 @@ i(272892);	-- Shattered Gem
 i(272110);	-- Singed Propaganda Leaflet
 i(272051);	-- Sticky Propaganda Scroll
 i(272115);	-- Smashed Shield Emitter
+i(273013);	-- Void-Permeated Hide Scrap
 i(272116);	-- Water-Logged Transaction Scroll
 
 ------------------
@@ -2887,9 +2902,11 @@ i(272116);	-- Water-Logged Transaction Scroll
 i(276349);	-- Bulbous Leyshroom
 i(276343);	-- Console Encryption Key
 i(276360);	-- Etched Ice Chip
+i(276346);	-- Fel-Singed Salvage
 i(276353);	-- Frozen Sliver of Darkness
 i(276362);	-- Lost Glacier Climbing Hooks
 i(276345);	-- Malfunctioning Holoprint
+i(276348);	-- Marsh Wrangler's Vinewhip
 i(276344);	-- Overgrown Spore Extractor
 i(276357);	-- Razor-Ice Flake
 i(276355);	-- Shattered Frostforged Hilt
@@ -2902,7 +2919,17 @@ i(276359);	-- Twisted Domanaar Armament
 ------------------
 i(280182);	-- Coiled Curry
 i(274951);	-- Corroded Scale
+i(278397);	-- Ephemeral Star Ooze
+i(279157);	-- Frayed Nomad's Cord
 i(280183);	-- Harrier Hotcakes
+i(279152);	-- Intact Snake Head
+i(279154);	-- Large Leaf
+i(279153);	-- Large Trophy
+i(279160);	-- Mud-Caked Footwraps
 i(274954);	-- Pristine Fang
 i(274953);	-- Serpentine Iris
+i(276645);	-- Soggy Shipping Manifest
+i(273288);	-- Sou'jin Soup
+i(278276);	-- Spoils of Azta'rec
+i(279148);	-- Strip of Snake Hide
 i(280184);	-- Sweetsaw Surprise

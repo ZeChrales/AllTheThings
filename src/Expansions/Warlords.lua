@@ -164,6 +164,7 @@ do
 		if field then return _t[field]; end
 	end
 	app.CreateFollower = app.CreateClass(CLASSNAME, KEY, {
+		CACHE = function() return CACHE end,
 		name = function(t)
 			return cache.GetCachedField(t, "name", CacheInfo);
 		end,
@@ -182,10 +183,6 @@ do
 		link = function(t)
 			return cache.GetCachedField(t, "link", CacheInfo);
 		end,
-		description = function(t)
-			return L.FOLLOWERS_COLLECTION_DESC;
-		end,
-		RefreshCollectionOnly = true,
 		collectible = function(t) return app.Settings.Collectibles[CACHE]; end,
 		collected = function(t)
 			return app.TypicalCharacterCollected(CACHE, t[KEY])
@@ -214,6 +211,13 @@ do
 	app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, accountWideData)
 		if not currentCharacter[CACHE] then currentCharacter[CACHE] = {} end
 		if not accountWideData[CACHE] then accountWideData[CACHE] = {} end
+	end);
+	app.AddEventRegistration("GARRISON_FOLLOWER_ADDED", function(guid)
+		local info = C_Garrison_GetFollowerInfo(guid)
+		local id = info and info.garrFollowerID
+		if not id then return end
+
+		app.SetThingCollected("followerID", id, nil, true)
 	end);
 	app.AddSimpleCollectibleSwap(CLASSNAME, CACHE)
 	app.AddEventHandler("OnLoad", function()

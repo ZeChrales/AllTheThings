@@ -172,6 +172,20 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
+InstanceHelper.BossObjects = {
+	[MOTHER] = { 291079 },	-- MOTHER's Cache
+}
+InstanceHelper.LFRQueueNPC = {
+	["crs"] = {
+		177193,	-- Kiku
+		177208,	-- Eppu
+	},
+	["coords"] = {
+		{ 74.0, 13.4, BORALUS },	-- Kiku
+		{ 68.0, 33.6, THE_GREAT_SEAL },	-- Eppu
+	},
+}
+
 root(ROOTS.Instances, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"] = { ADDED_8_0_1 } }, {
 	inst(1031, {	-- Uldir
 		["maps"] = {
@@ -337,16 +351,6 @@ root(ROOTS.Instances, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"] = { ADD
 					i(162422),	-- Pattern: Embroidered Deep Sea Bag [Rank 3] (RECIPE!)
 				}),
 				BossOnly(GHUUN),
-			}),
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["crs"] = {
-					177193,	-- Kiku
-					177208,	-- Eppu
-				},
-				["coords"] = {
-					{ 74.0, 13.4, BORALUS },	-- Kiku
-					{ 68.0, 33.6, THE_GREAT_SEAL },	-- Eppu
-				},
 			}),
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups({
 				ZoneDrops({}),

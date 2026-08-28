@@ -4572,8 +4572,21 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					},
 				}),
 			}),
-			-- #if SEASON_OF_DISCOVERY
 			n(TREASURES, {
+				applyclassicphase(PHASE_FIVE, o(180665, {	-- Draconic for Dummies
+					["coords"] = {
+						-- #if AFTER WRATH
+						{ 75.35, 29.73, STORMWIND_CITY },
+						-- #else
+						{ 72.0, 6.0, STORMWIND_CITY },
+						-- #endif
+					},
+					["timeline"] = { ADDED_1_9_0, REMOVED_4_0_3 },
+					["groups"] = {
+						i(21107),	-- Draconic for Dummies [Chapter V]
+					},
+				})),
+				-- #if SEASON_OF_DISCOVERY
 				applyclassicphase(SOD_PHASE_ONE, i(205864, {	-- Charred Note
 					["questID"] = 75940,	-- Charred Note HQT
 					["sourceQuest"] = 75939,	-- Brother Romulus HQT
@@ -4606,8 +4619,8 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						recipe(400081),	-- Engrave Pants - Between the Eyes
 					},
 				})),
+				-- #endif
 			}),
-			-- #endif
 			n(VENDORS, {
 				n(69334, {	-- Adherent Hanjun <Tushui Quartermaster>
 					["coord"] = { 68.0, 17.0, STORMWIND_CITY },
@@ -6172,8 +6185,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						-- #endif
 						{ "merge" }, { "pop" }, { "where", "headerID", WEAPONS }, { "pop" },
 						-- #else
-						{ "select", "expansionID", EXPANSION.CLASSIC },
-						{ "find", "headerID", FACTION_HEADER_ALLIANCE },
+						SymSelector.select("CLASSIC_PVP_ALLIANCE"),
 						{ "find", "headerID", WEAPONS },	-- Grand Marshal Weapons
 						{ "pop" },
 						-- #endif
@@ -6230,8 +6242,10 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					["timeline"] = { ADDED_3_0_2, REMOVED_5_0_4 },
 					-- #if ANYCLASSIC
 					["sym"] = {
-						{ "select", "expansionID", EXPANSION.TBC },	{ "pop" },
-						{ "contains", "headerID", SEASON_BRUTAL, SEASON_VENGEFUL, SEASON_MERCILESS, SEASON_GLADIATOR }, { "pop" },
+						SymSelector.select("TBC_PVP_SEASON_GLADIATOR"),
+						SymSelector.select("TBC_PVP_SEASON_MERCILESS"),
+						SymSelector.select("TBC_PVP_SEASON_VENGEFUL"),
+						SymSelector.select("TBC_PVP_SEASON_BRUTAL"), { "pop" },
 						{ "where", "headerID", PVP_GLADIATOR }, { "pop" },
 					},
 					-- #endif
@@ -6752,6 +6766,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						-- #endif
 					},
 					["timeline"] = { ADDED_1_4_0, REMOVED_3_0_2, ADDED_4_0_1, REMOVED_7_0_3 },
+					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(18664, { ["timeline"] = { ADDED_1_4_0, REMOVED_2_0_1 } }),	-- A Treatise on Military Ranks
 						i(15196, {	-- Private's Tabard
@@ -7143,8 +7158,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						{"sub", "pvp_gear_base", EXPANSION.TBC, SEASON_BRUTAL, PVP_GLADIATOR },{ "merge" },
 						-- #endif
 						-- #ELSE
-						{"select","expansionID",EXPANSION.CLASSIC},
-						{"find","headerID",FACTION_HEADER_ALLIANCE},
+						SymSelector.select("CLASSIC_PVP_ALLIANCE"),
 						-- #ENDIF
 						{ "pop" },
 						{ "exclude", "headerID", WEAPONS },

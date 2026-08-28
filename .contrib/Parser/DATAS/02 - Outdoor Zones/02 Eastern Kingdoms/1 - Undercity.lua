@@ -1469,8 +1469,14 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 				})),
 			}),
 			-- #endif
-			-- #if AFTER 6.1.0.19480
 			n(TREASURES, {
+				applyclassicphase(PHASE_FIVE, o(180666, {	-- Draconic for Dummies
+					["coord"] = { 77.0, 38.0, UNDERCITY },
+					["timeline"] = { ADDED_1_9_0, REMOVED_4_0_3 },
+					["groups"] = {
+						i(21106),	-- Draconic for Dummies [Chapter IV]
+					},
+				})),
 				o(240623, {	-- Sylvanas' Strongbox
 					["description"] = "Use Zidormi to access Tirisfal Glades of the past. Loot the strongbox at the base of a pillar to the left of Sylvanas Windrunner. Alliance characters *can* loot this.",
 					["coord"] = { 58.1, 93.8, UNDERCITY },
@@ -1485,7 +1491,6 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					},
 				}),
 			}),
-			-- #endif
 			n(VENDORS, {
 				n(4604, {	-- Abigail Sawyer <Bow Merchant>
 					["coord"] = { 54.8, 38.0, UNDERCITY },
@@ -2240,8 +2245,9 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						i(13897),	-- White Traditional Hanbok
 					},
 				}),
-				n(4570, {	-- Sydney Upton
+				n(4570, {	-- Sydney Upton <Staff Merchant>
 					["coord"] = { 69.8, 27.4, UNDERCITY },
+					["races"] = HORDE_ONLY,
 					["sym"] = {{"select","itemID",
 						2527,	-- Battle Staff
 						2535,	-- War Staff

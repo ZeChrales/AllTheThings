@@ -4,33 +4,33 @@
 
 local function GenerateRewardsSymlinkForModID(factionHeader, modID, ...)
 	local sym = {
-		{"select", "headerID", WAR_EFFORT },	-- Find the War Effort Header
-		{"find", "mapID", ARATHI_HIGHLANDS },	-- Find Arathi Highlands
-		{"find", "headerID", COMMON_BOSS_DROPS},	-- Find the Common Boss Drop Header.
+		SymSelector.select("BFA_WARFRONT_ARATHI_CBD"),	-- Find the Warfront/Arathi/Common Boss Drop Header.
 		{"find", "headerID", factionHeader},	-- Select the Faction Header.
 		-- potential to select only specific sub-headers
 		{"extract","sourceID"},	-- Extract Sources
 		{"modID", modID},	-- Apply specific modID
 	};
-	if select("#",...) > 0 then
-		table.insert(sym, 5, {"pop"})
-		table.insert(sym, 6, {"whereany","headerID",...})
+	local valcount = select("#",...)
+	if valcount > 0 then
+		local symconditional = valcount == 1 and "where" or "whereany"
+		table.insert(sym, 3, {"pop"})
+		table.insert(sym, 4, {symconditional,"headerID",...})
 	end
 	return sym
 end
 local function GenerateSharedRewardsSymlinkForModID(modID, ...)
 	local sym = {
-		{"select", "headerID", WAR_EFFORT },	-- Find the War Effort Header
-		{"find", "mapID", ARATHI_HIGHLANDS },	-- Find Arathi Highlands
-		{"find", "headerID", COMMON_BOSS_DROPS},	-- Find the Common Boss Drop Header.
+		SymSelector.select("BFA_WARFRONT_ARATHI_CBD"),	-- Find the Warfront/Arathi/Common Boss Drop Header.
 		{"pop"},	-- Pop the CBD header.
 		{"pop"},	-- Pop both Faction Headers.
 		-- potential to select only specific sub-headers
 		{"extract","sourceID"},	-- Extract Sources
 		{"modID", modID},	-- Apply specific modID
 	};
-	if select("#",...) > 0 then
-		table.insert(sym, 6, {"whereany","headerID",...})
+	local valcount = select("#",...)
+	if valcount > 0 then
+		local symconditional = valcount == 1 and "where" or "whereany"
+		table.insert(sym, 4, {symconditional,"headerID",...})
 	end
 	return sym
 end
@@ -234,6 +234,7 @@ root(ROOTS.ExpansionFeatures,
 						},
 					}),
 					n(COMMON_BOSS_DROPS, {
+						symselector=SymSelector.BFA_WARFRONT_ARATHI_CBD,
 						["description"] = "These items can drop off any rare.",
 						["modID"] = 5,	-- This will inherently apply to all items within.
 						["crs"] = {

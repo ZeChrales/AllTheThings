@@ -144,10 +144,17 @@ local CommonTransmogFilterTypes = {
 	HELD_IN_OFF_HAND,
 	COSMETIC,
 	CLOAKS,
+	HEAD_F,
+	SHOULDER_F,
+	CHEST_F,
+	WRIST_F,
+	HANDS_F,
+	WAIST_F,
+	LEGS_F,
+	FEET_F,
 	TABARDS,
 	SHIRTS,
 	MISC,
-	PROFESSION_EQUIPMENT,
 }
 for key,data in pairs(Presets) do
 	for _,id in ipairs(CommonTransmogFilterTypes) do
@@ -166,6 +173,14 @@ local PresetTransmogs = {
 		[LEATHER] = true,
 		[MAIL] = true,
 		[PLATE] = true,
+		[HEAD_F] = true,
+		[SHOULDER_F] = true,
+		[CHEST_F] = true,
+		[WRIST_F] = true,
+		[HANDS_F] = true,
+		[WAIST_F] = true,
+		[LEGS_F] = true,
+		[FEET_F] = true,
 		[SHIELDS] = true,
 		[TABARDS] = true,
 		[SHIRTS] = true,
@@ -184,7 +199,6 @@ local PresetTransmogs = {
 		[CROSSBOWS] = true,
 		[FIST_WEAPONS] = true,
 		[WARGLAIVES] = true,
-		[PROFESSION_EQUIPMENT] = true,
 	},
 };
 for key,data in pairs(Presets) do

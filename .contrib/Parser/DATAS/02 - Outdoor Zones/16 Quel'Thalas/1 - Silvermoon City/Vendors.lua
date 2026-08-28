@@ -12,7 +12,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				["coord"] = { 42.1, 58.7, MAP.MIDNIGHT.SILVERMOON_CITY },
 				["groups"] = {
 					i(259996, {	-- Quel'Thalas Equipment Chest
-						["timeline"] = { "added 12.0.5.67602" },
+						["timeline"] = { "added 12.0.5.67602", REMOVED_12_1_0 },
 						["cost"] = { { "c", VOIDLIGHT_MARL, 750 } },
 						["sym"] = {
 							-- MID Season 1 dungeons (Normal+ difficulty)
@@ -375,9 +375,17 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					i(273307),	-- Vial of Intrepid Lemonade
 				}),
 			}),
+			n(251091, {	-- Nael Silvertongue <"Bookseller">
+				["coord"] = { 50.7, 56.1, MAP.MIDNIGHT.SILVERMOON_CITY },
+				["groups"] = {
+					i(257418, {	-- Ornate Sin'dorei Sconce (DECOR!)
+						["cost"] = { { "c", VOIDLIGHT_MARL, 250 } },
+					}),
+				},
+			}),
 			n(267859, {	-- Richmond <Sporting Goods>
 				["coord"] = { 39.4, 59.4, MAP.MIDNIGHT.SILVERMOON_CITY },
-				["timeline"] = { ADDED_12_0_7 },
+				["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
 				["groups"] = {
 					i(274450),	-- Alliance Tabard of Participation (COSMETIC!)
 					i(274451),	-- Horde Tabard of Participation (COSMETIC!)
@@ -396,6 +404,14 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					}),
 					-- No achievement file for silvermoon, not sure if one is needed
 					i(274731),	-- Prized Orb of Azeroth (DECOR!)
+				},
+			}),
+			n(245180, {	-- Sleyin <Weapon Merchant>
+				["coord"] = { 55.0, 49.8, MAP.MIDNIGHT.SILVERMOON_CITY },
+				["groups"] = {
+					i(15906, { ["timeline"] = { ADDED_12_1_0 } }),	-- Left-Handed Brass Knuckles
+					i(15909, { ["timeline"] = { ADDED_12_1_0 } }),	-- Left-Handed Blades
+					i(15907, { ["timeline"] = { ADDED_12_1_0 } }),	-- Left-Handed Claw
 				},
 			}),
 			n(239676, {	-- Vaskarn

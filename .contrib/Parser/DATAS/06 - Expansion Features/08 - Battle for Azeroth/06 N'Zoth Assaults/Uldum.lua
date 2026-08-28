@@ -394,7 +394,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"]
 						}),
 						q(58639, {	-- Buried History
 							["sourceQuest"] = 58638,	-- A Deeper Dive
-							["provider"] = { "n", 155102 },	-- High Explorer Dellorah
+							["qgs"] = {
+								155102,	-- High Explorer Dellorah
+								161938,	-- High Explorer Dellorah
+							},
 							["coord"] = { 68.9, 57.9, NZOTH_ASSAULT_ULDUM },
 							["lvl"] = 120,
 							["groups"] = {
@@ -403,7 +406,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"]
 						}),
 						q(58646, {	-- Chew On This!
 							["sourceQuest"] = 58638,	-- A Deeper Dive
-							["provider"] = { "n", 155102 },	-- High Explorer Dellorah
+							["qgs"] = {
+								155102,	-- High Explorer Dellorah
+								161938,	-- High Explorer Dellorah
+							},
 							["coord"] = { 68.9, 57.9, NZOTH_ASSAULT_ULDUM },
 							["lvl"] = 120,
 						}),
@@ -412,28 +418,38 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"]
 								58639,	-- Buried History
 								58646,	-- Chew On This!
 							},
-							["provider"] = { "n", 155102 },	-- High Explorer Dellorah
+							["qgs"] = {
+								155102,	-- High Explorer Dellorah
+								161938,	-- High Explorer Dellorah
+							},
 							["coord"] = { 68.9, 57.9, NZOTH_ASSAULT_ULDUM },
 							["lvl"] = 120,
 						}),
 						q(58641, {	-- Seekers of Corruption
 							["sourceQuest"] = 58640,	-- A Crack in the Armor
-							["provider"] = { "n", 155102 },	-- High Explorer Dellorah
+							["qgs"] = {
+								155102,	-- High Explorer Dellorah
+								161938,	-- High Explorer Dellorah
+							},
 							["coord"] = { 72.9, 48.4, NZOTH_ASSAULT_ULDUM },
 							["lvl"] = 120,
-							["groups"] = {
-								i(174451),	-- Sun King's Decree (QI!)
-							},
+							["groups"] = { i(174451) },	-- Sun King's Decree (QI!)
 						}),
 						q(58642, {	-- Shared Goals
 							["sourceQuest"] = 58641,	-- Seekers of Corruption
-							["provider"] = { "n", 155102 },	-- High Explorer Dellorah
+							["qgs"] = {
+								155102,	-- High Explorer Dellorah
+								161938,	-- High Explorer Dellorah
+							},
 							["coord"] = { 72.9, 48.4, NZOTH_ASSAULT_ULDUM },
 							["lvl"] = 120,
 						}),
 						q(58643, {	-- Mutually Assured Destruction
 							["sourceQuest"] = 58642,	-- Shared Goals
-							["provider"] = { "n", 155102 },	-- High Explorer Dellorah
+							["qgs"] = {
+								155102,	-- High Explorer Dellorah
+								161938,	-- High Explorer Dellorah
+							},
 							["coord"] = { 72.9, 48.4, NZOTH_ASSAULT_ULDUM },
 							["lvl"] = 120,
 						}),
@@ -789,12 +805,12 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"]
 						q(57970, {	-- Ruinator Xok'nixx
 							["sourceQuest"] = 57971,	-- Ruins of Ammon
 							["provider"] = { "n", 159820 },	-- Mender Dyrin
-							["coord"] = { 27.9, 63.4, NZOTH_ASSAULT_ULDUM },
+							["coord"] = { 28.0, 63.5, NZOTH_ASSAULT_ULDUM },
 						}),
 						q(57969, {	-- Tend the Wounded
 							["sourceQuest"] = 57971,	-- Ruins of Ammon
 							["provider"] = { "n", 159820 },	-- Mender Dyrin
-							["coord"] = { 27.9, 63.4, NZOTH_ASSAULT_ULDUM },
+							["coord"] = { 28.0, 63.5, NZOTH_ASSAULT_ULDUM },
 							["groups"] = {
 								i(174326),	-- Rough Burlap Bandages (QI!)
 							},
@@ -806,7 +822,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"]
 								57969,	-- Tend the Wounded
 							},
 							["provider"] = { "n", 159820 },	-- Mender Dyrin
-							["coord"] = { 27.9, 63.4, NZOTH_ASSAULT_ULDUM },
+							["coord"] = { 28.0, 63.5, NZOTH_ASSAULT_ULDUM },
 						}),
 						q(58008, {	-- All Gassed Up
 							["sourceQuest"] = 57990,	-- Obelisk of the Sun
@@ -897,7 +913,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"]
 						}),
 						q(56889, {	-- Wounded Wastewanderers
 							["provider"] = { "n", 159820 },	-- Mender Dyrin
-							["coord"] = { 40.1, 21.3, NZOTH_ASSAULT_ULDUM },
+							["coord"] = { 28.0, 63.5, NZOTH_ASSAULT_ULDUM },
 							["groups"] = {
 								i(174326),	-- Rough Burlap Bandages (QI!)
 							},
@@ -1028,11 +1044,9 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"]
 								{ 39.7, 23.6, NZOTH_ASSAULT_ULDUM },
 								{ 39.8, 45.0, NZOTH_ASSAULT_ULDUM },
 								{ 40.2, 42.4, NZOTH_ASSAULT_ULDUM },
-								{ 40.2, 42.5, NZOTH_ASSAULT_ULDUM },
 								{ 40.4, 44.2, NZOTH_ASSAULT_ULDUM },
 								{ 40.5, 44.3, NZOTH_ASSAULT_ULDUM },
 								{ 40.8, 38.9, NZOTH_ASSAULT_ULDUM },
-								{ 41.6, 42.4, NZOTH_ASSAULT_ULDUM },
 								{ 41.6, 42.5, NZOTH_ASSAULT_ULDUM },
 								{ 43.0, 36.4, NZOTH_ASSAULT_ULDUM },
 							},
@@ -1321,7 +1335,9 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.BFA, bubbleDown({ ["timeline"]
 						["coord"] = { 55.6, 35.3, NZOTH_ASSAULT_ULDUM },
 						["DisablePartySync"] = true,
 						["groups"] = {
-							i(175022),	-- Concentrated Royal Jelly (QI!)
+							o(343668, {	-- Concentrated Royal Jelly
+								["groups"] = { i(175022) },	-- Concentrated Royal Jelly (QI!)
+							}),
 						},
 					}),
 					q(58858, {	-- More Fetid Filets

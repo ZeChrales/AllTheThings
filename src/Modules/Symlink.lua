@@ -1025,6 +1025,8 @@ app.AddEventHandler("OnLoad", function()
 		SettingsTooltip = app.L.FILL_SYMLINK_DATA_CHECKBOX_TOOLTIP:format(app.Modules.Color.Colorize(app.L.SYM_ROW_INFORMATION, app.Colors.SymLink)),
 	})
 
+	local NPCFillThings = app.CloneDictionary(app.ThingKeys)
+	NPCFillThings.encounterID = nil
 	-- Pulls in Common drop content for specific NPCs if any exists
 	-- (so we don't need to always symlink every NPC which is included in common boss drops somewhere)
 	Fill.AddFiller("NPC",
@@ -1048,20 +1050,26 @@ app.AddEventHandler("OnLoad", function()
 			for i=1,#npcGroups do
 				npcGroup = npcGroups[i]
 				if npcGroup.hash ~= group.hash then
-					headerID = GetRelativeFieldInSet(npcGroup, "headerID", NPCExpandHeaders);
-					-- app.PrintDebug("DropCheck",app:SearchLink(npcGroup),"=>",headerID)
-					-- where headerID is allowed and the nested difficultyID matches
-					if headerID then
-						npcDiff = GetRelativeValue(npcGroup, "difficultyID");
-						-- copy the header under the NPC groups
-						if not npcDiff or npcDiff == difficultyID then
-							-- wrap the npcGroup in the matching header if it is not a header
-							if not npcGroup.headerID then
-								npcGroup = app.CreateCustomHeader(headerID, {g={CreateObject(npcGroup)}})
+					if NPCFillThings[npcGroup.key] and npcGroup.providers then
+						-- app.PrintDebug("IsThingDrop.Diff",group.hash,"<==",npcGroup.hash)
+						if groups then groups[#groups + 1] = CreateObject(npcGroup)
+						else groups = { CreateObject(npcGroup) }; end
+					else
+						headerID = GetRelativeFieldInSet(npcGroup, "headerID", NPCExpandHeaders);
+						-- app.PrintDebug("DropCheck",app:SearchLink(npcGroup),"=>",headerID)
+						-- where headerID is allowed and the nested difficultyID matches
+						if headerID then
+							npcDiff = GetRelativeValue(npcGroup, "difficultyID");
+							-- copy the header under the NPC groups
+							if not npcDiff or npcDiff == difficultyID then
+								-- wrap the npcGroup in the matching header if it is not a header
+								if not npcGroup.headerID then
+									npcGroup = app.CreateCustomHeader(headerID, {g={CreateObject(npcGroup)}})
+								end
+								-- app.PrintDebug("IsDrop.Diff",difficultyID,group.hash,"<==",npcGroup.hash)
+								if groups then groups[#groups + 1] = CreateObject(npcGroup)
+								else groups = { CreateObject(npcGroup) }; end
 							end
-							-- app.PrintDebug("IsDrop.Diff",difficultyID,group.hash,"<==",npcGroup.hash)
-							if groups then groups[#groups + 1] = CreateObject(npcGroup)
-							else groups = { CreateObject(npcGroup) }; end
 						end
 					end
 				end
@@ -1073,18 +1081,24 @@ app.AddEventHandler("OnLoad", function()
 			for i=1,#npcGroups do
 				npcGroup = npcGroups[i]
 				if npcGroup.hash ~= group.hash then
-					headerID = GetRelativeFieldInSet(npcGroup, "headerID", NPCExpandHeaders);
-					-- app.PrintDebug("DropCheck",app:SearchLink(npcGroup),"=>",headerID)
-					-- where headerID is allowed
-					if headerID then
-						-- copy the header under the NPC groups
-						-- wrap the npcGroup in the matching header if it is not a header
-						if not npcGroup.headerID then
-							npcGroup = app.CreateCustomHeader(headerID, {g={CreateObject(npcGroup)}})
-						end
-						-- app.PrintDebug("IsDrop",group.hash,"<==",npcGroup.hash)
+					if NPCFillThings[npcGroup.key] and npcGroup.providers then
+						-- app.PrintDebug("IsThingDrop",group.hash,"<==",npcGroup.hash)
 						if groups then groups[#groups + 1] = CreateObject(npcGroup)
 						else groups = { CreateObject(npcGroup) }; end
+					else
+						headerID = GetRelativeFieldInSet(npcGroup, "headerID", NPCExpandHeaders);
+						-- app.PrintDebug("DropCheck",app:SearchLink(npcGroup),"=>",headerID)
+						-- where headerID is allowed
+						if headerID then
+							-- copy the header under the NPC groups
+							-- wrap the npcGroup in the matching header if it is not a header
+							if not npcGroup.headerID then
+								npcGroup = app.CreateCustomHeader(headerID, {g={CreateObject(npcGroup)}})
+							end
+							-- app.PrintDebug("IsDrop",group.hash,"<==",npcGroup.hash)
+							if groups then groups[#groups + 1] = CreateObject(npcGroup)
+							else groups = { CreateObject(npcGroup) }; end
+						end
 					end
 				end
 			end

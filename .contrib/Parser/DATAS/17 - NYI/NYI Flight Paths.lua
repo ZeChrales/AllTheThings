@@ -831,7 +831,7 @@ root(ROOTS.NeverImplemented, n(FLIGHT_PATHS, {
 
 		-- 12.1.0
 		expansion(EXPANSION.MID, patch(1,0), bubbleDownSelf({ ["timeline"] = { CREATED_12_1_0 } }, {
-			fp(3286),	-- Eastern Entrance
+			fp(3284),	-- 12.1 Ulatek - Faction Feature - Temple - Traversal - Flight Master - Eastern Entrance (HCR)
 		})),
 	}),
 }));

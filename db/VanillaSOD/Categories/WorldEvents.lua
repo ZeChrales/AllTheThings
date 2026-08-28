@@ -1,11 +1,10 @@
-﻿if not (C_Seasons and C_Seasons.GetActiveSeason() == 2) then return; end
+﻿if not (C_Seasons and C_Seasons.GetActiveSeason() == 2) then return end
 ---@diagnostic disable: deprecated
-local appName, _ = ...;
+local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,h,i,mnt,n,q,qo,r,s=_.CreateAchievement,_.CreateCustomHeader,_.CreateItem,_.CreateMount,_.CreateNPC,_.CreateQuest,_.CreateQuestObjective,_.CreateRecipe,_.CreateItemSource;
 categories.WorldEvents=
 h(-734,{SortPriority=75,g={
-h(-103),
 h(-723,{awp=10400,lvl=60,rwp=40003,u=1608,g={
 h(-19,{awp=10600,crs={14454,14457,14461,14464},u=1609,g={
 i(19268,{q=3,u=1609})}}),
@@ -26,7 +25,7 @@ i(18679,{f=52,lvl=56,q=2,u=1608})}}),
 n(14454,{coords={
 [1451]={{17.6,27},{26.6,29.6},{31,23.6},{32.2,17.2}}},description="This is only available during an Elemental Invasion.",u=1608,g={
 r(26279,{itemID=21548,learnedAt=300,q=3,requireSkill=10658,u=1608}),
-s(163625,18676,{f=6,lvl=56,q=3,u=1608}),
+s(163625,18676,{f=6,loc=45,lvl=56,q=3,u=1608}),
 s(163626,18677,{f=3,lvl=56,q=2,u=1608})}})}}),
 h(-481,{maps={1454,1455},rwp=20001,u=1610,g={
 h(-210,{r=2,u=1610,g={
@@ -408,7 +407,7 @@ i(21510,{b=1,description="Contains a random assortment of common, uncommon, and 
 i(21511,{b=1,description="Contains a random assortment of common, uncommon, and rare quality items between levels 30-32.",q=1,u=1610}),
 i(21512,{b=1,description="Contains a random assortment of common, uncommon, and rare quality items between levels 40-42.",q=1,u=1610}),
 i(21513,{b=1,description="Contains a random assortment of common, uncommon, and rare quality items between levels 50-52.",q=1,u=1610})}})}}),
-h(-483,{lvl=60,maps={75,1446},rwp=40003,u=1610,g={
+h(-483,{awp=10900,lvl=60,maps={75,1446},rwp=40003,u=1610,g={
 h(-45,{u=1610,g={
 q(8519,{coords={
 [1451]={{28.7,89.1}}},lvl=60,minReputation={910,0},providers={{"o",180633}},sourceQuests={8305},u=1610}),
@@ -428,7 +427,7 @@ i(21042,{b=1,q=1,u=1610,g={
 i(21037,{b=1,q=1,u=1610}),
 i(21041,{b=1,q=1,u=1610}),
 i(21039,{b=1,q=1,u=1610}),
-s(164454,21040,{b=1,f=4,q=1,u=1610})}})}}),
+s(164454,21040,{b=1,f=4,loc=42,q=1,u=1610})}})}}),
 q(8597,{coords={
 [1446]={{65.2,18.6}}},lvl=60,qgs={11811},sourceQuests={8576},u=1610}),
 q(8586,{coords={
@@ -438,12 +437,12 @@ q(8733,{lvl=60,maps={220},qgs={15362},sourceQuests={8555},u=1610}),
 q(8305,{coords={
 [1446]={{65,50}}},lvl=60,minReputation={910,0},qgs={15192},sourceQuests={8303},u=1610}),
 q(8599,{coords={
-[1446]={{59.4,96}}},lvl=60,providers={{"i",21032}},qgs={15526},sourceQuests={8597},u=1610}),
+[1446]={{59.4,96}}},description="You must be on the quest 'Draconic for Dummies' for this quest to be available.",lvl=60,providers={{"i",21032}},qgs={15526},sourceQuests={8576},u=1610}),
 q(8730,{lvl=60,maps={287},qgs={13020},sourceQuests={8555},u=1610,g={
 qo(1,{crs={11583},providers={{"i",21138}},u=1610}),
 i(21142,{crs={11583},description="You get this if you don't manage to kill Nefarian in time after starting the quest from Vaelastrasz.",q=1,u=1610}),
 i(21529,{b=1,f=51,lvl=60,q=4,u=1610}),
-s(164650,21530,{b=1,f=6,lvl=60,q=4,u=1610})}}),
+s(164650,21530,{b=1,f=6,loc=46,lvl=60,q=4,u=1610})}}),
 q(8584,{coords={
 [1446]={{65.2,18.6}}},lvl=60,qgs={11811},sourceQuests={8576},u=1610}),
 q(8288,{coords={
@@ -477,7 +476,7 @@ i(21175,{b=1,q=1,u=1610})}}),
 q(8736,{coords={
 [1450]={{36.18,41.79}}},description="You do NOT want to kill Eranikus or allow Remulos to die.",lvl=60,minReputation={910,0},qgs={11832},sourceQuests={8735},u=1610,g={
 i(21531,{b=1,f=51,lvl=60,q=4,u=1610}),
-s(164651,21532,{b=1,f=5,lvl=60,q=4,u=1610})}}),
+s(164651,21532,{b=1,f=5,loc=47,lvl=60,q=4,u=1610})}}),
 q(8735,{coords={
 [1450]={{36.18,41.79}}},lvl=60,maps={1425,1431,1440,1444},minReputation={910,0},qgs={11832},sourceQuests={8734},u=1610,g={
 qo(1,{coords={
@@ -490,22 +489,10 @@ qo(4,{coords={
 [1425]={{61.6,27.7}}},crs={12477,12478,12479},providers={{"i",21146}},u=1610})}}),
 q(8620,{coords={
 [1446]={{65.2,18.6}}},lvl=60,maps={232,248,287,1419,1445,1452,1453,1458},qgs={11811},sourceQuests={8606},u=1610,g={
-qo(1,{cost={{"i",21110,1},{"i",21109,1},{"i",21108,1},{"i",21107,1},{"i",21106,1},{"i",21105,1},{"i",21104,1},{"i",21103,1},{"i",21112,1}},providers={{"i",21111}},u=1610}),
-i(21103,{b=1,coords={
-[1445]={{77.8,17}}},crs={15552},q=4,u=1610}),
-i(21104,{b=1,coords={
-[1419]={{44.6,56}}},crs={8716,8717,12396},q=4,u=1610}),
-i(21105,{b=1,coords={
-[1452]={{51.6,84.4},{54.6,87.4},{65,80.2}}},crs={7461,7463,10201},q=4,u=1610}),
-i(21106,{b=1,coords={
-[1458]={{77,38}}},providers={{"o",180666}},q=4,u=1610}),
-i(21107,{b=1,coords={
-[1453]={{72,6}}},providers={{"o",180665}},q=4,u=1610}),
-i(21108,{b=1,crs={10184},q=4,u=1610}),
-i(21109,{b=1,coords={
-[287]={{32,42.9}}},description="Located in Blackwing Lair on one of the tables on the ramp after the first wyrmguard overseer pull.",providers={{"o",180667}},q=4,u=1610}),
-i(21110,{b=1,crs={11502},q=4,u=1610}),
-s(164642,21517,{b=1,f=4,lvl=60,q=4,u=1610})}}),
+qo(1,{providers={{"i",21111}},u=1610}),
+i(21112,{b=1,cost={{"i",21110,1},{"i",21109,1},{"i",21108,1},{"i",21107,1},{"i",21106,1},{"i",21105,1},{"i",21104,1},{"i",21103,1}},q=1,u=1610,g={
+i(21111,{b=1,q=1,u=1610})}}),
+s(164642,21517,{b=1,f=4,loc=40,lvl=60,q=4,u=1610})}}),
 q(8301,{coords={
 [1451]={{49.5,36.4}}},cost={{"i",20384,200}},lvl=60,qgs={15180},sourceQuests={8288},u=1610,g={
 i(20402,{b=1,q=2,u=1610}),
@@ -515,7 +502,7 @@ q(8729,{coords={
 qo(1,{coords={
 [1447]={{65,55}}},cost={{"i",21136,1}},crs={15571},description="This summons a 40 man raid boss.",providers={{"i",21137},{"o",180669}},u=1610}),
 i(21526,{b=1,f=52,lvl=60,q=4,u=1610}),
-s(164649,21527,{b=1,f=4,lvl=60,q=4,u=1610})}}),
+s(164649,21527,{b=1,f=4,loc=42,lvl=60,q=4,u=1610})}}),
 q(8576,{coords={
 [1446]={{65.2,18.6}}},lvl=60,qgs={11811},sourceQuests={8575},u=1610}),
 q(8745,{coords={
@@ -539,39 +526,39 @@ q(9094,{coords={
 [1453]={{54.7,62.2}},
 [1455]={{34,66.4}},
 [1457]={{64.3,44.5}}},cost={{"i",22484,30}},lvl=50,qgs={16786},r=2,repeatable=1,rwp=20001,sourceQuests={88744},u=1611,g={
-s(284822,236713,{b=1,f=5,q=4,u=1611}),
-s(284823,236714,{b=1,f=7,q=4,u=1611}),
-s(284824,236715,{b=1,f=6,q=4,u=1611}),
-s(284826,236717,{b=1,f=4,q=4,u=1611}),
-s(284835,236726,{b=1,f=5,q=4,u=1611}),
-s(284844,236735,{b=1,f=6,q=4,u=1611}),
-s(284829,236720,{b=1,f=4,q=4,u=1611}),
-s(284838,236729,{b=1,f=5,q=4,u=1611}),
-s(284850,236741,{b=1,f=6,q=4,u=1611}),
-s(284853,236744,{b=1,f=7,q=4,u=1611}),
-s(284832,236723,{b=1,f=4,q=4,u=1611}),
-s(284841,236732,{b=1,f=5,q=4,u=1611}),
-s(284847,236738,{b=1,f=6,q=4,u=1611}),
-s(284856,236747,{b=1,f=7,q=4,u=1611})}}),
+s(284822,236713,{b=1,f=5,loc=44,q=4,u=1611}),
+s(284823,236714,{b=1,f=7,loc=44,q=4,u=1611}),
+s(284824,236715,{b=1,f=6,loc=44,q=4,u=1611}),
+s(284826,236717,{b=1,f=4,loc=44,q=4,u=1611}),
+s(284835,236726,{b=1,f=5,loc=44,q=4,u=1611}),
+s(284844,236735,{b=1,f=6,loc=44,q=4,u=1611}),
+s(284829,236720,{b=1,f=4,loc=44,q=4,u=1611}),
+s(284838,236729,{b=1,f=5,loc=44,q=4,u=1611}),
+s(284850,236741,{b=1,f=6,loc=44,q=4,u=1611}),
+s(284853,236744,{b=1,f=7,loc=44,q=4,u=1611}),
+s(284832,236723,{b=1,f=4,loc=44,q=4,u=1611}),
+s(284841,236732,{b=1,f=5,loc=44,q=4,u=1611}),
+s(284847,236738,{b=1,f=6,loc=44,q=4,u=1611}),
+s(284856,236747,{b=1,f=7,loc=44,q=4,u=1611})}}),
 q(9333,{coords={
 [1423]={{80.8,59.6}},
 [1454]={{52.5,73.7}},
 [1456]={{43.7,52.6}},
 [1458]={{49.9,29.4}}},cost={{"i",22484,30}},lvl=50,qgs={16787},r=1,repeatable=1,rwp=20001,sourceQuests={88744},u=1611,g={
-s(284822,236713,{b=1,f=5,q=4,u=1611}),
-s(284823,236714,{b=1,f=7,q=4,u=1611}),
-s(284824,236715,{b=1,f=6,q=4,u=1611}),
-s(284826,236717,{b=1,f=4,q=4,u=1611}),
-s(284835,236726,{b=1,f=5,q=4,u=1611}),
-s(284844,236735,{b=1,f=6,q=4,u=1611}),
-s(284829,236720,{b=1,f=4,q=4,u=1611}),
-s(284838,236729,{b=1,f=5,q=4,u=1611}),
-s(284850,236741,{b=1,f=6,q=4,u=1611}),
-s(284853,236744,{b=1,f=7,q=4,u=1611}),
-s(284832,236723,{b=1,f=4,q=4,u=1611}),
-s(284841,236732,{b=1,f=5,q=4,u=1611}),
-s(284847,236738,{b=1,f=6,q=4,u=1611}),
-s(284856,236747,{b=1,f=7,q=4,u=1611})}}),
+s(284822,236713,{b=1,f=5,loc=44,q=4,u=1611}),
+s(284823,236714,{b=1,f=7,loc=44,q=4,u=1611}),
+s(284824,236715,{b=1,f=6,loc=44,q=4,u=1611}),
+s(284826,236717,{b=1,f=4,loc=44,q=4,u=1611}),
+s(284835,236726,{b=1,f=5,loc=44,q=4,u=1611}),
+s(284844,236735,{b=1,f=6,loc=44,q=4,u=1611}),
+s(284829,236720,{b=1,f=4,loc=44,q=4,u=1611}),
+s(284838,236729,{b=1,f=5,loc=44,q=4,u=1611}),
+s(284850,236741,{b=1,f=6,loc=44,q=4,u=1611}),
+s(284853,236744,{b=1,f=7,loc=44,q=4,u=1611}),
+s(284832,236723,{b=1,f=4,loc=44,q=4,u=1611}),
+s(284841,236732,{b=1,f=5,loc=44,q=4,u=1611}),
+s(284847,236738,{b=1,f=6,loc=44,q=4,u=1611}),
+s(284856,236747,{b=1,f=7,loc=44,q=4,u=1611})}}),
 q(9318,{coords={
 [1423]={{81,59.8}},
 [1453]={{54.7,62.2}},
@@ -690,7 +677,7 @@ i(238241,{b=1,lvl=50,q=2,u=1611}),
 i(237810,{b=1,lvl=50,q=2,u=1611})}})}}),
 n(14684,{description="Located in Stratholme.\n\nCan be found wandering in a circle around the fountain in the courtyard.",maps={317},u=1611,g={
 i(238355,{b=1,f=51,lvl=55,q=4,u=1611}),
-s(287430,238356,{b=1,f=4,lvl=55,q=4,u=1611}),
+s(287430,238356,{b=1,f=4,loc=45,lvl=55,q=4,u=1611}),
 s(287431,238357,{b=1,f=28,lvl=55,q=4,u=1611})}}),
 n(14686,{description="Located in Razorfen Downs.\n\nCan be found inside one of the prison cells, before the skeleton pile. Looks like a human female until you talk to her upon she transforms into a Banshee.",maps={300},u=1611,g={
 s(287428,238353,{b=1,f=3,lvl=36,q=4,u=1611}),
@@ -700,33 +687,33 @@ s(287432,238358,{b=1,f=1,lvl=57,q=4,u=1611}),
 s(287433,238360,{b=1,f=8,lvl=57,q=4,u=1611}),
 s(287434,238361,{b=1,f=25,lvl=57,q=4,u=1611})}}),
 n(14690,{description="Located in Dire Maul West.\n\nCan be found in the corridor above and behind Tendris Warpwood, the same one Magister Kalendris is in.",maps={234},u=1611,g={
-s(287435,238362,{b=1,f=4,lvl=57,q=4,u=1611}),
-s(287436,238363,{b=1,f=4,lvl=57,q=4,u=1611}),
+s(287435,238362,{b=1,f=4,loc=43,lvl=57,q=4,u=1611}),
+s(287436,238363,{b=1,f=4,loc=44,lvl=57,q=4,u=1611}),
 s(287437,238364,{b=1,f=3,lvl=58,q=4,u=1611})}}),
 n(14693,{description="Located in Scarlet Monastery Graveyard.\n\nHe patrols the graveyard after killing the last boss.",maps={435},u=1611,g={
 s(287426,238350,{b=1,f=20,lvl=30,q=4,u=1611}),
-s(287427,238351,{b=1,f=6,lvl=30,q=4,u=1611}),
+s(287427,238351,{b=1,f=6,loc=44,lvl=30,q=4,u=1611}),
 i(238352,{b=1,f=51,lvl=30,q=4,u=1611})}}),
 n(14682,{description="Located in Shadowfang Keep.\n\nCan be found in the room up the ramp to the right of the entrance to the Butcher's room in the courtyard.",maps={310},u=1611,g={
 s(287424,238348,{b=1,f=22,lvl=20,q=4,u=1611}),
-s(287425,238349,{b=1,f=4,lvl=20,q=4,u=1611})}}),
+s(287425,238349,{b=1,f=4,loc=46,lvl=20,q=4,u=1611})}}),
 n(16143,{cost={{"i",22484,8}},description="To summon this mob, speak to the cultist and give them 8 runes. This will automatically tag that mob for your group.",u=1611,g={
 i(22484,{b=1,q=2,u=1611}),
 i(236750,{b=1,lvl=60,q=1,u=1611}),
-s(284817,236708,{b=1,f=7,lvl=58,q=4,u=1611}),
-s(284818,236709,{b=1,f=6,lvl=58,q=4,u=1611}),
-s(284827,236718,{b=1,f=4,lvl=58,q=4,u=1611}),
-s(284845,236736,{b=1,f=6,lvl=58,q=4,u=1611}),
-s(284816,236707,{b=1,f=5,lvl=58,q=4,u=1611}),
-s(284836,236727,{b=1,f=5,lvl=58,q=4,u=1611}),
-s(284830,236721,{b=1,f=4,lvl=58,q=4,u=1611}),
-s(284839,236730,{b=1,f=5,lvl=58,q=4,u=1611}),
-s(284851,236742,{b=1,f=6,lvl=58,q=4,u=1611}),
-s(284854,236745,{b=1,f=7,lvl=58,q=4,u=1611}),
-s(284833,236724,{b=1,f=4,lvl=58,q=4,u=1611}),
-s(284842,236733,{b=1,f=5,lvl=58,q=4,u=1611}),
-s(284848,236739,{b=1,f=6,lvl=58,q=4,u=1611}),
-s(284857,236748,{b=1,f=7,lvl=58,q=4,u=1611})}}),
+s(284817,236708,{b=1,f=7,loc=42,lvl=58,q=4,u=1611}),
+s(284818,236709,{b=1,f=6,loc=42,lvl=58,q=4,u=1611}),
+s(284827,236718,{b=1,f=4,loc=42,lvl=58,q=4,u=1611}),
+s(284845,236736,{b=1,f=6,loc=42,lvl=58,q=4,u=1611}),
+s(284816,236707,{b=1,f=5,loc=42,lvl=58,q=4,u=1611}),
+s(284836,236727,{b=1,f=5,loc=42,lvl=58,q=4,u=1611}),
+s(284830,236721,{b=1,f=4,loc=42,lvl=58,q=4,u=1611}),
+s(284839,236730,{b=1,f=5,loc=42,lvl=58,q=4,u=1611}),
+s(284851,236742,{b=1,f=6,loc=42,lvl=58,q=4,u=1611}),
+s(284854,236745,{b=1,f=7,loc=42,lvl=58,q=4,u=1611}),
+s(284833,236724,{b=1,f=4,loc=42,lvl=58,q=4,u=1611}),
+s(284842,236733,{b=1,f=5,loc=42,lvl=58,q=4,u=1611}),
+s(284848,236739,{b=1,f=6,loc=42,lvl=58,q=4,u=1611}),
+s(284857,236748,{b=1,f=7,loc=42,lvl=58,q=4,u=1611})}}),
 h(-63,{crs={16141,16298,16299,16383},u=1611,g={
 i(22484,{b=1,q=2,u=1611}),
 i(22970,{b=1,lvl=45,q=1,u=1611}),
@@ -736,20 +723,20 @@ i(22974,{b=1,lvl=45,q=1,u=1611}),
 i(22975,{b=1,lvl=45,q=1,u=1611}),
 i(22977,{b=1,lvl=45,q=1,u=1611})}}),
 h(-46,{crs={14697,16379,16380},u=1611,g={
-s(284825,236716,{f=4,lvl=58,q=4,u=1611}),
-s(284834,236725,{f=5,lvl=58,q=4,u=1611}),
-s(284819,236710,{f=6,lvl=58,q=4,u=1611}),
-s(284821,236712,{f=7,lvl=58,q=4,u=1611}),
-s(284849,236740,{f=6,lvl=58,q=4,u=1611}),
-s(284846,236737,{f=6,lvl=58,q=4,u=1611}),
-s(284852,236743,{f=7,lvl=58,q=4,u=1611}),
-s(284855,236746,{f=7,lvl=58,q=4,u=1611}),
-s(284843,236734,{f=6,lvl=58,q=4,u=1611}),
-s(284840,236731,{f=5,lvl=58,q=4,u=1611}),
-s(284837,236728,{f=5,lvl=58,q=4,u=1611}),
-s(284831,236722,{f=4,lvl=58,q=4,u=1611}),
-s(284820,236711,{f=5,lvl=58,q=4,u=1611}),
-s(284828,236719,{f=4,lvl=58,q=4,u=1611})}}),
+s(284825,236716,{f=4,loc=43,lvl=58,q=4,u=1611}),
+s(284834,236725,{f=5,loc=43,lvl=58,q=4,u=1611}),
+s(284819,236710,{f=6,loc=43,lvl=58,q=4,u=1611}),
+s(284821,236712,{f=7,loc=43,lvl=58,q=4,u=1611}),
+s(284849,236740,{f=6,loc=43,lvl=58,q=4,u=1611}),
+s(284846,236737,{f=6,loc=43,lvl=58,q=4,u=1611}),
+s(284852,236743,{f=7,loc=43,lvl=58,q=4,u=1611}),
+s(284855,236746,{f=7,loc=43,lvl=58,q=4,u=1611}),
+s(284843,236734,{f=6,loc=43,lvl=58,q=4,u=1611}),
+s(284840,236731,{f=5,loc=43,lvl=58,q=4,u=1611}),
+s(284837,236728,{f=5,loc=43,lvl=58,q=4,u=1611}),
+s(284831,236722,{f=4,loc=43,lvl=58,q=4,u=1611}),
+s(284820,236711,{f=5,loc=43,lvl=58,q=4,u=1611}),
+s(284828,236719,{f=4,loc=43,lvl=58,q=4,u=1611})}}),
 h(-47,{description="The reports are mailed to you about 48 hours after you turn in the random drop letter quests and there is one unique flavor message per letter. I'm not sure if speaking to the npcs mentioned in the responses leads to more flavor text, but someone should probably look into that.",u=1611,g={
 i(23196,{b=1,crs={16434,16436},description="1 Stamina for every 2 levels for 1 Hour.\n\nAvailable after 150 Battles won.",f=55,q=1,u=1611}),
 i(23194,{b=1,crs={16384,16395},description="1 Stamina for every 6 levels for 1 Hour.\n\nAvailable after 50 Battles won.",f=55,q=1,u=1611}),
@@ -759,5 +746,5 @@ i(23010,{b=1,q=1,u=1611}),
 i(23011,{b=1,q=1,u=1611}),
 i(23012,{b=1,q=1,u=1611}),
 i(23013,{b=1,q=1,u=1611}),
-i(23016,{b=1,q=1,u=1611})}})}})}});
-end);
+i(23016,{b=1,q=1,u=1611})}})}})}})
+end)

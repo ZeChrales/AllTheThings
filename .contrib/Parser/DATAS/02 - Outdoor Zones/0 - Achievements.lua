@@ -312,6 +312,35 @@ root(ROOTS.Zones, {
 			}},
 			["timeline"] = { ADDED_4_0_3 },
 		})),
+		header(HEADERS.Achievement, 62461, bubbleDownSelf({ ["timeline"] = { ADDED_12_1_0 } }, {	-- Family Battler of Cataclysm
+			petbattle(ach(62461, {	-- Family Battler of Cataclysm (automated)
+				-- Meta Achievement
+				["sym"] = {{"meta_achievement",
+					62476,	-- Aquatic Battler of Cataclysm
+					62477,	-- Beast Battler of Cataclysm
+					62478,	-- Critter Battler of Cataclysm
+					62479,	-- Dragonkin Battler of Cataclysm
+					62480,	-- Elemental Battler of Cataclysm
+					62481,	-- Flying Battler of Cataclysm
+					62482,	-- Humanoid Battler of Cataclysm
+					62483,	-- Magic Battler of Cataclysm
+					62487,	-- Mechanical Battler of Cataclysm
+					62488,	-- Undead Battler of Cataclysm
+				}},
+				["timeline"] = { ADDED_12_1_0 },
+				["groups"] = { i(270211) },	-- Furiostraza's Filter (PET!)
+			})),
+			petbattle(ach(62476)),	-- Aquatic Battler of Cataclysm
+			petbattle(ach(62477)),	-- Beast Battler of Cataclysm
+			petbattle(ach(62478)),	-- Critter Battler of Cataclysm
+			petbattle(ach(62479)),	-- Dragonkin Battler of Cataclysm
+			petbattle(ach(62480)),	-- Elemental Battler of Cataclysm
+			petbattle(ach(62481)),	-- Flying Battler of Cataclysm
+			petbattle(ach(62482)),	-- Humanoid Battler of Cataclysm
+			petbattle(ach(62483)),	-- Magic Battler of Cataclysm
+			petbattle(ach(62487)),	-- Mechanical Battler of Cataclysm
+			petbattle(ach(62488)),	-- Undead Battler of Cataclysm
+		})),
 		header(HEADERS.Achievement, 13279, bubbleDownSelf({ ["timeline"] = { ADDED_8_0_1 }, }, {	-- Family Battler
 			petbattle(ach(13279, {	-- Family Battler
 				-- Meta Achievement
@@ -1169,6 +1198,7 @@ root(ROOTS.Zones, {
 				-- #endif
 				SHOLAZAR_BASIN,
 			},
+			["timeline"] = { ADDED_3_0_2 },
 			-- #if AFTER WRATH
 			["sym"] = {{"meta_achievement",
 				939,	-- Hills Like White Elekk
@@ -1402,6 +1432,9 @@ root(ROOTS.Zones, {
 		applyclassicphase(TBC_PHASE_ONE, achWithReps(942, { FACTION_KURENAI, FACTION_SPOREGGAR, FACTION_TIMBERMAW_HOLD }, {	-- The Diplomat
 			["maps"] = { FELWOOD, ZANGARMARSH, NAGRAND },
 			["races"] = ALLIANCE_ONLY,
+			-- #if NOT ANYCLASSIC
+			["timeline"] = { ADDED_3_0_2 },
+			-- #endif
 			["groups"] = applyclassicphase(WRATH_PHASE_ONE, {
 				title(48),	-- <Name> the Diplomat
 			}),
@@ -1409,6 +1442,9 @@ root(ROOTS.Zones, {
 		applyclassicphase(TBC_PHASE_ONE, achWithReps(943, { FACTION_THE_MAGHAR, FACTION_SPOREGGAR, FACTION_TIMBERMAW_HOLD }, {	-- The Diplomat
 			["maps"] = { FELWOOD, ZANGARMARSH, NAGRAND },
 			["races"] = HORDE_ONLY,
+			-- #if NOT ANYCLASSIC
+			["timeline"] = { ADDED_3_0_2 },
+			-- #endif
 			["groups"] = applyclassicphase(WRATH_PHASE_ONE, {
 				title(48),	-- <Name> the Diplomat
 			}),
@@ -1929,6 +1965,7 @@ root(ROOTS.Zones, {
 				12988,	-- Battle for Azeroth Explorer
 				-- #endif
 			}},
+			["timeline"] = { ADDED_3_0_2 },
 			["groups"] = {
 				title(47),	-- <Name> the Explorer
 			},

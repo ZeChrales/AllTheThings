@@ -268,31 +268,31 @@ for i,guid in ipairs({
 	"Player-5825-01FD365B",	-- Anysil-Wild Growth (SoD)
 	-- Tag
 	"Player-1091-04F6F553",	-- Tag-Bloodscalp EU
-	"Player-1091-0A44C31D", -- Potentag-Bloodscalp EU
+	"Player-1091-0A44C31D",	-- Potentag-Bloodscalp EU
 	"Player-1091-04FEE79B",	-- Tagalong-Bloodscalp EU
-	"Player-1091-08D91860", -- Twilightag-Bloodscalp EU
-	"Player-1091-0772987D", -- Afflictag-Bloodscalp EU
-	"Player-1091-0B36F363", -- Tagoat-Bloodscalp EU
+	"Player-1091-08D91860",	-- Twilightag-Bloodscalp EU
+	"Player-1091-0772987D",	-- Afflictag-Bloodscalp EU
+	"Player-1091-0B36F363",	-- Tagoat-Bloodscalp EU
 	"Player-1091-079A210A",	-- Tageras-Bloodscalp EU
-	"Player-1091-0A464A3E", -- Frightag-Bloodscalp EU
-	"Player-1091-091A259B", -- Ptag-Bloodscalp EU
+	"Player-1091-0A464A3E",	-- Frightag-Bloodscalp EU
+	"Player-1091-091A259B",	-- Ptag-Bloodscalp EU
 	"Player-1091-06DA8328",	-- Taggles-Bloodscalp EU
 	"Player-1091-06D4E2FB",	-- Tagsenpai-Bloodscalp EU
-	"Player-1091-0A352BA7", -- Aratag-Bloodscalp EU
+	"Player-1091-0A352BA7",	-- Aratag-Bloodscalp EU
 	"Player-1091-04F9E1C9",	-- Tagu-Bloodscalp EU
-	"Player-1091-0A69D4B1", -- Abductag-Bloodscalp EU
+	"Player-1091-0A69D4B1",	-- Abductag-Bloodscalp EU
 	"Player-1091-0A81CBF8",	-- Taguise-Bloodscalp EU
-	"Player-1091-0ADC8628", -- Adamantag-Bloodscalp EU
+	"Player-1091-0ADC8628",	-- Adamantag-Bloodscalp EU
 	"Player-1091-04FEE745",	-- Tagarang-Bloodscalp EU
-	"Player-1091-09912A29", -- Huntag-Bloodscalp EU
+	"Player-1091-09912A29",	-- Huntag-Bloodscalp EU
 	"Player-1091-04FC9C87",	-- Tagelicious-Bloodscalp EU
-	"Player-1091-0A30D372", -- Goatag-Bloodscalp EU
-	"Player-1091-06D4E4E5", -- Tagov-Bloodscalp EU
-	"Player-1091-099137B0", -- Frostag-Bloodscalp EU
+	"Player-1091-0A30D372",	-- Goatag-Bloodscalp EU
+	"Player-1091-06D4E4E5",	-- Tagov-Bloodscalp EU
+	"Player-1091-099137B0",	-- Frostag-Bloodscalp EU
 	"Player-1091-04F9A20C",	-- Taggie-Bloodscalp EU
-	"Player-1091-08D77F91", -- Lightag-Bloodscalp EU
-	"Player-1091-04FEE76F", -- Tagrond-Bloodscalp EU
-	"Player-1091-0ADDA19E", -- Gutentag-Bloodscalp EU
+	"Player-1091-08D77F91",	-- Lightag-Bloodscalp EU
+	"Player-1091-04FEE76F",	-- Tagrond-Bloodscalp EU
+	"Player-1091-0ADDA19E",	-- Gutentag-Bloodscalp EU
 	-- Darkal
 	"Player-3391-0A512DEB",	-- Claella-Silvermoon EU
 	"Player-3391-07DAA0FA",	-- Cresaida-Silvermoon EU
@@ -596,6 +596,11 @@ local HookableTooltips = {
 	-- WorldQuestList
 	WQLTooltip = 1,
 	WQLAreaPOITooltipTooltip = 1,
+	-- Titan Panel
+	TitanPanelTooltip = 1,
+	-- World Quest Tracker
+	WorldQuestTrackerGameTooltipItemTooltipTooltip = 1
+
 };
 
 -- Shared Tooltip Functions
@@ -814,7 +819,7 @@ end
 local AttachTypicalSearchResults
 do
 	local DefaultSearchOptions = { AppendSearchParams = { "field", true }}
-	local NPCSearchOptions = { AppendSearchParams = { "none", true }}
+	local NPCSearchOptions = { AppendSearchParams = { "none", true }, ForceDifficulty = true }
 	local SearchOptionByField = setmetatable({
 		-- TODO: still need this for provider-types which don't translate into Cost...
 		-- will have to adjust how NPC-linked data is Filled so we can consistently
@@ -987,6 +992,7 @@ if TooltipDataProcessor and app.GameBuildVersion > 60000 then
 			or owner.Caster			-- Retail Death recap spell tooltips
 			or owner.numericValue	-- character 'Mastery' tooltip
 			or owner.spendTextShadows	-- Retail Talents UI tooltips
+			or owner.IsEditing	-- Retail Cooldown Manager tooltips (maybe anything else in EditMode UI as well)
 			then
 				return true;
 			end

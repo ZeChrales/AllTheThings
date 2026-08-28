@@ -348,6 +348,13 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS, EncounterToLoot, Zon
 local Boss, BossOnly, Difficulty, CommonBossDrops, ZoneDrops =
 InstanceHelper.Boss, InstanceHelper.BossOnly, InstanceHelper.Difficulty, InstanceHelper.CommonBossDrops, InstanceHelper.ZoneDrops
 
+-- #if AFTER 10.1.5
+InstanceHelper.LFRQueueNPC = {	-- Queue NPC
+	["crs"] = { 205959 },	-- Ta'elfar <Trader of Histories>
+	["coord"] = { 41.3, 71.0, ORIBOS },
+}
+-- #endif
+
 root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDED_9_2_0 } }, {
 	inst(1195, {	-- Sepulcher of the First Ones
 		["coord"] = { 80.9, 53.4, ZERETH_MORTIS },
@@ -884,12 +891,6 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 					i(182318),	-- Viscous Ink (CONDUIT!)
 				}),
 			}),
-			-- #if AFTER 10.1.5
-			Difficulty(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["crs"] = { 205959 },	-- Ta'elfar <Trader of Histories>
-				["coord"] = { 41.3, 71.0, ORIBOS },
-			}),
-			-- #endif
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroups(bubbleDown({ ["timeline"] = { ADDED_9_2_0, REMOVED_10_0_2_LAUNCH, ADDED_10_1_5 } }, {
 				ZoneDrops(),
 				header(HEADERS.Achievement, 15493, {	-- Ephemeral Plains
@@ -950,10 +951,8 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 			Difficulty(DIFFICULTY.RAID.NORMAL).AddGroups({
 				n(QUESTS, {
 					q(65764, {	-- Sepulcher of the First Ones - Heavy is the Crown [N]
-						["provider"] = { "n", 184601 },	-- Highlord Bolvar Fordragon
-						["groups"] = {
-							i(190967),	-- Mourne Fragment (QI!)
-						},
+						["qg"] = 184601,	-- Highlord Bolvar Fordragon
+						["qi"] = 190967,	-- Mourne Fragment (QI!)
 					}),
 				}),
 				ZoneDrops(),
@@ -1003,10 +1002,8 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 			Difficulty(DIFFICULTY.RAID.HEROIC).AddGroups({
 				n(QUESTS, {
 					q(65763, {	-- Sepulcher of the First Ones - Heavy is the Crown [H]
-						["provider"] = { "n", 184601 },	-- Highlord Bolvar Fordragon
-						["groups"] = {
-							i(190966),	-- Mourne Fragment (QI!)
-						},
+						["qg"] = 184601,	-- Highlord Bolvar Fordragon
+						["qi"] = 190966,	-- Mourne Fragment (QI!)
 					}),
 				}),
 				ZoneDrops(),
@@ -1029,7 +1026,7 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 							184601,	-- Highlord Bolvar Fordragon
 							188683,	-- Knight of the Ebon Blade
 						},	--
-						["groups"] = { i(190959) },	-- Mourne Fragment (QI!)
+						["qi"] = 190959,	-- Mourne Fragment (QI!)
 					}),
 				}),
 				ZoneDrops(),

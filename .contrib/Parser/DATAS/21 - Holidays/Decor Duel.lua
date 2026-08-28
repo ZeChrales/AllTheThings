@@ -7,22 +7,22 @@ DECOR_DUEL = createHeader({
 	icon = 1392559,
 	text = {
 		en = "Decor Duel",
-		--de = "Decor Duel",
-		--es = "Decor Duel",
-		--mx = "Decor Duel",
-		--fr = "Decor Duel",
-		--it = "Decor Duel",
-		--ko = "Decor Duel",
-		--pt = "Decor Duel",
-		--ru = "Decor Duel",
+		de = "Dekorationsduell",
+		es = "Duelo de adornos",
+		mx = "Duelo de decoraciones",
+		fr = "Duel de décoration",
+		it = "Duello di Decorazioni",
+		ko = "하우징 장식 결투",
+		pt = "Duelo de Decoração",
+		ru = "Дуэль декораторов",
 		cn = "装饰决斗",
-		--tw = "Decor Duel",
+		tw = "裝迷藏競賽",
 	},
 	description = {
 		en = "Decor Duel is a team-based prop hunt event in Silvermoon City, offering a fun activity to escape the madness of the Void invasion with a friendly magical game of hide and seek.\n\nPlayers can access the Decor Duel queue through the Quick Match section in the PvP tab of the Group Finder. Teams of up to 5 can queue up together for this casual PvP activity. Groups of 1 to 4 players will be matched with other random queuers.",
 		-- TODO: de = "",
-		-- TODO: es = "",
-		-- TODO: mx = "",
+		es = "Duelo de adornos es un evento de búsqueda de objetos por equipos en Ciudad Lunargenta, que ofrece una actividad divertida para escapar de la locura de la invasión del Vacío con un amistoso juego mágico de escondite.\n\nLos jugadores pueden acceder a la cola de Duelo de adornos a través de la sección Partida rápida en la pestaña JcJ del Buscador de grupos. Equipos de hasta 5 pueden unirse a la cola para esta actividad JcJ casual. Los grupos de 1 a 4 jugadores se emparejarán con otros jugadores aleatorios.",
+		mx = "Duelo de decoraciones es un evento de búsqueda de objetos por equipos en Ciudad Lunargenta, que ofrece una actividad divertida para escapar de la locura de la invasión del Vacío con un amistoso juego mágico de escondite.\n\nLos jugadores pueden acceder a la cola de Duelo de decoraciones a través de la sección Partida rápida en la pestaña JcJ del Buscador de grupos. Equipos de hasta 5 pueden unirse a la cola para esta actividad JcJ casual. Los grupos de 1 a 4 jugadores se emparejarán con otros jugadores aleatorios.",
 		-- TODO: fr = "",
 		-- TODO: it = "",
 		-- TODO: ko = "",
@@ -37,10 +37,10 @@ local ILLUSIONARY_COIN = 3393;
 
 root(ROOTS.Holidays,
 	--applyevent(EVENTS.DECOR_DUEL,	-- DO NOT TOUCH! (for now) It is placed among 'World Events' in-game under Achievements but there is no EventID on Wago. Maybe move to World Events?	-- Exo
-	bubbleDown({ ["timeline"] = { ADDED_12_0_5 } }, {
 	n(DECOR_DUEL, {
 		["maps"] = { MAP.MIDNIGHT.SILVERMOON_CITY },	-- Silvermoon City
 		["cr"] = 257125,	-- Fieldweaver Amolenne <Match Coordinator>
+		["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 },
 		["groups"] = {
 			n(ACHIEVEMENTS, {
 				ach(61793),	-- Deployed to the Void
@@ -110,55 +110,135 @@ root(ROOTS.Holidays,
 				}),
 				-- Repeatable Quests
 				q(93870, {	-- The Ephemeron Masquerade
-					["sourceQuest"] = 93719,	-- Nothing Captured, Nothing Gained
+					["sourceQuests"] = {
+						93719,	-- Nothing Captured, Nothing Gained
+						93914,	-- AW HQT during quest chain, possibly considered as unlock for alts...
+					},
+					["sourceQuestNumRequired"] = 1,
 					["qg"] = 256697,	-- Propagandist Naicira
 					["coord"] = { 31.5, 76.4, MAP.MIDNIGHT.SILVERMOON_CITY },
 					["isDaily"] = true,	-- Speculation
 				}),
 			}),
 			n(REWARDS, {
-				currency(ILLUSIONARY_COIN),
-				i(268122),	-- Dispelled Coins
+				o(621494, {	-- Prize Chest
+					currency(ILLUSIONARY_COIN),
+					i(268122),	-- Dispelled Coins
+				}),
 			}),
 			n(VENDORS, {
 				n(264056, {	-- Disguised Decor Duel Vendor <Illusionary Coin Trader>
 					["coord"] = { 31.6, 76.7, MAP.MIDNIGHT.SILVERMOON_CITY },
+					["timeline"] = { ADDED_12_0_5 },
+					["_forcetimeline"] = true,
 					["groups"] = {
 						i(272445, {	-- Decorative Dornogal Opal (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 10 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,200},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,10},
+								-- #ENDIF
+							},
 						}),
 						i(272442, {	-- Empty Wooden Toolbox (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 20 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,300},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,20},
+								-- #ENDIF
+							},
 						}),
 						i(272446, {	-- Large Decorative Dornogal Opal (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 10 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,200},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,10},
+								-- #ENDIF
+							},
 						}),
 						i(269636, {	-- Sin'dorei Cookpot Lid (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 15 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,250},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,15},
+								-- #ENDIF
+							},
 						}),
 						i(269613, {	-- Sin'dorei Covered Cookpot (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 30 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,350},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,30},
+								-- #ENDIF
+							},
 						}),
 						i(269641, {	-- Sin'dorei Display Case (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 50 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,400},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,50},
+								-- #ENDIF
+							},
 						}),
 						i(271162, {	-- Sin'dorei Garden Swing (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 120 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,750},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,120},
+								-- #ENDIF
+							},
 						}),
 						i(269614, {	-- Sin'dorei Open Cookpot (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 15 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,250},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,15},
+								-- #ENDIF
+							},
 						}),
 						i(268457, {	-- Sin'dorei Tiffin-Style Lamp (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 50 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,400},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,50},
+								-- #ENDIF
+							},
 						}),
 						i(272444, {	-- Small Decorative Dornogal Opal (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 10 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,200},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,10},
+								-- #ENDIF
+							},
 						}),
 						i(272441, {	-- Small Lumber Pile (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 10 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,200},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,10},
+								-- #ENDIF
+							},
 						}),
 						i(272443, {	-- Suramar Arcfruit Bowl (DECOR!)
-							["cost"] = { { "c", ILLUSIONARY_COIN, 20 } },
+							["cost"] = {
+								-- #IF AFTER 12.1
+								{"c",VOIDLIGHT_MARL,300},
+								-- #ELSE
+								{"c",ILLUSIONARY_COIN,20},
+								-- #ENDIF
+							},
 						}),
 					},
 				}),
@@ -236,10 +316,7 @@ root(ROOTS.Holidays,
 				}),
 			}),
 		},
-	}),
-})
---)
-);
+	}))
 
 root(ROOTS.HiddenQuestTriggers, {
 	expansion(EXPANSION.MID, {
