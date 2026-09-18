@@ -137,21 +137,21 @@ local ABBREVIATIONS = {
 	["Outdoor Zones"] = LFG_TYPE_ZONE,
 	-- Expansion sorted
 	["Classic %> "] = "",
-	["The Burning Crusade"] = "BC",
-	["Burning Crusade"] = "BC",
-	["The BC"] = "BC",
-	["The TBC"] = "BC",							-- German locale issue
-	["Wrath of the Lich King"] = "WotLK",
-	["Cataclysm %>"] = "Cata >",
+	["%> The Burning Crusade"] = "> BC",
+	["%> Burning Crusade"] = "> BC",
+	["%> The BC"] = "> BC",
+	["%> The TBC"] = "> BC",							-- German locale issue
+	["%> Wrath of the Lich King"] = "> WotLK",
+	["%> Cataclysm"] = "> Cata",
 	["Cataclysm "] = "Cata ",
-	["Mists of Pandaria"] = "MoP",
-	["Warlords of Draenor"] = "WoD",
-	["Battle for Azeroth"] = "BFA",
-	["The Shadowlands"] = "SL",
-	["Shadowlands"] = "SL",
-	["Dragonflight"] = "DF",
-	["The War Within"] = "TWW",
-	["Midnight"] = "MID",
+	["%> Mists of Pandaria"] = "> MoP",
+	["%> Warlords of Draenor"] = "> WoD",
+	["%> Battle for Azeroth"] = "> BFA",
+	["%> The Shadowlands"] = "> SL",
+	["%> Shadowlands"] = "> SL",
+	["%> Dragonflight"] = "> DF",
+	["%> The War Within"] = "> TWW",
+	["%> Midnight"] = "> MN",
 	-- Dungeon & Raid
 	["Normal"] = "N",
 	["Heroic"] = "H",
@@ -592,7 +592,7 @@ if localeString == "zhCN" or localeString == "zhTW" then
 	end
 end
 
-if app.IsRetail then
+if app.IsRetail and app.GameBuildVersion > 70000 then
 	local CUSTOM_COLLECTS_REASONS = {
 		["NPE"] = {
 			color = "ff5bc41d",

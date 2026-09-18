@@ -4,7 +4,7 @@ _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,ah,cat,crit,flt,h,i,mnt,n,o,p,prof,r,s,sp,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateCategory,_.CreateAchievementCriteria,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfession,_.CreateRecipe,_.CreateItemSource,_.CreateSpell,_.CreateToy,_.CreateExpansion;
 categories.Craftables=
 h(-23,{DontEnforceSkillRequirements=1,SortPriority=20,g={
-x(1,{
+x(1,{awp=10100,g={
 prof(171,{
 h(-22,{
 i(3371,{description="Can be bought from Alchemy Suppliers, as well as some Trade vendors around the world.",q=1}),
@@ -986,8 +986,8 @@ i(21151,{f=55,providers={{"o",180655},{"o",180656},{"o",180658},{"o",180662},{"o
 i(20709,{f=55,maps_disp={1413,1421,1431,1433,1436,1439},providers={{"o",180655}},q=1})}),
 flt(57,{
 s(121176,6366,{description="Can be caught in Ashenvale, Arathi Highlands, Hillsbrad Foothills, Northern Stranglethorn, Redridge Mountains and Wetlands.",f=57,learnedAt=50,lvl=15,maps_disp={1417,1424,1433,1434,1437,1440},q=1,requireSkill=356})}),
-flt(200,{awp=20300,g={
-r(43308,{b=1,description="Can be fished from schools.",itemID=34109,learnedAt=100,q=1,requireSkill=356})}}),
+flt(200,{
+r(43308,{awp=20300,b=1,description="Can be fished from schools.",itemID=34109,learnedAt=100,q=1,requireSkill=356})}),
 i(13888,{description="Can be caught on the seaside.",lvl=45,maps_disp={1447},q=1}),
 i(6522,{coords={
 [1413]={{45,22},{46,38},{56,43}}},f=55,providers={{"o",180658}},q=1}),
@@ -1026,15 +1026,15 @@ o(180663,{rwp=50100}),
 o(180658,{coords={
 [1413]={{45,22},{46,38},{56,43}}}}),
 o(180712,{description="Can be found on the seaside.",maps={1425,1434,1444,1446,1447}}),
-o(180901,{awp=30002,description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1434},g={
-crit(3873,{achID=1257,id=1,maps={1434},providers={{"o",180901}},requireSkill=356})}}),
+o(180901,{description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1434},g={
+crit(3873,{achID=1257,awp=30002,id=1,maps={1434},providers={{"o",180901}},requireSkill=356})}}),
 o(180655,{description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1413,1421,1431,1433,1436,1439}}),
-o(180751,{awp=30002,description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1419,1423,1435,1446},g={
-crit(3876,{achID=1257,id=1,maps={1444,1446,1447},providers={{"o",180751}},requireSkill=356})}}),
-o(180662,{awp=30002,description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1424,1437,1440,1442},g={
-crit(3874,{achID=1257,id=1,maps={1424,1437,1442},providers={{"o",180662}},requireSkill=356})}}),
-o(180685,{awp=30002,description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1434,1446},g={
-crit(3875,{achID=1257,id=1,maps={1416,1417,1434,1443,1445},providers={{"o",180685}},requireSkill=356})}})}}),
+o(180751,{description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1419,1423,1435,1446},g={
+crit(3876,{achID=1257,awp=30002,id=1,maps={1444,1446,1447},providers={{"o",180751}},requireSkill=356})}}),
+o(180662,{description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1424,1437,1440,1442},g={
+crit(3874,{achID=1257,awp=30002,id=1,maps={1424,1437,1442},providers={{"o",180662}},requireSkill=356})}}),
+o(180685,{description="Wreckages can be found on the seaside, as well as inland waters near humanoid structures. If you cannot find any, fish out nearby fishing schools as they share spawns.",maps={1434,1446},g={
+crit(3875,{achID=1257,awp=30002,id=1,maps={1416,1417,1434,1443,1445},providers={{"o",180685}},requireSkill=356})}})}}),
 prof(182,{description="It is beneficial to gather all herbs in the area even if you only need specific herbs because the node spawns are often connected.",g={
 ah(2366,{type="s",g={
 o(142141,{learnedAt=220,maps={300,317,1422,1423},requireSkill=182,rwp=40003}),
@@ -1736,8 +1736,8 @@ s(126982,15045,{awp=40300,f=6,loc=42,lvl=47,q=3,rwp=40003}),
 s(130855,20296,{f=6,loc=44,lvl=49,q=3}),
 s(126983,15046,{awp=40300,f=6,loc=46,lvl=49,q=3,rwp=40003}),
 s(126984,15047,{f=6,loc=42,lvl=56,q=3,rwp=60002})})}),
-flt(2,{awp=20300,g={
-s(144102,34086,{f=4,filterForRWP=2,loc=47,q=1,rwp=70302})}}),
+flt(2,{
+s(144102,34086,{awp=20300,f=4,filterForRWP=2,loc=47,q=1,rwp=70302})}),
 flt(50,{
 i(18251,{lvl=50,q=3}),
 i(4236,{q=1}),
@@ -2175,8 +2175,8 @@ i(2324,{description="Can be bought from Tailoring Suppliers, as well as some Tra
 i(6261,{description="Can be bought from Tailoring Suppliers, as well as some Trade vendors around the world.",q=1}),
 i(10290,{description="Can be bought from Tailoring Suppliers, as well as some Trade vendors around the world.",q=1}),
 i(4341,{description="Can be bought from Tailoring Suppliers, as well as some Trade vendors around the world.",q=1})}),
-flt(50,{awp=100105,g={
-i(18258,{lvl=55,q=2,rwp=40003,u=1101})}}),
+flt(50,{
+i(18258,{awp=100105,lvl=55,q=2,rwp=40003,u=1101})}),
 flt(56,{
 i(2996,{q=1}),
 i(4339,{q=1}),
@@ -2188,9 +2188,9 @@ i(14342,{coords={
 [1453]={{21,53}},
 [1457]={{43.1,80.27}},
 [1942]={{13.13,26.23}},
-[1952]={{45.02,23.54}}},description="Coordinates are for select Moonwells around the world.",q=1})})})}),
-x(2,{awp=20005,u=17,g={
-prof(171,{u=17,g={
+[1952]={{45.02,23.54}}},description="Coordinates are for select Moonwells around the world.",q=1})})})}}),
+x(2,{awp=20003,u=17,g={
+prof(171,{awp=20005,u=17,g={
 h(-26,{u=17,g={
 r(41458,{awp=20100,learnedAt=360,requireSkill=171,u=17}),
 r(41500,{awp=20100,learnedAt=360,requireSkill=171,u=17}),
@@ -2280,7 +2280,7 @@ i(35748,{awp=20400,b=1,f=53,q=4,requireSkill=171,u=21}),
 i(35750,{awp=20400,b=1,f=53,q=4,requireSkill=171,u=21}),
 i(35749,{awp=20400,b=1,f=53,q=4,requireSkill=171,u=21}),
 i(31080,{f=53,lvl=65,q=2,u=17})}})}}),
-prof(164,{u=17,g={
+prof(164,{awp=20005,u=17,g={
 prof(9788,{description="These items can only be crafted by Blacksmiths who have completed the Art of the Armorsmith quest chain.",u=17,g={
 s(138829,28483,{awp=20100,b=1,f=7,loc=42,lvl=70,q=4,requireSkill=9788,rwp=40003,u=17}),
 s(138830,28484,{b=1,f=7,loc=42,lvl=70,q=4,requireSkill=9788,rwp=40003,u=17}),
@@ -2421,7 +2421,7 @@ s(143198,32854,{awp=20300,f=24,lvl=70,q=4,u=17}),
 s(133952,23556,{f=23,lvl=70,q=4,u=17}),
 s(133937,23541,{f=26,lvl=70,q=4,u=17}),
 s(133940,23544,{f=23,lvl=70,q=4,u=17})}})}}),
-prof(185,{u=17,g={
+prof(185,{awp=20005,u=17,g={
 i(27657,{f=55,lvl=55,q=1,u=17}),
 i(27663,{f=55,lvl=55,q=1,u=17}),
 i(27661,{f=55,lvl=55,q=1,u=17}),
@@ -2447,7 +2447,7 @@ i(33048,{awp=20102,f=55,lvl=65,q=1,u=18}),
 i(33866,{awp=20300,f=55,lvl=55,q=1,u=17}),
 i(27660,{f=55,lvl=55,q=1,u=17}),
 i(27659,{f=55,lvl=55,q=1,u=17})}}),
-prof(333,{u=17,g={
+prof(333,{awp=20005,u=17,g={
 ah(13262,{type="s",u=17,g={
 i(22445,{description="Obtained from disenchanting uncommon (green) quality TBC garments, amulets, rings, shields and off-hand frills within the ilvl bracket 87-120.",q=1,u=17}),
 i(22446,{description="Obtained from disenchanting uncommon (green) quality TBC weapons within the ilvl bracket 102-120, except shields and off-hand frills.",q=2,u=17}),
@@ -2521,7 +2521,7 @@ i(38919,{q=3,u=30}),
 i(38924,{q=3,u=30}),
 i(38926,{q=3,u=30}),
 i(38923,{q=3,u=30})}})}}),
-prof(202,{u=17,g={
+prof(202,{awp=20005,u=17,g={
 prof(20219,{description="These items can only be crafted by Engineers who have completed the Gnomish Engineering quest chain.",u=17,g={
 h(-88,{u=17,g={
 s(134216,23829,{b=1,f=5,learnedAt=375,loc=40,q=4,requireSkill=20219,u=17}),
@@ -2618,10 +2618,10 @@ n(17408,{maps={1953},requireSkill=202,u=17}),
 n(17407,{maps={1948},requireSkill=202,u=17}),
 n(17378,{maps={1946},requireSkill=202,u=17}),
 n(24222,{awp=20300,maps={1951},requireSkill=202,u=17})}})}}),
-prof(129,{u=17,g={
+prof(129,{awp=20005,u=17,g={
 i(21991,{f=55,q=1,requireSkill=129,u=17}),
 i(21990,{f=55,q=1,requireSkill=129,u=17})}}),
-prof(356,{u=17,g={
+prof(356,{awp=20005,u=17,g={
 i(27422,{maps_disp={1430,1946,1951,1952},q=1,u=17}),
 i(34865,{awp=20400,maps_disp={1952},q=1,u=17}),
 i(35313,{awp=20400,b=1,maps_disp={1946},q=1,u=17,g={
@@ -2669,7 +2669,7 @@ o(182952,{maps={1946},u=17,g={
 crit(3872,{achID=1257,awp=30002,id=1,maps={1946},providers={{"o",182952}},requireSkill=356})}}),
 flt(200,{u=17,g={
 r(43308,{awp=20300,b=1,description="Can be fished from schools.",itemID=34109,learnedAt=100,q=1,requireSkill=356,u=17})}})}}),
-prof(182,{u=17,g={
+prof(182,{awp=20005,u=17,g={
 ah(2366,{type="s",u=17,g={
 o(181278,{learnedAt=340,maps={256,258,260,262,263,265,272},requireSkill=182,u=17}),
 o(181271,{description="Found near edges and highly uneven terrain.",learnedAt=315,maps={1948,1949,1951,1952,1953},requireSkill=182,u=17}),
@@ -2704,7 +2704,7 @@ i(22789,{coords={
 [1948]={{36.5,32.5},{43.4,55.8}},
 [1949]={{29.2,81.3}}},description="Found near the base of trees.",maps_disp={1952},providers={{"o",181277}},q=1,u=17}),
 i(24401,{maps_disp={1946},q=1,u=17})}})}}),
-prof(773,{u=17,g={
+prof(773,{awp=20005,u=17,g={
 ah(51005,{type="s",u=17,g={
 i(43108,{providers={{"i",22785},{"i",22786},{"i",22787},{"i",22789},{"i",22790},{"i",22792},{"i",22793}},q=2,u=17}),
 i(39342,{providers={{"i",22785},{"i",22786},{"i",22787},{"i",22789},{"i",22790},{"i",22792},{"i",22793}},q=1,u=17})}}),
@@ -2762,7 +2762,7 @@ i(31894,{q=3,u=17}),
 i(31898,{q=3,u=17}),
 i(31896,{q=3,u=17}),
 i(31893,{q=3,u=17})}})}})}}),
-prof(755,{u=17,g={
+prof(755,{awp=20005,u=17,g={
 ah(31252,{type="s",u=17,g={
 i(23117,{description="This gem is most reliably obtained from prospecting ore with Jewelcrafting.",providers={{"i",23424},{"i",23425}},q=2,u=17}),
 i(23077,{description="This gem is most reliably obtained from prospecting ore with Jewelcrafting.",providers={{"i",23424},{"i",23425}},q=2,u=17}),
@@ -2974,7 +2974,7 @@ i(24128,{b=1,f=53,lvl=70,q=3,requireSkill=755,u=17}),
 i(35703,{awp=20400,b=1,f=53,lvl=70,q=4,requireSkill=755,u=21}),
 i(35702,{awp=20400,b=1,f=53,lvl=70,q=4,requireSkill=755,u=21}),
 i(24127,{b=1,f=53,lvl=70,q=3,requireSkill=755,u=17})}})}}),
-prof(165,{u=17,g={
+prof(165,{awp=20005,u=17,g={
 prof(10656,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.",u=17,g={
 s(140317,29971,{b=1,f=6,loc=46,lvl=45,q=3,requireSkill=10656,u=17}),
 s(139862,29516,{b=1,f=6,loc=45,lvl=70,q=4,requireSkill=10656,rwp=40003,u=17}),
@@ -3108,7 +3108,7 @@ i(185848,{f=55,u=20}),
 i(185849,{f=55,u=20}),
 i(185850,{f=55,u=20}),
 i(185851,{f=55,u=20}),
-i(185852,{awp=20001,f=55,rwp=30002,u=2}),
+i(185852,{awp=20003,f=55,rwp=30002,u=2}),
 i(34330,{awp=20300,lvl=60,q=1,u=17}),
 i(23793,{q=1,u=17}),
 i(34099,{awp=20300,f=113,lvl=60,q=2,rwp=40001,u=20}),
@@ -3127,7 +3127,7 @@ i(29483,{lvl=65,q=2,rwp=50004,u=17}),
 i(25651,{lvl=55,q=1,u=17})}}),
 flt(53,{u=17,g={
 i(25653,{f=53,lvl=69,q=3,u=17})}})}}),
-prof(186,{u=17,g={
+prof(186,{awp=20005,u=17,g={
 ah(2575,{type="s",u=17,g={
 o(181556,{learnedAt=325,maps={1946,1948,1949,1951,1952,1953,1957},requireSkill=186,u=17}),
 o(181555,{learnedAt=300,maps={1944,1946,1948,1949,1951,1952,1953},requireSkill=186,u=17}),
@@ -3147,13 +3147,13 @@ i(23448,{cost={{"i",23447,2},{"i",23445,3}},q=2,u=17}),
 i(23573,{cost={{"i",23446,10}},q=1,u=17}),
 i(35128,{awp=20400,cost={{"i",23573,1},{"i",23449,3}},q=2,u=21}),
 i(23449,{cost={{"i",23426,2}},q=2,u=17})}})}}),
-prof(40,{c={4},rwp=30002,u=2,g={
+prof(40,{awp=20005,c={4},rwp=30002,u=2,g={
 i(21835,{c={4},f=55,lvl=68,q=1,u=2}),
 i(22053,{c={4},f=55,lvl=62,q=1,u=2}),
 i(22054,{c={4},f=55,lvl=70,q=1,u=2}),
 i(21927,{c={4},f=55,lvl=68,q=1,u=2}),
 i(22055,{c={4},f=55,lvl=64,q=1,u=2})}}),
-prof(393,{description="The following items can be gathered by skinning creatures on Outland. Note that Knothide Leather is the most common reagent to get from skinning. All other skinned reagents have a lower than 100% drop chance from skinning the respective mobs, thus you must expect having to skin multiple creatures to obtain the reagent.\n\nThis header will often not show everything uncollected it contains, even when enabling 'Debug Mode'. The best way to track specific reagents is to do /att item:[itemID] or pop out this header.",u=17,g={
+prof(393,{awp=20005,description="The following items can be gathered by skinning creatures on Outland. Note that Knothide Leather is the most common reagent to get from skinning. All other skinned reagents have a lower than 100% drop chance from skinning the respective mobs, thus you must expect having to skin multiple creatures to obtain the reagent.\n\nThis header will often not show everything uncollected it contains, even when enabling 'Debug Mode'. The best way to track specific reagents is to do /att item:[itemID] or pop out this header.",u=17,g={
 i(29539,{coords={
 [1948]={{45.5,13},{45.8,28.6},{53.05,25.55},{65.25,22.5},{66.1,30},{71.8,30}},
 [1951]={{11.4,39.3},{19.4,34.6}}},crs={19784,23020,23026},q=1,u=17}),
@@ -3188,7 +3188,7 @@ i(29547,{coords={
 [1948]={{47,64.5}},
 [1949]={{66,52.6},{68.5,70.55},{71.5,30.1}},
 [1953]={{56.4,60},{66.3,61.8}}},crs={20502,20673,20749,21123},q=1,u=17})}}),
-prof(197,{u=17,g={
+prof(197,{awp=20005,u=17,g={
 prof(26798,{description="These items can only be crafted by Tailorings that have completed the Becoming a Mooncloth Tailor quest in Shattrath.\n\nNOTE: You may only have one of these specializations active per character.",u=17,g={
 s(132276,21873,{f=4,loc=45,lvl=70,q=4,requireSkill=26798,u=17}),
 s(132278,21875,{f=4,loc=42,lvl=70,q=4,requireSkill=26798,u=17}),
@@ -3286,7 +3286,7 @@ i(21845,{coords={
 i(24272,{coords={
 [1948]={{58.3,70.9}}},q=3,u=17}),
 i(24271,{maps_disp={1953},q=3,u=17})}})}})}}),
-x(3,{awp=30003,u=30,g={
+x(3,{awp=30003,g={
 prof(171,{u=30,g={
 h(-22,{u=30,g={
 i(40411,{awp=30002,description="Can be bought from Alchemy Suppliers, as well as some Trade vendors around the world.",q=1,rwp=40001,u=30})}}),
@@ -3844,10 +3844,10 @@ flt(1,{u=30,g={
 s(175211,44210,{f=1,lvl=77,q=4,u=30}),
 s(171992,38322,{f=1,lvl=77,q=4,u=30}),
 ah(45854,{awp=30100,description="This version of the off-hand is a placeholder for the four available versions of it, and crafting it gives you a random one of the four. The four available versions of the off-hands have the same stats, but offer a different coloured giant wholf.",providers={{"i",45854}},type="i",u=30,g={
-s(175937,45850,{awp=30003,f=1,lvl=70,q=3,u=30}),
-s(175938,45851,{awp=30003,f=1,lvl=70,q=3,u=30}),
-s(175939,45852,{awp=30003,f=1,lvl=70,q=3,u=30}),
-s(175940,45853,{awp=30003,f=1,lvl=70,q=3,u=30})}}),
+s(175937,45850,{f=1,lvl=70,q=3,u=30}),
+s(175938,45851,{f=1,lvl=70,q=3,u=30}),
+s(175939,45852,{f=1,lvl=70,q=3,u=30}),
+s(175940,45853,{f=1,lvl=70,q=3,u=30})}}),
 s(175936,45849,{f=1,lvl=70,q=3,u=30})}}),
 flt(50,{u=30,g={
 i(49632,{lvl=80,q=1,u=30}),
@@ -4199,89 +4199,89 @@ i(40049,{q=3,u=30}),
 i(40088,{q=3,u=30}),
 i(40052,{q=3,u=30})}}),
 h(-217,{awp=30200,u=32,g={
-i(40162,{awp=30003,q=4,u=32}),
+i(40162,{q=4,u=32}),
 i(40136,{q=4,rwp=40003,u=32}),
-i(40111,{awp=30003,q=4,u=32}),
+i(40111,{q=4,u=32}),
 i(40114,{q=4,rwp=40003,u=32}),
 i(40123,{q=4,rwp=40003,u=32}),
-i(40144,{awp=30003,q=4,u=32}),
+i(40144,{q=4,u=32}),
 i(40175,{q=4,rwp=40003,u=32}),
-i(40147,{awp=30003,q=4,u=32}),
-i(40139,{awp=30003,q=4,u=32}),
-i(40150,{awp=30003,q=4,u=32}),
-i(40112,{awp=30003,q=4,u=32}),
-i(40154,{awp=30003,q=4,u=32}),
+i(40147,{q=4,u=32}),
+i(40139,{q=4,u=32}),
+i(40150,{q=4,u=32}),
+i(40112,{q=4,u=32}),
+i(40154,{q=4,u=32}),
 i(40158,{q=4,rwp=40003,u=32}),
-i(40167,{awp=30003,q=4,u=32}),
-i(40179,{awp=30003,q=4,u=32}),
-i(40143,{awp=30003,q=4,u=32}),
-i(40146,{awp=30003,q=4,u=32}),
-i(40116,{awp=30003,q=4,u=32}),
-i(40169,{awp=30003,q=4,u=32}),
+i(40167,{q=4,u=32}),
+i(40179,{q=4,u=32}),
+i(40143,{q=4,u=32}),
+i(40146,{q=4,u=32}),
+i(40116,{q=4,u=32}),
+i(40169,{q=4,u=32}),
 i(40117,{q=4,rwp=40003,u=32}),
 i(40161,{q=4,rwp=40003,u=32}),
 i(40148,{q=4,rwp=40003,u=32}),
 i(40132,{q=4,rwp=40003,u=32}),
-i(40141,{awp=30003,q=4,u=32}),
+i(40141,{q=4,u=32}),
 i(40137,{q=4,rwp=40003,u=32}),
-i(40142,{awp=30003,q=4,u=32}),
+i(40142,{q=4,u=32}),
 i(40174,{q=4,rwp=40003,u=32}),
-i(40165,{awp=30003,q=4,u=32}),
-i(40177,{awp=30003,q=4,u=32}),
-i(40149,{awp=30003,q=4,u=32}),
+i(40165,{q=4,u=32}),
+i(40177,{q=4,u=32}),
+i(40149,{q=4,u=32}),
 i(40151,{q=4,rwp=40003,u=32}),
 i(40121,{q=4,rwp=40003,u=32}),
-i(40171,{awp=30003,q=4,u=32}),
-i(40135,{awp=30003,q=4,u=32}),
-i(40127,{awp=30003,q=4,u=32}),
-i(49110,{awp=30003,q=4,u=32}),
+i(40171,{q=4,u=32}),
+i(40135,{q=4,u=32}),
+i(40127,{q=4,u=32}),
+i(49110,{q=4,u=32}),
 i(40178,{q=4,rwp=40003,u=32}),
-i(40152,{awp=30003,q=4,u=32}),
-i(40118,{awp=30003,q=4,u=32}),
-i(40157,{awp=30003,q=4,u=32}),
+i(40152,{q=4,u=32}),
+i(40118,{q=4,u=32}),
+i(40157,{q=4,u=32}),
 i(40140,{q=4,rwp=40003,u=32}),
-i(40133,{awp=30003,q=4,u=32}),
-i(40128,{awp=30003,q=4,u=32}),
-i(40180,{awp=30003,q=4,u=32}),
-i(40155,{awp=30003,q=4,u=32}),
+i(40133,{q=4,u=32}),
+i(40128,{q=4,u=32}),
+i(40180,{q=4,u=32}),
+i(40155,{q=4,u=32}),
 i(40138,{q=4,rwp=40003,u=32}),
-i(40163,{awp=30003,q=4,u=32}),
-i(40145,{awp=30003,q=4,u=32}),
-i(40125,{awp=30003,q=4,u=32}),
+i(40163,{q=4,u=32}),
+i(40145,{q=4,u=32}),
+i(40125,{q=4,u=32}),
 i(40134,{q=4,rwp=40003,u=32}),
-i(40113,{awp=30003,q=4,u=32}),
+i(40113,{q=4,u=32}),
 i(40170,{q=4,rwp=40003,u=32}),
-i(40182,{awp=30003,q=4,u=32}),
-i(40130,{awp=30003,q=4,u=32}),
+i(40182,{q=4,u=32}),
+i(40130,{q=4,u=32}),
 i(40172,{q=4,rwp=40003,u=32}),
-i(40124,{awp=30003,q=4,u=32}),
-i(40119,{awp=30003,q=4,u=32}),
-i(40129,{awp=30003,q=4,u=32}),
-i(40120,{awp=30003,q=4,u=32}),
-i(40160,{awp=30003,q=4,u=32}),
+i(40124,{q=4,u=32}),
+i(40119,{q=4,u=32}),
+i(40129,{q=4,u=32}),
+i(40120,{q=4,u=32}),
+i(40160,{q=4,u=32}),
 i(40159,{q=4,rwp=40003,u=32}),
-i(40168,{awp=30003,q=4,u=32}),
-i(40122,{awp=30003,q=4,u=32}),
-i(40115,{awp=30003,q=4,u=32}),
+i(40168,{q=4,u=32}),
+i(40122,{q=4,u=32}),
+i(40115,{q=4,u=32}),
 i(40176,{q=4,rwp=40003,u=32}),
 i(40181,{q=4,rwp=40003,u=32}),
 i(40131,{q=4,rwp=40003,u=32}),
 i(40126,{q=4,rwp=40003,u=32}),
-i(40164,{awp=30003,q=4,u=32}),
-i(40173,{awp=30003,q=4,u=32}),
-i(40153,{awp=30003,q=4,u=32}),
-i(40166,{awp=30003,q=4,u=32}),
+i(40164,{q=4,u=32}),
+i(40173,{q=4,u=32}),
+i(40153,{q=4,u=32}),
+i(40166,{q=4,u=32}),
 i(40156,{q=4,rwp=40003,u=32})}})}}),
 flt(50,{u=30,g={
 i(41367,{f=55,q=2,u=30}),
 i(44943,{awp=30008,f=55,q=3,u=30,g={
-i(36921,{awp=30003,q=3,u=30}),
-i(42225,{awp=30003,q=3,requireSkill=755,u=30}),
-i(36933,{awp=30003,q=3,u=30}),
-i(36930,{awp=30003,q=3,u=30}),
-i(36918,{awp=30003,q=3,u=30}),
-i(36924,{awp=30003,q=3,u=30}),
-i(36927,{awp=30003,q=3,u=30})}}),
+i(36921,{q=3,u=30}),
+i(42225,{q=3,requireSkill=755,u=30}),
+i(36933,{q=3,u=30}),
+i(36930,{q=3,u=30}),
+i(36918,{q=3,u=30}),
+i(36924,{q=3,u=30}),
+i(36927,{q=3,u=30})}}),
 i(42420,{f=55,q=2,u=30}),
 i(42421,{f=55,q=2,u=30})}}),
 flt(51,{u=30,g={

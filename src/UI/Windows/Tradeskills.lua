@@ -1,5 +1,6 @@
 -- App locals
 local _, app = ...;
+local L = app.L;
 if app.IsRetail then return; end
 
 -- Global locals
@@ -26,8 +27,6 @@ local function RefreshSkills()
 	-- Store Skill Data
 	local activeSkills = app.CurrentCharacter.ActiveSkills;
 	wipe(activeSkills);
-	rawset(app.SpellNameToSpellID, 0, nil);
-	app.GetSpellName(0);
 	if GetSkillLineInfo then
 		for index=GetNumSkillLines(),1,-1 do
 			local skillName, header, isExpanded, skillRank, numTempPoints, skillModifier,
@@ -100,9 +99,9 @@ app:CreateWindow("Tradeskills", {
 		self:SetClampedToScreen(false);
 		self.wait = 5;
 		self.cache = {};
-		self.header = app.CreateRawText("Profession List", {
+		self.header = app.CreateRawText(L.PROFESSION_LIST, {
 			['icon'] = 134940,
-			["description"] = "Open your professions to cache them.",
+			["description"] = L.PROFESSION_LIST_DESC,
 			['visible'] = true,
 			['expanded'] = true,
 			["indent"] = 0,
@@ -139,8 +138,6 @@ app:CreateWindow("Tradeskills", {
 				end
 
 				local learned, craftSkillID, tradeSkillID, shouldShowSpellRanks = 0, 0, 0, nil;
-				rawset(app.SpellNameToSpellID, 0, nil);
-				app.GetSpellName(0);
 
 				if CraftFrame and CraftFrame:IsVisible() then
 					-- Crafting Skills (Enchanting and Beast Training Only)

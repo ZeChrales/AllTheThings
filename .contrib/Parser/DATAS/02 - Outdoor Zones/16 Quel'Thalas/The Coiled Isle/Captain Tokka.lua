@@ -24,6 +24,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						ach(63512),	-- Treasures of the Damned
 						ach(63634, {	-- Where Did You Get That?
 							["provider"] = { "i", 244790 },	-- The Coiled Huntress [Fishing Tool]
+							["cr"] = 258755,	-- Captain Tokka
 						}),
 					}),
 					n(QUESTS, sharedDataSelf({	-- Second Mate Sluggs
@@ -46,7 +47,9 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 							i(278095),	-- Liver Pulp
 						}),
 						q(94802, {	-- Death from the Dead
-							i(277955),	-- Ethereal Bead Strand (QI!)
+							o(661548, {	-- Shimmering Vase
+								i(277955),	-- Ethereal Bead Strand (QI!)
+							}),
 						}),
 						q(94803, {	-- Going for the Crown
 							i(277920),	-- Vibrant Crownfeather (QI!)
@@ -152,6 +155,10 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 								["description"] = "Can be fished in open waters",
 								["sourceQuest"] = 98343,	-- Venom Fishing: My Second-Best
 							}),
+							i(278339, {	-- Cursebound Pearl (CI!)
+								["description"] = "Can be fished from Abyssal Swirl pools created with the Eerie Bauble",
+								["provider"] = { "i", 278391 },	-- Eerie Bauble
+							}),
 							i(278001, {	-- Forgotten Amani Fishing Rod (QS!)
 								["description"] = "Can be fished in Torrential Gorgerswarm pools created by a Coiled Stargorger Lure.",
 								["sourceQuest"] = 96111,	-- Venom Fishing: Shell of Yourself
@@ -162,7 +169,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 								["sourceQuest"] = 96113,	-- Venom Fishing: Maximum Potency
 							}),
 							i(277998, {	-- Lump of Crystalline Malachite (QS!)
-								["description"] = "Can be fished from Willow Sea pools.",
+								["description"] = "Can be fished from Willow Sea and Bubbling Beryl pools.",
 								["sourceQuest"] = 96113,	-- Venom Fishing: Maximum Potency
 							}),
 							i(277997, {	-- Malevolent Fishing Codex (QS!)
@@ -264,7 +271,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 									["cost"] = { { "c", VOIDLIGHT_MARL, 250 } },
 								}),
 								i(278391, {	-- Eerie Bauble
-									["description"] = "Throw at a pool of fish to summor an eldritch fishy questgiver",
+									["description"] = "Throw at a pool of fish to convert it to an Abyssal Swirl.",
 									["minReputation"] = { FACTION_CAPTAIN_TOKKA, 4 },
 									["cost"] = { { "c", VOIDLIGHT_MARL, 250 } },
 								}),
@@ -285,6 +292,11 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 									["cost"] = { { "g", 1000000 } },	-- 100g
 								}),
 								-- Rank 5: Bloodsworn Crew
+								i(278337, {	-- Amber Pearl (CI!)
+									["sourceAchievement"] = 63634,	-- Where Did You Get That?
+									["minReputation"] = { FACTION_CAPTAIN_TOKKA, 5 },
+									["cost"] = { { "c", COILED_FILAMENT, 50 } },
+								}),
 								i(274796, {	-- Envenomed Deathblade (COSMETIC!)
 									["minReputation"] = { FACTION_CAPTAIN_TOKKA, 5 },
 									["cost"] = { { "c", COILED_FILAMENT, 500 } },

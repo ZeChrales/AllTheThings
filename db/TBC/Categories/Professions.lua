@@ -5,29 +5,29 @@ local ach,cat,flt,h,i,prof,q,qo,r,x=_.CreateAchievement,_.CreateCategory,_.Creat
 categories.Professions=
 h(-44,{SortPriority=25,g={
 h(-12,{
-x(1,{
+x(1,{awp=10100,g={
 ach(732),
 ach(731),
-ach(116)}),
-x(2,{awp=20001,g={
+ach(116)}}),
+x(2,{awp=20003,g={
 ach(733,{u=17})}})}),
 prof(171,{
-x(1,{requireSkill=171}),
-x(2,{awp=20005,requireSkill=171,g={
-q(10906,{altQuests={10905,10907},coords={
+x(1,{awp=10100,requireSkill=171}),
+x(2,{awp=20003,requireSkill=171,g={
+q(10906,{altQuests={10905,10907},awp=20005,coords={
 [1944]={{52.2,36.4},{53.8,65.8}}},isBreadcrumb=1,learnedAt=325,lvl=68,nextQuests={10902},qgs={16588,18802},requireSkill=171,rwp=40300}),
-q(10902,{altQuests={10897,10899},coords={
+q(10902,{altQuests={10897,10899},awp=20005,coords={
 [1955]={{45.8,20.4}}},cost={{"i",22831,5},{"i",28104,5},{"i",22834,5},{"i",31753,10}},description="Upon finishing this quest, you will become a Elixir Master and be locked out of becoming a Transmutation or Potion Master.",learnedAt=325,lvl=68,maps={273},qgs={19052},requireSkill=171,rwp=40300,sourceQuests={10906},g={
 r(28677,{requireSkill=28677})}}),
-q(10905,{altQuests={10906,10907},coords={
+q(10905,{altQuests={10906,10907},awp=20005,coords={
 [1944]={{52.2,36.4},{53.8,65.8}}},isBreadcrumb=1,learnedAt=325,lvl=68,nextQuests={10897},qgs={16588,18802},requireSkill=171,rwp=40300}),
-q(10897,{altQuests={10899,10902},coords={
+q(10897,{altQuests={10899,10902},awp=20005,coords={
 [1946]={{44.1,36.6}}},cost={{"i",22836,5},{"i",22832,5},{"i",22829,5}},description="Upon finishing this quest, you will become a Potion Master and be locked out of becoming a Transmutation or Elixir Master.",learnedAt=325,lvl=68,maps={266},qgs={17909},requireSkill=171,rwp=40300,sourceQuests={10905},g={
 qo(1,{crs={17975},providers={{"i",31744}},requireSkill=171}),
 r(28675,{requireSkill=28675})}}),
-q(10907,{altQuests={10905,10906},coords={
+q(10907,{altQuests={10905,10906},awp=20005,coords={
 [1944]={{52.2,36.4},{53.8,65.8}}},isBreadcrumb=1,learnedAt=325,lvl=68,nextQuests={10899},qgs={16588,18802},requireSkill=171,rwp=40300}),
-q(10899,{altQuests={10897,10902},coords={
+q(10899,{altQuests={10897,10902},awp=20005,coords={
 [1953]={{44.1,36.6}}},cost={{"i",23571,4}},description="Upon finishing this quest, you will become a Transmutation Master and be locked out of becoming a Potion or Elixir Master.",learnedAt=325,lvl=68,qgs={22427},requireSkill=171,rwp=40300,sourceQuests={10907},g={
 r(28672,{requireSkill=28672})}})}})}),
 prof(261,{c={3},description="Lets the Hunter train their pet with various abilities that they have learned.\n\nGets replaced by the Pet Talent Trees in Wrath.",lvl=10,rwp=30002,g={
@@ -171,7 +171,7 @@ r(27063,{description="No known sources, contact Crieve if you find one!",lvl=60,
 r(35348,{crs={18464,18465,18884,23219},lvl=60,u=17})}}),
 prof(164,{
 prof(9788,{description="These items can only be crafted by Blacksmiths who have completed the Art of the Armorsmith quest chain.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Blacksmiths and complete the opposing specialization(s).",rwp=40001,sourceQuests={5283,5301},g={
-cat(220,{
+cat(220,{requireSkill=164,g={
 r(34533,{learnedAt=350,requireSkill=9788,u=17}),
 r(34534,{learnedAt=375,requireSkill=9788,u=17}),
 r(36257,{learnedAt=375,requireSkill=9788,u=17}),
@@ -179,12 +179,12 @@ r(36256,{learnedAt=375,requireSkill=9788,u=17}),
 r(36129,{learnedAt=330,requireSkill=9788,u=17}),
 r(34529,{learnedAt=350,requireSkill=9788,u=17}),
 r(36130,{learnedAt=330,requireSkill=9788,u=17}),
-r(34530,{learnedAt=375,requireSkill=9788,u=17})}),
-cat(224,{
+r(34530,{learnedAt=375,requireSkill=9788,u=17})}}),
+cat(224,{requireSkill=164,g={
 r(36122,{learnedAt=260,requireSkill=9788,u=17}),
-r(36124,{learnedAt=260,requireSkill=9788,u=17})})}}),
+r(36124,{learnedAt=260,requireSkill=9788,u=17})}})}}),
 prof(9787,{description="These items can only be crafted by Blacksmiths who have completed the Way of the Weaponsmith quest chain.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Blacksmiths and complete the opposing specialization(s).",rwp=40001,sourceQuests={5284,5302},g={
-prof(17041,{awp=20001,description="These items can only be crafted by Master Axesmith specialized Weaponsmiths.",sourceQuests={5306},g={
+prof(17041,{awp=20003,description="These items can only be crafted by Master Axesmith specialized Weaponsmiths.",sourceQuests={5306},g={
 r(34542,{learnedAt=375,requireSkill=17041,u=17}),
 r(36261,{learnedAt=375,requireSkill=17041,u=17}),
 r(34543,{learnedAt=350,requireSkill=17041,u=17}),
@@ -193,7 +193,7 @@ r(36135,{learnedAt=330,requireSkill=17041,u=17}),
 r(36134,{learnedAt=330,requireSkill=17041,u=17}),
 r(34541,{learnedAt=350,requireSkill=17041,u=17}),
 r(36260,{learnedAt=375,requireSkill=17041,u=17})}}),
-prof(17040,{awp=20001,description="These items can only be crafted by Master Hammersmith specialized Weaponsmiths.",sourceQuests={5305},g={
+prof(17040,{awp=20003,description="These items can only be crafted by Master Hammersmith specialized Weaponsmiths.",sourceQuests={5305},g={
 r(34548,{learnedAt=375,requireSkill=17040,u=17}),
 r(34546,{learnedAt=375,requireSkill=17040,u=17}),
 r(36262,{learnedAt=375,requireSkill=17040,u=17}),
@@ -203,19 +203,19 @@ r(36136,{learnedAt=330,requireSkill=17040,u=17}),
 r(36263,{learnedAt=375,requireSkill=17040,u=17}),
 r(34547,{learnedAt=350,requireSkill=17040,u=17})}}),
 prof(17039,{description="These items can only be crafted by Master Swordsmith specialized Weaponsmiths.",sourceQuests={5307},g={
-r(36258,{awp=20001,learnedAt=375,requireSkill=17039,u=17}),
-r(34537,{awp=20001,learnedAt=375,requireSkill=17039,u=17}),
-r(34535,{awp=20001,learnedAt=350,requireSkill=17039,u=17}),
-r(34538,{awp=20001,learnedAt=350,requireSkill=17039,u=17}),
-r(34540,{awp=20001,learnedAt=375,requireSkill=17039,u=17}),
-r(36259,{awp=20001,learnedAt=375,requireSkill=17039,u=17}),
+r(36258,{awp=20003,learnedAt=375,requireSkill=17039,u=17}),
+r(34537,{awp=20003,learnedAt=375,requireSkill=17039,u=17}),
+r(34535,{awp=20003,learnedAt=350,requireSkill=17039,u=17}),
+r(34538,{awp=20003,learnedAt=350,requireSkill=17039,u=17}),
+r(34540,{awp=20003,learnedAt=375,requireSkill=17039,u=17}),
+r(36259,{awp=20003,learnedAt=375,requireSkill=17039,u=17}),
 r(36133,{awp=20100,learnedAt=330,requireSkill=17039,u=17}),
-r(36131,{awp=20001,learnedAt=330,requireSkill=17039,u=17})}}),
-cat(227,{description="These can be crafted by any Weaponsmith.",g={
+r(36131,{awp=20003,learnedAt=330,requireSkill=17039,u=17})}}),
+cat(227,{description="These can be crafted by any Weaponsmith.",requireSkill=164,g={
 r(36125,{awp=70105,learnedAt=260,requireSkill=9787,u=1}),
 r(36128,{learnedAt=260,requireSkill=9787,u=17}),
 r(36126,{learnedAt=260,requireSkill=9787,u=17})}})}}),
-x(1,{requireSkill=164,g={
+x(1,{awp=10100,requireSkill=164,g={
 h(-45,{requireSkill=164,g={
 q(5283,{altQuests={5284,5301,5302},coords={
 [1455]={{50.2,42.6}}},cost={{"i",7935,1},{"i",7936,2},{"i",7937,4}},description="Upon finishing this quest, you will become a Armorsmith and be locked out of becoming a Weaponsmith.",lvl=40,qgs={5164},r=2,requireSkill=164,rwp=40003}),
@@ -226,14 +226,14 @@ q(5284,{altQuests={5283,5301,5302},coords={
 q(5302,{altQuests={5283,5284,5301},coords={
 [1454]={{79.6,23.6}}},cost={{"i",7945,2},{"i",7941,2},{"i",3855,4},{"i",3853,4}},description="Upon finishing this quest, you will become a Weaponsmith and be locked out of becoming an Armorsmith.",lvl=40,qgs={11178},r=1,requireSkill=164,rwp=40003})}})}})}),
 prof(185,{
-x(1,{requireSkill=185,g={
+x(1,{awp=10100,requireSkill=185,g={
 ach(123,{requireSkill=185}),
 ach(122,{requireSkill=185}),
 ach(121,{requireSkill=185})}}),
-x(2,{awp=20001,requireSkill=185,g={
+x(2,{awp=20003,requireSkill=185,g={
 ach(124,{requireSkill=185,u=17})}})}),
 prof(333),
-prof(202,{
+prof(202,{awp=10100,g={
 x(1,{requireSkill=202,g={
 h(-47,{requireSkill=202,g={
 i(11423,{b=1,description="If you destroy your Gnome Engineer Membership Card, you can renew your membership for 2 Gold and will receive this gift in the mail in about a day.",providers={{"i",10790}},q=1,requireSkill=202,rwp=40003,g={
@@ -243,7 +243,7 @@ r(12616,{itemID=10606,learnedAt=225,q=2,requireSkill=202})}}),
 i(11422,{b=1,description="If you destroy your Goblin Engineer Membership Card, you can renew your membership for 2 Gold and will receive this gift in the mail in about a day.",providers={{"i",10791}},q=1,requireSkill=202,rwp=40003,g={
 r(3968,{itemID=4416,learnedAt=195,q=2,requireSkill=202}),
 r(3972,{itemID=4417,learnedAt=200,q=2,requireSkill=202}),
-r(15628,{b=1,itemID=11828,learnedAt=205,q=2,requireSkill=20222})}})}})}})}),
+r(15628,{b=1,itemID=11828,learnedAt=205,q=2,requireSkill=20222})}})}})}})}}),
 prof(129,{rwp=80001,g={
 x(1,{requireSkill=129,g={
 ach(131,{requireSkill=129}),
@@ -258,16 +258,16 @@ x(7,{requireSkill=129})}}),
 prof(356,{
 h(-12,{awp=20300,requireSkill=356,g={
 ach(1243,{providers={{"s",43308}},requireSkill=356,spellID=43308})}}),
-x(1,{requireSkill=356,g={
+x(1,{awp=10100,requireSkill=356,g={
 ach(126,{requireSkill=356}),
 ach(127,{requireSkill=356}),
 ach(128,{requireSkill=356})}}),
-x(2,{requireSkill=356,u=17,g={
+x(2,{awp=20003,requireSkill=356,u=17,g={
 ach(129,{requireSkill=356,u=17})}})}),
 prof(182),
 prof(755,{u=17,g={
-x(1,{u=17,g={
-flt(52,{u=17,g={
+x(1,{awp=10100,requireSkill=755,u=17,g={
+flt(52,{requireSkill=755,u=17,g={
 r(26874,{learnedAt=210,requireSkill=755,u=17}),
 r(25617,{awp=20001,learnedAt=150,requireSkill=755,u=17}),
 r(25493,{learnedAt=30,requireSkill=755,u=17}),
@@ -302,7 +302,7 @@ r(34959,{learnedAt=200,requireSkill=755,u=17}),
 r(26885,{learnedAt=240,requireSkill=755,u=17}),
 r(25323,{learnedAt=125,requireSkill=755,u=17}),
 r(26925,{learnedAt=30,requireSkill=755,u=17})}}),
-flt(51,{u=17,g={
+flt(51,{requireSkill=755,u=17,g={
 r(25339,{learnedAt=110,requireSkill=755,u=17}),
 r(26876,{learnedAt=220,requireSkill=755,u=17}),
 r(25498,{learnedAt=110,requireSkill=755,u=17}),
@@ -320,16 +320,16 @@ r(25610,{learnedAt=120,requireSkill=755,u=17}),
 r(26883,{learnedAt=235,requireSkill=755,u=17}),
 r(26908,{learnedAt=280,requireSkill=755,u=17}),
 r(26927,{learnedAt=50,requireSkill=755,u=17})}}),
-cat(168,{u=17,g={
+cat(168,{requireSkill=755,u=17,g={
 r(25278,{learnedAt=50,requireSkill=755,u=17}),
 r(25255,{learnedAt=20,requireSkill=755,u=17}),
 r(25615,{learnedAt=150,requireSkill=755,u=17}),
 r(26880,{learnedAt=225,requireSkill=755,u=17})}}),
-cat(167,{u=17,g={
+cat(167,{requireSkill=755,u=17,g={
 r(26906,{learnedAt=275,requireSkill=755,u=17}),
 r(25321,{learnedAt=120,requireSkill=755,u=17}),
 r(26878,{learnedAt=225,requireSkill=755,u=17})}}),
-flt(53,{u=17,g={
+flt(53,{requireSkill=755,u=17,g={
 r(26912,{learnedAt=300,requireSkill=755,u=17}),
 r(26875,{learnedAt=215,requireSkill=755,u=17}),
 r(26914,{learnedAt=300,requireSkill=755,u=17}),
@@ -339,18 +339,18 @@ r(26872,{learnedAt=200,requireSkill=755,u=17}),
 r(26900,{learnedAt=260,requireSkill=755,u=17}),
 r(26882,{learnedAt=235,requireSkill=755,u=17}),
 r(26881,{learnedAt=225,requireSkill=755,u=17})}}),
-flt(34,{u=17,g={
+flt(34,{requireSkill=755,u=17,g={
 r(25612,{learnedAt=125,requireSkill=755,u=17})}}),
-flt(50,{u=17,g={
+flt(50,{requireSkill=755,u=17,g={
 r(32801,{learnedAt=50,requireSkill=755,u=17}),
 r(32809,{learnedAt=225,requireSkill=755,u=17}),
 r(32807,{learnedAt=110,requireSkill=755,u=17}),
 r(32259,{learnedAt=30,requireSkill=755,u=17}),
 r(32808,{learnedAt=175,requireSkill=755,u=17})}})}}),
-x(2,{u=17,g={
-cat(868,{u=17,g={
+x(2,{awp=20003,requireSkill=755,u=17,g={
+cat(868,{requireSkill=755,u=17,g={
 r(38068,{learnedAt=325,requireSkill=755,u=17})}}),
-cat(857,{u=17,g={
+cat(857,{requireSkill=755,u=17,g={
 r(42590,{learnedAt=360,requireSkill=755,u=17}),
 r(28957,{learnedAt=325,requireSkill=755,rwp=40001,u=17}),
 r(39717,{learnedAt=375,requireSkill=755,rwp=40001,u=19}),
@@ -364,7 +364,7 @@ r(31149,{learnedAt=350,requireSkill=755,u=17}),
 r(28955,{learnedAt=315,requireSkill=755,u=17}),
 r(39718,{learnedAt=375,requireSkill=755,u=19}),
 r(31095,{learnedAt=350,requireSkill=755,u=17})}}),
-cat(858,{u=17,g={
+cat(858,{requireSkill=755,u=17,g={
 r(28924,{learnedAt=325,minReputation={934,0},requireSkill=755,rwp=40001,u=17}),
 r(39741,{learnedAt=375,requireSkill=755,u=19}),
 r(31112,{learnedAt=350,requireSkill=755,u=17}),
@@ -381,7 +381,7 @@ r(39740,{learnedAt=375,requireSkill=755,u=19}),
 r(31111,{learnedAt=350,requireSkill=755,u=17}),
 r(47054,{learnedAt=375,requireSkill=755,u=21}),
 r(43493,{learnedAt=350,requireSkill=755,u=17})}}),
-cat(859,{u=17,g={
+cat(859,{requireSkill=755,u=17,g={
 r(28914,{learnedAt=315,requireSkill=755,u=17}),
 r(31109,{learnedAt=350,requireSkill=755,u=17}),
 r(39736,{learnedAt=375,requireSkill=755,u=19}),
@@ -402,7 +402,7 @@ r(39737,{learnedAt=375,requireSkill=755,u=19}),
 r(39467,{learnedAt=325,requireSkill=755,u=1801}),
 r(39471,{learnedAt=350,requireSkill=755,u=17}),
 r(39738,{learnedAt=375,requireSkill=755,u=19})}}),
-cat(860,{u=17,g={
+cat(860,{requireSkill=755,u=17,g={
 r(39463,{learnedAt=350,requireSkill=755,rwp=40001,u=17}),
 r(39455,{learnedAt=325,requireSkill=755,rwp=40001,u=1801}),
 r(39729,{learnedAt=375,requireSkill=755,rwp=40001,u=19}),
@@ -425,7 +425,7 @@ r(39728,{learnedAt=375,requireSkill=755,u=19}),
 r(31102,{learnedAt=350,requireSkill=755,u=17}),
 r(28936,{learnedAt=325,requireSkill=755,u=17}),
 r(39727,{learnedAt=375,requireSkill=755,u=19})}}),
-cat(861,{u=17,g={
+cat(861,{requireSkill=755,u=17,g={
 r(28905,{learnedAt=305,requireSkill=755,u=17}),
 r(39705,{learnedAt=375,requireSkill=755,u=19}),
 r(31084,{learnedAt=350,requireSkill=755,u=17}),
@@ -448,7 +448,7 @@ r(31090,{learnedAt=350,requireSkill=755,u=17}),
 r(28903,{learnedAt=300,requireSkill=755,u=17}),
 r(39710,{learnedAt=375,requireSkill=755,rwp=40001,u=19}),
 r(31087,{learnedAt=350,requireSkill=755,rwp=40001,u=17})}}),
-cat(862,{u=17,g={
+cat(862,{requireSkill=755,u=17,g={
 r(42592,{learnedAt=360,requireSkill=755,u=17}),
 r(31096,{learnedAt=350,requireSkill=755,rwp=40001,u=17}),
 r(28938,{learnedAt=300,requireSkill=755,rwp=40001,u=17}),
@@ -474,7 +474,7 @@ r(42591,{learnedAt=360,requireSkill=755,u=17}),
 r(31100,{learnedAt=350,requireSkill=755,rwp=40001,u=17}),
 r(39723,{learnedAt=375,requireSkill=755,rwp=40001,u=19}),
 r(28947,{learnedAt=315,requireSkill=755,u=17})}}),
-cat(863,{u=17,g={
+cat(863,{requireSkill=755,u=17,g={
 r(32867,{learnedAt=365,requireSkill=755,u=17}),
 r(32869,{learnedAt=365,requireSkill=755,u=17}),
 r(44794,{learnedAt=365,requireSkill=755,u=17}),
@@ -489,7 +489,7 @@ r(39961,{learnedAt=365,requireSkill=755,u=17}),
 r(32873,{learnedAt=365,requireSkill=755,u=17}),
 r(32868,{learnedAt=365,requireSkill=755,u=17}),
 r(39963,{learnedAt=365,requireSkill=755,u=17})}}),
-cat(864,{u=17,g={
+cat(864,{requireSkill=755,u=17,g={
 r(46126,{learnedAt=365,requireSkill=755,u=21}),
 r(31070,{learnedAt=360,requireSkill=755,u=17}),
 r(31076,{learnedAt=365,requireSkill=755,u=17}),
@@ -506,7 +506,7 @@ r(31066,{learnedAt=360,requireSkill=755,u=17}),
 r(31064,{learnedAt=360,minReputation={934,0},requireSkill=755,u=17}),
 r(31051,{learnedAt=335,requireSkill=755,u=17}),
 r(31067,{learnedAt=355,requireSkill=755,u=17})}}),
-cat(865,{u=17,g={
+cat(865,{requireSkill=755,u=17,g={
 r(31057,{learnedAt=365,requireSkill=755,u=17}),
 r(31050,{learnedAt=320,requireSkill=755,u=17}),
 r(26916,{learnedAt=310,requireSkill=755,u=17}),
@@ -528,11 +528,11 @@ r(46123,{learnedAt=365,requireSkill=755,u=21}),
 r(41415,{learnedAt=330,requireSkill=755,u=17}),
 r(38503,{learnedAt=375,requireSkill=755,u=17}),
 r(38504,{learnedAt=375,requireSkill=755,u=17})}}),
-cat(869,{u=17,g={
+cat(869,{requireSkill=755,u=17,g={
 r(31078,{learnedAt=370,requireSkill=755,u=17}),
 r(31077,{learnedAt=370,requireSkill=755,u=17}),
 r(41418,{learnedAt=365,requireSkill=755,u=18})}}),
-cat(866,{u=17,g={
+cat(866,{requireSkill=755,u=17,g={
 r(46777,{learnedAt=375,requireSkill=755,u=21}),
 r(31080,{learnedAt=370,requireSkill=755,u=17}),
 r(46775,{learnedAt=375,requireSkill=755,u=21}),
@@ -543,43 +543,43 @@ r(31083,{learnedAt=370,requireSkill=755,u=17}),
 r(46779,{learnedAt=375,requireSkill=755,u=21}),
 r(46778,{learnedAt=375,requireSkill=755,u=21}),
 r(31082,{learnedAt=370,requireSkill=755,u=17})}}),
-cat(867,{u=17,g={
+cat(867,{requireSkill=755,u=17,g={
 r(47280,{learnedAt=350,requireSkill=755,u=17})}})}})}}),
 prof(165,{
-x(1,{requireSkill=165,g={
+x(1,{awp=10100,requireSkill=165,g={
 prof(10656,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5141,5145},g={
-cat(932,{
+cat(932,{requireSkill=165,g={
 r(35575,{learnedAt=375,requireSkill=10656,u=17}),
 r(36079,{learnedAt=330,requireSkill=10656,u=17}),
-r(35580,{learnedAt=375,requireSkill=10656,u=17})}),
-cat(933,{
+r(35580,{learnedAt=375,requireSkill=10656,u=17})}}),
+cat(933,{requireSkill=165,g={
 r(35577,{learnedAt=375,requireSkill=10656,u=17}),
-r(35584,{learnedAt=375,requireSkill=10656,u=17})}),
-cat(935,{
+r(35584,{learnedAt=375,requireSkill=10656,u=17})}}),
+cat(935,{requireSkill=165,g={
 r(35576,{learnedAt=375,requireSkill=10656,u=17}),
-r(35582,{learnedAt=375,requireSkill=10656,u=17})}),
-cat(936,{
-r(36076,{learnedAt=260,requireSkill=10656,u=17})})}}),
+r(35582,{learnedAt=375,requireSkill=10656,u=17})}}),
+cat(936,{requireSkill=165,g={
+r(36076,{learnedAt=260,requireSkill=10656,u=17})}})}}),
 prof(10658,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5144,5146},g={
-cat(932,{
+cat(932,{requireSkill=165,g={
 r(36077,{learnedAt=330,requireSkill=10658,u=17}),
-r(35589,{learnedAt=375,requireSkill=10658,u=17})}),
-cat(933,{
-r(35591,{learnedAt=375,requireSkill=10658,u=17})}),
-cat(935,{
-r(35590,{learnedAt=375,requireSkill=10658,u=17})}),
-cat(936,{
-r(36074,{learnedAt=260,requireSkill=10658,u=17})})}}),
+r(35589,{learnedAt=375,requireSkill=10658,u=17})}}),
+cat(933,{requireSkill=165,g={
+r(35591,{learnedAt=375,requireSkill=10658,u=17})}}),
+cat(935,{requireSkill=165,g={
+r(35590,{learnedAt=375,requireSkill=10658,u=17})}}),
+cat(936,{requireSkill=165,g={
+r(36074,{learnedAt=260,requireSkill=10658,u=17})}})}}),
 prof(10660,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5143,5148},g={
-cat(932,{
+cat(932,{requireSkill=165,g={
 r(36078,{learnedAt=330,requireSkill=10660,u=17}),
-r(35585,{learnedAt=375,requireSkill=10660,u=17})}),
-cat(933,{
-r(35588,{learnedAt=375,requireSkill=10660,u=17})}),
-cat(935,{
-r(35587,{learnedAt=375,requireSkill=10660,u=17})}),
-cat(936,{
-r(36075,{learnedAt=260,requireSkill=10660,u=17})})}}),
+r(35585,{learnedAt=375,requireSkill=10660,u=17})}}),
+cat(933,{requireSkill=165,g={
+r(35588,{learnedAt=375,requireSkill=10660,u=17})}}),
+cat(935,{requireSkill=165,g={
+r(35587,{learnedAt=375,requireSkill=165,u=17})}}),
+cat(936,{requireSkill=165,g={
+r(36075,{learnedAt=260,requireSkill=10660,u=17})}})}}),
 h(-45,{lvl=40,requireSkill=165,rwp=40003,g={
 q(5141,{altQuests={5143,5144},coords={
 [1447]={{37.4,65.4}}},cost={{"i",8165,10},{"i",8204,2},{"i",8203,2}},learnedAt=225,lvl=40,qgs={7866},r=2,requireSkill=165}),
@@ -593,15 +593,15 @@ q(5143,{altQuests={5141,5144},coords={
 [1444]={{89.4,46.5}}},cost={{"i",8211,1},{"i",8214,1}},learnedAt=225,lvl=40,qgs={7870},r=2,requireSkill=165,sourceQuests={2853}}),
 q(5148,{altQuests={5145,5146},coords={
 [1434]={{36.6,34.2}}},cost={{"i",8211,1},{"i",8214,1}},learnedAt=225,lvl=40,qgs={7871},r=1,requireSkill=165,sourceQuests={2860}})}})}}),
-x(2,{requireSkill=165})}),
+x(2,{awp=20003,requireSkill=165})}),
 prof(633,{c={4},description="Lockpicking needs to be leveled up by practicing on lockboxes found in the world and junkboxes looted by using your pickpocket ability on appropriately leveled mobs.",DontEnforceSkillRequirements=1,OnTooltip=_.OnTooltipDB.ForLockpicking,OnUpdate=_.OnUpdateDB.ForLockpicking,g={
 r(1804,{c={4},providers={{"i",5060}}}),
 r(921,{c={4}})}}),
-prof(186,{
-x(1,{requireSkill=186})}),
+prof(186,{awp=10100,g={
+x(1,{requireSkill=186})}}),
 prof(40,{c={4},rwp=30002,g={
 cat(2,{
-r(26786,{awp=20001,lvl=68,u=17}),
+r(26786,{awp=20003,lvl=68,u=17}),
 r(3420,{lvl=20}),
 r(3421,{lvl=50}),
 r(2835,{lvl=30}),
@@ -609,15 +609,15 @@ r(2837,{lvl=38}),
 r(11357,{lvl=46}),
 r(11358,{lvl=54}),
 r(25347,{lvl=60,u=15}),
-r(26969,{awp=20001,lvl=62,u=17}),
-r(27282,{awp=20001,lvl=70,u=17}),
+r(26969,{awp=20003,lvl=62,u=17}),
+r(27282,{awp=20003,lvl=70,u=17}),
 r(8681),
 r(8687,{lvl=28}),
 r(8691,{lvl=36}),
 r(11341,{lvl=44}),
 r(11342,{lvl=52}),
 r(11343,{lvl=60}),
-r(26892,{awp=20001,lvl=68,u=17}),
+r(26892,{awp=20003,lvl=68,u=17}),
 r(5763,{lvl=24}),
 r(8694,{lvl=38}),
 r(11400,{lvl=52}),
@@ -625,11 +625,11 @@ r(13220,{lvl=32}),
 r(13228,{lvl=40}),
 r(13229,{lvl=48}),
 r(13230,{lvl=56}),
-r(27283,{awp=20001,lvl=64,u=17})})}}),
+r(27283,{awp=20003,lvl=64,u=17})})}}),
 prof(393),
-prof(197,{awp=20005,g={
+prof(197,{awp=20003,g={
 x(2,{requireSkill=197,u=17,g={
-h(-45,{requireSkill=197,rwp=40003,u=17,g={
+h(-45,{awp=20005,requireSkill=197,rwp=40003,u=17,g={
 q(10831,{altQuests={10832,10833},coords={
 [1955]={{66.5,69.3}}},description="Upon finishing this quest, you will become a Mooncloth Tailor.",lvl=60,maps={1946},qgs={22208},requireSkill=197,u=17,g={
 qo(1,{coords={

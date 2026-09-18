@@ -18,6 +18,7 @@ local GetItemCount = app.WOWAPI.GetItemCount;
 local GetItemSpecInfo = app.WOWAPI.GetItemSpecInfo;
 local GetSpellName = app.WOWAPI.GetSpellName;
 local GetSpellIcon = app.WOWAPI.GetSpellIcon;
+local GetTradeSkillDisplayName = app.WOWAPI.GetTradeSkillDisplayName;
 local IsQuestFlaggedCompletedOnAccount = app.WOWAPI.IsQuestFlaggedCompletedOnAccount;
 
 -- Settings: Interface Page
@@ -61,14 +62,18 @@ local ConversionMethods = setmetatable({
 	spellID = function(spellID, reference)
 		local name = tostring(spellID);
 		if app.Settings:GetTooltipSetting("spellName") then
-			name = name .. " (" .. (app.GetSpellName(spellID, reference.rank) or "??") .. ")";
+			name = name .. " (" .. (GetSpellName(spellID) or "??");
+			if reference.rank then name = name .. " (" .. RANK .. " " .. reference.rank .. ")"; end
+			name = name .. ")";
 		end
 		return name;
 	end,
 	spellIDAndIcon = function(spellID, reference)
 		local name = tostring(spellID);
 		if app.Settings:GetTooltipSetting("spellName") then
-			name = name .. " (" .. (app.GetSpellName(spellID, reference.rank) or "??") .. ")";
+			name = name .. " (" .. (GetSpellName(spellID) or "??");
+			if reference.rank then name = name .. " (" .. RANK .. " " .. reference.rank .. ")"; end
+			name = name .. ")";
 		end
 		local icon = GetSpellIcon(spellID);
 		if icon then
@@ -121,7 +126,7 @@ local ConversionMethods = setmetatable({
 		end
 	end,
 	professionName = function(skillID, reference)
-		local skillName = app.WOWAPI.GetTradeSkillDisplayName(skillID)
+		local skillName = GetTradeSkillDisplayName(skillID)
 		if skillName then
 			return skillName
 		end
@@ -1340,8 +1345,9 @@ local InformationTypes = {
 			if itemID then
 				-- an item used for a faction which is repeatable
 				if reference.factionID and reference.repeatable then
+					local faction = app.LookupFactionData(reference.factionID)
 					tinsert(tooltipInfo, {
-						left = L.ITEM_GIVES_REP .. (app.WOWAPI.GetFactionName(reference.factionID) or ("Faction #" .. tostring(reference.factionID))) .. "'",
+						left = L.ITEM_GIVES_REP .. faction.name.."'",
 						wrap = true,
 						color = app.Colors.TooltipDescription });
 				end
@@ -1700,6 +1706,9 @@ settings.CreateInformationType("rawfields", {
 	text = "DEBUG: Raw Fields",
 	HideCheckBox = not app.Debugging,
 	Process = function(t, data, tooltipInfo)
+			tinsert(tooltipInfo, {
+				left = "---------- Tooltip Data ----------",
+			});
 		tinsert(tooltipInfo, {
 			left = "Self:",
 			right = tostring(data)
@@ -1710,9 +1719,16 @@ settings.CreateInformationType("rawfields", {
 				right = tostring(v)
 			});
 		end
+	end
+})
+settings.CreateInformationType("rawfields-row", {
+	priority = 99999,
+	text = "DEBUG: Raw Row Fields",
+	HideCheckBox = not app.Debugging,
+	Process = function(t, data, tooltipInfo)
 		if app.ActiveRowReference then
 			tinsert(tooltipInfo, {
-				left = "----"
+				left = "---------- Row Data ----------",
 			});
 			tinsert(tooltipInfo, {
 				left = "Row:",

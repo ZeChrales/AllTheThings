@@ -1,3 +1,7 @@
+---------------------------------------------------
+--          D E L V E S      M O D U L E         --
+---------------------------------------------------
+
 DELVES_MID_S2 = createHeader({
 	readable = "Delves MID S2",
 	icon = 1604168,
@@ -68,26 +72,41 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, {
 				["groups"] = {
 					n(262455, {	-- Azta'rec ?
 						["questID"] = 92888,
-						--["isDaily"] = true,
+						["isWeekly"] = true,
 						["groups"] = {
 							ach(63326, {	-- My Venomous Nemesis
 								i(276163),	-- Apophic Patagia (COSMETIC!)
 							}),
-							i(262391, {timeline={ADDED_12_1_0}}),	-- Ominous Dominus
+							i(264971, {	-- Annihilation Rod (COSMETIC!)
+								["description"] = "The first kill per week per character has a very high chance to grant you this item.",
+							}),
+							i(264970, {	-- Oblivion's Edge (COSMETIC!)
+								["description"] = "The first kill per week per character has a very high chance to grant you this item.",
+							}),
+							i(262391),	-- Ominous Dominus (PET)
+							i(265368, {	-- Twilight Destroyer (COSMETIC!)
+								["description"] = "The first kill per week per character has a very high chance to grant you this item.",
+							}),
+							i(265366, {	-- Twilight Executioner (COSMETIC!)
+								["description"] = "The first kill per week per character has a very high chance to grant you this item.",
+							}),
+							i(265367, {	-- Twilight Fang (COSMETIC!)
+								["description"] = "The first kill per week per character has a very high chance to grant you this item.",
+							}),
 						},
 					}),
 					n(265500, {	-- Azta'rec ??
-						["questID"] = 97913,
+						["questID"] = 97913,	-- one-time quest, determine weekly
+						["isWeekly"] = true,
 						["groups"] = {
 							ach(63334, {	-- Fabled Let Me Solo Him: Azta'rec
-								["description"] = "Random tips:\nClicking Valeera's Bonefire gives you 5% main stats for 10min, stacking with normal food Buff.\n\nThe completion buff you get at the end of a Delve carries over and works inside the special boss encounter.",
+								["description"] = "Random tips:\nClicking Valeera's Bonefire gives you 5% main stats for 10min, stacking with normal food buffs.\n\nThe completion buff you get at the end of a Delve carries over and works inside the special boss encounter.",
 								["timeline"] = { ADDED_12_1_0, REMOVED_12_1_0 },	-- 1 Week Later unobtainable
-								["groups"] = {
-									title(776),	-- <Name>, Fabled Vanquisher of Azta'rec
-								},
+								["groups"] = { title(776) },	-- <Name>, Fabled Vanquisher of Azta'rec
 							}),
 							ach(63333, {	-- Let Me Solo Him: Azta'rec
-								i(275657),	-- Apophic Soul Crusher (MOUNT!)
+								["description"] = "Random tips:\nClicking Valeera's Bonefire gives you 5% main stats for 10min, stacking with normal food buffs.\n\nThe completion buff you get at the end of a Delve carries over and works inside the special boss encounter.",
+								["groups"] = { i(275657) },	-- Apophic Soul Crusher (MOUNT!)
 							}),
 							ach(63332, {	-- Purging the Poison
 								title(775),	-- <Name> the Poisonous
@@ -116,6 +135,7 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, {
 				i(249223),	-- Corrosive Bilespear
 				i(271132),	-- Essence Trap
 				i(249219),	-- Ouroboric Curse
+				i(271133, { ["timeline"] = { ADDED_12_1_5 } }),	-- Viperwind Idol
 				--Utility
 				i(249227),	-- Dundun's Favor
 				i(249228),	-- Soul-Cracking Dreamcatcher
@@ -204,10 +224,12 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, {
 						["providers"] = DATAGROUP.MID.DELVES.ARMOR_PROVIDERS,
 						["groups"] = {
 							i(274494),	-- Chiral Marrowgrafter
+							i(251789),	-- Consecrated Chalice
 							i(251790),	-- Desecrated Chalice
 							i(274493),	-- Effigy of Ula'Tek's Faithful
 							i(251786),	-- Ever-Collapsing Void Fissure
 							i(251792),	-- Glorious Crusader's Keepsake
+							i(264694),	-- Ultradon Cuirass
 							i(251785),	-- Void-Reaper's Libram
 						},
 					}),
@@ -219,9 +241,20 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, {
 					}),
 				}),
 				filter(MISC, {
-					i(279290),	-- Fang Lover's (CI!)
+					i(276547, {	-- Afflicted Soul
+						["description"] = "Use before starting your Prey quest to work properly.",
+					}),
+					i(279290, {	-- Fang Lover's (CI!)
+						["providers"] = {
+							{ "o",584518 },	-- Bountiful Heavy Trunk (verified)
+						},
+					}),
+					i(276548),	-- Tormented Soul
 					i(274374, {	-- Trovehunter's Bounty
-						["providers"] = { { "o",584518 } },	-- Bountiful Heavy Trunk (verified)
+						["providers"] = {
+							{ "o",584518 },	-- Bountiful Heavy Trunk (verified)
+							{ "o",656489 },	-- Azta'rec Cache (verified)
+						},
 					}),
 				}),
 				filter(QUEST_ITEMS, {
@@ -239,6 +272,7 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, {
 						i(272280),	-- Exhumed Soul-Cleaver
 						i(272266),	-- Forgotten Eidolon's Dagger
 						i(272272),	-- Harrowed Partisan
+						i(251935),	-- Lightgrasp Worldroot
 						i(272268),	-- Mask-Etcher
 						i(251885),	-- Radiant Foil
 						i(272274),	-- Realm Splitter
@@ -290,7 +324,8 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, {
 				q(97616, {	-- Corrosive Gifts: Corrosive Power
 					["provider"] = { "i", 277506 },	-- Codex of the Soul Coilers (QS!)
 					["maps"] = ALL_REGULAR_DELVES_MID,
-					["groups"] = { i(273000) },	-- Corrosive Soul
+				--	While the reward is correct, its a 1time quest reward and you need like 500+ of them if you all trade them in for corrosive coins. ~Gold Aug 2026
+				--	["groups"] = { i(273000) },	-- Corrosive Soul
 				}),
 				q(97910, {	-- Cracked Keystone
 					["provider"] = { "i", 279012 },	-- Cracked Keystone (QS!)
@@ -303,17 +338,13 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, {
 					["isWeekly"] = true,
 					["cost"] = { { "i", 275910, 1 } },	-- Scalebound Herald's Flute
 					["sym"] = {{"select","itemID",
-					--	264971,	-- Annihilation Rod (COSMETIC!)
-					--	264970,	-- Oblivion's Edge (COSMETIC!)
+						262391,	-- Ominous Dominus (PET!)
+						264971,	-- Annihilation Rod (COSMETIC!)
+						264970,	-- Oblivion's Edge (COSMETIC!)
 						265368,	-- Twilight Destroyer (COSMETIC!)
 						265366,	-- Twilight Executioner (COSMETIC!)
 						265367,	-- Twilight Fang (COSMETIC!)
 					}},
-					["groups"] = {
-						i(262391),	-- Ominous Dominus (PET!)
-						i(264971),	-- Annihilation Rod (COSMETIC!)
-						i(264970),	-- Oblivion's Edge (COSMETIC!)
-					},
 				}),
 			})),
 			n(VENDORS, {

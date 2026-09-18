@@ -1,7 +1,7 @@
 -----------------------------------------------------
 --       W O R L D   D R O P S   M O D U L E       --
 -----------------------------------------------------
-root(ROOTS.WorldDrops, applyclassicphase(TBC_PHASE_ONE, expansion(EXPANSION.TBC, bubbleDownSelf({ ["timeline"] = { ADDED_2_0_1 } }, {
+root(ROOTS.WorldDrops, applyclassicphase(TBC_PHASE_ONE, expansion(EXPANSION.TBC, bubbleDownSelf({ ["timeline"] = { ADDED_2_0_3 } }, {
 	filter(CLOAKS, {
 		i(25043),	-- Amber Cape
 		i(25041),	-- Ambusher's Cloak
@@ -1152,6 +1152,20 @@ root(ROOTS.WorldDrops, applyclassicphase(TBC_PHASE_ONE, expansion(EXPANSION.TBC,
 					["description"] = "Netherweave Cloth is a very common drop from TBC humanoid and undead creatures.",
 				}),
 				i(21881, {	-- Netherweb Spider Silk
+					["description"] =
+						-- #if AFTER CATA
+						"Netherweb Spider Silk is a common drop from TBC spiders, most viably farmed in Karazhan and Terokkar Forest.",
+						-- #else
+						"Netherweb Spider Silk is a common drop from TBC spiders, most viably farmed in Terokkar Forest.",
+						-- #endif
+					["coords"] = {
+						{ 52.3, 78.5, TEROKKAR_FOREST },	-- Netherweb Ridge
+						{ 54.8, 59.8, TEROKKAR_FOREST },	-- Allerian Stronghold, west of
+						{ 44.6, 34.3, TEROKKAR_FOREST },	-- Cenarion Thicket, south of
+					},
+					-- #if AFTER CATA
+					["maps"] = { KARAZHAN },
+					-- #endif
 					["crs"] = {
 						-- #if AFTER CATA
 						15170,	-- Coldmist Stalker
@@ -1160,17 +1174,6 @@ root(ROOTS.WorldDrops, applyclassicphase(TBC_PHASE_ONE, expansion(EXPANSION.TBC,
 						18466,	-- Dreadfang Lurker
 						18467,	-- Dreadfang Widow
 					},
-					["coords"] = {
-						{ 52.3, 78.5, TEROKKAR_FOREST },	-- Netherweb Ridge
-						{ 54.8, 59.8, TEROKKAR_FOREST },	-- Allerian Stronghold, west of
-						{ 44.6, 34.3, TEROKKAR_FOREST },	-- Cenarion Thicket, south of
-					},
-					-- #if AFTER CATA
-					["description"] = "Netherweb Spider Silk is a common drop from TBC spiders, most viably farmed in Karazhan and Terokkar Forest.",
-					["maps"] = { KARAZHAN },
-					-- #else
-					["description"] = "Netherweb Spider Silk is a common drop from TBC spiders, most viably farmed in Terokkar Forest.",
-					-- #endif
 				}),
 			},
 			-- _________________________________
@@ -1575,7 +1578,7 @@ root(ROOTS.WorldDrops, applyclassicphase(TBC_PHASE_ONE, expansion(EXPANSION.TBC,
 		-- #if BEFORE 4.0.1
 		cl(DRUID, {
 			{
-				["itemID"] = 22146,		-- Book: Gift of the Wild III
+				["itemID"] = 22146,	-- Book: Gift of the Wild III
 				["spellID"] = 26991,	-- Gift of the Wild III
 				["rank"] = 3,
 				["maps"] = {
@@ -1626,18 +1629,18 @@ root(ROOTS.WorldDrops, applyclassicphase(TBC_PHASE_ONE, expansion(EXPANSION.TBC,
 		}),
 		cl(MAGE, {
 			{
-				["itemID"] = 22153,		-- Tome of Arcane Brilliance II
+				["itemID"] = 22153,	-- Tome of Arcane Brilliance II
 				["spellID"] = 27127,	-- Arcane Brilliance II
 				["rank"] = 2,
 			},
 			{
-				["itemID"] = 31501,		-- Tome of Conjure Food VIII
+				["itemID"] = 31501,	-- Tome of Conjure Food VIII
 				["spellID"] = 33717,	-- Conjure Food VIII
 				["description"] = "Learn both of these tomes and then visit your trainer for the table.",
 				["rank"] = 8,
 			},
 			{
-				["itemID"] = 29550,		-- Tome of Conjure Water IX
+				["itemID"] = 29550,	-- Tome of Conjure Water IX
 				["spellID"] = 27090,	-- Conjure Water IX
 				["description"] = "Learn both of these tomes and then visit your trainer for the table.",
 				["rank"] = 9,
@@ -1645,12 +1648,12 @@ root(ROOTS.WorldDrops, applyclassicphase(TBC_PHASE_ONE, expansion(EXPANSION.TBC,
 		}),
 		cl(PRIEST, {
 			{
-				["itemID"] = 29549,		-- Codex: Prayer of Fortitude III
+				["itemID"] = 29549,	-- Codex: Prayer of Fortitude III
 				["spellID"] = 25392,	-- Prayer of Fortitude III
 				["rank"] = 3,
 			},
 			{
-				["itemID"] = 31837,		-- Codex: Prayer of Shadow Protection II
+				["itemID"] = 31837,	-- Codex: Prayer of Shadow Protection II
 				["spellID"] = 39374,	-- Prayer of Shadow Protection II
 				["rank"] = 2,
 			},
@@ -1693,9 +1696,9 @@ root(ROOTS.WorldDrops, applyclassicphase(TBC_PHASE_ONE, expansion(EXPANSION.TBC,
 			i(22542),	-- Formula: Enchant Boots - Vitality (RECIPE!)
 			i(22532),	-- Formula: Enchant Bracer - Versatility Prime / TBC: Enchant Bracer - Restore Mana Prime (RECIPE!)
 			i(28270),	-- Formula: Enchant Chest - Major Resilience (RECIPE!)
-			i(22548, {["timeline"]={ADDED_2_0_1,REMOVED_5_0_4}}),	-- Formula: Enchant Cloak - Major Resistance (RECIPE!)
+			i(22548, {["timeline"]={REMOVED_5_0_4}}),	-- Formula: Enchant Cloak - Major Resistance (RECIPE!)
 			i(22540),	-- Formula: Enchant Shield - Parry / TBC: Formula: Enchant Shield - Shield Block (RECIPE!)
-			i(22541, {["timeline"]={ADDED_2_0_1,REMOVED_5_0_4}}),	-- Formula: Enchant Shield - Resistance (RECIPE!)
+			i(22541, {["timeline"]={REMOVED_5_0_4}}),	-- Formula: Enchant Shield - Resistance (RECIPE!)
 			i(22557),	-- Formula: Enchant Weapon - Battlemaster (RECIPE!)
 			i(22553),	-- Formula: Enchant Weapon - Potency (RECIPE!)
 			i(22558),	-- Formula: Enchant Weapon - Spellsurge (RECIPE!)

@@ -12,7 +12,7 @@ LOWER_BLACKROCK_SPIRE = createHeader({
 		en = "Also known as 'Lower' Blackrock Spire.",
 		es = "También conocida como 'Cumbre de Roca inferior'.",
 		mx = "También conocida como 'Cumbre de Roca inferior'.",
-		cn = "又称黑石塔下层",
+		cn = "又称黑石塔下层。",
 	},
 });
 UPPER_BLACKROCK_SPIRE = createHeader({
@@ -22,17 +22,30 @@ UPPER_BLACKROCK_SPIRE = createHeader({
 		en = [[~DUNGEON_FLOOR_UPPERBLACKROCKSPIRE1]],
 	},
 	description = {
-		-- #if AFTER 3.0.8
-		en = "Also known as 'Upper' Blackrock Spire.",
-		es = "También conocida como 'Cumbre de Roca superior'.",
-		mx = "También conocida como 'Cumbre de Roca superior'.",
-		cn = "又称黑石塔上层",
-		-- #else
-		en = "One member of your group must have completed the Seal of Ascension quest chain in order for the fires to light and the door to open to this portion of the instance. Also known as 'Upper' Blackrock Spire.",
-		es = "Un miembro de tu grupo debe haber completado la cadena de misiones del Sello de Ascensión para que se enciendan las hogueras y se abra la puerta a esta parte de la instancia. También conocida como la Cumbre de Roca Negra superior.",
-		mx = "Un miembro de tu grupo debe haber completado la cadena de misiones del Sello de Ascensión para que se prendan las hogueras y se abra la puerta a esta parte de la instancia. También conocida como la Cumbre de Roca Negra superior.",
-		cn = "你的队伍中必须有一名成员完成 “升腾之印（Seal of Ascension）” 任务链，才能点燃火焰并打开通往副本这一部分的门，即黑石塔上层（Upper Blackrock Spire）",
-		-- #endif
+		en =
+			-- #if AFTER 3.0.8
+			"Also known as 'Upper' Blackrock Spire.",
+			-- #else
+			"One member of your group must have completed the Seal of Ascension quest chain in order for the fires to light and the door to open to this portion of the instance. Also known as 'Upper' Blackrock Spire.",
+			-- #endif
+		es =
+			-- #if AFTER 3.0.8
+			"También conocida como 'Cumbre de Roca superior'.",
+			-- #else
+			"Un miembro de tu grupo debe haber completado la cadena de misiones del Sello de Ascensión para que se enciendan las hogueras y se abra la puerta a esta parte de la instancia. También conocida como la Cumbre de Roca Negra superior.",
+			-- #endif
+		mx =
+			-- #if AFTER 3.0.8
+			"También conocida como 'Cumbre de Roca superior'.",
+			-- #else
+			"Un miembro de tu grupo debe haber completado la cadena de misiones del Sello de Ascensión para que se prendan las hogueras y se abra la puerta a esta parte de la instancia. También conocida como la Cumbre de Roca Negra superior.",
+			-- #endif
+		cn =
+			-- #if AFTER 3.0.8
+			"又称黑石塔上层",
+			-- #else
+			"你的队伍中必须有一名成员完成 “升腾之印（Seal of Ascension）” 任务链，才能点燃火焰并打开通往副本这一部分的门，即黑石塔上层（Upper Blackrock Spire）",
+			-- #endif
 	},
 });
 
@@ -275,7 +288,14 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					objective(1, {	-- 0/1 Doomrigger's Clasp
 						["providers"] = {
 							{ "i",  12352 },	-- Doomrigger's Clasp
-							{ "o", 175382 },	-- Doomrigger's Coffer
+						},
+					}),
+					o(175382, {	-- Doomrigger's Coffer
+						-- #if BEFORE 4.0.3
+						["description"] = "Can be found in a coffer in the Whelp Room behind a fallen column to the left of the ramp leading to the next room.\nNOTE: Most groups skip this room, so ask your group to clear to the column.",
+						-- #endif
+						["groups"] = {
+							i(12352),	-- Doomrigger's Clasp
 						},
 					}),
 				},
@@ -838,7 +858,6 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					objective(1, {	-- 0/1 Darkstone Tablet
 						["providers"] = {
 							{ "i",  12358 },	-- Darkstone Tablet
-							{ "o", 175385 },	-- Darkstone Tablet
 						},
 					}),
 					i(15860, {	-- Blinkstrike Armguards
@@ -846,6 +865,14 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					}),
 					i(15861, {	-- Swiftfoot Treads
 						["timeline"] = { REMOVED_4_0_3 },
+					}),
+					o(175385, {	-- Darkstone Tablet
+						-- #if BEFORE 4.0.3
+						["description"] = "This is the white tablet leaning up against the wall in the Whelp Room.",
+						-- #endif
+						["groups"] = {
+							i(12358),	-- Darkstone Tablet
+						},
 					}),
 				},
 			}),
@@ -1833,15 +1860,19 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 				},
 			}),
 			applyclassicphase(PHASE_FIVE_TIER_ZERO_POINT_FIVE_SETS, n_conditional(16080, {	-- Mor Grayhoof
-				["description"] = "This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.",
+				["description"] = "This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.\nSummon Location: The Beast's room. (Requires parkour inside LBRS to the ledge above the entrance portal to access the old UBRS areas)",
+				-- #if BEFORE 6.0.2
 				["cost"] = {
 					{ "i", 22049, 1 },	-- Brazier of Beckoning [Mor Grayhoof]
-					{ "i", 22057, 1 },	-- Brazier of Invocation
 				},
-				-- #if AFTER 4.0.3
-				-- This init function unmarks the removed from game flag for folks with the brazier.
-				["OnInit"] = FUNCTION_TEMPLATES.OnInit.BrazierAccess,
 				-- #endif
+
+				-- #if AFTER 4.0.3
+				["sourceQuest"] = 8996,	-- Return to Bodley
+				["u_sqs"] = true,	-- remove the u flag if sourcequests are completed
+				-- #endif
+
+				["provider"] = { "i", 22057 },	-- Brazier of Invocation
 				["timeline"] = { REMOVED_4_0_3 },
 				["groups"] = {
 					objective(2, {	-- 0/1 Left Piece of Lord Valthalak's Amulet
@@ -2259,7 +2290,6 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 			-- #if BEFORE 3.0.8
 			["cost"] = { { "i", 12344, 1 } },	-- Seal of Ascension
 			-- #endif
-			["timeline"] = { REMOVED_6_0_2 },
 			["groups"] = {
 				-- #if AFTER WRATH
 				n(ACHIEVEMENTS, {
@@ -2280,6 +2310,7 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 				-- #endif
 				n(ZONE_DROPS, {
 					i(12607, {	-- Brilliant Chromatic Scale
+						["timeline"] = { REMOVED_6_0_2 },
 						["crs"] = {
 							10447,	-- Chromatic Dragonspawn
 							10814,	-- Chromatic Elite Guard
@@ -2385,18 +2416,6 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 							-- #endif
 						})),
 					},
-				}),
-				i(12358, {	-- Darkstone Tablet
-					-- #if BEFORE 4.0.3
-					["description"] = "This is the white tablet leaning up against the wall in the Whelp Room.",
-					-- #endif
-					["provider"] = { "o", 175385 },	-- Darkstone Tablet
-				}),
-				i(12352, {	-- Doomrigger's Clasp
-					-- #if BEFORE 4.0.3
-					["description"] = "Can be found in a coffer in the Whelp Room behind a fallen column to the left of the ramp leading to the next room.\nNOTE: Most groups skip this room, so ask your group to clear to the column.",
-					-- #endif
-					["provider"] = { "o", 175382 },	-- Doomrigger's Coffer
 				}),
 				i(13371, {	-- Father Flame
 					-- #if BEFORE 6.0.2
@@ -2922,18 +2941,24 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					},
 				}),
 				applyclassicphase(PHASE_FIVE_TIER_ZERO_POINT_FIVE_SETS, n_conditional(16042, {	-- Lord Valthalak
+					["description"] = "This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.\nSummon Location: War Master Voone's room.",
 					-- #if BEFORE 6.0.2
-					["description"] = "This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.",
 					["cost"] = {
 						{ "i", 22056, 1 },	-- Brazier of Beckoning [Lord Valthalak]
-						{ "i", 22057, 1 },	-- Brazier of Invocation
 					},
 					-- #endif
-					-- #if AFTER 4.0.3
-					-- This init function unmarks the removed from game flag for folks with the brazier.
-					["OnInit"] = FUNCTION_TEMPLATES.OnInit.BrazierAccess,
+
+					-- #if AFTER 11.0.0
+					["sourceQuest"] = 8996,	-- Return to Bodley
+					["u_sqs"] = true,	-- remove the u flag if sourcequests are completed
+					-- #elseif AFTER 4.0.3
+						-- #if BEFORE 6.0.2
+						["u_providers"] = true,	-- remove the u flag if providers are available
+						-- #endif
 					-- #endif
-					["timeline"] = { REMOVED_6_0_2 },
+
+					["provider"] = { "i", 22057 },	-- Brazier of Invocation
+					["timeline"] = { REMOVED_4_0_3 },
 					["groups"] = {
 						i(22336),	-- Draconian Aegis of the Legion
 						-- #if SEASON_OF_DISCOVERY

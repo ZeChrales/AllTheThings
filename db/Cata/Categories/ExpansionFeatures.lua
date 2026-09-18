@@ -4,8 +4,8 @@ _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,ah,crit,cs,cu,exp,faction,flt,fp,h,heir,i,m,mnt,n,o,p,prof,q,qo,r,s,title,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateAchievementCriteria,_.CreateCharacterUnlockSpell,_.CreateCurrencyClass,_.CreateExploration,_.CreateFaction,_.CreateFilter,_.CreateFlightPath,_.CreateCustomHeader,_.CreateHeirloom,_.CreateItem,_.CreateMap,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfession,_.CreateQuest,_.CreateQuestObjective,_.CreateRecipe,_.CreateItemSource,_.CreateTitle,_.CreateToy,_.CreateExpansion;
 categories.ExpansionFeatures=
 h(-735,{SortPriority=35,g={
-x(2,{awp=20100,g={
-ah(1015,{description="The Netherwing, sometimes called the Netherwing dragonflight, are the main faction of the nether dragons in Outland.\nAlthough generally hostile to most humanoids based on their treatment by the Dragonmaw clan of orcs in Shadowmoon Valley, they can be swayed to change their attitude if tasks to aid them are completed.",icon=132250,lvl=70,maps={1948},type="fa",u=1901,g={
+x(2,{awp=20003,g={
+ah(1015,{awp=20100,description="The Netherwing, sometimes called the Netherwing dragonflight, are the main faction of the nether dragons in Outland.\nAlthough generally hostile to most humanoids based on their treatment by the Dragonmaw clan of orcs in Shadowmoon Valley, they can be swayed to change their attitude if tasks to aid them are completed.",icon=132250,lvl=70,maps={1948},type="fa",u=1901,g={
 h(-12,{u=1901,g={
 ach(898,{minReputation={1015,42000},u=1901})}}),
 h(-31,{u=1901,g={
@@ -168,7 +168,7 @@ i(32621,{b=1,coords={
 i(32724,{b=1,coords={
 [1948]={{69.4,86}}},crs={23286},q=1,sym={{"select","itemID",32506,32464,32468,32470}},u=1901,g={
 i(32726,{b=1,lvl=70,minReputation={1015,3000},q=1,u=1901})}})}})}})}}),
-x(3,{
+x(3,{awp=30003,g={
 h(-413,{awp=30200,maps={118,170},u=31,g={
 h(-12,{u=31,g={
 ach(3676,{minReputation={1094,42000},r=2,sourceQuests={13702,13732,13733,13734,13735},u=31}),
@@ -1633,15 +1633,15 @@ s(176587,47293,{b=1,cost={{"c",2711,38}},f=4,loc=47,lvl=80,q=4,r=1,u=33}),
 i(47282,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,u=33}),
 i(47315,{cost={{"c",2711,30}},f=52,lvl=80,q=4,r=1,u=33}),
 i(47278,{cost={{"c",2711,30}},f=52,lvl=80,q=4,r=1,u=33}),
-i(47327,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,r=1,u=33}),
-i(47252,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,r=1,u=33}),
+i(47327,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,u=33}),
+i(47252,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,u=33}),
 s(176599,47309,{b=1,cost={{"c",2711,30}},f=1,lvl=80,q=4,r=1,u=33}),
 s(176573,47276,{b=1,cost={{"c",2711,30}},f=1,lvl=80,q=4,r=1,u=33}),
 s(176560,47261,{b=1,cost={{"c",2711,60}},f=20,lvl=80,q=4,r=1,u=33}),
 s(176610,47322,{b=1,cost={{"c",2711,60}},f=23,lvl=80,q=4,r=1,u=33}),
-i(47272,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,r=1,u=33}),
-i(47307,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,r=1,u=33}),
-i(47305,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,r=1,u=33}),
+i(47272,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,u=33}),
+i(47307,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,u=33}),
+i(47305,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,u=33}),
 i(47297,{cost={{"c",2711,30}},f=51,lvl=80,q=4,r=1,u=33}),
 s(176565,47266,{b=1,cost={{"c",2711,50}},f=21,lvl=80,q=4,r=1,u=33}),
 s(176593,47300,{b=1,cost={{"c",2711,50}},f=20,lvl=80,q=4,r=1,u=33}),
@@ -1650,10 +1650,10 @@ s(176554,47255,{b=1,cost={{"c",2711,50}},f=20,lvl=80,q=4,r=1,u=33}),
 s(176566,47267,{b=1,cost={{"c",2711,76}},f=33,lvl=80,q=4,r=1,u=33}),
 s(176582,47287,{b=1,cost={{"c",2711,50}},f=8,lvl=80,q=4,r=1,u=33}),
 s(176559,47260,{b=1,cost={{"c",2711,50}},f=8,lvl=80,q=4,r=1,u=33}),
-i(47303,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,r=1,u=33}),
+i(47303,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,u=33}),
 i(47290,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,u=33}),
-i(47316,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,r=1,u=33}),
-i(47271,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,r=1,u=33}),
+i(47316,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,u=33}),
+i(47271,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,u=33}),
 s(176580,47285,{b=1,cost={{"c",2711,76}},f=22,lvl=80,q=4,r=1,u=33}),
 s(176616,47329,{b=1,cost={{"c",2711,76}},f=29,lvl=80,q=4,r=1,u=33}),
 s(176595,47302,{b=1,cost={{"c",2711,76}},f=28,lvl=80,q=4,r=1,u=33}),
@@ -1711,8 +1711,8 @@ s(202010,47194,{b=1,cost={{"c",2711,38}},f=4,loc=47,lvl=80,q=4,r=2,u=33}),
 s(201994,47150,{b=1,cost={{"c",2711,38}},f=7,loc=47,lvl=80,q=4,r=2,u=33}),
 s(176446,47106,{b=1,cost={{"c",2711,38}},f=6,loc=47,lvl=80,q=4,r=2,u=33}),
 s(201981,47071,{b=1,cost={{"c",2711,38}},f=5,loc=47,lvl=80,q=4,r=2,u=33}),
-i(47054,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,r=2,u=33}),
-i(46959,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,r=2,u=33}),
+i(47054,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,u=33}),
+i(46959,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,u=33}),
 i(47070,{b=1,cost={{"c",2711,30}},f=52,lvl=80,q=4,u=33}),
 i(47223,{cost={{"c",2711,30}},f=52,lvl=80,q=4,r=2,u=33}),
 i(47149,{cost={{"c",2711,30}},f=52,lvl=80,q=4,r=2,u=33}),
@@ -1720,10 +1720,10 @@ s(176471,47138,{b=1,cost={{"c",2711,30}},f=1,lvl=80,q=4,r=2,u=33}),
 s(176406,47053,{b=1,cost={{"c",2711,30}},f=1,lvl=80,q=4,r=2,u=33}),
 s(176366,46979,{b=1,cost={{"c",2711,60}},f=20,lvl=80,q=4,r=2,u=33}),
 s(176510,47193,{b=1,cost={{"c",2711,60}},f=23,lvl=80,q=4,r=2,u=33}),
-i(47043,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,r=2,u=33}),
-i(47116,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,r=2,u=33}),
+i(47043,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,u=33}),
+i(47116,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,u=33}),
 i(47105,{cost={{"c",2711,30}},f=51,lvl=80,q=4,r=2,u=33}),
-i(47139,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,r=2,u=33}),
+i(47139,{b=1,cost={{"c",2711,30}},f=51,lvl=80,q=4,u=33}),
 s(176383,46996,{b=1,cost={{"c",2711,50}},f=21,lvl=80,q=4,r=2,u=33}),
 s(176348,46958,{b=1,cost={{"c",2711,50}},f=20,lvl=80,q=4,r=2,u=33}),
 s(176479,47148,{b=1,cost={{"c",2711,50}},f=21,lvl=80,q=4,r=2,u=33}),
@@ -1731,10 +1731,10 @@ s(176445,47104,{b=1,cost={{"c",2711,50}},f=20,lvl=80,q=4,r=2,u=33}),
 s(176381,46994,{b=1,cost={{"c",2711,76}},f=33,lvl=80,q=4,r=2,u=33}),
 s(176425,47079,{b=1,cost={{"c",2711,50}},f=8,lvl=80,q=4,r=2,u=33}),
 s(176352,46963,{b=1,cost={{"c",2711,50}},f=8,lvl=80,q=4,r=2,u=33}),
-i(47115,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,r=2,u=33}),
-i(47182,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,r=2,u=33}),
+i(47115,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,u=33}),
+i(47182,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,u=33}),
 i(47080,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,u=33}),
-i(47041,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,r=2,u=33}),
+i(47041,{b=1,cost={{"c",2711,38}},f=53,lvl=80,q=4,u=33}),
 s(176539,47233,{b=1,cost={{"c",2711,76}},f=29,lvl=80,q=4,r=2,u=33}),
 s(176417,47069,{b=1,cost={{"c",2711,76}},f=22,lvl=80,q=4,r=2,u=33}),
 s(176453,47114,{b=1,cost={{"c",2711,76}},f=28,lvl=80,q=4,r=2,u=33}),
@@ -1755,8 +1755,8 @@ s(176481,47151,{b=1,cost={{"c",2711,30}},f=5,loc=43,lvl=80,q=4,r=2,u=33}),
 s(176407,47055,{b=1,cost={{"c",2711,30}},f=5,loc=43,lvl=80,q=4,r=2,u=33}),
 s(176448,47108,{b=1,cost={{"c",2711,30}},f=7,loc=43,lvl=80,q=4,r=2,u=33}),
 s(201982,47073,{b=1,cost={{"c",2711,30}},f=6,loc=43,lvl=80,q=4,r=2,u=33}),
-s(176436,47093,{b=1,cost={{"c",2711,30}},f=7,loc=43,lvl=80,q=4,r=2,u=33})}})}})}})}),
-x(4,{
+s(176436,47093,{b=1,cost={{"c",2711,30}},f=7,loc=43,lvl=80,q=4,r=2,u=33})}})}})}})}}),
+x(4,{awp=40003,g={
 h(-414,{awp=40200,lvl=32,u=41,g={
 q(29328,{coords={
 [204]={{69.8,34.2}}},qgs={53652},sourceQuests={29336},u=41}),
@@ -2766,7 +2766,7 @@ qo(1,{providers={{"n",53011}},u=4001})}}),
 q(29233,{qgs={52234},r=1,sourceQuests={29232},u=4001}),
 q(29124,{coords={
 [1434]={{76,66.6}}},qgs={52234},r=2,sourceQuests={29121},u=4001})}})}}),
-m(245,{awp=40003,description="Tol Barad Peninsula is the northernmost region of the island of Tol Barad and is a major daily quest hub in World of Warcraft: Cataclysm.",icon=409548,g={
+m(245,{description="Tol Barad Peninsula is the northernmost region of the island of Tol Barad and is a major daily quest hub in World of Warcraft: Cataclysm.",icon=409548,g={
 h(-12,{
 ach(5375,{minReputation={1177,42000},r=2}),
 ach(4874),
@@ -3055,5 +3055,5 @@ i(62471,{b=1,cost={{"c",391,125}},f=53,lvl=85,minReputation={1177,42000},q=4}),
 i(62470,{b=1,cost={{"c",391,125}},f=53,lvl=85,minReputation={1177,42000},q=4}),
 i(62468,{b=1,cost={{"c",391,125}},f=53,lvl=85,minReputation={1177,42000},q=4})}})}),
 h(-63,{
-p(278,{b=1,crs={47676},itemID=64403,npcID=48641,petTypeID=8,q=3,spellID=90637})})}})})}})
+p(278,{b=1,crs={47676},itemID=64403,npcID=48641,petTypeID=8,q=3,spellID=90637})})}})}})}})
 end)

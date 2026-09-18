@@ -196,11 +196,11 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, {
 					["coord"] = { 65.4, 32.2, HALLOWFALL },
 					["groups"] = {
 						n(ACHIEVEMENTS, {
-							ach(40308),		-- Beacon of Hope (automated)
+							ach(40308),	-- Beacon of Hope (automated)
 							ach(40313, {	-- Igniting the Keyflames
 								["cost"] = { { "i", RADIANT_REMNANT, 100 } },
 							}),
-							ach(40311),		-- Sharing the Light (automated)
+							ach(40311),	-- Sharing the Light (automated)
 							ach(40312, {	-- Starting the Flames
 								["cost"] = { { "i", RADIANT_REMNANT, 10 } },
 							}),
@@ -270,8 +270,8 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, {
 							}),
 							i(224545, {	-- Plowhead
 								["crs"] = {
-									206067,		-- Dark-Crazed Harvester
-									214389,		-- Kobyss Harvester
+									206067,	-- Dark-Crazed Harvester
+									214389,	-- Kobyss Harvester
 								},
 							}),
 							i(212330, {	-- Shadow-Hardened Mainspring
@@ -866,7 +866,7 @@ root(ROOTS.Zones, m(KHAZ_ALGAR, {
 							o(441795, {	-- Hallowfall Sparkfly
 								["description"] = "Requires level 80. Use a light source item then walk along the river near Stillstone Pond. With time Sparkbugs will appear next to you and randomly may be interactable, granting the pet.",
 								["coord"] = { 66.8, 25.3, HALLOWFALL },
-								["provider"] = {"i", 218107},	-- Sparkbug Jar
+								["provider"] = { "i", 218107 },	-- Sparkbug Jar
 								["groups"] = { i(220771) },	-- Hallowed Glowfly (PET!)
 							}),
 							o(451993, {	-- Nerubian Device

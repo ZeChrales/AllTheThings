@@ -7,10 +7,11 @@ LEECHING_VAULTS_HEADER = createHeader({
 	icon = 3614361,
 	text = {
 		en = "Leeching Vaults",
+		cn = "汲心宝库",
 	},
 	description = {
 		en = "The first LFR wing, featuring Huntsman Altimor, Hungering Destroyer, and Lady Inerva Darkvein.",
-		cn = "随机团队副本第一区，以猎手阿尔迪莫、饥饿的毁灭者和伊涅瓦·暗脉女勋爵为特色 BOSS",
+		cn = "随机团队副本第一区，以猎手阿尔迪莫、饥饿的毁灭者和伊涅瓦·暗脉女勋爵为特色首领。",
 	},
 });
 RELIQUARY_OF_OPULENCE_HEADER = createHeader({
@@ -18,10 +19,11 @@ RELIQUARY_OF_OPULENCE_HEADER = createHeader({
 	icon = 3614361,
 	text = {
 		en = "Reliquary of Opulence",
+		cn = "丰饶圣物所",
 	},
 	description = {
 		en = "The second LFR wing, featuring Artificer Xy'mox, Sun King's Salvation, and The Council of Blood.",
-		cn = "随机团队副本第二区，以圣物匠赛·墨克斯、太阳之王的救赎和猩红议会为特色 BOSS",
+		cn = "随机团队副本第二区，以圣物匠赛·墨克斯、太阳之王的救赎和猩红议会为特色首领。",
 	},
 });
 BLOOD_FROM_STONE_HEADER = createHeader({
@@ -29,10 +31,11 @@ BLOOD_FROM_STONE_HEADER = createHeader({
 	icon = 3614361,
 	text = {
 		en = "Blood from Stone",
+		cn = "石中殷红",
 	},
 	description = {
 		en = "The third LFR wing, featuring Shriekwing, Sludgefist, and Stone Legion Generals.",
-		cn = "随机团队副本第三区，其中的首领包括啸翼、泥拳以及顽石军团干将",
+		cn = "随机团队副本第三区，其中的首领包括啸翼、泥拳以及顽石军团干将。",
 	},
 });
 AUDIENCE_WITH_ARROGANCE_HEADER = createHeader({
@@ -44,7 +47,7 @@ AUDIENCE_WITH_ARROGANCE_HEADER = createHeader({
 	},
 	description = {
 		en = "The fourth LFR wing, featuring Sire Denathrius.",
-		cn = "以德纳修斯大帝为特色的随机团队副本第四区",
+		cn = "以德纳修斯大帝为特色的随机团队副本第四区。",
 	},
 });
 
@@ -129,12 +132,6 @@ local EncounterToCRS = {
 		168156,	-- Remornia
 	},
 };
-
------- All Bosses crs ------
-local ALL_BOSSES = {};
-for k,v in pairs(EncounterToCRS) do
-	ALL_BOSSES = appendGroups(v, ALL_BOSSES);
-end
 
 ------ EncounterToLoot ------
 local EncounterToLoot = {
@@ -379,7 +376,7 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 						i(182596),	-- Rampart Screecher (MOUNT!)
 					},
 				}),
-				ach(14614),		-- Castle Vain
+				ach(14614),	-- Castle Vain
 				-- Fated
 				ach(15663, bubbleDownSelf({ ["timeline"] = { ADDED_9_2_5, REMOVED_10_0_2_LAUNCH } }, {	-- Fate of Nathria
 					crit(53514, {	-- Shriekwing
@@ -478,9 +475,9 @@ root(ROOTS.Instances, expansion(EXPANSION.SL, bubbleDown({ ["timeline"] = { ADDE
 					}),
 				})),
 				-- Guild Achievements
-				ach(14459),		-- Castle Nathria Guild Run
-				ach(14720),		-- Heroic: Castle Nathria Guild Run
-				ach(14652),		-- Mythic: Sire Denathrius Guild Run
+				ach(14459),	-- Castle Nathria Guild Run
+				ach(14720),	-- Heroic: Castle Nathria Guild Run
+				ach(14652),	-- Mythic: Sire Denathrius Guild Run
 			}),
 			CommonBossDrops({
 				i(173068),	-- Vantus Rune Technique: Castle Nathria (RECIPE!)

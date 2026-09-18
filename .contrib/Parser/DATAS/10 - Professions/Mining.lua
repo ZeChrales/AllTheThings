@@ -717,7 +717,7 @@ root(ROOTS.Professions, prof(MINING, bubbleDownSelf({ ["requireSkill"] = MINING 
 				}),
 				q(52050, {	-- A More Challenging Career
 					["sourceQuests"] = { 52049 },	-- X Marks the Plat!
-					["provider"] = { "n", 139746 },		-- First Mate Cinderfuse
+					["provider"] = { "n", 139746 },	-- First Mate Cinderfuse
 					["coord"] = { 19.76, 44.54, DRUSTVAR },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
@@ -909,10 +909,10 @@ root(ROOTS.Professions, prof(MINING, bubbleDownSelf({ ["requireSkill"] = MINING 
 				}},
 				["groups"] = {
 					crit(61388, {	-- Iridescent Ore Recovered
-						["provider"] = {"i",201301},	-- Iridescent Ore
+						["provider"] = { "i", 201301 },	-- Iridescent Ore
 					}),
 					crit(61389, {	-- Elementally Charged Stone Recovered
-						["provider"] = {"i",202011},	-- Elementally Charged Stone
+						["provider"] = { "i", 202011 },	-- Elementally Charged Stone
 					}),
 				},
 			}),

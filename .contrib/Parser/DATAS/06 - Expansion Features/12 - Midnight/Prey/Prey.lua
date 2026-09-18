@@ -197,6 +197,7 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeli
 			filter(REAGENTS, {
 				i(251283),	-- Tormented Tantalum
 			}),
+			i(273000, { ["timeline"] = { ADDED_12_1_0 } }),	-- Corrosive Soul
 			i(269006),	-- Preyseeker's Gleaming Coin Pouch
 			i(269007),	-- Preyseeker's Glittering Coin Pouch
 		}),
@@ -272,7 +273,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeli
 			}),
 			-- Weekly, up after r4 chain
 			q(94446, {	-- A Nightmarish Task
-				["sourceQuests"] = { 92182 },	-- The Sheep or the Wolf	 // TODO: need some way to ignore on alts
+				["sourceQuests"] = { 92182 },	-- The Sheep or the Wolf
+				-- #if AFTER 12.0.5
+				["sourceQuestNumRequired"] = 0,
+				-- #endif
 				["provider"] = { "n", 246231 },	-- Astalor Bloodsworn
 				["coord"] = { 56.7, 65.4, MAP.MIDNIGHT.SILVERMOON_CITY },
 				["isWeekly"] = true,
@@ -442,12 +446,16 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeli
 		})),
 		n(258928, { -- Ral'kala <Terror of the Isle>
 			["description"] = "Repeatable special Prey Mob on The Coiled Isle.\nSpawned as a public event by burning 98x Ossified Relic at a Haunted Brazier. Has Delayed Demise (immune 15s on spawn), keep attacking or he despawns and the Relics are lost.\n\nRequires Preyhunter's Journey Rank 1 unlocked and Prey: Curse of the Isle, actived by Astalor Bloodsworn, npc 266481.\nTo see/fight him and to get loot you must personally burn at least 1x Ossified Relic at the brazier.",
-			-- https://www.wowhead.com/npc=258928/ralkala#comments
-			["timeline"] = { ADDED_12_1_0 },
-			["maps"] = {
-				MAP.MIDNIGHT.THE_COILED_ISLE
+			["coords"] = {
+				{ 29.5, 64.9, MAP.MIDNIGHT.THE_COILED_ISLE },
+				{ 52.9, 42.2, MAP.MIDNIGHT.THE_COILED_ISLE },
+				{ 68.4, 45.0, MAP.MIDNIGHT.THE_COILED_ISLE },
 			},
+			["questID"] = 98551,
+			["isWeekly"] = true,
+			["crs"] = { 265151 },	-- Haunted Brazier
 			["cost"] = { { "i", 274422, 1 } },	-- Ossified Relic
+			["timeline"] = { ADDED_12_1_0 },
 			["groups"] = {
 				i(263874),	-- Emerald-Encrusted Amani Ritual Skull (DECOR!)
 				i(275659),	-- Hexflame Reaver (MOUNT!)
@@ -460,7 +468,6 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeli
 		}),
 		n(REWARDS, {
 			currency(3392),	-- Remnant of Anguish
-			i(273000, { ["timeline"] = { ADDED_12_1_0 } }),	-- Corrosive Soul
 		}),
 		n(VENDORS, {
 			n(258181, {	-- Construct Ali'a <Decor Specialist>
@@ -790,11 +797,12 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 			q(97115),	-- First Preference Killing of the week
 
 			-- 12.1
-			-- q(98337),	-- Prey completed, Nightmare #1 / 1st per week
 			q(98547, { ["timeline"] = { ADDED_12_1_0 } }),	-- Prey completed, 1st per week
 			q(98548, { ["timeline"] = { ADDED_12_1_0 } }),	-- Prey completed, 2nd per week
 			q(98549, { ["timeline"] = { ADDED_12_1_0 } }),	-- Prey completed, 3rd per week
 			q(98550, { ["timeline"] = { ADDED_12_1_0 } }),	-- Prey completed, 4th per week
+			--q(98507),	-- prey completion, nightmare, 1st of week, eversong woods
+			--q(98508),	-- prey completion, nightmare, 1st of week, coiled isle
 		})),
 		-- One-Time
 		n(QUESTS, {
@@ -807,34 +815,8 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 			--q(95539),	-- unflagged when looted some ore in zone (Zul'Aman) during prey (hard mode)
 			q(91414),	-- Flags and unflags after accepting and completing Random Prey contracts
 			q(91415),	-- After choosing a Preference Killing
+			q(98337, { ["timeline"] = { ADDED_12_1_0 } }),	-- First Prey completed in MID:S2
+			q(98456, name(HEADERS.Item, 274422, { ["timeline"] = { ADDED_12_1_0 } })),	-- Appears to be looting a specific Ossified relic object @ 58.4, 48.9 on Coiled Isle
 		}),
 	}),
-}));
-
---[[
-
-N Prey #1
-93168
-93875
-95003 - 4th per acct
-
-N Prey #2
-93853
-
-N Prey #3
-93855
-
-N Prey #4
-93856
-
-
-
-M Prey 1
-93170
-M Prey 2
-93861
-M Prey 3
-93863
-M Prey 4
-
-]]
+}))

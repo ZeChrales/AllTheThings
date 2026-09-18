@@ -1,20 +1,7 @@
---DELVES_MID_S2 = createHeader({
---	readable = "Delves MID S2",
---	icon = 1604168,
---	text = {
---		en = "Delves MID S2",
---		-- TODO: de = "",
---		es = "Profundidades MID T2",
---		mx = "Abismos MID T2",
---		-- TODO: fr = "",
---		-- TODO: it = "",
---		-- TODO: ko = "",
---		-- TODO: pt = "",
---		ru = "Вылазки MID 2 сезон",
---		cn = "至暗之夜地下堡第二季",
---		tw = "至暗之夜探究第二季",
---	},
---});
+---------------------------------------------------
+--          D E L V E S      M O D U L E         --
+---------------------------------------------------
+
 --DELVES_MID_S3 = createHeader({
 --	readable = "Delves MID S3",
 --	icon = 1604168,
@@ -52,8 +39,8 @@ local ALL_THE_DELVES_MID = {
 	SHADOWGUARD_POINT,
 	SUNKILLER_SANCTUM,
 	THE_DARKWAY,
-	THE_GULF_OF_MEMORY,
 	THE_GRUDGE_PIT,
+	THE_GULF_OF_MEMORY,
 	THE_SHADOW_ENCLAVE,
 	TORMENTS_RISE,
 	TWILIGHT_CRYPTS,
@@ -82,20 +69,427 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 		ach(61906, {	-- Glory of the Midnight Delver
 			i(257199),	-- Giganto Manis (MOUNT!)
 		}),
-		ach(61720),	-- Midnight Delver
-		ach(61721, {	-- Midnight Delver II
-			i(FINERY_FUNDS),
+		ach(61720, {	-- Midnight Delver
+			["maps"] = ALL_REGULAR_DELVES_MID,
+			["sym"] = {{"meta_achievement",
+				61711,	-- Midnight Delver Damage Dealer
+				61714,	-- Midnight Delver Healer
+				61717,	-- Midnight Delver Tank
+			}},
 		}),
-		ach(62206),	-- Midnight Delver III
-		ach(61711),	-- Midnight Delver Damage Dealer
-		ach(61712),	-- Midnight Delver Damage Dealer II
-		ach(61713),	-- Midnight Delver Damage Dealer III
-		ach(61714),	-- Midnight Delver Healer
-		ach(61715),	-- Midnight Delver Healer II
-		ach(61716),	-- Midnight Delver Healer III
-		ach(61717),	-- Midnight Delver Tank
-		ach(61718),	-- Midnight Delver Tank II
-		ach(61719),	-- Midnight Delver Tank III
+		ach(61721, {	-- Midnight Delver II
+			["maps"] = ALL_REGULAR_DELVES_MID,
+			["sym"] = {{"meta_achievement",
+				61712,	-- Midnight Delver Damage Dealer II
+				61715,	-- Midnight Delver Healer II
+				61718,	-- Midnight Delver Tank II
+			}},
+			["groups"] = { i(FINERY_FUNDS) },
+		}),
+		ach(62206, {	-- Midnight Delver III
+			["maps"] = ALL_REGULAR_DELVES_MID,
+			["sym"] = {{"meta_achievement",
+				61713,	-- Midnight Delver Damage Dealer III
+				61716,	-- Midnight Delver Healer III
+				61719,	-- Midnight Delver Tank III
+			}},
+		}),
+		ach(61711, {	-- Midnight Delver Damage Dealer
+			["groups"] = {
+				crit(110876, {	-- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110891, {	-- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115836, {	-- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110889, {	-- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110886, {	-- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110892, {	-- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110890, {	-- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110888, {	-- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110893, {	-- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115848, {	-- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110887, {	-- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110894, {	-- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
+		ach(61712, {	-- Midnight Delver Damage Dealer II
+			["groups"] = {
+				crit(110897, {	-- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110901, {	-- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115840, {	-- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110899, {	-- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110895, {	-- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110902, {	-- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110900, {	-- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110898, {	-- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110903, {	-- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115852, {	-- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110896, {	-- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110904, {	-- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
+		ach(61713, {	-- Midnight Delver Damage Dealer III
+			["groups"] = {
+				crit(110908, {  -- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110912, {  -- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115844, {  -- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110910, {  -- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110905, {  -- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110913, {  -- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110911, {  -- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110909, {  -- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110914, {  -- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115856, {  -- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110906, {  -- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110915, {  -- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
+		ach(61714, {	-- Midnight Delver Healer
+			["groups"] = {
+				crit(110918, {	-- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110922, {	-- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115837, {	-- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110920, {	-- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110916, {	-- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110923, {	-- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110921, {	-- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110919, {	-- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110924, {	-- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115849, {	-- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110917, {	-- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110925, {	-- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
+		ach(61715, {	-- Midnight Delver Healer II
+			["groups"] = {
+				crit(110928, {	-- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110932, {	-- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115841, {	-- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110930, {	-- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110926, {	-- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110933, {	-- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110931, {	-- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110929, {	-- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110934, {	-- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115853, {	-- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110927, {	-- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110935, {	-- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
+		ach(61716, {	-- Midnight Delver Healer III
+			["groups"] = {
+				crit(110938, {	-- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110942, {	-- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115845, {	-- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110940, {	-- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110936, {	-- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110943, {	-- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110941, {	-- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110939, {	-- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110944, {	-- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115857, {	-- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110937, {	-- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110945, {	-- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
+		ach(61717, {	-- Midnight Delver Tank
+			["groups"] = {
+				crit(110948, {	-- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110952, {	-- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115838, {	-- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110950, {	-- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110946, {	-- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110953, {	-- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110951, {	-- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110949, {	-- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110954, {	-- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115850, {	-- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110947, {	-- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110955, {	-- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
+		ach(61718, {	-- Midnight Delver Tank II
+			["groups"] = {
+				crit(110958, {	-- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110962, {	-- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115842, {	-- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110960, {	-- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110956, {	-- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110963, {	-- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110961, {	-- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110959, {	-- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110964, {	-- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115854, {	-- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110957, {	-- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110965, {	-- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
+		ach(61719, {	-- Midnight Delver Tank III
+			["groups"] = {
+				crit(110968, {	-- Atal'Aman
+					["maps"] = { ATAL_AMAN },
+				}),
+				crit(110972, {	-- Collegiate Calamity
+					["maps"] = { COLLEGIATE_CALAMITY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115846, {	-- Gnarldor Isle
+					["maps"] = { GNARLDOR_ISLE },
+				}),
+				-- #endif
+				crit(110970, {	-- Parhelion Plaza
+					["maps"] = { PARHELION_PLAZA },
+				}),
+				crit(110966, {	-- Shadowguard Point
+					["maps"] = { SHADOWGUARD_POINT },
+				}),
+				crit(110973, {	-- Sunkiller Sanctum
+					["maps"] = { SUNKILLER_SANCTUM },
+				}),
+				crit(110971, {	-- The Darkway
+					["maps"] = { THE_DARKWAY },
+				}),
+				crit(110969, {	-- The Grudge Pit
+					["maps"] = { THE_GRUDGE_PIT },
+				}),
+				crit(110974, {	-- The Gulf of Memory
+					["maps"] = { THE_GULF_OF_MEMORY },
+				}),
+				-- #if AFTER 12.1.0
+				crit(115858, {	-- The Ring of Glory
+					["maps"] = { THE_RING_OF_GLORY },
+				}),
+				-- #endif
+				crit(110967, {	-- The Shadow Enclave
+					["maps"] = { THE_SHADOW_ENCLAVE },
+				}),
+				crit(110975, {	-- Twilight Crypts
+					["maps"] = { TWILIGHT_CRYPTS },
+				}),
+			},
+		}),
 		ach(61832),	-- Midnight Delves: Tier 1
 		ach(61835),	-- Midnight Delves: Tier 2
 		ach(61836),	-- Midnight Delves: Tier 3
@@ -104,12 +498,6 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 			title(691),	-- Treasure Seeker <Name>
 		}),
 	}),
-	-- WIP Rough estimate providers based on quick wowhead scans, it seems some weapons/armor may be exclusive to a specific object(s)
-	-- Certain objects have 2 versions, with one ID having many loots of a given Item and 0 on the alternate object
-	-- i.e. Spormilian 71 times from 584515 and 0 times from 584518
-	-- So perhaps only 1 of those objects can drop certain Items?
-	-- Other Items seems to be equivalent from both versions of an Object, so it seems only the "first" Object opened gives from the
-	-- set of rewards?
 	n(DELVE_COMPLETION, {["symselector"]=SymSelector.MID_DelveCompletion}),
 	mapped(n(DELVE_COMPLETION, {
 		filter(BATTLE_PETS, {
@@ -188,11 +576,14 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 			i(257379),	-- Player Experience (Epic)
 			i(268297, {	-- Rattling Bag o' Gold
 				["providers"] = {
+					{ "o", 584518 },	-- Bountiful Heavy Trunk
+					{ "o", 584515 },	-- Bountiful Heavy Trunk
+					{ "o", 584517 },	-- Heavy Trunk
+					{ "o", 584519 },	-- Heavy Trunk
 					{ "o", 584512 },	-- Nemesis Strongbox
 					{ "o", 584509 },	-- Nemesis Strongbox
 					{ "o", 584508 },	-- Nemesis Strongbox
 					{ "o", 584511 },	-- Nemesis Strongbox
-					{ "o", 584518 },	-- Bountiful Heavy Trunk
 				},
 			}),
 			i(265714),	-- Trovehunter's Bounty
@@ -243,6 +634,7 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 				{ "o", 623258 },	-- Pilfered Trunk
 				{ "o", 584518 },	-- Bountiful Heavy Trunk
 				{ "o", 584515 },	-- Bountiful Heavy Trunk
+				{ "o", 584517 },	-- Heavy Trunk
 				{ "o", 584519 },	-- Heavy Trunk
 				{ "o", 584512 },	-- Nemesis Strongbox
 				{ "o", 584511 },	-- Nemesis Strongbox
@@ -300,6 +692,7 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 			-- Distinguishing by color may be possible for some of the 'special' objects, but would need to be determined how to do it
 			o(584514, {	-- Bountiful Coffer
 				["provider"] = { "i", 254250 },	-- Bountiful Coffer
+				["cost"] = {{"c",RESTORED_COFFER_KEY,1}},	-- 1x Restored Coffer Key
 				["VerifyLoot"] = {"armor","weapon","miscellaneous"},
 				["groups"] = {
 					i(273000),	-- Corrosive Soul
@@ -316,6 +709,11 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 				["provider"] = { "i", 257387 },	-- Bountiful Heavy Trunk
 				["VerifyLoot"] = {"armor","weapon","miscellaneous"},
 			}),
+			o(658087, {	-- Abundantly Bountiful Heavy Trunk
+				-- ["provider"] = { "n", DUNDUN_NPC },	-- Dundun
+				["VerifyLoot"] = {"armor","weapon","miscellaneous"},
+				["timeline"] = { ADDED_12_1_0 },
+			}),
 			o(623259, {	-- Pilfered Trunk
 				["VerifyLoot"] = {"armor","weapon","miscellaneous"},
 			}),
@@ -329,6 +727,11 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 				["groups"] = {
 					i(262390),	-- Sporbie (PET!)
 				},
+			}),
+			o(658088, {	-- Abundantly Bountiful Heavy Trunk
+				-- ["provider"] = { "n", DUNDUN_NPC },	-- Dundun
+				["VerifyLoot"] = {"armor","weapon","miscellaneous"},
+				["timeline"] = { ADDED_12_1_0 },
 			}),
 			o(584504, {	-- Sanctified Spoils
 				["provider"] = { "n", 256593 },	-- Sanctified Banner
@@ -379,6 +782,10 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 			}),
 			o(506498, {	-- Gilded Stash
 				["timeline"] = { ADDED_12_0_1_SEASONSTART },
+			}),
+			o(658855, {	-- Abundant Spoils
+				["timeline"] = { ADDED_12_1_0 },
+				-- contains a user-chosen option based on Dundun dialog (Decor/Marl/Undercoin/XP) so no reason to list specifically
 			}),
 		}),
 	})),
@@ -482,7 +889,11 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 				{ "n", 254616 },	-- Nelthius Shadestone <Master Engraver>
 			},
 			["coord"] = { 52.7, 77.6, MAP.MIDNIGHT.SILVERMOON_CITY },
-			["groups"] = { i(262966), },	-- Budget Friendly (CI!)
+			["groups"] = {
+				i(262966, {	-- Budget Friendly (CI!)
+					["timeline"] = { REMOVED_12_1_0 },	-- The cosmetic remains, but the item was removed and its HQT can no longer be completed
+				}),
+			},
 		}),
 	}),
 	n(RARES, {
@@ -1309,7 +1720,7 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 					},
 				}),
 				q(94909, {	-- Blessings of Pestilence (TODO: unsure if it exist only here)
-					["provider"] = { "i", 266438 },	-- Idol of Pestilence
+					["qs"] = 266438,	-- Idol of Pestilence (QS!)
 				}),
 			}),
 			n(TREASURES, {
@@ -1327,16 +1738,14 @@ root(ROOTS.Delves, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDE
 				}),
 			}),
 			n(REWARDS, {
-				filter(MISC, {
-					i(266438),	-- Idol of Pestilence (QS!/QI!)
-				}),
+				i(266438),	-- Idol of Pestilence (QS!)
 			}),
 		},
 	}),
 })));
 
 root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
-	n(DELVES, applyDataSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
+	n(DELVES, bubbleDownFiltered({ ["timeline"] = { ADDED_12_0_1_LAUNCH } },FILTERFUNC_questID,{
 		n(BOUNTIFUL, sharedData({
 			["isDaily"] = true,
 		}, {
@@ -1358,18 +1767,20 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 		q(93935, {isWeekly=true}),	-- 1st weekly bonus Hero item from Bountiful chest
 		q(93936, {isWeekly=true}),	-- 2nd weekly bonus Hero item from Bountiful chest
 		q(93937, {isWeekly=true}),	-- 3rd weekly bonus Hero item from Bountiful chest
-		-- 12.1
-		-- q(98501),	-- 1st Bountiful of the week @ T11
 	})),
 }));
 
 root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
-	n(DELVES, applyDataSelf({ ["timeline"] = { ADDED_12_1_0 } }, {
+	n(DELVES, bubbleDownFiltered({ ["timeline"] = { ADDED_12_1_0 } },FILTERFUNC_questID,{
 		n(BOUNTIFUL, sharedData({
 			["isDaily"] = true,
 		}, {
-			q(97064, name(HEADERS.Map, THE_RING_OF_GLORY)),	-- The Ring of Glory
-			--98501, Looted first Bountiful Chest of the week
+			q(95715, name(HEADERS.Map, GNARLDOR_ISLE)),	-- Gnarldor Isle
+			q(95716, name(HEADERS.Map, THE_RING_OF_GLORY)),	-- The Ring of Glory
+			q(97064, name(HEADERS.Object, 658087, {isWeekly=true})),	-- Abundantly Bountiful Heavy Trunk spwaned
+			q(97628),	-- Looted Afflicted Soul
+			q(98501, name(HEADERS.Object, 584514, {isWeekly=true})),	-- First Bountiful Coffer of the week
 		})),
+		q(99222, name(HEADERS.Faction, FACTION_ZULJARRAS_FORCES, {isWeekly=true})),	-- Zul'Jarra's Forces Rep
 	})),
 }));

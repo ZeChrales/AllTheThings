@@ -1,7 +1,7 @@
 ---------------------------------------------
 --    C R A F T A B L E S   M O D U L E    --
 ---------------------------------------------
-root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
+root(ROOTS.Craftables, expansion(EXPANSION.MID, timelineSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
 	i(232875, {["timeline"] = { REMOVED_12_1_0 }}),	-- Spark of Radiance
 	i(274476, {["timeline"] = { ADDED_12_1_0 }}),	-- Spark of Tides
 	n(DECOR, {
@@ -1170,13 +1170,13 @@ root(ROOTS.Craftables, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = 
 			r(1295407, {["timeline"] = { ADDED_12_1_0 }}),	-- Sulfurous Sludgefish
 			r_withQuest(1225278, 88621),	-- Sunwell Fish
 			r_withQuest(1225281, 88611),	-- Tender Lumifin
-			r(1295422, {["timeline"] = { ADDED_12_1_0 }}),	-- Temple Fishing
+			--r(1295422, {["timeline"] = { ADDED_12_1_0 }}),	-- Temple Fishing
 			r(1295420, {["learnedAt"]=75}),	-- The Coiled Isle
 			r(1295405, {["timeline"] = { ADDED_12_1_0 }}),	-- Toxic Tlhapi
 			r(1305978, {["timeline"] = { ADDED_12_1_0 }}),	-- Twin-Headed Snipefish
 			r_withQuest(1225280, 88605),	-- Twisted Tetra
 			r(1295406, {["timeline"] = { ADDED_12_1_0 }}),	-- Ula'tek Snakehead
-			r(1295421, {["timeline"] = { ADDED_12_1_0 }}),	-- Venom Fishing
+			--r(1295421, {["timeline"] = { ADDED_12_1_0 }}),	-- Venom Fishing
 			r(1225336, {["learnedAt"]=225}),	-- Voidstorm
 			r_withQuest(1225279, 88616),	-- Warping Wise
 			r_withQuest(1225282, 88608),	-- Wyrmfish
@@ -2444,6 +2444,39 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, bubbleDownSelf({ ["time
 			q(90722),	-- 15/20 Synthesis Synergy
 			--q(TODO),	-- 20/20 Synthesis Synergy
 		}),
+		prof(FISHING, {
+			-- Many 12.1 HQTs which flag and unflag for no discernable reason
+			q(97493, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97494, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97495, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97496, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97497, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97498, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97499, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97500, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97501, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97502, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97503, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97504, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97505, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97506, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97507, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97508, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97509, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97510, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97511, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97512, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97513, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			--97514
+			q(97515, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97516, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97517, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97518, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			q(97519, { ["timeline"] = { ADDED_12_1_0 } }),	-- ??
+			--q(98507),	-- ??
+			--q(98508),	-- ??
+			--q(98509),	-- ??
+		}),
 		prof(MINING, {
 			q(87670),	-- 40/40 Over-LODED
 		}),
@@ -2488,6 +2521,7 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, bubbleDownSelf({ ["time
 			q(95471, name(HEADERS.NPC, 242035)),	-- Skinning The Devouring Invader
 			q(93636, name(HEADERS.NPC, 242024)),	-- Skinning The Snapping Scourge
 			q(88532, name(HEADERS.NPC, 247096)),	-- Skinning Umbrafang
+			q(98367, name(HEADERS.NPC, 257863), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Vassti, the Exalted Broodmother
 			q(98364, name(HEADERS.NPC, 255927), { ["timeline"] = ADDED_12_1_0 }),	-- Skinning Venom Lancer Ori'kassi / (triggered from Malformed Leviathan for me)
 		})),
 		prof(TAILORING, {

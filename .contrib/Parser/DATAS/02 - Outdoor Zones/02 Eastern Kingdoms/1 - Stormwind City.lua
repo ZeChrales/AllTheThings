@@ -22,6 +22,12 @@ local PVP_MOUNT_COST = {
 root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 	m(STORMWIND_CITY, {
 		["lore"] = "Stormwind City is the capital city of the Alliance. It is located in the northwestern part of Elwynn Forest.\n\nDuring the First War, the Kingdom of Azeroth, including its capital, Stormwind Keep, was utterly destroyed by the Horde and its survivors fled to Lordaeron. After the orcs were defeated at the Dark Portal at the end of the Second War, it was decided that the city would be rebuilt. The nobles of Stormwind assembled a team of the most skilled and ingenious stonemasons and architects they could find--which later turned sour and led to the rise of the Defias.\n\nWith the fall of the northern kingdoms, Stormwind is by far the most populated city in the world. It serves in many ways as the cultural and trade center of the Alliance, even with remote access to the sea. It is home to the Academy of Arcane Sciences, the only wizarding school in Eastern Kingdoms, as well as SI:7, a rogue intelligence organization.",
+		-- #if BEFORE WRATH
+		["zone-text-areas"] = {
+			1519,	-- Stormwind City
+			2918,	-- Champions' Hall
+		},
+		-- #endif
 		["icon"] = 255130,
 		["isRaid"] = true,
 		["groups"] = {
@@ -1190,7 +1196,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					["lvl"] = 10,
 					-- #if BEFORE CATA
 					["groups"] = {
-						recipe(71),		-- Defensive Stance
+						recipe(71),	-- Defensive Stance
 						-- recipe(7386),	-- Sunder Armor	[TODO: Users are reporting they can't collect this.]
 						recipe(355),	-- Taunt
 					},
@@ -5567,9 +5573,9 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(8932),	-- Alterac Swiss
-						i(414),		-- Dalaran Sharp
+						i(414),	-- Dalaran Sharp
 						i(2070),	-- Darnassian Bleu
-						i(422),		-- Dwarven Mild
+						i(422),	-- Dwarven Mild
 						i(3927),	-- Fine Aged Cheddar
 						i(1707),	-- Stormwind Brie
 					},
@@ -5792,28 +5798,28 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 					-- added all
-						i(926),		-- Battle Axe
+						i(926),	-- Battle Axe
 						i(2025),	-- Bearded Axe
 						i(1198),	-- Claymore
 						i(2029),	-- Cleaver
-						i(851),		-- Cutlass
-						i(922),		-- Dacian Falx
-						i(927),		-- Double Axe
+						i(851),	-- Cutlass
+						i(922),	-- Dacian Falx
+						i(927),	-- Double Axe
 						i(2024),	-- Espadon
-						i(925),		-- Flail
+						i(925),	-- Flail
 						i(1197),	-- Giant Mace
 						i(2030),	-- Gnarled Staff
 						i(2028),	-- Hammer
-						i(853),		-- Hatchet
+						i(853),	-- Hatchet
 						i(15811),	-- Heavy Spear
 						i(2207),	-- Jambiya
 						i(2209),	-- Kris
-						i(923),		-- Longsword
-						i(928),		-- Long Staff
-						i(852),		-- Mace
-						i(924),		-- Maul
+						i(923),	-- Longsword
+						i(928),	-- Long Staff
+						i(852),	-- Mace
+						i(924),	-- Maul
 						i(2208),	-- Poniard
-						i(854),		-- Quarter Staff
+						i(854),	-- Quarter Staff
 						i(2027),	-- Scimitar
 						i(2026),	-- Rock Hammer
 						i(15810),	-- Short Spear
@@ -6014,7 +6020,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						i(2699),	-- Recipe: Redridge Goulash (RECIPE!)
 						i(2701),	-- Recipe: Seasoned Wolf Kabob (RECIPE!)
 						i(2700),	-- Recipe: Succulent Pork Ribs (RECIPE!)
-						i(728),		-- Recipe: Westfall Stew (RECIPE!)
+						i(728),	-- Recipe: Westfall Stew (RECIPE!)
 					},
 				}),
 				applyclassicphase(WRATH_PHASE_FOUR, n(34084, {	-- Knight-Lieutenant Moonstrike <Northrend Armor Quartermaster> // Original S8 Vendor // Furious Gladiator: Season 8 Honor Gear
@@ -6078,12 +6084,12 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					},
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(236),		-- Cured Leather Armor
+						i(236),	-- Cured Leather Armor
 						i(1849),	-- Cured Leather Belt
-						i(238),		-- Cured Leather Boots
+						i(238),	-- Cured Leather Boots
 						i(1850),	-- Cured Leather Bracers
-						i(239),		-- Cured Leather Gloves
-						i(237),		-- Cured Leather Pants
+						i(239),	-- Cured Leather Gloves
+						i(237),	-- Cured Leather Pants
 						-- #if AFTER 10.0.5
 						i(48, {	-- Footpads Pants
 							["timeline"] = { ADDED_10_0_5 },
@@ -6102,17 +6108,17 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						}),
 						-- #endif
 						i(1839),	-- Rough Leather Belt
-						i(796),		-- Rough Leather Boots
+						i(796),	-- Rough Leather Boots
 						i(1840),	-- Rough Leather Bracers
-						i(797),		-- Rough Leather Gloves
-						i(798),		-- Rough Leather Pants
-						i(799),		-- Rough Leather Vest
+						i(797),	-- Rough Leather Gloves
+						i(798),	-- Rough Leather Pants
+						i(799),	-- Rough Leather Vest
 						i(1843),	-- Tanned Leather Belt
-						i(843),		-- Tanned Leather Boots
+						i(843),	-- Tanned Leather Boots
 						i(1844),	-- Tanned Leather Bracers
-						i(844),		-- Tanned Leather Gloves
-						i(846),		-- Tanned Leather Jerkin
-						i(845),		-- Tanned Leather Pants
+						i(844),	-- Tanned Leather Gloves
+						i(846),	-- Tanned Leather Jerkin
+						i(845),	-- Tanned Leather Pants
 					},
 				}),
 				n(52027, {	-- Larisse Pembraux <Justice Heirlooms>
@@ -6313,7 +6319,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					["coord"] = { 74.7, 67.2, STORMWIND_CITY },
 					-- #if BEFORE CATA
 					["sym"] = {
-						{ "sub", "pvp_gear_base", EXPANSION.WRATH, SEASON_DEADLY, PVP_GLADIATOR }, { "merge" }, { "pop" },		-- Deadly Gladiator's Set
+						{ "sub", "pvp_gear_base", EXPANSION.WRATH, SEASON_DEADLY, PVP_GLADIATOR }, { "merge" }, { "pop" },	-- Deadly Gladiator's Set
 						-- #if ANYCLASSIC
 						{ "select", "itemID", 201993 },	-- Deadly Gladiator's Tabard (Wrath Classic Only)
 						-- #endif

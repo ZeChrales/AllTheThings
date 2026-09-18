@@ -26,6 +26,7 @@ MAIN_GATE = createHeader({
 		en = "Stratholme is divided into two sides.\n\nThis side is commonly referred to as the \"Live\" or \"Scarlet\" side, which the Scarlet Crusade has taken over.",
 		es = "Stratholme está dividida en dos lados.\n\nEste lado se conoce comúnmente como el lado \"Vivo\" o \"Escarlata\", que ha sido tomado por la Cruzada Escarlata.",
 		mx = "Stratholme está dividida en dos partes.\n\nEsta parte se conoce comúnmente como la parte \"Viva\" o \"Escarlata\", que ha sido tomado por la Cruzada Escarlata.",
+		cn = "斯坦索姆分为两侧。\n\n这一侧通常被称为“活人”侧或“血色”侧，现已被血色十字军占据。",
 	},
 });
 SERVICE_ENTRANCE = createHeader({
@@ -52,6 +53,7 @@ SERVICE_ENTRANCE = createHeader({
 		en = "Stratholme is divided into two sides.\n\nThis side is commonly referred to as the \"Dead\" or \"Scourge\" side, which the Scourge has taken over.",
 		es = "Stratholme está dividida en dos lados.\n\nEste lado se conoce comúnmente como el lado de los 'Muertos' o del 'Azote', que el Azote ha tomado.",
 		mx = "Stratholme está dividida en dos partes.\n\nEste lado se conoce comúnmente como la parte de los 'No Muertos' o de la 'Plaga', que la Plaga ha tomado.",
+		cn = "斯坦索姆分为两侧。\n\n这一侧通常被称为“亡灵”侧或“天灾”侧，现已被天灾军团占据。",
 	},
 });
 
@@ -1368,26 +1370,32 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 							}),
 						},
 					}),
-					applyclassicphase(PHASE_FIVE_TIER_ZERO_POINT_FIVE_SETS, o(181083, {	-- Sothos and Jarien's Heirlooms
+					applyclassicphase(PHASE_FIVE_TIER_ZERO_POINT_FIVE_SETS, n_conditional(16102, {	-- Sothos
 						["crs"] = {
 							16101,	-- Jarien
-							16102,	-- Sothos
 						},
 						["description"] =
-							-- #if BEFORE 10.1.5
-							"This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits. Unfortunately, after the modifications made to the instance with 4.0.3, these drops become truly unobtainable even with the brazier.",
+							-- #if AFTER 10.1.5
+							"This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.\nSummon Location: Balnazzar's room.",
 							-- #else
-							"This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.",
+							"This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits. Unfortunately, after the modifications made to the instance with 4.0.3, these drops become truly unobtainable even with the brazier.",
 							-- #endif
-						["timeline"] = { REMOVED_4_0_3, ADDED_10_1_5 },
+						-- #if BEFORE 6.0.2
 						["cost"] = {
 							{ "i", 22051, 1 },	-- Brazier of Beckoning [Jarien & Sothos]
-							{ "i", 22057, 1 },	-- Brazier of Invocation
 						},
-						-- #if AFTER 10.1.5
-						-- This init function unmarks the removed from game flag for folks with the brazier.
-						["OnInit"] = FUNCTION_TEMPLATES.OnInit.BrazierAccess,
 						-- #endif
+
+						-- #if AFTER 10.1.5
+						["sourceQuest"] = 8996,	-- Return to Bodley
+						["u_sqs"] = true,	-- remove the u flag if sourcequests are completed
+						-- #endif
+
+						["providers"] = {
+							{ "i", 22057 },	-- Brazier of Invocation
+							{ "o", 181083 },	-- Sothos and Jarien's Heirlooms
+						},
+						["timeline"] = { ADDED_1_11_1, REMOVED_4_0_3 },
 						["groups"] = {
 							objective(2, {	-- 0/1 Left Piece of Lord Valthalak's Amulet
 								["questID"] = 8968,	-- The Left Piece of Lord Valthalak's Amulet [HUNTER, ROGUE]
@@ -1403,37 +1411,23 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 							})),
 							-- #endif
 							i(22329, {	-- Scepter of Interminable Focus
-								["timeline"] = {
-									-- #if SEASON_OF_DISCOVERY
-									REMOVED_1_15_3,
-									-- #else
-									REMOVED_4_0_3, ADDED_10_1_5,
-									-- #endif
-								},
+								-- #if SEASON_OF_DISCOVERY
+								["timeline"] = { REMOVED_1_15_3 },
+								-- #endif
 							}),
-							i(22327, {	-- Amulet of the Redeemed
-								["timeline"] = { REMOVED_4_0_3, ADDED_10_1_5 },
-							}),
+							i(22327),	-- Amulet of the Redeemed
 							-- #if SEASON_OF_DISCOVERY
 							applyclassicphase(SOD_PHASE_FOUR, i(228547, {	-- Ironweave Robe
 								["timeline"] = { ADDED_1_15_3 },
 							})),
 							-- #endif
 							i(22301, {	-- Ironweave Robe
-								["timeline"] = {
-									-- #if SEASON_OF_DISCOVERY
-									REMOVED_1_15_3,
-									-- #else
-									REMOVED_4_0_1, ADDED_10_1_5,
-									-- #endif
-								},
+								-- #if SEASON_OF_DISCOVERY
+								["timeline"] = { REMOVED_1_15_3 },
+								-- #endif
 							}),
-							i(22328, {	-- Legplates of Vigilance
-								["timeline"] = { REMOVED_4_0_3, ADDED_10_1_5 },
-							}),
-							i(22334, {	-- Band of Mending
-								["timeline"] = { REMOVED_4_0_3, ADDED_10_1_5 },
-							}),
+							i(22328),	-- Legplates of Vigilance
+							i(22334),	-- Band of Mending
 						},
 					})),
 					applyclassicphase(PHASE_SIX, n(16387, {	-- Atiesh <Hand of Sargeras>

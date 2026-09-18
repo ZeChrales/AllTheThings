@@ -2,20 +2,6 @@ do
 -- Contains various information which should be exported by the Parser into addon-visible DB files whose names
 -- & addon DB assignment match the respective key of the ExportDB
 -- This allows us to keep DB information in one place, usable both for parsing and in the addon
-
-local SetAutoTable
-local autotable__index = function(t, key)
-	if key == nil then return end
-	local val = SetAutoTable()
-	rawset(t, key, val)
-	return val
- end
-SetAutoTable = function()
-	return setmetatable({}, {__index = autotable__index})
-end
-
-ExportDB = CreateDatabaseContainer("Exports", {__index = autotable__index})
-
 ExportDB.OnUpdateDB.FOR_CRAFTER = [[~function(t)
 	t.visible = nil;
 	t.collectible = nil;
@@ -204,8 +190,8 @@ for i,mapID in ipairs({
 	KALIMDOR,
 	EASTERN_KINGDOMS,
 		-- #if AFTER TBC
-		EVERSONG_WOODS,		-- Eversong Woods (and Ghostlands + Isle of Quel'Danas)
-		AZUREMYST_ISLE,		-- Azuremyst Isle (and Bloodmyst)
+		EVERSONG_WOODS,	-- Eversong Woods (and Ghostlands + Isle of Quel'Danas)
+		AZUREMYST_ISLE,	-- Azuremyst Isle (and Bloodmyst)
 		HELLFIRE_PENINSULA,	-- Hellfire Peninsula (All of Outland)
 		-- #endif
 		-- #if AFTER WRATH
@@ -302,6 +288,10 @@ for i,mapID in ipairs({
 	-- #if AFTER 12.0.7
 	2623,	-- Naigtal
 	2622,	-- Val
+	-- #endif
+
+	-- #if AFTER 12.1.5
+	2671,	-- The Labyrinth of Kindo'Jan
 	-- #endif
 })
 do table.insert(FlightPathMapIDs, mapID); end

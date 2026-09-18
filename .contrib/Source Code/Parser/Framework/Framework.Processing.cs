@@ -192,6 +192,7 @@ namespace ATT
                 AddHandlerAction(ParseStage.Validation, (data) => data.ContainsKey("objectiveID"), Validate_objectiveID);
             }
 
+            AddHandlerAction(ParseStage.Validation, data => data.ContainsKey("objectID"), Validate_objectID);
             AddHandlerAction(ParseStage.Validation, data => data.ContainsKey("questID"), Validate_Quest);
             AddHandlerAction(ParseStage.Validation, data => data.ContainsKey("sym"), Validate_sym);
             AddHandlerAction(ParseStage.Validation, data => data.ContainsKey("factionID"), Validate_Faction);
@@ -294,7 +295,7 @@ namespace ATT
                 Objects.AllContainers["Unsorted"] = unsorted = new List<object>();
             }
             var expansionLists = new Dictionary<int, TierList>();
-            int maxExpansionID = 11;// LAST_EXPANSION_PATCH[CURRENT_RELEASE_PHASE_NAME][0];
+            int maxExpansionID = 12;// LAST_EXPANSION_PATCH[CURRENT_RELEASE_PHASE_NAME][0];
             for (int expansionID = 1; expansionID <= maxExpansionID; ++expansionID)
             {
                 // ensure the expansion group exists
@@ -331,7 +332,8 @@ namespace ATT
                         else if (itemID < 174366) expansion = expansionLists[8];   // Battle For Azeroth
                         else if (itemID < 190311) expansion = expansionLists[9];   // Shadowlands
                         else if (itemID < 226145) expansion = expansionLists[10];   // Dragonflight
-                        else expansion = expansionLists[11];   // The War Within
+                        else if (itemID < 270000) expansion = expansionLists[11];   // The War Within
+                        else expansion = expansionLists[12];   // Midnight
                     }
                     // sort by level into expansion if not an item
                     else if (level.HasValue)
@@ -346,7 +348,8 @@ namespace ATT
                         else if (level <= 50) expansion = expansionLists[8];   // Battle For Azeroth
                         else if (level <= 60) expansion = expansionLists[9];   // Shadowlands
                         else if (level <= 70) expansion = expansionLists[10];   // Dragonflight
-                        else expansion = expansionLists[11];   // The War Within
+                        else if (level <= 80) expansion = expansionLists[11];   // The War Within
+                        else expansion = expansionLists[12];   // Midnight
                     }
                     // default expansion assignment
                     else expansion = expansionLists[1];
@@ -1404,6 +1407,28 @@ namespace ATT
                 CaptureDebugDBData(source);
             }
             SortByName(rawSources);
+
+            // If this ensemble contains sources which correlate to header groupings & classes, then split those into their own header groups for better readability
+            if (CanOrganizeData_ByAppearanceModDifficulty(rawSources) && CanOrganizeData_ByClass(rawSources))
+            {
+                OrganizeData_ByAppearanceModDifficulty(rawSources);
+
+                // Within each header group, if there are multiple classes, then split those into class headers for better readability
+                foreach (var headerGroup in rawSources.Select(d => d.TryGetValue("g", out List<object> headerGroups) ? headerGroups : null).Where(d => d != null))
+                {
+                    OrganizeData_ByClass(headerGroup);
+                }
+            }
+            // If this ensemble comprises multiple classes, then let's split the items into class headers to make readability better
+            else if (CanOrganizeData_ByClass(rawSources))
+            {
+                OrganizeData_ByClass(rawSources);
+            }
+            // otherwise if this ensemble contains multiple Armor types, then split into Type groups
+            else if (CanOrganizeData_ByFilter(rawSources, Objects.Filters.Cloth, Objects.Filters.Plate))
+            {
+                OrganizeData_ByFilter(rawSources);
+            }
             Objects.Merge(data, "g", rawSources);
 
             // when Blizzard references a questID and tmogSetID which conflict from the same SpellID on an Item, we end up with one Item potentially granting 2 TransmogSets
@@ -1440,6 +1465,107 @@ namespace ATT
 
             // Capture the Ensemble for Debug output
             CaptureDebugDBData(data);
+        }
+
+        private static bool CanOrganizeData_ByAppearanceModDifficulty(List<Data> rawSources) =>
+            rawSources.Select(d => WagoData.TryGetItemModifiedAppearanceAssociations(d.TryGetValue("sourceID", out long sourceID) ? sourceID : 0, out List<ItemModifiedAppearance> itemAppearances)
+                && itemAppearances.Count > 0
+                && (itemAppearances.FirstOrDefault()?.ExpectedBonusID ?? 0) != 0
+                    ? itemAppearances.FirstOrDefault().ItemAppearanceModifierID
+                    : 0).Any(h => h != 0);
+
+        private static void OrganizeData_ByAppearanceModDifficulty(List<Data> rawSources)
+        {
+            List<Data> headers = new List<Data>();
+            foreach (var armorGroup in rawSources.GroupBy(d => WagoData.TryGetItemModifiedAppearanceAssociations(d.TryGetValue("sourceID", out long sourceID) ? sourceID : 0, out List<ItemModifiedAppearance> itemAppearances)
+                && itemAppearances.Count > 0
+                && (itemAppearances.FirstOrDefault()?.ExpectedBonusID ?? 0) != 0
+                    ? itemAppearances.FirstOrDefault().ItemAppearanceModifierID
+                    : 0))
+            {
+                Data filterHeader = ItemModifiedAppearance.GetOrganizingHeaderData(armorGroup.Key);
+                if (filterHeader == null)
+                {
+                    // no header for items with no data grouping
+                    continue;
+                }
+
+                Objects.Merge(filterHeader, "g", armorGroup);
+                headers.Add(filterHeader);
+
+                // remove the raw sources that are now nested under the header
+                rawSources.RemoveAll(d => armorGroup.Contains(d));
+            }
+
+            // add the headers to the raw sources
+            Objects.Merge(rawSources, headers);
+        }
+
+        private static bool CanOrganizeData_ByFilter(List<Data> rawSources, Objects.Filters minFilter, Objects.Filters maxFilter) =>
+            rawSources.Select(d => d.TryGetValue("f", out long f) ? f : 0)
+                .Where(f => f.IsBoundedBy((long)minFilter, (long)maxFilter)).Distinct().Count() > 1;
+
+        private static void OrganizeData_ByFilter(List<Data> rawSources)
+        {
+            List<Data> headers = new List<Data>();
+            foreach (var armorGroup in rawSources.GroupBy(d => d.TryGetValue("f", out long f) ? f : 0))
+            {
+                if (armorGroup.Key == 0)
+                {
+                    // no armor header for items with no filter
+                    continue;
+                }
+
+                Data filterHeader = new Dictionary<string, object>
+                {
+                    ["f"] = armorGroup.Key,
+                    ["g"] = new List<object>(armorGroup),
+                };
+                headers.Add(filterHeader);
+
+                // remove the raw sources that are now nested under the class headers
+                rawSources.RemoveAll(d => armorGroup.Contains(d));
+            }
+
+            // add the class headers to the raw sources
+            Objects.Merge(rawSources, headers);
+        }
+
+        private static bool CanOrganizeData_ByClass(List<Data> rawSources) =>
+            rawSources.Select(d => d.TryGetValue("c", out object c)
+                && c is List<object> classList
+                && classList.Count > 0
+                    ? classList.FirstOrDefault()
+                    : null)
+                .Distinct().Count() > 1;
+
+        private static void OrganizeData_ByClass<T>(List<T> rawSources)
+            where T : class
+        {
+            List<Data> headers = new List<Data>();
+            foreach (var classGroup in rawSources.GroupBy(o => o is Data d && d.TryGetValue("c", out object c)
+                                                && c is List<object> classList
+                                                && classList.Count > 0 ? classList.FirstOrDefault() : null))
+            {
+                if (classGroup.Key == null)
+                {
+                    // no class header for items with no class restriction
+                    continue;
+                }
+
+                Data classHeader = new Dictionary<string, object>
+                {
+                    ["classID"] = classGroup.Key,
+                    ["g"] = classGroup.ToList(),
+                };
+                headers.Add(classHeader);
+
+                // remove the raw sources that are now nested under the class headers
+                rawSources.RemoveAll(d => classGroup.Contains(d));
+            }
+
+            // add the class headers to the raw sources
+            Objects.Merge(rawSources, headers);
         }
 
         private static void Incorporate_Parallel(IDictionary<string, object> data)
@@ -2128,6 +2254,12 @@ namespace ATT
                         break;
                 }
             }
+
+            // Warn about Encounters which have 'qgs'
+            if (data.TryGetValue("qgs", out List<object> qgs))
+            {
+                LogWarn($"Encounters should not have 'qgs' (quest givers) assigned! {ToJSON(qgs)}", data);
+            }
         }
 
         private static void Validate_Criteria(IDictionary<string, object> data, IDictionary<string, object> parent)
@@ -2338,12 +2470,23 @@ namespace ATT
             }
         }
 
+        private static void Validate_objectID(Data data)
+        {
+            if (!data.TryGetValue("objectID", out long objectID))
+                return;
+
+            // Warn about Objects which have 'qgs'
+            if (data.TryGetValue("qgs", out List<object> qgs))
+            {
+                LogWarn($"Objects should not have 'qgs' (quest givers) assigned! Use 'crs' or 'providers' {ToJSON(qgs)}", data);
+            }
+        }
+
         private static void Incorporate_Achievement(IDictionary<string, object> data)
         {
             if (!data.TryGetValue("achID", out long achID) ||
                 data.ContainsKey("criteriaID") ||
                 (data.TryGetValue("collectible", out bool collectible) && !collectible)) return;
-
 
             // Guild Achievements are not collectible
             if (data.TryGetValue("isGuild", out bool isGuild) && isGuild)
@@ -2819,6 +2962,12 @@ namespace ATT
             {
                 // TODO: perhaps a different way eventually to show in target tooltips
                 IncorporateDataField(data, "races_disp", new List<object> { targetRaceID });
+            }
+
+            long assetType276ID = criteriaData.GetAssetType276ID();
+            if (assetType276ID > 0)
+            {
+                IncorporateDataField(data, "_assetType276ID", assetType276ID);
             }
 
             // This needs to be the last check performed since it will remove the Criteria group if nothing useful was added from the Criteria data
@@ -3340,6 +3489,19 @@ namespace ATT
 
             // Ensembles will be handled specially for now and must incorporate their Spell information ahead of the typical parallel sequence
             Incorporate_Spell(data);
+
+            // If we've applied a questID to this ensemble item, but there's no tmogSetID, do alternate check on the tmogSetID's
+            // TrackingQuestID to see if it matches the questID on the ensemble, and then note that we will use that instead
+            if (data.TryGetValue("questID", out long questID) && !data.ContainsKey("tmogSetID"))
+            {
+                var firsttmogSetAssociated = WagoData.EnumerateForQuestID<TransmogSet>(questID).FirstOrDefault();
+                if (firsttmogSetAssociated != null)
+                {
+                    long questtmogSetID = firsttmogSetAssociated.ID;
+                    data["tmogSetID"] = questtmogSetID;
+                    LogDebug($"INFO: Assigned TransmogSet tmogSetID={questtmogSetID} associated to questID={questID}", data);
+                }
+            }
 
             if (data.TryGetValue("tmogSetID", out long tmogSetID) && WagoData.TryGetValue(tmogSetID, out TransmogSet tmogSet))
             {
@@ -3988,6 +4150,11 @@ namespace ATT
                 DuplicateDataIntoGroups(data, mission, "missionID");
                 cloned = true;
             }
+            if (data.TryGetValue("_assetType276ID", out object assetType276ID))
+            {
+                DuplicateDataIntoGroups(data, assetType276ID, "_assetType276ID");
+                cloned = true;
+            }
 
             // Un-cloned Criteria which is marked as ignored should allow itself to be removed from the list
             if (data.ContainsKey("criteriaID") && !data.ContainsKey("_noautomation"))
@@ -4479,13 +4646,30 @@ namespace ATT
                 }
             }
 
-            // Titles under Guild Achievements (Hall of Fame) are not 'really' collectible since they are tied to the Guild
-            if (data.TryGetValue("titleID", out long titleID)
-                && data.TryGetValue("__parent", out IDictionary<string, object> parent)
-                && parent.TryGetValue("isGuild", out bool isGuild) && isGuild)
+            // Comparisons to parent data
+            if (data.TryGetValue("__parent", out Data parent))
             {
-                data["collectible"] = false;
-                LogDebug($"INFO: HoF Guild Achievement Title marked uncollectible: achID={titleID}", data);
+                // Titles under Guild Achievements (Hall of Fame) are not 'really' collectible since they are tied to the Guild
+                if (data.TryGetValue("titleID", out long titleID)
+                    && parent.TryGetValue("isGuild", out bool isGuild) && isGuild)
+                {
+                    data["collectible"] = false;
+                    LogDebug($"INFO: HoF Guild Achievement Title marked uncollectible: titleID={titleID}", data);
+                }
+            }
+
+            // Check if any basic Item groups actually can map to an EnsembleItem instead
+            if (data.TryGetValue("itemID", out itemID)
+                && !data.ContainsAnyKey("type", "_doautomation", "_unsorted", "_nyi"))
+            {
+                var clonedItem = new Dictionary<string, object>(data);
+                clonedItem["type"] = "ensembleID";
+                var keys = clonedItem.Keys.ToArray();
+                Incorporate_Ensemble(clonedItem);
+                if (clonedItem.ContainsKey("tmogSetID"))
+                {
+                    LogWarn($"Basic ItemID={itemID} includes data which represents an Ensemble. Use iensemble() instead for automated generation or add '_doautomation=false' to ignore it.", clonedItem);
+                }
             }
         }
 
@@ -4720,6 +4904,13 @@ namespace ATT
             if (!data.TryGetValue("timeline", out object timelineRef) || !(timelineRef is Timeline timeline))
                 return true;
 
+            // Empty timeline
+            if (timeline.EntryCount == 0)
+            {
+                LogError($"Timeline is empty. Either omit completely or assign valid data", data);
+                return false;
+            }
+
             // Warn if the first entry is a 'removing' change (still over a thousand places where timelines start with a 'removed' change first if not excluding before more recent data)
             if (CurrentParseStage == ParseStage.Validation && timeline.Entries[0].Version > 80000 && ChangeType.IsRemovingChange(timeline.Entries[0].Change))
             {
@@ -4797,11 +4988,8 @@ namespace ATT
                     break;
                 case RemovedStatus.REMOVED_FROM_GAME:
                 case RemovedStatus.DELETED_FROM_GAME:
-                    // don't replace CONDITIONALLY_AVAILABLE since it needs to be overridden by OnInit funcs, but only when timeline is inherited!
-                    if (!data.TryGetValue("_inherited", out inheritedFields)
-                        || !inheritedFields.Contains("timeline")
-                        || !data.TryGetValue("u", out u)
-                        || u != 6)
+                    // don't replace CONDITIONALLY_AVAILABLE since it needs to be overridden by OnInit funcs!
+                    if (!data.TryGetValue("u", out u) || u != 6)
                     {
                         data["u"] = 2;
                     }
@@ -4821,6 +5009,7 @@ namespace ATT
                     // ignore this thing being forcibly-obtainable due to an 'added' timeline when the parent group contains a 'rwp' beyond the 'awp' of this group
                     // if _forcetimeline is specified, then don't let parent's timeline override this timeline
                     if (!data.ContainsKey("_forcetimeline")
+                        && parentData != null
                         && parentData.TryGetValue("rwp", out long parentRwp)
                         && parentRwp >= addedPatch
                         && (parentRwp < removedPatch || removedPatch == 10000))
@@ -4838,21 +5027,37 @@ namespace ATT
 
             bool wasDefaulted = data.ContainsKey("_defaulttimeline");
             // Mark when this Thing was put into (or back into) the game
-            if (!wasDefaulted && addedPatch > 10000)
+            if (addedPatch > 10000)
             {
                 if (data.TryGetValue("awp", out long awp) && awp != addedPatch)
-                    LogDebugWarn($"Field replaced 'awp': {addedPatch} => {awp}", data);
-
-                data["awp"] = addedPatch; // "Added With Patch"
+                {
+                    if (!wasDefaulted)
+                    {
+                        LogDebugWarn($"Field replaced 'awp': {addedPatch} => {awp}", data);
+                        data["awp"] = addedPatch; // "Added With Patch"
+                    }
+                }
+                else
+                {
+                    data["awp"] = addedPatch; // "Added With Patch"
+                }
             }
 
             // Mark when this Thing was (or will be) removed from the game
-            if (!wasDefaulted && removedPatch > 10000)
+            if (removedPatch > 10000)
             {
                 if (data.TryGetValue("rwp", out long rwp) && rwp != removedPatch)
-                    LogDebugWarn($"Field replaced 'rwp': {removedPatch} => {rwp}", data);
-
-                data["rwp"] = removedPatch; // "Removed With Patch"
+                {
+                    if (!wasDefaulted)
+                    {
+                        LogDebugWarn($"Field replaced 'rwp': {removedPatch} => {rwp}", data);
+                        data["rwp"] = removedPatch; // "Removed With Patch"
+                    }
+                }
+                else
+                {
+                    data["rwp"] = removedPatch; // "Removed With Patch"
+                }
             }
 
             return true;

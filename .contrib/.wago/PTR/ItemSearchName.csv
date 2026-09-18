@@ -46492,7 +46492,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 118085,"Admiral Taylor's Staff of Wisdom",2,5,0,0,-1,0,0,0,0,42,0,8704,0,0,0,-1,-1
 118086,"Admiral Taylor's Keg Tapper",2,5,0,0,-1,0,0,0,0,42,0,8704,0,0,0,-1,-1
 118087,"""Super Sterilized"" Blastguard Legplates",3,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
-118088,"""Super Sterlized"" Blastguard Legwraps",3,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
+118088,"""Super Sterilized"" Blastguard Legwraps",3,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 118089,"""Super Sterilized"" Blastguard Leggings",3,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 118090,"""Super Sterilized"" Blastguard Britches",3,5,0,0,-1,0,0,0,0,43,0,8192,0,0,0,-1,-1
 118102,"Darkmoon Ring",1,0,0,0,-1,1,0,0,0,1,131072,24576,0,0,0,-1,-1
@@ -66967,7 +66967,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 165635,"Sentinel's Moonglaive",3,7,0,0,-1,50,0,0,0,60,0,8258,0,160,0,-1321907123,1427461461
 165636,"Sentinel's Gavel",3,7,0,0,-1,50,0,0,0,60,0,8258,0,160,0,-1321907123,1427461461
 165637,"Sentinel's Bulwark",3,7,0,0,-1,50,0,0,0,60,0,8258,0,160,0,-1321907123,1427461461
-165657,"Free T-Shirt",3,-3,0,0,-1,1,0,0,0,1,65600,12288,0,0,0,-1,-1
+165657,"Free T-Shirt",3,-3,0,0,-1,1,0,0,0,1,65600,8192,0,0,0,-1,-1
 165764,"Firecaller's Handwraps",4,7,0,0,-1,50,0,0,0,60,0,8194,0,32,0,-1,-1
 165765,"Cord of Zandalari Resolve",4,7,0,0,-1,50,0,0,0,60,0,8192,0,32,0,-1,-1
 165777,"Ma'ra's Boneblade Mantle",4,7,0,0,-1,50,0,0,0,60,0,8194,0,32,0,-1,-1
@@ -67255,29 +67255,29 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 167055,"Amber Goo Puddle",3,7,0,3,-1,1,0,0,0,1,36928,12288,0,0,0,-1,-1
 167056,"Essence of Pride",3,7,0,3,-1,1,0,0,0,1,36928,12288,0,0,0,-1,-1
 167058,"Kor'thik Swarmling",3,7,0,3,-1,1,0,0,0,1,36928,12288,0,0,0,-1,-1
-167081,"Bold Yellow Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167082,"Stylish Black Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167177,"Common Gray Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167178,"Common Brown Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167179,"Common White Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167180,"Ebon Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167181,"Golden Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167182,"Cerulean Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167183,"Amber Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167184,"Scarlet Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167185,"Ebon Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167186,"Cerulean Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167187,"Amber Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167188,"Scarlet Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167189,"Golden Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167190,"Blue Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167191,"Green Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167192,"Embroidered Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167193,"Yellow Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167194,"Purple Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167195,"Red Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167196,"Wound Dressing",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
-167197,"Antiseptic-Soaked Dressing",2,-3,0,0,-1,0,0,0,0,1,32768,12288,0,0,0,-1,-1
+167081,"Bold Yellow Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167082,"Stylish Black Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167177,"Common Gray Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167178,"Common Brown Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167179,"Common White Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167180,"Ebon Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167181,"Golden Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167182,"Cerulean Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167183,"Amber Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167184,"Scarlet Filigreed Doublet",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167185,"Ebon Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167186,"Cerulean Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167187,"Amber Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167188,"Scarlet Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167189,"Golden Filigreed Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167190,"Blue Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167191,"Green Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167192,"Embroidered Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167193,"Yellow Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167194,"Purple Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167195,"Red Martial Shirt",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167196,"Wound Dressing",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
+167197,"Antiseptic-Soaked Dressing",2,-3,0,0,-1,0,0,0,0,1,32768,8192,0,0,0,-1,-1
 167207,"Jade's Lovely Shirt",3,-3,0,0,-1,1,0,0,0,1,98304,12288,0,0,0,-1,-1
 167208,"Jade's Lovely Shirt",3,-3,0,0,-1,1,0,0,0,1,98304,8192,0,0,0,-1,-1
 167212,"Shuurt's Precious",3,-3,0,0,-1,1,0,0,0,1,98304,12288,0,0,0,-1,-1
@@ -74994,7 +74994,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 187777,"Druid's Handwraps",1,0,0,0,-1,0,0,0,0,1,0,8192,8388608,0,0,-1,-1
 187778,"Druid's Footwear",1,0,0,0,-1,0,0,0,0,1,0,8192,8388608,0,0,-1,-1
 187821,"Bar-Fusan's Hackblade",4,8,0,0,-1,60,0,0,0,220,0,8192,0,0,0,-1,-1
-187914,"Captain Noteo's Unused Eye Patch",3,0,0,0,-1,0,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 188006,"Choral Vestments",2,8,0,0,-1,60,0,0,0,226,0,8192,0,0,0,-1,-1
 188007,"Choral Slippers",2,8,0,0,-1,60,0,0,0,226,0,8192,0,0,0,-1,-1
 188008,"Choral Handwraps",2,8,0,0,-1,60,0,0,0,226,0,8192,0,0,0,-1,-1
@@ -76236,7 +76235,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 191824,"Obsidian Dracthyr Battlegear Leggings",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
 191825,"Obsidian Dracthyr Battlegear Monnion",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
 191826,"Obsidian Dracthyr Battlegear Belt",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
-192012,"Wyrmforged Armplates",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 191827,"Obsidian Dracthyr Battlegear Bracers",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
 191828,"Obsidian Dracthyr Battlegear Cover",2,9,0,0,-1,58,0,0,0,132,0,4202496,0,0,0,-1,-1
 191829,"Cobalt Guardian's Hauberk",3,9,0,0,-1,58,0,0,0,1,134254592,139264,0,65536,0,-1,-1
@@ -76278,6 +76276,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 192009,"Wyrmforged Legguards",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192010,"Wyrmforged Mantle",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192011,"Wyrmforged Girdle",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
+192012,"Wyrmforged Armplates",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192013,"Ottuk Hide Vest",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192014,"Ottuk Hide Epaulets",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
 192015,"Cobalt Watcher's Shoulderpads",2,9,0,0,-1,60,0,0,0,350,0,8192,0,0,0,-1,-1
@@ -76647,7 +76646,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 193642,"Mantle of Yearned Freedom",3,9,0,0,-1,58,0,0,0,250,0,8192,0,0,0,-1,-1
 193643,"Stasis-Freed Leggings",3,9,0,0,-1,58,0,0,0,250,0,8192,0,0,0,-1,-1
 193644,"Cuirass of Irreparable Madness",3,9,0,0,-1,58,0,0,0,250,0,8192,0,0,0,-1,-1
-193645,"Crystalized Bulwark",3,9,0,0,-1,58,0,0,0,250,0,8192,0,0,0,-1,-1
+193645,"Crystallized Bulwark",3,9,0,0,-1,58,0,0,0,250,0,8192,0,0,0,-1,-1
 193646,"Refraction's Edge",3,9,0,0,-1,58,0,0,0,250,0,8192,0,0,0,-1,-1
 193647,"Custodian's Medallion of Delusion",3,9,0,0,-1,58,0,0,0,250,0,8192,0,0,0,-1,-1
 193648,"Azureblade's Work Gloves",3,9,0,0,-1,58,0,0,0,250,0,8192,0,0,0,-1,-1
@@ -80451,6 +80450,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 208199,"Tabard of the Tyr's Guard",4,9,0,0,-1,1,0,0,0,1,134250496,143360,0,65536,0,-1,-1
 208207,"Morchie's Timeworn Shoulderpads",3,9,0,0,-1,60,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 208216,"Reins of the Quantum Courser",4,9,0,3,-1,10,0,0,33388,10,64,8192,0,16384,0,-1,-1
+208323,"Nature's Firebathed Robes",3,9,0,0,-1,70,0,0,0,428,0,8192,0,0,0,-1,-1
 208239,"Verdant Combatant's Resilient Boots",2,9,0,0,-1,70,0,0,0,330,0,24576,0,16777216,0,-1,-1
 208240,"Verdant Combatant's Resilient Chestpiece",2,9,0,0,-1,70,0,0,0,330,0,24576,0,16777216,0,-1,-1
 208241,"Verdant Combatant's Resilient Mask",2,9,0,0,-1,70,0,0,0,330,0,24576,0,16777216,0,-1,-1
@@ -80490,7 +80490,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 208316,"Verdant Combatant's Plate Goggles",2,9,0,0,-1,70,2827,1,0,330,64,24576,0,16777216,0,-1,-1
 208321,"Iridal, the Earth's Master",4,9,0,0,-1,70,0,0,0,402,64,8704,0,0,0,-1,-1
 208322,"Treads of the Nightclaw",3,9,0,0,-1,70,0,0,0,428,0,8192,0,0,0,-1,-1
-208323,"Nature's Firebathed Robes",3,9,0,0,-1,70,0,0,0,428,0,8192,0,0,0,-1,-1
 208324,"Scorching Dryad's Chestpiece",3,9,0,0,-1,70,0,0,0,428,0,8192,0,0,0,-1,-1
 208325,"Ignit's Fiery Heart",3,9,0,0,-1,70,0,0,0,428,0,8192,0,0,0,-1,-1
 208326,"Vest of the Flametide",3,9,0,0,-1,70,0,0,0,428,0,8192,0,0,0,-1,-1
@@ -80856,7 +80855,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209151,"Verdant Gladiator's Leather Helm",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209152,"Verdant Gladiator's Leather Mask",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209153,"Verdant Gladiator's Leather Breeches",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
-209384,"Dreambound Girdle",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209154,"Verdant Gladiator's Leather Legwraps",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209155,"Verdant Gladiator's Leather Spaulders",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209156,"Verdant Gladiator's Leather Shoulderpads",4,9,0,0,2048,70,0,0,0,447,4096,8192,0,0,0,-1,-1
@@ -80935,7 +80933,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209229,"Verdant Gladiator's Chain Leggings",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209230,"Verdant Gladiator's Chain Breeches",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209231,"Verdant Gladiator's Chain Monnion",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
-209385,"Dreambound Mantle",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209232,"Verdant Gladiator's Chain Shoulderguard",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209233,"Verdant Gladiator's Chain Belt",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
 209234,"Verdant Gladiator's Chain Girdle",4,9,0,0,4,70,0,0,0,447,4096,8192,0,0,0,-1,-1
@@ -81056,6 +81053,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209381,"Dreambound Epaulets",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209382,"Dreambound Vest",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209383,"Dreambound Armplates",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
+209384,"Dreambound Girdle",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
+209385,"Dreambound Mantle",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209386,"Dreambound Legguards",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209387,"Dreambound Gauntlets",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
 209388,"Dreambound Sabatons",2,9,0,0,-1,70,0,0,0,350,4096,24576,0,0,0,-1,-1
@@ -81177,8 +81176,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209758,"Verdant Aspirant's Leather Cord",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
 209759,"Verdant Aspirant's Silk Bindings",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
 209760,"Verdant Aspirant's Plate Armguards",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
-209921,"Spirited Stag's Branch",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209761,"Verdant Aspirant's Chain Bracer",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
+209922,"Fearless Faerie's Glaive",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209762,"Verdant Aspirant's Leather Armguards",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
 209774,"Verdant Aspirant's Cloak",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
 209775,"Verdant Aspirant's Drape",2,9,0,0,-1,70,0,0,0,415,4096,8192,0,0,0,-1,-1
@@ -81219,7 +81218,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 209918,"Summer Soother's Wrap",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209919,"Chartreuse Champion's Bulwark",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209920,"Summer Soother's Implement",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
-209922,"Fearless Faerie's Glaive",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
+209921,"Spirited Stag's Branch",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209923,"Chartreuse Champion's Blade",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209924,"Chartreuse Champion's Warspear",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
 209925,"Fearless Faerie's Dirk",2,9,0,0,-1,70,0,0,0,415,0,8192,0,0,0,-1,-1
@@ -84100,8 +84099,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 216105,"Draconic Gladiator's Leather Treads",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
 216106,"Draconic Gladiator's Leather Gloves",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
 216107,"Draconic Gladiator's Leather Grips",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
-216417,"Hozen Shanker",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216108,"Draconic Gladiator's Leather Helm",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
+216419,"Hozen Knife",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216109,"Draconic Gladiator's Leather Mask",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
 216110,"Draconic Gladiator's Leather Breeches",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
 216111,"Draconic Gladiator's Leather Legwraps",4,9,0,0,2048,70,0,0,0,493,4096,8192,0,0,0,-1,-1
@@ -84376,8 +84375,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 216408,"Fyn's Dagger",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216412,"Iron Qon's Knife",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216416,"Hozen Blade",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
+216417,"Hozen Shanker",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216418,"Hozen Dagger",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
-216419,"Hozen Knife",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216421,"Pandaren Mace",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216422,"Pandaren Smasher",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
 216423,"Pandaren Basher",2,4,0,0,-1,10,0,0,0,13,0,16801792,8388608,32,0,-1,-1
@@ -84821,7 +84820,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 217524,"Crucible Raider's Shadowed Focus",4,9,0,0,-1,70,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 217525,"Crucible Raider's Molten Focus",4,9,0,0,-1,70,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 217526,"Crucible Raider's Corrupted Focus",4,9,0,0,-1,70,0,0,0,1,134254592,139264,0,65536,0,-1,-1
-218030,"Recruit's Sturdy Girdle",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 217527,"Crucible Raider's Bronzed Kiteshield",4,9,0,0,-1,70,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 217528,"Crucible Raider's Shadowed Kiteshield",4,9,0,0,-1,70,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 217529,"Crucible Raider's Molten Kiteshield",4,9,0,0,-1,70,0,0,0,1,134254592,139264,0,65536,0,-1,-1
@@ -85062,6 +85060,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218027,"Recruit's Sturdy Crushers",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218028,"Recruit's Sturdy Greathelm",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218029,"Recruit's Sturdy Pauldrons",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
+218030,"Recruit's Sturdy Girdle",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218031,"Recruit's Sturdy Vambraces",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218032,"Recruit's Sturdy Cape",3,-3,0,0,-1,10,0,0,0,252,32768,8194,8388608,0,0,-1,-1
 218033,"Defender's Hefty Satchel",2,-3,0,0,-1,10,0,0,0,1,134217728,139264,0,0,0,-1,-1
@@ -85384,7 +85383,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218552,"Forged Gladiator's Cloak",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218553,"Forged Gladiator's Drape",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218554,"Forged Gladiator's Shawl",4,10,0,0,2048,80,0,0,0,584,4096,8192,0,0,0,-1,-1
-218725,"Forged Gladiator's Focus",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218555,"Forged Gladiator's Leather Vest",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218556,"Forged Gladiator's Leather Jerkin",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218557,"Forged Gladiator's Leather Boots",4,10,0,0,512,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -85424,8 +85422,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218591,"Forged Gladiator's Drape",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218592,"Forged Gladiator's Shawl",4,10,0,0,8,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218593,"Forged Gladiator's Armored Scales",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
-218726,"Forged Gladiator's Shield",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218594,"Forged Gladiator's Scaleguard",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
+218726,"Forged Gladiator's Shield",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218595,"Forged Gladiator's Chain Sabatons",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218596,"Forged Gladiator's Chain Boots",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218597,"Forged Gladiator's Chain Gauntlets",4,10,0,0,4096,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -85545,6 +85543,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 218722,"Forged Gladiator's Staff",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
 218723,"Forged Gladiator's Bow",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218724,"Forged Gladiator's Scepter",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
+218725,"Forged Gladiator's Focus",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218727,"Forged Gladiator's Axe",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
 218728,"Forged Gladiator's Pincer",4,10,0,0,-1,80,0,0,0,584,4096,8704,0,0,0,-1,-1
 218729,"Forged Gladiator's Claws",4,10,0,0,-1,80,0,0,0,584,4096,8192,0,0,0,-1,-1
@@ -94843,7 +94842,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 248733,"Frozen Dirk of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 248734,"Fiery Dirk of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 248735,"Arcane Dirk of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-248736,"Glowing Dirk of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+248736,"Ominous Dirk of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 248737,"Well-Used Great Steak Knife",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 248738,"Used Great Steak Knife",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 248739,"Dull Great Steak Knife",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -94859,11 +94858,11 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 248812,"Frozen Wand of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 248816,"Fiery Wand of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 248817,"Arcane Wand of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-248818,"Glowing Wand of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+248818,"Ominous Wand of the Ice Queen",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 248827,"Frozen Great Axe of the Frostwolf",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 248828,"Fiery Great Axe of the Frostwolf",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 248829,"Arcane Great Axe of the Frostwolf",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-248830,"Glowing Great Axe of the Frostwolf",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+248830,"Ominous Edge of the Frostwolf",3,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 248832,"Big Bronze Fork",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 248837,"Big Gold Fork",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 248839,"Big Iron Fork",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
@@ -94871,7 +94870,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 248912,"Frozen Warglaives of the North",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 248913,"Fiery Warglaives of the North",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 248914,"Arcane Warglaives of the North",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-248915,"Glowing Warglaives of the North",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+248915,"Ominous Iceglaives of the North",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 248916,"Untethered Seer's Capelet",3,10,0,0,-1,1,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 248917,"Untethered Blade's Mantle",3,10,0,0,-1,1,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 248918,"Untethered Striker's Shroud",3,10,0,0,-1,1,0,0,0,1,134254592,139264,0,65536,0,-1,-1
@@ -95047,7 +95046,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 249380,"Hate-Tied Waistchain",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 249381,"Greaves of the Unformed",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
 249382,"Canopy Walker's Footwraps",4,11,0,0,-1,90,0,0,0,197,0,8192,0,0,0,-1,-1
-249386,"Ghost Gear",1,-3,0,0,-1,1,0,0,0,1,134217728,155648,0,262144,0,-1,-1
+249386,"Ghost Gear",1,-3,0,0,-1,1,0,0,0,1,134348800,155648,0,262144,0,-1,-1
 249434,"Well-Worn Twilight Cultist's Cowl",3,-3,0,0,-1,1,0,0,0,1,36864,8192,0,65536,0,-1,-1
 249435,"Well-Worn Twilight Cultist's Mantle",3,-3,0,0,-1,1,0,0,0,1,36864,8192,0,65536,0,-1,-1
 249436,"Well-Worn Twilight Cultist's Robe",3,-3,0,0,-1,1,0,0,0,1,36864,8192,0,65536,0,-1,-1
@@ -98424,7 +98423,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 268199,"Tidepiercer's Bubble Popper",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 268200,"Gebbo's Backup Blaster",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 268201,"Venomous Boneglaive",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
-268202,"Jaw of the Shackled Goddess",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
+268202,"Jaw of the Shackled Goddess",4,11,0,0,-1,90,0,0,0,219,524288,8192,0,0,0,-1,-1
 268203,"Hexing Spiritrender",4,11,0,0,-1,90,0,0,0,219,1048576,8704,0,0,0,-1,-1
 268204,"Ancient Construct's Venomshiv",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 268205,"Venomancer's Winged Channeler",4,11,0,0,-1,90,0,0,0,219,0,8704,0,0,0,-1,-1
@@ -98436,7 +98435,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 268211,"Baleful Hexblade",4,11,0,0,-1,90,0,0,0,219,0,8704,0,0,0,-1,-1
 268213,"Maze-roa, Warlord's Fury",4,11,0,0,-1,90,0,0,0,219,524288,8192,0,0,0,-1,-1
 268214,"Malignant Toothed Edge",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
-268215,"Abyssal Broodfiend's Bardiche",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
+268215,"Abyssal Broodfiend's Bardiche",4,11,0,0,-1,90,0,0,0,219,524288,8192,0,0,0,-1,-1
 268216,"Cursed Reliquary Cincture",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 268217,"Rising Tide Wristguards",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 268218,"Nek'zali's Spiritwalkers",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
@@ -98755,380 +98754,380 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 270442,"Rootbound Haranir Chopper",2,-3,0,0,64,10,0,0,0,16,32768,8192,8388608,0,0,1572864,0
 270443,"Wildbloom Haranir Bastion",2,-3,0,0,1,10,0,0,0,16,32768,8192,8388608,0,0,1572864,0
 270444,"Wildbloom Haranir Carver",2,-3,0,0,1,10,0,0,0,16,32768,8192,8388608,0,0,1572864,0
-270445,"Venomous Aspirant's Shield",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270446,"Venomous Aspirant's Sigil",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270447,"Venomous Aspirant's Claymore",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270448,"Venomous Aspirant's Warblade",3,11,0,0,4,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270449,"Venomous Aspirant's Greatblade",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270450,"Venomous Aspirant's Stave",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270451,"Venomous Aspirant's Polearm",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270452,"Venomous Aspirant's Spear",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270453,"Venomous Aspirant's Bow",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270454,"Venomous Aspirant's Warglaive",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270455,"Venomous Aspirant's Wand",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270456,"Venomous Aspirant's Spellblade",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270457,"Venomous Aspirant's Sword",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270458,"Venomous Aspirant's Blade",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270459,"Venomous Aspirant's Crusher",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270460,"Venomous Aspirant's Cudgel",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270461,"Venomous Aspirant's Mace",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270464,"Venomous Aspirant's Dagger",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270465,"Venomous Aspirant's Shank",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270466,"Venomous Aspirant's Chopper",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270467,"Venomous Aspirant's Splitter",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270468,"Venomous Aspirant's Plate Armguards",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270469,"Venomous Aspirant's Plate Cuffs",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270470,"Venomous Aspirant's Plate Greatbelt",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270471,"Venomous Aspirant's Plate Girdle",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270472,"Venomous Aspirant's Plate Pauldrons",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270473,"Venomous Aspirant's Plate Shoulders",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270474,"Venomous Aspirant's Plate Wargreaves",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270475,"Venomous Aspirant's Plate Legguards",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270476,"Venomous Aspirant's Plate Headguard",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270477,"Venomous Aspirant's Plate Helm",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270478,"Venomous Aspirant's Plate Handguards",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270479,"Venomous Aspirant's Plate Gauntlets",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270480,"Venomous Aspirant's Plate Stompers",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270481,"Venomous Aspirant's Plate Warboots",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270482,"Venomous Aspirant's Plate Armor",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270483,"Venomous Aspirant's Chestplate",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270484,"Venomous Aspirant's Chain Bracer",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270485,"Venomous Aspirant's Chain Wristwraps",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270486,"Venomous Aspirant's Chain Clasp",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270487,"Venomous Aspirant's Chain Belt",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270488,"Venomous Aspirant's Chain Shoulderguards",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270489,"Venomous Aspirant's Chain Spaulders",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270490,"Venomous Aspirant's Chain Wargreaves",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270491,"Venomous Aspirant's Chain Leggings",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270492,"Venomous Aspirant's Chain Headguard",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270493,"Venomous Aspirant's Chain Helm",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270494,"Venomous Aspirant's Chain Handguards",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270495,"Venomous Aspirant's Chain Gauntlets",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270496,"Venomous Aspirant's Chain Stompers",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270497,"Venomous Aspirant's Chain Sabatons",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270498,"Venomous Aspirant's Chain Tunic",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270499,"Venomous Aspirant's Chain Vest",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270500,"Venomous Aspirant's Leather Armguards",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270501,"Venomous Aspirant's Leather Wristwraps",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270502,"Venomous Aspirant's Leather Cord",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270503,"Venomous Aspirant's Leather Belt",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270504,"Venomous Aspirant's Leather Mantle",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270505,"Venomous Aspirant's Leather Spaulders",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270506,"Venomous Aspirant's Leather Leggings",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270507,"Venomous Aspirant's Leather Breeches",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270508,"Venomous Aspirant's Leather Mask",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270509,"Venomous Aspirant's Leather Helm",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270510,"Venomous Aspirant's Leather Grips",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270511,"Venomous Aspirant's Leather Gloves",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270512,"Venomous Aspirant's Leather Footpads",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270513,"Venomous Aspirant's Leather Boots",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270514,"Venomous Aspirant's Leather Tunic",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270515,"Venomous Aspirant's Leather Vest",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270516,"Venomous Aspirant's Silk Bindings",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270517,"Venomous Aspirant's Silk Wristwraps",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270518,"Venomous Aspirant's Silk Belt",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270519,"Venomous Aspirant's Silk Cord",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270520,"Venomous Aspirant's Silk Shawl",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270521,"Venomous Aspirant's Silk Mantle",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270522,"Venomous Aspirant's Silk Legwraps",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270523,"Venomous Aspirant's Silk Leggings",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270524,"Venomous Aspirant's Silk Cover",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270525,"Venomous Aspirant's Silk Hood",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270526,"Venomous Aspirant's Silk Handwraps",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270527,"Venomous Aspirant's Silk Gloves",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270528,"Venomous Aspirant's Silk Footwraps",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270529,"Venomous Aspirant's Silk Treads",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270530,"Venomous Aspirant's Silk Shirt",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270531,"Venomous Aspirant's Silk Robe",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270538,"Venomous Aspirant's Greatcloak",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270539,"Venomous Aspirant's Cape",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270540,"Venomous Aspirant's Cloak",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270541,"Venomous Aspirant's Drape",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+270445,"Venomous Aspirant's Shield",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270446,"Venomous Aspirant's Sigil",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270447,"Venomous Aspirant's Claymore",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270448,"Venomous Aspirant's Warblade",3,11,0,0,4,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270449,"Venomous Aspirant's Greatblade",3,11,0,0,-1,90,0,0,0,259,4096,8704,0,0,0,-1,-1
+270450,"Venomous Aspirant's Stave",3,11,0,0,-1,90,0,0,0,259,4096,8704,0,0,0,-1,-1
+270451,"Venomous Aspirant's Polearm",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270452,"Venomous Aspirant's Spear",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270453,"Venomous Aspirant's Bow",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270454,"Venomous Aspirant's Warglaive",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270455,"Venomous Aspirant's Wand",3,11,0,0,-1,90,0,0,0,259,4096,8704,0,0,0,-1,-1
+270456,"Venomous Aspirant's Spellblade",3,11,0,0,-1,90,0,0,0,259,4096,8704,0,0,0,-1,-1
+270457,"Venomous Aspirant's Sword",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270458,"Venomous Aspirant's Blade",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270459,"Venomous Aspirant's Crusher",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270460,"Venomous Aspirant's Cudgel",3,11,0,0,-1,90,0,0,0,259,4096,8704,0,0,0,-1,-1
+270461,"Venomous Aspirant's Mace",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270464,"Venomous Aspirant's Dagger",3,11,0,0,-1,90,0,0,0,259,4096,8704,0,0,0,-1,-1
+270465,"Venomous Aspirant's Shank",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270466,"Venomous Aspirant's Chopper",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270467,"Venomous Aspirant's Splitter",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270468,"Venomous Aspirant's Plate Armguards",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270469,"Venomous Aspirant's Plate Cuffs",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270470,"Venomous Aspirant's Plate Greatbelt",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270471,"Venomous Aspirant's Plate Girdle",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270472,"Venomous Aspirant's Plate Pauldrons",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270473,"Venomous Aspirant's Plate Shoulders",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270474,"Venomous Aspirant's Plate Wargreaves",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270475,"Venomous Aspirant's Plate Legguards",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270476,"Venomous Aspirant's Plate Headguard",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270477,"Venomous Aspirant's Plate Helm",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270478,"Venomous Aspirant's Plate Handguards",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270479,"Venomous Aspirant's Plate Gauntlets",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270480,"Venomous Aspirant's Plate Stompers",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270481,"Venomous Aspirant's Plate Warboots",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270482,"Venomous Aspirant's Plate Armor",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270483,"Venomous Aspirant's Chestplate",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270484,"Venomous Aspirant's Chain Bracer",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270485,"Venomous Aspirant's Chain Wristwraps",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270486,"Venomous Aspirant's Chain Clasp",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270487,"Venomous Aspirant's Chain Belt",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270488,"Venomous Aspirant's Chain Shoulderguards",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270489,"Venomous Aspirant's Chain Spaulders",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270490,"Venomous Aspirant's Chain Wargreaves",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270491,"Venomous Aspirant's Chain Leggings",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270492,"Venomous Aspirant's Chain Headguard",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270493,"Venomous Aspirant's Chain Helm",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270494,"Venomous Aspirant's Chain Handguards",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270495,"Venomous Aspirant's Chain Gauntlets",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270496,"Venomous Aspirant's Chain Stompers",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270497,"Venomous Aspirant's Chain Sabatons",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270498,"Venomous Aspirant's Chain Tunic",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270499,"Venomous Aspirant's Chain Vest",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270500,"Venomous Aspirant's Leather Armguards",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270501,"Venomous Aspirant's Leather Wristwraps",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270502,"Venomous Aspirant's Leather Cord",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270503,"Venomous Aspirant's Leather Belt",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270504,"Venomous Aspirant's Leather Mantle",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270505,"Venomous Aspirant's Leather Spaulders",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270506,"Venomous Aspirant's Leather Leggings",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270507,"Venomous Aspirant's Leather Breeches",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270508,"Venomous Aspirant's Leather Mask",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270509,"Venomous Aspirant's Leather Helm",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270510,"Venomous Aspirant's Leather Grips",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270511,"Venomous Aspirant's Leather Gloves",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270512,"Venomous Aspirant's Leather Footpads",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270513,"Venomous Aspirant's Leather Boots",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270514,"Venomous Aspirant's Leather Tunic",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270515,"Venomous Aspirant's Leather Vest",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270516,"Venomous Aspirant's Silk Bindings",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270517,"Venomous Aspirant's Silk Wristwraps",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270518,"Venomous Aspirant's Silk Belt",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270519,"Venomous Aspirant's Silk Cord",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270520,"Venomous Aspirant's Silk Shawl",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270521,"Venomous Aspirant's Silk Mantle",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270522,"Venomous Aspirant's Silk Legwraps",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270523,"Venomous Aspirant's Silk Leggings",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270524,"Venomous Aspirant's Silk Cover",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270525,"Venomous Aspirant's Silk Hood",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270526,"Venomous Aspirant's Silk Handwraps",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270527,"Venomous Aspirant's Silk Gloves",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270528,"Venomous Aspirant's Silk Footwraps",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270529,"Venomous Aspirant's Silk Treads",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270530,"Venomous Aspirant's Silk Shirt",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270531,"Venomous Aspirant's Silk Robe",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270538,"Venomous Aspirant's Greatcloak",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270539,"Venomous Aspirant's Cape",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270540,"Venomous Aspirant's Cloak",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270541,"Venomous Aspirant's Drape",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
 270542,"Venomous Warmonger's Blade",4,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 270549,"Venomous Warmonger's Battleaxe",4,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 270550,"Venomous Warmonger's Cleaver",4,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 270551,"Venomous Warmonger's Reaper",4,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270552,"Venomous Aspirant's Battleaxe",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270553,"Venomous Aspirant's Cleaver",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
-270554,"Venomous Aspirant's Reaper",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
-270563,"Venomous Gladiator's Cloak",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270564,"Venomous Gladiator's Drape",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270565,"Venomous Gladiator's Shawl",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270566,"Venomous Gladiator's Cloak",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270567,"Venomous Gladiator's Drape",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270568,"Venomous Gladiator's Shawl",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270569,"Venomous Gladiator's Cloak",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270570,"Venomous Gladiator's Drape",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270571,"Venomous Gladiator's Shawl",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270572,"Venomous Gladiator's Cloak",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270573,"Venomous Gladiator's Drape",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270574,"Venomous Gladiator's Shawl",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270578,"Venomous Gladiator's Cloak",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270579,"Venomous Gladiator's Drape",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270580,"Venomous Gladiator's Shawl",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270581,"Venomous Gladiator's Cloak",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270582,"Venomous Gladiator's Drape",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270583,"Venomous Gladiator's Shawl",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270584,"Venomous Gladiator's Cloak",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270585,"Venomous Gladiator's Drape",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270586,"Venomous Gladiator's Shawl",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270590,"Venomous Gladiator's Cloak",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270591,"Venomous Gladiator's Drape",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270592,"Venomous Gladiator's Shawl",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270593,"Venomous Gladiator's Cloak",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270594,"Venomous Gladiator's Drape",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270595,"Venomous Gladiator's Shawl",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270596,"Venomous Gladiator's Cloak",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270597,"Venomous Gladiator's Drape",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270598,"Venomous Gladiator's Shawl",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270599,"Venomous Gladiator's Cloak",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270600,"Venomous Gladiator's Drape",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270601,"Venomous Gladiator's Shawl",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270607,"Venomous Gladiator's Cloak",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270608,"Venomous Gladiator's Drape",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270609,"Venomous Gladiator's Shawl",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270610,"Venomous Gladiator's Cloak",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270611,"Venomous Gladiator's Drape",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270612,"Venomous Gladiator's Shawl",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270613,"Venomous Gladiator's Silk Robe",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270614,"Venomous Gladiator's Silk Gown",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270615,"Venomous Gladiator's Silk Slippers",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270616,"Venomous Gladiator's Silk Treads",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270617,"Venomous Gladiator's Silk Gloves",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270618,"Venomous Gladiator's Silk Handwraps",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270619,"Venomous Gladiator's Silk Hat",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270620,"Venomous Gladiator's Silk Cap",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270621,"Venomous Gladiator's Silk Leggings",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270622,"Venomous Gladiator's Silk Trousers",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270623,"Venomous Gladiator's Silk Mantle",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270624,"Venomous Gladiator's Silk Amice",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270625,"Venomous Gladiator's Silk Cord",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270626,"Venomous Gladiator's Silk Belt",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270627,"Venomous Gladiator's Silk Wristwraps",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270628,"Venomous Gladiator's Silk Armbands",4,11,0,0,128,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270629,"Venomous Gladiator's Silk Robe",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270630,"Venomous Gladiator's Silk Vestments",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270631,"Venomous Gladiator's Silk Slippers",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270632,"Venomous Gladiator's Silk Treads",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270633,"Venomous Gladiator's Silk Gloves",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270634,"Venomous Gladiator's Silk Handwraps",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270635,"Venomous Gladiator's Silk Hood",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270636,"Venomous Gladiator's Silk Guise",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270637,"Venomous Gladiator's Silk Leggings",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270638,"Venomous Gladiator's Silk Trousers",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270639,"Venomous Gladiator's Silk Mantle",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270640,"Venomous Gladiator's Silk Amice",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270641,"Venomous Gladiator's Silk Cord",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270642,"Venomous Gladiator's Silk Belt",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270643,"Venomous Gladiator's Silk Wristwraps",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270644,"Venomous Gladiator's Silk Armbands",4,11,0,0,16,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270645,"Venomous Gladiator's Silk Raiment",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270646,"Venomous Gladiator's Silk Vestments",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270647,"Venomous Gladiator's Silk Slippers",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270648,"Venomous Gladiator's Silk Treads",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270649,"Venomous Gladiator's Silk Gloves",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270650,"Venomous Gladiator's Silk Handwraps",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270651,"Venomous Gladiator's Silk Hood",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270652,"Venomous Gladiator's Silk Guise",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270653,"Venomous Gladiator's Silk Leggings",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270654,"Venomous Gladiator's Silk Trousers",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270655,"Venomous Gladiator's Silk Mantle",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270656,"Venomous Gladiator's Silk Amice",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270657,"Venomous Gladiator's Silk Cord",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270658,"Venomous Gladiator's Silk Belt",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270659,"Venomous Gladiator's Silk Wristwraps",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270660,"Venomous Gladiator's Silk Armbands",4,11,0,0,256,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270661,"Venomous Gladiator's Leather Vest",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270662,"Venomous Gladiator's Leather Jerkin",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270663,"Venomous Gladiator's Leather Boots",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270664,"Venomous Gladiator's Leather Treads",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270665,"Venomous Gladiator's Leather Gloves",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270666,"Venomous Gladiator's Leather Grips",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270667,"Venomous Gladiator's Leather Helm",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270668,"Venomous Gladiator's Leather Mask",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270669,"Venomous Gladiator's Leather Breeches",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270670,"Venomous Gladiator's Leather Legwraps",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270671,"Venomous Gladiator's Leather Spaulders",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270672,"Venomous Gladiator's Leather Shoulderpads",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270673,"Venomous Gladiator's Leather Belt",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270674,"Venomous Gladiator's Leather Strap",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270675,"Venomous Gladiator's Leather Wristwraps",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270676,"Venomous Gladiator's Leather Wristguards",4,11,0,0,2048,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270677,"Venomous Gladiator's Leather Vest",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270678,"Venomous Gladiator's Leather Vestments",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270679,"Venomous Gladiator's Leather Boots",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270680,"Venomous Gladiator's Leather Treads",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270681,"Venomous Gladiator's Leather Gloves",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270682,"Venomous Gladiator's Leather Grips",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270683,"Venomous Gladiator's Leather Helm",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270684,"Venomous Gladiator's Leather Mask",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270685,"Venomous Gladiator's Leather Breeches",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270686,"Venomous Gladiator's Leather Legwraps",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270687,"Venomous Gladiator's Leather Spaulders",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270688,"Venomous Gladiator's Leather Shoulderpads",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270689,"Venomous Gladiator's Leather Belt",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270690,"Venomous Gladiator's Leather Strap",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270691,"Venomous Gladiator's Leather Wristwraps",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270692,"Venomous Gladiator's Leather Wristguards",4,11,0,0,1024,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270693,"Venomous Gladiator's Leather Vest",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270694,"Venomous Gladiator's Leather Jerkin",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270695,"Venomous Gladiator's Leather Boots",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270696,"Venomous Gladiator's Leather Treads",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270697,"Venomous Gladiator's Leather Gloves",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270698,"Venomous Gladiator's Leather Grips",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270699,"Venomous Gladiator's Leather Helm",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270700,"Venomous Gladiator's Leather Mask",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270701,"Venomous Gladiator's Leather Breeches",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270702,"Venomous Gladiator's Leather Legwraps",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270703,"Venomous Gladiator's Leather Spaulders",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270704,"Venomous Gladiator's Leather Shoulderpads",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270705,"Venomous Gladiator's Leather Belt",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270706,"Venomous Gladiator's Leather Strap",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270707,"Venomous Gladiator's Leather Wristwraps",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270708,"Venomous Gladiator's Leather Wristguards",4,11,0,0,512,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270709,"Venomous Gladiator's Leather Vest",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270710,"Venomous Gladiator's Leather Jerkin",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270711,"Venomous Gladiator's Leather Boots",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270712,"Venomous Gladiator's Leather Treads",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270713,"Venomous Gladiator's Leather Gloves",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270714,"Venomous Gladiator's Leather Grips",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270715,"Venomous Gladiator's Leather Helm",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270716,"Venomous Gladiator's Leather Mask",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270717,"Venomous Gladiator's Leather Breeches",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270718,"Venomous Gladiator's Leather Legwraps",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270719,"Venomous Gladiator's Leather Spaulders",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270720,"Venomous Gladiator's Leather Shoulderpads",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270721,"Venomous Gladiator's Leather Belt",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270722,"Venomous Gladiator's Leather Strap",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270723,"Venomous Gladiator's Leather Wristwraps",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270724,"Venomous Gladiator's Leather Wristguards",4,11,0,0,8,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270725,"Venomous Gladiator's Armored Scales",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270726,"Venomous Gladiator's Scaleguard",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270727,"Venomous Gladiator's Chain Sabatons",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270728,"Venomous Gladiator's Chain Boots",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270729,"Venomous Gladiator's Chain Gauntlets",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270730,"Venomous Gladiator's Chain Handguards",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270731,"Venomous Gladiator's Chain Helm",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270732,"Venomous Gladiator's Chain Faceguard",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270733,"Venomous Gladiator's Chain Leggings",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270734,"Venomous Gladiator's Chain Breeches",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270735,"Venomous Gladiator's Chain Monnion",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270736,"Venomous Gladiator's Chain Shoulderguard",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270737,"Venomous Gladiator's Chain Belt",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270738,"Venomous Gladiator's Chain Girdle",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270739,"Venomous Gladiator's Chain Wristguards",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270740,"Venomous Gladiator's Chain Bracers",4,11,0,0,4096,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270741,"Venomous Gladiator's Chain Vest",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270742,"Venomous Gladiator's Chain Tunic",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270743,"Venomous Gladiator's Chain Sabatons",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270744,"Venomous Gladiator's Chain Boots",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270745,"Venomous Gladiator's Chain Gauntlets",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270746,"Venomous Gladiator's Chain Handguards",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270747,"Venomous Gladiator's Chain Helm",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270748,"Venomous Gladiator's Chain Faceguard",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270749,"Venomous Gladiator's Chain Leggings",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270750,"Venomous Gladiator's Chain Breeches",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270751,"Venomous Gladiator's Chain Monnion",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270752,"Venomous Gladiator's Chain Shoulderguard",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270753,"Venomous Gladiator's Chain Belt",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270754,"Venomous Gladiator's Chain Girdle",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270755,"Venomous Gladiator's Chain Wristguards",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270756,"Venomous Gladiator's Chain Bracers",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270757,"Venomous Gladiator's Chain Vest",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270758,"Venomous Gladiator's Chain Tunic",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270759,"Venomous Gladiator's Chain Sabatons",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270760,"Venomous Gladiator's Chain Boots",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270761,"Venomous Gladiator's Chain Gauntlets",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270762,"Venomous Gladiator's Chain Handguards",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270763,"Venomous Gladiator's Chain Helm",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270764,"Venomous Gladiator's Chain Faceguard",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270765,"Venomous Gladiator's Chain Leggings",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270766,"Venomous Gladiator's Chain Breeches",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270767,"Venomous Gladiator's Chain Monnion",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270768,"Venomous Gladiator's Chain Shoulderguard",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270769,"Venomous Gladiator's Chain Belt",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270770,"Venomous Gladiator's Chain Girdle",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270771,"Venomous Gladiator's Chain Wristguards",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270772,"Venomous Gladiator's Chain Bracers",4,11,0,0,64,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270773,"Venomous Gladiator's Chestguard",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270774,"Venomous Gladiator's Chestplate",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270775,"Venomous Gladiator's Plate Warboots",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270776,"Venomous Gladiator's Plate Stompers",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270777,"Venomous Gladiator's Plate Gauntlets",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270778,"Venomous Gladiator's Plate Handguards",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270779,"Venomous Gladiator's Plate Helm",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270780,"Venomous Gladiator's Plate Helmet",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270781,"Venomous Gladiator's Plate Legguards",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270782,"Venomous Gladiator's Plate Wargreaves",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270783,"Venomous Gladiator's Plate Shoulders",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270784,"Venomous Gladiator's Plate Pauldrons",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270785,"Venomous Gladiator's Plate Girdle",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270786,"Venomous Gladiator's Plate Greatbelt",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270787,"Venomous Gladiator's Plate Wristguards",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270788,"Venomous Gladiator's Plate Vambraces",4,11,0,0,32,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270789,"Venomous Gladiator's Chestguard",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270790,"Venomous Gladiator's Chestplate",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270791,"Venomous Gladiator's Plate Warboots",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270792,"Venomous Gladiator's Plate Stompers",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270793,"Venomous Gladiator's Plate Gauntlets",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270794,"Venomous Gladiator's Plate Handguards",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270795,"Venomous Gladiator's Plate Helm",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270796,"Venomous Gladiator's Plate Helmet",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270797,"Venomous Gladiator's Plate Legguards",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270798,"Venomous Gladiator's Plate Tasses",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270799,"Venomous Gladiator's Plate Shoulders",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270800,"Venomous Gladiator's Plate Pauldrons",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270801,"Venomous Gladiator's Plate Girdle",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270802,"Venomous Gladiator's Plate Greatbelt",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270803,"Venomous Gladiator's Plate Wristguards",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270804,"Venomous Gladiator's Plate Vambraces",4,11,0,0,2,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270805,"Venomous Gladiator's Chestguard",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270806,"Venomous Gladiator's Chestplate",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270807,"Venomous Gladiator's Plate Warboots",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270808,"Venomous Gladiator's Plate Stompers",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270809,"Venomous Gladiator's Plate Gauntlets",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270810,"Venomous Gladiator's Plate Handguards",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270811,"Venomous Gladiator's Plate Helm",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270812,"Venomous Gladiator's Plate Helmet",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270813,"Venomous Gladiator's Plate Legguards",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270814,"Venomous Gladiator's Plate Wargreaves",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270815,"Venomous Gladiator's Plate Shoulders",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270816,"Venomous Gladiator's Plate Pauldrons",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270817,"Venomous Gladiator's Plate Girdle",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270818,"Venomous Gladiator's Plate Greatbelt",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270819,"Venomous Gladiator's Plate Wristguards",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270820,"Venomous Gladiator's Plate Vambraces",4,11,0,0,1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270821,"Venomous Gladiator's Shank",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270822,"Venomous Gladiator's Spine",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270823,"Venomous Gladiator's Incisors",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270824,"Venomous Gladiator's Rippers",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270825,"Venomous Gladiator's Crusher",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270826,"Venomous Gladiator's Mace",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270827,"Venomous Gladiator's Cudgel",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270828,"Venomous Gladiator's Chopper",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270829,"Venomous Gladiator's Splitter",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270830,"Venomous Gladiator's Slicer",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270831,"Venomous Gladiator's Blade",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270832,"Venomous Gladiator's Sword",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270833,"Venomous Gladiator's Spellblade",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270834,"Venomous Gladiator's Edge",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270835,"Venomous Gladiator's Battleaxe",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270836,"Venomous Gladiator's Cleaver",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270837,"Venomous Gladiator's Reaper",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270838,"Venomous Gladiator's Bow",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270839,"Venomous Gladiator's Spitter",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270843,"Venomous Gladiator's Spear",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270844,"Venomous Gladiator's Spike",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270845,"Venomous Gladiator's Staff",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270846,"Venomous Gladiator's Stave",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270847,"Venomous Gladiator's Scepter",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270848,"Venomous Gladiator's Sigil",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270849,"Venomous Gladiator's Scaleshield",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270850,"Venomous Gladiator's Spikeshield",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270851,"Venomous Gladiator's Claymore",4,11,0,0,-1,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270852,"Venomous Gladiator's Warblade",4,11,0,0,4,90,0,0,0,298,0,8192,0,0,0,-1,-1
-270853,"Venomous Gladiator's Greatblade",4,11,0,0,-1,90,0,0,0,298,0,8704,0,0,0,-1,-1
-270900,"Pattern: Snakeskin Lining",3,11,0,0,-1,1,0,0,0,1,65600,8192,0,0,0,-1,-1
+270552,"Venomous Aspirant's Battleaxe",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270553,"Venomous Aspirant's Cleaver",3,11,0,0,-1,90,0,0,0,259,4096,8192,0,0,0,-1,-1
+270554,"Venomous Aspirant's Reaper",3,11,0,0,-1,90,0,0,0,259,4096,8704,0,0,0,-1,-1
+270563,"Venomous Gladiator's Cloak",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270564,"Venomous Gladiator's Drape",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270565,"Venomous Gladiator's Shawl",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270566,"Venomous Gladiator's Cloak",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270567,"Venomous Gladiator's Drape",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270568,"Venomous Gladiator's Shawl",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270569,"Venomous Gladiator's Cloak",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270570,"Venomous Gladiator's Drape",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270571,"Venomous Gladiator's Shawl",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270572,"Venomous Gladiator's Cloak",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270573,"Venomous Gladiator's Drape",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270574,"Venomous Gladiator's Shawl",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270578,"Venomous Gladiator's Cloak",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270579,"Venomous Gladiator's Drape",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270580,"Venomous Gladiator's Shawl",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270581,"Venomous Gladiator's Cloak",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270582,"Venomous Gladiator's Drape",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270583,"Venomous Gladiator's Shawl",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270584,"Venomous Gladiator's Cloak",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270585,"Venomous Gladiator's Drape",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270586,"Venomous Gladiator's Shawl",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270590,"Venomous Gladiator's Cloak",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270591,"Venomous Gladiator's Drape",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270592,"Venomous Gladiator's Shawl",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270593,"Venomous Gladiator's Cloak",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270594,"Venomous Gladiator's Drape",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270595,"Venomous Gladiator's Shawl",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270596,"Venomous Gladiator's Cloak",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270597,"Venomous Gladiator's Drape",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270598,"Venomous Gladiator's Shawl",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270599,"Venomous Gladiator's Cloak",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270600,"Venomous Gladiator's Drape",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270601,"Venomous Gladiator's Shawl",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270607,"Venomous Gladiator's Cloak",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270608,"Venomous Gladiator's Drape",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270609,"Venomous Gladiator's Shawl",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270610,"Venomous Gladiator's Cloak",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270611,"Venomous Gladiator's Drape",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270612,"Venomous Gladiator's Shawl",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270613,"Venomous Gladiator's Silk Robe",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270614,"Venomous Gladiator's Silk Gown",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270615,"Venomous Gladiator's Silk Slippers",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270616,"Venomous Gladiator's Silk Treads",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270617,"Venomous Gladiator's Silk Gloves",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270618,"Venomous Gladiator's Silk Handwraps",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270619,"Venomous Gladiator's Silk Hat",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270620,"Venomous Gladiator's Silk Cap",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270621,"Venomous Gladiator's Silk Leggings",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270622,"Venomous Gladiator's Silk Trousers",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270623,"Venomous Gladiator's Silk Mantle",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270624,"Venomous Gladiator's Silk Amice",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270625,"Venomous Gladiator's Silk Cord",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270626,"Venomous Gladiator's Silk Belt",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270627,"Venomous Gladiator's Silk Wristwraps",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270628,"Venomous Gladiator's Silk Armbands",4,11,0,0,128,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270629,"Venomous Gladiator's Silk Robe",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270630,"Venomous Gladiator's Silk Vestments",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270631,"Venomous Gladiator's Silk Slippers",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270632,"Venomous Gladiator's Silk Treads",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270633,"Venomous Gladiator's Silk Gloves",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270634,"Venomous Gladiator's Silk Handwraps",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270635,"Venomous Gladiator's Silk Hood",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270636,"Venomous Gladiator's Silk Guise",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270637,"Venomous Gladiator's Silk Leggings",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270638,"Venomous Gladiator's Silk Trousers",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270639,"Venomous Gladiator's Silk Mantle",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270640,"Venomous Gladiator's Silk Amice",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270641,"Venomous Gladiator's Silk Cord",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270642,"Venomous Gladiator's Silk Belt",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270643,"Venomous Gladiator's Silk Wristwraps",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270644,"Venomous Gladiator's Silk Armbands",4,11,0,0,16,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270645,"Venomous Gladiator's Silk Raiment",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270646,"Venomous Gladiator's Silk Vestments",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270647,"Venomous Gladiator's Silk Slippers",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270648,"Venomous Gladiator's Silk Treads",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270649,"Venomous Gladiator's Silk Gloves",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270650,"Venomous Gladiator's Silk Handwraps",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270651,"Venomous Gladiator's Silk Hood",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270652,"Venomous Gladiator's Silk Guise",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270653,"Venomous Gladiator's Silk Leggings",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270654,"Venomous Gladiator's Silk Trousers",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270655,"Venomous Gladiator's Silk Mantle",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270656,"Venomous Gladiator's Silk Amice",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270657,"Venomous Gladiator's Silk Cord",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270658,"Venomous Gladiator's Silk Belt",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270659,"Venomous Gladiator's Silk Wristwraps",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270660,"Venomous Gladiator's Silk Armbands",4,11,0,0,256,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270661,"Venomous Gladiator's Leather Vest",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270662,"Venomous Gladiator's Leather Jerkin",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270663,"Venomous Gladiator's Leather Boots",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270664,"Venomous Gladiator's Leather Treads",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270665,"Venomous Gladiator's Leather Gloves",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270666,"Venomous Gladiator's Leather Grips",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270667,"Venomous Gladiator's Leather Helm",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270668,"Venomous Gladiator's Leather Mask",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270669,"Venomous Gladiator's Leather Breeches",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270670,"Venomous Gladiator's Leather Legwraps",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270671,"Venomous Gladiator's Leather Spaulders",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270672,"Venomous Gladiator's Leather Shoulderpads",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270673,"Venomous Gladiator's Leather Belt",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270674,"Venomous Gladiator's Leather Strap",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270675,"Venomous Gladiator's Leather Wristwraps",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270676,"Venomous Gladiator's Leather Wristguards",4,11,0,0,2048,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270677,"Venomous Gladiator's Leather Vest",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270678,"Venomous Gladiator's Leather Vestments",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270679,"Venomous Gladiator's Leather Boots",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270680,"Venomous Gladiator's Leather Treads",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270681,"Venomous Gladiator's Leather Gloves",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270682,"Venomous Gladiator's Leather Grips",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270683,"Venomous Gladiator's Leather Helm",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270684,"Venomous Gladiator's Leather Mask",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270685,"Venomous Gladiator's Leather Breeches",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270686,"Venomous Gladiator's Leather Legwraps",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270687,"Venomous Gladiator's Leather Spaulders",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270688,"Venomous Gladiator's Leather Shoulderpads",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270689,"Venomous Gladiator's Leather Belt",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270690,"Venomous Gladiator's Leather Strap",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270691,"Venomous Gladiator's Leather Wristwraps",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270692,"Venomous Gladiator's Leather Wristguards",4,11,0,0,1024,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270693,"Venomous Gladiator's Leather Vest",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270694,"Venomous Gladiator's Leather Jerkin",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270695,"Venomous Gladiator's Leather Boots",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270696,"Venomous Gladiator's Leather Treads",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270697,"Venomous Gladiator's Leather Gloves",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270698,"Venomous Gladiator's Leather Grips",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270699,"Venomous Gladiator's Leather Helm",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270700,"Venomous Gladiator's Leather Mask",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270701,"Venomous Gladiator's Leather Breeches",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270702,"Venomous Gladiator's Leather Legwraps",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270703,"Venomous Gladiator's Leather Spaulders",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270704,"Venomous Gladiator's Leather Shoulderpads",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270705,"Venomous Gladiator's Leather Belt",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270706,"Venomous Gladiator's Leather Strap",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270707,"Venomous Gladiator's Leather Wristwraps",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270708,"Venomous Gladiator's Leather Wristguards",4,11,0,0,512,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270709,"Venomous Gladiator's Leather Vest",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270710,"Venomous Gladiator's Leather Jerkin",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270711,"Venomous Gladiator's Leather Boots",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270712,"Venomous Gladiator's Leather Treads",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270713,"Venomous Gladiator's Leather Gloves",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270714,"Venomous Gladiator's Leather Grips",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270715,"Venomous Gladiator's Leather Helm",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270716,"Venomous Gladiator's Leather Mask",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270717,"Venomous Gladiator's Leather Breeches",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270718,"Venomous Gladiator's Leather Legwraps",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270719,"Venomous Gladiator's Leather Spaulders",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270720,"Venomous Gladiator's Leather Shoulderpads",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270721,"Venomous Gladiator's Leather Belt",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270722,"Venomous Gladiator's Leather Strap",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270723,"Venomous Gladiator's Leather Wristwraps",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270724,"Venomous Gladiator's Leather Wristguards",4,11,0,0,8,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270725,"Venomous Gladiator's Armored Scales",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270726,"Venomous Gladiator's Scaleguard",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270727,"Venomous Gladiator's Chain Sabatons",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270728,"Venomous Gladiator's Chain Boots",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270729,"Venomous Gladiator's Chain Gauntlets",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270730,"Venomous Gladiator's Chain Handguards",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270731,"Venomous Gladiator's Chain Helm",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270732,"Venomous Gladiator's Chain Faceguard",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270733,"Venomous Gladiator's Chain Leggings",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270734,"Venomous Gladiator's Chain Breeches",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270735,"Venomous Gladiator's Chain Monnion",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270736,"Venomous Gladiator's Chain Shoulderguard",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270737,"Venomous Gladiator's Chain Belt",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270738,"Venomous Gladiator's Chain Girdle",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270739,"Venomous Gladiator's Chain Wristguards",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270740,"Venomous Gladiator's Chain Bracers",4,11,0,0,4096,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270741,"Venomous Gladiator's Chain Vest",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270742,"Venomous Gladiator's Chain Tunic",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270743,"Venomous Gladiator's Chain Sabatons",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270744,"Venomous Gladiator's Chain Boots",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270745,"Venomous Gladiator's Chain Gauntlets",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270746,"Venomous Gladiator's Chain Handguards",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270747,"Venomous Gladiator's Chain Helm",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270748,"Venomous Gladiator's Chain Faceguard",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270749,"Venomous Gladiator's Chain Leggings",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270750,"Venomous Gladiator's Chain Breeches",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270751,"Venomous Gladiator's Chain Monnion",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270752,"Venomous Gladiator's Chain Shoulderguard",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270753,"Venomous Gladiator's Chain Belt",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270754,"Venomous Gladiator's Chain Girdle",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270755,"Venomous Gladiator's Chain Wristguards",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270756,"Venomous Gladiator's Chain Bracers",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270757,"Venomous Gladiator's Chain Vest",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270758,"Venomous Gladiator's Chain Tunic",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270759,"Venomous Gladiator's Chain Sabatons",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270760,"Venomous Gladiator's Chain Boots",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270761,"Venomous Gladiator's Chain Gauntlets",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270762,"Venomous Gladiator's Chain Handguards",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270763,"Venomous Gladiator's Chain Helm",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270764,"Venomous Gladiator's Chain Faceguard",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270765,"Venomous Gladiator's Chain Leggings",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270766,"Venomous Gladiator's Chain Breeches",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270767,"Venomous Gladiator's Chain Monnion",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270768,"Venomous Gladiator's Chain Shoulderguard",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270769,"Venomous Gladiator's Chain Belt",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270770,"Venomous Gladiator's Chain Girdle",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270771,"Venomous Gladiator's Chain Wristguards",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270772,"Venomous Gladiator's Chain Bracers",4,11,0,0,64,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270773,"Venomous Gladiator's Chestguard",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270774,"Venomous Gladiator's Chestplate",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270775,"Venomous Gladiator's Plate Warboots",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270776,"Venomous Gladiator's Plate Stompers",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270777,"Venomous Gladiator's Plate Gauntlets",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270778,"Venomous Gladiator's Plate Handguards",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270779,"Venomous Gladiator's Plate Helm",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270780,"Venomous Gladiator's Plate Helmet",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270781,"Venomous Gladiator's Plate Legguards",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270782,"Venomous Gladiator's Plate Wargreaves",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270783,"Venomous Gladiator's Plate Shoulders",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270784,"Venomous Gladiator's Plate Pauldrons",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270785,"Venomous Gladiator's Plate Girdle",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270786,"Venomous Gladiator's Plate Greatbelt",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270787,"Venomous Gladiator's Plate Wristguards",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270788,"Venomous Gladiator's Plate Vambraces",4,11,0,0,32,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270789,"Venomous Gladiator's Chestguard",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270790,"Venomous Gladiator's Chestplate",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270791,"Venomous Gladiator's Plate Warboots",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270792,"Venomous Gladiator's Plate Stompers",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270793,"Venomous Gladiator's Plate Gauntlets",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270794,"Venomous Gladiator's Plate Handguards",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270795,"Venomous Gladiator's Plate Helm",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270796,"Venomous Gladiator's Plate Helmet",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270797,"Venomous Gladiator's Plate Legguards",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270798,"Venomous Gladiator's Plate Tasses",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270799,"Venomous Gladiator's Plate Shoulders",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270800,"Venomous Gladiator's Plate Pauldrons",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270801,"Venomous Gladiator's Plate Girdle",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270802,"Venomous Gladiator's Plate Greatbelt",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270803,"Venomous Gladiator's Plate Wristguards",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270804,"Venomous Gladiator's Plate Vambraces",4,11,0,0,2,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270805,"Venomous Gladiator's Chestguard",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270806,"Venomous Gladiator's Chestplate",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270807,"Venomous Gladiator's Plate Warboots",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270808,"Venomous Gladiator's Plate Stompers",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270809,"Venomous Gladiator's Plate Gauntlets",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270810,"Venomous Gladiator's Plate Handguards",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270811,"Venomous Gladiator's Plate Helm",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270812,"Venomous Gladiator's Plate Helmet",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270813,"Venomous Gladiator's Plate Legguards",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270814,"Venomous Gladiator's Plate Wargreaves",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270815,"Venomous Gladiator's Plate Shoulders",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270816,"Venomous Gladiator's Plate Pauldrons",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270817,"Venomous Gladiator's Plate Girdle",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270818,"Venomous Gladiator's Plate Greatbelt",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270819,"Venomous Gladiator's Plate Wristguards",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270820,"Venomous Gladiator's Plate Vambraces",4,11,0,0,1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270821,"Venomous Gladiator's Shank",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270822,"Venomous Gladiator's Spine",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270823,"Venomous Gladiator's Incisors",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270824,"Venomous Gladiator's Rippers",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270825,"Venomous Gladiator's Crusher",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270826,"Venomous Gladiator's Mace",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270827,"Venomous Gladiator's Cudgel",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270828,"Venomous Gladiator's Chopper",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270829,"Venomous Gladiator's Splitter",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270830,"Venomous Gladiator's Slicer",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270831,"Venomous Gladiator's Blade",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270832,"Venomous Gladiator's Sword",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270833,"Venomous Gladiator's Spellblade",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270834,"Venomous Gladiator's Edge",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270835,"Venomous Gladiator's Battleaxe",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270836,"Venomous Gladiator's Cleaver",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270837,"Venomous Gladiator's Reaper",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270838,"Venomous Gladiator's Bow",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270839,"Venomous Gladiator's Spitter",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270843,"Venomous Gladiator's Spear",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270844,"Venomous Gladiator's Spike",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270845,"Venomous Gladiator's Staff",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270846,"Venomous Gladiator's Stave",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270847,"Venomous Gladiator's Scepter",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270848,"Venomous Gladiator's Sigil",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270849,"Venomous Gladiator's Scaleshield",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270850,"Venomous Gladiator's Spikeshield",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270851,"Venomous Gladiator's Claymore",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270852,"Venomous Gladiator's Warblade",4,11,0,0,4,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+270853,"Venomous Gladiator's Greatblade",4,11,0,0,-1,90,0,0,0,298,4096,8704,0,0,0,-1,-1
+270900,"Pattern: Snakeskin Lining",3,11,0,0,-1,1,2918,50,0,1,65600,8192,0,0,0,-1,-1
 270909,"Slumbering Coil Curio",4,11,0,0,-1,90,0,0,0,219,0,12288,128,16386,1,-1,-1
 270910,"Venomwoven Idol",4,11,0,0,400,90,0,0,0,219,64,8192,0,2,1,-1,-1
 270911,"Venomcured Idol",4,11,0,0,3592,90,0,0,0,219,64,8192,0,2,1,-1,-1
@@ -99501,7 +99500,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 272245,"Miststalker's Cinch",4,11,0,0,-1,78,0,0,0,206,4096,8192,0,0,0,-1,-1
 272246,"Miststalker's Wristbands",4,11,0,0,-1,78,0,0,0,206,4096,8192,0,0,0,-1,-1
 272247,"Galerider's Byrnie",4,11,0,0,-1,78,0,0,0,206,4096,8192,0,0,0,-1,-1
-272248,"Galerider's Chausses",4,11,0,0,-1,78,0,0,0,206,0,8192,0,0,0,-1,-1
+272248,"Galerider's Footguards",4,11,0,0,-1,78,0,0,0,206,4096,8192,0,0,0,-1,-1
 272249,"Galerider's Chain Clasps",4,11,0,0,-1,78,0,0,0,206,4096,8192,0,0,0,-1,-1
 272250,"Galerider's Gaze",4,11,0,0,-1,78,0,0,0,206,4096,8192,0,0,0,-1,-1
 272251,"Galerider's Chausses",4,11,0,0,-1,78,0,0,0,206,4096,8192,0,0,0,-1,-1
@@ -99539,8 +99538,10 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 272336,"Nullbeacon Rift Smasher",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 272337,"Mage Guard's Spellblade",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,0,65536,0,-1,-1
 272338,"Mage Guard's Spellsteel",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,0,65536,0,-1,-1
+272361,"Venomous Pyre",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 272960,"Spellbreaker's Shieldwall",3,11,0,0,-1,1,0,0,0,1,134221824,155648,0,0,0,-1,-1
 272961,"Spellbreaker's Bladestaff",3,11,0,0,-1,1,0,0,0,1,134221824,155648,0,0,0,-1,-1
+273070,"Pattern: Adorned Fang",3,11,0,0,-1,1,2915,50,0,1,69696,8192,0,0,0,-1,-1
 273126,"Classic Azure Eyepatch",4,-3,0,0,-1,1,0,0,0,1,134250496,159744,8388608,65536,0,-1,-1
 273132,"Stylish Violet Top Hat",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 273133,"Stylish Crimson Top Hat",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -99625,7 +99626,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 274434,"Righteous Lawbringer's Knife",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274435,"Duskwatch Outlaw's Knife",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 274436,"Bloodwatch Outlaw's Knife",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-274818,"Drape of Intense Darkness",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274450,"Alliance Tabard of Participation",4,-3,0,3,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1321907123,1427461461
 274451,"Horde Tabard of Participation",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,1309324210,-1440044374
 274542,"Bloodwatch Outlaw's Hand Cannon",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
@@ -99667,6 +99667,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 274814,"Envenomed Game Ripper",4,11,0,0,-1,80,0,0,0,1,36864,24576,0,65536,0,-1,-1
 274815,"Envenomed Pages",3,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 274816,"Envenomed False Promise",3,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
+274818,"Drape of Intense Darkness",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274819,"Fungal Fold Frock",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274820,"Cloak of the Voracious Gorger",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
 274821,"Drape of the Hal'hadar Assassin",2,11,0,0,-1,80,0,0,0,100,0,8192,0,0,0,-1,-1
@@ -100151,7 +100152,24 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 277808,"Venom-Cursed Gladius",2,11,0,0,-1,90,0,0,0,279,0,8192,0,0,0,-1,-1
 277809,"Venom-Cursed Claymore",2,11,0,0,-1,90,0,0,0,279,0,8192,0,0,0,-1,-1
 277810,"Venom-Cursed Aegis",2,11,0,0,-1,90,0,0,0,279,0,8192,0,0,0,-1,-1
-277951,"Venomous Aspirant's Slicer",3,11,0,0,-1,90,0,0,0,259,0,8704,0,0,0,-1,-1
+277876,"Sacrosanct Thirstspire",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277879,"Whisperthorn Ritual Knife",4,11,0,0,-1,80,0,0,0,219,0,8704,0,0,0,-1,-1
+277880,"Runic Moonbrand",4,11,0,0,-1,80,0,0,0,219,0,8704,0,0,0,-1,-1
+277881,"Fetid Reliquary Greaves",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277882,"Feral Gloombranch",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277883,"Duskmantle Spiteglass",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277885,"Veilweaver Trousers",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277888,"Veil of the Feral Rite",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277889,"Fanged Riftrazor",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277890,"Wildwarden's Guise",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277891,"Leviathan Bracerbands",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277893,"Emberveil Ritual Knife",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277894,"Veilshroud Wraps",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277895,"Veilweaver's Shadowgown",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277896,"Bloodtide Hauberk",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277898,"Duskhallow Vanguard Greaves",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277899,"Fangwarden's Shardspine Bow",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+277951,"Venomous Aspirant's Slicer",3,11,0,0,-1,90,0,0,0,259,4096,8704,0,0,0,-1,-1
 277970,"Venomous Warmonger's Warblade",4,11,0,0,4,90,0,0,0,259,0,8192,0,0,0,-1,-1
 278110,"DNT Ula'tek Pole Dummy A",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
 278111,"DNT Ula'tek Pole Dummy B",4,11,0,0,-1,80,0,0,0,1,32768,24576,0,65536,0,-1,-1
@@ -100311,9 +100329,9 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279115,"Soulcoiler's Ritual Candle",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279118,"Lost Explorers' Mailbox",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279122,"Venom-Fanged Font",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
-279125,"The Venomous Abyss Aureate Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
-279127,"The Venomous Abyss Argent Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
-279129,"The Venomous Abyss Gleaming Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
+279125,"The Venomous Abyss Aureate Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139328,0,0,0,-1,-1
+279127,"The Venomous Abyss Argent Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139328,0,0,0,-1,-1
+279129,"The Venomous Abyss Gleaming Trophy",4,-3,0,0,-1,1,0,0,0,1,134283328,139328,0,0,0,-1,-1
 279131,"Pillar of the Coiled Isle",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279133,"Blushing Witchwick Flowing Cat Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279134,"Blushing Witchwick Shoulderpads",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
@@ -100335,7 +100353,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279163,"Autumnal Witchwick Flowing Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279164,"Blushing Witchwick Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279165,"Blushing Witchwick Flowing Jack Hat",4,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
-279209,"Plainsrunner's Sun Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
+279209,"Plainsrunner's Sun Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,8192,0,0,0,-1,-1
 279211,"Pillar of the Fanged Altar",2,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279217,"Venom-Cursed Dragonhawk's Shroud",2,11,0,0,-1,90,0,0,0,279,0,8192,0,0,0,-1,-1
 279220,"Venom-Cursed Lynx's Mane",2,11,0,0,-1,90,0,0,0,279,0,8192,0,0,0,-1,-1
@@ -100376,7 +100394,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279445,"Sunny Gloomcap",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 279500,"""Rage of the Shackled"" Mural",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
 279524,"Brewer's Purple Kilt",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
-279528,"Mag'har Laborer's Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
+279528,"Mag'har Laborer's Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,8192,0,0,0,-1,-1
 279529,"Brewer's Purple Shoulder Cape",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 279530,"Brewer's Purple Belt",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 279531,"Brewer's Purple Beret",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
@@ -100384,12 +100402,12 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279533,"Brewer's Red Shoulder Cape",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
 279534,"Brewer's Red Kilt",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 279535,"Brewer's Red Belt",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
-279536,"Painted Raptor-Tooth Shirt",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279538,"Spore-Pocked Lab Coat",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279539,"Junior Artificer's Work Vest",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279540,"Tinker's Padded Vest",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279541,"Priestess' Moon Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
-279542,"Runecloth Clergy Coat",3,-3,0,0,-1,1,0,0,0,1,102400,12288,0,0,0,-1,-1
+279536,"Painted Raptor-Tooth Shirt",3,-3,0,0,-1,1,0,0,0,1,102400,8192,0,0,0,-1,-1
+279538,"Spore-Pocked Lab Coat",3,-3,0,0,-1,1,0,0,0,1,102400,8192,0,0,0,-1,-1
+279539,"Junior Artificer's Work Vest",3,-3,0,0,-1,1,0,0,0,1,102400,8192,0,0,0,-1,-1
+279540,"Tinker's Padded Vest",3,-3,0,0,-1,1,0,0,0,1,102400,8192,0,0,0,-1,-1
+279541,"Priestess' Moon Tunic",3,-3,0,0,-1,1,0,0,0,1,102400,8192,0,0,0,-1,-1
+279542,"Runecloth Clergy Coat",3,-3,0,0,-1,1,0,0,0,1,102400,8192,0,0,0,-1,-1
 279543,"Sky Shaman's Tunic",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
 279544,"Witch Doctor's Undervest",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
 279545,"Wild Seer's Mantle",3,-3,0,0,-1,1,0,0,0,1,134254592,139264,8388608,65536,0,-1,-1
@@ -100401,8 +100419,15 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 279579,"Crusader's Zweihander",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
 279818,"Basic Steel Sabatons",1,-3,0,0,-1,1,0,0,0,1,134250496,159744,8388608,65536,0,-1,-1
 279819,"Basic Dark Iron Sabatons",1,-3,0,0,-1,1,0,0,0,1,134250496,159744,8388608,65536,0,-1,-1
+280033,"Veilshroud Grips",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+280035,"Veilshroud Vambraces",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+280036,"Veilshroud Gauntlets",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+280038,"Fetid Reliquary Sabatons",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+280039,"Fetid Reliquary Treads",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+280040,"Fetid Reliquary Slippers",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
 280305,"Soulcoil Remnant",3,11,0,0,-1,1,0,0,0,1,163904,8192,0,0,0,-1,-1
 280333,"Pirate's Eyepatch",2,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
+280617,"Lightbearer's Shield Fragment",4,11,0,0,-1,90,0,0,0,219,1572864,8192,0,0,0,-1,-1
 280689,"Big Mon's Big Spear",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 280690,"Bow of the Snapper",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 280691,"Dagger of the Slithering Ritual",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
@@ -100424,8 +100449,54 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 280713,"Big Mon's Buckle",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 280714,"Hull Render Hauberk",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
 280718,"Unflappable Flapping Cape",3,11,0,0,-1,90,0,0,0,259,0,8192,0,0,0,-1,-1
+280799,"Lu'selama, Light's Justice",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
+280835,"Sigil of the Impending Eclipse",4,11,0,0,-1,90,0,0,0,219,524288,8192,0,0,0,-1,-1
 280842,"Shadowhunters' Hexblade",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+281029,"Band of the Swarmcaller",4,11,0,0,-1,90,0,0,0,219,524288,8192,0,0,0,-1,-1
+281056,"Sanctified Knight's Phoenixblade",4,11,0,0,-1,90,0,0,0,219,1048576,8704,0,0,0,-1,-1
+281169,"Executive Chef's Jacket",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281170,"Executive Chef's Hat",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281171,"Executive Chef's Gloves",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281172,"Executive Chef's Belt",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281173,"Executive Chef's Pants",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281174,"Executive Chef's Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281175,"Head Chef's Jacket",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281176,"Sous Chef's Jacket",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281177,"Pastry Chef's Jacket",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281178,"Sauce Chef's Jacket",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281179,"Grill Chef's Jacket",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281180,"Head Chef's Hat",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281181,"Head Chef's Gloves",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281182,"Head Chef's Belt",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281183,"Head Chef's Pants",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281184,"Head Chef's Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281185,"Sauce Chef's Hat",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281186,"Sauce Chef's Gloves",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281187,"Sauce Chef's Belt",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281188,"Sauce Chef's Pants",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281189,"Sauce Chef's Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281192,"Pastry Chef's Hat",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281193,"Pastry Chef's Gloves",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281194,"Pastry Chef's Belt",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281195,"Pastry Chef's Pants",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281196,"Pastry Chef's Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281197,"Grill Chef's Hat",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281198,"Grill Chef's Gloves",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281199,"Grill Chef's Belt",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281200,"Grill Chef's Pants",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281201,"Grill Chef's Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281202,"Sous Chef's Hat",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281203,"Sous Chef's Gloves",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281204,"Sous Chef's Belt",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281205,"Sous Chef's Pants",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281206,"Sous Chef's Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+281213,"Kith'ix's Seal",3,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
+281215,"Twisted Horror's Tendril",4,11,0,0,-1,90,0,0,0,219,524288,8192,0,0,0,-1,-1
 281227,"Soulcoiler's Rush'kah",3,11,0,0,-1,1,0,0,0,1,134254592,139264,0,65536,0,-1,-1
+281235,"Voidweaver's Vestments",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
+281236,"Leggings of Palpable Terror",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
+281238,"Aberrant Commander's Gauntlets",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
+281239,"Corroded Hulk's Skullcap",4,11,0,0,-1,90,0,0,0,219,0,8192,0,0,0,-1,-1
 281244,"Amani Scout's Quiver",2,11,0,0,-1,1,0,0,0,1,134217728,139264,0,0,0,-1,-1
 281245,"Amani Scout's Shield",2,11,0,0,-1,1,0,0,0,1,0,8192,0,0,0,-1,-1
 281247,"Amani Scout's Axe",2,11,0,0,-1,1,0,0,0,1,0,8192,0,0,0,-1,-1
@@ -100440,6 +100511,103 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 281569,"Quiver of the Drowned Marksman",3,-3,0,0,-1,1,0,0,0,1,32768,8192,0,65536,0,-1,-1
 281570,"Amani Incense Stick",3,-3,0,0,-1,1,0,0,0,1,32768,8192,0,65536,0,-1,-1
 281571,"Focus of Fangs",3,-3,0,0,-1,1,0,0,0,1,32768,8192,0,65536,0,-1,-1
+281615,"Shadeweaver's Hearthstone",3,11,0,0,-1,0,0,0,0,1,32832,8192,32768,0,0,-1,-1
+282273,"Ice Walker's Frost Fetish",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282275,"Embered Frost Fetish",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282276,"Frost Revenant's Frost Fetish",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282277,"Wood Haunter's Frost Fetish",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282563,"Ice Walker's Bell-Scythe",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282564,"Embered Bell-Scythe",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282565,"Frost Revenant's Bell-Scythe",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282566,"Wood Haunter's Bell-Scythe",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282567,"Wood Haunter's Frost Scepter",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282569,"Frost Revenant's Frost Scepter",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282570,"Embered Frost Scepter",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282571,"Ice Walker's Frost Scepter",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+282641,"Ice Walker's Hide Piercer",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+282643,"Embered Hide Piercer",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+282644,"Frost Revenant's Hide Piercer",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+282645,"Wood Haunter's Hide Piercer",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+282659,"Ghost Goggles",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+282660,"Vacpack 84-X",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+283472,"Steel-Plated Cushion Boots",1,-3,0,0,-1,1,0,0,0,1,134250496,159744,8388608,65536,0,-1,-1
+283481,"Baker's Frosty Cookbook",3,-3,0,0,-1,1,0,0,0,1,134250496,143872,8388608,65536,0,-1,-1
+283483,"Baker's Mysterious Cookbook",3,-3,0,0,-1,1,0,0,0,1,134250496,143872,8388608,65536,0,-1,-1
+283484,"Baker's Fiery Cookbook",3,-3,0,0,-1,1,0,0,0,1,134250496,143872,8388608,65536,0,-1,-1
+283485,"Baker's Enchanted Cookbook",3,-3,0,0,-1,1,0,0,0,1,134250496,143872,8388608,65536,0,-1,-1
+283988,"Blue Raspberry Lollibop",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+283989,"Sour Apple Lollibop",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+283990,"Orange Lollibop",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+283991,"Cotton Candy Lollibop",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+283992,"Grape Lollibop",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+283993,"Cherry Lollibop",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+283994,"Spearmint Lollibop",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+283995,"Lemon Lollibop",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+283999,"Wood Haunter's Belt",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284000,"Wood Haunter's Helm",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284001,"Wood Haunter's Pauldrons",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284002,"Wood Haunter's Hauberk",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284003,"Wood Haunter's Leggings",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284004,"Wood Haunter's Boots",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284005,"Wood Haunter's Gloves",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284006,"Wood Haunter's Cloak",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284008,"Ice-Walker's Belt",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284009,"Ice-Walker's Helm",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284010,"Ice-Walker's Pauldrons",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284011,"Ice-Walker's Hauberk",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284012,"Ice-Walker's Leggings",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284013,"Ice-Walker's Boots",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284014,"Ice-Walker's Gloves",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284015,"Ice-Walker's Cloak",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284017,"Embered Belt",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284018,"Embered Helm",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284019,"Embered Pauldrons",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284020,"Embered Hauberk",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284021,"Embered Leggings",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284022,"Embered Boots",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284023,"Embered Gloves",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284024,"Embered Cloak",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284026,"Frost Revenant's Belt",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284027,"Frost Revenant's Helm",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284028,"Frost Revenant's Pauldrons",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284029,"Frost Revenant's Hauberk",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284030,"Frost Revenant's Leggings",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284031,"Frost Revenant's Boots",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284032,"Frost Revenant's Gloves",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284033,"Frost Revenant's Cloak",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284051,"Hexbearer's Pauldrons",4,11,0,0,-1,1,0,0,0,1,134316032,139264,0,65536,0,-1,-1
+284052,"Amani Effigy",4,11,0,0,-1,1,0,0,0,1,134316032,139264,0,65536,0,-1,-1
+284054,"Hexdrinker's Shoulders",4,11,0,0,-1,1,0,0,0,1,134316032,139264,0,65536,0,-1,-1
+284055,"Hexbinder's Spaulders",4,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
+284056,"Spirit Effigy",4,11,0,0,-1,1,0,0,0,1,134320128,139264,0,65536,0,-1,-1
+284057,"Effigy of Corrosion",4,11,0,0,-1,1,0,0,0,1,134316032,139264,0,65536,0,-1,-1
+284159,"Libram of the Matriarch",4,11,0,0,-1,0,0,0,0,1,1081408,8192,32768,0,0,-1,-1
+284180,"Loa-Touched Deltoid",4,11,0,0,-1,1,0,0,0,1,134316032,139264,0,65536,0,-1,-1
+284181,"Loa-Touched Spine",4,11,0,0,-1,1,0,0,0,1,134316032,139264,0,65536,0,-1,-1
+284182,"Loa-Touched Visage",4,11,0,0,-1,1,0,0,0,1,134316032,139264,0,65536,0,-1,-1
+284194,"Everbloom Forest Floor",2,-3,0,0,-1,1,0,0,0,1,134283328,139264,0,0,0,-1,-1
+284219,"Granite Ritual Cuirass",4,11,0,0,-1,80,0,0,0,219,0,8192,0,0,0,-1,-1
+284233,"Baker's Sapphire Tray",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284234,"Baker's Emerald Tray",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284235,"Baker's Morganite Tray",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284236,"Baker's Amethyst Tray",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284237,"Baker's Citrine Tray",2,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+284846,"Venomous Gladiator's Smasher",4,11,0,0,-1,90,0,0,0,298,4096,8192,0,0,0,-1,-1
+284862,"Varian's Azure Dragon Pauldron",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
+285221,"Baker's Sapphire Bulwark",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+285222,"Baker's Emerald Bulwark",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+285223,"Baker's Morganite Bulwark",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+285224,"Baker's Amethyst Bulwark",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+285225,"Baker's Citrine Bulwark",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+285333,"Frost Revenant's Reversed Pauldrons",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+285334,"Embered Reversed Pauldrons",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+285335,"Ice-Walker's Reversed Pauldrons",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+285336,"Wood Haunter's Reversed Pauldrons",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+285956,"Ice Walker's Bell-Crook",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+285957,"Wood Haunter's Bell-Crook",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+285958,"Frost Revenant's Bell-Crook",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+285959,"Embered Bell-Crook",2,-3,0,0,-1,1,0,0,0,1,134250496,143360,8388608,65536,0,-1,-1
+280457,"Shark Attack Pack",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 275999,"Flowering Mantle",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
 269786,"Azshara's Darkscale Helm",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
 269787,"Azshara's Darkscale Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,0,65536,0,-1,-1
@@ -100471,6 +100639,56 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 272331,"Varian's Azure Dragon Pauldron",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 272332,"Varian's Azure Dragon Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 272333,"Varian's Azure Dragon Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
+279173,"Veteran Adventurer's Chestpiece",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279174,"Veteran Adventurer's Belt",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279175,"Veteran Adventurer's Legguards",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279176,"Veteran Adventurer's Boots",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279177,"Veteran Adventurer's Bracer",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279178,"Veteran Adventurer's Gloves",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279179,"Veteran Adventurer's Cloak",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279180,"Veteran Adventurer's Hood",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+279181,"Veteran Adventurer's Shoulderpads",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+271722,"Shen'dorei Magister's Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271723,"Shen'dorei Magister's Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271724,"Shen'dorei Magister's Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271725,"Shen'dorei Magister's Robe",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271726,"Shen'dorei Magister's Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271727,"Shen'dorei Magister's Helm",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271728,"Shen'dorei Magister's Leggings",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271729,"Shen'dorei Magister's Vest",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271730,"Shen'dorei Magister's Pauldrons",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271733,"Shen'dorei Peacekeeper's Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271734,"Shen'dorei Peacekeeper's Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271735,"Shen'dorei Peacekeeper's Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271736,"Shen'dorei Peacekeeper's Robe",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271737,"Shen'dorei Peacekeeper's Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271738,"Shen'dorei Peacekeeper's Helm",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271739,"Shen'dorei Peacekeeper's Leggings",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271742,"Shen'dorei Peacekeeper's Vest",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271743,"Shen'dorei Peacekeeper's Pauldrons",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271746,"Shen'dorei Skyseer's Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271747,"Shen'dorei Skyseer's Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271748,"Shen'dorei Skyseer's Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271749,"Shen'dorei Skyseer's Robe",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271750,"Shen'dorei Skyseer's Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271751,"Shen'dorei Skyseer's Helm",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271752,"Shen'dorei Skyseer's Leggings",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271753,"Shen'dorei Skyseer's Vest",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271754,"Shen'dorei Skyseer's Pauldrons",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271756,"Al'Aketh Zealot's Belt",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271757,"Al'Aketh Zealot's Boots",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271758,"Al'Aketh Zealot's Cloak",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271759,"Al'Aketh Zealot's Robe",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271760,"Al'Aketh Zealot's Gloves",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271761,"Al'Aketh Zealot's Helm",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271762,"Al'Aketh Zealot's Leggings",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271763,"Al'Aketh Zealot's Vest",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+271764,"Al'Aketh Zealot's Pauldrons",4,-3,0,0,-1,1,0,0,0,1,134250496,155648,8388608,65536,0,-1,-1
+276625,"Puffin Pack",4,-3,0,0,-1,0,0,0,0,1,134250496,8531968,8388608,0,0,-1,-1
+270272,"Lordaeron Forever",1,11,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
+279006,"Fisher's Pack",4,-3,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
+280623,"Veteran Adventurer's Rucksack",3,-3,0,0,-1,1,0,0,0,1,134250496,139264,8388608,65536,0,-1,-1
+280545,"Shen'dorei Tabard",1,11,0,0,-1,1,0,0,0,1,134250496,139264,0,65536,0,-1,-1
 6121,"Recruit's Pants",1,0,0,0,-1,1,0,0,0,1,0,8192,0,0,0,-1,-1
 20902,"Recruit's Pants",1,0,0,0,-1,1,0,0,0,1,0,8192,0,0,0,-1,-1
 23474,"Recruit's Pants",1,0,0,0,-1,1,0,0,0,1,0,8192,0,0,0,-1,-1
@@ -101630,7 +101848,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 91514,"Malevolent Gladiator's Dragonhide Legguards",4,4,0,0,1024,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91506,"Malevolent Gladiator's Dreadplate Legguards",4,4,0,0,32,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91614,"Malevolent Gladiator's Copperskin Legguards",4,4,0,6,512,35,0,0,0,39,4096,8192,0,0,0,-1,-1
-87043,"Bindings of Ancient Spirits",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 91581,"Malevolent Gladiator's Chain Leggings",4,4,0,0,4,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91589,"Malevolent Gladiator's Silk Trousers",4,4,0,0,128,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91789,"Malevolent Gladiator's Plate Legguards",4,4,0,0,1,35,0,0,0,39,4096,8192,0,0,0,-1,-1
@@ -101669,7 +101886,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 91508,"Malevolent Gladiator's Dreadplate Shoulders",4,4,0,0,32,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91606,"Malevolent Gladiator's Ironskin Spaulders",4,4,0,0,512,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91616,"Malevolent Gladiator's Copperskin Spaulders",4,4,0,0,512,35,0,0,0,39,4096,8192,0,0,0,-1,-1
-87040,"Circuit of the Frail Soul",4,4,0,0,-1,35,0,0,0,39,4096,1073766400,0,0,0,-1,-1
 91583,"Malevolent Gladiator's Chain Spaulders",4,4,0,0,4,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91791,"Malevolent Gladiator's Plate Shoulders",4,4,0,0,1,35,0,0,0,39,4096,8192,0,0,0,-1,-1
 91781,"Malevolent Gladiator's Felweave Amice",4,4,0,0,256,35,0,0,0,39,4096,8192,0,0,0,-1,-1
@@ -101748,6 +101964,8 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 87033,"Netherrealm Shoulderpads",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87039,"Eye of the Ancient Spirit",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87037,"Sandals of the Severed Soul",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
+87043,"Bindings of Ancient Spirits",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
+87040,"Circuit of the Frail Soul",4,4,0,0,-1,35,0,0,0,39,4096,1073766400,0,0,0,-1,-1
 87041,"Spaulders of the Divided Mind",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87042,"Leggings of Imprisoned Will",4,4,0,0,-1,35,0,0,0,39,0,1073750016,0,0,0,-1,-1
 87038,"Shadowsummoner Spaulders",4,4,0,0,-1,35,0,0,0,39,4096,1073750016,0,0,0,-1,-1
@@ -101818,6 +102036,7 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 89266,"Chest of the Shadowy Protector",4,0,0,0,581,35,0,0,0,39,134221824,155648,0,2,1,-1,-1
 89264,"Chest of the Shadowy Vanquisher",4,0,0,0,1192,35,0,0,0,39,134221824,155648,0,2,1,-1,-1
 89271,"Gauntlets of the Shadowy Conqueror",4,0,0,0,274,35,0,0,0,39,134221824,155648,0,2,1,-1,-1
+90896,"Straw Hat",2,0,0,0,-1,1,0,0,0,1,32768,8396800,0,0,0,-1,-1
 89272,"Gauntlets of the Shadowy Protector",4,0,0,0,581,35,0,0,0,39,134221824,155648,0,2,1,-1,-1
 89270,"Gauntlets of the Shadowy Vanquisher",4,0,0,0,1192,35,0,0,0,39,134221824,155648,0,2,1,-1,-1
 89268,"Leggings of the Shadowy Conqueror",4,0,0,0,274,35,0,0,0,39,134221824,155648,0,2,1,-1,-1
@@ -101859,7 +102078,6 @@ ID,Display_lang,OverallQualityID,ExpansionID,MinFactionID,MinReputation,Allowabl
 90373,"Landfall Plate Boots",2,4,0,0,-1,0,0,0,0,37,65536,8192,0,0,0,-1,-1
 90894,"Straw Hat",2,0,0,0,-1,1,0,0,0,1,32768,8396800,0,0,0,-1,-1
 90895,"Straw Hat",2,0,0,0,-1,1,0,0,0,1,32768,8396800,0,0,0,-1,-1
-90896,"Straw Hat",2,0,0,0,-1,1,0,0,0,1,32768,8396800,0,0,0,-1,-1
 99767,"Tyrannical Gladiator's Bonegrinder",4,4,0,0,-1,35,0,0,0,39,4096,8194,8388608,0,0,-1321907123,1427461461
 99773,"Tyrannical Gladiator's Cape of Cruelty",4,4,0,0,1612,35,0,0,0,39,4096,8194,0,0,0,-1321907123,1427461461
 99774,"Tyrannical Gladiator's Cape of Prowess",4,4,0,0,1612,35,0,0,0,39,4096,8194,0,0,0,-1321907123,1427461461

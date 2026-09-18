@@ -8,12 +8,12 @@ h(-12,{u=3,g={
 ach(8917,{awp=100100,providers={{"i",109014}},u=3}),
 ach(8916,{awp=100100,providers={{"i",109013}},u=3}),
 ach(12230,{awp=70305,providers={{"i",153540}},r=1,rwp=100100,u=2}),
-ach(10320,{awp=60202,providers={{"i",128425}},rwp=100107,u=2}),
+ach(10320,{awp=90100,providers={{"i",128425}},rwp=100107,u=2}),
 ach(6849,{awp=80300,providers={{"i",85870}},u=3}),
 ach(6848,{awp=80300,providers={{"i",85871}},u=3}),
-ach(10321,{awp=60202,providers={{"i",128426}},rwp=100107,u=2}),
+ach(10321,{awp=90100,providers={{"i",128426}},rwp=100107,u=2}),
 ach(12229,{awp=70305,providers={{"i",153539}},r=2,rwp=100100,u=2}),
-ach(12232,{awp=70305,providers={{"i",153541}},rwp=100107,u=2}),
+ach(12232,{awp=90100,providers={{"i",153541}},rwp=100107,u=2}),
 ach(14283,{awp=100200,providers={{"s",307932}},u=3}),
 ach(17314,{awp=100200,providers={{"s",359843}},u=3}),
 ach(19029,{awp=100107,providers={{"i",208850},{"n",210058}},rwp=100107,u=2}),
@@ -37,7 +37,7 @@ p(4894,{awp=110207,itemID=252650,npcID=251511,spellID=1254822,u=3})),
 p(297,{awp=40003,b=1,itemID=68385,npcID=51600,spellID=95787,u=3}),
 p(3249,{awp=90205,b=1,itemID=190586,npcID=185586,spellID=367702,u=3}),
 p(671,{awp=80300,itemID=85871,npcID=63832,spellID=124660,u=3,g={
-crit(34637,{achID=6848,id=3,rwp=50407,u=2})}}),
+crit(34637,{achID=6848,id=3,u=2})}}),
 p(3175,{awp=100200,npcID=181535,u=3}),
 p(4855,{awp=110205,itemID=246342,npcID=246662,rwp=110207,spellID=1241760,u=2}),
 p(4969,{awp=120001,description="Part of the charity Roofus Pack.",itemID=262982,npcID=256698,rwp=120005,spellID=1269627,u=2}),
@@ -74,12 +74,12 @@ i(68384,{awp=40003,b=1,f=101,rwp=80300,u=2}),
 p(296,{awp=40003,b=1,itemID=68618,npcID=51601,r=2,rwp=80300,spellID=95786,u=2}),
 p(298,{awp=40003,b=1,itemID=68619,npcID=51649,r=1,rwp=80300,spellID=95909,u=2}),
 p(1691,{awp=60202,itemID=128426,npcID=95841,rwp=100107,spellID=190020,u=2,g={
-crit(28787,{achID=10321,id=1,rwp=70305,u=2})}}),
+crit(28787,{achID=10321,awp=90100,id=1,u=2})}}),
 p(248,{awp=30202,b=1,itemID=49665,npcID=36911,rwp=100002,spellID=69541,u=2}),
 p(4682,{awp=110005,b=1,itemID=231294,npcID=232502,rwp=110007,spellID=468186,u=2}),
 p(2890,{awp=100105,b=1,itemID=190601,npcID=171025,rwp=100107,spellID=333570,u=2}),
-p(2143,{awp=70305,itemID=153541,npcID=129049,rwp=100107,spellID=255702,u=2,g={
-crit(38154,{achID=12232,id=1,rwp=80307,u=2})}}),
+p(2143,{awp=90100,itemID=153541,npcID=129049,rwp=100107,spellID=255702,u=2,g={
+crit(38154,{achID=12232,id=1,u=2})}}),
 p(246,{awp=30302,b=1,description="This item is available only if you purchase the Plush Toy and redeem the code.",itemID=49663,npcID=36909,rwp=80300,spellID=69536,u=2})}}),
 flt(55,{awp=50400,u=3,g={
 i(103557,{f=55,rwp=60002,spellID=146939,u=2}),
@@ -92,6 +92,30 @@ s(190160,208941,{f=20,spellID=423959}),
 s(190163,208962,{f=26,spellID=423957}),
 s(190162,208959,{f=25,spellID=423958}),
 s(190159,208940,{f=28,lvl={70},spellID=423960})}}),
+en(269797,{awp=120100,questID=95545,spellID=1286531,tmogSetID=5667,u=3,g={
+s(304805,269786,{f=2,loc=40}),
+s(304807,269788,{f=2,loc=41}),
+s(304808,269789,{f=2,loc=42}),
+s(304809,269790,{f=2,loc=42}),
+s(304812,269793,{f=2,loc=45}),
+s(304813,269794,{f=2,loc=46}),
+s(304814,269795,{f=2,loc=46}),
+s(304815,269796,{f=2,loc=47}),
+s(304810,269791,{f=2,loc=44}),
+s(304811,269792,{f=2,loc=44}),
+s(304806,269787,{f=3})}}),
+en(269809,{awp=120100,questID=95546,spellID=1286532,tmogSetID=5668,u=3,g={
+s(304816,269798,{f=2,loc=40}),
+s(304818,269800,{f=2,loc=41}),
+s(304819,269801,{f=2,loc=42}),
+s(304820,269802,{f=2,loc=42}),
+s(304823,269805,{f=2,loc=45}),
+s(304824,269806,{f=2,loc=46}),
+s(304825,269807,{f=2,loc=46}),
+s(304826,269808,{f=2,loc=47}),
+s(304821,269803,{f=2,loc=44}),
+s(304822,269804,{f=2,loc=44}),
+s(304817,269799,{f=3})}}),
 en(255824,{awp=110205,spellID=1259468,tmogSetID=2200,u=3,g={
 s(115888,184832,{f=2,loc=47}),
 s(115889,184833,{f=2,loc=45}),
@@ -623,7 +647,17 @@ de(15141,{awp=120005,itemID=263291,spellID=1270359,u=3}),
 de(12172,{itemID=258568,spellID=1263500,u=3}),
 de(9444,{itemID=253547,spellID=1256615,u=3}),
 i(272146,{awp=120005,spellID=1290352,u=3}),
-i(272992,{awp=120005,spellID=1291534,u=3})}}),
+i(272992,{awp=120005,spellID=1291534,u=3}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(16098,{awp=120005,itemID=264721,spellID=1272517,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(16101,{awp=120005,itemID=264724,spellID=1272520,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(16102,{awp=120005,itemID=264725,spellID=1272521,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(16099,{awp=120005,itemID=264722,spellID=1272518,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(21061,{awp=120005,itemID=269605,spellID=1285735,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(21060,{awp=120005,itemID=269604,spellID=1285734,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(21946,{awp=120005,itemID=272354,spellID=1291007,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(16100,{awp=120005,itemID=264723,spellID=1272519,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(21945,{awp=120005,itemID=272353,spellID=1291006,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+de(17750,{awp=120005,itemID=266071,spellID=1277672,u=3}))}}),
 flt(100,{u=3,g={
 mnt(417888,{awp=110207,b=1,itemID=258479,lvl=10,u=3}),
 mnt(1282453,{awp=120005,itemID=268474,u=3}),
@@ -663,7 +697,8 @@ mnt(259395,{awp=80001,b=1,itemID=156564,lvl=10,u=3}),
 mnt(308078,{awp=80300,u=3}),
 mnt(326390,{awp=80307,u=3}),
 mnt(1279352,{awp=120007,itemID=267078,u=3}),
-mnt(1292356,{awp=120007,itemID=273655,u=3}),
+mnt(1292356,{awp=120007,itemID=273655,u=3}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(1291315,{awp=120007,itemID=272920,u=3})),
 mnt(317177,{awp=90100,b=1,itemID=246698,lvl=10,u=3}),
 mnt(290132,{awp=80200,b=1,itemID=166776,lvl=10,u=3}),
 mnt(359843,{awp=100200,b=1,itemID=248089,lvl=10,u=3}),
@@ -674,6 +709,8 @@ mnt(1244260,{awp=110205,b=1,itemID=246920,rwp=110207,u=2}),
 mnt(290133,{awp=80100,b=1,itemID=166775,lvl=10,u=3}),
 mnt(359317,{awp=90105,u=3}),
 mnt(397406,{awp=100100,b=1,itemID=206167,lvl=10,u=3}),
+mnt(1283837,{awp=120100,itemID=268833,u=3}),
+mnt(1283838,{awp=120100,itemID=268834,u=3}),
 mnt(302361,{awp=80205,itemID=207964,lvl=10,r=2,rwp=100100,u=2}),
 mnt(302362,{awp=80205,itemID=207963,lvl=10,r=1,rwp=100100,u=2}),
 mnt(139595,{awp=50200,b=1,itemID=95341,lvl=10,rwp=80300,u=2}),
@@ -688,7 +725,7 @@ mnt(1226851,{awp=110105,b=1,itemID=238966,rwp=110107,u=2}),
 mnt(163025,{awp=60002,b=1,itemID=112327,lvl=10,rwp=80300,u=2}),
 mnt(255696,{awp=70305,b=1,itemID=153540,lvl=10,r=1,rwp=100100,u=2}),
 mnt(153489,{awp=50402,b=1,itemID=107951,lvl=10,rwp=100107,u=2}),
-mnt(189998,{awp=60202,b=1,itemID=128425,lvl=10,rwp=100107,u=2}),
+mnt(189998,{awp=90100,b=1,itemID=128425,lvl=10,rwp=100107,u=2}),
 mnt(446352,{awp=110107,itemID=221270,lvl=10,rwp=110200,u=2}),
 mnt(134573,{awp=50100,b=1,itemID=92724,lvl=10,rwp=80100,u=2}),
 mnt(255695,{awp=70305,b=1,itemID=153539,lvl=10,r=2,rwp=100100,u=2}),
@@ -709,5 +746,16 @@ toy(166777,{awp=80105,b=1,rwp=100100,u=2}),
 toy(210467,{awp=100205,b=1,u=3}),
 toy(208883,{awp=110207,b=1,u=3}),
 toy(193588,{awp=100200,b=1,u=3}),
-toy(166779,{awp=80105,b=1,u=3})}})}})
+toy(166779,{awp=80105,b=1,u=3})}}),
+i(122284,{awp=60102,b=1,u=3}),
+i(122270,{awp=60102,b=1,u=3}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(235378,{awp=40003,b=1,description="Can be bought for ¥200 RMB (~$27 USD) in the Ingame Shop.\n\nYou can only purchase 12 boxes per year.",spellID=1216746,u=3,g={(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(459784,{itemID=227362,lvl=10,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(35223,{b=1,f=55,spellID=46168,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(46779,{b=1,f=55,spellID=65745,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(42777,{itemID=49284,lvl=10,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(42776,{itemID=49283,lvl=10,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(45047,{b=1,f=55,spellID=62857,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(46197,{itemID=49285,lvl=10,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(46199,{itemID=49286,lvl=10,u=3}))}}))}})
 end)

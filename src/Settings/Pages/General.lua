@@ -520,7 +520,7 @@ modeButton:SetScript("OnClick", function()
 			-- General Things
 			settings:Set("Thing:Achievements", true)
 			settings:Set("Thing:CharacterUnlocks", true)
-			settings:Set("Thing:Exploration", app.IsClassic)
+			settings:Set("Thing:Exploration", app.GameBuildVersion < 100000)	-- CRIEVE NOTE: For now, until Blizzard adds an exploration API that doesn't suck
 			settings:Set("Thing:FirstCrafts", true)
 			settings:Set("Thing:FlightPaths", true)
 			settings:Set("Thing:Quests", true)
@@ -1157,7 +1157,7 @@ app.AddEventHandler("OnPlayerLevelUp", function()
 end);
 
 local checkboxNoSkillLevelFilter;
-if app.GameBuildVersion < 20000 then
+if app.MaximumSkillLevel then
 checkboxNoSkillLevelFilter = child:CreateCheckBox("|T1530081:0|t |c" .. app.DefaultColors.Insane .. L.FILTER_THINGS_BY_SKILL_LEVEL_CHECKBOX,
 function(self)
 	self:SetChecked(not settings:Get("Filter:BySkillLevel"))	-- Inversed, so enabled = show

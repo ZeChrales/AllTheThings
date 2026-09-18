@@ -9,8 +9,8 @@ local IsRetrieving = app.Modules.RetrievingData.IsRetrieving;
 local Search = app.SearchForObject
 
 -- Global locals
-local ipairs, pairs, rawset, rawget, tinsert, math_floor, RETRIEVING_DATA, wipe, select, tonumber,type,unpack,tostring
-	= ipairs, pairs, rawset, rawget, tinsert, math.floor, RETRIEVING_DATA, wipe, select, tonumber,type,unpack,tostring
+local ipairs, pairs, rawset, rawget, tinsert, math_floor, RETRIEVING_DATA, wipe, select, tonumber,type,unpack,tostring,next
+	= ipairs, pairs, rawset, rawget, tinsert, math.floor, RETRIEVING_DATA, wipe, select, tonumber,type,unpack,tostring,next
 local C_QuestLog_GetAllCompletedQuestIDs, C_QuestLog_GetQuestObjectives = C_QuestLog.GetAllCompletedQuestIDs, C_QuestLog.GetQuestObjectives;
 ---@diagnostic disable-next-line: undefined-global
 local GetQuestLogIndexByID = C_QuestLog.GetLogIndexForQuestID or GetQuestLogIndexByID;
@@ -22,7 +22,6 @@ local GetQuestLogRewardInfo =
 	  GetQuestLogRewardInfo;
 
 -- WoW API Cache
-local GetFactionName = app.WOWAPI.GetFactionName;
 local GetSpellName = app.WOWAPI.GetSpellName;
 local GetSpellIcon = app.WOWAPI.GetSpellIcon;
 local GetQuestRewardCurrencies = app.WOWAPI.GetQuestRewardCurrencies;
@@ -443,6 +442,13 @@ else
 		app.SetThingCollected("questID",questID,false,flag)
 	end
 end
+local function SyncDirtyQuests()
+	-- app.PrintDebug("SyncDirtyQuests",#DirtyQuests)
+	if #DirtyQuests > 0 then
+		app.UpdateRawIDs("questID", DirtyQuests)
+		app.wipearray(DirtyQuests)
+	end
+end
 local BatchRefresh
 -- We can't track unflagged quests with a single meta-table unless we double-assign keys... that's a bit silly
 -- when we can have the original method of using 'CompletedQuests' as a pass-thru to the Raw data
@@ -471,6 +477,7 @@ local CompletedQuests = setmetatable({}, {
 		-- Way too much overhead to assume this should be done every time a key is changed
 		if not BatchRefresh then
 			CacheQuestByScope(questID, state)
+			app.CallbackHandlers.DelayedCallback(SyncDirtyQuests, 0.5)
 		end
 	end
 });
@@ -534,12 +541,14 @@ local CollectibleAsQuest = function(t)
 					or
 					t.itemID
 				)
-				and C_QuestLog_IsOnQuest(questID))
+				and C_QuestLog_IsOnQuest(questID)	-- sometimes this causes repeatable quests with a cost to show as 'collected' in chat
+			)
 		)
 	)
 end
 
 local function CollectibleAsLocked(t, locked)
+	local questID = t.questID
 	return
 	-- Collecting Locked Quests
 	app.Settings.Collectibles.QuestsLocked
@@ -548,8 +557,23 @@ local function CollectibleAsLocked(t, locked)
 	-- not a repeatable quest
 	and not t.repeatable
 	and
-	-- Not Locked by a OPA/AW Quest
-	not AccountWideLockedQuestsCache[t.questID]
+	(
+		-- Not Locked by a OPA/AW Quest
+		not AccountWideLockedQuestsCache[questID]
+		or
+		(
+			-- one-time and collected on any character
+			OneTimeQuests[questID] ~= false
+			and
+			(
+				-- collectible by any character
+				app.Settings.AccountWide.Quests
+				or
+				-- one-time quest collected as this character
+				OneTimeQuests[questID] == app.GUID
+			)
+		)
+	)
 	and
 	(
 		-- debug/account mode
@@ -619,7 +643,7 @@ local function GetQuestIndicator(t)
 		-- they're any other type of Quest sub-class, but with an additional constraint
 		-- I really don't want to duplicate every Quest class with a OTQ indicator variant.
 		-- I don't see anyway to utilize the current base Class functionality to handle this requirement
-		elseif OneTimeQuests[questID] then
+		elseif OneTimeQuests[questID] ~= nil then
 			return app.asset("Interface_Quest_Arrow");
 		end
 		local timeRemaining = t.timeRemaining
@@ -912,9 +936,6 @@ local function RefreshQuestCompletionState(questID)
 		-- Batch processing will ignore all the per-instance collection etc. built into CompletedQuests
 		-- because that is a huge overhead. Instead capture the values and assign them all at once
 		QueryCompletedQuests();
-		if #DirtyQuests > 0 then
-			app.UpdateRawIDs("questID", DirtyQuests);
-		end
 	end
 
 	Register_CRITERIA_UPDATE()
@@ -933,12 +954,12 @@ local RefreshQuestInfo = function(questID)
 		RefreshAllQuestInfo();
 	end
 end
+local FirstRefresh = true
 if C_QuestLog_GetAllCompletedQuestIDs then
 	local MAX = 999999;
 	local UnflaggedQuests = {}
 	local FlaggedQuests = {}
 	local CompleteQuestSequence = {};
-	local FirstRefresh = true
 	local IgnoredUnflagTypes = {
 		ItemWithQuest = true,
 	}
@@ -949,7 +970,7 @@ if C_QuestLog_GetAllCompletedQuestIDs then
 		if not freshCompletes or #freshCompletes == 0 then
 			return;
 		end
-		-- app.PrintDebug("QCQ",#freshCompletes,#CompleteQuestSequence)
+		-- app.PrintDebug("QCQ",#freshCompletes,#CompleteQuestSequence,FirstRefresh)
 		local oldReportSetting = DoQuestPrints
 		-- check if Blizzard is being dumb / should we print a summary instead of individual lines
 		local questDiff = #freshCompletes - #CompleteQuestSequence;
@@ -967,7 +988,6 @@ if C_QuestLog_GetAllCompletedQuestIDs then
 		if manyQuests then
 			DoQuestPrints = nil
 		end
-		wipe(DirtyQuests)
 		wipe(UnflaggedQuests)
 		wipe(FlaggedQuests)
 
@@ -1003,9 +1023,12 @@ if C_QuestLog_GetAllCompletedQuestIDs then
 
 		if FirstRefresh then
 			CacheQuestsByScope(RawQuests,1)
+			app.wipearray(DirtyQuests)
 		end
-		if #DirtyQuests > 0 then
+		if next(FlaggedQuests) then
 			CacheQuestsByScope(FlaggedQuests,1)
+		end
+		if next(UnflaggedQuests) then
 			CacheQuestsByScope(UnflaggedQuests)
 		end
 
@@ -1044,6 +1067,7 @@ if C_QuestLog_GetAllCompletedQuestIDs then
 		end
 
 		BatchRefresh = nil
+		app.CallbackHandlers.DelayedCallback(SyncDirtyQuests, 0.5)
 	end
 
 	app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, accountWideData, characterData)
@@ -1065,7 +1089,6 @@ else	-- no C_QuestLog_GetAllCompletedQuestIDs
 	QueryCompletedQuests = function()
 		-- Mark all previously completed quests.
 		BatchRefresh = true
-		wipe(DirtyQuests);
 		wipe(UpdateQuestIDs)
 		GetQuestsCompleted(CompletedQuests);
 		if #DirtyQuests > 0 then
@@ -1076,6 +1099,12 @@ else	-- no C_QuestLog_GetAllCompletedQuestIDs
 			CacheQuestsByScope(UpdateQuestIDs, 1);
 		end
 		BatchRefresh = nil
+		if FirstRefresh then
+			FirstRefresh = nil
+			app.wipearray(DirtyQuests)
+		else
+			app.CallbackHandlers.DelayedCallback(SyncDirtyQuests, 0.5)
+		end
 	end
 	app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, accountWideData, characterData)
 		-- convert cached quests into the current RawQuests so they don't all appear 'dirty' on first refresh
@@ -1218,7 +1247,7 @@ local criteriaFuncs = {
 
 	-- spellID = app.IsSpellKnownHelper,	-- defined in OnLoad event
 	label_spellID = L.LOCK_CRITERIA_SPELL_LABEL,
-	-- text_spellID = app.GetSpellName,	-- defined in OnLoad event
+	text_spellID = GetSpellName,
 
 	factionID = function(v)
 		-- v = factionID.standingRequiredToLock
@@ -1282,7 +1311,6 @@ local criteriaFuncs = {
 	end,
 };
 app.AddEventHandler("OnLoad", function()
-	criteriaFuncs.text_spellID = app.GetSpellName
 	criteriaFuncs.spellID = app.IsSpellKnownHelper
 end)
 local AWQuestLockers = setmetatable({
@@ -1414,7 +1442,8 @@ app.QuestLockCriteriaFunctions = criteriaFuncs;
 local function QuestWithReputationDescription(t)
 	if app.Settings.Collectibles.Reputations then
 		local factionID = t.maxReputation[1];
-		return L.ITEM_GIVES_REP .. (GetFactionName(factionID) or ("Faction #" .. tostring(factionID))) .. "'";
+		local faction = app.LookupFactionData(factionID)
+		return L.ITEM_GIVES_REP .. faction.name.."'"
 	end
 end
 -- Basically anything in ATT which has QuestID needs to also support being Locked...

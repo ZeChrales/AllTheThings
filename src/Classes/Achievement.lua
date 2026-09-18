@@ -1,5 +1,5 @@
 local _, app = ...
-if app.GameBuildVersion <= 40000 then
+if app.GameBuildVersion <= 40000 and not app.IsForever then
 	-- Not compatible pre-Cata. (TODO: Test in Wrath Classic Anniversary)
 	return;
 end
@@ -542,12 +542,11 @@ do
 		end
 	end
 	app.CreateAchievementCriteria = app.CreateClass("AchievementCriteria", "criteriaID", criteriaFields)
-	if app.IsRetail then
-		app.AddEventRegistration("CRITERIA_EARNED", function(achievementID,description,achievementAlreadyEarnedOnAccount)
-			-- simply pass an update of all data linked to this achievement since we don't know specific criteriaID
-			-- app.PrintDebug("Update achievementID",achievementID,"for criteria earned:",description)
-			app.UpdateRawID("achievementID", achievementID)
-		end);
-	end
+	app.AddEventRegistration("CRITERIA_EARNED", function(achievementID,description,achievementAlreadyEarnedOnAccount)
+		-- simply pass an update of all data linked to this achievement since we don't know specific criteriaID
+		-- app.PrintDebug("Update achievementID",achievementID,"for criteria earned:",description)
+		app.UpdateRawID("achievementID", achievementID)
+	end);
+	app.AddGenericFieldConverter("criteriaID")
 	app.AddSimpleCollectibleSwap("AchievementCriteria", "Achievements")
 end

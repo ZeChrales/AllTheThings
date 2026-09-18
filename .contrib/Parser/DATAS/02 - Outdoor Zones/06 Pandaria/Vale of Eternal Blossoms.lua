@@ -76,44 +76,46 @@ root(ROOTS.Zones, {
 				}),
 				battlepets({
 					pet(751, {	-- Dancing Water Skimmer (PET!)
+						["description"] = "also common as a secondary pet.",
 						["coords"] = {
-							{ 30.2, 77.6, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 71.2, 40.2, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 76.2, 60.0, VALE_OF_ETERNAL_BLOSSOMS },
+							{ 30.2, 77.6, VALE_OF_ETERNAL_BLOSSOMS },	-- Mistfall Village
+							{ 71.2, 40.2, VALE_OF_ETERNAL_BLOSSOMS },	-- By Mogu'shan Palace
+							{ 76.2, 60.0, VALE_OF_ETERNAL_BLOSSOMS },	-- The Summer Fields
 						},
 					}),
 					pet(747, {	-- Effervescent Glowfly (PET!)
+						["description"] = "Commonly found as a secondary pet in Vale of Eternal Blossoms. Can also be found as primary pets outside the Gate of the August Celestials as well as occational spawns through the Vale of Eternal Blossoms.",
 						["coords"] = {
-							{ 23.2, 27.2, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 21.6, 60.8, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 85.0, 48.4, VALE_OF_ETERNAL_BLOSSOMS },
+							{ 56.0, 89.0, KUN_LAI_SUMMIT },	-- By Gate of the August Celestials
+							{ 53.7, 89.2, KUN_LAI_SUMMIT },	-- By Gate of the August Celestials
 						},
 					}),
 					pet(383, {	-- Eternal Strider (PET!)
+						["description"] = "In commonly found by the riverbed.",
 						["coords"] = {
-							{ 34.0, 78.6, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 72.6, 27.6, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 87.0, 46.2, VALE_OF_ETERNAL_BLOSSOMS },
+							{ 34.0, 78.6, VALE_OF_ETERNAL_BLOSSOMS },	-- Mistfall Village
+							{ 72.6, 27.6, VALE_OF_ETERNAL_BLOSSOMS },	-- By Mogu'shan Palace
+							{ 87.0, 46.2, VALE_OF_ETERNAL_BLOSSOMS },	-- By Mogu'shan Palace
 						},
 					}),
-					pet(748),	-- Gilded Moth (PET!)
+					pet(748, {	-- Gilded Moth (PET!)
+						["description"] = "Can be found in groups of three across the zone. However, only 1-2 groups are spawned at any time, and the Gilded Moths can only be found as primary pets. Use a target macro and consider using a Battle-Stone to get a rare quality pet.",
+					}),
 					pet(749, {	-- Golden Civet (PET!)
+						["description"] = "also common as a secondary pet.",
 						["coords"] = {
-							{ 11.2, 70.0, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 48.2, 30.8, VALE_OF_ETERNAL_BLOSSOMS },
+							{ 11.2, 70.0, VALE_OF_ETERNAL_BLOSSOMS },	-- Gate of the Setting Sun
 						},
 					}),
 					pet(750, {	-- Golden Civet Kitten (PET!)
+						["description"] = "also common as a secondary pet.",
 						["coords"] = {
-							{ 11.2, 70.6, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 38.6, 64.8, VALE_OF_ETERNAL_BLOSSOMS },
+							{ 11.2, 70.0, VALE_OF_ETERNAL_BLOSSOMS },	-- Gate of the Setting Sun
+							{ 38.6, 64.8, VALE_OF_ETERNAL_BLOSSOMS },	-- Jin Yang Road
 						},
 					}),
 					pet(752, {	-- Yellow-Bellied Bullfrog (PET!)
-						["coords"] = {
-							{ 24.6, 30.8, VALE_OF_ETERNAL_BLOSSOMS },
-							{ 69.0, 44.8, VALE_OF_ETERNAL_BLOSSOMS },
-						},
+						["description"] = "Can sometimes be found by the riverbed, also common as a secondary pet.",
 					}),
 				}),
 				explorationHeader({
@@ -696,11 +698,13 @@ root(ROOTS.Zones, {
 						["description"] = "This is a rare Tameable Hunter Pet of 4 varying colors.",
 					}),
 					n(50780, {	-- Sahn Tidehunter
-						-- #if MOP_BEFORE_SOO
-						["coord"] = { 61.7, 55.4, VALE_OF_ETERNAL_BLOSSOMS },
-						-- #else
-						["coord"] = { 69.4, 30.5, VALE_OF_ETERNAL_BLOSSOMS },
-						-- #endif
+						["coords"] = {
+							-- #if MOP_BEFORE_SOO
+							{ 61.7, 55.4, VALE_OF_ETERNAL_BLOSSOMS },
+							-- #else
+							{ 69.4, 30.5, VALE_OF_ETERNAL_BLOSSOMS },
+							-- #endif
+						},
 						["groups"] = {
 							i(86582),	-- Aqua Jewel (TOY!)
 						},
@@ -1034,18 +1038,18 @@ root(ROOTS.Zones, {
 							platinum(15, i(265789)),	-- Eye of the Legion
 
 							-- Toys
-							platinum(50, i(49704)),		-- Carved Ogre Idol
+							platinum(50, i(49704)),	-- Carved Ogre Idol
 							platinum(15, i(265786)),	-- Demon Hunter's Aspect
-							platinum(15, i(54212)),		-- Instant Statue Pedestal
+							platinum(15, i(54212)),	-- Instant Statue Pedestal
 							platinum(30, i(266999)),	-- Swift Yak Pelt
 
 							-- Mounts
 							platinum(70, i(265787)),	-- Magic Rooster Egg
-							platinum(50, i(90710)),		-- Reins of the Ashen Pandaren Phoenix
-							platinum(50, i(89154)),		-- Reins of the Crimson Pandaren Phoenix
-							platinum(50, i(90711)),		-- Reins of the Emerald Pandaren Phoenix
+							platinum(50, i(90710)),	-- Reins of the Ashen Pandaren Phoenix
+							platinum(50, i(89154)),	-- Reins of the Crimson Pandaren Phoenix
+							platinum(50, i(90711)),	-- Reins of the Emerald Pandaren Phoenix
 							platinum(300, i(277652)),	-- Reins of the Juvenile Frostwyrm
-							platinum(50, i(90712)),		-- Reins of the Violet Pandaren Phoenix
+							platinum(50, i(90712)),	-- Reins of the Violet Pandaren Phoenix
 							platinum(150, i(276081)),	-- Spectral Wind Rider
 							platinum(300, i(276075)),	-- Stormcrow
 							platinum(40, i(265788)),	-- Wooly White Rhino
@@ -1253,18 +1257,18 @@ root(ROOTS.Zones, {
 							platinum(15, i(265789)),	-- Eye of the Legion
 
 							-- Toys
-							platinum(50, i(49704)),		-- Carved Ogre Idol
+							platinum(50, i(49704)),	-- Carved Ogre Idol
 							platinum(15, i(265786)),	-- Demon Hunter's Aspect
-							platinum(15, i(54212)),		-- Instant Statue Pedestal
+							platinum(15, i(54212)),	-- Instant Statue Pedestal
 							platinum(30, i(266999)),	-- Swift Yak Pelt
 
 							-- Mounts
 							platinum(70, i(265787)),	-- Magic Rooster Egg
-							platinum(50, i(90710)),		-- Reins of the Ashen Pandaren Phoenix
-							platinum(50, i(89154)),		-- Reins of the Crimson Pandaren Phoenix
-							platinum(50, i(90711)),		-- Reins of the Emerald Pandaren Phoenix
+							platinum(50, i(90710)),	-- Reins of the Ashen Pandaren Phoenix
+							platinum(50, i(89154)),	-- Reins of the Crimson Pandaren Phoenix
+							platinum(50, i(90711)),	-- Reins of the Emerald Pandaren Phoenix
 							platinum(300, i(277652)),	-- Reins of the Juvenile Frostwyrm
-							platinum(50, i(90712)),		-- Reins of the Violet Pandaren Phoenix
+							platinum(50, i(90712)),	-- Reins of the Violet Pandaren Phoenix
 							platinum(150, i(276081)),	-- Spectral Wind Rider
 							platinum(300, i(276075)),	-- Stormcrow
 							platinum(40, i(265788)),	-- Wooly White Rhino
@@ -1503,7 +1507,7 @@ root(ROOTS.Zones, {
 						["coord"] = { 82.8, 30.4, VALE_OF_ETERNAL_BLOSSOMS },
 						["groups"] = sharedData({
 							["timeline"] = { ADDED_11_2_7 },
-							["cost"] = { { "g", 20000000 } },		-- 2,000g
+							["cost"] = { { "g", 20000000 } },	-- 2,000g
 						}, {
 							i(257354),	-- Scroll of K'aresh's Fall (DECOR!)
 							i(257351),	-- Tale of the Penultimate Lich King (DECOR!)

@@ -1,7 +1,7 @@
 local app = select(2, ...);
 app.GameBuildVersion = select(4, GetBuildInfo());
-app.IsRetail = app.GameBuildVersion >= 110000;
-app.AfterCata = app.GameBuildVersion >= 40000;
+app.IsForever = app.GameBuildVersion >= 16001 and app.GameBuildVersion < 20000;
+app.IsRetail = app.GameBuildVersion >= 110000 or app.IsForever;
 app.IsClassic = not app.IsRetail;
 
 app.EmptyFunction = function() end;
@@ -116,6 +116,7 @@ local C_ItemSocketInfo = C_ItemSocketInfo;
 ---@diagnostic disable: deprecated
 AssignAPIWrapper("GetItemCount", C_Item and C_Item.GetItemCount, GetItemCount)
 AssignAPIWrapper("GetItemClassInfo", C_Item and C_Item.GetItemClassInfo, GetItemClassInfo)
+AssignAPIWrapper("GetItemSubClassInfo", C_Item and C_Item.GetItemSubClassInfo, GetItemSubClassInfo)
 AssignAPIWrapper("GetItemIcon", C_Item and C_Item.GetItemIconByID, GetItemIcon)
 AssignAPIWrapper("GetItemInfoInstant", C_Item and C_Item.GetItemInfoInstant, GetItemInfoInstant)
 AssignAPIWrapper("GetItemID", C_Item and C_Item.GetItemIDForItemInfo, GetItemInfoInstant)
@@ -199,16 +200,10 @@ C_Spell and C_Spell.GetSpellCooldown and
 	function(spellIdentifier) local t = C_Spell.GetSpellCooldown(spellIdentifier)
 	return t and t.startTime or 0 end,
 	GetSpellCooldown);
-
--- Warning: The API Wrapper for GetSpellName is not completely equivalent.
--- GetSpellInfo accepts two types of parameters: one is a single parameter "SpellIdentifier", and the other is two parameters "index" and "bookType".
--- Currently, only the first type is implemented in C_Spell.
--- GetSpellInfo accpet both of parameters for compatibility reasons.
-if app.AfterCata then
-	AssignAPIWrapper("GetSpellName", C_Spell and C_Spell.GetSpellName , GetSpellInfo);
-else
-	AssignAPIWrapper("GetSpellName", GetSpellInfo);
-end
+	
+AssignAPIWrapper("GetSpellName",
+	C_Spell and C_Spell.GetSpellName,
+	GetSpellInfo);
 
 -- GetSpellRank was removed in 11.0
 AssignAPIWrapper("GetSpellRank", GetSpellRank, app.EmptyFunction)

@@ -4,7 +4,7 @@ _.AddEventHandler("OnBuildDataCache", function(categories)
 local ah,cat,cl,flt,h,i,prof,r,s,toy,x=_.CreateHeader,_.CreateCategory,_.CreateCharacterClass,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateProfession,_.CreateRecipe,_.CreateItemSource,_.CreateToy,_.CreateExpansion;
 categories.WorldDrops=
 h(-698,{SortPriority=15,g={
-x(1,{
+x(1,{awp=10100,g={
 flt(3,{
 s(123297,9938,{f=3,lvl=43,q=2}),
 s(126175,14116,{f=3,lvl=9,q=1}),
@@ -3614,8 +3614,8 @@ i(12205,{coords={
 [1445]={{34.1,22.5},{55.2,54.8}}},crs={4376,4377,4378,4379,4415},description="Drops from spiders in the level bracket 35-60 like spiders in Dustwallow Marsh.",q=1}),
 i(8153,{description="Drops from trolls ranging from level 40 to 50.",maps={1425,1434},q=1}),
 i(2592,{description="Wool Cloth drops commonly from any humanoid and undead creatures within the given zones.",maps={221,225,1431,1437,1440},q=1}),
-i(17965,{crs={6109,11583,14890},q=2})})}),
-x(2,{awp=20001,u=17,g={
+i(17965,{crs={6109,11583,14890},q=2})})}}),
+x(2,{awp=20003,u=17,g={
 flt(3,{u=17,g={
 s(135398,25043,{f=3,lvl=70,q=2,u=17}),
 s(135396,25041,{f=3,lvl=68,q=2,u=17}),
@@ -4639,7 +4639,7 @@ i(27677,{coords={
 [1949]={{40.2,18.4},{64.5,33},{72.4,20.2}},
 [1952]={{39.3,9.7},{44.6,34.3},{62.4,49},{68.7,30.5}}},crs={18461,18463,19706,19729,19730,20279,20280,20283,20924,20925,20987,21816,21854},q=1,u=17}),
 i(27678,{crs={17132,17133,18205,19183},description="Clefthoofs can be found all over Nagrand.",maps={1951},q=1,u=17}),
-i(32428,{awp=20100,description="Can drop from most creatures within the given raids.",maps={329,340},q=3,u=17}),
+i(32428,{awp=20100,description="Can drop from most creatures within the given raids.",maps={329,339},q=3,u=17}),
 i(24476,{coords={
 [1948]={{46.2,29.1},{53.1,25.5}}},description="Drops commonly from humanoid- and beast water creatures like naga, dredgers and trashers.",maps={1946},q=1,u=17,g={
 i(24477,{q=1,u=17}),
@@ -4716,7 +4716,7 @@ i(27681,{coords={
 [1953]={{56.4,60},{66.3,61.8}}},crs={18464,18465,18884,23219},q=1,u=17})}}),
 flt(200,{u=17,g={
 cl(11,{u=17,g={
-r(26991,{c={11},itemID=22146,lvl=70,maps={246,256,258,260,261,262,263,265,266,267,269,272,273,274,329,330,331,332,333,334,335,340,347,348,350},q=3,rank=3,u=17})}}),
+r(26991,{c={11},itemID=22146,lvl=70,maps={246,256,258,260,261,262,263,265,266,267,269,272,273,274,329,330,331,332,333,334,335,339,347,348,350},q=3,rank=3,u=17})}}),
 cl(8,{u=17,g={
 r(27127,{c={8},itemID=22153,lvl=70,q=3,rank=2,u=17}),
 r(33717,{c={8},description="Learn both of these tomes and then visit your trainer for the table.",itemID=31501,lvl=70,q=3,rank=8,u=17}),
@@ -4864,12 +4864,12 @@ i(4632,{q=2}),
 i(4638,{q=2,sym={{"select","itemID",21947,21945,16215,11225,16218,11208,8390,8387,8389,14467,10320,10302,10315,7993,7990,7989,12683,9295,3395}}}),
 i(4637,{q=2,sym={{"select","itemID",11204,11202,8387,8386,10312,10300,8385,10301,7992,7975,7976,3874,8029,9295,10603,10606}}}),
 i(4636,{q=2,sym={{"select","itemID",11167,11165,7085,7086,5974,4300,10300,4353,8385,10301,3874,3869,3830,3831,10601,4416,4417,10606,4414}}}),
-i(29569,{awp=20001,q=1,sym={{"select","itemID",4354,12002,12713,2163,12046,12034,12004,12035,14494,12048,12026,14499,12056,12045,12027}},g={
+i(29569,{awp=20003,q=1,sym={{"select","itemID",4354,12002,12713,2163,12046,12034,12004,12035,14494,12048,12026,14499,12056,12045,12027}},g={
 i(34622,{awp=20300,f=36,lvl=70,q=4,rwp=50004})}}),
 i(16884,{q=1,sym={{"select","itemID",11974,12043,21947,21945,21944,7552,12011,11225,11204,11973,11987,11999,12031,12042,12012,12001,8387,8389,8386,10320,8385,10301,7990,8029,9298,9295,3395,10603,10606,11988,11975,12024}}}),
 i(5759,{q=2}),
 i(16883,{q=1})}}),
-ah(921,{description="A Rogue can use their Pick Pocket skill to steal the following items from mobs of a specific area.",type="s",g={
+ah(921,{awp=10100,description="A Rogue can use their Pick Pocket skill to steal the following items from mobs of a specific area.",type="s",g={
 x(1,{
 i(6150,{description="Can be pickpocketed from Classic humanoids."}),
 i(5373,{description="While there's no evidence to suggest that having this item will make the thing you want drop for you, Crieve totally got his second binding after only 97 weeks of Baron Geddon with this bad boy in his bags. Without it, it'd probably have been more than that!",q=1})})}})}})

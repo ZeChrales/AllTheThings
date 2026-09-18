@@ -304,7 +304,7 @@ root(ROOTS.Zones, {
 							{ 66.0, 32.5, BROKEN_SHORE },
 							{ 74.0, 30.6, BROKEN_SHORE },
 						},
-						["cost"] = { { "i", 147775, 1 } },		-- 1x Nether Portal Disruptor
+						["cost"] = { { "i", 147775, 1 } },	-- 1x Nether Portal Disruptor
 						["crs"] = {
 							121092,	-- Anomalous Observer
 							121049,	-- Baleful Knight-Captain
@@ -346,6 +346,7 @@ root(ROOTS.Zones, {
 					},
 					description = {
 						en = "After completing The Shadow of the Sentinax quest, uncommon Sentinax Beacons can drop from mobs underneath the Sentinax. You can then use these beacons to summon portals while the Sentinax remains in the area.\n\nEach Sentinax Beacon summons mobs that can drop rare quality Sentinax Beacons of that color that can be used to empower the portals to sometimes have those portals spawn Rares that ultimately can drop the associated Portal Stone (boss).\n\nKeep using all the Rare Sentinax Beacons you get to extend the duration of the Sentinax Beacon. Rare quality Sentinax Beacons can also be acquired by interacting with Unstable Nether Portals when the Nether Disruptor is up. (Not available in Legion Remix!)",
+						cn = "完成“森提纳克斯之影”任务后，森提纳克斯下方的怪物会掉落精良品质的森提纳克斯信标。在森提纳克斯仍停留在该区域时，你可以使用这些信标召唤传送门。\n\n每个森提纳克斯信标都会召唤出怪物，这些怪物会掉落对应颜色的稀有品质森提纳克斯信标，可用于强化传送门，使其有时会生成稀有怪物，这些怪物最终会掉落对应的传送石（首领）。\n\n持续使用你获得的所有稀有森提纳克斯信标，以延长森提纳克斯信标的持续时间。当虚空干扰器激活时，与不稳定的虚空传送门互动也可获得稀有品质的森提纳克斯信标。（军团再临：幻境新生中不可用！）",
 					},
 				}), {
 					["provider"] = { "o", createCustomObject({	-- Sentinax Portal [Couldn't find the proper objectID, so I faked it.]
@@ -1476,7 +1477,7 @@ root(ROOTS.Zones, {
 									["cost"] = { { "c", 1226, 1000 } },	-- 1,000x Nethershard
 								}),
 								i(139879, {	-- Crate of Champion Equipment
-									["cost"] = { { "c", 1226, 250 } },		-- 250x Nethershard
+									["cost"] = { { "c", 1226, 250 } },	-- 250x Nethershard
 								}),
 								i(147212, {	-- Dauntless Bracers
 									["cost"] = { { "c", 1226, 400 } },	-- 400x Nethershard
@@ -1581,13 +1582,13 @@ root(ROOTS.Zones, {
 								}),
 								i(147775, {	-- Nether Portal Disruptor
 									["description"] = "Can be used to summon rare elite mobs from Unstable Nether Portals while the Nether Disruptor is up. You can only kill 50 elites per day. It is consumed on use.\n\nCan be bought or sold on the Auction House.",
-									["cost"] = { { "c", 1226, 250 } },		-- 250x Nethershard
+									["cost"] = { { "c", 1226, 250 } },	-- 250x Nethershard
 								}),
 								i(146659, {	-- Nethershard Essence
 									["cost"] = { { "c", 1226, 8000 } },	-- 8,000x Nethershard
 								}),
 								i(156630, {	-- Relinquished Armor Set
-									["cost"] = { { "c", 1226, 400 } },		-- 1,000x Nethershard
+									["cost"] = { { "c", 1226, 400 } },	-- 1,000x Nethershard
 								}),
 								i(151541, {	-- Technique: Glyph of Floating Shards (RECIPE!)
 									["timeline"] = { ADDED_7_2_5 },

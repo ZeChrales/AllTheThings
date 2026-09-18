@@ -103,7 +103,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					},
 					["coords"] = {
 						{ 47.2, 60.8, MAP.MIDNIGHT.VAULTS_OF_ATALUTEK },	-- Warleader Abdumati
-						{ 58.7, 45.8, MAP.MIDNIGHT.THE_COILED_ISLE },		-- Talon Commander Zela
+						{ 58.7, 45.8, MAP.MIDNIGHT.THE_COILED_ISLE },	-- Talon Commander Zela
 					},
 					["isWeekly"] = true,
 					["groups"] = {
@@ -168,7 +168,11 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						q(95953, {	-- Temple Patrol: Congealed Venom
 							["qg"] = 263333,	-- Er'inye
 							["coord"] = { 44.1, 30.1, MAP.MIDNIGHT.VAULTS_OF_ATALUTEK },
-							["groups"] = { i(271693) },	-- Congealed Venom (QO!)
+							["groups"] = {
+								o(645579, {	-- Congealed Bile
+									i(271693),	-- Congealed Venom (QI!)
+								}),
+							},
 						}),
 						q(96017, {	-- Temple Patrol: Dragged Below
 							["qg"] = 263411,	-- Desperate Warrior
@@ -197,6 +201,11 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 								271868,	-- Splintering Spear (QI!)
 								271867,	-- Venom-Etched Sword (QI!)
 								271866,	-- Well-Worn Hatchet (QI!)
+							},
+							["groups"] = {
+								o(649016, {	-- Venom-Etched Sword
+									i(271867),	-- Venom-Etched Sword (QI!)
+								}),
 							},
 						}),
 						q(95614, {	-- Temple Patrol: Siphon Venom
@@ -249,7 +258,8 @@ root(ROOTS.HiddenQuestTriggers, m(MAP.MIDNIGHT.QUELTHALAS, {
 				q(96036),	-- completion of 95906 -- Scavenged Weapons
 				q(96035),	-- completion of 95614 -- Siphon Venom
 				q(96040),	-- completion of 95962 -- Vengeance for the Dead
-				-- q(96033),	-- unknown, but probably a temple patrol HQT
+				q(96033),	-- completion of 95580 -- Slay the Restless
+				q(96038),	-- completion of 95953 -- Congealed Venom
 				-- not sure if these need to be real quests or not
 				q(95639),	-- Clear the Clutch
 				q(95640),	-- Clear the Clutch

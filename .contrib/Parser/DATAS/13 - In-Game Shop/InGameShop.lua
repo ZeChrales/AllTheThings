@@ -56,19 +56,19 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		}),
 		ach(10320, {	-- Collector's Edition: Illidari Felstalker
 			["provider"] = { "i", 128425 },	-- Illidari Felstalker
-			["timeline"] = { ADDED_6_2_2, REMOVED_10_1_7 },	-- Removed Oct 31, 2023
+			["timeline"] = { ADDED_9_1_0, REMOVED_10_1_7 },	-- Removed Oct 31, 2023
 		}),
 		ach(6849, {	-- Collector's Edition: Imperial Quilen
 			["provider"] = { "i", 85870 },	-- Imperial Quilen
-			["timeline"] = { ADDED_5_0_4, REMOVED_5_4_7, ADDED_8_3_0 },
+			["timeline"] = { ADDED_8_3_0 },
 		}),
 		ach(6848, {	-- Collector's Edition: Lucky Quilen Cub
 			["provider"] = { "i", 85871 },	-- Lucky Quilen Cub
-			["timeline"] = { ADDED_5_0_4, REMOVED_5_4_7, ADDED_8_3_0 },
+			["timeline"] = { ADDED_8_3_0 },
 		}),
 		ach(10321, {	-- Collector's Edition: Nibbles
 			["provider"] = { "i", 128426 },	-- Nibbles
-			["timeline"] = { ADDED_6_2_2, REMOVED_10_1_7 },	-- Removed Oct 31, 2023
+			["timeline"] = { ADDED_9_1_0, REMOVED_10_1_7 },	-- Removed Oct 31, 2023
 		}),
 		ach(12229, {	-- Collector's Edition: Seabraid Stallion
 			["provider"] = { "i", 153539 },	-- Seabraid Stallion
@@ -77,7 +77,7 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		}),
 		ach(12232, {	-- Collector's Edition: Tottle
 			["provider"] = { "i", 153541 },	-- Tottle
-			["timeline"] = { ADDED_7_3_5, REMOVED_10_1_7 },	-- Removed Sep 17th, 2023
+			["timeline"] = { ADDED_9_1_0, REMOVED_10_1_7 },	-- Removed Sep 17th, 2023
 		}),
 		ach(14283, {	-- Heroic Edition: Ensorcelled Everwyrm
 			["timeline"] = { ADDED_10_2_0 },
@@ -332,7 +332,7 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 			["timeline"] = { ADDED_10_1_5, REMOVED_10_1_7 },	-- Removed Aug 29th, 2023
 		}),
 		i(153541, {	-- Tottle (PET!)
-			["timeline"] = { ADDED_7_3_5,  REMOVED_10_1_7 },	-- Removed Sep 17th, 2023
+			["timeline"] = { ADDED_9_1_0,  REMOVED_10_1_7 },	-- Removed Sep 17th, 2023
 		}),
 		i(49663, {	-- Wind Rider Cub (PET!)
 			["timeline"] = { ADDED_3_3_2, REMOVED_8_3_0 },
@@ -362,7 +362,12 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		iensemble(208943, {	-- Arsenal: Cosmic Weapons Cache
 			["timeline"] = { ADDED_11_0_0 },
 		}),
-
+		iensemble(269797, {	-- Ensemble: Azshara's Darkscale Raiment
+			["timeline"] = { ADDED_12_1_0 },
+		}),
+		iensemble(269809, {	-- Ensemble: Azshara's Deepscale Raiment
+			["timeline"] = { ADDED_12_1_0 },
+		}),
 		------ Celestial Observer Set ------
 		-- #if AFTER 11.2.5
 		iensemble(255824, {	-- Ensemble: Celestial Observer
@@ -1079,6 +1084,9 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		i(273655, {	-- Sunflare Driftmoth (MOUNT!)
 			["timeline"] = { ADDED_12_0_7 },
 		}),
+		cnONLY(i(272920, {	-- Spring Panda (MOUNT!)
+			["timeline"] = { ADDED_12_0_7 },
+		})),
 		-- #if AFTER 11.2.0
 		i(246698, {	-- Sunwarmed Furline (MOUNT!)
 			["timeline"] = { ADDED_9_1_0 },
@@ -1127,6 +1135,12 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		}),
 		i(206167, {	-- Wonderous Wavewhisker (MOUNT!)
 			["timeline"] = { ADDED_10_1_0 },
+		}),
+		i(268833, {	-- Zothwing Darkseeker (MOUNT!)
+			["timeline"] = { ADDED_12_1_0 },
+		}),
+		i(268834, {	-- Zothwing Deepseeker (MOUNT!)
+			["timeline"] = { ADDED_12_1_0 },
 		}),
 	}),
 	filter(MOUNTS, bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {	-- REMOVED --
@@ -1196,7 +1210,7 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 			["timeline"] = { ADDED_5_4_2, REMOVED_10_1_7 },	-- Removed Oct 31, 2023
 		}),
 		i(128425, {	-- Illidari Felstalker (MOUNT!)
-			["timeline"] = { ADDED_6_2_2, REMOVED_10_1_7 },	-- Removed Oct 31, 2023
+			["timeline"] = { ADDED_9_1_0, REMOVED_10_1_7 },	-- Removed Oct 31, 2023
 		}),
 		i(221270, {	-- Kickin' Kezan Waveshredder (MOUNT!)
 			["timeline"] = { ADDED_11_1_7, "removed 11.2.0.63305" },
@@ -1285,5 +1299,7 @@ root(ROOTS.InGameShop, bubbleDown({ ["u"] = REAL_MONEY }, {
 		}),
 	}),
 	-- #endif
+	i(122284, { ["timeline"] = { ADDED_6_1_2 } }),	-- WoW Token (Use)
+	i(122270, { ["timeline"] = { ADDED_6_1_2 } }),	-- Wow Token (Sell)
 }));
 -- #endif

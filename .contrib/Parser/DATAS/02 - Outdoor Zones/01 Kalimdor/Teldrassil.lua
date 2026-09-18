@@ -263,6 +263,7 @@ root(ROOTS.Zones, m(KALIMDOR, {
 								-- #endif
 							},
 							["races"] = ALLIANCE_ONLY,
+							["_drop"] = { "g" },	-- Refreshing Spring Water
 						}),
 						q(3118, {	-- Encrypted Sigil
 							["sourceQuests"] = {
@@ -1391,6 +1392,7 @@ root(ROOTS.Zones, m(KALIMDOR, {
 					["requireSkill"] = ALCHEMY,
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = lvlsquish(4, 4, 1),
+					["_drop"] = { "g" },	-- Earthroot and Mageroyal
 				}),
 				q(2259, {	-- Erion Shadewhisper
 					["sourceQuest"] = 2241,	-- The Apple Falls
@@ -2308,8 +2310,8 @@ root(ROOTS.Zones, m(KALIMDOR, {
 					["lvl"] = 10,
 					-- #if BEFORE CATA
 					["groups"] = {
-						recipe(6991),		-- Feed Pet
-						recipe(982),		-- Revive Pet
+						recipe(6991),	-- Feed Pet
+						recipe(982),	-- Revive Pet
 					},
 					-- #endif
 				}),

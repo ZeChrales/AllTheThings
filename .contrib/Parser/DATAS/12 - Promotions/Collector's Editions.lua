@@ -305,7 +305,7 @@ OVERWATCH_ORIGINS = createHeader({
 		-- TODO: pt = "",
 		-- TODO: ru = "",
 		cn = "这些奖励是提供给购买了守望先锋：起源典藏版的玩家的。",
-		tw = "這些獎勵是提供給購買了守望先鋒：啟元版的玩家的。",
+		tw = "這些獎勵是提供給購買了鬥陣特攻：啟元版的玩家的。",
 	},
 });
 STARCRAFT_II_WINGS_OF_LIBERTY = createHeader({
@@ -396,6 +396,26 @@ WARCRAFT_III_REFORGED_SPOILS_OF_WAR = createHeader({
 		tw = "這些獎勵是提供給購買了魔獸爭霸III：淬鍊重生 - 數位戰利版的玩家的。",
 	},
 });
+WORLD_OF_WARCRAFT_FOREVER_COLLECTORS = createHeader({
+	readable = "World of Warcraft: Forever Collector's Edition",
+	icon = 1120721,
+	text = {
+		en = "World of Warcraft: Forever Collector's Edition",
+	},
+	description = {
+		en = "These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",
+	},
+});
+WARCRAFT_FOREVER_COLLECTION = createHeader({
+	readable = "Warcraft Forever Collection",
+	icon = 1120721,
+	text = {
+		en = "World of Warcraft: Forever Collection",
+	},
+	description = {
+		en = "These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",
+	},
+});
 
 root(ROOTS.Promotions, n(COLLECTORS_EDITION, bubbleDownSelf({ ["u"] = REAL_MONEY }, {
 	expansion(EXPANSION.CLASSIC, bubbleDownSelf({ ["timeline"] = { REMOVED_4_0_6 } }, {
@@ -405,7 +425,7 @@ root(ROOTS.Promotions, n(COLLECTORS_EDITION, bubbleDownSelf({ ["u"] = REAL_MONEY
 				-- #if NOT ANYCLASSIC
 				q(8547, {	-- Welcome! (Blood Elf)
 					["provider"] = { "i", 20938 },	-- Falconwing Square [Wrath+] / Sunstrider Isle Gift Voucher
-					["timeline"] = { ADDED_2_0_1 },
+					["timeline"] = { ADDED_2_0_3 },
 					["maps"] = { EVERSONG_WOODS },
 					["races"] = { BLOODELF },
 					["_drop"] = { "g" },	-- API includes the pets and they are listed below separately
@@ -419,7 +439,7 @@ root(ROOTS.Promotions, n(COLLECTORS_EDITION, bubbleDownSelf({ ["u"] = REAL_MONEY
 				}),
 				q(9278, {	-- Welcome! (Draenei)
 					["provider"] = { "i", 22888 },	-- Azure Watch Gift Voucher
-					["timeline"] = { ADDED_2_0_1 },
+					["timeline"] = { ADDED_2_0_3 },
 					["maps"] = { AZUREMYST_ISLE },
 					["classes"] = { DRAENEI },
 					["_drop"] = { "g" },	-- API includes the pets and they are listed below separately
@@ -1403,6 +1423,44 @@ root(ROOTS.Promotions, n(COLLECTORS_EDITION, bubbleDownSelf({ ["u"] = REAL_MONEY
 		["groups"] = {
 			ach(13196),	-- Meat Marauder
 			i(164571),	-- Meat Wagon (MOUNT!)
+		},
+	})),
+	n(WORLD_OF_WARCRAFT_FOREVER_COLLECTORS, bubbleDownSelf({ ["timeline"] = { ADDED_12_1_0 } }, {
+		["description"] = "These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",
+		["groups"] = {
+			n(HEROIC_EDITION, {
+				--- FOREVER ---
+				-- #if FOREVER
+				--TODO: Skyborne Race
+				-- #endif
+				--- SHARED ---
+				i(280519),	-- Cerulean Prideclaw (MOUNT!)
+				iensemble(271755),	-- Ensemble: Shen'dorei Skyseer's Garb (COSMETIC!)
+				i(280541),	-- Shen'dorei Windwell (TOY!)
+				i(280623),	-- Veteran Adventurer's Rucksack (COSMETIC!)
+				--- RETAIL ---
+				i(268722),	-- Handmade Shen'dorei Pillow (DECOR!)
+				i(268339),	-- Shen'dorei Standard (DECOR!)
+				i(268338),	-- Windshaper's Chimes (DECOR!)
+				i(268337),	-- Windwell (DECOR!)
+				i(268340),	-- Zephras Drapery (DECOR!)
+			}),
+			n(EPIC_EDITION, {
+				--- FOREVER ---
+				-- #if FOREVER
+				i(270272),	-- Lordaeron Forever (COSMETIC!)
+				i(280545),	-- Shen'dorei Tabard (COSMETIC!)
+				-- TODO: Zergling, Panda, Diablo and Pachimari Pets
+				-- #endif
+				--- SHARED ---
+				iensemble(279182),	-- Ensemble: Veteran Adventurer's Outdoor Wear (COSMETIC!)
+				i(280599),	-- Veteran Adventurer's Loyal Companion (MOUNT!)
+			}),
+			n(WARCRAFT_FOREVER_COLLECTION, {
+				--- RETAIL ---
+				i(280554),	-- Boardcraft Forsaken Figurine (DECOR!)
+				i(280556),	-- Boardcraft Human Figurine (DECOR!)
+			}),
 		},
 	})),
 })));

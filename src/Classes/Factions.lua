@@ -376,7 +376,7 @@ end
 app.AddEventHandler("OnRefreshCollections", function()
 	local faction
 	local saved, none, bonus, nobonus = {}, {}, {}, {}
-	for id,_ in pairs(app.GetRawFieldContainer(KEY)) do
+	for id,_ in pairs(app.GetFieldContainer(KEY)) do
 		faction = app.SearchForObject(KEY, id, "key")
 		-- TODO: store account-wide factions in acct cache directly
 		if faction then
@@ -431,6 +431,9 @@ app.CreateFactionStandingFromText = function(text)
 		local standing = StandingByName[replevel:trim()];
 		if standing then return { factionID, standing.threshold }; end
 	end
+end
+app.LookupFactionData = function(factionID)
+	return app.SearchForObject("factionID", factionID, "key") or app.CreateFaction(factionID)
 end
 
 -- Information Type hook for Events

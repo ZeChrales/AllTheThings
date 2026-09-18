@@ -15,11 +15,12 @@ CURSE_SURGES = createHeader({
 		ko = "저주받은 쇄도",
 		pt = "Surtos Malditos",
 		ru = "Проклятых Натисков",
-		cn = "次诅咒狂潮",
-		tw = "波詛咒狂湧"
+		cn = "诅咒狂潮",
+		tw = "詛咒狂湧"
 	},
 	description = {
 		en = "Curse Surges are outdoor events that require players to complete an activity in order to summon a Rare Elite enemy.",
+		cn = "诅咒狂潮是户外事件，玩家需要完成一项活动才能召唤出一名稀有精英敌人。",
 	},
 });
 
@@ -52,6 +53,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				}),
 				n(258254, {	-- Ss'akrithos <The Boundless Ophidian>
 					["coord"] = { 71.3, 31.4, MAP.MIDNIGHT.THE_COILED_ISLE },
+					["crs"] = { 258250 },	-- Vignette
 					["questID"] = 93715,
 					["groups"] = {
 						i(276168),	-- Fang of Ss'akrithos
@@ -74,8 +76,12 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 						i(276178),	-- Venom Lancer's Gauntlets
 					},
 				}),
-				n(REWARDS, {
+				n(EVENT_COMPLETION, {
 					i(273000),	-- Corrosive Soul
+					i(275899),	-- Venom-Soaked Satchel
+					i(277137, {	-- Wriggling Venom-Soaked Satchel
+						i(276234),	-- Vibrant Venomfang (PET!)
+					}),
 				}),
 			})),
 		}),
@@ -98,6 +104,9 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 					}),
 					q(96967, {	-- Weekly reputation: Vassti, the Exalted Broodmother
 						["name"] = "Vassti, the Exalted Broodmother weekly reputation obtained.",
+					}),
+					q(96969, {	-- Weekly reputation: Venom Lancer Ori'kassi
+						["name"] = "Venom Lancer Ori'kassi weekly reputation obtained.",
 					}),
 					q(97333, {	-- triggered when skinning/looting Ss'akrithos (along with skin HQT)
 						["name"] = "Explain what you did to trigger this quest??",

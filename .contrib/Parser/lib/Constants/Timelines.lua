@@ -198,6 +198,14 @@ REMOVED_1_15_9 = "removed 1.15.9.68808";					-- World of Warcraft Classic 1.15.9
 --- AFTER SEASON OF DISCOVERY ---
 REMOVED_SOD_END = "removed 1.16.0";
 
+-------------
+-- FOREVER --
+-------------
+CREATED_1_60_1 = "created 1.60.1.69893";					-- This is Beta..
+ADDED_1_60_1 = "added 1.60.1.69893";						-- This is Beta..
+REMOVED_1_60_1 = "removed 1.60.1.69893";					-- This is Beta..
+DELETED_1_60_1 = "deleted 1.60.1.69893";					-- This is Beta..
+
 -------------------------
 -- THE BURNING CRUSADE --
 -------------------------
@@ -699,6 +707,7 @@ REMOVED_12_0_7 = "removed 12.0.7.68182";				-- Midnight 12.0.7 launch on June 16
 CREATED_12_1_0 = "created 12.1.0.69214";				-- Midnight 12.1.0 launch on August 11th, 2026
 ADDED_12_1_0 = "added 12.1.0.69214";					-- Midnight 12.1.0 launch on August 11th, 2026
 REMOVED_12_1_0 = "removed 12.1.0.69214";				-- Midnight 12.1.0 launch on August 11th, 2026
+DELETED_12_1_0 = "deleted 12.1.0.69214";				-- Midnight 12.1.0 launch on August 11th, 2026
 CREATED_12_1_5 = "created 12.1.5";						-- Midnight 12.1.5 launch in autumn 2026
 ADDED_12_1_5 = "added 12.1.5";							-- Midnight 12.1.5 launch in autumn 2026
 REMOVED_12_1_5 = "removed 12.1.5";						-- Midnight 12.1.5 launch in autumn 2026
@@ -722,3 +731,22 @@ REMOVED_12_2_7 = "removed 12.2.7";						-- Midnight 12.2.7 launch in spring 2027
 CREATED_13_0_0 = "created 13.0.0";						-- The Last Titan 13.0.0 launch in 2027
 ADDED_13_0_0 = "added 13.0.0";							-- The Last Titan 13.0.0 launch in 2027
 REMOVED_13_0_0 = "removed 13.0.0";						-- The Last Titan 13.0.0 launch in 2027
+
+--------------------
+-- HELPER  TABLES --
+--------------------
+EXPANSION_DEFAULT_TIMELINES = {
+	[EXPANSION.CLASSIC] = ADDED_1_1_0,
+	[EXPANSION.TBC] = ADDED_2_0_3,
+	[EXPANSION.WRATH] = ADDED_3_0_3,
+	[EXPANSION.CATA] = ADDED_4_0_3_LAUNCH,
+	[EXPANSION.MOP] = ADDED_5_0_4,
+	[EXPANSION.WOD] = ADDED_7_0_3_LAUNCH,
+	[EXPANSION.LEGION] = ADDED_8_0_1_LAUNCH,
+	[EXPANSION.BFA] = ADDED_8_0_1_LAUNCH,
+	[EXPANSION.SL] = ADDED_9_0_2_LAUNCH,
+	[EXPANSION.DF] = ADDED_10_0_2_LAUNCH,
+	[EXPANSION.TWW] = ADDED_11_0_2,
+	[EXPANSION.MID] = ADDED_12_0_1_LAUNCH,
+	[EXPANSION.TLT] = ADDED_13_0_0,
+}

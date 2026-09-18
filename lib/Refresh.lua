@@ -2,7 +2,7 @@
 local _, app = ...;
 
 local OneTimeFixFunctions = {}
-if app.IsRetail then
+if app.IsRetail and app.GameBuildVersion > 70000 then
 -- CRIEVE NOTE: At some point I want parser exporting this data,
 -- I don't want to be requesting these questIDs on environments
 -- where I know they don't exist. For now I'll just block them
@@ -116,6 +116,44 @@ OneTimeFixFunctions.PreATT5_0_14AWQuests = function(currentCharacter, accountWid
 	end
 
 	app.print("One-Time cleanup of old-format account-wide quest completion cache performed!")
+end
+-- ref. convert profile filter data to properly setup Default toggle
+OneTimeFixFunctions.ConvertAccountModeFiltersForProfiles = function(currentCharacter, accountWideData)
+	app.AddEventHandler("OnAfterSavedVariablesAvailable", function(currentCharacter, accountWideData)
+
+		local profiles = AllTheThingsProfiles.Profiles
+		if not profiles then return end
+
+		local profileFilters, filters
+
+		for key,profile in pairs(profiles) do
+			filters = profile.Filters
+			-- if there's no General section in the Profile then skip
+			if profile.General then
+				if profile.General.AccountMode then
+					profileFilters = {}
+					app.CloneDictionary(filters or app.EmptyTable, profileFilters)
+					profile.General["Profile:Filters"] = profileFilters
+					profile.General["Profile:DefaultFilters"] = true
+					-- make sure all Equipment filters are assigned in the Account mode Default profile
+					for k in pairs(app.EquipmentFilters) do
+						filters[k] = true
+					end
+				else
+					-- User has never assigned any Filter manually, they are in "Default" Filtering
+					if not filters or not next(filters) then
+						profile.General["Profile:DefaultFilters"] = true
+					else
+						profile.General["Profile:DefaultFilters"] = false
+						profileFilters = {}
+						app.CloneDictionary(filters, profileFilters)
+						profile.General["Profile:Filters"] = profileFilters
+					end
+				end
+			end
+		end
+		app.print("One-Time conversion of Profile Filter sets performed!")
+	end)
 end
 local function OneTimeFixes(currentCharacter, accountWideData)
 	if not accountWideData.OneTimeFixes then accountWideData.OneTimeFixes = {} end

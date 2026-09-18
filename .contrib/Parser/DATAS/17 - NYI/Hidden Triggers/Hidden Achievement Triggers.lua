@@ -8,7 +8,7 @@ root(ROOTS.HiddenAchievementTriggers, {
 	-- #if ANYCLASSIC
 	expansion(EXPANSION.CLASSIC, {
 		-- 1.14.1.40666
-		-- #if CLASSIC
+		-- #if ANYCLASSIC
 		ach(15329),	-- Has Died
 		-- #endif
 		-- 1.14.1.40688
@@ -25,7 +25,7 @@ root(ROOTS.HiddenAchievementTriggers, {
 		applyclassicphase(SOM_PHASE_ONE, ach(15335)),	-- Survivor of the Damned (Season of Mastery) \\ Survivor of the Damned
 		-- #endif
 		-- 1.14.2.42597
-		-- #if CLASSIC
+		-- #if ANYCLASSIC
 		ach(15578),	-- <Hidden> Adventure Awaits - Hit 60 with Buff Adventure Awaits
 		-- #endif
 		-- 1.14.3.42770
@@ -4269,6 +4269,23 @@ root(ROOTS.HiddenAchievementTriggers, {
 			ach(62285),	-- Zul'jan kills (Normal Altar of Fangs)
 			ach(62286),	-- Zul'jan kills (Heroic Altar of Fangs)
 			ach(62287),	-- Zul'jan kills (Mythic Altar of Fangs)
+		})),
+
+		-- 12.1.5
+		expansion(EXPANSION.MID, patch(1,5), bubbleDownSelf({ ["timeline"] = { ADDED_12_1_5 } }, {
+			-- 12.1.5.69594
+			-- Delves
+			ach(63730),	-- Total Kindo'jan's Labyrinth Chambers completed
+			ach(63731),	-- Total Kindo'jan Kills
+			-- Misc
+			ach(63689),	-- [DNT]Midnight Keystone Myth: Season 2 Personal Achievement
+			ach(63700),	-- [DNT] Hallow's End Pepe Decor
+			-- Raids
+			ach(64165),	-- [DNT] Kith'ix RTC Viewed (Account Wide Hidden Tracking)
+			ach(63839),	-- Kith'ix (Raid Finder The Unbinding of Kith'ix)
+			ach(63840),	-- Kith'ix (Normal The Unbinding of Kith'ix)
+			ach(63841),	-- Kith'ix (Heroic The Unbinding of Kith'ix)
+			ach(63842),	-- Kith'ix (Mythic The Unbinding of Kith'ix)
 		})),
 	}),
 });

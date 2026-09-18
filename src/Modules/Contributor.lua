@@ -349,6 +349,7 @@ local MapPrecisionOverrides = {
 	[2636] = 7,	-- Vault of Restless Bones
 	[2639] = 7,	-- Crypt of the Denied, The Coiled Isle
 	[2640] = 7,	-- Blistering Terrace, The Coiled Isle
+	[2641] = 7,	-- Crypt of the Lost Warrior
 	[2644] = 7,	-- Crypt of the Disgraced, The Coiled Isle
 	[2646] = 2,	-- Vilaldoun
 	[2649] = 2,	-- The Lycaneum
@@ -485,7 +486,6 @@ MobileDB.Creature = {
 	 [34359] = true,	-- Captain Goggath
 	 [34653] = true,	-- Bountiful Table Hostess [A]
 	 [34654] = true,	-- Bountiful Table Hostess [H]
-	 [35591] = true,	-- Fishing Bobber
 	 [37087] = true,	-- Jona Ironstock
 	 [37172] = true,	-- Detective Snap Snagglebolt
 	 [38066] = true,	-- Inspector Snip Snagglebolt
@@ -537,6 +537,7 @@ MobileDB.Creature = {
 	 [67153] = true,	-- Zin'Jun
 	 [67976] = true,	-- Tinkmaster Overspark
 	 [68072] = true,	-- Kor'kron Bodyguard
+	 [68166] = true,	-- Sully "The Pickle" McLeary
 	 [72940] = true,	-- Frostwolf Champion
 	 [75968] = true,	-- Iron Shredder Prototype
 	 [77167] = true,	-- Dark Iron Golem
@@ -875,6 +876,7 @@ MobileDB.GameObject = {
 	  [3695] = true,	-- Food Crate
 	  [3703] = true,	-- Armor Crate
 	  [3704] = true,	-- Weapon Crate
+	  [3707] = true,	-- Food Crate
 	  [3719] = true,	-- Food Crate
 	  [4608] = true,	-- Timberling Sprout (q:919)
 	 [16398] = true,	-- Defias Cannon (Deadmines)
@@ -892,6 +894,7 @@ MobileDB.GameObject = {
 	 [30854] = true,	-- Atal'ai Artifact (q:27694)
 	 [30855] = true,	-- Atal'ai Artifact (q:27694)
 	 [30856] = true,	-- Atal'ai Artifact (q:27694)
+	 [35591] = true,	-- Fishing Bobber
 	 [74448] = true,	-- Large Solid Chest
 	 [75293] = true,	-- Large Battered Chest
 	 [75298] = true,	-- Large Solid Chest
@@ -1106,6 +1109,7 @@ MobileDB.GameObject = {
 	[195674] = true,	-- Aloe Thistle (q:14305)
 	[195686] = true,	-- Kawphi Plant (q:14131)
 	[195692] = true,	-- Cenarion Supply Crate (q:14316)
+	[195709] = true,	-- Champion's Cache [Trial of the Champion]
 	[196395] = true,	-- Defiled Relic (q:14333)
 	[197172] = true,	-- Smoke Bombs (q:42504)
 	[199329] = true,	-- Highborne Tablet (q:14486)
@@ -1484,6 +1488,7 @@ MobileDB.GameObject = {
 	[236261] = true,	-- Finalize Garrison Plot
 	[236262] = true,	-- Finalize Garrison Plot
 	[236263] = true,	-- Finalize Garrison Plot
+	[236645] = true,	-- Engineering Work Order
 	[237017] = true,	-- Soul Gem (q:37660)
 	[237027] = true,	-- Trading Post Work Order
 	[237039] = true,	-- Crate of Surplus Materials (q:37087, 37060)
@@ -1496,6 +1501,8 @@ MobileDB.GameObject = {
 	[238761] = true,	-- Barn Work Order
 	[238979] = true,	-- Tidestone Vault Door
 	[239067] = true,	-- War Mill Work Order
+	[239143] = true,	-- Glass of Warm Milk [H]
+	[239171] = true,	-- Glass of Warm Milk [A]
 	[239452] = true,	-- Demon Ward (q:37658)
 	[239692] = true,	-- Arcane-infused Egg (q:37727)
 	[239775] = true,	-- Coral Trident Rack
@@ -2521,6 +2528,7 @@ MobileDB.GameObject = {
 	[375362] = true,	-- Avian Nest
 	[375363] = true,	-- Mawsworn Supply Chest
 	[375530] = true,	-- Forgotten Treasure Vault
+	[375536] = true,	-- Xy'rath's Booby-Trapped Cache
 	[375886] = true,	-- Treasures of the First Ones [Halondrus] LFR
 	[375901] = true,	-- Treasures of the First Ones [Anduin Wrynn] LFR
 	[376036] = true,	-- Nomad Cache
@@ -2544,6 +2552,8 @@ MobileDB.GameObject = {
 	[376984] = true,	-- The Primal Path (q:65046)
 	[377161] = true,	-- Cindershard Coal
 	[377223] = true,	-- Mangled Bush
+	[377460] = true,	-- Lost Treasure Chest [Uldaman: Legacy of Tyr]
+	[377461] = true,	-- Time-Warped Treasure [Uldaman: Legacy of Tyr]
 	[377587] = true,	-- Molten Chest
 	[377937] = true,	-- Suspicious Bush
 	[377960] = true,	-- Fowl Feather
@@ -3077,8 +3087,10 @@ MobileDB.GameObject = {
 	[516836] = true,	-- Voidbane Gem
 	[516932] = true,	-- Tranquility Bloom
 	[516935] = true,	-- Azeroot
+	[516966] = true,	-- Lightfused Sanguithorn
 	[516967] = true,	-- Lightforged Tranquility Bloom
 	[516968] = true,	-- Wild Tranquility Bloom
+	[516969] = true,	-- Wild Sanguithorn
 	[516979] = true,	-- Voidbound Tranquility Bloom
 	[516994] = true,	-- Tazavesh Trash (q:87376)
 	[516995] = true,	-- Tazavesh Trash (q:87376)
@@ -3100,10 +3112,13 @@ MobileDB.GameObject = {
 	[523282] = true,	-- Rich Refulgent Copper
 	[523283] = true,	-- Refulgent Copper Seam
 	[523284] = true,	-- Lightfused Refulgent Copper
+	[523285] = true,	-- Primal Refulgent Copper
 	[523286] = true,	-- Wild Refulgent Copper
 	[523287] = true,	-- Voidbound Refulgent Copper
 	[523288] = true,	-- Umbral Tin
+	[523293] = true,	-- Voidbound Umbral Tin
 	[523295] = true,	-- Brilliant Silver
+	[523297] = true,	-- Rich Brilliant Silver
 	[523299] = true,	-- Primal Brilliant Silver
 	[523378] = true,	-- Portal to Nagrand
 	[523409] = true,	-- Shiny Trash Can
@@ -3280,6 +3295,7 @@ MobileDB.GameObject = {
 	[568254] = true,	-- Scattered Supplies (q:91384)
 	[568256] = true,	-- Iridescent Mana Silk (q:91996)
 	[568305] = true,	-- Bamboo Lumber
+	[568333] = true,	-- Fragrant Bloodthistle
 	[568405] = true,	-- Bamboo Lumber
 	[568428] = true,	-- Sky's Hope (q:91509)
 	[568477] = true,	-- Ghostland Pepper (q:91989)
@@ -3307,6 +3323,7 @@ MobileDB.GameObject = {
 	[572474] = true,	-- Arcane Mana Crystal (q:92397)
 	[572475] = true,	-- Weapons Rack (q:92397)
 	[572477] = true,	-- Weapons Rack (q:92397)
+	[572561] = true,	-- Crystal (q:92402)
 	[572766] = true,	-- Trash Heap (Delves)
 	[572785] = true,	-- Olemba Lumber
 	[572869] = true,	-- Olemba Lumber
@@ -3490,6 +3507,8 @@ MobileDB.GameObject = {
 	[642115] = true,	-- Challenger's Cache [Murder Row]
 	[642203] = true,	-- Repair Supplies
 	[642704] = true,	-- Seagull Feather (q:95673)
+	[645579] = true,	-- Congealed Bile (q:95953)
+	[649016] = true,	-- Venom-Etched Sword (q:95906)
 	[649481] = true,	-- Wood Debris (q:96111)
 	[649640] = true,	-- Soulcoiler's Cache
 	[649687] = true,	-- Soulcoiler's Cache
@@ -3505,7 +3524,9 @@ MobileDB.GameObject = {
 	[652482] = true,	-- Ossified Relic
 	[653064] = true,	-- Ossified Relic
 	[653416] = true,	-- Cynosure of Twilight (q:96051)
+	[653456] = true,	-- Venom Ward
 	[653485] = true,	-- Cynosure of Twilight (q:96052)
+	[654148] = true,	-- Waxy Lump
 	[654250] = true,	-- Mound of Dirt (q:96543)
 	[654422] = true,	-- Energized Crystal Conductor (q:96569)
 	[654991] = true,	-- Cracked Canopic Jar
@@ -3517,8 +3538,10 @@ MobileDB.GameObject = {
 	[656046] = true,	-- Unfortunate Scout's Satchel [The Coiled Isle]
 	[656135] = true,	-- Slumbering Starfish [The Coiled Isle]
 	[657959] = true,	-- Crate of Pilfered Tributes
+	[658087] = true,	-- Abundantly Bountiful Heavy Trunk
 	[658088] = true,	-- Abundantly Bountiful Heavy Trunk
 	[658802] = true,	-- Ancient Crypt Reliquary
+	[658855] = true,	-- Abundant Spoils
 	[659301] = true,	-- Highland Redcap [Ritual Site: Naigtal]
 	[659898] = true,	-- Spongy Sporebat Nest [Ritual Site: Naigtal]
 	[660374] = true,	-- Cursed Brilliant Silver
@@ -3528,9 +3551,13 @@ MobileDB.GameObject = {
 	[660388] = true,	-- Cursed Tranquility Bloom
 	[660393] = true,	-- Fragment of Ulantu's Log
 	[660768] = true,	-- Zul'jan's Strongbox [Altar of Fangs]
+	[661548] = true,	-- Shimmering Vase (q:94802)
 	[667734] = true,	-- Venom Fountain
 	[668269] = true,	-- Amani Skelton
+	[673112] = true,	-- Small Trunk [The Labyrinth of Kindo'jan]
 	[673863] = true,	-- Ossified Relic
+	[676747] = true,	-- Mislaid Treasure [The Labyrinth of Kindo'jan]
+	[677411] = true,	-- Mislaid Treasure [The Labyrinth of Kindo'jan]
 }
 
 -- Represents content which will trigger the 'not in game' contrib check, but only because it is available from a 'not in game' source (i.e. an NPC spawned from a removed Item used by a Player; an Object which spawns during a Quest which is removed but accessible if a Player still has it, etc.) Or perhaps an object/npc which is actually in the game but whose entire use has been made obsolete and is thus marked in ATT
@@ -3957,15 +3984,15 @@ local function OnLOOT_READY()
 			end
 		end
 
-		-- make sure all the missing loot is actually Sourced somewhere before reporting it
+		-- make sure all the missing & collectible loot is actually Sourced somewhere before reporting it
 		if next(missingLootItems) then
 			local o
 			for itemID in pairs(missingLootItems) do
 				o = SearchForObject("itemID", itemID)
 				-- don't report missing items when verifying loot, we probably don't care about sourcing them
-				if o._missing then
+				if not o or not o.collectible or o._missing then
 					missingLootItems[itemID] = nil
-					app.PrintDebug("removed missing scanned loot",app:SearchLink(o))
+					app.PrintDebug("removed missing scanned loot",o and app:SearchLink(o) or itemID)
 				end
 			end
 		end

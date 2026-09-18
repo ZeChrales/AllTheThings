@@ -78,27 +78,27 @@ x(5,{requireSkill=794}),
 x(6,{requireSkill=794}),
 x(8,{requireSkill=794})}}),
 h(-12,{
-x(1,{
+x(1,{awp=10100,g={
 ach(732),
 ach(731),
-ach(116)}),
-x(2,{awp=20001,g={
+ach(116)}}),
+x(2,{awp=20003,g={
 ach(733,{u=17})}}),
-x(3,{
-ach(734,{awp=30003}),
-ach(732,{awp=30000}),
-ach(731,{awp=30000}),
-ach(116,{awp=30000}),
-ach(730,{awp=30003,rwp=80001}),
-ach(735,{awp=30003})}),
+x(3,{awp=30003,g={
+ach(734),
+ach(732),
+ach(731),
+ach(116),
+ach(730,{rwp=80001}),
+ach(735)}}),
 x(4,{awp=40003,g={
 ach(4924),
 ach(4914),
 ach(4915,{rwp=80001})}})}),
 prof(171,{
-x(1,{awp=40300,requireSkill=171,sharedDescription="Requires 300 Classic Alchemy.",g={
+x(1,{awp=10100,requireSkill=171,sharedDescription="Requires 300 Classic Alchemy.",g={
 h(-45,{requireSkill=171,g={
-q(29481,{coords={
+q(29481,{awp=40300,coords={
 [1453]={{55.6,85.8}},
 [1454]={{55.6,45.8}},
 [1455]={{66.6,55}},
@@ -106,7 +106,7 @@ q(29481,{coords={
 [1457]={{54,38.6}},
 [1458]={{47.6,72.8}}},qgs={3009,3347,4160,4611,5177,5499},repeatable=1,requireSkill=171,g={
 r(28677,{requireSkill=28677})}}),
-q(29067,{coords={
+q(29067,{awp=40300,coords={
 [1453]={{55.6,85.8}},
 [1454]={{55.6,45.8}},
 [1455]={{66.6,55}},
@@ -114,7 +114,7 @@ q(29067,{coords={
 [1457]={{54,38.6}},
 [1458]={{47.6,72.8}}},qgs={3009,3347,4160,4611,5177,5499},repeatable=1,requireSkill=171,g={
 r(28675,{requireSkill=28675})}}),
-q(29482,{coords={
+q(29482,{awp=40300,coords={
 [1453]={{55.6,85.8}},
 [1454]={{55.6,45.8}},
 [1455]={{66.6,55}},
@@ -122,30 +122,30 @@ q(29482,{coords={
 [1457]={{54,38.6}},
 [1458]={{47.6,72.8}}},qgs={3009,3347,4160,4611,5177,5499},repeatable=1,requireSkill=171,g={
 r(28672,{requireSkill=28672})}})}})}}),
-x(2,{awp=20005,requireSkill=171,g={
-q(10906,{altQuests={10905,10907},coords={
+x(2,{awp=20003,requireSkill=171,g={
+q(10906,{altQuests={10905,10907},awp=20005,coords={
 [1944]={{52.2,36.4},{53.8,65.8}}},isBreadcrumb=1,learnedAt=325,lvl=68,nextQuests={10902},qgs={16588,18802},requireSkill=171,rwp=40300,u=2}),
-q(10902,{altQuests={10897,10899},coords={
+q(10902,{altQuests={10897,10899},awp=20005,coords={
 [1955]={{45.8,20.4}}},cost={{"i",22831,5},{"i",28104,5},{"i",22834,5},{"i",31753,10}},description="Upon finishing this quest, you will become a Elixir Master and be locked out of becoming a Transmutation or Potion Master.",learnedAt=325,lvl=68,maps={273},qgs={19052},requireSkill=171,rwp=40300,sourceQuests={10906},u=2,g={
 r(28677,{requireSkill=28677})}}),
-q(10905,{altQuests={10906,10907},coords={
+q(10905,{altQuests={10906,10907},awp=20005,coords={
 [1944]={{52.2,36.4},{53.8,65.8}}},isBreadcrumb=1,learnedAt=325,lvl=68,nextQuests={10897},qgs={16588,18802},requireSkill=171,rwp=40300,u=2}),
-q(10897,{altQuests={10899,10902},coords={
+q(10897,{altQuests={10899,10902},awp=20005,coords={
 [1946]={{44.1,36.6}}},cost={{"i",22836,5},{"i",22832,5},{"i",22829,5}},description="Upon finishing this quest, you will become a Potion Master and be locked out of becoming a Transmutation or Elixir Master.",learnedAt=325,lvl=68,maps={266},qgs={17909},requireSkill=171,rwp=40300,sourceQuests={10905},u=2,g={
 qo(1,{crs={17975},providers={{"i",31744}},requireSkill=171}),
 r(28675,{requireSkill=28675})}}),
-q(10907,{altQuests={10905,10906},coords={
+q(10907,{altQuests={10905,10906},awp=20005,coords={
 [1944]={{52.2,36.4},{53.8,65.8}}},isBreadcrumb=1,learnedAt=325,lvl=68,nextQuests={10899},qgs={16588,18802},requireSkill=171,rwp=40300,u=2}),
-q(10899,{altQuests={10897,10902},coords={
+q(10899,{altQuests={10897,10902},awp=20005,coords={
 [1953]={{44.1,36.6}}},cost={{"i",23571,4}},description="Upon finishing this quest, you will become a Transmutation Master and be locked out of becoming a Potion or Elixir Master.",learnedAt=325,lvl=68,qgs={22427},requireSkill=171,rwp=40300,sourceQuests={10907},u=2,g={
 r(28672,{requireSkill=28672})}})}}),
-x(3,{awp=30200,requireSkill=171,g={
-q(14151,{coords={
+x(3,{awp=30003,requireSkill=171,g={
+q(14151,{awp=30200,coords={
 [125]={{42.4,32}}},qgs={28703},repeatable=1,requireSkill=171,u=32,g={
 r(66659,{learnedAt=440,requireSkill=171,u=32})}})}})}),
 prof(164,{
 prof(9788,{description="These items can only be crafted by Blacksmiths who have completed the Art of the Armorsmith quest chain.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Blacksmiths and complete the opposing specialization(s).",rwp=40001,sourceQuests={5283,5301},u=2,g={
-cat(220,{u=2,g={
+cat(220,{requireSkill=164,u=2,g={
 r(34533,{learnedAt=350,requireSkill=9788,u=2}),
 r(34534,{learnedAt=375,requireSkill=9788,u=2}),
 r(36257,{learnedAt=375,requireSkill=9788,u=2}),
@@ -155,45 +155,45 @@ r(36129,{learnedAt=330,requireSkill=9788,u=2}),
 r(34529,{learnedAt=350,requireSkill=9788,u=2}),
 r(36130,{learnedAt=330,requireSkill=9788,u=2}),
 r(34530,{learnedAt=375,requireSkill=9788,u=2})}}),
-cat(224,{u=2,g={
+cat(224,{requireSkill=164,u=2,g={
 r(36122,{learnedAt=260,requireSkill=9788,u=2}),
 r(55187,{learnedAt=415,requireSkill=164,u=2}),
 r(36124,{learnedAt=260,requireSkill=9788,u=2})}})}}),
 prof(9787,{description="These items can only be crafted by Blacksmiths who have completed the Way of the Weaponsmith quest chain.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Blacksmiths and complete the opposing specialization(s).",rwp=40001,sourceQuests={5284,5302},u=2,g={
 prof(17041,{description="These items can only be crafted by Master Axesmith specialized Weaponsmiths.",sourceQuests={5306},u=2,g={
-r(34542,{awp=20001,learnedAt=375,requireSkill=17041,u=2}),
-r(36261,{awp=20001,learnedAt=375,requireSkill=17041,u=2}),
-r(34543,{awp=20001,learnedAt=350,requireSkill=17041,u=2}),
-r(34544,{awp=20001,learnedAt=375,requireSkill=17041,u=2}),
+r(34542,{awp=20003,learnedAt=375,requireSkill=17041,u=2}),
+r(36261,{awp=20003,learnedAt=375,requireSkill=17041,u=2}),
+r(34543,{awp=20003,learnedAt=350,requireSkill=17041,u=2}),
+r(34544,{awp=20003,learnedAt=375,requireSkill=17041,u=2}),
 r(36135,{awp=70105,learnedAt=330,requireSkill=17041,u=2}),
 r(36134,{awp=70105,learnedAt=330,requireSkill=17041,u=2}),
-r(34541,{awp=20001,learnedAt=350,requireSkill=17041,u=2}),
-r(36260,{awp=20001,learnedAt=375,requireSkill=17041,u=2})}}),
+r(34541,{awp=20003,learnedAt=350,requireSkill=17041,u=2}),
+r(36260,{awp=20003,learnedAt=375,requireSkill=17041,u=2})}}),
 prof(17040,{description="These items can only be crafted by Master Hammersmith specialized Weaponsmiths.",sourceQuests={5305},u=2,g={
-r(34548,{awp=20001,learnedAt=375,requireSkill=17040,u=2}),
-r(34546,{awp=20001,learnedAt=375,requireSkill=17040,u=2}),
-r(36262,{awp=20001,learnedAt=375,requireSkill=17040,u=2}),
-r(34545,{awp=20001,learnedAt=350,requireSkill=17040,u=2}),
+r(34548,{awp=20003,learnedAt=375,requireSkill=17040,u=2}),
+r(34546,{awp=20003,learnedAt=375,requireSkill=17040,u=2}),
+r(36262,{awp=20003,learnedAt=375,requireSkill=17040,u=2}),
+r(34545,{awp=20003,learnedAt=350,requireSkill=17040,u=2}),
 r(36137,{awp=70105,learnedAt=330,requireSkill=17040,u=2}),
 r(36136,{awp=70105,learnedAt=330,requireSkill=17040,u=2}),
-r(36263,{awp=20001,learnedAt=375,requireSkill=17040,u=2}),
-r(34547,{awp=20001,learnedAt=350,requireSkill=17040,u=2})}}),
+r(36263,{awp=20003,learnedAt=375,requireSkill=17040,u=2}),
+r(34547,{awp=20003,learnedAt=350,requireSkill=17040,u=2})}}),
 prof(17039,{description="These items can only be crafted by Master Swordsmith specialized Weaponsmiths.",sourceQuests={5307},u=2,g={
-r(36258,{awp=20001,learnedAt=375,requireSkill=17039,u=2}),
-r(34537,{awp=20001,learnedAt=375,requireSkill=17039,u=2}),
-r(34535,{awp=20001,learnedAt=350,requireSkill=17039,u=2}),
-r(34538,{awp=20001,learnedAt=350,requireSkill=17039,u=2}),
-r(34540,{awp=20001,learnedAt=375,requireSkill=17039,u=2}),
-r(36259,{awp=20001,learnedAt=375,requireSkill=17039,u=2}),
+r(36258,{awp=20003,learnedAt=375,requireSkill=17039,u=2}),
+r(34537,{awp=20003,learnedAt=375,requireSkill=17039,u=2}),
+r(34535,{awp=20003,learnedAt=350,requireSkill=17039,u=2}),
+r(34538,{awp=20003,learnedAt=350,requireSkill=17039,u=2}),
+r(34540,{awp=20003,learnedAt=375,requireSkill=17039,u=2}),
+r(36259,{awp=20003,learnedAt=375,requireSkill=17039,u=2}),
 r(36133,{awp=70105,learnedAt=330,requireSkill=17039,u=2}),
 r(36131,{awp=70105,learnedAt=330,requireSkill=17039,u=2})}}),
-cat(227,{description="These can be crafted by any Weaponsmith.",u=2,g={
+cat(227,{description="These can be crafted by any Weaponsmith.",requireSkill=164,u=2,g={
 r(55183,{learnedAt=415,requireSkill=164,u=2}),
 r(55184,{learnedAt=415,requireSkill=164,u=2}),
 r(36125,{awp=70105,learnedAt=260,requireSkill=9787,u=1}),
 r(36128,{learnedAt=260,requireSkill=9787,u=2}),
 r(36126,{learnedAt=260,requireSkill=9787,u=2})}})}}),
-x(1,{requireSkill=164,g={
+x(1,{awp=10100,requireSkill=164,g={
 h(-45,{requireSkill=164,g={
 q(5283,{altQuests={5284,5301,5302},coords={
 [1455]={{50.2,42.6}}},cost={{"i",7935,1},{"i",7936,2},{"i",7937,4}},description="Upon finishing this quest, you will become a Armorsmith and be locked out of becoming a Weaponsmith.",lvl=40,qgs={5164},r=2,requireSkill=164,rwp=40003,u=2}),
@@ -212,8 +212,8 @@ title(52,{requireSkill=185,u=30})}}),
 ach(5471,{awp=40003,rank=200,requireSkill=185,u=40}),
 ach(1799,{awp=30002,rank=160,requireSkill=185,u=30}),
 ach(1798,{awp=30002,rank=100,requireSkill=185,u=30,g={
-crit(6756,{achID=1563,id=1,r=2,u=30}),
-crit(6756,{achID=1784,id=1,r=1,rwp=50004,u=30})}}),
+crit(6756,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(6756,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}}),
 ach(1797,{awp=30002,rank=75,requireSkill=185,u=30}),
 ach(1796,{awp=30002,rank=50,requireSkill=185,u=30}),
 ach(1795,{awp=30002,rank=25,requireSkill=185,u=30}),
@@ -222,18 +222,18 @@ ach(1999,{awp=30002,cost={{"c",81,10}},rank=10,requireSkill=185,u=30}),
 ach(2000,{awp=30002,cost={{"c",81,25}},rank=25,requireSkill=185,u=30}),
 ach(2001,{awp=30002,cost={{"c",81,50}},rank=50,requireSkill=185,u=30}),
 ach(2002,{awp=30002,cost={{"c",81,100}},rank=100,requireSkill=185,u=30})}}),
-x(1,{requireSkill=185,g={
+x(1,{awp=10100,requireSkill=185,g={
 ach(123,{requireSkill=185}),
 ach(122,{requireSkill=185}),
 ach(121,{requireSkill=185})}}),
-x(2,{requireSkill=185,g={
-ach(124,{awp=20001,requireSkill=185,u=17}),
+x(2,{awp=20003,requireSkill=185,g={
+ach(124,{requireSkill=185,u=17}),
 ach(1801,{awp=30002,providers={{"i",34832}},requireSkill=185,u=30,g={
-crit(6762,{achID=1563,id=1,r=2,u=30}),
-crit(6762,{achID=1784,id=1,r=1,rwp=50004,u=30})}}),
+crit(6762,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(6762,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}}),
 ach(877,{awp=30002,providers={{"i",33924}},requireSkill=185,u=30,g={
-crit(5764,{achID=1563,id=1,r=2,u=30}),
-crit(5764,{achID=1784,id=1,r=1,rwp=50004,u=30})}}),
+crit(5764,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(5764,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}}),
 ach(1800,{awp=30002,requireSkill=185,u=30,g={
 crit(6780,{achID=1800,id=1,providers={{"i",31675}},u=30}),
 crit(6770,{achID=1800,id=1,providers={{"i",27690}},u=30}),
@@ -260,29 +260,29 @@ crit(6786,{achID=1800,id=1,providers={{"s",42296}},u=30}),
 crit(6766,{achID=1800,id=1,providers={{"i",27688}},u=30}),
 crit(6772,{achID=1800,id=1,providers={{"i",27698}},u=30}),
 crit(6782,{achID=1800,id=1,providers={{"s",42305}},u=30}),
-crit(6788,{achID=1563,id=1,r=2,u=30}),
-crit(6788,{achID=1784,id=1,r=1,rwp=50004,u=30})}})}}),
-x(3,{awp=30002,requireSkill=185,u=30,g={
-ach(125,{requireSkill=185,u=30,g={
-crit(847,{achID=730,awp=30003,id=1,rwp=80001}),
-crit(847,{achID=1563,id=1,r=2,u=30}),
-crit(847,{achID=1784,id=1,r=1,rwp=50004,u=30})}}),
-ach(1781,{cost={{"i",43004,10}},requireSkill=185,u=30,g={
-crit(6607,{achID=1563,id=1,r=2,u=30}),
-crit(6607,{achID=1784,id=1,r=1,rwp=50004,u=30})}}),
-ach(1785,{requireSkill=185,u=30,g={
-crit(6631,{achID=1563,id=1,r=2,u=30}),
-crit(6631,{achID=1784,id=1,r=1,rwp=50004,u=30})}}),
-ach(1780,{requireSkill=185,u=30,g={
+crit(6788,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(6788,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}})}}),
+x(3,{awp=30003,requireSkill=185,u=30,g={
+ach(125,{awp=30002,requireSkill=185,u=30,g={
+crit(847,{achID=730,awp=30003,id=1,requireSkill=185,rwp=80001}),
+crit(847,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(847,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}}),
+ach(1781,{awp=30002,cost={{"i",43004,10}},requireSkill=185,u=30,g={
+crit(6607,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(6607,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}}),
+ach(1785,{awp=30002,requireSkill=185,u=30,g={
+crit(6631,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(6631,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}}),
+ach(1780,{awp=30002,requireSkill=185,u=30,g={
 crit(6450,{achID=1780,id=1,providers={{"i",43491}},requireSkill=185,u=30}),
 crit(6715,{achID=1780,id=1,providers={{"i",43492}},requireSkill=185,u=30}),
 crit(6738,{achID=1780,id=1,providers={{"i",43488}},requireSkill=185,u=30}),
 crit(7093,{achID=1780,id=1,providers={{"i",43490}},requireSkill=185,u=30}),
-crit(6605,{achID=1563,id=1,r=2,u=30}),
-crit(6605,{achID=1784,id=1,r=1,rwp=50004,u=30})}}),
-ach(1777,{requireSkill=185,sym={{"partial_achievement",1779}},u=30}),
-ach(1778,{requireSkill=185,sym={{"partial_achievement",1779}},u=30}),
-ach(1779,{requireSkill=185,u=30,g={
+crit(6605,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(6605,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}}),
+ach(1777,{awp=30002,requireSkill=185,sym={{"partial_achievement",1779}},u=30}),
+ach(1778,{awp=30002,requireSkill=185,sym={{"partial_achievement",1779}},u=30}),
+ach(1779,{awp=30002,requireSkill=185,u=30,g={
 crit(6594,{achID=1779,id=1,providers={{"i",43020}},u=30}),
 crit(6501,{achID=1779,id=1,providers={{"s",45550}},u=30}),
 crit(6503,{achID=1779,id=1,providers={{"s",45564}},u=30}),
@@ -328,16 +328,16 @@ crit(6499,{achID=1779,id=1,providers={{"s",45562}},u=30}),
 crit(6502,{achID=1779,id=1,providers={{"s",45560}},u=30}),
 crit(9421,{achID=1779,id=1,providers={{"i",44954}},u=30}),
 crit(6593,{achID=1779,id=1,providers={{"i",43034}},u=30}),
-crit(6604,{achID=1563,id=1,r=2,u=30}),
-crit(6604,{achID=1784,id=1,r=1,rwp=50004,u=30})}})}}),
-x(4,{requireSkill=185,u=40,g={
-ach(4916,{awp=40003,requireSkill=185,u=40,g={
+crit(6604,{achID=1563,id=1,r=2,requireSkill=185,u=30}),
+crit(6604,{achID=1784,id=1,r=1,requireSkill=185,rwp=50004,u=30})}})}}),
+x(4,{awp=40003,requireSkill=185,u=40,g={
+ach(4916,{requireSkill=185,u=40,g={
 crit(63618,{achID=4915,id=1,rwp=80001})}}),
 ach(5845,{awp=40200,r=2,requireSkill=185,u=40}),
 ach(5846,{awp=40200,r=1,requireSkill=185,rwp=50004,u=40}),
 ach(5779,{awp=40100,cost={{"i",62680,91}},providers={{"s",99041}},requireSkill=185,u=40}),
-ach(5472,{awp=40003,requireSkill=185,sym={{"partial_achievement",5473}},u=40}),
-ach(5473,{awp=40003,requireSkill=185,u=40,g={
+ach(5472,{requireSkill=185,sym={{"partial_achievement",5473}},u=40}),
+ach(5473,{requireSkill=185,u=40,g={
 crit(15728,{achID=5473,id=1,providers={{"i",65431}},u=40}),
 crit(15720,{achID=5473,id=1,providers={{"i",65416}},u=40}),
 crit(15717,{achID=5473,id=1,providers={{"i",65411}},u=40}),
@@ -372,7 +372,7 @@ crit(15736,{achID=5473,id=1,providers={{"i",65409}},u=40}),
 crit(15741,{achID=5473,id=1,providers={{"i",65432}},u=40})}})}})}),
 prof(333),
 prof(202,{
-x(1,{requireSkill=202,g={
+x(1,{awp=10100,requireSkill=202,g={
 h(-45,{awp=40300,requireSkill=202,g={
 q(29477,{altQuests={3526,3629,3630,3632,3633,3634,3635,3637,4181,29475},coords={
 [1453]={{62.8,32}},
@@ -393,7 +393,7 @@ i(11422,{b=1,description="If you destroy your Goblin Engineer Membership Card, y
 r(3968,{itemID=4416,learnedAt=195,q=2,requireSkill=202,u=2}),
 r(3972,{itemID=4417,learnedAt=200,q=2,requireSkill=202,u=2}),
 r(15628,{b=1,itemID=11828,learnedAt=205,q=2,requireSkill=202,u=2})}})}})}}),
-x(4,{requireSkill=202})}),
+x(4,{awp=40003,requireSkill=202})}),
 prof(129,{rwp=80001,g={
 x(1,{requireSkill=129,g={
 ach(131,{requireSkill=129}),
@@ -518,24 +518,24 @@ crit(5663,{achID=1516,awp=30003,id=1,u=30})}}),
 ach(1257,{awp=30002,requireSkill=356,g={
 crit(5664,{achID=1516,awp=30003,id=1,u=30})}}),
 ach(3218,{awp=30003,providers={{"i",46109}},requireSkill=356,u=30})}}),
-x(1,{requireSkill=356,g={
+x(1,{awp=10100,requireSkill=356,g={
 ach(126,{requireSkill=356}),
 ach(127,{requireSkill=356}),
 ach(128,{requireSkill=356}),
 ach(150,{awp=30002,maps={1453,1454},requireSkill=356,g={
 crit(5665,{achID=1516,awp=30003,id=1,u=30})}})}}),
-x(2,{requireSkill=356,u=17,g={
-ach(129,{awp=20000,requireSkill=356,u=17}),
+x(2,{awp=20003,requireSkill=356,u=17,g={
+ach(129,{requireSkill=356,u=17}),
 ach(1225,{awp=30002,maps={1946,1951,1952},requireSkill=356,u=17,g={
 crit(5672,{achID=1516,awp=30003,id=1,u=30})}})}}),
 x(3,{awp=30003,requireSkill=356,u=30,g={
 ach(130,{requireSkill=356,u=30,g={
-crit(845,{achID=730,id=1,rwp=80001}),
-crit(845,{achID=1516,id=1,u=30})}}),
+crit(845,{achID=730,id=1,requireSkill=356,rwp=80001}),
+crit(845,{achID=1516,id=1,requireSkill=356,u=30})}}),
 ach(1517,{maps={114,115,116,117,119,127},requireSkill=356,u=30,g={
 crit(5690,{achID=1516,id=1,u=30})}})}}),
-x(4,{requireSkill=356,g={
-h(-12,{awp=40003,requireSkill=356,g={
+x(4,{awp=40003,requireSkill=356,g={
+h(-12,{requireSkill=356,g={
 ach(4917,{requireSkill=356,g={
 crit(63616,{achID=4915,id=1,rwp=80001})}}),
 ach(5851,{awp=40200,r=2,requireSkill=356}),
@@ -1275,8 +1275,8 @@ x(10,{requireSkill=773}),
 x(11,{requireSkill=773}),
 x(12,{requireSkill=773})}}),
 prof(755,{u=17,g={
-x(4,{requireSkill=755,u=40,g={
-h(-45,{awp=40003,requireSkill=755,u=40,g={
+x(4,{awp=40003,requireSkill=755,u=40,g={
+h(-45,{requireSkill=755,u=40,g={
 q(28778,{c={1,2,6},providers={{"i",65895}},requireSkill=755,u=40,g={
 i(52351,{b=1,f=53,lvl=81,q=3,requireSkill=755,u=40})}}),
 q(28776,{c={1,2,6,11},providers={{"i",65897}},requireSkill=755,u=40,g={
@@ -1287,7 +1287,7 @@ q(25047,{c={3,4,7,11},providers={{"i",52197}},requireSkill=755,u=40,g={
 i(52199,{b=1,f=53,lvl=81,q=3,requireSkill=755,u=40})}}),
 q(28775,{c={2,5,7,8,9,11},providers={{"i",65896}},requireSkill=755,u=40,g={
 i(52353,{b=1,f=53,lvl=81,q=3,requireSkill=755,u=40})}})}}),
-cat(834,{u=40,g={
+cat(834,{requireSkill=755,u=40,g={
 r(73404,{learnedAt=500,requireSkill=755,u=40}),
 r(101735,{learnedAt=525,requireSkill=755,u=40}),
 r(73344,{learnedAt=465,requireSkill=755,u=40}),
@@ -1304,7 +1304,7 @@ r(73403,{learnedAt=500,requireSkill=755,u=40}),
 r(101740,{learnedAt=525,requireSkill=755,u=40}),
 r(73343,{learnedAt=465,requireSkill=755,u=40}),
 r(73229,{learnedAt=425,requireSkill=755,u=40})}}),
-cat(835,{u=40,g={
+cat(835,{requireSkill=755,u=40,g={
 r(101749,{learnedAt=525,requireSkill=755,u=40}),
 r(101754,{learnedAt=525,requireSkill=755,u=40}),
 r(73380,{learnedAt=465,requireSkill=755,u=40}),
@@ -1344,7 +1344,7 @@ r(101750,{learnedAt=525,requireSkill=755,u=40}),
 r(73383,{learnedAt=465,requireSkill=755,u=40}),
 r(101748,{learnedAt=525,requireSkill=755,u=40}),
 r(73280,{learnedAt=425,requireSkill=755,u=40})}}),
-cat(836,{u=40,g={
+cat(836,{requireSkill=755,u=40,g={
 r(73371,{learnedAt=465,requireSkill=755,u=40}),
 r(73268,{learnedAt=425,requireSkill=755,u=40}),
 r(101773,{learnedAt=525,requireSkill=755,u=40}),
@@ -1396,7 +1396,7 @@ r(101779,{learnedAt=525,requireSkill=755,u=40}),
 r(101770,{learnedAt=525,requireSkill=755,u=40}),
 r(95754,{learnedAt=465,requireSkill=755,u=40}),
 r(101780,{learnedAt=525,requireSkill=755,u=40})}}),
-cat(837,{u=40,g={
+cat(837,{requireSkill=755,u=40,g={
 r(73360,{learnedAt=465,requireSkill=755,u=40}),
 r(73250,{learnedAt=425,requireSkill=755,u=40}),
 r(101784,{learnedAt=525,requireSkill=755,u=40}),
@@ -1431,7 +1431,7 @@ r(101792,{learnedAt=525,requireSkill=755,u=40}),
 r(73359,{learnedAt=465,requireSkill=755,u=40}),
 r(73249,{learnedAt=425,requireSkill=755,u=40}),
 r(101785,{learnedAt=525,requireSkill=755,u=40})}}),
-cat(838,{u=40,g={
+cat(838,{requireSkill=755,u=40,g={
 r(73222,{learnedAt=425,requireSkill=755,u=40}),
 r(73396,{learnedAt=500,requireSkill=755,u=40}),
 r(73335,{learnedAt=465,requireSkill=755,u=40}),
@@ -1452,7 +1452,7 @@ r(73226,{learnedAt=425,requireSkill=755,u=40}),
 r(73400,{learnedAt=500,requireSkill=755,u=40}),
 r(73339,{learnedAt=465,requireSkill=755,u=40}),
 r(101796,{learnedAt=525,requireSkill=755,u=40})}}),
-cat(839,{u=40,g={
+cat(839,{requireSkill=755,u=40,g={
 r(73239,{learnedAt=425,requireSkill=755,u=40}),
 r(73349,{learnedAt=465,requireSkill=755,u=40}),
 r(73409,{learnedAt=500,requireSkill=755,u=40}),
@@ -1473,7 +1473,7 @@ r(73231,{learnedAt=425,requireSkill=755,u=40}),
 r(73345,{learnedAt=465,requireSkill=755,u=40}),
 r(73405,{learnedAt=500,requireSkill=755,u=40}),
 r(101801,{learnedAt=525,requireSkill=755,u=40})}}),
-cat(840,{u=40,g={
+cat(840,{requireSkill=755,u=40,g={
 r(96255,{learnedAt=490,requireSkill=755,u=40}),
 r(73468,{learnedAt=490,requireSkill=755,u=40}),
 r(73466,{learnedAt=490,requireSkill=755,u=40}),
@@ -1490,7 +1490,7 @@ r(73475,{learnedAt=490,requireSkill=755,u=40}),
 r(73473,{learnedAt=490,requireSkill=755,u=40}),
 r(96256,{learnedAt=490,requireSkill=755,u=40}),
 r(73471,{learnedAt=490,requireSkill=755,u=40})}}),
-cat(841,{u=40,g={
+cat(841,{requireSkill=755,u=40,g={
 r(73496,{learnedAt=435,requireSkill=755,u=40}),
 r(1216321,{awp=40200,learnedAt=525,requireSkill=755,u=41}),
 r(1216331,{awp=40200,learnedAt=525,requireSkill=755,u=41}),
@@ -1500,10 +1500,10 @@ r(73506,{learnedAt=525,requireSkill=755,u=40}),
 r(73504,{learnedAt=525,requireSkill=755,u=40}),
 r(73505,{learnedAt=525,requireSkill=755,u=40}),
 r(73497,{learnedAt=460,requireSkill=755,u=40}),
-r(99543,{awp=40003,learnedAt=520,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40}),
-r(99544,{awp=40003,learnedAt=520,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40}),
-r(99542,{awp=40003,learnedAt=520,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40})}}),
-cat(842,{u=40,g={
+r(99543,{learnedAt=520,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40}),
+r(99544,{learnedAt=520,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40}),
+r(99542,{learnedAt=520,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40})}}),
+cat(842,{requireSkill=755,u=40,g={
 r(73498,{learnedAt=525,requireSkill=755,u=40}),
 r(1216328,{awp=40200,learnedAt=515,requireSkill=755,u=41}),
 r(1216329,{awp=40200,learnedAt=515,requireSkill=755,u=41}),
@@ -1514,22 +1514,22 @@ r(73495,{learnedAt=450,requireSkill=755,u=40}),
 r(73494,{learnedAt=425,requireSkill=755,u=40}),
 r(98921,{learnedAt=525,requireSkill=755,u=40}),
 r(73502,{learnedAt=525,requireSkill=755,u=40}),
-r(99540,{awp=40003,learnedAt=510,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40}),
-r(99541,{awp=40003,learnedAt=510,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40}),
-r(99539,{awp=40003,learnedAt=510,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40})}}),
-cat(843,{u=40,g={
+r(99540,{learnedAt=510,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40}),
+r(99541,{learnedAt=510,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40}),
+r(99539,{learnedAt=510,OnUpdate=function(t)if settings:GetUnobtainableFilter(41)then	t.u=2 t.rwp=nil else	t.u=40 t.rwp=40200 end	end,requireSkill=755,rwp=50004,u=40})}}),
+cat(843,{requireSkill=755,u=40,g={
 r(73627,{learnedAt=460,requireSkill=755,u=40}),
 r(73625,{learnedAt=450,requireSkill=755,u=40}),
 r(73626,{learnedAt=455,requireSkill=755,u=40}),
 r(73623,{learnedAt=525,requireSkill=755,u=40})}}),
-cat(844,{u=40,g={
+cat(844,{requireSkill=755,u=40,g={
 r(73620,{learnedAt=460,requireSkill=755,u=40}),
 r(73621,{learnedAt=490,requireSkill=755,u=40})}}),
-cat(845,{u=40,g={
+cat(845,{requireSkill=755,u=40,g={
 r(73478,{learnedAt=500,requireSkill=755,u=40}),
 r(73622,{learnedAt=435,requireSkill=755,u=40})}})}}),
-x(1,{u=17,g={
-flt(52,{u=17,g={
+x(1,{awp=10100,requireSkill=755,u=17,g={
+flt(52,{requireSkill=755,u=17,g={
 r(26874,{learnedAt=210,requireSkill=755,u=17}),
 r(25617,{awp=20001,learnedAt=150,requireSkill=755,u=17}),
 r(25493,{learnedAt=30,requireSkill=755,u=17}),
@@ -1564,7 +1564,7 @@ r(34959,{learnedAt=200,requireSkill=755,u=17}),
 r(26885,{learnedAt=240,requireSkill=755,u=17}),
 r(25323,{learnedAt=125,requireSkill=755,u=17}),
 r(26925,{learnedAt=30,requireSkill=755,u=17})}}),
-flt(51,{u=17,g={
+flt(51,{requireSkill=755,u=17,g={
 r(25339,{learnedAt=110,requireSkill=755,u=17}),
 r(63743,{awp=30100,learnedAt=200,requireSkill=755,u=30}),
 r(26876,{learnedAt=220,requireSkill=755,u=17}),
@@ -1583,16 +1583,16 @@ r(25610,{learnedAt=120,requireSkill=755,u=17}),
 r(26883,{learnedAt=235,requireSkill=755,u=17}),
 r(26908,{learnedAt=280,requireSkill=755,u=17}),
 r(26927,{learnedAt=50,requireSkill=755,u=17})}}),
-cat(168,{u=17,g={
+cat(168,{requireSkill=755,u=17,g={
 r(25278,{learnedAt=50,requireSkill=755,u=17}),
 r(25255,{learnedAt=20,requireSkill=755,u=17}),
 r(25615,{learnedAt=150,requireSkill=755,u=17}),
 r(26880,{learnedAt=225,requireSkill=755,u=17})}}),
-cat(167,{u=17,g={
+cat(167,{requireSkill=755,u=17,g={
 r(26906,{learnedAt=275,requireSkill=755,u=17}),
 r(25321,{learnedAt=120,requireSkill=755,u=17}),
 r(26878,{learnedAt=225,requireSkill=755,u=17})}}),
-flt(53,{u=17,g={
+flt(53,{requireSkill=755,u=17,g={
 r(26912,{learnedAt=300,requireSkill=755,u=17}),
 r(26875,{learnedAt=215,requireSkill=755,u=17}),
 r(26914,{learnedAt=300,requireSkill=755,u=17}),
@@ -1602,18 +1602,18 @@ r(26872,{learnedAt=200,requireSkill=755,u=17}),
 r(26900,{learnedAt=260,requireSkill=755,u=17}),
 r(26882,{learnedAt=235,requireSkill=755,u=17}),
 r(26881,{learnedAt=225,requireSkill=755,u=17})}}),
-flt(34,{u=17,g={
+flt(34,{requireSkill=755,u=17,g={
 r(25612,{learnedAt=125,requireSkill=755,u=17})}}),
-flt(50,{u=17,g={
+flt(50,{requireSkill=755,u=17,g={
 r(32801,{learnedAt=50,requireSkill=755,u=17}),
 r(32809,{learnedAt=225,requireSkill=755,u=17}),
 r(32807,{learnedAt=110,requireSkill=755,u=17}),
 r(32259,{learnedAt=30,requireSkill=755,u=17}),
 r(32808,{learnedAt=175,requireSkill=755,u=17})}})}}),
-x(2,{u=17,g={
-cat(868,{u=17,g={
+x(2,{awp=20003,requireSkill=755,u=17,g={
+cat(868,{requireSkill=755,u=17,g={
 r(38068,{learnedAt=325,requireSkill=755,u=17})}}),
-cat(857,{u=17,g={
+cat(857,{requireSkill=755,u=17,g={
 r(42590,{learnedAt=360,requireSkill=755,u=17}),
 r(28948,{learnedAt=325,requireSkill=755,u=17}),
 r(39721,{learnedAt=375,requireSkill=755,u=19}),
@@ -1627,7 +1627,7 @@ r(31149,{learnedAt=350,requireSkill=755,u=17}),
 r(28955,{learnedAt=315,requireSkill=755,u=17}),
 r(39718,{learnedAt=375,requireSkill=755,u=19}),
 r(31095,{learnedAt=350,requireSkill=755,u=17})}}),
-cat(858,{u=17,g={
+cat(858,{requireSkill=755,u=17,g={
 r(47053,{learnedAt=375,requireSkill=755,u=21}),
 r(46405,{learnedAt=350,requireSkill=755,u=21}),
 r(28917,{learnedAt=305,requireSkill=755,u=17}),
@@ -1641,7 +1641,7 @@ r(39739,{learnedAt=375,requireSkill=755,u=19}),
 r(46803,{learnedAt=350,requireSkill=755,u=21}),
 r(47054,{learnedAt=375,requireSkill=755,u=21}),
 r(43493,{learnedAt=350,requireSkill=755,u=17})}}),
-cat(859,{u=17,g={
+cat(859,{requireSkill=755,u=17,g={
 r(39467,{learnedAt=325,requireSkill=755,u=1801}),
 r(39471,{learnedAt=350,requireSkill=755,u=17}),
 r(39738,{learnedAt=375,requireSkill=755,u=19}),
@@ -1654,7 +1654,7 @@ r(39734,{learnedAt=375,requireSkill=755,u=19}),
 r(28912,{learnedAt=305,requireSkill=755,u=17}),
 r(31108,{learnedAt=350,requireSkill=755,u=17}),
 r(47055,{learnedAt=375,requireSkill=755,u=21})}}),
-cat(860,{u=17,g={
+cat(860,{requireSkill=755,u=17,g={
 r(31109,{learnedAt=350,requireSkill=755,u=17}),
 r(28914,{learnedAt=315,requireSkill=755,u=17}),
 r(39736,{learnedAt=375,requireSkill=755,u=19}),
@@ -1675,7 +1675,7 @@ r(39731,{learnedAt=375,requireSkill=755,u=19}),
 r(39470,{learnedAt=350,requireSkill=755,u=17}),
 r(39466,{learnedAt=325,requireSkill=755,u=1801}),
 r(39737,{learnedAt=375,requireSkill=755,u=19})}}),
-cat(861,{u=17,g={
+cat(861,{requireSkill=755,u=17,g={
 r(28905,{learnedAt=305,requireSkill=755,u=17}),
 r(39705,{learnedAt=375,requireSkill=755,u=19}),
 r(31084,{learnedAt=350,requireSkill=755,u=17}),
@@ -1690,7 +1690,7 @@ r(42558,{learnedAt=360,requireSkill=755,u=17}),
 r(39714,{learnedAt=375,requireSkill=755,u=19}),
 r(31091,{learnedAt=350,requireSkill=755,u=17}),
 r(42588,{learnedAt=360,requireSkill=755,u=17})}}),
-cat(862,{u=17,g={
+cat(862,{requireSkill=755,u=17,g={
 r(42592,{learnedAt=360,requireSkill=755,u=17}),
 r(42593,{learnedAt=360,requireSkill=755,u=17}),
 r(31101,{learnedAt=350,requireSkill=755,u=17}),
@@ -1704,7 +1704,7 @@ r(42591,{learnedAt=360,requireSkill=755,u=17}),
 r(31090,{learnedAt=350,requireSkill=755,u=17}),
 r(28947,{learnedAt=315,requireSkill=755,u=17}),
 r(39713,{learnedAt=375,requireSkill=755,u=19})}}),
-cat(863,{u=17,g={
+cat(863,{requireSkill=755,u=17,g={
 r(32867,{learnedAt=365,requireSkill=755,u=17}),
 r(32869,{learnedAt=365,requireSkill=755,u=17}),
 r(44794,{learnedAt=365,requireSkill=755,u=17}),
@@ -1719,7 +1719,7 @@ r(39961,{learnedAt=365,requireSkill=755,u=17}),
 r(32873,{learnedAt=365,requireSkill=755,u=17}),
 r(32868,{learnedAt=365,requireSkill=755,u=17}),
 r(39963,{learnedAt=365,requireSkill=755,u=17})}}),
-cat(864,{u=17,g={
+cat(864,{requireSkill=755,u=17,g={
 r(46126,{learnedAt=365,requireSkill=755,u=21}),
 r(31070,{learnedAt=360,requireSkill=755,u=17}),
 r(31076,{learnedAt=365,requireSkill=755,u=17}),
@@ -1736,7 +1736,7 @@ r(31066,{learnedAt=360,requireSkill=755,u=17}),
 r(31064,{learnedAt=360,minReputation={934,0},requireSkill=755,u=17}),
 r(31051,{learnedAt=335,requireSkill=755,u=17}),
 r(31067,{learnedAt=355,requireSkill=755,u=17})}}),
-cat(865,{u=17,g={
+cat(865,{requireSkill=755,u=17,g={
 r(31057,{learnedAt=365,requireSkill=755,u=17}),
 r(31050,{learnedAt=320,requireSkill=755,u=17}),
 r(26916,{learnedAt=310,requireSkill=755,u=17}),
@@ -1758,11 +1758,11 @@ r(46123,{learnedAt=365,requireSkill=755,u=21}),
 r(41415,{learnedAt=330,requireSkill=755,u=17}),
 r(38503,{learnedAt=375,requireSkill=755,u=17}),
 r(38504,{learnedAt=375,requireSkill=755,u=17})}}),
-cat(869,{u=17,g={
+cat(869,{requireSkill=755,u=17,g={
 r(31078,{learnedAt=370,requireSkill=755,u=17}),
 r(31077,{learnedAt=370,requireSkill=755,u=17}),
 r(41418,{learnedAt=365,requireSkill=755,u=18})}}),
-cat(866,{u=17,g={
+cat(866,{requireSkill=755,u=17,g={
 r(46777,{learnedAt=375,requireSkill=755,u=21}),
 r(31080,{learnedAt=370,requireSkill=755,u=17}),
 r(46775,{learnedAt=375,requireSkill=755,u=21}),
@@ -1773,11 +1773,11 @@ r(31083,{learnedAt=370,requireSkill=755,u=17}),
 r(46779,{learnedAt=375,requireSkill=755,u=21}),
 r(46778,{learnedAt=375,requireSkill=755,u=21}),
 r(31082,{learnedAt=370,requireSkill=755,u=17})}}),
-cat(867,{u=17,g={
+cat(867,{requireSkill=755,u=17,g={
 r(47280,{learnedAt=350,requireSkill=755,u=17}),
 r(62941,{awp=30100,learnedAt=300,requireSkill=755,u=30})}})}}),
-x(3,{u=30,g={
-cat(846,{u=30,g={
+x(3,{awp=30003,requireSkill=755,u=30,g={
+cat(846,{requireSkill=755,u=30,g={
 r(53854,{learnedAt=350,requireSkill=755,u=30}),
 r(56084,{learnedAt=370,requireSkill=755,u=30}),
 r(66501,{learnedAt=450,requireSkill=755,u=32}),
@@ -1794,7 +1794,7 @@ r(53943,{learnedAt=350,requireSkill=755,u=30}),
 r(56088,{learnedAt=370,requireSkill=755,u=30}),
 r(66499,{learnedAt=450,requireSkill=755,u=32}),
 r(53955,{learnedAt=390,requireSkill=755,u=30})}}),
-cat(847,{u=30,g={
+cat(847,{requireSkill=755,u=30,g={
 r(53925,{learnedAt=350,requireSkill=755,u=30}),
 r(66442,{learnedAt=450,requireSkill=755,u=32}),
 r(54011,{learnedAt=390,requireSkill=755,u=30}),
@@ -1828,7 +1828,7 @@ r(54000,{learnedAt=390,requireSkill=755,u=30}),
 r(53924,{learnedAt=350,requireSkill=755,u=30}),
 r(66445,{learnedAt=450,requireSkill=755,u=32}),
 r(54005,{learnedAt=390,requireSkill=755,u=30})}}),
-cat(848,{u=30,g={
+cat(848,{requireSkill=755,u=30,g={
 r(66579,{learnedAt=450,requireSkill=755,u=32}),
 r(53874,{learnedAt=350,requireSkill=755,u=30}),
 r(53977,{learnedAt=390,requireSkill=755,u=30}),
@@ -1865,7 +1865,7 @@ r(53993,{learnedAt=390,requireSkill=755,u=30}),
 r(66571,{learnedAt=450,requireSkill=755,u=32}),
 r(53884,{learnedAt=350,requireSkill=755,u=30}),
 r(53986,{learnedAt=390,requireSkill=755,u=30})}}),
-cat(849,{u=30,g={
+cat(849,{requireSkill=755,u=30,g={
 r(66576,{learnedAt=450,requireSkill=755,u=32}),
 r(53892,{learnedAt=350,requireSkill=755,u=30}),
 r(53994,{learnedAt=390,requireSkill=755,u=30}),
@@ -1899,7 +1899,7 @@ r(53965,{learnedAt=390,requireSkill=755,u=30}),
 r(66570,{learnedAt=450,requireSkill=755,u=32}),
 r(53883,{learnedAt=350,requireSkill=755,u=30}),
 r(53985,{learnedAt=390,requireSkill=755,u=30})}}),
-cat(850,{u=30,g={
+cat(850,{requireSkill=755,u=30,g={
 r(53831,{learnedAt=350,requireSkill=755,u=30}),
 r(66447,{learnedAt=450,requireSkill=755,u=32}),
 r(56049,{learnedAt=370,requireSkill=755,u=30}),
@@ -1920,7 +1920,7 @@ r(54017,{learnedAt=350,requireSkill=755,u=30}),
 r(66450,{learnedAt=450,requireSkill=755,u=32}),
 r(56081,{learnedAt=370,requireSkill=755,u=30}),
 r(53951,{learnedAt=390,requireSkill=755,u=30})}}),
-cat(851,{u=30,g={
+cat(851,{requireSkill=755,u=30,g={
 r(53960,{learnedAt=390,requireSkill=755,u=30}),
 r(56079,{learnedAt=370,requireSkill=755,u=30}),
 r(66505,{learnedAt=450,requireSkill=755,u=32}),
@@ -1937,7 +1937,7 @@ r(53948,{learnedAt=390,requireSkill=755,u=30}),
 r(56055,{learnedAt=370,requireSkill=755,u=30}),
 r(66452,{learnedAt=450,requireSkill=755,u=32}),
 r(53843,{learnedAt=360,requireSkill=755,u=30})}}),
-cat(852,{u=30,g={
+cat(852,{requireSkill=755,u=30,g={
 r(55401,{learnedAt=420,requireSkill=755,u=30}),
 r(55405,{learnedAt=420,requireSkill=755,u=30}),
 r(55397,{learnedAt=420,requireSkill=755,u=30}),
@@ -1958,11 +1958,11 @@ r(55384,{learnedAt=420,requireSkill=755,u=30}),
 r(55394,{learnedAt=420,requireSkill=755,u=30}),
 r(55386,{learnedAt=420,requireSkill=755,u=30}),
 r(55403,{learnedAt=420,requireSkill=755,u=30})}}),
-cat(855,{u=30,g={
+cat(855,{requireSkill=755,u=30,g={
 r(56530,{learnedAt=360,requireSkill=755,u=30}),
 r(56531,{learnedAt=390,requireSkill=755,u=30}),
 r(68253,{learnedAt=450,requireSkill=755,u=32})}}),
-cat(853,{u=30,g={
+cat(853,{requireSkill=755,u=30,g={
 r(56196,{learnedAt=380,requireSkill=755,u=30}),
 r(58142,{learnedAt=350,requireSkill=755,u=30}),
 r(58141,{learnedAt=350,requireSkill=755,u=30}),
@@ -1972,7 +1972,7 @@ r(64726,{learnedAt=420,requireSkill=755,u=30}),
 r(56500,{learnedAt=440,requireSkill=755,u=30}),
 r(56499,{learnedAt=440,requireSkill=755,u=30}),
 r(56501,{learnedAt=440,requireSkill=755,u=30})}}),
-cat(854,{u=30,g={
+cat(854,{requireSkill=755,u=30,g={
 r(56193,{learnedAt=350,requireSkill=755,u=30}),
 r(56197,{learnedAt=420,requireSkill=755,u=30}),
 r(58143,{learnedAt=370,requireSkill=755,u=30}),
@@ -1993,7 +1993,7 @@ r(58954,{learnedAt=420,requireSkill=755,u=30}),
 r(56496,{learnedAt=430,requireSkill=755,u=30}),
 r(56498,{learnedAt=430,requireSkill=755,u=30}),
 r(58149,{learnedAt=420,requireSkill=755,u=30})}}),
-cat(856,{u=30,g={
+cat(856,{requireSkill=755,u=30,g={
 r(56205,{learnedAt=350,requireSkill=755,u=30}),
 r(56203,{learnedAt=400,requireSkill=755,u=30}),
 r(59759,{learnedAt=400,requireSkill=755,u=30}),
@@ -2004,30 +2004,30 @@ r(62242,{learnedAt=425,requireSkill=755,u=30}),
 r(56206,{learnedAt=360,requireSkill=755,u=30}),
 r(56208,{learnedAt=370,requireSkill=755,u=30})}})}})}}),
 prof(165,{
-x(1,{requireSkill=165,g={
+x(1,{awp=10100,requireSkill=165,g={
 prof(10656,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5141,5145},u=2,g={
-cat(932,{u=2,g={
+cat(932,{requireSkill=165,u=2,g={
 r(35575,{learnedAt=375,requireSkill=10656,u=2}),
 r(35580,{learnedAt=375,requireSkill=10656,u=2})}}),
-cat(933,{u=2,g={
+cat(933,{requireSkill=165,u=2,g={
 r(35577,{learnedAt=375,requireSkill=10656,u=2}),
 r(35584,{learnedAt=375,requireSkill=10656,u=2})}}),
-cat(935,{u=2,g={
+cat(935,{requireSkill=165,u=2,g={
 r(35576,{learnedAt=375,requireSkill=10656,u=2}),
 r(35582,{learnedAt=375,requireSkill=10656,u=2})}})}}),
 prof(10658,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5144,5146},u=2,g={
-cat(932,{u=2,g={
+cat(932,{requireSkill=165,u=2,g={
 r(35589,{learnedAt=375,requireSkill=10658,u=2})}}),
-cat(933,{u=2,g={
+cat(933,{requireSkill=165,u=2,g={
 r(35591,{learnedAt=375,requireSkill=10658,u=2})}}),
-cat(935,{u=2,g={
+cat(935,{requireSkill=165,u=2,g={
 r(35590,{learnedAt=375,requireSkill=10658,u=2})}})}}),
 prof(10660,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5143,5148},u=2,g={
-cat(932,{u=2,g={
+cat(932,{requireSkill=165,u=2,g={
 r(35585,{learnedAt=375,requireSkill=10660,u=2})}}),
-cat(933,{u=2,g={
+cat(933,{requireSkill=165,u=2,g={
 r(35588,{learnedAt=375,requireSkill=10660,u=2})}}),
-cat(935,{u=2,g={
+cat(935,{requireSkill=165,u=2,g={
 r(35587,{learnedAt=375,requireSkill=165,u=2})}})}}),
 h(-45,{lvl=40,requireSkill=165,rwp=40003,u=2,g={
 q(5141,{altQuests={5143,5144},coords={
@@ -2042,7 +2042,7 @@ q(5143,{altQuests={5141,5144},coords={
 [1444]={{89.4,46.5}}},cost={{"i",8211,1},{"i",8214,1}},learnedAt=225,lvl=40,qgs={7870},r=2,requireSkill=165,sourceQuests={2853},u=2}),
 q(5148,{altQuests={5145,5146},coords={
 [1434]={{36.6,34.2}}},cost={{"i",8211,1},{"i",8214,1}},learnedAt=225,lvl=40,qgs={7871},r=1,requireSkill=165,sourceQuests={2860},u=2})}})}}),
-x(2,{requireSkill=165})}),
+x(2,{awp=20003,requireSkill=165})}),
 prof(633,{c={4},description="Lockpicking now skills up as you level, you no longer need to practice. Hovering over your Pick Lock ability will show the current level of box you can open.",DontEnforceSkillRequirements=1,g={
 r(1804,{c={4}}),
 r(921,{c={4}})}}),
@@ -2055,7 +2055,7 @@ r(53123,{awp=30002,rank=4,requireSkill=186,rwp=60002}),
 r(53124,{awp=30002,rank=5,requireSkill=186,rwp=60002}),
 r(53040,{awp=30003,rank=6,requireSkill=186,rwp=60002}),
 r(74496,{awp=40003,rank=7,requireSkill=186,rwp=60002})}}),
-x(1,{requireSkill=186})}),
+x(1,{awp=10100,requireSkill=186})}),
 prof(960,{awp=30002,c={6},u=30,g={
 r(53341,{requireSkill=960,rwp=60002,u=30}),
 r(53331,{requireSkill=960,rwp=70003,u=30}),
@@ -2069,8 +2069,8 @@ r(70164,{awp=30300,requireSkill=960,rwp=60002,u=30}),
 r(62158,{awp=30008,requireSkill=960,u=30})}}),
 prof(393),
 prof(197,{
-x(2,{awp=20005,requireSkill=197,u=17,g={
-h(-45,{requireSkill=197,rwp=40003,u=2,g={
+x(2,{awp=20003,requireSkill=197,u=17,g={
+h(-45,{awp=20005,requireSkill=197,rwp=40003,u=2,g={
 q(10831,{altQuests={10832,10833},coords={
 [1955]={{66.5,69.3}}},description="Upon finishing this quest, you will become a Mooncloth Tailor.",lvl=60,maps={1946},qgs={22208},requireSkill=197,u=2,g={
 qo(1,{coords={
@@ -2088,6 +2088,6 @@ q(10832,{altQuests={10831,10833},coords={
 [1955]={{66.6,68.4}}},description="Upon finishing this quest, you will become a Spellfire Tailor.",lvl=60,maps={1953},qgs={22213},requireSkill=197,u=2,g={
 qo(1,{cost={{"i",31742,1}},crs={22408},providers={{"i",31741}},requireSkill=197,u=2}),
 r(26797,{requireSkill=197,u=2})}})}})}}),
-x(3,{requireSkill=197}),
-x(4,{requireSkill=197})})}})
+x(3,{awp=30003,requireSkill=197}),
+x(4,{awp=40003,requireSkill=197})})}})
 end)

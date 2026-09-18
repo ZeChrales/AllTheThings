@@ -253,7 +253,7 @@ TBC_LEATHERWORKING = applyclassicphase(TBC_PHASE_ONE, bubbleDown({ ["timeline"] 
 		r(44770, {["timeline"] = {ADDED_2_3_0}}),	-- Glove Reinforcements
 		-- #if ANYCLASSIC
 		applyclassicphase(TBC_PHASE_FOUR, r(351766, {	-- Greater Drums of War
-			["timeline"] = { ADDED_2_0_1, REMOVED_3_0_2 },
+			["timeline"] = { ADDED_2_0_3, REMOVED_3_0_2 },
 		})),
 		-- #endif
 		r(44970, {["timeline"] = {ADDED_2_3_0}}),	-- Heavy Knothide Armor Kit
@@ -624,7 +624,7 @@ CATA_LEATHERWORKING = applyclassicphase(CATA_PHASE_ONE, bubbleDown({ ["timeline"
 		r(85068, {["timeline"] = {ADDED_4_0_3_LAUNCH, REMOVED_6_0_2}}),	-- Charscale Leg Reinforcements
 		r(163218, {["timeline"] = {ADDED_6_0_2}}),	-- Deepsea Scale
 		r(85067, {["timeline"] = {ADDED_4_0_3_LAUNCH, REMOVED_6_0_2}}),	-- Dragonbone Leg Reinforcements
-		r(101600, {["timeline"] = {ADDED_4_2_0, REMOVED_6_0_2}}),		-- Drakehide Leg Reinforcements
+		r(101600, {["timeline"] = {ADDED_4_2_0, REMOVED_6_0_2}}),	-- Drakehide Leg Reinforcements
 		r(85008, {	-- Draconic Embossment - Agility [Cata] / Fur Lining - Agility [Rank 2] [MoP]
 			["timeline"] = { ADDED_4_0_3_LAUNCH, REMOVED_6_0_2 },
 			-- #if AFTER MOP

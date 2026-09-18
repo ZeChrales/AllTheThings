@@ -6,15 +6,14 @@ BLIZZCON = createHeader({
 	readable = "BlizzCon",
 	icon = [[~_.asset("Promotion_Blizzcon")]],
 	eventID = 1181,
+	eventSchedule = {
+		0,	--
+		2026, 09, 12,	-- 12/09/2026
+		2026, 09, 13,	-- 13/09/2026
+	},
 	text = {
 		en = "BlizzCon",
-		-- TODO: de = "",
-		-- TODO: es = "",
-		-- TODO: mx = "",
-		-- TODO: fr = "",
-		-- TODO: it = "",
 		ko = "블리즈컨",
-		-- TODO: pt = "",
 		-- TODO: ru = "",
 		cn = "暴雪嘉年华",
 		tw = "暴雪嘉年華",
@@ -235,6 +234,42 @@ root(ROOTS.Promotions, n(BLIZZCON, bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {
 	i(274260, {	-- Rabbit'ath (MOUNT!)
 		["description"] = "Received after buying the Blizzcon 2026 World of Warcraft Bundle.",
 		["timeline"] = { ADDED_12_0_7, "removed 12.1.0.99999" },
+		["u"] = REAL_MONEY,
+	}),
+	-- 2 Hours: 200x Trader's Tender
+	i(263303, {	-- Cuddly Blue Grrgle (DECOR!)
+		["description"] = "Watch any eligible World of Warcraft stream on Twitch.tv from September 12th at 9:30 am PDT to September 27th at 10:00 am PDT or on the official World of Warcraft YouTube channel from September 12th at 9:30 am PDT until September 13 at 7:00 pm PDT for 4 hours to receive this item.\n\nYour Twitch/Youtube account has to be connected with your Battle.net Account & you have to redeem the drop on Youtube/Twitch before receiving it in your in-game collection as gift.",
+		["timeline"] = { ADDED_12_1_0, "removed 12.1.0.99999" },
+		["u"] = IGNORED_VALUE,
+	}),
+	i(263449, {	-- Fluffy Comfy Flying Quilt (MOUNT!)
+		["description"] = "Watch any eligible World of Warcraft stream on Twitch.tv from September 12th at 9:30 am PDT to September 27th at 10:00 am PDT or on the official World of Warcraft YouTube channel from September 12th at 9:30 am PDT until September 13 at 7:00 pm PDT for 8 hours to receive this item.\n\nYour Twitch/Youtube account has to be connected with your Battle.net Account & you have to redeem the drop on Youtube/Twitch before receiving it in your in-game collection as gift.",
+		["timeline"] = { ADDED_12_1_0, "removed 12.1.0.99999" },
+		["u"] = IGNORED_VALUE,
+	}),
+	i(279590, {	-- Venomous Champion's Illustrious Banner (TOY!)
+		["description"] = "Watch any eligible World of Warcraft stream on Twitch.tv from September 12th at 9:30 am PDT to September 27th at 10:00 am PDT or on the official World of Warcraft YouTube channel from September 12th at 9:30 am PDT until September 13 at 7:00 pm PDT for 12 hours to receive this item.\n\nYour Twitch/Youtube account has to be connected with your Battle.net Account & you have to redeem the drop on Youtube/Twitch before receiving it in your in-game collection as gift.",
+		["timeline"] = { ADDED_12_1_0, "removed 12.1.0.99999" },
+		["u"] = IGNORED_VALUE,
+	}),
+	ach(63685, {	-- BlizzCon 2026
+		["timeline"] = { ADDED_12_1_0, "removed 12.1.0.99999" },
+		["u"] = IGNORED_VALUE,
+		["groups"] = { i(281107, { ["u"] = IGNORED_VALUE }) },	-- BlizzCon Doormat (DECOR!)
+	}),
+	i(278231, {	-- Aquatic Clockwork Quacker (PET!)
+		["description"] = "Available from capsule gachapon machines on the Blizzcon floor.",
+		["timeline"] = { ADDED_12_1_0, "removed 12.1.0.99999" },
+		["u"] = REAL_MONEY,
+	}),
+	i(278230, {	-- Classic Clockwork Quacker (PET!)
+		["description"] = "Available from capsule gachapon machines on the Blizzcon floor.",
+		["timeline"] = { ADDED_12_1_0, "removed 12.1.0.99999" },
+		["u"] = REAL_MONEY,
+	}),
+	i(278688, {	-- Skipper (PET!)
+		["description"] = "Available from capsule gachapon machines on the Blizzcon floor.",
+		["timeline"] = { ADDED_12_1_0, "removed 12.1.0.99999" },
 		["u"] = REAL_MONEY,
 	}),
 })));

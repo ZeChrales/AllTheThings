@@ -695,21 +695,12 @@ checkboxExpandMiniList:AlignBelow(checkboxAdjustRowIndents)
 local checkboxExpandDifficulty = child:CreateCheckBox(L.EXPAND_DIFFICULTY_CHECKBOX,
 function(self)
 	self:SetChecked(settings:GetTooltipSetting("Expand:Difficulty"))
-	if app.IsClassic then
-		if not settings:GetTooltipSetting("Expand:MiniList") then
-			self:Disable()
-			self:SetAlpha(0.4)
-		else
-			self:Enable()
-			self:SetAlpha(1)
-		end
-	end
 end,
 function(self)
 	settings:SetTooltipSetting("Expand:Difficulty", self:GetChecked())
 end)
 checkboxExpandDifficulty:SetATTTooltip(L.EXPAND_DIFFICULTY_CHECKBOX_TOOLTIP)
-checkboxExpandDifficulty:AlignBelow(checkboxExpandMiniList, app.IsClassic and 1 or nil)
+checkboxExpandDifficulty:AlignBelow(checkboxExpandMiniList)
 
 local checkboxIconPortrait = child:CreateCheckBox(L.SHOW_ICON_PORTRAIT_CHECKBOX,
 function(self)
@@ -720,7 +711,7 @@ function(self)
 	app.CallbackEvent("OnRedrawWindows")
 end)
 checkboxIconPortrait:SetATTTooltip(L.SHOW_ICON_PORTRAIT_CHECKBOX_TOOLTIP)
-checkboxIconPortrait:AlignBelow(checkboxExpandDifficulty, app.IsClassic and -1 or nil)
+checkboxIconPortrait:AlignBelow(checkboxExpandDifficulty)
 
 local checkboxIconPortraitForQuests = child:CreateCheckBox(L.SHOW_ICON_PORTRAIT_FOR_QUESTS_CHECKBOX,
 function(self)
@@ -821,7 +812,7 @@ sliderPercentagePrecision:SetHeight(20)
 sliderPercentagePrecision:SetPoint("LEFT", sliderMainListScale, 0, 0)
 sliderPercentagePrecision:SetPoint("TOP", checkboxShowPercentageCount, "BOTTOM", 0, -24)
 
-if app.IsRetail then	-- CRIEVE NOTE: Classic Dynamic Categories don't support this just yet.
+if app.IsRetail and app.GameBuildVersion > 70000 then	-- CRIEVE NOTE: Classic Dynamic Categories don't support this just yet.
 -- Dynamic Category Toggles
 local textDynamicCategories = child:CreateTextLabel("|cffFFFFFF"..L.DYNAMIC_CATEGORY_LABEL)
 textDynamicCategories:SetPoint("LEFT", checkboxShowPercentageCount, "LEFT", 4, 0)

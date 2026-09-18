@@ -27,18 +27,20 @@ local EncounterToCRS = {
 	[TWIN_FANGS] = {
 		257368,	-- Ithraz
 		257361,	-- Vexhul
-	 },
-	--[[
-	[VASHNIK] = { 1 },
-	[COILED_ALTAR] = { 1 },
-	[ULATEK] = { 1 },
-	--]]
+	},
+	[VASHNIK] = { 259181 },
+	[COILED_ALTAR] = {
+		259447,	-- Zul'jan
+		259854,	-- Hex Lord Malacrass
+	},
+	[ULATEK] = { 268956 },
 };
 
 ------ EncounterToLoot ------
 local EncounterToLoot = {
 	[NEKZALI] = {
 		i(268248),	-- Amani Summoning Shawl
+		i(268230),	-- Crown of the Eternal Fang
 		i(268216),	-- Cursed Reliquary Cincture
 		i(268245),	-- Entombed Cultist's Sabatons
 		i(268203),	-- Hexing Spiritrender
@@ -47,7 +49,6 @@ local EncounterToLoot = {
 		i(268240),	-- Restless Spirit Shackles
 		i(268229),	-- Skullguard of the Risen Sacrifice
 		i(270162),	-- Soulcoiler Ritual Vessel
-		i(268231),	-- Soulslither Spaulders
 		i(268208),	-- Strongblood's Ceremonial Cleaver
 		i(270930),	-- Tomb-Creeper's Claw
 		i(268235),	-- Vestment of the Awakening
@@ -76,7 +77,6 @@ local EncounterToLoot = {
 		}),
 		i(268204),	-- Ancient Construct's Venomshiv
 		i(268198),	-- Caustic Keeper-Crusher
-		i(268230),	-- Crown of the Eternal Fang
 		i(270165),	-- Keeper's Seething Core
 		i(268250),	-- Sentinel's Vitriolic Chain
 		i(268219),	-- Shadow Hunter's Warmask
@@ -222,6 +222,7 @@ local EncounterToLoot = {
 		i(268222),	-- Reckless Spirit Breastplate
 		i(268256),	-- Sash of the Forlorn Vessel
 		i(268253),	-- Silken Voodoo Drape
+		i(268231),	-- Soulslither Spaulders
 		i(270173),	-- Zul'jin's Guillotine Technique
 	};
 	[ULATEK] = {
@@ -243,9 +244,12 @@ local EncounterToLoot = {
 ------ Zone Drops ----------
 local ZoneDropLoot = {
 	i(271638),	-- Bound Serpent's Jade Eye
+	i(271441),	-- Crushing Coiler Coif
 	i(271445),	-- Fanged Brute's Greatbelt
 	i(271440),	-- Greaves of the Noxious Depths
+	i(271444),	-- Pauldrons of the Forgotten Sacrifice
 	i(271435),	-- Slippers of the Hissing Cult
+	i(271436),	-- Slitherscale Girdle
 	i(271438),	-- Temple Delver's Mystic Helm
 	i(271434),	-- Venom Rite Mantle
 };
@@ -399,25 +403,32 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, {
 			}),
 			Difficulty(DIFFICULTY.RAID.MULTI.ALL).AddGroups({
 				n(QUESTS, {
+					q(96794),	-- Fury of the Dead
 				}),
 				BossOnly(NEKZALI, {
+					i(278285, {["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 }}),	-- Nebulous Voidcache: Soulcoiler Nek'zali
 					i(280305),	-- Soulcoil Remnant (PET!)
 					i(279115),	-- Soulcoiler's Ritual Candle (DECOR!)
 					i(281227),	-- Soulcoiler's Rush'kah (COSMETIC!)
 				}),
 				BossOnly(ENTOMBED, {
+					i(278283, {["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 }}),	-- Nebulous Voidcache: Entombed Sentinels
 					i(264716),	-- Hexed Tomb Brazier (DECOR!) [NYI??]
 				}),
 				BossOnly(VASHNIK, {
+					i(278287, {["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 }}),	-- Nebulous Voidcache: Vashnik
 					i(272361),	-- Venomous Pyre (DECOR!)
 				}),
 				BossOnly(EXPLORERS, {
 					i(279118),	-- Lost Explorers Mailbox (DECOR!)
+					i(278286, {["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 }}),	-- Nebulous Voidcache: Tortollan Explorers
 				}),
 				BossOnly(SSZORAK, {
+					i(278288, {["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 }}),	-- Nebulous Voidcache: Sszorak
 					i(244343),	-- Vessel of the Howling Ossuary (DECOR!) [Check]
 				}),
 				BossOnly(TWIN_FANGS, {
+					i(278289, {["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 }}),	-- Nebulous Voidcache: The Twin Fangs
 					i(273070),	-- Pattern: Adorned Fang (RECIPE!)
 					i(279122),	-- Venom-Fanged Font (DECOR)
 				}),
@@ -427,9 +438,12 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, {
 					i(279449, {	-- Hex Troll Mask Fragment
 						i(275937),	-- Hex Lord's Visage (COSMETIC!)
 					}),
+					i(278290, {["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 }}),	-- Nebulous Voidcache: The Coiled Alter
 				}),
 				BossOnly(ULATEK, {
 					i(279500),	-- "Rage of the Shackled" Mural (DECOR!)
+					i(278340),	-- Blighted Pearl (CI!)
+					i(278284, {["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 }}),	-- Nebulous Voidcache: Ula'tek
 					i(279127, { ["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 } }),	-- The Venomous Abyss Argent Trophy (DECOR!)
 				}),
 			}),
@@ -444,7 +458,6 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, {
 					Boss(NEKZALI),
 					Boss(TWIN_FANGS),
 				}),
-				-- TODO: verify when available, changed from PTR
 				header(HEADERS.LFGDungeon, 3317, {	-- The Essence of Venom
 					Boss(ENTOMBED),
 					Boss(VASHNIK),
@@ -621,7 +634,11 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 		["timeline"] = { ADDED_12_1_0 },
 		["groups"] = {
 			-- LFR
+			hqt(98084, name(HEADERS.NPC, 261491)),	-- Noxiss Venomcrest
 			hqt(98080, name(HEADERS.NPC, 261492)),	-- Gorefang the Reaver
+			hqt(98092, name(HEADERS.NPC, 266538)),	-- Shriekcoil
+			hqt(98076, name(HEADERS.NPC, 261503)),	-- Frightmaw
+			hqt(98088, name(HEADERS.Encounter, COILED_ALTAR)),	-- Coiled Altar
 			-- N
 			hqt(98083, name(HEADERS.NPC, 261491)),	-- Noxiss Venomcrest
 			hqt(98079, name(HEADERS.NPC, 261492)),	-- Gorefang the Reaver
@@ -641,6 +658,8 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.MID, {
 			-- M
 			hqt(98081, name(HEADERS.NPC, 261491)),	-- Noxiss Venomcrest
 			hqt(98077, name(HEADERS.NPC, 261492)),	-- Gorefang the Reaver
+			hqt(98089, name(HEADERS.NPC, 266538)),	-- Shriekcoil
+			hqt(98073, name(HEADERS.NPC, 261503)),	-- Frightmaw
 		},
 	}),
 }))

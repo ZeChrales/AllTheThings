@@ -75,22 +75,6 @@ ObjectDB[256] = {
 		cn = "通缉",
 	},
 };
--- #else
-ObjectDB[57] = {
-	readable = "Bloodscalp Lore Tablet",
-	model = 200640,
-	text = {
-		en = "Bloodscalp Lore Tablet",
-		es = "Tablilla de conocimiento Sangrapellejo",
-		de = "Schrifttafel der Blutskalpe",
-		fr = "Tablette de savoir scalp-rouge",
-		it = "Tavoletta Mistica degli Scalporosso",
-		pt = "Tabuleta de História dos Sanguescalpo",
-		ru = "Легенды и предания племени Кровавого Скальпа",
-		ko = "붉은머리 전통지식 서판",
-		cn = "月亮照耀着山谷",
-	},
-};
 -- #endif
 
 -- #if BEFORE MOP
@@ -108,6 +92,7 @@ ObjectDB[206293] = {
 		pt = "Terminal A. I. D.A.",
 		ru = "Терминал АИДА",
 		ko = "인공지능 단말기",
+		cn = "A. I. D.A.终端",
 	},
 };
 -- #endif

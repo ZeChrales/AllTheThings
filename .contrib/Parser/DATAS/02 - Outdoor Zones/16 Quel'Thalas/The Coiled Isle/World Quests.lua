@@ -16,8 +16,19 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					["coord"] = { 64.7, 60.6, MAP.MIDNIGHT.THE_COILED_ISLE },
 					["qi"] = 265622,	-- Knotted Swamp Stick
 				}),
+				q(94571, {	-- Ashes of History
+					["coord"] = { 67.1, 63.4, MAP.MIDNIGHT.THE_COILED_ISLE },
+					["qi"] = 265399,	-- Ritually-Charred Bones (QI!)
+				}),
 				q(93672, {	-- Blade to Rest
 					["coord"] = { 45.7, 12.8, MAP.MIDNIGHT.THE_COILED_ISLE },
+				}),
+				q(94612, {	-- Claws for Celebration
+					["qis"] = {
+						270346,	-- Big Meaty Claw (QI!)
+						260425,	-- Morsel of Crab Meat (QI!)
+					},
+					["coord"] = { 68.2, 78.4, MAP.MIDNIGHT.THE_COILED_ISLE },
 				}),
 				q(93669, {	-- Curse of Greed
 					["coord"] = { 34.4, 85.3, MAP.MIDNIGHT.THE_COILED_ISLE },
@@ -37,7 +48,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				q(95381, {	-- Fire in the Sky
 					["coord"] = { 54.2, 43.3, MAP.MIDNIGHT.THE_COILED_ISLE },
 				}),
-				q(94996, {
+				q(94996, {	-- Gaze of the Dead
 					["coord"] = { 46.9, 64.9, MAP.MIDNIGHT.THE_COILED_ISLE },
 					["qi"] = 267233,	-- Dehydrated Troll Eye Necklace (QI!)
 				}),
@@ -67,7 +78,7 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 					["groups"] = { i(260420) },	-- Swamp Apple
 				}),
 				q(94967, {	-- Ki'clak Snack Attack
-					--["sourceQuest"] = 93906,	-- Untethering the Two
+					["sourceQuest"] = 93906,	-- Untethering the Two
 					["coord"] = { 69.6, 56.5, MAP.MIDNIGHT.THE_COILED_ISLE },
 					["groups"] = {
 						i(267085),	-- Swirling Ectoplasm
@@ -81,6 +92,9 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				q(95931, {	-- Open Sea Fishing
 					["coord"] = { 66.8, 32.6, MAP.MIDNIGHT.THE_COILED_ISLE },
 					["minReputation"] = { FACTION_CAPTAIN_TOKKA, 4 },
+				}),
+				q(95807, {	-- Over Easy
+					["coord"] = { 45.5, 29.8, MAP.MIDNIGHT.THE_COILED_ISLE },
 				}),
 				q(94611, {	-- Predators and Prey
 					["coord"] = { 64.7, 66.1, MAP.MIDNIGHT.THE_COILED_ISLE },
@@ -97,6 +111,10 @@ root(ROOTS.Zones, m(MAP.MIDNIGHT.QUELTHALAS, {
 				q(95253, {	-- Shocking Appetites
 					["coord"] = { 61.3, 65.4, MAP.MIDNIGHT.THE_COILED_ISLE },
 					["groups"] = { i(268628) },	-- Zapgut Gland (QI!)
+				}),
+				q(94876, {	-- Show Some Backbone
+					["qi"] = 266327,	-- Pristine Spinal Barb (QI!)
+					["coord"] = { 31.0, 75.0, MAP.MIDNIGHT.THE_COILED_ISLE },
 				}),
 				q(95990, {	-- Slithering Heights
 					["coord"] = { 38.7, 47.4, MAP.MIDNIGHT.THE_COILED_ISLE },

@@ -642,6 +642,8 @@ root(ROOTS.Housing, {
 			i(276246, {	-- Mechanically Indistinguishable Pepe (DECOR!)
 				-- There should be a Pepe, sitting atop one of the Bulletin Board pillars. You interact with it and then go to the vendors to buy a Mechanical version.
 				["cost"] = { { "c", 3363, 10 } },	-- 10x Community Coupons
+				-- Exo Note: This "hack" allows tracking of the Pepe Decor and adds it as an additional source
+				["groups"] = { i(276230) },	-- Pepe (DECOR!)
 			}),
 			i(277138),	-- Silvermoon Dragonhawk Incubator (DECOR!)
 			i(277142),	-- Westfall Pet Cage (DECOR!)
@@ -650,23 +652,34 @@ root(ROOTS.Housing, {
 	n_CommonVendorItems({
 		["timeline"] = { ADDED_12_1_0 },
 		["crs"] = {
-			263258,	-- Cousin Shortkaf <Kafa Trader> [Founder's Point]
+			271604,	-- Holly Twinklebright <Holiday Decor Vendor> [Founder's Point]
+			271366,	-- Jolli Maxiboom <Holiday Decor Vendor> [Razorwind Shores]
 		},
 		["groups"] = {
-			i(271717),	-- Cup of Kafa
-			i(248404),	-- Stack of Kafa Mugs (DECOR!)
-		},
-	}),
-	n_CommonVendorItems({
-		["timeline"] = { ADDED_12_1_0 },
-		["crs"] = {
-			267856,	-- J-3T 3000 [Founder's Point]
-		},
-		["groups"] = {
-			i(276297),	-- Rustbolt Jetpack
+			i(280335),	-- Brewfest Crate (DECOR!)
+			i(248101),	-- Traditional Brewfest Stein (DECOR!)
 		},
 	}),
 	n(VENDORS, {
+		n(263258, {	-- Cousin Shortkaf <Kafa Trader>
+			["coords"] =  {
+				{ 55.1, 43.6, FOUNDERS_POINT },
+				{ 55.2, 61.9, RAZORWIND_SHORES },
+			},
+			["timeline"] = { ADDED_12_1_0 },
+			["groups"] = {
+				i(271717),	-- Cup of Kafa
+				i(248404),	-- Stack of Kafa Mugs (DECOR!)
+			},
+		}),
+		n(267856, {	-- J-3T 3000
+			["coords"] =  {
+				{ 55.2, 43.6, FOUNDERS_POINT },
+				{ 53.1, 54.5, RAZORWIND_SHORES },
+			},
+			["timeline"] = { ADDED_12_1_0 },
+			["groups"] = { i(276297) },	-- Rustbolt Jetpack
+		}),
 		n(255654, {	-- Lorisin
 			["coord"] = { 41.6, 61.8, FOUNDERS_POINT },
 			["timeline"] = { ADDED_11_2_7 },
@@ -675,6 +688,18 @@ root(ROOTS.Housing, {
 				i(262563),	-- Bolt of Elegant Silk
 				i(262564),	-- Bolt of Soft Wool
 				i(262565),	-- Spool of Thread
+			},
+		}),
+		n(257168, {	-- Throska <Bartender>
+			["coords"] =  {
+				{ 62.0, 82.2, FOUNDERS_POINT },
+				{ 39.0, 74.0, RAZORWIND_SHORES },
+			},
+			["timeline"] = { ADDED_11_2_7 },
+			["groups"] = {
+				i(279458, { ["timeline"] = { ADDED_12_1_0 } }),	-- Draenei Rock Goblet (DECOR!)
+				i(247776, { ["timeline"] = { ADDED_12_1_0 } }),	-- Glowing Zangarshroom Cup (DECOR!)
+				i(279455, { ["timeline"] = { ADDED_12_1_0 } }),	-- K'areshi Tea Cup (DECOR!)
 			},
 		}),
 	}),

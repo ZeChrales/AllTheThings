@@ -26,7 +26,7 @@ GORDOK_COMMONS = createHeader({
 	readable = "Gordok Commons",
 	icon = 236695,
 	text = {
-		en = [[~DUNGEON_FLOOR_DIREMAUL5.." (" .. L.NORTH ..")"]]
+		en = [[~DUNGEON_FLOOR_DIREMAUL1.." (" .. L.NORTH ..")"]]
 	},
 	description = {
 		en = "This part of the instance can be accessed from the northern-most portal.",
@@ -46,7 +46,7 @@ CAPITAL_GARDENS = createHeader({
 	readable = "Capital Gardens",
 	icon = 134162,
 	text = {
-		en = [[~DUNGEON_FLOOR_DIREMAUL5.." (" .. L.WEST ..")"]]
+		en = [[~DUNGEON_FLOOR_DIREMAUL2.." (" .. L.WEST ..")"]]
 	},
 	description = {
 		en = "This part of the instance can be accessed from the western-most portal. (left side)",
@@ -635,6 +635,7 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, applyclassicphase(PHASE_ONE_D
 					},
 				}),
 				q(27125, {	-- King of the Gordok [Alliance]
+					["sourceQuest"] = 27133,	-- Eyes in the Sky
 					["qg"] = 45040,	-- Druid of the Talon
 					["timeline"] = { ADDED_4_0_3 },
 					["maps"] = GORDOK_COMMONS_MAPS,
@@ -1491,14 +1492,16 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, applyclassicphase(PHASE_ONE_D
 						["description"] = "Talk to him for him to break down the door.",
 					}),
 					applyclassicphase(PHASE_FIVE_TIER_ZERO_POINT_FIVE_SETS, n_conditional(16097, {	-- Isalien
-						["description"] = "This boss can be summoned using items from the |cff3399ff(Dungeon Set 2 questline)|r.",
+						["description"] = "This boss can be summoned using items from the |cff3399ff(Dungeon Set 2 questline)|r.\nSummon Location: Alzzin the Wildshaper's room.",
+						-- #if BEFORE 6.0.2
 						["cost"] = {
 							{ "i", 22050, 1 },	-- Brazier of Beckoning [Isalien]
-							{ "i", 22057, 1 },	-- Brazier of Invocation
 						},
+						-- #endif
+						["provider"] = { "i", 22057 },	-- Brazier of Invocation
 						-- #if AFTER 4.0.3
-						-- This init function unmarks the removed from game flag for folks with the brazier.
-						["OnInit"] = FUNCTION_TEMPLATES.OnInit.BrazierAccess,
+						["sourceQuest"] = 8996,	-- Return to Bodley
+						["u_sqs"] = true,	-- remove the u flag if sourcequests are completed
 						-- #endif
 						["timeline"] = { REMOVED_4_0_3 },
 						["groups"] = {
@@ -1812,8 +1815,20 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, applyclassicphase(PHASE_ONE_D
 						},
 						-- #endif
 					}),
-					o(179501,	-- Knot Thimblejack's Cache
-						bubbleDownSelf({ ["timeline"] = { REMOVED_4_0_3 } }, {
+					n(14338, {	-- Knot Thimblejack
+						["timeline"] = { ADDED_10_1_5 },
+						["groups"] = {
+							r(22813, {	-- Gordok Ogre Suit
+								["requireSkill"] = TAILORING,
+								["sourceQuest"] = 27119,	-- The Gordok Ogre Suit
+							}),
+							r(22815, {	-- Gordok Ogre Suit
+								["requireSkill"] = LEATHERWORKING,
+								["sourceQuest"] = 27119,	-- The Gordok Ogre Suit
+							}),
+						},
+					}),
+					o(179501, {	-- Knot Thimblejack's Cache
 						["sourceQuest"] = 5525,	-- Free Knot!
 						-- #if BEFORE 4.0.3
 						["cost"] = { { "i", 18250, 1 } },	-- Gordok Shackle Key
@@ -1877,10 +1892,9 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, applyclassicphase(PHASE_ONE_D
 							})),
 							-- #endif
 						},
-					})),
+					}),
 					o(179499, {	-- Ogre Tannin Basket
 						["description"] = "Beware! Looting the Ogre Tannin will cause a Gordok Bushwacker to spawn. Quote is homage to the movie The Silence of the Lambs.\n\n'NO! It puts the tannin in the basket, or it gets the mallet again!'",
-						["qg"] = 14351,	-- Gordok Bushwacker
 						["groups"] = {
 							i(18240),	-- Ogre Tannin
 						},
@@ -1999,21 +2013,9 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, applyclassicphase(PHASE_ONE_D
 							}),
 						},
 					}),
-					n(14338, bubbleDownSelf({ ["timeline"] = { ADDED_10_1_5 } }, {	-- Knot Thimblejack
-						["groups"] = {
-							r(22813, {	-- Gordok Ogre Suit
-								["requireSkill"] = TAILORING,
-								["sourceQuest"] = 27119,	-- The Gordok Ogre Suit
-							}),
-							r(22815, {	-- Gordok Ogre Suit
-								["requireSkill"] = LEATHERWORKING,
-								["sourceQuest"] = 27119,	-- The Gordok Ogre Suit
-							}),
-						},
-					})),
 					o(179564, {	-- Gordok Tribute Chest
 						["description"] = "Speak with Mizzle after killing |cFFFFD700King Gordok|r to spawn the Tribute Chest.\n\nA full Tribute Run (5 items) requires leaving all bosses alive except King Gordok, and also requires activating the Frost Trap & fooling Kromcrush with the Ogre Suit, granted by the Goblin near the trap.",
-						["qg"] = 14353,	-- Mizzle the Crafty
+						["provider"] = { "n", 14353 },	-- Mizzle the Crafty
 						["modelScale"] = 3,
 						["groups"] = {
 							i(18655),	-- Schematic: Major Recombobulator (RECIPE!)
@@ -2317,6 +2319,20 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, applyclassicphase(PHASE_ONE_D
 							i(18755),	-- Xorothian Firestick
 							i(18756),	-- Dreadguard Protector
 							i(18754),	-- Fel Hardened Bracers
+						},
+					}),
+					n(16032, {	-- Falrin Treeshaper <House of Shen'dralar>
+						["description"] = "Found in the Dire Maul Library.",
+						["groups"] = {
+							n(SPECIAL, {
+								["description"] = "Available if a specific Quest (9015) has been completed.",
+								["sourceQuest"] = 9015,	-- The Challenge
+								["timeline"] = { ADDED_1_11_1, REMOVED_4_0_3 },
+								["u_sqs"] = true,	-- remove the u flag if sourcequests are completed
+								["groups"] = {
+									i(21986),	-- Banner of Provocation
+								},
+							}),
 						},
 					}),
 					e(410, {	-- Prince Tortheldrin

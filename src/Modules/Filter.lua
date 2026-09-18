@@ -393,21 +393,6 @@ end);
 -- we actually don't "really" care to have level filter in the RawCharacterFilters... just causes more inaccurate quest reports since level req on every expac changes all the time
 RawCharacterFilters.Level = nil;
 
--- SkillLevel (Classic only)
-if app.IsClassic then
-app.MaximumSkillLevel = 99999;
-DefineToggleFilter("SkillLevel", CharacterFilters,
-function(group)
-	if group.learnedAt then
-		return app.MaximumSkillLevel >= group.learnedAt;
-	end
-	-- no skill level requirement on the group, have to include it
-	return true;
-end);
--- SkillLevel doesn't really exclude a character from seeing a given Thing
-RawCharacterFilters.SkillLevel = nil;
-end
-
 -- Trackable
 -- Whether this group can be 'tracked'
 local function FilterTrackable(group)
@@ -419,20 +404,27 @@ api.Set.Trackable = function(active)
 end
 
 -- Expansion Filters (Retail Only)
-if app.IsRetail then
+if app.IsRetail and app.GameBuildVersion > 70000 then
 	-- Cache for expansion filter settings (indexed by expansion ID for fast lookup)
 	local ExpansionFilters = {}
 
 	DefineToggleFilter("ExpansionContent", AccountFilters,
 	function(item)
-		-- Check if item has awp (added with patch) field
+		if item.g and not item.collectible then
+			return true
+		end
+
+		-- Prefer the containing expansion over an item's own awp value.
+		local expansionID = GetRelativeValue(item, "expansionID")
+		if expansionID then
+			return ExpansionFilters[math_floor(expansionID)]
+		end
+
 		local awp = GetRelativeValue(item, "awp")
 		if awp then
 			-- awp field uses patch format like 10205 for patch 1.2.5
 			-- Extract expansion ID from patch value (e.g., 10205 -> 1)
-			local expansionID = math_floor(awp / 10000)
-			-- Direct lookup: if ExpansionFilters[expansionID] is false, filter it out
-			return ExpansionFilters[expansionID]
+			return ExpansionFilters[math_floor(awp / 10000)]
 		end
 
 		return true
@@ -659,7 +651,7 @@ app.RecursiveFilter = RecursiveFilter;
 local function CacheSettingsData()
 	SettingsUnobtainable = app.Settings:GetRawSettings("Unobtainable");
 	wipe(SettingsFilterIDs)
-	local rawFilters = app.Settings:GetRawFilters();
+	local rawFilters = app.Settings:GetRawSettings("Filters");
 	for k,v in next, rawFilters do
 		-- app.PrintDebug("f:user",k,v)
 		SettingsFilterIDs[k] = v;

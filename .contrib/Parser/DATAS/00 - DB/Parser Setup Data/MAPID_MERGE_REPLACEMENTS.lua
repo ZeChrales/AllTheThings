@@ -8,7 +8,7 @@
 -- "WARN: Failed to merge data which requires a Source: [mapID]:[###]"
 -- but the missing map can't be sourced under NYI or Unsorted because it's used in 'maps' in available maps
 
-MAPID_MERGE_REPLACEMENTS = {
+for mapID,newMapID in pairs({
 	-- #if AFTER CATA
 	[224] = THE_CAPE_OF_STRANGLETHORN,
 	-- #endif
@@ -24,4 +24,6 @@ MAPID_MERGE_REPLACEMENTS = {
 	[2272] = THE_RINGING_DEEPS,
 	[2273] = HALLOWFALL,
 	-- #endif
-}
+}) do
+	MAPID_MERGE_REPLACEMENTS[mapID] = newMapID;
+end

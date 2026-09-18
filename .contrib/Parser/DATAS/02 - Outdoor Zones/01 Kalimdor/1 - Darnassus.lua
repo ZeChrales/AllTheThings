@@ -278,7 +278,7 @@ root(ROOTS.Zones, m(KALIMDOR, {
 				q(10520, {	-- Assisting Arch Druid Staghelm [The Exodar]
 					["qg"] = 16739,	-- Caregiver Breel <Innkeeper>
 					["coord"] = { 59.6, 19.4, THE_EXODAR },
-					["timeline"] = { ADDED_2_0_1, REMOVED_4_0_3 },
+					["timeline"] = { ADDED_2_0_3, REMOVED_4_0_3 },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 47,
@@ -982,7 +982,7 @@ root(ROOTS.Zones, m(KALIMDOR, {
 				q(9432, {	-- Travel to Astranaar [Draenei]
 					["qg"] = 17105,	-- Emissary Valustraa
 					["coord"] = { 38.6, 81.0, DARNASSUS },
-					["timeline"] = { ADDED_2_0_1 , REMOVED_4_0_3 },
+					["timeline"] = { ADDED_2_0_3 , REMOVED_4_0_3 },
 					["races"] = { DRAENEI },
 					["lvl"] = 18,
 				}),
@@ -1060,7 +1060,7 @@ root(ROOTS.Zones, m(KALIMDOR, {
 							["cr"] = 6128,	-- Vorlus Vilehoof
 						}),
 						-- #if BEFORE CATA
-						recipe(71),		-- Defensive Stance
+						recipe(71),	-- Defensive Stance
 						-- recipe(7386),	-- Sunder Armor	[TODO: Users are reporting they can't collect this.]
 						recipe(355),	-- Taunt
 						-- #endif

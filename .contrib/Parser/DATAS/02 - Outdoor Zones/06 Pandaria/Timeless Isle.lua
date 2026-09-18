@@ -1749,6 +1749,7 @@ root(ROOTS.Zones, {
 						},
 						description = {
 							en = "Buy a Kukuru's Cache Key to open this. Has a very small chance of containing a Burden of Eternity and more frequently, the Bonkers pet.",
+							cn = "购买库库鲁的宝箱钥匙即可开启。有极低几率开出不朽之责，更常见的是宠物邦卡斯。",
 						},
 					}), {
 						["providers"] = {
@@ -2113,19 +2114,19 @@ root(ROOTS.Zones, {
 								["cost"] = { { "c", 777, 10000 } },	-- 10,000x Timeless Coin
 							}),
 							i(103977, {	-- Time-Worn Journal
-								["cost"] = { { "c", 777, 500 } },		-- 500x Timeless Coin
+								["cost"] = { { "c", 777, 500 } },	-- 500x Timeless Coin
 							}),
 							i(104013, {	-- Timeless Cloth Armor Cache
-								["cost"] = { { "c", 777, 7500 } },		-- 7,500x Timeless Coin
+								["cost"] = { { "c", 777, 7500 } },	-- 7,500x Timeless Coin
 							}),
 							i(104012, {	-- Timeless Leather Armor Cache
-								["cost"] = { { "c", 777, 7500 } },		-- 7,500x Timeless Coin
+								["cost"] = { { "c", 777, 7500 } },	-- 7,500x Timeless Coin
 							}),
 							i(104010, {	-- Timeless Mail Armor Cache
-								["cost"] = { { "c", 777, 7500 } },		-- 7,500x Timeless Coin
+								["cost"] = { { "c", 777, 7500 } },	-- 7,500x Timeless Coin
 							}),
 							i(104009, {	-- Timeless Plate Armor Cache
-								["cost"] = { { "c", 777, 7500 } },		-- 7,500x Timeless Coin
+								["cost"] = { { "c", 777, 7500 } },	-- 7,500x Timeless Coin
 							}),
 							i(105925, {	-- Yak-Herder's Longstaff
 								["cost"] = { { "c", 777, 20000 } },	-- 20,000x Timeless Coin

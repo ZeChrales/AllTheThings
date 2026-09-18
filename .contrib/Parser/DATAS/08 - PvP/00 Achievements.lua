@@ -24,11 +24,11 @@ root(ROOTS.PVP, pvp(n(ACHIEVEMENTS, {
 	applyclassicphase(CATA_PHASE_ONE, ach(5363, {	-- 250000 Honorable Kills
 		["timeline"] = { ADDED_4_0_3 },
 		["groups"] = {
-			title(184),		-- <Name> the Bloodthirsty
+			title(184),	-- <Name> the Bloodthirsty
 		},
 	})),
 	applyclassicphase(TBC_PHASE_ONE, ach(230, {	-- Battlemaster (Alliance)
-		-- #if AFTER 2.0.1
+		-- #if AFTER 2.0.3
 		-- Meta Achievement
 		["sym"] = {{"meta_achievement",
 			1167,	-- Master of Alterac Valley
@@ -39,7 +39,7 @@ root(ROOTS.PVP, pvp(n(ACHIEVEMENTS, {
 		-- #endif
 		["timeline"] = {
 			-- #if ANYCLASSIC
-			ADDED_2_0_1,
+			ADDED_2_0_3,
 			-- #else
 			ADDED_3_0_2,
 			-- #endif
@@ -51,12 +51,12 @@ root(ROOTS.PVP, pvp(n(ACHIEVEMENTS, {
 				["timeline"] = { ADDED_3_0_2 }
 			}),
 			-- #else
-			title(41),		-- Battlemaster <Name>
+			title(41),	-- Battlemaster <Name>
 			-- #endif
 		},
 	})),
 	applyclassicphase(TBC_PHASE_ONE, ach(1175, {	-- Battlemaster (Horde)
-		-- #if AFTER 2.0.1
+		-- #if AFTER 2.0.3
 		-- Meta Achievement
 		["sym"] = {{"meta_achievement",
 			-- #if AFTER 4.3.0
@@ -73,7 +73,7 @@ root(ROOTS.PVP, pvp(n(ACHIEVEMENTS, {
 		-- #endif
 		["timeline"] = {
 			-- #if ANYCLASSIC
-			ADDED_2_0_1,
+			ADDED_2_0_3,
 			-- #else
 			ADDED_3_0_2,
 			-- #endif
@@ -85,7 +85,7 @@ root(ROOTS.PVP, pvp(n(ACHIEVEMENTS, {
 				["timeline"] = { ADDED_3_0_2 }
 			}),
 			-- #else
-			title(41),		-- Battlemaster <Name>
+			title(41),	-- Battlemaster <Name>
 			-- #endif
 		},
 	})),
@@ -134,7 +134,46 @@ root(ROOTS.PVP, pvp(n(ACHIEVEMENTS, {
 	ach(19417, {		-- Brawlroom Blitzer
 		["timeline"] = { ADDED_10_2_0 },
 	}),
-	applyclassicphase(PHASE_TWO, ach(727)),	-- Call in the Cavalry (automated)
+	applyclassicphase(PHASE_TWO, ach(727, {	-- Call in the Cavalry (automated)
+		-- Each criteria is automated from the War Mount it is earned by, but the restrictions that
+		-- Item carries are not, so every mount in the achievement counts against every character.
+		["groups"] = {
+			-- The original War Mounts need the matching riding skill, which is why the Items
+			-- themselves are race restricted. 2.0.1 replaced them with unrestricted versions.
+			-- #if BEFORE 2.0.1
+			crit(6213, {	-- Black Battlestrider (18243)
+				["races"] = { DWARF, GNOME },
+			}),
+			crit(6214, {	-- Black War Kodo (18247)
+				["races"] = HORDE_ONLY,
+			}),
+			crit(6215, {	-- Black War Ram (18244)
+				["races"] = ALLIANCE_ONLY,
+			}),
+			crit(6216, {	-- Black War Steed (18241)
+				["races"] = ALLIANCE_ONLY,
+			}),
+			crit(6217, {	-- Black War Wolf (18245)
+				["races"] = HORDE_ONLY,
+			}),
+			crit(6219, {	-- Black War Tiger (18242)
+				["races"] = ALLIANCE_ONLY,
+			}),
+			crit(6220, {	-- Black War Raptor (18246)
+				["races"] = { ORC, UNDEAD, TROLL },
+			}),
+			crit(6222, {	-- Red Skeletal Warhorse (18248)
+				["races"] = { ORC, UNDEAD, TROLL },
+			}),
+			-- #endif
+			crit(6221, {	-- Swift Warstrider (34129)
+				["timeline"] = { ADDED_2_3_0 },
+			}),
+			crit(6218, {	-- Black War Elekk (35906)
+				["timeline"] = { ADDED_2_4_0 },
+			}),
+		},
+	})),
 	applyclassicphase(WRATH_PHASE_ONE, ach(908, {	-- Call to Arms! (Alliance)
 		["timeline"] = { ADDED_3_0_2 },
 		["races"] = ALLIANCE_ONLY,
@@ -951,10 +990,10 @@ root(ROOTS.PVP, pvp(n(ACHIEVEMENTS, {
 		-- #if NOT ANYCLASSIC
 		["groups"] = {
 			-- TODO: Maybe make this appear in the mini list?
-			crit(6633),		-- Thunder Bluff
-			crit(6634),		-- Silvermoon City
-			crit(6635),		-- Orgrimmar
-			crit(6636),		-- Undercity
+			crit(6633),	-- Thunder Bluff
+			crit(6634),	-- Silvermoon City
+			crit(6635),	-- Orgrimmar
+			crit(6636),	-- Undercity
 		},
 		-- #endif
 	}),
@@ -964,10 +1003,10 @@ root(ROOTS.PVP, pvp(n(ACHIEVEMENTS, {
 		-- #if NOT ANYCLASSIC
 		["groups"] = {
 			-- TODO: Maybe make this appear in the mini list?
-			crit(6637),		-- Ironforge
-			crit(6638),		-- Darnassus
-			crit(6639),		-- The Exodar
-			crit(6640),		-- Stormwind City
+			crit(6637),	-- Ironforge
+			crit(6638),	-- Darnassus
+			crit(6639),	-- The Exodar
+			crit(6640),	-- Stormwind City
 		},
 		-- #endif
 	}),

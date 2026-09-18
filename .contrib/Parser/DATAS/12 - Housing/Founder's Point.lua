@@ -208,11 +208,11 @@ root(ROOTS.Housing, m(FOUNDERS_POINT, {
 				["groups"] = { i(245576) },	-- Bel'ameth Round Interior Pillar (DECOR!)
 			}),
 			q(92994, {	-- Decor Treasure Hunt
-				["coord"] = { 36.9, 32.9, FOUNDERS_POINT },		-- Treasure
+				["coord"] = { 36.9, 32.9, FOUNDERS_POINT },	-- Treasure
 				["groups"] = { i(245575) },	-- Bel'ameth Interior Wall (DECOR!)
 			}),
 			q(92995, {	-- Decor Treasure Hunt
-				["coord"] = { 30.9, 31.1, FOUNDERS_POINT },		-- Treasure
+				["coord"] = { 30.9, 31.1, FOUNDERS_POINT },	-- Treasure
 				["groups"] = { i(255650) },	-- Elegant Table Lamp (DECOR!)
 			}),
 			q(92996, {	-- Decor Treasure Hunt
@@ -277,7 +277,6 @@ root(ROOTS.Housing, m(FOUNDERS_POINT, {
 				["groups"] = { i(246255) },	-- Bel'ameth Large Platform (DECOR!)
 			}),
 		}));
-		-- TODO: Instead of duplicate rewards on vendors + source quest, maybe we can link them via crs and rely on Filler? need to test...
 		n(VENDORS, {
 			n(257297, {	-- "Fen" Rucket <Artisanal Room "Planner">
 				["coord"] = { 63.6, 79.6, FOUNDERS_POINT },
@@ -297,9 +296,8 @@ root(ROOTS.Housing, m(FOUNDERS_POINT, {
 			n(255216, {	-- Balen Starfinder <Decor Vendor>
 				["coord"] = { 52.2, 37.8, FOUNDERS_POINT },
 			}),
-			n(263258, {	-- Cousin Shortkaf <Kafa Trader>
-				["coord"] =  { 55.1, 43.6, FOUNDERS_POINT },
-				["timeline"] = { ADDED_12_1_0 },
+			n(257321, {	-- Devin Slatesmith <Decor Vendor>
+				["coord"] = { 52.0, 38.6, FOUNDERS_POINT },
 			}),
 			n(255213, {	-- Faarden the Builder <Decor Vendor>
 				["coord"] = { 52.0, 38.4, FOUNDERS_POINT },
@@ -307,9 +305,8 @@ root(ROOTS.Housing, m(FOUNDERS_POINT, {
 			n(257321, {	-- Fel'orei Moonstrider <Westfall Decor Vendor>
 				["coord"] = { 52.0, 38.5, FOUNDERS_POINT },
 			}),
-			n(267856, {	-- J-3T 3000
-				["coord"] =  { 55.2, 43.6, FOUNDERS_POINT },
-				["timeline"] = { ADDED_12_1_0 },
+			n(271604, {	-- Holly Twinklebright <Holiday Decor Vendor>
+				["coord"] = { 54.4, 32.8, FOUNDERS_POINT },
 			}),
 			n(255942, {	-- Jendry Clockson <Donut Vendor>
 				["groups"] = { i(260588) },	-- Jendry's Donut

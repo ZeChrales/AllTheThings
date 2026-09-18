@@ -2578,7 +2578,6 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(40825, { ["name"] = "Arcano-Plasm", }),	-- Arcano-Plasm
 			q(40725, { ["name"] = "Arganax", }),	-- Arganax
 			q(42456, { ["name"] = "Assn Rogue - Flavor Event 01 (Horde)", }),	-- Assn Rogue - Flavor Event 01 (Horde)
-			q(42482, { ["name"] = "Assn Rogue - Flavor Event 03", }),	-- Assn Rogue - Flavor Event 03
 			q(42507, { ["name"] = "Assn Rogue - Flavor Event 04", }),	-- Assn Rogue - Flavor Event 04
 			q(43584, { ["name"] = "Battlelord of the Valarjar", }),	-- Battlelord of the Valarjar
 			q(40918, { ["name"] = "Black Rook Hold Heroic Reward Quest", }),	-- Black Rook Hold Heroic Reward Quest
@@ -9180,7 +9179,6 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(81438),	--
 			q(81439),	--
 			q(81454),	--
-			q(81466),	--
 			q(81474),	--
 			q(81515),	--
 			q(81516),	--
@@ -9267,14 +9265,12 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(82892),	--
 			q(82893),	--
 			q(82917),	--
-			q(83034),	--
 			q(83037),	--
 			q(83095),	--
 			q(83107),	--
 			q(83133),	--
 			q(83135),	--
 			q(83136),	--
-			q(83214),	--
 			q(83218),	--
 			q(83220),	--
 			q(83221),	--
@@ -9948,7 +9944,6 @@ root(ROOTS.NeverImplemented, n(QUESTS, {
 			q(93468),	--
 			q(93492),	--
 			q(94364),	--
-			q(94780),	--
 			q(95139),	--
 			q(95281),	--
 		})),

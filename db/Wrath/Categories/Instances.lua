@@ -4,10 +4,10 @@ _.AddEventHandler("OnBuildDataCache", function(categories)
 local ach,ah,cl,crit,cs,cu,d,e,faction,flt,h,i,inst,mnt,n,o,p,prof,q,qo,r,s,settings,title,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateCharacterClass,_.CreateAchievementCriteria,_.CreateCharacterUnlockSpell,_.CreateCurrencyClass,_.CreateDifficulty,_.CreateEncounter,_.CreateFaction,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateInstance,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfession,_.CreateQuest,_.CreateQuestObjective,_.CreateRecipe,_.CreateItemSource,_.Settings,_.CreateTitle,_.CreateToy,_.CreateExpansion;
 categories.Instances=
 h(-75,{SortPriority=1,g={
-x(1,{
-h(-12,{awp=30002,g={
-ach(1283,{sym={{"meta_achievement",628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646}}}),
-ach(1285,{sym={{"meta_achievement",685,686,687,689}}})}}),
+x(1,{awp=10100,g={
+h(-12,{
+ach(1283,{awp=30002,sym={{"meta_achievement",628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646}}}),
+ach(1285,{awp=30002,sym={{"meta_achievement",685,686,687,689}}})}),
 h(-318,{c={1,2,3,4,5,7,8,9,11},rwp=40003,u=15,g={
 cl(11,{u=15,g={
 q(8905,{c={11},coords={
@@ -552,7 +552,7 @@ q(6823,{awp=10001,coords={
 [1447]={{79.2,73.6}}},lvl=55,minReputation={749,9000},qgs={13278},rwp=30008,sourceQuests={6822},u=2}),
 q(7633,{awp=10001,c={3},coords={
 [1448]={{47,24.48}}},lvl=60,qgs={14524},rwp=40003,sourceQuests={7632}}),
-q(7487,{awp=10100,coords={
+q(7487,{coords={
 [33]={{54.2,83.3}}},description="Complete this quest to be able to quickly teleport to Molten Core by simply talking to Lothos.",lvl=55,maps={242},qgs={14387},rwp=10300,u=2,g={
 qo(1,{providers={{"i",18412},{"o",179553}},u=2})}}),
 q(7848,{awp=10300,coords={
@@ -583,9 +583,9 @@ qo(1,{providers={{"n",11658}},u=2}),
 qo(2,{providers={{"n",11668}},u=2}),
 qo(3,{providers={{"n",11673}},u=2}),
 qo(4,{providers={{"n",12101}},u=2})}})}),
-h(-47,{awp=10001,g={
-i(17333,{b=1,description="Return to the Duke at Honored reputation after completing the Hands of the Enemy quest to receive this item from a dialog option.",minReputation={749,9000},q=1,rwp=30008,sourceQuests={6824},u=2}),
-i(22754,{b=1,description="Return to the Duke at Revered reputation to be given a version of your Quintessence that can be used more than once.",minReputation={749,21000},q=1,rwp=30008,sourceQuests={6824},u=2})}}),
+h(-47,{
+i(17333,{awp=10001,b=1,description="Return to the Duke at Honored reputation after completing the Hands of the Enemy quest to receive this item from a dialog option.",minReputation={749,9000},q=1,rwp=30008,sourceQuests={6824},u=2}),
+i(22754,{awp=10001,b=1,description="Return to the Duke at Revered reputation to be given a version of your Quintessence that can be used more than once.",minReputation={749,21000},q=1,rwp=30008,sourceQuests={6824},u=2})}),
 h(-63,{
 i(20951,{awp=10001,description="For this to drop, you must be on the Scrying Goggles? No Problem! quest.",q=1,rwp=40003,u=15}),
 i(17010,{q=3}),
@@ -831,7 +831,7 @@ i(17063,{b=1,f=52,lvl=60,q=4}),
 i(19138,{b=1,f=52,lvl=60,q=4}),
 i(18815,{b=1,f=53,lvl=60,q=4}),
 i(17082,{b=1,f=53,lvl=60,q=4}),
-i(17982,{awp=10100,b=1,f=52,lvl=60,q=3,rwp=10400,u=2}),
+i(17982,{b=1,f=52,lvl=60,q=3,rwp=10400,u=2}),
 i(21110,{awp=10900,b=1,q=4,rwp=40003,u=15})}})}}),
 inst(760,{coords={
 [1445]={{52.3,76.2}}},isRaid=1,lore="Onyxia is the daughter of the mighty dragon Deathwing, and sister of the scheming Nefarian, Lord of Blackrock Spire.\n\nIt is said that Onyxia delights in corrupting the mortal races by meddling in their political affairs. To this end it is believed that she takes on various humanoid forms and uses her charm and power to influence delicate matters between the different races. Some believe that Onyxia has even assumed an alias once used by her father - the title of the royal House Prestor. When not meddling in mortal concerns, Onyxia resides in a fiery cave below the Dragonmurk, a dismal swamp located within Dustwallow Marsh. There she is guarded by her kin, the remaining members of the insidious black dragonflight.",lvl=60,mapID=248,savedInstanceID=249,["zone-text-areaID"]=2159,g={
@@ -1661,7 +1661,7 @@ s(130846,20260,{b=1,f=6,loc=46,lvl=60,q=3,u=14}),
 s(130513,19897,{b=1,f=4,loc=47,lvl=60,q=4,u=14}),
 i(19898,{b=1,f=52,lvl=60,q=3,u=14})}}),
 o(180366,{description="Fishermen with 300 skill can interact with this to receive the quest item.",requireSkill=356,u=14,g={
-i(19973,{q=1,u=14})}}),
+i(19973,{q=1,requireSkill=356,u=14})}}),
 n(15114,{cost={{"i",19975,5},{"i",19974,1}},description="You can fish up Zulian Mudskunk from the Muddy Churning Waters in the instance and the lures can be purchased from Nat Pagle once you have turned in Nat's Measuring Tape.",sourceQuests={8227},u=14,g={
 ach(560,{awp=30002,rwp=40100,u=14}),
 s(130559,19944,{b=1,f=28,lvl=60,q=4,u=14}),
@@ -1711,7 +1711,7 @@ inst(743,{awp=10900,coords={
 [327]={{58.93,14.26}}},isLockoutShared=1,isRaid=1,lore="Deep within the deserts of Silithus lies an ancient and powerful race of beings known as the Qiraji. One thousand years ago, the Night Elves and Bronze Dragonflight combined their considerable powers to seal the Qiraji behind the scarab wall with the help of the children of some of the aspects. This is remembered as the \"War of the Shifting Sands\".\n\nRecently it was discovered that some of the Qiraji were finding ways past the wall. Anachronos, the bronze dragon, helped the adventurers of Azeroth open the Scarab Wall to prevent more incursions. The mortal races have now banded together to confront the evil Qiraji in their own land. A champion has opened the gate and the Horde and Alliance have driven the armies of the Qiraji back into the ruins in retreat. It now falls to heroes to delve into the lair of the Qiraji and put an end to their masters once and for all",lvl=50,mapID=247,savedInstanceID=509,u=15,g={
 h(-31,{u=15,g={
 faction(609,{icon=132136,maps={1451},u=15,g={
-crit(2045,{achID=953,awp=20001,id=1,u=17})}})}}),
+crit(2045,{achID=953,awp=20003,id=1,u=17})}})}}),
 h(-45,{u=15,g={
 cl(11,{u=15,g={
 q(8700,{c={11},coords={
@@ -3226,12 +3226,6 @@ s(124364,11628,{b=1,f=32,lvl=48,q=3}),
 s(124365,11629,{b=1,f=31,lvl=48,q=3}),
 s(124363,11627,{b=1,f=6,loc=47,lvl=48,q=3}),
 s(124359,11623,{b=1,f=3,lvl=47,q=3})}}),
-n(16059,{cost={{"i",21986,1}},description="Requires Banner of Provocation (Dungeon Set 2 Questline) to summon this boss. Loot the grey chest on the grey grate after killing the mobs. You must use the banner before the non-elites are killed.",providers={{"o",181074}},rwp=40003,u=15,g={
-i(22047,{q=1,u=15}),
-s(132704,22305,{b=1,c={5,8,9},f=4,loc=41,lvl=56,q=3,u=15}),
-s(132716,22317,{b=1,f=34,lvl=56,q=3,u=15}),
-s(132717,22318,{b=1,f=32,lvl=56,q=3,u=15}),
-s(132729,22330,{b=1,f=3,lvl=56,q=3,u=15})}}),
 e(372,{description="Approaching the center of the ring will start an event, and the High Justice will appear and approach one of the gates and release three waves of non-elite enemies, followed by one of six possible mini-bosses.",npcID=10096,g={
 n(9031,{
 s(124395,11677,{b=1,f=3,lvl=50,q=3}),
@@ -3263,7 +3257,13 @@ n(9030,{
 s(124383,11665,{b=1,f=5,loc=44,lvl=49,q=3}),
 s(124380,11662,{b=1,f=4,loc=45,lvl=49,q=3}),
 s(124411,11728,{b=1,f=6,loc=46,lvl=52,q=3}),
-i(11824,{b=1,f=52,lvl=49,q=3})})}}),
+i(11824,{b=1,f=52,lvl=49,q=3})}),
+n(16059,{description="Requires Banner of Provocation (Dungeon Set 2 Questline) to summon this boss. Loot the grey chest on the grey grate after killing the mobs. You must use the banner before the non-elites are killed.\nSummon Location: Ring of Law.",providers={{"i",21986},{"o",181074}},rwp=40003,u=15,g={
+i(22047,{q=1,u=15}),
+s(132704,22305,{b=1,c={5,8,9},f=4,loc=41,lvl=56,q=3,u=15}),
+s(132716,22317,{b=1,f=34,lvl=56,q=3,u=15}),
+s(132717,22318,{b=1,f=32,lvl=56,q=3,u=15}),
+s(132729,22330,{b=1,f=3,lvl=56,q=3,u=15})}})}}),
 e(377,{npcID=9016,g={
 s(124449,11803,{b=1,f=24,lvl=51,q=3}),
 s(124451,11805,{b=1,f=23,lvl=51,q=3}),
@@ -3445,7 +3445,9 @@ s(127751,15860,{b=1,f=7,loc=43,q=2}),
 s(127752,15861,{b=1,f=5,loc=47,q=2})}}),
 q(4764,{coords={
 [1428]={{84.8,69}}},lvl=57,qgs={9565},r=2,rwp=40003,sourceQuests={4766},g={
-qo(1,{providers={{"i",12352},{"o",175382}}})}}),
+qo(1,{providers={{"i",12352}}}),
+o(175382,{description="Can be found in a coffer in the Whelp Room behind a fallen column to the left of the ramp leading to the next room.\nNOTE: Most groups skip this room, so ask your group to clear to the column.",g={
+i(12352,{q=1})}})}}),
 q(6502,{coords={
 [1452]={{54.55,51.2}}},lvl=50,qgs={10929},r=2,rwp=30002,sourceQuests={6501},u=2,g={
 qo(1,{providers={{"i",16663}},u=2}),
@@ -3471,7 +3473,7 @@ p(90,{b=1,itemID=12529,petTypeID=8,q=1,spellID=16450})}}),
 q(5124,{coords={
 [1452]={{61,38.8}}},cost={{"i",7910,4},{"i",7078,2},{"i",12655,6},{"i",12812,1}},lvl=55,qgs={10637},requireSkill=164,rwp=40003,sourceQuests={5103},g={
 r(16655,{b=1,itemID=12699,learnedAt=290,q=3,requireSkill=164}),
-s(125012,12631,{f=7,loc=44,lvl=53,q=3})}}),
+s(125012,12631,{f=7,loc=44,lvl=53,q=3,requireSkill=164})}}),
 q(4974,{coords={
 [1454]={{32,37.8}}},lvl=55,qgs={4949},r=1,rwp=40003,sourceQuests={4941},g={
 qo(1,{providers={{"i",12630}}}),
@@ -3486,7 +3488,7 @@ i(13965,{b=1,f=53,q=3}),
 i(13968,{b=1,c={5,7,8,9,11},f=53,q=3}),
 i(13966,{b=1,f=53,q=3})}}),
 q(5103,{description="At the bottom floor of Lower Blackrock Spire near the lava.",lvl=55,providers={{"o",176090}},requireSkill=164,rwp=40003,g={
-i(12812,{b=1,providers={{"o",176089}},q=3})}}),
+i(12812,{b=1,providers={{"o",176089}},q=3,requireSkill=164})}}),
 q(4729,{coords={
 [1428]={{65.8,22}}},lvl=55,qgs={10260},rwp=40003,g={
 qo(1,{cost={{"i",12262,1}},crs={10221},description="Can be pulled outside of the room without engaging the boss.",providers={{"i",12263}}}),
@@ -3540,16 +3542,18 @@ q(6567,{coords={
 [1454]={{32,37.8}}},lvl=55,maps={1443},qgs={4949},r=1,rwp=40003,sourceQuests={6566}}),
 q(4768,{coords={
 [1418]={{3,47.6}}},lvl=57,qgs={9078},r=1,rwp=40003,sourceQuests={4769},g={
-qo(1,{providers={{"i",12358},{"o",175385}}}),
+qo(1,{providers={{"i",12358}}}),
 s(127751,15860,{b=1,f=7,loc=43,q=2}),
-s(127752,15861,{b=1,f=5,loc=47,q=2})}}),
+s(127752,15861,{b=1,f=5,loc=47,q=2}),
+o(175385,{description="This is the white tablet leaning up against the wall in the Whelp Room.",g={
+i(12358,{q=1})}})}}),
 q(5127,{coords={
 [1452]={{63.8,73.8}}},learnedAt=275,lvl=55,qgs={10918},requireSkill=164,rwp=40003,sourceQuests={5126},g={
-qo(1,{cost={{"i",12848,1}},crs={10899},providers={{"i",12847}}}),
-qo(2,{providers={{"i",12806}}}),
+qo(1,{cost={{"i",12848,1}},crs={10899},providers={{"i",12847}},requireSkill=164}),
+qo(2,{providers={{"i",12806}},requireSkill=164}),
 r(16667,{b=1,itemID=12696,learnedAt=285,q=3,requireSkill=164}),
-i(9224,{f=55,lvl=40,q=1}),
-i(12849,{b=1,q=2})}}),
+i(9224,{f=55,lvl=40,q=1,requireSkill=164}),
+i(12849,{b=1,q=2,requireSkill=164})}}),
 q(4788,{coords={
 [1446]={{66.8,24}}},lvl=40,qgs={10460},rwp=40003,sourceQuests={5065},g={
 qo(1,{providers={{"i",12740},{"o",175949}}}),
@@ -3688,7 +3692,7 @@ s(128385,16676,{f=6,loc=44,lvl=54,q=3,rwp=40003}),
 s(132630,22231,{b=1,f=4,loc=47,lvl=56,q=3}),
 i(28972,{awp=20001,b=1,f=36,lvl=55,q=3,rwp=50004}),
 i(13173,{awp=11101,b=1,lvl=55,q=3,rwp=20001,u=2})}}),
-n(16080,{cost={{"i",22057,1},{"i",22049,1}},description="This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.",rwp=40003,u=15,g={
+n(16080,{cost={{"i",22049,1}},description="This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.\nSummon Location: The Beast's room. (Requires parkour inside LBRS to the ledge above the entrance portal to access the old UBRS areas)",providers={{"i",22057}},rwp=40003,u=15,g={
 qo(2,{providers={{"i",21984}},questID=8966,u=15}),
 qo(2,{providers={{"i",22046}},questID=8989,u=15}),
 s(132721,22322,{b=1,f=23,lvl=56,q=3,u=15}),
@@ -3752,16 +3756,16 @@ s(128388,16679,{b=1,f=6,loc=41,lvl=55,q=3,rwp=40003}),
 i(13143,{b=1,f=52,lvl=56,q=4}),
 i(13164,{b=1,f=53,lvl=56,q=3,rwp=40003}),
 i(22321,{b=1,f=53,lvl=56,q=3,u=15})}})}),
-h(-354,{rwp=60002,g={
-h(-12,{awp=30002,g={
-ach(2188,{providers={{"n",10161},{"o",175124}},g={
-title(110,{style=2})}})}}),
+h(-354,{
+h(-12,{
+ach(2188,{awp=30002,providers={{"n",10161},{"o",175124}},rwp=60002,g={
+title(110,{style=2})}})}),
 h(-63,{
-i(12607,{crs={10442,10447,10814},q=3}),
-r(20030,{crs={10317},itemID=16247,learnedAt=295,q=2,requireSkill=333}),
+i(12607,{crs={10442,10447,10814},q=3,rwp=60002}),
+r(20030,{crs={10317},itemID=16247,learnedAt=295,q=2,requireSkill=333,rwp=60002}),
 r(31016,{c={4},crs={10318},itemID=24102,lvl=60,q=3,rank=9,rwp=40001,u=16}),
 s(125565,13260,{f=6,loc=47,lvl=56,q=3})}),
-n(9816,{
+n(9816,{rwp=60002,g={
 i(21988,{q=1,rwp=40003,u=15}),
 i(17322,{q=1,rwp=30008,u=2}),
 i(12929,{b=1,f=51,lvl=56,q=3}),
@@ -3769,22 +3773,20 @@ s(125248,12905,{b=1,f=3,lvl=56,q=3}),
 s(125256,12927,{b=1,f=5,loc=41,lvl=56,q=3}),
 s(128381,16672,{f=6,loc=44,lvl=54,q=3,rwp=40003}),
 i(12926,{b=1,f=52,lvl=56,q=3}),
-r(29228,{c={7},itemID=23320,lvl=60,q=3,rank=6,rwp=40001,u=16})}),
-i(12358,{description="This is the white tablet leaning up against the wall in the Whelp Room.",providers={{"o",175385}},q=1}),
-i(12352,{description="Can be found in a coffer in the Whelp Room behind a fallen column to the left of the ramp leading to the next room.\nNOTE: Most groups skip this room, so ask your group to clear to the column.",providers={{"o",175382}},q=1}),
-s(146105,13371,{b=1,description="Opening this will spawn 8 waves of drake adds in the Leeroy Jenkins room along with Solakar Flamewreath.",f=1,providers={{"o",175245}},q=2}),
-n(10264,{description="This is spawned by clicking on the Father Flame and killing 8 waves of drake adds in the Leeroy Jenkins room.",g={
+r(29228,{c={7},itemID=23320,lvl=60,q=3,rank=6,rwp=40001,u=16})}}),
+s(146105,13371,{b=1,description="Opening this will spawn 8 waves of drake adds in the Leeroy Jenkins room along with Solakar Flamewreath.",f=1,providers={{"o",175245}},q=2,rwp=60002}),
+n(10264,{description="This is spawned by clicking on the Father Flame and killing 8 waves of drake adds in the Leeroy Jenkins room.",rwp=60002,g={
 r(23081,{itemID=18657,learnedAt=290,q=2,requireSkill=202}),
 s(128404,16695,{b=1,f=4,loc=41,lvl=55,q=3,rwp=40003}),
 s(124984,12603,{b=1,f=5,loc=42,lvl=56,q=3}),
 s(124990,12609,{b=1,f=4,loc=42,lvl=56,q=3}),
 s(124987,12606,{b=1,f=5,loc=45,lvl=56,q=3}),
 s(124978,12589,{b=1,f=4,loc=45,lvl=56,q=3})}}),
-n(10509,{description="This is a Rare Creature and, as such, is not always present.",g={
+n(10509,{description="This is a Rare Creature and, as such, is not always present.",rwp=60002,g={
 s(124986,12605,{b=1,f=27,lvl=51,q=3}),
 s(124985,12604,{b=1,f=4,loc=40,lvl=55,q=3}),
 i(12930,{b=1,f=53,lvl=55,q=3})}}),
-n(10899,{
+n(10899,{rwp=60002,g={
 i(18779,{lvl=50,q=3,rwp=40001}),
 i(12848,{b=1,description="Found on the rack behind Anvilcrack in Upper Blackrock Spire.",providers={{"o",175970}},q=1,rwp=40003}),
 r(16990,{itemID=12834,learnedAt=300,q=3,requireSkill=164}),
@@ -3793,16 +3795,16 @@ r(16993,{itemID=12837,learnedAt=300,q=3,requireSkill=164}),
 s(129130,18048,{b=1,f=23,lvl=55,q=3}),
 s(125751,13502,{b=1,f=7,loc=45,lvl=58,q=3}),
 s(125747,13498,{b=1,f=7,loc=46,lvl=55,q=3}),
-s(129129,18047,{b=1,f=6,loc=47,lvl=57,q=3})}),
-n(10339,{
+s(129129,18047,{b=1,f=6,loc=47,lvl=57,q=3})}}),
+n(10339,{rwp=60002,g={
 r(17638,{itemID=13522,learnedAt=300,q=2,requireSkill=171,rwp=50004}),
 i(12871,{b=1,q=4}),
 s(125282,12953,{b=1,f=6,loc=40,lvl=55,q=3}),
 s(132624,22225,{b=1,f=4,loc=40,lvl=55,q=3,u=15}),
 s(125281,12952,{b=1,f=7,loc=40,lvl=55,q=3}),
 s(125289,12960,{b=1,f=5,loc=40,lvl=55,q=3}),
-s(128378,16669,{b=1,f=6,loc=41,lvl=55,q=3,rwp=40003})}),
-n(10429,{
+s(128378,16669,{b=1,f=6,loc=41,lvl=55,q=3,rwp=40003})}}),
+n(10429,{rwp=60002,g={
 i(12630,{q=1,rwp=40003}),
 s(124972,12583,{b=1,f=29,lvl=58,q=3}),
 s(125269,12940,{b=1,f=25,lvl=58,q=3}),
@@ -3816,8 +3818,8 @@ s(129136,18104,{b=1,f=6,loc=45,lvl=58,q=3}),
 s(125264,12935,{b=1,f=7,loc=46,lvl=58,q=3}),
 s(129134,18102,{b=1,f=4,loc=47,lvl=58,q=3}),
 s(132646,22247,{b=1,f=4,loc=47,lvl=58,q=3,u=15}),
-i(18103,{b=1,f=52,lvl=58,q=3})}),
-n(10430,{
+i(18103,{b=1,f=52,lvl=58,q=3})}}),
+n(10430,{rwp=60002,g={
 r(31018,{c={11},itemID=24101,lvl=60,q=3,rank=5,rwp=40001,u=16}),
 s(125066,12709,{b=1,f=20,lvl=58,q=3}),
 s(125298,12969,{b=1,f=24,lvl=58,q=3}),
@@ -3831,8 +3833,8 @@ s(125293,12964,{b=1,f=6,loc=46,lvl=58,q=3}),
 s(132710,22311,{b=1,c={5,8,9},f=4,loc=47,lvl=56,q=3,rwp=40003,u=15}),
 i(19227,{q=3,u=13}),
 prof(393,{
-i(12731,{q=4})})}),
-n(16042,{cost={{"i",22057,1},{"i",22056,1}},description="This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.",u=15,g={
+i(12731,{q=4})})}}),
+n(16042,{cost={{"i",22056,1}},description="This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.\nSummon Location: War Master Voone's room.",providers={{"i",22057}},rwp=40003,u=15,g={
 s(132735,22336,{b=1,f=8,lvl=58,q=3,u=15}),
 s(132734,22335,{b=1,f=28,lvl=58,q=3,u=15}),
 s(132701,22302,{b=1,c={5,8,9},f=4,loc=40,lvl=58,q=3,u=15}),
@@ -3841,7 +3843,7 @@ s(132736,22337,{b=1,f=3,lvl=58,q=3,u=15}),
 s(132742,22343,{b=1,f=6,loc=44,lvl=58,q=3,u=15}),
 s(132741,22342,{b=1,f=4,loc=46,lvl=58,q=3,u=15}),
 i(22339,{b=1,f=52,lvl=58,q=3,u=15})}}),
-n(10363,{
+n(10363,{rwp=60002,g={
 ach(1307),
 i(16663,{q=1,rwp=40003}),
 r(19054,{b=1,itemID=15730,learnedAt=300,q=3,requireSkill=165}),
@@ -3863,7 +3865,7 @@ s(128415,16706,{b=1,f=5,loc=42,lvl=58,q=3,rwp=40003}),
 s(132668,22269,{b=1,f=3,lvl=58,q=3,u=15}),
 s(125469,13142,{b=1,f=7,loc=45,lvl=58,q=3}),
 i(13098,{b=1,f=52,lvl=58,q=3}),
-i(22268,{b=1,f=53,lvl=58,q=3,u=15})})}})}}),
+i(22268,{b=1,f=53,lvl=58,q=3,u=15})}})})}}),
 inst(230,{awp=10200,lore="Dire Maul is a three-wing instance found in north-central Feralas. It was once a proud Highborne city called Eldre'Thalas, but now lies in ruins, overrun by ogres, satyrs, and undead. Only a tiny remnant of the original Highborne population remains in the form of a murderous sect called the Shen'dralar.",lvl=44,maps={234,240},savedInstanceID=429,u=1101,["zone-text-areas"]={2557,2577,3217},g={
 h(-12,{u=1101,g={
 ach(5788,{maps={236,237,238},minReputation={809,42000},rwp=40003,u=1101}),
@@ -4031,7 +4033,7 @@ s(129267,18319,{b=1,f=6,filterForRWP=5,loc=40,lvl=53,q=3,u=1101}),
 s(129261,18313,{b=1,f=7,filterForRWP=6,loc=40,lvl=53,q=3,u=1101}),
 s(129254,18306,{b=1,f=4,loc=44,lvl=53,q=2,u=1101})}}),
 n(11491,{description="Talk to him for him to break down the door.",u=1101}),
-n(16097,{cost={{"i",22057,1},{"i",22050,1}},description="This boss can be summoned using items from the |cff3399ff(Dungeon Set 2 questline)|r.",rwp=40003,u=15,g={
+n(16097,{cost={{"i",22050,1}},description="This boss can be summoned using items from the |cff3399ff(Dungeon Set 2 questline)|r.\nSummon Location: Alzzin the Wildshaper's room.",providers={{"i",22057}},rwp=40003,u=15,g={
 qo(2,{awp=10200,providers={{"i",21984}},questID=8967,u=15}),
 qo(2,{awp=10200,providers={{"i",22046}},questID=8990,u=15}),
 s(132714,22315,{awp=10200,b=1,f=23,lvl=56,q=3,u=15}),
@@ -4088,7 +4090,7 @@ s(129441,18496,{b=1,f=3,lvl=55,q=3,u=1101}),
 s(129438,18493,{b=1,f=7,loc=41,lvl=55,q=3,u=1101}),
 s(129439,18494,{b=1,f=6,loc=41,lvl=55,q=3,u=1101}),
 s(129442,18497,{b=1,f=4,loc=43,lvl=55,q=3,u=1101})}}),
-o(179501,{cost={{"i",18250,1}},rwp=40003,sourceQuests={5525},u=1101,g={
+o(179501,{cost={{"i",18250,1}},sourceQuests={5525},u=1101,g={
 i(18240,{b=1,q=2,u=1101}),
 r(22866,{itemID=18414,learnedAt=300,q=4,requireSkill=197,u=1101}),
 r(22926,{itemID=18517,learnedAt=300,q=4,requireSkill=165,u=1101}),
@@ -4101,7 +4103,7 @@ r(22922,{b=1,itemID=18515,learnedAt=300,q=3,requireSkill=165,u=1101}),
 r(22869,{b=1,itemID=18417,learnedAt=300,q=3,requireSkill=197,u=1101}),
 r(22928,{itemID=18519,learnedAt=300,q=4,requireSkill=165,u=1101}),
 r(22923,{b=1,itemID=18516,learnedAt=300,q=3,requireSkill=165,u=1101})}}),
-o(179499,{description="Beware! Looting the Ogre Tannin will cause a Gordok Bushwacker to spawn. Quote is homage to the movie The Silence of the Lambs.\n\n'NO! It puts the tannin in the basket, or it gets the mallet again!'",qgs={14351},u=1101,g={
+o(179499,{description="Beware! Looting the Ogre Tannin will cause a Gordok Bushwacker to spawn. Quote is homage to the movie The Silence of the Lambs.\n\n'NO! It puts the tannin in the basket, or it gets the mallet again!'",u=1101,g={
 i(18240,{b=1,q=2,u=1101})}}),
 e(415,{cost={{"i",18258,1},{"i",18268,1}},description="In order to get to this boss, you must use the Inner Door Key or have an engineer open the door using a Seaforium Charge.\n\nUse the Gordok Ogre Suit to skip him. (talk to him)",npcID=14325,u=1101,g={
 s(129447,18502,{b=1,f=29,lvl=57,q=3,u=1101}),
@@ -4125,7 +4127,7 @@ i(18522,{b=1,f=52,lvl=58,q=3,u=1101}),
 i(19258,{q=3,u=13}),
 i(18780,{lvl=50,q=3,rwp=40003,u=1101}),
 crit(547,{achID=644,id=1,u=1101})}}),
-o(179564,{description="Speak with Mizzle after killing |cFFFFD700King Gordok|r to spawn the Tribute Chest.\n\nA full Tribute Run (5 items) requires leaving all bosses alive except King Gordok, and also requires activating the Frost Trap & fooling Kromcrush with the Ogre Suit, granted by the Goblin near the trap.",modelScale=3,qgs={14353},u=1101,g={
+o(179564,{description="Speak with Mizzle after killing |cFFFFD700King Gordok|r to spawn the Tribute Chest.\n\nA full Tribute Run (5 items) requires leaving all bosses alive except King Gordok, and also requires activating the Frost Trap & fooling Kromcrush with the Ogre Suit, granted by the Goblin near the trap.",modelScale=3,providers={{"n",14353}},u=1101,g={
 r(23079,{itemID=18655,learnedAt=275,q=2,requireSkill=202,u=1101}),
 s(129444,18499,{b=1,f=8,lvl=57,q=3,u=1101}),
 s(129424,18479,{b=1,f=6,loc=40,lvl=55,q=2,u=1101}),
@@ -4199,6 +4201,9 @@ s(129661,18757,{b=1,f=4,loc=41,lvl=57,q=3,u=1101}),
 s(129659,18755,{b=1,f=31,lvl=57,q=3,u=1101}),
 s(129660,18756,{b=1,f=8,lvl=57,q=3,u=1101}),
 s(129658,18754,{b=1,f=7,loc=43,lvl=57,q=3,u=1101})}}),
+n(16032,{description="Found in the Dire Maul Library.",u=1101,g={
+h(-55,{awp=11101,description="Available if a specific Quest (9015) has been completed.",rwp=40003,sourceQuests={9015},u=1101,u_sqs=1,g={
+i(21986,{awp=10200,b=1,q=1,u=1101})}})}}),
 e(410,{npcID=11486,u=1101,g={
 i(18336,{description="In the corner of the room that the Prince is in, next to the bookshelves, there is a small chest on the ground that contains the gauntlet. You must kill the Prince in order for the chest to be interactable.",providers={{"o",179545}},q=1,u=1101}),
 s(129340,18392,{b=1,f=20,lvl=57,q=3,u=1101}),
@@ -5089,12 +5094,12 @@ s(126516,14502,{b=1,f=5,loc=45,lvl=57,q=3}),
 s(126527,14522,{b=1,f=6,loc=46,lvl=57,q=3}),
 s(129598,18694,{b=1,f=6,loc=47,lvl=57,q=3}),
 crit(548,{achID=645,awp=30002,id=1})}}),
-n(16118,{awp=10300,cost={{"i",22057,1},{"i",22052,1}},description="This boss can be summoned in Ras Frostwhisper's room using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.",rwp=50004,u=15,g={
-s(132731,22332,{b=1,f=25,lvl=57,q=3,u=15}),
-s(132732,22333,{b=1,f=24,lvl=57,q=3,u=15}),
-s(132702,22303,{b=1,c={5,8,9},f=4,loc=46,lvl=57,q=3,rwp=40003,u=15}),
-i(22326,{b=1,f=52,lvl=58,q=3,u=15}),
-i(22331,{b=1,f=52,lvl=57,q=3,u=15})}}),
+n(16118,{cost={{"i",22052,1}},description="This boss can be summoned in Ras Frostwhisper's room using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.\nSummon Location: Ras Frostwhisper's room.",providers={{"i",22057}},rwp=40003,u=15,g={
+s(132731,22332,{awp=10300,b=1,f=25,lvl=57,q=3,rwp=50004,u=15}),
+s(132732,22333,{awp=10300,b=1,f=24,lvl=57,q=3,rwp=50004,u=15}),
+s(132702,22303,{b=1,c={5,8,9},f=4,loc=46,lvl=57,q=3,u=15}),
+i(22326,{awp=10300,b=1,f=52,lvl=58,q=3,rwp=50004,u=15}),
+i(22331,{awp=10300,b=1,f=52,lvl=57,q=3,rwp=50004,u=15})}}),
 h(-19,{awp=10300,crs={10502,10504,10505,10507,10901,11261},description="The following items can drop from any of the mini-bosses in the crypt before fighting Darkmaster Gandling. The bosses other than Lady Illucia Barov have an item or two exclusive to their own drop tables.",rwp=50004,g={
 s(129584,18680,{b=1,f=32,lvl=56,q=3}),
 s(129587,18683,{b=1,f=23,lvl=56,q=3}),
@@ -5421,12 +5426,12 @@ s(129624,18720,{b=1,f=4,loc=41,lvl=58,q=3}),
 s(125637,13358,{b=1,f=5,loc=41,lvl=58,q=3}),
 s(125648,13369,{b=1,f=4,loc=47,lvl=58,q=3}),
 s(128434,16725,{b=1,f=7,loc=47,lvl=54,q=3,rwp=40003})}}),
-o(181083,{awp=100105,cost={{"i",22057,1},{"i",22051,1}},crs={16101,16102},description="This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits. Unfortunately, after the modifications made to the instance with 4.0.3, these drops become truly unobtainable even with the brazier.",rwp=40003,u=15,g={
+n(16102,{awp=11101,cost={{"i",22051,1}},crs={16101},description="This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits. Unfortunately, after the modifications made to the instance with 4.0.3, these drops become truly unobtainable even with the brazier.",providers={{"i",22057},{"o",181083}},rwp=40003,u=15,g={
 qo(2,{providers={{"i",21984}},questID=8968,u=15}),
 qo(2,{providers={{"i",22046}},questID=8991,u=15}),
 s(132728,22329,{b=1,f=1,lvl=58,q=3,u=15}),
 i(22327,{b=1,f=51,lvl=58,q=3,u=15}),
-s(132700,22301,{b=1,c={5,8,9},f=4,loc=42,lvl=58,q=3,rwp=40001,u=15}),
+s(132700,22301,{b=1,c={5,8,9},f=4,loc=42,lvl=58,q=3,u=15}),
 s(132727,22328,{b=1,f=7,loc=46,lvl=58,q=3,u=15}),
 i(22334,{b=1,f=52,lvl=57,q=3,u=15})}}),
 n(16387,{description="Summoned and defeated as part of the Atiesh quest chain to get the Greatstaff of the Guardian.",rwp=30002,u=2,g={
@@ -5523,7 +5528,7 @@ s(128437,16728,{b=1,f=7,loc=46,lvl=56,q=3}),
 s(128396,16687,{b=1,f=4,loc=46,lvl=56,q=3}),
 s(128418,16709,{b=1,f=5,loc=46,lvl=56,q=3}),
 s(128428,16719,{b=1,f=5,loc=46,lvl=56,q=3}),
-crit(3270,{achID=646,id=1})}})}})}}),
+crit(3270,{achID=646,awp=10100,id=1})}})}})}}),
 inst(63,{coords={
 [1436]={{42.2,82.6}}},lore="Once the greatest gold production center in the human lands, the Dead Mines were abandoned when the Horde razed Stormwind city during the First War. Now the Defias Brotherhood has taken up residence and turned the dark tunnels into their private sanctum. It is rumored that the thieves have conscripted the clever goblins to help them build something terrible at the bottom of the mines - but what that may be is still uncertain. Rumor has it that the way into the Deadmines lies through the quiet, unassuming village of Moonbrook.",lvl=10,mapID=291,maps={55,292},savedInstanceID=36,["zone-text-areaID"]=1581,g={
 h(-45,{
@@ -5556,20 +5561,20 @@ qo(1,{providers={{"i",7365}}}),
 s(122059,7607,{b=1,f=27,q=2}),
 s(122058,7606,{b=1,f=6,filterForRWP=7,loc=44,q=2})}})}),
 h(-46,{
-n(596,{awp=100107,coords={
+n(596,{coords={
 [1436]={{44,78.3}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
-s(119177,3902,{f=28,lvl=13,q=2,rwp=40003}),
-s(120873,5967,{f=4,loc=45,lvl=13,q=2,rwp=40003})}}),
+s(119177,3902,{awp=100107,f=28,lvl=13,q=2,rwp=40003}),
+s(120873,5967,{awp=100107,f=4,loc=45,lvl=13,q=2,rwp=40003})}}),
 n(626,{coords={
 [1436]={{42.2,82.6}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
 i(1875,{q=1}),
 s(117770,2167,{f=5,loc=44,lvl=15,q=2}),
 s(117769,2166,{f=6,loc=46,lvl=15,q=2}),
 s(117771,2168,{f=4,loc=47,lvl=16,q=2})}}),
-n(599,{awp=100107,coords={
+n(599,{coords={
 [1436]={{42.2,79.9}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
-s(118432,3019,{f=4,loc=42,lvl=13,q=2,rwp=40003}),
-s(119804,4660,{f=4,loc=47,lvl=13,q=2,rwp=40003})}})}),
+s(118432,3019,{awp=100107,f=4,loc=42,lvl=13,q=2,rwp=40003}),
+s(119804,4660,{awp=100107,f=4,loc=47,lvl=13,q=2,rwp=40003})}})}),
 h(-63,{
 s(123695,10402,{crs={4416},f=5,loc=47,lvl=13,q=2,rwp=40003}),
 s(123694,10401,{crs={634,4417},f=5,loc=44,lvl=13,q=2}),
@@ -5684,7 +5689,7 @@ qo(1,{providers={{"i",22444}},u=14}),
 s(132857,22458,{b=1,f=28,q=3,u=14}),
 s(132671,22272,{b=1,f=5,loc=42,q=3,u=14}),
 s(132673,22274,{b=1,f=5,loc=42,q=3,u=14})}}),
-q(10593,{awp=20001,c={2},coords={
+q(10593,{awp=20003,c={2},coords={
 [1458]={{57.8,92}}},lvl=50,qgs={10181},r=1,rwp=40003,sourceQuests={10592},g={
 qo(1,{providers={{"i",22444}}}),
 i(30696,{b=1,f=53,q=3})}}),
@@ -5970,11 +5975,11 @@ s(122828,9384,{crs={4844,4845,4846},f=20,lvl=31,q=3}),
 s(122866,9423,{f=24,lvl=40,q=3}),
 s(122835,9391,{crs={4844,4845,4846},f=24,lvl=32,q=3}),
 s(122871,9428,{crs={4844,4845,4846},f=5,loc=43,lvl=30,q=3})}),
-h(-46,{awp=100107,g={
-n(7057,{description="This guy spawns outside of the instance in the cave leading to the instance.",rwp=40003,g={
+h(-46,{
+n(7057,{awp=100107,description="This guy spawns outside of the instance in the cave leading to the instance.",rwp=40003,g={
 s(122823,9378,{f=21,lvl=33,q=3}),
 s(122820,9375,{f=5,loc=40,lvl=33,q=3}),
-s(122826,9382,{f=5,loc=47,lvl=33,q=2})}})}}),
+s(122826,9382,{f=5,loc=47,lvl=33,q=2})}})}),
 h(-56,{
 o(141979,{description="Found in the Hall of the Crafters after you defeat Archaedas. Contains 2-3 items.",modelScale=3,sym={{"select","itemID",8029}}}),
 o(123329,{
@@ -6240,13 +6245,13 @@ i(10661,{q=1})}),
 e(483,{npcID=7273,g={
 i(8707,{q=1}),
 s(122909,9467,{b=1,f=20,lvl=42,q=3}),
-s(122911,9469,{b=1,f=6,loc=42,lvl=43,q=3})}})}})}),
-x(2,{u=17,g={
-h(-12,{awp=20001,u=17,g={
+s(122911,9469,{b=1,f=6,loc=42,lvl=43,q=3})}})}})}}),
+x(2,{awp=20003,u=17,g={
+h(-12,{u=17,g={
 ach(1287,{awp=30002,sym={{"meta_achievement",672,667,682,671,676,674,675,681,668,680,673,679,678,669,677,670}},u=17}),
 ach(1284,{awp=30002,sym={{"meta_achievement",666,647,661,651,655,653,654,660,648,659,652,658,657,649,656,650}},u=17}),
 ach(1286,{sym={{"meta_achievement",690,692,693,694,695,696,697,698}},u=17})}}),
-h(-61,{awp=20001,isRaid=1,u=17,g={
+h(-61,{isRaid=1,u=17,g={
 n(18728,{coords={
 [1944]={{63.2,16}}},isRaid=1,lore="Originally known just as Lord Kazzak, but after he found an artifact to reopen the Dark Portal and travelled through it, he was promoted. He now commands the Legion war effort in Outland in the name of his master, Kil'jaeden. Lord Kazzak's replacement on Azeroth after the re-opening of the Dark Portal is Highlord Kruul, one of Kazzak's minions.",modelScale=3.8,u=17,g={
 s(141078,30732,{f=28,lvl=70,q=4,u=17}),
@@ -6271,7 +6276,7 @@ s(141075,30729,{f=3,lvl=70,q=4,u=17}),
 s(141076,30730,{f=5,loc=42,lvl=70,q=4,u=17}),
 s(141071,30725,{f=4,loc=44,lvl=70,q=4,u=17}),
 s(141073,30727,{f=4,loc=46,lvl=70,q=4,u=17})}})}}),
-inst(745,{awp=20001,coords={
+inst(745,{coords={
 [1430]={{46.87,74.69}}},cost={{"i",24490,1}},description="The best route for a full clear:\n1. Turn right immediately after going through the Gatehouse Door and enter the Servant's Quarters.\n2. From the western bat room goes a passage up to the Guest Chambers. Ignore the passage to the right until this section is cleared.\n3. Ignore the Opera Hall, go downstairs through the ballroom to Moroes and further through the kitchen and stables for Attumen the Huntsman. Here you will also find the practical vendor Koren (requires Honored with The Violet Eye).\n4. Back to the Gatehouse and upstairs to the Opera Hall, from here is the raid linear to last boss.",isLockoutShared=1,isRaid=1,lore="Karazhan is an abandoned citadel located on a nexus of ley lines in southern Deadwind Pass. The tower is best known for its last known occupant - Medivh, the last Guardian of Tirisfal. After Medivh was killed by Khadgar, Anduin Lothar, and Garona, the tower sealed itself off from the rest of the world. But recently, Karazhan has reawakened - an evil presence has taken the tower as its own, its halls crawling with spirits and demons, and Medivh's presence is still alive and well, even decades after his death.",lvl=70,maps={350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366},savedInstanceID=532,u=17,["zone-text-areaID"]=2562,g={
 h(-12,{u=17,g={
 ach(960,{minReputation={967,42000},u=17})}}),
@@ -6621,7 +6626,7 @@ s(139112,28766,{b=1,f=3,lvl=70,q=4,u=17}),
 s(139111,28765,{b=1,f=3,lvl=70,q=4,u=17}),
 i(28763,{b=1,f=52,lvl=70,q=4,u=17}),
 i(28757,{b=1,f=52,lvl=70,q=4,u=17})}})}}),
-inst(746,{awp=20001,coords={
+inst(746,{coords={
 [1949]={{69.31,23.67}}},isLockoutShared=1,isRaid=1,lore="When the infamous Dragon Aspect, Deathwing, discovered the Dark Portal and Draenor, he felt sure that few of Draenor's denizens would dare challenge the black dragonflight, so he scattered clutches of his eggs throughout the world.\n\nDeathwing made a serious miscalculation when he chose to leave his eggs under meager guardianship in Blade's Edge Mountains. The guardian dragons were torn from the sky by the gronn living in Blade's Edge, and the leader of the gronn, Gruul, impaled the wyrms he fought on the stone spires of the mountains.\n\nToday Gruul the Dragonkiller is worshipped as a deity by the ogres of Blade's Edge Mountains. His powerful sons ravage both the spires of their home and the plains of Nagrand. Gruul's unparalleled strength and experience in battle would pose a serious threat if he ever chose to attack Horde or Alliance forces in Outland.",lvl=68,mapID=330,savedInstanceID=565,u=17,g={
 e(1564,{npcID=18831,u=17,g={
 i(29763,{b=1,c={2,4,7},lvl=70,q=4,u=17}),
@@ -6652,7 +6657,7 @@ s(139156,28810,{b=1,f=6,loc=47,lvl=70,q=4,u=17}),
 i(28830,{b=1,f=53,lvl=70,q=4,u=17}),
 i(28823,{b=1,f=53,lvl=70,q=4,u=17}),
 i(31750,{q=1,u=17})}})}}),
-inst(747,{awp=20001,coords={
+inst(747,{coords={
 [1944]={{47.51,52.08}}},isLockoutShared=1,isRaid=1,lore="After the Legion came to Outland, Magtheridon controlled all but small pockets of Outland. Even so, he was taken largely by surprise when Illidan and his allies conquered the Black Temple. Many believed that Magtheridon had been slain in the attack, but, when Illidan discovered that Magtheridon's blood had a transformative, corrupting effect on orcs, the beaten pit lord was dragged to Hellfire Citadel.\n\nBound by chains both physical and magical, Magtheridon survives, at the brink of death. Each day, Illidan's minions drain his tainted blood, pooling it for a purpose as malevolent as Magtheridon himself: the creation of a new army of barbaric fel orcs.",lvl=68,mapID=331,savedInstanceID=544,u=17,g={
 h(-45,{u=17,g={
 q(11002,{maps={1944},providers={{"i",32385}},r=2,u=17,g={
@@ -6667,15 +6672,15 @@ i(28790,{b=1,f=52,q=4,u=17}),
 i(28791,{b=1,f=52,q=4,u=17})}}),
 q(10888,{coords={
 [1955]={{54.2,44.4}}},qgs={18481},rwp=30002,sourceQuests={10884,10885,10886},u=2,g={
-qo(1,{awp=20001,providers={{"n",17257}},u=17}),
-i(31746,{awp=20001,b=1,f=52,q=4,u=17}),
+qo(1,{awp=20003,providers={{"n",17257}},u=17}),
+i(31746,{awp=20003,b=1,f=52,q=4,u=17}),
 i(31704,{b=1,q=1,rwp=20300,u=2}),
 ach(432,{sourceQuests={10888},u=2}),
 title(36,{u=2})}}),
 q(13430,{altQuests={10888},awp=30002,coords={
 [1955]={{54.2,44.4}}},qgs={18481},sourceQuests={10884,10885,10886},u=17,g={
-qo(1,{awp=20001,providers={{"n",17257}},u=17}),
-i(31746,{awp=20001,b=1,f=52,q=4,u=17})}})}}),
+qo(1,{awp=20003,providers={{"n",17257}},u=17}),
+i(31746,{awp=20003,b=1,f=52,q=4,u=17})}})}}),
 e(1566,{npcID=17257,u=17,g={
 ach(693,{u=17}),
 i(32385,{b=1,lvl=70,q=4,r=2,u=17}),
@@ -6697,19 +6702,19 @@ s(139125,28779,{b=1,f=7,loc=45,lvl=70,q=4,u=17}),
 s(139124,28778,{b=1,f=6,loc=45,lvl=70,q=4,u=17}),
 i(28789,{b=1,f=53,lvl=70,q=4,u=17}),
 i(34846,{awp=20400,q=2,u=17,g={
-i(32227,{awp=20001,q=4,u=17}),
-i(32228,{awp=20001,q=4,u=17}),
-i(32229,{awp=20001,q=4,u=17}),
-i(32231,{awp=20001,q=4,u=17}),
-i(32230,{awp=20001,q=4,u=17}),
-i(32249,{awp=20001,q=4,u=17}),
-i(23440,{awp=20001,q=3,u=17}),
-i(23436,{awp=20001,q=3,u=17}),
-i(23441,{awp=20001,q=3,u=17}),
-i(23439,{awp=20001,q=3,u=17}),
-i(23438,{awp=20001,q=3,u=17}),
-i(23437,{awp=20001,q=3,u=17})}})}})}}),
-inst(748,{awp=20001,coords={
+i(32227,{awp=20003,q=4,u=17}),
+i(32228,{awp=20003,q=4,u=17}),
+i(32229,{awp=20003,q=4,u=17}),
+i(32231,{awp=20003,q=4,u=17}),
+i(32230,{awp=20003,q=4,u=17}),
+i(32249,{awp=20003,q=4,u=17}),
+i(23440,{awp=20003,q=3,u=17}),
+i(23436,{awp=20003,q=3,u=17}),
+i(23441,{awp=20003,q=3,u=17}),
+i(23439,{awp=20003,q=3,u=17}),
+i(23438,{awp=20003,q=3,u=17}),
+i(23437,{awp=20003,q=3,u=17})}})}})}}),
+inst(748,{coords={
 [1946]={{50.2,41},{51.9,32.9}}},isLockoutShared=1,isRaid=1,lore="Whoever controls the water controls Outland.\n\nThese are the words of Lord Illidan Stormrage to his most trusted lieutenant, Lady Vashj. Shortly after the Third War, when Illidan requested the aid of the naga, a group of naga led by Lady Vashj answered his call. Ever since, Vashj has displayed a fierce dedication to Illidan.\n\nNow the naga witch carefully monitors Coilfang's operations from her seat of power within Serpentshrine Cavern. Far more at home here among the waters of the reservoir than locked within the cold stone walls of Black Temple, Vashj maintains a close eye on her minions and personally oversees the draining of Zangarmarsh.\n\nWhether her loyalties belong to Illidan alone, however, remains to be seen.",lvl=68,mapID=332,savedInstanceID=548,u=18,g={
 h(-45,{u=18,g={
 q(10944,{coords={
@@ -6824,7 +6829,7 @@ i(30621,{b=1,f=53,lvl=70,q=4,u=18}),
 i(32895,{b=1,lvl=70,q=4,rwp=40003,u=18,g={
 i(32897,{q=2,u=18})}}),
 i(29906,{f=55,q=1,u=18})}})}}),
-inst(749,{awp=20001,coords={
+inst(749,{coords={
 [1953]={{73.73,63.71}}},isLockoutShared=1,isRaid=1,lore="With Outland serving as the strategic battlefront in the ongoing Burning Crusade, the Naaru used Tempest Keep to reach the shattered land. However, when the Naaru set out from their stronghold, Prince Kael'thas and his blood elves quickly raided the dimensional fortress and assumed control over its satellite structures. Guided by some unknown purpose, Kael'thas manipulates the keep's otherworldly technologies, using them to harness the chaotic energies of the Netherstorm itself.",lvl=70,mapID=334,savedInstanceID=550,u=18,g={
 h(-45,{u=18,g={
 q(11007,{providers={{"i",32405}},u=18,g={
@@ -6932,7 +6937,7 @@ s(140657,30311,{collectible=false,crs={21272},f=25,lvl=70,q=5,u=18}),
 i(32896,{b=1,lvl=70,q=4,rwp=40003,u=18,g={
 i(32897,{q=2,u=18})}}),
 i(29905,{f=55,q=1,u=18})}})}}),
-inst(750,{awp=20001,coords={
+inst(750,{coords={
 [75]={{36,16.1}},
 [1446]={{64.7,49.9}}},isLockoutShared=1,isRaid=1,lore="The Battle of Mount Hyjal was the final bloody conflict that concluded the Third War. The battle was the culmination of years of fighting between the various mortal forces of Azeroth and the demonic and undead armies of the Burning Legion, and saw the demons' invasion end in decisive failure.\n\nSpecifically, the event took place as part of the invasion of Kalimdor phase of the war, where Archimonde struck directly at the World Tree Nordrassil on Mount Hyjal as part of his endgame. The battle began when a mortal coalition of night elves, Alliance, and New Horde elements arrayed themselves before the World Tree to halt Archimonde's advance. Though they were unable to stand against the Legion indefinitely, they aimed to buy time for Malfurion Stormrage to prepare a proper defense.",lvl=70,mapID=329,savedInstanceID=534,u=19,["zone-text-areaID"]=3606,g={
 h(-12,{u=19,g={
@@ -6941,18 +6946,18 @@ h(-31,{u=19,g={
 faction(990,{maps={75},u=19})}}),
 ah(2575,{type="s",u=19,g={
 o(185557,{awp=20100,learnedAt=375,maps={329},requireSkill=186,u=19,g={
-i(23440,{awp=20001,q=3,u=19}),
-i(23436,{awp=20001,q=3,u=19}),
-i(23441,{awp=20001,q=3,u=19}),
-i(23439,{awp=20001,q=3,u=19}),
-i(23438,{awp=20001,q=3,u=19}),
-i(23437,{awp=20001,q=3,u=19}),
-i(32227,{q=4,u=19}),
-i(32228,{q=4,u=19}),
-i(32229,{q=4,u=19}),
-i(32231,{q=4,u=19}),
-i(32249,{q=4,u=19}),
-i(32230,{q=4,u=19})}})}}),
+i(23440,{awp=20003,q=3,requireSkill=186,u=19}),
+i(23436,{awp=20003,q=3,requireSkill=186,u=19}),
+i(23441,{awp=20003,q=3,requireSkill=186,u=19}),
+i(23439,{awp=20003,q=3,requireSkill=186,u=19}),
+i(23438,{awp=20003,q=3,requireSkill=186,u=19}),
+i(23437,{awp=20003,q=3,requireSkill=186,u=19}),
+i(32227,{q=4,requireSkill=186,u=19}),
+i(32228,{q=4,requireSkill=186,u=19}),
+i(32229,{q=4,requireSkill=186,u=19}),
+i(32231,{q=4,requireSkill=186,u=19}),
+i(32249,{q=4,requireSkill=186,u=19}),
+i(32230,{q=4,requireSkill=186,u=19})}})}}),
 h(-45,{u=19,g={
 q(10947,{coords={
 [1948]={{58,48.2}}},minReputation={990,0},qgs={21700},sourceQuests={10946},u=19,g={
@@ -7258,12 +7263,12 @@ i(32649,{awp=20100,b=1,f=51,q=4,u=19})}}),
 q(10949,{coords={
 [1955]={{54.3,44.3}}},lvl=70,qgs={18481},sourceQuests={10948},u=19}),
 q(10957,{coords={
-[340]={{62,50.2}}},lvl=70,qgs={23158},sourceQuests={10958},u=19,g={
+[339]={{62,50.2}}},lvl=70,qgs={23158},sourceQuests={10958},u=19,g={
 qo(1,{providers={{"n",22841}},u=19})}}),
 q(10958,{coords={
 [1948]={{65.2,44}}},lvl=70,qgs={18528},sourceQuests={10985,13429},sqreq=1,u=19}),
 q(10959,{coords={
-[340]={{62,50.2}}},lvl=70,qgs={23158},sourceQuests={10957},u=19,g={
+[339]={{62,50.2}}},lvl=70,qgs={23158},sourceQuests={10957},u=19,g={
 qo(1,{providers={{"n",22917}},u=19}),
 i(32757,{b=1,f=51,q=4,u=19})}}),
 q(10948,{coords={
@@ -7746,7 +7751,7 @@ s(144298,34341,{b=1,f=7,loc=44,lvl=70,q=4,u=21}),
 s(144301,34344,{b=1,f=4,loc=44,lvl=70,q=4,u=21}),
 s(144299,34342,{b=1,f=4,loc=44,lvl=70,q=4,u=21}),
 s(144300,34343,{b=1,f=6,loc=44,lvl=70,q=4,u=21})}})}}),
-inst(247,{awp=20001,coords={
+inst(247,{coords={
 [1952]={{34.34,65.61}}},lore="Auchenai Crypts is the main seat of power for the Auchenai - a renegade religious sect of draenei led by the Exarch Maladaar. The crypts are populated by these draenei and the unliving creatures they have summoned. The most important remains interred within the crypt are those of D'ore, one of the naaru. D'ore perished in the collision that brought Oshu'gun (and the draenei) to Draenor. In death, D'ore entered its void stage. The dark energies exuded by this phenomenon resulted, directly or indirectly, in the evils that have since befallen the crypts.",lvl=62,maps={256,257},savedInstanceID=558,u=17,["zone-text-areaID"]=3790,g={
 h(-45,{u=17,g={
 q(10167,{coords={
@@ -7817,7 +7822,7 @@ s(138614,28268,{b=1,f=5,loc=44,lvl=70,q=3,u=17}),
 s(138284,27937,{b=1,f=23,lvl=68,q=3,u=17}),
 s(138144,27797,{b=1,f=5,loc=41,lvl=70,q=3,u=17}),
 s(138223,27876,{b=1,f=23,lvl=70,q=3,u=17})}})}})}})}}),
-inst(248,{awp=20001,coords={
+inst(248,{coords={
 [1944]={{47.65,53.57}}},lore="Hellfire Ramparts make up the first wing of Hellfire Citadel. The citadel itself sits in the center of the zone, in the middle of a broken-up wall that divided the zone before the conflict began. The Ramparts takes place atop this wall along the sides of the citadel.",lvl=57,mapID=347,savedInstanceID=543,u=17,["zone-text-areaID"]=3562,g={
 h(-45,{u=17,g={
 q(9587,{lvl=59,maps={1944},providers={{"i",23890}},r=2,rwp=40300,u=17}),
@@ -8031,7 +8036,7 @@ s(144560,34610,{b=1,f=4,loc=42,lvl=70,q=4,u=21}),
 s(144563,34613,{b=1,f=5,loc=41,lvl=70,q=4,u=21}),
 mnt(46628,{b=1,itemID=35513,lvl=40,q=4,u=21}),
 s(144564,34614,{b=1,f=6,loc=42,lvl=70,q=4,u=21})}})}})}}),
-inst(250,{awp=20001,coords={
+inst(250,{coords={
 [1952]={{39.63,57.67}}},lore="Its inhabitants are mostly ethereals opposing the Consortium. The ethereals of the Consortium cannot enter due to the anti-ethereal wards set by Nexus-Prince Shaffar; they have attempted to breach the gates with little success, but have still tested whether or not their efforts worked - often resulting in the spontaneous combustion (for lack of a better term) of the ethereal tester sent through the gate. According to the Consortium, the ethereals in the Mana-Tombs are robbing it blind and if you wish to do business with them, you'll have to aid in taking out the competition.",lvl=61,mapID=272,savedInstanceID=557,u=17,["zone-text-names"]={DUNGEON_FLOOR_MANATOMBS1},g={
 h(-45,{u=17,g={
 q(10981,{coords={
@@ -8145,7 +8150,7 @@ i(23572,{q=3,u=17}),
 i(28490,{q=1,u=17}),
 i(33835,{q=1,u=17}),
 r(28572,{b=1,itemID=22921,learnedAt=360,q=2,requireSkill=171,u=17})}})}})}}),
-inst(251,{awp=20001,coords={
+inst(251,{coords={
 [75]={{26.8,36.8}}},description="This is an event-triggered dungeon with the following steps:\n\n1. Talk to Erozion at the beginning of the dungeon to obtain a Pack of Incendiary Bombs.\n\n2. Traverse to the internment camps in Durnholde Keep and interact with a barrel in each building to start a fire and summon the first boss Lieutenant Drake.\n\n3. Find Thrall in the basement of the keep and follow him for the remainder of the dungeon.",lore="Old Hillsbrad Foothills is one of the timeways accessible in the Caverns of Time. The setting is seven years before WoW's present, to when the future Warchief Thrall was a slave of Aedelas Blackmoore, master of Durnholde Keep. The questing involves helping Thrall escape. The instance area in question spans from Southshore (where familiar personalities of WoW present can be found) to Tarren Mill.",lvl=63,mapID=274,savedInstanceID=560,u=17,["zone-text-areaID"]=2367,g={
 h(-45,{u=17,g={
 q(10284,{lvl=66,qgs={17876},rwp=40300,sourceQuests={10283},u=17}),
@@ -8260,7 +8265,7 @@ i(28223,{b=1,f=53,lvl=70,q=3,u=17}),
 r(31078,{b=1,itemID=24173,learnedAt=370,q=4,requireSkill=755,u=17}),
 i(23572,{q=3,u=17}),
 i(33847,{q=1,u=17})}})}})}}),
-inst(252,{awp=20001,coords={
+inst(252,{coords={
 [1952]={{44.93,65.61}}},lore="Sethekk Halls is populated by renegade arakkoa and led by the insane Talon King Ikiss. The Sethekk are renegades who broke away from Skettis at the insistence of Ikiss and Darkweaver Syth, and believe themselves to be the true servants of the mysterious master of all arakkoa. When Auchindoun exploded due to the summoning of Murmur in the Shadow Labyrinth, Ikiss and Syth led their followers to Auchindoun, believing this to be a sign of their master's return. There they remain, still searching for the master in the temple's ruins.",lvl=63,maps={258,259},savedInstanceID=556,u=17,["zone-text-areaID"]=3791,g={
 h(-45,{u=17,g={
 q(10097,{coords={
@@ -8279,18 +8284,18 @@ i(32449,{b=1,q=1,u=18})}}),
 q(10098,{coords={
 [1952]={{44.1,65}}},cost={{"i",32888,1}},qgs={18933},rwp=40300,sourceQuests={10180},u=17,g={
 qo(1,{description="Found on the floor in the center of the room before Talon King Ikiss.",providers={{"i",27634}},u=17}),
-qo(2,{awp=20001,providers={{"i",27633}},u=17}),
-qo(3,{awp=20001,providers={{"i",27632}},u=17}),
-s(139676,29330,{awp=20001,b=1,f=1,q=3,u=17}),
-s(139678,29332,{awp=20001,b=1,f=5,loc=40,q=3,u=17}),
-s(139675,29329,{awp=20001,b=1,f=29,q=3,u=17})}}),
+qo(2,{awp=20003,providers={{"i",27633}},u=17}),
+qo(3,{awp=20003,providers={{"i",27632}},u=17}),
+s(139676,29330,{awp=20003,b=1,f=1,q=3,u=17}),
+s(139678,29332,{awp=20003,b=1,f=5,loc=40,q=3,u=17}),
+s(139675,29329,{awp=20003,b=1,f=29,q=3,u=17})}}),
 q(11001,{c={11},coords={
 [1946]={{80.2,65.2}}},lvl=70,qgs={22832},rwp=40001,sourceQuests={10994},u=18,g={
-qo(1,{awp=20001,crs={23035},providers={{"i",32449}},u=18}),
+qo(1,{awp=20003,crs={23035},providers={{"i",32449}},u=18}),
 ach(2359,{c={11},sourceQuests={11001},u=18}),
-r(40120,{awp=20001,u=18}),
+r(40120,{awp=20003,u=18}),
 i(32387,{b=1,f=54,q=3,u=18}),
-i(32462,{awp=20001,q=1,u=18,g={
+i(32462,{awp=20003,q=1,u=18,g={
 i(32454,{b=1,q=1,u=18}),
 i(32449,{b=1,q=1,u=18})}})}})}}),
 h(-19,{u=17,g={
@@ -8368,7 +8373,7 @@ i(23572,{q=3,u=17}),
 i(27632,{q=1,u=17}),
 i(33834,{q=1,u=17}),
 i(27991,{b=1,description="You can loot this from the Talon King's Coffer after Patch 2.3.0, before that (and perhaps in TBC Classic), you would loot it from his corpse.",q=1,rwp=40003,u=17})}})}})}}),
-inst(253,{awp=20001,coords={
+inst(253,{coords={
 [1952]={{39.63,73.55}}},cost={{"i",27991,1}},lore="Auchindoun is a former draenei holy site and Horde fortress in the middle of the Bone Wastes in Outland's Terokkar Forest. It was a hallowed ground until the Shadow Council took over, summoned an extremely powerful demon as old as time itself, and destroyed half of Terokkar Forest in the process. Different factions now vie for power in this magical spot: Ethereals suck the arcane energy from the Mana-Tombs, the Burning Legion harvests souls inside the Auchenai Crypts, arakkoa zealots work dark magic in the Sethekk Halls, and the Shadow Council plots its domination of Outland from within the Shadow Labyrinth.",lvl=65,mapID=260,savedInstanceID=555,u=17,["zone-text-areaID"]=3789,g={
 h(-45,{u=17,g={
 q(10178,{coords={
@@ -8493,7 +8498,7 @@ r(31452,{b=1,itemID=24309,learnedAt=375,q=4,requireSkill=197,u=17}),
 i(23572,{q=3,u=17}),
 i(33840,{q=1,u=17}),
 i(31722,{q=1,u=17})}})}})}}),
-inst(254,{awp=20001,coords={
+inst(254,{coords={
 [1953]={{74.42,57.72}}},cost={{"i",31084,1}},lore="The Arcatraz is a prison where the naaru jailed the most terrifying and dangerous creatures they encountered on their journeys. When Kael'thas and his followers took the Keep, he sent a warden and guards to the Arcatraz. Kael's blood elves, however, were corruptible and the prisoners have begun to break free...",lvl=65,maps={269,270,271},savedInstanceID=552,u=17,["zone-text-areaID"]=3846,g={
 h(-45,{u=17,g={
 q(10706,{lvl=68,qgs={21962},sourceQuests={10705},u=17}),
@@ -8607,7 +8612,7 @@ i(28407,{b=1,f=52,lvl=70,q=3,u=17}),
 i(28418,{b=1,f=53,lvl=70,q=3,u=17}),
 i(23572,{q=3,u=17}),
 i(33861,{q=1,u=17})}})}})}}),
-inst(255,{awp=20001,coords={
+inst(255,{coords={
 [75]={{37.2,83.3}}},lore="The Black Morass (also known as Opening of the Dark Portal) is one of the timeways accessible in the Caverns of Time. In this wing, a group of players must defend the last Guardian Medivh, in a swamp known as The Black Morass. The Guardian Medivh, possessed by Sargeras, attempts to open the Dark Portal to Draenor, while wave upon wave of dragonkin of the Infinite Dragonflight attempt to defeat Medivh in order to alter time and halt the invasion of Azeroth from Draenor.",lvl=65,mapID=273,savedInstanceID=269,u=17,["zone-text-areaID"]=2366,g={
 h(-45,{u=17,g={
 q(10298,{lvl=66,qgs={20201},rwp=40300,sourceQuests={10297},u=17,g={
@@ -8698,7 +8703,7 @@ s(138220,27873,{b=1,f=5,loc=46,lvl=70,q=3,u=17}),
 i(28190,{b=1,f=53,lvl=70,q=3,u=17}),
 i(23572,{q=3,u=17}),
 i(33858,{q=1,u=17})}})}})}}),
-inst(256,{awp=20001,coords={
+inst(256,{coords={
 [1944]={{46.06,51.74}}},lore="The Blood Furnace is the second wing of the Hellfire Citadel. The instance takes place above Hellfire Ramparts, inside of the tower that overlooks the ramparts itself. The pit lord Magtheridon is entrapped by the fel orcs' sorcery at the base of the tower and they're using his blood to manufacture a new Fel Horde, infused with his demonic energy.",lvl=58,mapID=261,savedInstanceID=542,u=17,["zone-text-areaID"]=3713,g={
 h(-45,{u=17,g={
 q(9607,{coords={
@@ -8785,7 +8790,7 @@ s(137869,27522,{b=1,f=6,loc=43,lvl=70,q=3,u=17}),
 s(137841,27494,{b=1,f=6,loc=43,lvl=70,q=3,u=17}),
 i(23572,{q=3,u=17}),
 i(33814,{q=1,u=17})}})}})}}),
-inst(257,{awp=20001,coords={
+inst(257,{coords={
 [1953]={{71.74,54.95}}},lore="Since Kael'thas and his blood elves seized Tempest Keep from the naaru they have had quite the time to investigate and find a usage for the technology in it. The Botanica appears to be the satellite chosen especially for this purpose. Here, blood elf scientists carry out experiments on the flora in Outland, how naaru technology can be used to create and manipulate living beings, and how all this can grant the blood elves new powers. It seems, however, that the results were not quite as expected, and thus some of the experiments have gotten out of control...",lvl=65,mapID=266,savedInstanceID=553,u=17,["zone-text-areaID"]=3847,g={
 h(-45,{u=17,g={
 q(10257,{coords={
@@ -8896,7 +8901,7 @@ r(31454,{b=1,itemID=24311,learnedAt=375,q=4,requireSkill=197,u=17}),
 i(23572,{q=3,u=17}),
 i(31085,{q=1,u=17}),
 i(33859,{q=1,u=17})}})}})}}),
-inst(258,{awp=20001,coords={
+inst(258,{coords={
 [1953]={{70.61,69.75}}},lore="Among the satellites of Tempest Keep, the Mechanar has been chosen by Kael'thas to be a factory to create large amounts of power. Mechano-Lord Capacitus appears to be the one creating it using the naaru-technology found in Tempest Keep, and the power is stored in manacells which piles up into walls and heaps inside the satellite. The large amount of manacells are smuggled by ethereals to the Sunwell where Kael'thas plans to use them to power up the summoning of Kil'jaeden.",lvl=65,maps={267,268},savedInstanceID=554,u=17,["zone-text-areaID"]=3849,g={
 h(-45,{u=17,g={
 q(10665,{coords={
@@ -8989,7 +8994,7 @@ r(26784,{b=1,itemID=21907,learnedAt=370,q=2,requireSkill=197,u=17}),
 i(23572,{q=3,u=17}),
 i(31086,{q=1,u=17}),
 i(33860,{q=1,u=17})}})}})}}),
-inst(259,{awp=20001,coords={
+inst(259,{coords={
 [1944]={{47.66,51.98}}},cost={{"i",28395,1}},lore="For years, this gargantuan fortress was thought to be abandoned, but it's now inhabited by marauding bands of red, furious fel orcs. The presence of this new, savage breed presents something of a mystery, though what is far more disconcerting is that the numbers of these fel orcs seem to be... growing.",lvl=65,mapID=246,savedInstanceID=540,u=17,["zone-text-areaID"]=3714,g={
 h(-45,{u=17,g={
 q(10763,{coords={
@@ -9144,7 +9149,7 @@ s(137883,27536,{b=1,f=4,loc=44,lvl=70,q=3,u=17}),
 s(137881,27534,{b=1,f=1,lvl=70,q=3,u=17})}}),
 n(17301,{u=17,g={
 i(31716,{q=1,u=17})}})}})}}),
-inst(260,{awp=20001,coords={
+inst(260,{coords={
 [1946]={{48.95,35.84}}},lore="The Slave Pens is the place where the Naga force their Broken workers to toil for resources in the darkness in order to achieve their goal of draining the marsh completely and claiming control of its water.",lvl=59,mapID=265,savedInstanceID=547,u=17,["zone-text-areaID"]=3717,g={
 h(-45,{u=17,g={
 q(9876,{coords={
@@ -9166,8 +9171,8 @@ q(10901,{lvl=70,maps={330,350},qgs={22421},rwp=30002,sourceQuests={10900},u=2,g=
 qo(1,{providers={{"i",31750}},u=17}),
 qo(2,{providers={{"i",31751}},u=17})}}),
 q(13431,{altQuests={10901},awp=30002,lc={1,"lvl",71},lvl=70,maps={330,350},qgs={22421},sourceQuests={10900},u=17,g={
-qo(1,{awp=20001,providers={{"i",31750}},u=17}),
-qo(2,{awp=20001,providers={{"i",31751}},u=17})}}),
+qo(1,{awp=20003,providers={{"i",31750}},u=17}),
+qo(2,{awp=20003,providers={{"i",31751}},u=17})}}),
 q(10900,{lc={1,"lvl",71},lvl=70,qgs={22421},u=17})}}),
 h(-63,{u=17,g={
 i(24368,{q=1,u=17})}}),
@@ -9233,7 +9238,7 @@ i(27740,{b=1,f=52,lvl=70,q=3,u=17}),
 i(27683,{b=1,f=53,lvl=70,q=3,u=17}),
 i(23572,{q=3,u=17}),
 i(33821,{q=1,u=17})}})}})}}),
-inst(261,{awp=20001,coords={
+inst(261,{coords={
 [1946]={{50.35,33.39}}},lore="The Steamvault serves as the mechanical heart of the Naga's draining operations in Zangarmarsh. The mechanisms on display within the massive cavern supply the power for the actual act of removing the marsh's water.",lvl=65,maps={263,264},savedInstanceID=545,u=17,["zone-text-areaID"]=3715,g={
 h(-45,{u=17,g={
 q(9764,{lvl=67,maps={1946},providers={{"i",24367}},rwp=40300,u=17}),
@@ -9328,7 +9333,7 @@ r(31456,{b=1,itemID=24313,learnedAt=375,q=4,requireSkill=197,u=17}),
 i(23572,{q=3,u=17}),
 i(31721,{q=1,u=17}),
 i(33827,{q=1,u=17})}})}})}}),
-inst(262,{awp=20001,coords={
+inst(262,{coords={
 [1946]={{54.24,34.45}}},lore="Underbog is the 2nd 5-man instance within the Coilfang Reservoir found on the east side of the naga invested complex. The Underbog is home to the last vestiges of natural life left within Coilfang Reservoir that has not been completely stamped out by the Naga incursion. The only Naga presence in this section defends the structure they built to house their hydra god, Ghaz'an. The rest of the Underbog is a natural habitat, home to the most powerful species of animal life in Zangarmarsh.",lvl=60,mapID=262,savedInstanceID=546,u=17,["zone-text-areaID"]=3716,g={
 h(-45,{u=17,g={
 q(9715,{coords={
@@ -9420,7 +9425,7 @@ i(27896,{b=1,f=53,lvl=70,q=3,u=17}),
 i(27770,{b=1,f=53,lvl=70,q=3,u=17}),
 i(23572,{q=3,u=17}),
 i(33826,{q=1,u=17})}})}})}})}}),
-x(3,{u=30,g={
+x(3,{awp=30003,u=30,g={
 h(-12,{awp=30002,u=30,g={
 ach(1658,{u=30,g={
 title(97,{u=30})}}),
@@ -13409,7 +13414,11 @@ q(24877,{isWeekly=1,lvl=80,qgs={38491},rwp=40001,u=33,g={
 qo(1,{providers={{"n",38494}},u=33}),
 i(52006,{b=1,q=4,u=33})}})}}),
 h(-47,{description="Rewarded for completing the Weekly Raid quests.",sourceQuests={24869,24870,24871,24872,24873,24874,24875,24876,24877,24878,24879,24880},u=33,g={
-i(52006,{b=1,q=4,rwp=40001,sym={{"select","itemID",50452,50020,50449,50001,49994,50015,50447,50453,36931,36919,36934,36928,36922,36925}},u=33})}}),
+i(52006,{b=1,q=4,rwp=40001,sym={{"select","itemID",50452,50020,50449,50001,49994,50015,50447,50453,36931,36919,36934,36928,36922,36925}},u=33})}}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+h(-55,{u=33,g={
+title(675,{description="Submitting a Speedrun to https://wow.blizzard.cn/iccspeedrun/#/ will grant you this title.",u=33}),
+title(674,{description="Submitting a Speedrun to https://wow.blizzard.cn/iccspeedrun/#/ and finishing in the Top 16 will grant you this title.",u=33}),
+title(673,{description="Submitting a Speedrun to https://wow.blizzard.cn/iccspeedrun/#/ and finishing in the Top 3 will grant you this title.",u=33})}})),
 h(-58,{u=33,g={
 cl(6,{crs={38316},u=33,g={
 s(179235,51312,{b=1,c={6},cost={{"i",51127,1},{"i",52028,1}},f=7,loc=40,lvl=80,q=4,u=33}),
@@ -13792,7 +13801,7 @@ i(50452,{f=51,lvl=80,q=4,u=33})}}),
 h(-19,{crs={36597,36612,36626,36627,36678,36789,36853,36855,36939,36948,37813,37955,37970},u=33,g={
 cu(341,{u=33}),
 i(49908,{description="Can drop from all bosses in Icecrown Citadel except in 10 player raid size on Normal difficulty.",q=3,u=33})}}),
-d(116,{difficulties={1,2,3,4,5,6},u=33,g={
+d(119,{difficulties={1,2,3,4,5,6},u=33,g={
 h(-368,{u=33,g={
 e(1624,{npcID=36612,u=33}),
 e(1628,{npcID=37813,u=33}),

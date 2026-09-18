@@ -20,7 +20,7 @@ end]];
 
 root(ROOTS.Zones, {
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
-		m(TEROKKAR_FOREST, bubbleDownSelf({ ["timeline"] = { ADDED_2_0_1 } }, {
+		m(TEROKKAR_FOREST, bubbleDownSelf({ ["timeline"] = { ADDED_2_0_3 } }, {
 			["lore"] = "Terokkar Forest is a zone in central Outland that is home to Shattrath City, as well as quest hubs for level 15-30 players. The northern half of Terokkar is lush and the quests cover the threat of the Arakoaa and magic-addicted elves. The souther half is a wasteland known as the Bone Wastes, created when the Shadow Council blew up Auchindoun. There is also a daily quest hub, Skettis, for players with flying mounts--rewards include vanity items.",
 			["icon"] = 236847,
 			["groups"] = {
@@ -1778,7 +1778,7 @@ root(ROOTS.Zones, {
 					applyclassicphase(TBC_PHASE_TWO_SKYGUARD, n(23367, {	-- Grella <Skyguard Quartermaster>
 						["coord"] = { 64.3, 66.2, TEROKKAR_FOREST },
 						["timeline"] = { ADDED_2_1_0 },
-						["groups"] = bubbleDownClassicRep(FACTION_SHATARI_SKYGUARD, {
+						["groups"] = bubbleDownClassicRep(FACTION_SHATARI_SKYGUARD, bubbleDown({ ["timeline"] = { ADDED_2_1_0 } }, {
 							{		-- Neutral
 							}, {	-- Friendly
 								i(32722),	-- Enriched Terocone Juice
@@ -1792,7 +1792,7 @@ root(ROOTS.Zones, {
 								i(32319),	-- Blue Riding Nether Ray (MOUNT!)
 								i(32314),	-- Green Riding Nether Ray (MOUNT!)
 								i(38628, {	-- Nether Ray Fry (PET!)
-									["timeline"] = { ADDED_2_4_2 },
+									["timeline"] = { ADDED_2_4_3 },
 								}),
 								i(32316),	-- Purple Riding Nether Ray (MOUNT!)
 								i(32317),	-- Red Riding Nether Ray (MOUNT!)
@@ -1800,7 +1800,7 @@ root(ROOTS.Zones, {
 								i(32770),	-- Skyguard Silver Cross
 								i(32445),	-- Skyguard Tabard
 							},
-						}),
+						})),
 					})),
 					n(19296, {	-- Innkeeper Biribi <Innkeeper>
 						["coord"] = { 56.6, 53.2, TEROKKAR_FOREST },
@@ -1843,7 +1843,7 @@ root(ROOTS.Zones, {
 						["races"] = HORDE_ONLY,
 						["groups"] = {
 							i(25848, {	-- Formula: Runed Adamantite Rod (RECIPE!)
-								["timeline"] = { ADDED_2_0_1, REMOVED_5_0_4 },
+								["timeline"] = { ADDED_2_0_3, REMOVED_5_0_4 },
 							}),
 							i(27699),	-- Recipe: Golden Fish Sticks (RECIPE!)
 							i(27700),	-- Recipe: Spicy Crawdad (RECIPE!)
@@ -1906,11 +1906,12 @@ root(ROOTS.Zones, {
 				}),
 				n(ZONE_DROPS, {
 					i(25719, {	-- Arakkoa Feather
-						-- #if BEFORE 8.2.5
-						["description"] = "Can be turned in to the NPC named Vekax for Outcast's Cache and reputation with the Lower City up to Honored. Each turn in requires 30 Arakkoa Feathers. Vekax can be found in the northwestern section of the Lower City in Shattrath.",
-						-- #else
-						["description"] = "Can be turned in to the NPC named Vekax for Outcast's Cache and reputation with the Lower City up to Honored, and again when at Exalted. Each turn in requires 30 Arakkoa Feathers. Vekax can be found in the northwestern section of the Lower City in Shattrath.",
-						-- #endif
+						["description"] =
+							-- #if AFTER 8.2.5
+							"Can be turned in to the NPC named Vekax for Outcast's Cache and reputation with the Lower City up to Honored, and again when at Exalted. Each turn in requires 30 Arakkoa Feathers. Vekax can be found in the northwestern section of the Lower City in Shattrath.",
+							-- #else
+							"Can be turned in to the NPC named Vekax for Outcast's Cache and reputation with the Lower City up to Honored. Each turn in requires 30 Arakkoa Feathers. Vekax can be found in the northwestern section of the Lower City in Shattrath.",
+							-- #endif
 						["coords"] = {
 							{ 24.7, 72.6, TEROKKAR_FOREST },	-- Veil Lithic
 							{ 50.0, 16.7, TEROKKAR_FOREST },	-- Veil Reskk

@@ -1,3 +1,7 @@
+---------------------------------------------------
+--          D E L V E S      M O D U L E         --
+---------------------------------------------------
+
 BOUNTIFUL = createHeader({
 	readable = "Bountiful",
 	icon = 4622271,
@@ -157,7 +161,6 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 					n(TREASURES, {
 						i(218126),	-- Befouler's Syringe
 						i(212163),	-- Soporific Shroom Cap (COSMETIC!)
-						i(225547),	-- Toxic Victory (TOY!)
 					}),
 				}),
 				n(EXPLORATION, {
@@ -171,12 +174,11 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 				})),
 				n(221427, {	-- Zekvir
 					["crs"] = { 225204 },	-- Zekvir (not sure which is "?" or "??")
-					-- #if AFTER 11.1.0
 					["groups"] = {
-						i(212171),	-- Zekvir's Raptorial Spine
-						i(225542),	-- Delver's Dirigible Schematic: Void (MM!)
+						i(225542, { ["timeline"] = { ADDED_11_1_0_SEASONSTART } }),	-- Delver's Dirigible Schematic: Void (MM!)
+						i(225547, { ["timeline"] = { ADDED_11_1_0_SEASONSTART } }),	-- Toxic Victory (TOY!)
+						i(212171, { ["timeline"] = { ADDED_11_1_0_SEASONSTART } }),	-- Zekvir's Raptorial Spine
 					},
-					-- #endif
 				}),
 			},
 		}),
@@ -228,17 +230,16 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 						{"n",234168},	-- The Underpin ?
 						{"n",236626},	-- The Underpin ??
 					},
-					["timeline"]={ADDED_11_1_0_SEASONSTART},
+					["timeline"]={ ADDED_11_1_0_SEASONSTART },
 					["isWeekly"] = true,
 				}),
 				n(236626, {	-- The Underpin <A Pretty Big Deal>
 					["crs"] = { 234168 },	-- The Underpin <A Pretty Big Deal> (not sure which is "?" or "??")
-					-- #if AFTER 11.2.0
 					["groups"] = {
-						i(233196),	-- Delver's Gob-Trotter Schematic: Gold (MM!)
-						i(235614),	-- Golden-Gob Propulsion Rig
+						i(233196, { ["timeline"] = { ADDED_11_2_0_SEASONSTART } }),	-- Delver's Gob-Trotter Schematic: Gold (MM!)
+						i(230727, { ["timeline"] = { ADDED_11_2_0_SEASONSTART } }),	-- Explosive Victory (TOY!)
+						i(235614, { ["timeline"] = { ADDED_11_2_0_SEASONSTART } }),	-- Golden-Gob Propulsion Rig
 					},
-					-- #endif
 				}),
 			},
 		})),
@@ -283,9 +284,7 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 						i(238182),	-- Delver's Mana-Skimmer Schematic: Hyperdrive (MM!)
 					})),
 					ach(42193, {	-- My Stab-Happy Nemesis
-						i(245529, {	-- Hal'hadar's Phasebound Visor (COSMETIC!)
-							["timeline"] = { REMOVED_12_0_0 },
-						}),
+						i(245529),	-- Hal'hadar's Phasebound Visor (COSMETIC!)
 					}),
 					ach(42194, {	-- Pruning the Princess
 						title(639),	-- Contract Killer <Name>
@@ -296,12 +295,11 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 				}),
 				n(244752, {	-- Nexus-Princess Ky'veza
 					["crs"] = { 244753 },	-- Nexus-Princess Ky'veza (not sure which is "?" or "??")
-					-- #if AFTER MID
 					["groups"] = {
-						i(238182),	-- Delver's Mana-Skimmer Schematic: Hyperdrive (MM!)
-						i(245529),	-- Hal'hadar's Phasebound Visor (COSMETIC!)
+						i(238182, { ["timeline"] = { ADDED_12_0_1_LAUNCH }}),	-- Delver's Mana-Skimmer Schematic: Hyperdrive (MM!)
+						i(244470, { ["timeline"] = { ADDED_12_0_1_LAUNCH }}),	-- Etheric Victory (TOY!)
+						i(245529, { ["timeline"] = { ADDED_12_0_1_LAUNCH }}),	-- Hal'hadar's Phasebound Visor (COSMETIC!)
 					},
-					-- #endif
 				}),
 			},
 		})),
@@ -862,8 +860,8 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 		ach(40732, {	-- Heavy-Handed
 			["maps"] = ALL_THE_DELVES_TWW,
 		}),
-		ach(40459),		-- I've Got a Flying Machine!
-		ach(40789),		-- I've Got More Flying Machine?! (automated)
+		ach(40459),	-- I've Got a Flying Machine!
+		ach(40789),	-- I've Got More Flying Machine?! (automated)
 		ach(40452, {	-- Just Keep Swimming
 			["maps"] = KOBYSS_DELVES_TWW,
 		}),
@@ -1838,6 +1836,7 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 			["provider"] = { "i", 228560 },	-- Ancient Curio (TODO: providers ids could be swapped) (TODO: MIGHT CHANGED ITEMID)
 			["timeline"] = { REMOVED_11_1_0 },
 			["maps"] = ALL_REGULAR_DELVES_TWW,
+			["_drop"] = { "g" },	-- pointless API data
 			["groups"] = {
 				-- I don't think this is the curio everyone gets from this quest... is it RNG or only this one
 				-- that wowhead claims?
@@ -1852,6 +1851,7 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 			["provider"] = { "i", 228581 },	-- Ancient Curio (TODO: providers ids could be swapped) (TODO: MIGHT CHANGED ITEMID)
 			["timeline"] = { REMOVED_11_1_0 },
 			["maps"] = ALL_REGULAR_DELVES_TWW,
+			["_drop"] = { "g" },	-- pointless API data
 			["groups"] = {
 				i(228582),	-- Streamlined Relic
 				-- i(225901, {	-- Streamlined Relic [Rank 1] (only tracking Rank 4 curios)
@@ -1922,14 +1922,14 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 			-- ["sourceQuests"] = { xx },	-- ??
 			["provider"] = { "n", 206017 },	-- Brann Bronzebeard
 			["coord"] = { 47.6, 44.3, DORNOGAL },
-			["timeline"] = { ADDED_11_1_0_SEASONSTART },
+			["timeline"] = { ADDED_11_1_0_SEASONSTART, REMOVED_11_2_0_SEASONSTART },
 			["isBreadcrumb"] = true,
 		}),
 		q(85242, {	-- Seasonal Refresher
 			["sourceQuests"] = { 88947 },	-- Undermined Delves
 			["provider"] = { "n", 206017 },	-- Brann Bronzebeard
 			["coord"] = { 47.4, 44.4, DORNOGAL },
-			["timeline"] = { ADDED_11_1_0_SEASONSTART },
+			["timeline"] = { ADDED_11_1_0_SEASONSTART, REMOVED_11_2_0_SEASONSTART },
 			["groups"] = {
 				i(233281),	-- Delver's Cosmetic Surprise Bag (CI!) [cointains any unlearned cosmetic from delves]
 				i(233276),	-- Delver's Starter Kit (CI!)
@@ -1939,7 +1939,7 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 			["sourceQuests"] = { 85242 },	-- Seasonal Refresher
 			["provider"] = { "n", 206017 },	-- Brann Bronzebeard
 			["coord"] = { 47.4, 44.4, DORNOGAL },
-			["timeline"] = { ADDED_11_1_0_SEASONSTART },
+			["timeline"] = { ADDED_11_1_0_SEASONSTART, REMOVED_11_2_0_SEASONSTART },
 			["groups"] = {
 				o(500694, {	-- Nerubian Lord
 					i(233025),	-- Giant Pile of Gold (QI!)
@@ -1954,7 +1954,7 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 			["sourceQuests"] = { 85243 },	-- I Want My Hat Back
 			["provider"] = { "n", 206017 },	-- Brann Bronzebeard
 			["coord"] = { 47.4, 44.4, DORNOGAL },
-			["timeline"] = { ADDED_11_1_0_SEASONSTART },
+			["timeline"] = { ADDED_11_1_0_SEASONSTART, REMOVED_11_2_0_SEASONSTART },
 			["groups"] = {
 				i(212170),	-- Brann's Spare Hat (COSMETIC!)
 				i(230727),	-- Explosive Victory (TOY!)
@@ -2134,9 +2134,7 @@ root(ROOTS.Delves, expansion(EXPANSION.TWW, timelineSelf({ ["timeline"] = { ADDE
 			["provider"] = { "n", 206017 },	-- Brann Bronzebeard
 			["coord"] = { 47.4, 44.4, DORNOGAL },
 			["timeline"] = { ADDED_11_2_0_SEASONSTART, REMOVED_12_0_0 },
-			["groups"] = {
-				i(244470),	-- Etheric Victory (TOY!)
-			},
+			["groups"] = { i(244470) },	-- Etheric Victory (TOY!)
 		}),
 	}),
 	n(QUESTS, sharedData({

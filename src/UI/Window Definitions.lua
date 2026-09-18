@@ -321,7 +321,7 @@ local function BuildDataSummary(data)
 			__Summary[#__Summary + 1] = app.GetClassesString(classes, false, false)
 		end
 	end
-	__Summary[#__Summary + 1] = app.GetProgressTextForRow(data) or ((data.g and not data.expanded and #data.g > 0 and "+++") or "---");
+	__Summary[#__Summary + 1] = GetProgressTextForRow(data) or ""
 	return app.TableConcat(__Summary, nil, "", "")
 end
 app.ExtendBaseClassHandler("summaryText", BuildDataSummary);
@@ -372,23 +372,51 @@ app.WindowDefinitions = {};
 app.Windows = {};
 
 -- Window Color Management
-local function ApplyAllWindowColors(...)
+local function ApplyWindowColor(window)
 	-- Apply the user-set colours
 	local rBg, gBg, bBg, aBg, rBd, gBd, bBd, aBd = app.Settings.GetWindowColors()
 
-	for suffix, window in pairs(app.Windows) do
+	if window then
 		window:SetBackdropColor(rBg, gBg, bBg, aBg)
 		window:SetBackdropBorderColor(rBd, gBd, bBd, aBd)
+	else
+		for suffix, window in pairs(app.Windows) do
+			window:SetBackdropColor(rBg, gBg, bBg, aBg)
+			window:SetBackdropBorderColor(rBd, gBd, bBd, aBd)
+		end
 	end
 end
-app.AddEventHandler("Settings.OnSet", function(context, setting, value)
-	if (context == "General" and (setting == "Window:BackgroundColor" or setting == "Window:BorderColor"))
-		or (context == "Tooltips" and setting == "Window:UseClassForBorder") then
-		ApplyAllWindowColors();
+local function ToggleHideBorders()
+	local hideBorders = app.Settings:GetTooltipSetting("Window:HideBorders")
+	for suffix, window in pairs(app.Windows) do
+		window:SetContainerPoints(hideBorders)
+		window:SetCloseButtonPoints(hideBorders)
+		window:SetScrollBarPoints(hideBorders)
+		window:SetGripPoints(hideBorders)
 	end
+	ApplyWindowColor()
+end
+local OnSetHooks = {
+	General = {
+		["Window:BackgroundColor"] = ApplyWindowColor,
+		["Window:BorderColor"] = ApplyWindowColor,
+	},
+	Tooltips = {
+		["Window:UseClassForBorder"] = ApplyWindowColor,
+		["Window:HideBorders"] = ToggleHideBorders,
+	}
+}
+app.AddEventHandler("Settings.OnSet", function(context, setting, value)
+	context = OnSetHooks[context]
+	if not context then return end
+
+	context = context[setting]
+	if not context then return end
+
+	context()
 end)
 app.AddEventHandler("OnStartup", function()
-	ApplyAllWindowColors();
+	ApplyWindowColor();
 end)
 app.AddEventHandler("OnRefreshComplete", function()
 	app.HandleEvent("OnUpdateWindows", true)
@@ -1466,109 +1494,33 @@ end
 
 -- Window Creation
 local AllWindowSettings, AllSettingsApplied;
-local function ApplySettingsForWindow(self, windowSettings)
-	local oldRecordSettings = self.RecordSettings;
-	self.RecordSettings = app.EmptyFunction;
-	self:SetMovable(windowSettings.movable);
-	self:SetResizable(windowSettings.resizable);
-	self.isLocked = windowSettings.isLocked;
-	if windowSettings.scale then self:SetScale(windowSettings.scale); end
-	if windowSettings.movable then
-		self:ClearAllPoints();
-		if windowSettings.x then
-			local relativeTo = windowSettings.relativeTo;
-			if relativeTo and not _G[relativeTo] then relativeTo = UIParent; end
-			self:SetPoint(windowSettings.point or "CENTER", relativeTo or UIParent, windowSettings.relativePoint or "CENTER", windowSettings.x, windowSettings.y);
-		else
-			self:SetPoint("CENTER", UIParent, "CENTER");
-		end
-	end
-	if windowSettings.width then
-		self:SetSize(windowSettings.width, windowSettings.height);
-	end
-	if windowSettings.alpha then
-		self:SetAlpha(windowSettings.alpha);
-	end
-	if windowSettings.backdrop then
-		self:SetBackdrop(windowSettings.backdrop);
-	end
-	if windowSettings.backdropColor then
-		local r, g, b, a = unpack(windowSettings.backdropColor);
-		self:SetBackdropColor(r or 0, g or 0, b or 0, a or 0);
-	end
-	if windowSettings.borderColor then
-		local r, g, b, a = unpack(windowSettings.borderColor);
-		self:SetBackdropBorderColor(r or 0, g or 0, b or 0, a or 0);
-	end
-	if windowSettings.Progress and self.data then
-		self.data.progress = windowSettings.Progress;
-		self.data.total = windowSettings.Total;
-	end
-	self.RecordSettings = oldRecordSettings;
-end
-local function BuildDefaultsForWindow(self, fromSettings)
-	local defaults = {
-		backdrop = {
-			bgFile = 137056,
-			edgeFile = 137057,
-			tile = true, tileSize = 16, edgeSize = 16,
-			insets = { left = 4, right = 4, top = 4, bottom = 4 }
-		},
-		resizable = true,
-		visible = false,
-		movable = true,
-		alpha = 1,
-		x = 0,
-		y = 0,
-		width = 300,
-		height = 300,
-	};
-	if app.Settings and app.Settings._Initialize then
-		defaults.scale = app.Settings:GetTooltipSetting(self.Suffix == "Prime" and "MainListScale" or "MiniListScale") or 1;
-		local rBg, gBg, bBg, aBg, rBd, gBd, bBd, aBd = app.Settings.GetWindowColors()
-		defaults.backdropColor = { rBg, gBg, bBg, aBg };
-		defaults.borderColor = { rBd, gBd, bBd, aBd };
-	else
-		-- TODO: this shouldn't be possible or allowed!
-		app.PrintDebug(self.Suffix, "window is being created before Settings are initialized!! Using hardcoded defaults.");
-		defaults.scale = 1;
-		defaults.backdropColor = { 0, 0, 0, 1 };
-		defaults.borderColor = { 1, 1, 1, 1 };
-	end
-	if fromSettings then
-		for key,value in pairs(fromSettings) do
-			defaults[key] = value;
-		end
-	end
-	return defaults;
-end
-local function BuildSettingsForWindow(self, windowSettings)
-	local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
-	if xOfs then
-		windowSettings.width = self:GetWidth();
-		windowSettings.height = self:GetHeight();
-		windowSettings.x = xOfs;
-		windowSettings.y = yOfs;
-		windowSettings.point = point;
-		windowSettings.relativePoint = relativePoint;
-		windowSettings.relativeTo = relativeTo and relativeTo:GetName();
-	end
-	windowSettings.isLocked = self.isLocked;
-	windowSettings.scale = self:GetScale();
-	windowSettings.visible = not not self:IsVisible();
-	windowSettings.movable = not not self:IsMovable();
-	windowSettings.resizable = not not self:IsResizable();
-	windowSettings.alpha = self:GetAlpha();
-	windowSettings.backdrop = self:GetBackdrop();
-	local r, g, b, a = self:GetBackdropColor();
-	windowSettings.backdropColor = { r or 0, g or 0, b or 0, a or 1 };
-	r, g, b, a = self:GetBackdropBorderColor();
-	windowSettings.borderColor = { r or 0, g or 0, b or 0, a or 1 };
-	if self.data then
-		windowSettings.Progress = self.data.progress;
-		windowSettings.Total = self.data.total;
-	end
-end
+local Backdrops = {
+	default = {
+		bgFile = 137056,
+		edgeFile = 137057,
+		tile = true, tileSize = 16, edgeSize = 16,
+		insets = { left = 4, right = 4, top = 4, bottom = 4 }
+	},
+	noborders = {
+		bgFile = 137056,
+		tile = true, tileSize = 16,
+		insets = { left = 0, right = 0, top = 0, bottom = 0 }
+	},
+}
+local DefaultWindowSettings = {
+	backdrop = Backdrops.default,
+	resizable = true,
+	visible = false,
+	movable = true,
+	alpha = 1,
+	x = 0,
+	y = 0,
+	width = 300,
+	height = 300,
+	scale = 1,
+	backdropColor = { 0, 0, 0, 1 },
+	borderColor = { 1, 1, 1, 1 },
+}
 local function ClearSettingsForWindow(self)
 	if not AllWindowSettings then return; end
 	AllWindowSettings[self.Suffix] = nil;
@@ -1578,17 +1530,6 @@ local function ReclaimSettingsForWindow(self)
 	if windowSettings then
 		AllWindowSettings[self.Suffix] = windowSettings;
 	end
-end
-local function RecordSettingsForWindow(self)
-	local windowSettings = self.Settings;
-	if windowSettings then
-		BuildSettingsForWindow(self, windowSettings);
-		if self.OnRecordSettings then
-			self:OnRecordSettings(windowSettings)
-		end
-		app.Settings.SetWindowSettingsToProfile(self.Suffix, windowSettings)
-	end
-	return windowSettings;
 end
 local function LoadSettingsForWindow(self)
 	if not AllWindowSettings then return; end
@@ -1604,12 +1545,10 @@ local function LoadSettingsForWindow(self)
 	-- - Profiles control settings as they currently do
 	app.Settings.GetWindowSettingsFromProfile(name, settings)
 	self.Settings = settings;
-	self:Load(settings);
+	self:Load();
 end
-app.AddEventHandler("OnSavedVariablesAvailable", function()
-	if AllWindowSettings then
-		return;
-	end
+app.AddEventHandler("OnInit", function()
+	if AllWindowSettings then return end
 
 	-- Setup the Saved Variables if they aren't already.
 	local savedVariables = AllTheThingsSavedVariables;
@@ -1633,8 +1572,7 @@ app.AddEventHandler("OnSavedVariablesAvailable", function()
 		windowSettings.CurrentInstance = nil;
 		windowSettings.MiniList = oldMiniListData;
 	end
-end)
-app.AddEventHandler("OnInit", function()
+
 	-- Clean out non-visible dynamic windows and cache the rest
 	local dynamicWindows = {};
 	for name, settings in pairs(AllWindowSettings) do
@@ -1655,7 +1593,7 @@ app.AddEventHandler("OnInit", function()
 		dynamicWindows[name] = nil;
 	end
 
-	-- Okay, now load Prime settings last.
+	-- Okay, now load Prime settings last since Prime Load triggers Classic Dynamic window stuff
 	app.Windows.Prime = primeWindow;
 	LoadSettingsForWindow(primeWindow);
 	AllSettingsApplied = true;
@@ -1888,7 +1826,121 @@ local FieldDefaults = {
 			end
 		end
 	end,
-	RecordSettings = RecordSettingsForWindow,
+	RecordSettings = function(self)
+		local windowSettings = self.Settings;
+		if windowSettings then
+			local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
+			if xOfs then
+				windowSettings.width = self:GetWidth();
+				windowSettings.height = self:GetHeight();
+				windowSettings.x = xOfs;
+				windowSettings.y = yOfs;
+				windowSettings.point = point;
+				windowSettings.relativePoint = relativePoint;
+				windowSettings.relativeTo = relativeTo and relativeTo:GetName();
+			end
+			windowSettings.isLocked = self.isLocked;
+			windowSettings.scale = self:GetScale();
+			windowSettings.visible = not not self:IsVisible();
+			windowSettings.movable = not not self:IsMovable();
+			windowSettings.resizable = not not self:IsResizable();
+			windowSettings.alpha = self:GetAlpha();
+			windowSettings.backdrop = self:GetBackdrop();
+			local r, g, b, a = self:GetBackdropColor();
+			windowSettings.backdropColor = { r or 0, g or 0, b or 0, a or 1 };
+			r, g, b, a = self:GetBackdropBorderColor();
+			windowSettings.borderColor = { r or 0, g or 0, b or 0, a or 1 };
+			if self.data then
+				windowSettings.Progress = self.data.progress;
+				windowSettings.Total = self.data.total;
+			end
+			if self.OnRecordSettings then
+				self:OnRecordSettings(windowSettings)
+			end
+			app.Settings.SetWindowSettingsToProfile(self.Suffix, windowSettings)
+		end
+		return windowSettings;
+	end,
+	ApplyWindowSettings = function(self, windowSettings)
+		local oldRecordSettings = self.RecordSettings
+		self.RecordSettings = app.EmptyFunction
+
+		windowSettings = windowSettings or self.Settings
+		self:SetMovable(windowSettings.movable);
+		self:SetResizable(windowSettings.resizable);
+		self.isLocked = windowSettings.isLocked;
+		if windowSettings.scale then self:SetScale(windowSettings.scale); end
+		if windowSettings.movable then
+			self:ClearAllPoints();
+			if windowSettings.x then
+				local relativeTo = windowSettings.relativeTo;
+				if relativeTo and not _G[relativeTo] then relativeTo = UIParent; end
+				self:SetPoint(windowSettings.point or "CENTER", relativeTo or UIParent, windowSettings.relativePoint or "CENTER", windowSettings.x, windowSettings.y);
+			else
+				self:SetPoint("CENTER", UIParent, "CENTER");
+			end
+		end
+		if windowSettings.width then
+			self:SetSize(windowSettings.width, windowSettings.height);
+		end
+		if windowSettings.alpha then
+			self:SetAlpha(windowSettings.alpha);
+		end
+		if windowSettings.backdrop then
+			self:SetBackdrop(windowSettings.backdrop);
+		end
+		if windowSettings.backdropColor then
+			local r, g, b, a = unpack(windowSettings.backdropColor);
+			self:SetBackdropColor(r or 0, g or 0, b or 0, a or 0);
+		end
+		if windowSettings.borderColor then
+			local r, g, b, a = unpack(windowSettings.borderColor);
+			self:SetBackdropBorderColor(r or 0, g or 0, b or 0, a or 0);
+		end
+		if windowSettings.Progress and self.data then
+			self.data.progress = windowSettings.Progress;
+			self.data.total = windowSettings.Total;
+		end
+
+		self.RecordSettings = oldRecordSettings;
+	end,
+	ApplyGlobalSettings = function(self)
+		-- ideally the window sequence would never try to pre-call settings before they exist...
+		local appsettings = app.Settings
+		if not appsettings then return end
+
+		local oldRecordSettings = self.RecordSettings
+		self.RecordSettings = app.EmptyFunction
+
+		local hideBorders = appsettings:GetTooltipSetting("Window:HideBorders")
+		self:SetContainerPoints(hideBorders)
+		self:SetCloseButtonPoints(hideBorders)
+		self:SetScrollBarPoints(hideBorders)
+		self:SetGripPoints(hideBorders)
+		self:SetBackgroundColor()
+
+		self.RecordSettings = oldRecordSettings
+	end,
+	Load = function(self)
+		local windowSettings = self.Settings
+		if not windowSettings then
+			windowSettings = {}
+			self.Settings = windowSettings
+		end
+		-- Hierarchy: self.Settings -> self.Defaults -> DefaultWindowSettings
+		if self.Defaults then setmetatable(self.Defaults, { __index = DefaultWindowSettings }) end
+		setmetatable(windowSettings, { __index = self.Defaults or DefaultWindowSettings })
+		if self.OnLoad then self:OnLoad(windowSettings) end
+		self:ApplyWindowSettings()
+		self:ApplyGlobalSettings()
+	end,
+	Save = function(self)
+		-- Save Settings on Logout
+		local windowSettings = self:RecordSettings()
+		if windowSettings and self.OnSave then
+			self:OnSave(windowSettings)
+		end
+	end,
 	SetVisible = function(self, show)
 		if show then
 			self:Show();
@@ -1905,7 +1957,6 @@ local FieldDefaults = {
 			-- app.PrintDebug("Window:SetData",self.Suffix,data.text)
 			data.window = self;
 			self.data = data;
-			self.missingData = nil
 		end
 	end,
 	ExpandData = function(self, expanded)
@@ -2008,13 +2059,6 @@ local FieldDefaults = {
 						data.back = 1;
 						rowData[#rowData + 1] = data;
 					end
-					if self.missingData then
-						-- an update on the same settings which moves the window to completion can play the sound
-						if visible and self.AllowCompleteSound and self._SettingsRefresh == app._SettingsRefresh then
-							app.Audio:PlayCompleteSound();
-						end
-						self.missingData = nil;
-					end
 					-- only add this info row if there is actually nothing visible in the list
 					-- always a header row
 					-- print("any data",#self.Container,#rowData,#data)
@@ -2025,12 +2069,9 @@ local FieldDefaults = {
 							description = L.NO_ENTRIES_DESC,
 						});
 					end
-				else
-					self._SettingsRefresh = app._SettingsRefresh
-					self.missingData = true;
 				end
 			else
-				self.missingData = nil;
+				self.PlayCompleteSound = true
 			end
 
 			-- app.PrintDebugPrior("Update:Done")
@@ -2173,6 +2214,48 @@ local FieldDefaults = {
 			self:SetScript("OnUpdate", ApplyAlphaForWindow);
 		end
 	end,
+	SetContainerPoints = function(self, hideBorders)
+		local container = self.Container
+		local scrollbar = self.ScrollBar
+		if hideBorders then
+			container:SetPoint("TOPLEFT")
+			container:SetPoint("BOTTOM")
+			self:SetBackdrop(Backdrops.noborders)
+		else
+			container:SetPoint("TOPLEFT", self, "TOPLEFT", 5, -5)
+			container:SetPoint("BOTTOM", self, "BOTTOM", 0, 5)
+			self:SetBackdrop(Backdrops.default)
+		end
+		container:SetPoint("RIGHT", scrollbar, "LEFT", -1, 0)
+		container:Show()
+	end,
+	SetCloseButtonPoints = function(self, hideBorders)
+		local closeButton = self.CloseButton
+		if hideBorders then
+			closeButton:SetPoint("TOPRIGHT", self, "TOPRIGHT", 1, 1)
+		else
+			closeButton:SetPoint("TOPRIGHT", self, "TOPRIGHT", -2, -2)
+		end
+	end,
+	SetScrollBarPoints = function(self, hideBorders)
+		local scrollbar = self.ScrollBar
+		local closeButton = self.CloseButton
+		if hideBorders then
+			scrollbar:SetPoint("BOTTOMRIGHT", self, "BOTTOMRIGHT", 0, 32)
+		else
+			scrollbar:SetPoint("BOTTOMRIGHT", self, "BOTTOMRIGHT", -4, 36)
+		end
+		scrollbar:SetPoint("TOP", closeButton, "BOTTOM", 0, -15)
+	end,
+	SetGripPoints = function(self, hideBorders)
+		local grip = self.Grip
+		if hideBorders then
+			grip:SetPoint("BOTTOMRIGHT")
+		else
+			grip:SetPoint("BOTTOMRIGHT", -5, 5)
+		end
+	end,
+	SetBackgroundColor = ApplyWindowColor,
 
 	-- Refresh Callbacks
 	RegisterRefreshCallback = function(self, ...)
@@ -2185,6 +2268,21 @@ local FieldDefaults = {
 		self:RegisterRefreshCallback(...);
 	end,
 };
+local function CheckOpenWindowsForCompletion()
+	for suffix,window in pairs(app.Windows) do
+		-- app.PrintDebug("check window complete",suffix,window:IsVisible(),window.AllowCompleteSound,window.PlayCompleteSound,window.data.total,app.IsComplete(window.data))
+		if not window.PlayCompleteSound and window:IsVisible() and window.data.total > 0 and app.IsComplete(window.data) then
+			if window.AllowCompleteSound then
+				app.Audio:PlayCompleteSound()
+			end
+			window.PlayCompleteSound = true
+		end
+	end
+end
+-- When something is collected, fire a delayed check against open windows to see if any are freshly-100%
+app.AddEventHandler("OnThingCollected", function()
+	app.CallbackHandlers.DelayedCallback(CheckOpenWindowsForCompletion, 2)
+end)
 local DefaultEventHandlers = {
 	["Settings.OnSet"] = function(self,container,setting,value)
 		if container ~= "Tooltips" then return end
@@ -2197,11 +2295,10 @@ local DefaultEventHandlers = {
 	end,
 }
 local ReservedFields = {
-	Defaults = true,
 	OnInit = true,
 	OnCommand = true,
-	OnLoad = true,
-	OnSave = true,
+	Load = true,
+	Save = true,
 	OnRebuild = true,
 	OnRefresh = true,
 	OnUpdate = true,
@@ -2220,9 +2317,8 @@ local function ShowPrecallShowWindows()
 		-- app.PrintDebug("Precall Show",k)
 		app.Windows[k]:Show()
 	end
-	app.RemoveEventHandler(ShowPrecallShowWindows)
 end
-app.AddEventHandler("OnRefreshCollectionsDone", ShowPrecallShowWindows)
+app.AddEventHandlerOnce("OnLoad", ShowPrecallShowWindows)
 local function SetupCommandsForDefinition(definition)
 	if not definition or definition.BuiltCommands then return end
 	definition.BuiltCommands = true
@@ -2265,7 +2361,7 @@ local function BuildWindow(suffix)
 
 	-- Create the window instance.
 	---@class ATTWindow: BackdropTemplate, ATTFrameClass
-	local window = CreateFrame("Frame", nil, UIParent, BackdropTemplateMixin and "BackdropTemplate");
+	local window = CreateFrame("Frame", "ATTWindow"..suffix, UIParent, BackdropTemplateMixin and "BackdropTemplate");
 	window:SetClampedToScreen(true);
 	window:SetToplevel(true);
 	window:EnableMouse(true);
@@ -2292,27 +2388,13 @@ local function BuildWindow(suffix)
 		end
 	end
 
-	-- Load / Save, which allows windows to keep track of key pieces of information.
-	local defaults = BuildDefaultsForWindow(window, definition.Defaults);
-	local onLoad, onSave = definition.OnLoad, definition.OnSave;
-	ApplySettingsForWindow(window, defaults);
-	function window:Load(windowSettings)
-		setmetatable(windowSettings, { __index = defaults });
-		if onLoad then onLoad(self, windowSettings); end
-		ApplySettingsForWindow(self, windowSettings);
-	end
-
 	-- Setup the Event Handlers
 	local handlers = {
 		PLAYER_LOGOUT = function()
 			-- Save Settings on Logout
-			local windowSettings = window:RecordSettings();
-			if windowSettings and onSave then
-				onSave(window, windowSettings);
-			end
+			window:Save()
 		end,
 	};
-	window:RegisterEvent("PLAYER_LOGOUT");
 	if definition.Debugging then window:SetScript("OnEvent", OnEventDebugging); end
 	local onEvent = window.OnEvent;
 	window:HookScript("OnEvent", function(o, e, ...)
@@ -2615,15 +2697,12 @@ local function BuildWindow(suffix)
 	-- The Close Button.
 	local closeButton = CreateFrame("Button", nil, window, "UIPanelCloseButton");
 	closeButton:SetScript("OnClick", OnCloseButtonPressed);
-	closeButton:SetPoint("TOPRIGHT", window, "TOPRIGHT", -2, -2);
 	closeButton:SetSize(20, 20);
 	window.CloseButton = closeButton;
 
 	-- The Scroll Bar.
 	---@class ATTWindowScrollBar: Slider
 	local scrollbar = CreateFrame("Slider", nil, window, "UIPanelScrollBarTemplate");
-	scrollbar:SetPoint("TOP", closeButton, "BOTTOM", 0, -15);
-	scrollbar:SetPoint("BOTTOMRIGHT", window, "BOTTOMRIGHT", -4, 36);
 	scrollbar:SetScript("OnValueChanged", OnScrollBarValueChanged);
 	scrollbar.back = scrollbar:CreateTexture(nil, "BACKGROUND");
 	scrollbar.back:SetColorTexture(0.1,0.1,0.1,1);
@@ -2644,22 +2723,17 @@ local function BuildWindow(suffix)
 	grip:SetTexture(app.asset("grip"));
 	grip:SetSize(16, 16);
 	grip:SetTexCoord(0,1,0,1);
-	grip:SetPoint("BOTTOMRIGHT", -5, 5);
 	window.Grip = grip;
 
 	-- The Row Container. This contains all of the row frames.
 	---@class ATTRowContainer: Frame
 	local container = CreateFrame("Frame", nil, window);
-	container:SetPoint("TOPLEFT", window, "TOPLEFT", 5, -5);
-	container:SetPoint("RIGHT", scrollbar, "LEFT", -1, 0);
-	container:SetPoint("BOTTOM", window, "BOTTOM", 0, 5);
 	window.Container = container;
 	container.rows = setmetatable({}, {
 		__index = function(rows, i)
 			return CreateRow(container, rows, i);
 		end,
 	});
-	container:Show();
 
 	if not definition.IgnoreQuestUpdates and app.IsClassic then
 		-- Delayed call starts two nested coroutines so that calls can chain, if necessary.
@@ -2693,9 +2767,6 @@ local function BuildWindow(suffix)
 		handlers.BAG_UPDATE_DELAYED = delayedRefresh;
 		handlers.QUEST_WATCH_UPDATE = delayedRefresh;
 		handlers.QUEST_ITEM_UPDATE = delayedRefresh;
-		window:RegisterEvent("QUEST_WATCH_UPDATE");
-		window:RegisterEvent("QUEST_ITEM_UPDATE");
-		window:RegisterEvent("BAG_UPDATE_DELAYED");
 
 		-- this is horrid, essentially ANY interaction with the quest log (clicking a quest, etc.) causes a
 		-- spam of coroutine creation across many ATT windows
@@ -2705,7 +2776,6 @@ local function BuildWindow(suffix)
 			window:DelayedUpdate();
 		end;
 		handlers.QUEST_LOG_UPDATE = delayedUpdate;
-		window:RegisterEvent("QUEST_LOG_UPDATE");
 	end
 	if not definition.IgnorePetBattleEvents and app.GameBuildVersion > 50000 then
 		-- Pet Battles were added with MOP and we want all of our windows to hide when participating.
@@ -2724,8 +2794,6 @@ local function BuildWindow(suffix)
 				window:Show();
 			end
 		end
-		window:RegisterEvent("PET_BATTLE_OPENING_START");
-		window:RegisterEvent("PET_BATTLE_CLOSE");
 	end
 
 	-- Add command processing
@@ -2738,6 +2806,11 @@ local function BuildWindow(suffix)
 		end
 	else
 		window.ProcessCommand = window.Toggle;
+	end
+	-- register the default handlers for the window
+	local registerEvent = window.RegisterEvent
+	for event in pairs(handlers) do
+		pcall(registerEvent, window, event)
 	end
 	if definition.OnInit then
 		definition.OnInit(window, handlers);
@@ -2757,6 +2830,80 @@ local function BuildWindow(suffix)
 	app.HandleEvent("OnWindowCreated", window, suffix);
 	return window;
 end
+
+-- Localized display names for Windows.
+-- Maps a Window's suffix (the key passed to app:CreateWindow) to the localization constant used for its display name.
+-- Allows the Settings > Windows list & tooltips to show translated Window names instead of the raw English key.
+local LocalizedWindowNames = {
+	["Account Management"] = "ACCOUNT_MANAGEMENT",
+	["Achievements"] = "ACHIEVEMENTS",
+	["Added With Patch"] = "ADDED_WITH_PATCH",
+	["All-Hidden"] = "ALL_HIDDEN",
+	["Attunements"] = "ATTUNEMENTS",
+	["Auctions"] = "AUCTIONS",
+	["Bounty"] = "BOUNTY",
+	["Breadcrumbs"] = "BREADCRUMBS",
+	["Character Unique Data"] = "CHARACTER_UNIQUE_DATA",
+	["Class Specific Things"] = "CLASS_SPECIFIC_THINGS",
+	["Collected Sources"] = "COLLECTED_SOURCES",
+	["Commands"] = "COMMANDS",
+	["Dailies"] = "DAILIES",
+	["Exploration"] = "EXPLORATION",
+	["Export"] = "EXPORT",
+	["Factions"] = "FACTIONS",
+	["Flight Paths"] = "FLIGHT_PATHS",
+	["Future Unobtainables"] = "FUTURE_UNOBTAINABLE",
+	["Heirlooms"] = "HEIRLOOMS",
+	["Hidden Achievement Triggers"] = "HIDDEN_ACHIEVEMENT_TRIGGERS",
+	["Hidden Currency Triggers"] = "HIDDEN_CURRENCY_TRIGGERS",
+	["Hidden Quest Triggers"] = "HIDDEN_QUEST_TRIGGERS",
+	["Illusions"] = "ILLUSIONS",
+	["Import"] = "IMPORT",
+	["Item Filter"] = "ITEM_FILTER",
+	["List"] = "LIST_WINDOW",
+	["Local List"] = "LOCAL_LIST",
+	["Locked"] = "LOCKED",
+	["Maps"] = "MAPS",
+	["MiniList"] = "MINI_LIST",
+	["Missing Quests"] = "MISSING_QUESTS",
+	["Mounts"] = "MOUNTS",
+	["Never Implemented"] = "NEVER_IMPLEMENTED",
+	["New With Patch"] = "NEW_WITH_PATCH",
+	["Objects"] = "OBJECTS",
+	["Pet Battles"] = "PET_BATTLES",
+	["Prime"] = "MAIN_LIST",
+	["Quests"] = "QUESTS",
+	["Race Specific Things"] = "RACE_SPECIFIC_THINGS",
+	["RaidAssistant"] = "RAID_ASSISTANT",
+	["Random"] = "RANDOM",
+	["Recipes: Alchemy"] = "RECIPES_ALCHEMY",
+	["Recipes: Blacksmithing"] = "RECIPES_BLACKSMITHING",
+	["Recipes: Cooking"] = "RECIPES_COOKING",
+	["Recipes: Enchanting"] = "RECIPES_ENCHANTING",
+	["Recipes: Engineering"] = "RECIPES_ENGINEERING",
+	["Recipes: First Aid"] = "RECIPES_FIRST_AID",
+	["Recipes: Fishing"] = "RECIPES_FISHING",
+	["Recipes: Herbalism"] = "RECIPES_HERBALISM",
+	["Recipes: Inscription"] = "RECIPES_INSCRIPTION",
+	["Recipes: Jewelcrafting"] = "RECIPES_JEWELCRAFTING",
+	["Recipes: Leatherworking"] = "RECIPES_LEATHERWORKING",
+	["Recipes: Mining"] = "RECIPES_MINING",
+	["Recipes: Skinning"] = "RECIPES_SKINNING",
+	["Recipes: Tailoring"] = "RECIPES_TAILORING",
+	["Removed From Game"] = "REMOVED_FROM_GAME",
+	["Season of Discovery"] = "SEASON_OF_DISCOVERY",
+	["Sourceless"] = "SOURCELESS",
+	["Titles"] = "TITLES",
+	["Toys"] = "TOYS",
+	["Tradeskills"] = "TRADESKILLS",
+	["Unsorted"] = "UNSORTED",
+	["WorldQuests"] = "WORLD_QUESTS",
+};
+local function GetLocalizedWindowName(suffix)
+	local constant = LocalizedWindowNames[suffix];
+	-- Note: rawget avoids triggering the Localization table's fallback (which would report a MISSING LOCALE & return UNKNOWN)
+	return constant and rawget(L, constant) or nil;
+end
 function app:CreateWindow(suffix, definition)
 	app.WindowDefinitions[suffix] = definition;
 	if not definition then
@@ -2769,7 +2916,7 @@ function app:CreateWindow(suffix, definition)
 	end
 	definition.Suffix = suffix
 	-- Dynamic Categories are neat, but currently only a Classic Feature (for now?)
-	if definition.IsDynamicCategory and app.IsClassic then
+	if definition.IsDynamicCategory and (app.IsClassic or app.IsForever) then
 		if definition.DynamicCategoryHeader then
 			app.AddEventHandler("OnDataCached", function(categories)
 				local category = categories.Professions;
@@ -2802,7 +2949,7 @@ function app:CreateWindow(suffix, definition)
 		end
 	end
 
-	definition.SettingsName = definition.SettingsName or suffix
+	definition.SettingsName = definition.SettingsName or GetLocalizedWindowName(suffix) or suffix
 	if definition.Preload then
 		-- This window still needs to be loaded right away
 		return app:GetWindow(suffix);
@@ -3340,11 +3487,11 @@ end
 -- Dynamic Categories (Delayed)
 local DynamicCategoryHeaders = {
 	{ id = "achievementID", name = ACHIEVEMENTS, icon = app.asset("Category_Achievements") },
-	{ id = "sourceID", name = "Appearances", icon = 135276 },
+	{ id = "sourceID", name = L.APPEARANCES, icon = 135276 },
 	{ id = "speciesID", name = AUCTION_CATEGORY_BATTLE_PETS, icon = app.asset("Category_PetJournal") },
 	{ id = "characterUnlock", name = CHARACTER .. " " .. UNLOCK .. "s", icon = app.asset("Category_ItemSets") },
 	{ id = "currencyID", name = CURRENCY, icon = app.asset("Interface_Vendor") },
-	{ id = "explorationID", name = "Exploration", icon = app.asset("Category_Exploration") },
+	{ id = "explorationID", name = L.EXPLORATION, icon = app.asset("Category_Exploration") },
 	{ id = "factionID", name = L.FACTIONS, icon = app.asset("Category_Factions") },
 	{ id = "flightpathID", name = L.FLIGHT_PATHS, icon = app.asset("Category_FlightPaths") },
 	{ id = "mountID", name = MOUNTS, icon = app.asset("Category_Mounts") },

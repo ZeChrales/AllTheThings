@@ -3,11 +3,11 @@ local appName, _ = ...
 _.AddEventHandler("OnBuildHiddenDataCache", function(categories)
 local flt,h,i,q,s,x=_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateQuest,_.CreateItemSource,_.CreateExpansion;
 categories.Unsorted={
-x(12,{
-x(12.0001,{awp=120001,g={
+x(12,{awp=120001,g={
+x(12.0001,{
 h(-101,{
 s(304843,269972,{f=21}),
-s(304854,269988,{f=21})})}}),
+s(304854,269988,{f=21})})}),
 x(12.0000001,{awp=120000,g={
 h(-303,{
 i(263208,{b=1,f=55,lvl=90,spellID=1270075,tmogSetID=5469}),
@@ -47,9 +47,9 @@ i(263393,{b=1,c={4},f=55,lvl=90,spellID=1271255,tmogSetID=5594}),
 i(263394,{b=1,c={7},f=55,lvl=90,spellID=1271256,tmogSetID=5595}),
 i(263395,{b=1,c={9},f=55,lvl=90,spellID=1271257,tmogSetID=5596}),
 i(263396,{b=1,c={1},f=55,lvl=90,spellID=1271258,tmogSetID=5596}),
-i(263397,{b=1,f=55,lvl=90,spellID=1271259,tmogSetID=5599})})}})}),
-x(8,{
-x(8.0001,{awp=80001,g={
+i(263397,{b=1,f=55,lvl=90,spellID=1271259,tmogSetID=5599})})}})}}),
+x(8,{awp=80001,g={
+x(8.0001,{
 h(-88,{
 i(154158,{f=32}),
 i(153398,{b=1,f=52,lvl=40}),
@@ -801,7 +801,7 @@ i(163156,{f=55,spellID=11629}),
 i(163157,{f=55,spellID=11629}),
 i(163159,{f=55,spellID=11629}),
 i(163160,{f=55,spellID=11629}),
-i(163165,{f=55,lvl=35,spellID=11008}),
+i(163165,{f=55,lvl=35,spellID=278872}),
 i(163181,{f=55,lvl=35,spellID=274911}),
 i(163187,{f=55,spellID=11629}),
 i(163192,{f=55,spellID=11009}),
@@ -1194,12 +1194,6 @@ i(156633,{b=1,lvl=50,requireSkill=171,spellID=293945}),
 i(156634,{b=1,f=55,lvl=50,requireSkill=171,spellID=293795}),
 i(158292),
 i(158383,{f=55,spellID=133994}),
-i(160399),
-i(160400),
-i(160705,{f=55,spellID=177784}),
-i(160709),
-i(160710),
-i(160712),
 i(162113,{f=55,spellID=276183}),
 i(162115,{f=55,spellID=276185}),
 i(162116,{f=55,spellID=276186}),
@@ -1406,7 +1400,6 @@ i(155914),
 i(156476,{f=55,spellID=258829}),
 i(156485),
 i(156513,{spellID=258657}),
-i(156517,{b=1,f=55}),
 i(156529,{b=1,f=55}),
 i(156530),
 i(156536,{b=1}),
@@ -1493,7 +1486,6 @@ i(159778),
 i(159780,{spellID=268808}),
 i(159832),
 i(159943),
-i(160027,{b=1}),
 i(160037),
 i(160038,{spellID=269971}),
 i(160040,{spellID=269971}),
@@ -1557,7 +1549,7 @@ i(159966),
 i(159967),
 i(159970),
 i(159971,{f=53}),
-s(98595,162654,{f=23})}}),
+s(98595,162654,{f=23})}),
 x(8.01,{awp=80100,g={
 i(164641,{spellID=281937}),
 i(164735),
@@ -2002,7 +1994,7 @@ i(169782,{b=1}),
 i(170156),
 i(169977,{b=1}),
 i(169978,{b=1}),
-i(169979,{b=1})}})}),
+i(169979,{b=1})}})}}),
 h(-45,{
 q(11621,{description="Area: |cFFf09f26Borean Tundra|r"}),
 q(11622,{description="Area: |cFFf09f26Borean Tundra|r"}),

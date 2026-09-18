@@ -3,7 +3,7 @@
 -----------------------------------------------------
 
 local SCHOLOMANCE_GROUPS = {};
-local KORMOK_LEGACY_DESCRIPTION = "This boss can be summoned in Ras Frostwhisper's room using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.";
+local KORMOK_LEGACY_DESCRIPTION = "This boss can be summoned in Ras Frostwhisper's room using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.\nSummon Location: Ras Frostwhisper's room.";
 local ignoreTimeline = function(item)	-- Items applied with this were never actually removed.
 	item.timeline = IGNORED_VALUE;
 	return item;
@@ -1363,7 +1363,7 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 		}),
 		i(18694),	-- Shadowy Mail Greaves
 	}),
-	applyclassicphase(PHASE_FIVE_TIER_ZERO_POINT_FIVE_SETS, n(16118, {	-- Kormok
+	applyclassicphase(PHASE_FIVE_TIER_ZERO_POINT_FIVE_SETS, n_conditional(16118, {	-- Kormok
 		["description"] =
 			-- #if AFTER 10.1.5
 			KORMOK_LEGACY_DESCRIPTION,
@@ -1372,14 +1372,23 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 			-- #else
 			"This boss was summoned using the Brazier of Beckoning in Ras Frostwhisper's room, which is currently inaccessible.",
 			-- #endif
+		-- #if BEFORE 6.0.2
 		["cost"] = {
 			{ "i", 22052, 1 },	-- Brazier of Beckoning [Kormok]
-			{ "i", 22057, 1 },	-- Brazier of Invocation
 		},
-		-- #if AFTER 10.1.5
-		-- This init function unmarks the removed from game flag for folks with the brazier.
-		["OnInit"] = FUNCTION_TEMPLATES.OnInit.BrazierAccess,
 		-- #endif
+
+		-- #if AFTER 10.1.5
+		["sourceQuest"] = 8996,	-- Return to Bodley
+		["u_sqs"] = true,	-- remove the u flag if sourcequests are completed
+		-- #elseif AFTER 4.0.3
+			-- #if BEFORE 5.0.4
+			["u_providers"] = true,	-- remove the u flag if providers are available
+			-- #endif
+		-- #endif
+
+		["provider"] = { "i", 22057 },	-- Brazier of Invocation
+		["timeline"] = { REMOVED_4_0_3 },
 		["groups"] = {
 			-- #if SEASON_OF_DISCOVERY
 			applyclassicphase(SOD_PHASE_FOUR, i(228026, {	-- Blade of Blackwood
@@ -2025,7 +2034,7 @@ table.insert(SCHOLOMANCE_GROUPS, d(DIFFICULTY.DUNGEON.MULTI.NORMAL_HEROIC, {
 					}),
 				}),
 				n(206014, {	-- Eva Sarkhoff
-					["provider"] = {"i",88566},	-- Krastinov's Bag of Horrors
+					["provider"] = { "i", 88566 },	-- Krastinov's Bag of Horrors
 					["questID"] = 76248,
 					["groups"] = {
 						i(206365),	-- Inert Spectral Essence

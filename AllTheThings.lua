@@ -960,11 +960,14 @@ app.ThingKeys = {
 	pvprankID = 1,
 };
 local SpecificSources = {
-	headerID = {
-		[app.HeaderConstants.COMMON_BOSS_DROPS] = true,
-		[app.HeaderConstants.COMMON_VENDOR_ITEMS] = true,
-	},
+	headerID = {},
 }
+if rawget(app.HeaderConstants, "COMMON_BOSS_DROPS") then
+	SpecificSources.headerID[app.HeaderConstants.COMMON_BOSS_DROPS] = true
+end
+if rawget(app.HeaderConstants, "COMMON_VENDOR_ITEMS") then
+	SpecificSources.headerID[app.HeaderConstants.COMMON_VENDOR_ITEMS] = true
+end
 if rawget(app.HeaderConstants, "DROPS") then
 	SpecificSources.headerID[app.HeaderConstants.DROPS] = true
 end
@@ -1331,7 +1334,7 @@ function app:GetDatabaseRoot()
 end
 
 end	-- Dynamic/Main Data
-
+--[[ -- achievement_criteria symlink is obsolete
 local function PrePopulateAchievementSymlinks()
 	local achCache = app.GetRawFieldContainer("achievementID")
 	-- app.PrintDebug("FillAchSym")
@@ -1351,10 +1354,9 @@ local function PrePopulateAchievementSymlinks()
 		end
 		app.FillRunner.SetPerFrame(25)
 	end
-	app.RemoveEventHandler(PrePopulateAchievementSymlinks)
 	-- app.PrintDebug("Done:FillAchSym")
 end
-app.AddEventHandler("OnRefreshCollectionsDone", PrePopulateAchievementSymlinks)
+app.AddEventHandlerOnce("OnRefreshCollectionsDone", PrePopulateAchievementSymlinks)--]]
 
 app.AddEventHandler("OnReady", function()
 	-- warning about debug logging in case it sneaks in we can realize quicker

@@ -265,9 +265,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 						4601,	-- Been Waiting a Long Time for This (10 player)
 					}},
 					["timeline"] = { ADDED_3_0_2 },
-					["groups"] = {
-						i(51954),		-- Bloodbathed Frostbrood Vanquisher (MOUNT!)
-					},
+					["groups"] = { i(51954) },	-- Bloodbathed Frostbrood Vanquisher (MOUNT!)
 				})),
 				applyclassicphase(WRATH_PHASE_FOUR, ach(4603, {	-- Glory of the Icecrown Raider (25 player)
 					-- Meta Achievement
@@ -291,9 +289,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 						4622,	-- Neck-Deep in Vile (25 player)
 					}},
 					["timeline"] = { ADDED_3_0_2 },
-					["groups"] = {
-						i(51955),		-- Icebound Frostbrood Vanquisher (MOUNT!)
-					},
+					["groups"] = { i(51955) },	-- Icebound Frostbrood Vanquisher (MOUNT!)-- Icebound Frostbrood Vanquisher (MOUNT!)
 				})),
 				ach(4532, {	-- Fall of the Lich King (10 player)
 					-- Meta Achievement
@@ -821,6 +817,23 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 					}),
 				},
 			}),
+			-- #endif
+			-- #if AFTER 3.4.5
+			-- #if BEFORE 3.80.0
+			cnONLY(n(SPECIAL, {
+				["groups"] = {
+					title(675, {	-- Northbound Rush, %s
+						["description"] = "Submitting a Speedrun to https://wow.blizzard.cn/iccspeedrun/#/ will grant you this title."
+					}),
+					title(674, {	-- Dawn's Vanguard, %s
+						["description"] = "Submitting a Speedrun to https://wow.blizzard.cn/iccspeedrun/#/ and finishing in the Top 16 will grant you this title."
+					}),
+					title(673, {	-- The Overlord of Dawn, %s
+						["description"] = "Submitting a Speedrun to https://wow.blizzard.cn/iccspeedrun/#/ and finishing in the Top 3 will grant you this title."
+					}),
+				},
+			})),
+			-- #endif
 			-- #endif
 			n(VENDORS, {
 				cl(DEATHKNIGHT, {

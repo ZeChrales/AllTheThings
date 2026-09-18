@@ -75,6 +75,9 @@ namespace ATT
             { "TWW", 110 },     // TWW_PHASE_ONE
             { "MID", 120 },     // MID_PHASE_ONE
             { "TLT", 130 },     // TLT_PHASE_ONE
+
+            // Forever
+            { "FOREVER", 16 }, // FOREVER_PHASE_ONE
         };
 
         /// <summary>
@@ -99,6 +102,9 @@ namespace ATT
             { "TWW", 99 },      // TWW_PHASE_SIX?
             { "MID", 99 },      // MID_PHASE_SIX?
             { "TLT", 99 },      // TLT_PHASE_SIX?
+
+            // Forever
+            { "FOREVER", 699 }, // FOREVER_PHASE_INFINITE?
         };
 
         /// <summary>
@@ -1048,8 +1054,8 @@ namespace ATT
                                 return aBonus.CompareTo(bBonus);
                             }
 
-                            // BonusID goes first
-                            return -1;
+                            // BonusID goes last
+                            return 1;
                         }
 
                         // If a contains a modID, then try to get it.
@@ -1062,8 +1068,8 @@ namespace ATT
                                 return aMod.CompareTo(bMod);
                             }
 
-                            // ModID goes first
-                            return -1;
+                            // ModID goes last
+                            return 1;
                         }
 
                         // If a contains a cost, then try to get it.

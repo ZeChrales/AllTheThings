@@ -1,6 +1,9 @@
 local appName, app = ...
 local L = app.L;
 
+-- Module locals
+local filterSet = app.Modules.Filter.Set;
+
 -- Create the settings container.
 -- TODO: Investigate if this needs to be a frame or if it can be something else.
 local settings = CreateFrame("FRAME", appName .. "-Settings", InterfaceOptionsFramePanelContainer)
@@ -81,7 +84,7 @@ settings.RequiredForInsaneMode = {
 	Conduits = app.GameBuildVersion >= 100000,
 	Decor = app.GameBuildVersion >= 110207,
 	MountMods = app.GameBuildVersion >= 100000,
-	Exploration = app.IsClassic,	-- CRIEVE NOTE: For now, until Blizzard fixes their broken Retail version of the exploration API.
+	Exploration = app.GameBuildVersion < 100000,	-- CRIEVE NOTE: For now, until Blizzard adds an exploration API that doesn't suck
 	FirstCrafts = app.GameBuildVersion >= 100000,
 	FlightPaths = true,
 	Followers = app.GameBuildVersion >= 60000,
@@ -283,11 +286,11 @@ local GeneralSettingsBase = {
 		["Thing:AzeriteEssences"] = app.GameBuildVersion >= 80000,
 		["Thing:BattlePets"] = true,
 		["Thing:Campsites"] = app.GameBuildVersion >= 110100,
-		["Thing:CharacterUnlocks"] = app.IsRetail,	-- CRIEVE NOTE: This class might be up to the chopping block with a thing I have on my todo list. I'll leave it for now.
+		["Thing:CharacterUnlocks"] = true,
 		["Thing:Conduits"] = app.GameBuildVersion >= 100000,
 		["Thing:Decor"] = app.GameBuildVersion >= 110207,
 		["Thing:MountMods"] = app.GameBuildVersion >= 100000,
-		["Thing:Exploration"] = app.IsClassic,	-- CRIEVE NOTE: For now, until Blizzard fixes their broken Retail version of the exploration API.
+		["Thing:Exploration"] = app.GameBuildVersion < 100000,	-- CRIEVE NOTE: For now, until Blizzard adds an exploration API that doesn't suck
 		["Thing:FirstCrafts"] = app.GameBuildVersion >= 100000,
 		["Thing:FlightPaths"] = true,
 		["Thing:Followers"] = app.GameBuildVersion >= 60000,
@@ -474,13 +477,32 @@ if season > 0 then
 		UnobtainableSettingsBase.__index[1604] = true;
 	end
 	if season == 2 then	-- SOD
-		if app.GameBuildVersion >= 11502 then app.MaximumSkillLevel = 300;
-		elseif app.GameBuildVersion >= 11501 then app.MaximumSkillLevel = 225;
-		else app.MaximumSkillLevel = 150; end
+		-- SkillLevel
+		local maximumSkillLevel = 300;
+		if app.GameBuildVersion == 11501 then maximumSkillLevel = 225;
+		elseif app.GameBuildVersion <= 11500 then maximumSkillLevel = 150; end
+		if maximumSkillLevel < 300 then
+			-- Tell the General Page that we need a max skill level checkbox.
+			app.MaximumSkillLevel = maximumSkillLevel;
+			app.Modules.Filter.DefineToggleFilter("SkillLevel", false,
+			function(group)
+				return maximumSkillLevel >= (group.learnedAt or 0);
+			end);
+			
+			app.AddEventHandler("OnUpdateModeFilters", function(self)
+				if self:Get("Filter:BySkillLevel") and not self:Get("DebugMode") then
+					filterSet.SkillLevel(true)
+				else
+					filterSet.SkillLevel()
+				end
+			end)
+		end
 	end
 end
 
-local RawSettings;
+local RawSettings = setmetatable({}, { __index = function(t,key)
+	app.report("Performed Settings lookup prior to load",key)
+end})
 local function SetupRawSettings()
 	if not RawSettings.General then RawSettings.General = {} end
 	if not RawSettings.Tooltips then RawSettings.Tooltips = {} end
@@ -527,11 +549,6 @@ settings.Initialize = function(self)
 	end
 
 	self:UpdateMode()
-	-- TODO: need to properly use other libraries to create minimap button if delayed...
-	-- but other addons only handle pre-existing minimap buttons when they load, so for now move back to the order it was
-	app.SetMinimapButtonSettings(
-		self:GetTooltipSetting("MinimapButton"),
-		self:GetTooltipSetting("MinimapSize"));
 
 	if settings.RefreshActiveInformationTypes then
 		settings.RefreshActiveInformationTypes()
@@ -551,6 +568,9 @@ settings.Initialize = function(self)
 
 	-- Remove obsolete Settings keys
 	settings:Set("ExpansionFilter:Enabled", nil)
+
+	-- Update Filters when initializing
+	app.HandleEvent("Settings.UpdateFilters")
 
 	app._SettingsRefresh = GetTimePreciseSec()
 	settings._Initialize = true
@@ -706,6 +726,7 @@ settings.ApplyProfile = function(self)
 	end
 
 	-- Ensure the window settings of this Profile are loaded
+	-- TODO: use Settings.OnApplyProfile event
 	if app.LoadSettingsForAllWindows then
 		app.LoadSettingsForAllWindows()
 	end
@@ -737,11 +758,11 @@ settings.GetWindowSettingsFromProfile = function(suffix, windowSettings)
 				windowSettings.relativePoint = point.PointRef
 				windowSettings.x = point.X
 				windowSettings.y = point.Y
-				windowSettings.width = points.Width
-				windowSettings.height = points.Height
 			end
+			windowSettings.width = points.Width
+			windowSettings.height = points.Height
+			windowSettings.visible = points.visible
 			windowSettings.isLocked = points.Locked
-			-- app.PrintTable(windowSettings)
 		end
 		local rBg, gBg, bBg, aBg, rBd, gBd, bBd, aBd = settings.GetWindowColors()
 		windowSettings.backdropColor = { rBg, gBg, bBg, aBg }
@@ -781,6 +802,7 @@ settings.SetWindowSettingsToProfile = function(suffix, windowSettings)
 	points.Width      = windowSettings.width
 	points.Height     = windowSettings.height
 	points.Locked     = windowSettings.isLocked
+	points.visible    = windowSettings.visible
 end
 settings.Get = function(self, setting)
 	return RawSettings.General[setting];
@@ -796,22 +818,21 @@ settings.GetDefaultFilter = function(self, filterID)
 	return FilterSettingsBase.__index[filterID]
 end
 local RawFilters
-local function SetRawFilters(changedSetting)
-	if changedSetting and changedSetting ~= "Profile:StoreFilters" then return end
-	if settings:Get("Profile:StoreFilters") then
-		RawFilters = RawSettings.Filters
-	else
-		RawFilters = AllTheThingsSettingsPerCharacter.Filters
-	end
+local function SetRawFilters()
+	RawFilters = RawSettings.Filters
 end
 -- TODO: maybe later we can use OnSettingChanged to trigger UpdateMode when needed by the setting
 -- instead of having UpdateMode tacked into a thousand individual checkboxes and buttons
 -- app.AddEventHandler("OnSettingChanged", SetRawFilters);
-app.AddEventHandler("OnSettingsNeedsRefresh", SetRawFilters);
-app.AddEventHandler("OnLoad", SetRawFilters)
-settings.ResetFilters = function(self)
+-- app.AddEventHandler("OnSettingsNeedsRefresh", SetRawFilters);
+app.AddEventHandler("Settings.OnApplyProfile", SetRawFilters)
+settings.ResetFilters = function(self, expected)
 	wipe(RawFilters)
-	settings:UpdateMode(1)
+	if expected and type(expected) == "table" then
+		for k,v in next,expected do
+			RawFilters[k] = v
+		end
+	end
 end
 settings.GetFilter = function(self, filterID)
 	return RawFilters[filterID];
@@ -825,9 +846,6 @@ end
 settings.SetFilter = function(self, filterID, value)
 	RawFilters[filterID] = value;
 	settings:UpdateMode(1);
-end
-settings.GetRawFilters = function(self)
-	return RawFilters;
 end
 settings.GetRawSettings = function(self, name)
 	return RawSettings[name];
@@ -930,10 +948,21 @@ settings.GetModeString = function(self)
 			end
 		end
 		local hasAllInsaneFilters = true
-		for filterID in pairs(app.EquipmentFilters) do
-			if not settings:GetFilter(filterID) then
-				hasAllInsaneFilters = false
-				break
+		if not settings:Get("Profile:DefaultFilters") then
+			if settings:Get("AccountMode") then
+				for filterID, v in pairs(app.EquipmentFilters) do
+					if not settings:GetFilter(filterID) then
+						hasAllInsaneFilters = false
+						break
+					end
+				end
+			else
+				for filterID in pairs(app.Presets[app.Class]) do
+					if not settings:GetFilter(filterID) then
+						hasAllInsaneFilters = false
+						break
+					end
+				end
 			end
 		end
 		if thingCount == 0 then
@@ -1034,10 +1063,21 @@ settings.GetShortModeString = function(self)
 			end
 		end
 		local hasAllInsaneFilters = true
-		for filterID in pairs(app.EquipmentFilters) do
-			if not settings:GetFilter(filterID) then
-				hasAllInsaneFilters = false
-				break
+		if not settings:Get("Profile:DefaultFilters") then
+			if settings:Get("AccountMode") then
+				for filterID, v in pairs(app.EquipmentFilters) do
+					if not settings:GetFilter(filterID) then
+						hasAllInsaneFilters = false
+						break
+					end
+				end
+			else
+				for filterID in pairs(app.Presets[app.Class]) do
+					if not settings:GetFilter(filterID) then
+						hasAllInsaneFilters = false
+						break
+					end
+				end
 			end
 		end
 		local style = ""
@@ -1495,10 +1535,13 @@ settings.Helpers = {
 		SetScript_OnValueChanged = function(self)
 			self:SetScript("OnValueChanged", function(self, newValue)
 				if self.oldValue ~= newValue then
-					self.oldValue = newValue
 					local shortVal = self.__FORMAT:format(newValue)
+					if self.oldValue then
+						-- only trigger the settings update if a value had already been set
+						settings:SetTooltipSetting(self.__KEY, tonumber(shortVal))
+					end
+					self.oldValue = newValue
 					self.Label:SetText(shortVal)
-					settings:SetTooltipSetting(self.__KEY, tonumber(shortVal))
 					if self.__OnValueChanged then
 						self:__OnValueChanged()
 					end
@@ -1593,6 +1636,7 @@ end
 
 settings.SetAccountMode = function(self, accountMode)
 	self:Set("AccountMode", accountMode);
+	app.HandleEvent("Settings.UpdateFilters")
 	self:UpdateMode(1);
 end
 settings.ToggleAccountMode = function(self)
@@ -1606,17 +1650,12 @@ settings.ToggleAccountMode = function(self)
 end
 settings.ToggleFilters = function(self)
 	self:ForceRefreshFromToggle()
-	if (settings:GetFilter(4) and not (app.ClassIndex == 5 or app.ClassIndex == 8 or app.ClassIndex == 9)) -- Cloth
-	or (settings:GetFilter(5) and not (app.ClassIndex == 4 or app.ClassIndex == 10 or app.ClassIndex == 11 or app.ClassIndex == 12)) -- Leather
-	or (settings:GetFilter(6) and not (app.ClassIndex == 3 or app.ClassIndex == 7 or app.ClassIndex == 13)) -- Mail
-	or (settings:GetFilter(7) and not (app.ClassIndex == 1 or app.ClassIndex == 2 or app.ClassIndex == 6)) then -- Plate
-		settings:ResetFilters()	-- Class Defaults
-		app.print(L.FILTERS_PAGE.." "..L.CLASS_DEFAULTS_BUTTON.."|R "..L.ENABLED..".")
+	if settings:Get("Profile:DefaultFilters") then
+		settings:Set("Profile:DefaultFilters", false)
+		app.print(L.FILTERS_DEFAULT .. " " .. L.FILTERS_PAGE .. " " .. L.DISABLED)
 	else
-		for filterID = 1, 113 do	-- 113 = Bags, highest filterID in our Settings
-			settings:SetFilter(filterID, true)
-		end
-		app.print(L.FILTERS_PAGE.." "..L.ALL_BUTTON.."|R "..L.ENABLED..".")
+		settings:Set("Profile:DefaultFilters", true)
+		app.print(L.FILTERS_DEFAULT .. " " .. L.FILTERS_PAGE .. " " .. L.ENABLED)
 	end
 end
 settings.ActivateNextProfile = function(self)
@@ -1666,6 +1705,7 @@ settings.ToggleCompletionistMode = function(self)
 end
 settings.SetDebugMode = function(self, debugMode)
 	self:Set("DebugMode", debugMode);
+	app.HandleEvent("Settings.UpdateFilters")
 	if debugMode then
 		-- cache the current settings to re-apply after
 		settings:Set("Cache:CompletedGroups", settings:Get("Show:CompletedGroups"))
@@ -1774,7 +1814,6 @@ settings.SetThingTracking = function(self, force)
 end
 -- Updates various application settings and values based on toggled Settings, as well as the Mode name and Refreshes the Settings
 settings.UpdateMode = function(self, doRefresh)
-	local filterSet = app.Modules.Filter.Set;
 	if self:Get("Completionist") then
 		filterSet.ItemSource()
 	else
@@ -1869,6 +1908,7 @@ settings.UpdateMode = function(self, doRefresh)
 		self.OnlyNotTrash = app.IsClassic and self:Get("Only:NotTrash");
 	end
 	app.MODE_DEBUG_OR_ACCOUNT = app.MODE_DEBUG or app.MODE_ACCOUNT;
+	app.HandleEvent("OnUpdateModeFilters", self)
 
 	if self:Get("Show:CompletedGroups") then
 		filterSet.CompletedGroups()
@@ -1925,16 +1965,7 @@ settings.UpdateMode = function(self, doRefresh)
 	else
 		filterSet.Level()
 	end
-
-	if self:Get("Filter:BySkillLevel") and not self:Get("DebugMode") then
-		filterSet.SkillLevel(true)
-	else
-		filterSet.SkillLevel()
-	end
-	app:UnregisterEvent("TAXIMAP_OPENED")
-	if self:Get("Thing:FlightPaths") or self:Get("DebugMode") then
-		app:RegisterEvent("TAXIMAP_OPENED")
-	end
+	
 	self.Collectibles.Loot = self:Get("LootMode");
 
 	-- refresh forced from toggle
@@ -2005,6 +2036,5 @@ local function ConvertAutoOpenSettings()
 		app:GetWindow("WorldQuests"):SetShouldAutomaticallyOpen(true)
 		settings:SetTooltipSetting("Auto:WorldQuestsList", nil)
 	end
-	app.RemoveEventHandler(ConvertAutoOpenSettings)
 end
-app.AddEventHandler("OnLoad", ConvertAutoOpenSettings)
+app.AddEventHandlerOnce("OnLoad", ConvertAutoOpenSettings)

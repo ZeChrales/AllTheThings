@@ -157,7 +157,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 	}),
 	applyclassicphase(TBC_PHASE_ONE, ach(890, {	-- Into the Wild Blue Yonder
 		["spellID"] = 34090,	-- Expert Riding
-		["timeline"] = { ADDED_2_0_1 },
+		["timeline"] = { ADDED_2_0_3 },
 		["rank"] = 3,
 	})),
 	ach(19459, {["timeline"] = { ADDED_11_0_2 }}),	-- Level 80
@@ -291,7 +291,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 	applyclassicphase(TBC_PHASE_ONE, ach(519, {		-- 25 Exalted Reputations
 		["timeline"] = {
 			-- #if ANYCLASSIC
-			ADDED_2_0_1,
+			ADDED_2_0_3,
 			-- #else
 			ADDED_3_0_2,
 			-- #endif
@@ -301,7 +301,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 	applyclassicphase(TBC_PHASE_ONE, ach(518, {		-- 30 Exalted Reputations
 		["timeline"] = {
 			-- #if ANYCLASSIC
-			ADDED_2_0_1,
+			ADDED_2_0_3,
 			-- #else
 			ADDED_3_0_2,
 			-- #endif
@@ -311,7 +311,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 	applyclassicphase(TBC_PHASE_TWO, ach(1014, {	-- 35 Exalted Reputations
 		["timeline"] = {
 			-- #if ANYCLASSIC
-			ADDED_2_0_1,
+			ADDED_2_0_3,
 			-- #else
 			ADDED_3_0_2,
 			-- #endif
@@ -321,7 +321,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 	applyclassicphase(TBC_PHASE_FIVE, ach(1015, {	-- 40 Exalted Reputations
 		["timeline"] = {
 			-- #if ANYCLASSIC
-			ADDED_2_0_1,
+			ADDED_2_0_3,
 			-- #else
 			ADDED_3_0_2,
 			-- #endif
@@ -329,7 +329,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 		["_noautomation"] = true,
 		-- #if AFTER 3.0.1
 		["groups"] = {
-			title(46),		-- <Name> the Exalted
+			title(46),	-- <Name> the Exalted
 		},
 		-- #endif
 	})),
@@ -358,7 +358,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 	applyclassicphase(BFA_PHASE_ONE, ach(12864, bubbleDownSelf({["timeline"] = {ADDED_8_0_1_LAUNCH}}, {	-- 80 Exalted Reputations
 		["_noautomation"] = true,
 		["groups"] = {
-			title(380),		-- <Name> the Admired
+			title(380),	-- <Name> the Admired
 		},
 	}))),
 	applyclassicphase(BFA_PHASE_ONE, ach(12865, {	-- 90 Exalted Reputations
@@ -368,8 +368,8 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 	applyclassicphase(BFA_PHASE_ONE, ach(12866, bubbleDownSelf({["timeline"] = {ADDED_8_0_1_LAUNCH}}, {	-- 100 Exalted Reputations
 		["_noautomation"] = true,
 		["groups"] = {
-			i(163982),		-- Pureheart Courser (MOUNT!)
-			title(379),		-- Esteemed <Name>
+			i(163982),	-- Pureheart Courser (MOUNT!)
+			title(379),	-- Esteemed <Name>
 		},
 	}))),
 	ach(18471, {	-- 110 Exalted Reputations
@@ -458,7 +458,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 		},
 	}),
 	applyclassicphase(TBC_PHASE_ONE, ach(12, {	-- Level 70 (Legacy)
-		["timeline"] = { ADDED_2_0_1, REMOVED_9_0_1 },
+		["timeline"] = { ADDED_2_0_3, REMOVED_9_0_1 },
 	})),
 	applyclassicphase(WRATH_PHASE_ONE, ach(13, {	-- Level 80 (Legacy)
 		["timeline"] = { ADDED_3_0_2, REMOVED_9_0_1 },
@@ -838,7 +838,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 	}),
 	applyclassicphase(TBC_PHASE_ONE, ach(892, {	-- The Right Stuff
 		["spellID"] = 34091,	-- Artisan Riding
-		["timeline"] = { ADDED_2_0_1, REMOVED_9_0_1 },
+		["timeline"] = { ADDED_2_0_3, REMOVED_9_0_1 },
 		["rank"] = 4,
 	})),
 	n(ARMOR, bubbleDownSelf({ ["timeline"] = { ADDED_7_0_3 }, }, {
@@ -943,7 +943,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 			},
 		})),
 		applyclassicphase(TBC_PHASE_ONE, ach(2143, {	-- Leading the Cavalry (50 mounts)
-			["timeline"] = { ADDED_2_0_1 },
+			["timeline"] = { ADDED_2_0_3 },
 			["groups"] = {
 				applyclassicphase(WRATH_PHASE_ONE, i(44178)),	-- Albino Drake (MOUNT!)
 			},
@@ -959,7 +959,7 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 			-- #endif
 		}),
 		ach(9713, bubbleDownSelf({ ["timeline"] = { ADDED_6_0_2 } }, {	-- Awake the Drakes (automated)
-			i(118676),		-- Emerald Drake (MOUNT!)
+			i(118676),	-- Emerald Drake (MOUNT!)
 		})),
 	}),
 	-- #if AFTER 6.0.2
@@ -968,20 +968,20 @@ root(ROOTS.Character, n(ACHIEVEMENTS, {
 			i(197986),	-- Murglasses (TOY!)
 		})),
 		ach(12996, bubbleDownSelf({ ["timeline"] = { ADDED_8_0_1 } }, {	-- Toybox Tycoon (400)
-			i(163244),		-- Brutus (PET!)
+			i(163244),	-- Brutus (PET!)
 		})),
 		ach(11176, bubbleDownSelf({ ["timeline"] = { ADDED_7_0_3 } }, {	-- Remember to Share (300)
-			i(140500),		-- Mechanized Lumber Extractor (MOUNT!)
+			i(140500),	-- Mechanized Lumber Extractor (MOUNT!)
 		})),
 		ach(10354, bubbleDownSelf({ ["timeline"] = { ADDED_6_2_2 } }, {	-- Crashin' Thrashin' Commander(200)
-			title(53),		-- Crashin' Thrashin'
+			title(53),	-- Crashin' Thrashin'
 		})),
 		ach(9673, bubbleDownSelf({ ["timeline"] = { ADDED_6_0_2 } }, {	-- The Toymaster (150)
-			i(119215),		-- Robo-Gnomebulator (TOY!)
+			i(119215),	-- Robo-Gnomebulator (TOY!)
 		})),
-		ach(9672, {["timeline"] = { ADDED_6_0_2 }}),		-- Tons of Toys (100)
-		ach(9671, {["timeline"] = { ADDED_6_0_2 }}),		-- Having a Ball (50)
-		ach(9670, {["timeline"] = { ADDED_6_0_2 }}),		-- Toying Around (25)
+		ach(9672, {["timeline"] = { ADDED_6_0_2 }}),	-- Tons of Toys (100)
+		ach(9671, {["timeline"] = { ADDED_6_0_2 }}),	-- Having a Ball (50)
+		ach(9670, {["timeline"] = { ADDED_6_0_2 }}),	-- Toying Around (25)
 	}),
 	-- #endif
 }))

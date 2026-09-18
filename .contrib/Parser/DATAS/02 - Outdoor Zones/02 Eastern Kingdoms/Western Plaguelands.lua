@@ -4,11 +4,12 @@
 
 root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 	m(WESTERN_PLAGUELANDS, {
-		-- #if AFTER CATA
-		["lore"] = "Western Plaguelands is starting to mend thanks to the efforts of the Cenarion Circle, but other parts are torn apart by war, such as Andorhal. After the fall of the Scarlet Crusade and victory in Northrend, Hearthglen was reclaimed by Tirion Fordring and now serves as a major friendly quest hub (in contrast to the pre-Cataclysm elites). The Battle for Andorhal questline also features reappearances of Thassarian and Koltira Deathweaver, two favorite deathknights who wanted to remain friends after their experiences at Acherus instead of picking a side to fight on.",
-		-- #else
-		["lore"] = "The Western Plaguelands are located in northern Lordaeron, wedged between Tirisfal Glades to the west, the Eastern Plaguelands to the east, and the Alterac Mountains to the south. It is filled with a smoky gray mist and the creatures here are blighted and sick, angrily attacking anyone who wanders too close with surprising ferocity. The land is also home to countless undead who infest the ruins of Andorhal, the four cauldron fields, and Sorrow Hill. The Scarlet Crusade has a significant holding in and around Hearthglen to the north, and the Alliance has settled in the small Chillwind Camp to the south.\n\nLike their eastern counterparts, the Western Plaguelands were once fertile and beautiful but are now gray, blighted and noxious. Undead wander the land and haunt the abandoned towns and farmsteads. The largest Scourge city here is Andorhal, beneath which is an underground complex housing the undead's School of Necromancy. The Scarlet Crusade strikes against the Scourge from Hearthglen. The only place of any sanity in the Western Plaguelands is Uther's Tomb, a consecrated monument to the fallen hero Uther Lightbringer.",
-		-- #endif
+		["lore"] =
+			-- #if AFTER CATA
+			"Western Plaguelands is starting to mend thanks to the efforts of the Cenarion Circle, but other parts are torn apart by war, such as Andorhal. After the fall of the Scarlet Crusade and victory in Northrend, Hearthglen was reclaimed by Tirion Fordring and now serves as a major friendly quest hub (in contrast to the pre-Cataclysm elites). The Battle for Andorhal questline also features reappearances of Thassarian and Koltira Deathweaver, two favorite deathknights who wanted to remain friends after their experiences at Acherus instead of picking a side to fight on.",
+			-- #else
+			"The Western Plaguelands are located in northern Lordaeron, wedged between Tirisfal Glades to the west, the Eastern Plaguelands to the east, and the Alterac Mountains to the south. It is filled with a smoky gray mist and the creatures here are blighted and sick, angrily attacking anyone who wanders too close with surprising ferocity. The land is also home to countless undead who infest the ruins of Andorhal, the four cauldron fields, and Sorrow Hill. The Scarlet Crusade has a significant holding in and around Hearthglen to the north, and the Alliance has settled in the small Chillwind Camp to the south.\n\nLike their eastern counterparts, the Western Plaguelands were once fertile and beautiful but are now gray, blighted and noxious. Undead wander the land and haunt the abandoned towns and farmsteads. The largest Scourge city here is Andorhal, beneath which is an underground complex housing the undead's School of Necromancy. The Scarlet Crusade strikes against the Scourge from Hearthglen. The only place of any sanity in the Western Plaguelands is Uther's Tomb, a consecrated monument to the fallen hero Uther Lightbringer.",
+			-- #endif
 		["icon"] = 236851,
 		["groups"] = {
 			-- #if AFTER 10.1.5
@@ -34,7 +35,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 					n(VENDORS, {
 						n(11936, {	-- Artist Renfray
 							-- #IF AFTER 10.1.5
-							["provider"] = {"i",13544},	-- Spectral Essence
+							["provider"] = { "i", 13544 },	-- Spectral Essence
 							["description"] = "Only visible if you have the Spectral Essence equipped.",
 							-- #ENDIF
 							["coord"] = { 65.8, 75.4, WESTERN_PLAGUELANDS },
@@ -46,7 +47,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 							},
 						}),
 						n(11316, {	-- Joseph Dirte
-							["provider"] = {"i",13544},	-- Spectral Essence
+							["provider"] = { "i" ,13544 },	-- Spectral Essence
 							["description"] = "Only visible if you have the Spectral Essence equipped.",
 							["coord"] = { 68.0, 74.8, WESTERN_PLAGUELANDS },
 							["groups"] = {
@@ -58,7 +59,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						}),
 						n(11286, {	-- Magistrate Marduke
 							-- #IF AFTER 10.1.5
-							["provider"] = {"i",13544},	-- Spectral Essence
+							["provider"] = { "i" ,13544 },	-- Spectral Essence
 							["description"] = "Only visible if you have the Spectral Essence equipped.",
 							-- #ENDIF
 							["coord"] = { 70.5, 74.0, WESTERN_PLAGUELANDS },
@@ -71,7 +72,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						}),
 						n(11285, {	-- Rory
 							-- #IF AFTER 10.1.5
-							["provider"] = {"i",13544},	-- Spectral Essence
+							["provider"] = { "i" ,13544 },	-- Spectral Essence
 							["description"] = "Only visible if you have the Spectral Essence equipped.",
 							-- #ENDIF
 							["coord"] = { 63.4, 75.6, WESTERN_PLAGUELANDS },
@@ -84,7 +85,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 						}),
 						n(11283, {	-- Sammy
 							-- #IF AFTER 10.1.5
-							["provider"] = {"i",13544},	-- Spectral Essence
+							["provider"] = { "i" ,13544 },	-- Spectral Essence
 							["description"] = "Only visible if you have the Spectral Essence equipped.",
 							-- #ENDIF
 							["coord"] = { 69.1, 78.7, WESTERN_PLAGUELANDS },
@@ -258,7 +259,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 				q(10373, {	-- A Call to Arms: The Plaguelands! [The Exodar]
 					["qg"] = 20722,	-- Herald Bran'daan
 					["coord"] = { 55.4, 47.2, THE_EXODAR },
-					["timeline"] = { ADDED_2_0_1, REMOVED_4_0_3 },
+					["timeline"] = { ADDED_2_0_3, REMOVED_4_0_3 },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -290,7 +291,7 @@ root(ROOTS.Zones, m(EASTERN_KINGDOMS, {
 				q(10374, {	-- A Call to Arms: The Plaguelands! [Silvermoon City]
 					["qg"] = 20724,	-- Herald Amorlin
 					["coord"] = { 59.3, 64.7, SILVERMOON_CITY },
-					["timeline"] = { ADDED_2_0_1, REMOVED_4_0_3 },
+					["timeline"] = { ADDED_2_0_3, REMOVED_4_0_3 },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,

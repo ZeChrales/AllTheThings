@@ -1,8 +1,3 @@
--- A unique value which indicates the actual field within a group should not actually be Parsed (useful to bypass groups within sharedData/bubbleDown)
-IGNORED_VALUE = 'E9B4EEAE-88EA-44F8-B7DF-0831B5F99A44'
-POST_PROCESSING_FUNCTIONS = {};
-SYMLINKS = {}
-
 -- Special Values
 DF_ACCOUNT_CAMPAIGN_QUEST = 72366;	-- Dragonflight Campaign Completed [Account]
 DF_ACCOUNT_ZC_UNLOCK_QUEST = 75658;	-- Zaralek Cavern Unlocked [Account]
@@ -54,7 +49,7 @@ ValidExplorationAreaIDsForClassic = {
 	[4435] = true,	-- Narvir's Cradle
 	[3758] = true,	-- Netherwing Fields
 	[3945] = true,	-- Netherwing Pass
-	[9] = true,		-- Northshire Valley
+	[9] = true,	-- Northshire Valley
 	[4130] = true,	-- Plains of Nasam
 	[3860] = true,	-- Raastok Glade
 	[3887] = true,	-- Refugee Caravan

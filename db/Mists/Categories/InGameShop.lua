@@ -1,12 +1,9 @@
 ﻿---@diagnostic disable: deprecated
 local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
-local ach,crit,flt,h,i,mnt,p,s,toy=_.CreateAchievement,_.CreateAchievementCriteria,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateMount,_.CreateSpecies,_.CreateItemSource,_.CreateToy;
+local crit,flt,h,i,mnt,p,s,toy=_.CreateAchievementCriteria,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateMount,_.CreateSpecies,_.CreateItemSource,_.CreateToy;
 categories.InGameShop=
 h(-213,{SortPriority=85,g={
-h(-12,{awp=80300,u=3,g={
-ach(6849,{providers={{"i",85870}},rwp=50407,u=2}),
-ach(6848,{providers={{"i",85871}},rwp=50407,u=2})}}),
 flt(101,{u=3,g={
 p(1363,{b=1,itemID=106240,npcID=74402,q=3,spellID=149787,u=1}),
 p(1248,{b=1,itemID=98550,npcID=71488,q=3,spellID=142880,u=1}),
@@ -71,5 +68,14 @@ toy(184871,{b=1,q=3,u=3}),
 toy(198647,{b=1,q=4,u=3}),
 toy(33219,{b=1,q=3,u=3}),
 toy(32542,{b=1,q=3,u=3}),
-toy(38233,{b=1,q=3,u=3})}})}})
+toy(38233,{b=1,q=3,u=3})}}),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(235378,{awp=40003,description="Can be bought for ¥200 RMB (~$27 USD) in the Ingame Shop.\n\nYou can only purchase 12 boxes per year.",u=3,g={(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(459784,{itemID=227362,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(35223,{b=1,f=55,q=3,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(46779,{b=1,f=55,q=1,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(42777,{itemID=49284,lvl=40,q=4,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(42776,{itemID=49283,lvl=20,q=3,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+i(45047,{b=1,f=55,q=3,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(46197,{itemID=49285,lvl=20,q=3,u=3})),(function(t)if GetCVar("portal")~="CN" then	t.u=1 end	return t end)(
+mnt(46199,{itemID=49286,lvl=20,q=4,u=3}))}}))}})
 end)

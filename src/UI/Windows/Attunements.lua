@@ -1,5 +1,7 @@
 -- App locals
 local _, app = ...;
+local L = app.L;
+if app.GameBuildVersion <= 40000 then
 
 -- Global locals
 local tinsert = tinsert;
@@ -58,6 +60,7 @@ end
 
 -- Implementation
 app:CreateWindow("Attunements", {
+	IsDynamicCategory = true,
 	Commands = {
 		"attuned",
 		"attattuned",
@@ -100,6 +103,7 @@ app:CreateWindow("Attunements", {
 				icon = 254649,
 				isRaid = true,
 			}),
+			-- #if BEFORE WRATH
 			app.CreateMap(162, {	-- Naxxramas
 				icon = 135441,
 				GetAttunementRequirement = function(t)
@@ -124,6 +128,7 @@ app:CreateWindow("Attunements", {
 				end,
 				isRaid = true,
 			}),
+			-- #endif
 		};
 		if app.GameBuildVersion > 20501 then
 			local tbcAttunements = {
@@ -175,7 +180,7 @@ app:CreateWindow("Attunements", {
 					icon = 236402,
 					isRaid = true,
 				}),
-				app.CreateMap(340, {	-- Black Temple
+				app.CreateMap(339, {	-- Black Temple
 					attunementQuestID = 10985,	-- A Distraction for Akama
 					icon = 236415,
 					isRaid = true,
@@ -225,9 +230,9 @@ app:CreateWindow("Attunements", {
 			end
 			attunement.OnUpdate = OnUpdateForAttunement;
 		end
-		local attunementsHeader = app.CreateRawText("Attunements", {
+		local attunementsHeader = app.CreateRawText(L.ATTUNEMENTS, {
 			icon = 135817,
-			description = "This window shows you your current character's attunement progress.",
+			description = L.ATTUNEMENTS_TOOLTIP,
 			visible = true,
 			expanded = true,
 			back = 1,
@@ -250,3 +255,4 @@ app:CreateWindow("Attunements", {
 		end
 	end,
 });
+end
