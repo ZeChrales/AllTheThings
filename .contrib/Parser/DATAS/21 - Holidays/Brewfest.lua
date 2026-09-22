@@ -575,14 +575,6 @@ root(ROOTS.Holidays, applyevent(EVENTS.BREWFEST, n(BREWFEST_HEADER, {
 					i(243292, {	-- Bag of Brewfest Merchandise (Rare) Only Cosmectics
 						["description"] = "Granted for achieving a minimum of 66% shared progress & then killing Keggor at the end of the Brewfest Banquet event.",
 						["groups"] = {
-							i(249858),	-- Brewer's Basic Belt
-							i(241343),	-- Brewer's Basic Beret
-							i(241347),	-- Brewer's Basic Kilt
-							i(241232),	-- Brewer's Basic Shoulder Cape
-							i(249857),	-- Brewer's Blue Belt
-							i(241345),	-- Brewer's Blue Beret
-							i(241350),	-- Brewer's Blue Kilt
-							i(241341),	-- Brewer's Blue Shoulder Cape
 							i(279530, {	["timeline"] = { ADDED_12_1_0 } }),	-- Brewer's Purple Belt
 							i(279531, {	["timeline"] = { ADDED_12_1_0 } }),	-- Brewer's Purple Beret
 							i(279524, {	["timeline"] = { ADDED_12_1_0 } }),	-- Brewer's Purple Kilt
@@ -785,6 +777,12 @@ root(ROOTS.Holidays, applyevent(EVENTS.BREWFEST, n(BREWFEST_HEADER, {
 							["timeline"] = { ADDED_2_2_2 },
 						}),
 						-- #if ANYCLASSIC
+						i(282043, {	-- Direbrew's Bloodied Shanker [Level 90, ilvl 528]
+							["timeline"] = { ADDED_5_5_4, REMOVED_6_0_2 },
+						}),
+						i(282109, {	-- Tremendous Tankard O'Terror [Level 90, ilvl 528]
+							["timeline"] = { ADDED_5_5_4, REMOVED_6_0_2 },
+						}),
 						i(257863, {	-- Direbrew's Bloodied Shanker [Level 90, ilvl 489]
 							["timeline"] = { ADDED_5_5_0, REMOVED_6_0_2 },
 						}),
@@ -3405,6 +3403,18 @@ root(ROOTS.Holidays, applyevent(EVENTS.BREWFEST, n(BREWFEST_HEADER, {
 								["timeline"] = { ADDED_8_0_1 },
 								["cost"] = BREWFEST_TOKEN_COST(10),
 							}),
+							i(249858, {	-- Brewer's Basic Belt
+								["cost"] = BREWFEST_TOKEN_COST(150),
+							}),
+							i(241343, {	-- Brewer's Basic Beret
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(241347, {	-- Brewer's Basic Kilt
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(241232, {	-- Brewer's Basic Shoulder Cape
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
 							i(249860, {	-- Brewer's Black Belt
 								["cost"] = BREWFEST_TOKEN_COST(150),
 							}),
@@ -3415,6 +3425,18 @@ root(ROOTS.Holidays, applyevent(EVENTS.BREWFEST, n(BREWFEST_HEADER, {
 								["cost"] = BREWFEST_TOKEN_COST(200),
 							}),
 							i(241266, {	-- Brewer's Black Shoulder Cape
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(249857, {	-- Brewer's Blue Belt
+								["cost"] = BREWFEST_TOKEN_COST(150),
+							}),
+							i(241345, {	-- Brewer's Blue Beret
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(241350, {	-- Brewer's Blue Kilt
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(241341, {	-- Brewer's Blue Shoulder Cape
 								["cost"] = BREWFEST_TOKEN_COST(200),
 							}),
 							i(249859, {	-- Brewer's Green Belt
@@ -3565,6 +3587,18 @@ root(ROOTS.Holidays, applyevent(EVENTS.BREWFEST, n(BREWFEST_HEADER, {
 								["timeline"] = { ADDED_8_0_1 },
 								["cost"] = BREWFEST_TOKEN_COST(10),
 							}),
+							i(249858, {	-- Brewer's Basic Belt
+								["cost"] = BREWFEST_TOKEN_COST(150),
+							}),
+							i(241343, {	-- Brewer's Basic Beret
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(241347, {	-- Brewer's Basic Kilt
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(241232, {	-- Brewer's Basic Shoulder Cape
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
 							i(249860, {	-- Brewer's Black Belt
 								["cost"] = BREWFEST_TOKEN_COST(150),
 							}),
@@ -3575,6 +3609,18 @@ root(ROOTS.Holidays, applyevent(EVENTS.BREWFEST, n(BREWFEST_HEADER, {
 								["cost"] = BREWFEST_TOKEN_COST(200),
 							}),
 							i(241266, {	-- Brewer's Black Shoulder Cape
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(249857, {	-- Brewer's Blue Belt
+								["cost"] = BREWFEST_TOKEN_COST(150),
+							}),
+							i(241345, {	-- Brewer's Blue Beret
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(241350, {	-- Brewer's Blue Kilt
+								["cost"] = BREWFEST_TOKEN_COST(200),
+							}),
+							i(241341, {	-- Brewer's Blue Shoulder Cape
 								["cost"] = BREWFEST_TOKEN_COST(200),
 							}),
 							i(249859, {	-- Brewer's Green Belt
