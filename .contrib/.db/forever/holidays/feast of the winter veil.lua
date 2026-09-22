@@ -28,14 +28,6 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(createHeader({
 	},
 	text = {
 		en = WOWAPI_GetSpellName(21953),
-		-- TODO: de = "",
-		-- TODO: es = "",
-		-- TODO: mx = "",
-		-- TODO: fr = "",
-		-- TODO: it = "",
-		-- TODO: ko = "",
-		-- TODO: pt = "",
-		-- TODO: ru = "",
 		cn = "冬幕节",	-- WOWAPI_GetSpellName(21953) == 冬幕大餐
 		tw = "冬幕節",
 	},
@@ -217,7 +209,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(createHeader({
 			}),
 			q(7023, {	-- Greatfather Winter is Here! (Alliance)
 				["qg"] = 13435,	-- Khole Jinglepocket
-				["coord"] = { 55.0, 59.2, MAP.STORMWIND_CITY },
+				["coord"] = { 62.8, 70.2, MAP.STORMWIND_CITY },
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 				["lvl"] = 10,
@@ -353,10 +345,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(createHeader({
 			}),
 			q(7063, {	-- The Feast of Winter Veil (Alliance)
 				["sourceQuest"] = 7062,	-- The Reason for the Season (Alliance)
-				["providers"] = {
-					{ "n", 2916 },	-- Historian Karnik
-					{ "i", 17735 },	-- The Feast of Winter Veil (QI!)
-				},
+				["qg"] = 2916,	-- Historian Karnik
+				["qi"] = 17735,	-- The Feast of Winter Veil (QI!)
 				["coord"] = { 77.2, 11.8, MAP.IRONFORGE },
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
@@ -364,10 +354,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(createHeader({
 			}),
 			q(7061, {	-- The Feast of Winter Veil (Horde)
 				["sourceQuest"] = 6964,	-- The Reason for the Season (Horde)
-				["providers"] = {
-					{ "n", 13417 },	-- Sagorne Creststrider <Shaman Trainer>
-					{ "i", 17735 },	-- The Feast of Winter Veil (QI!)
-				},
+				["qg"] = 13417,	-- Sagorne Creststrider <Shaman Trainer>
+				["qi"] = 17735,	-- The Feast of Winter Veil (QI!)
 				["coord"] = { 38.6, 36.2, MAP.ORGRIMMAR },
 				["races"] = HORDE_ONLY,
 				["isYearly"] = true,
@@ -536,7 +524,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(createHeader({
 				},
 			}),
 			n(13435, {	-- Khole Jinglepocket <Smokywood Pastures>
-				["coord"] = { 55.0, 59.6, MAP.STORMWIND_CITY },
+				["coord"] = { 62.8, 70.2, MAP.STORMWIND_CITY },
 				["groups"] = HOLIDAY_VENDOR_GROUPS_RED,
 			}),
 			n(13429, {	-- Nardstrum Copperpinch <Smokywood Pastures>
@@ -590,6 +578,4 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(createHeader({
 })));
 
 -- Remove the holiday flag.
--- #if BEFORE 6.2.2.20395
 for i,o in ipairs(HOLIDAY_SMOKYWOOD_PASTURES_GIFT_PACK) do o.u = nil; end
--- #endif

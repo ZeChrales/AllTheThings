@@ -396,24 +396,68 @@ WARCRAFT_III_REFORGED_SPOILS_OF_WAR = createHeader({
 		tw = "這些獎勵是提供給購買了魔獸爭霸III：淬鍊重生 - 數位戰利版的玩家的。",
 	},
 });
+-- NOTE: Released on September 12, 2026. (BlizzCon 2026)
+-- NOTE: No longer available on the store since ???.
 WORLD_OF_WARCRAFT_FOREVER_COLLECTORS = createHeader({
-	readable = "World of Warcraft: Forever Collector's Edition",
+	readable = "World of Warcraft: Forever",
 	icon = 1120721,
 	text = {
-		en = "World of Warcraft: Forever Collector's Edition",
+		en = "World of Warcraft: Forever",
+		-- TODO: de = "",
+		-- TODO: es = "",
+		-- TODO: mx = "",
+		-- TODO: fr = "",
+		-- TODO: it = "",
+		-- TODO: ko = "",
+		-- TODO: pt = "",
+		-- TODO: ru = "",
+		cn = "魔兽世界：无限",
+		tw = "魔獸世界：永恆",
 	},
 	description = {
-		en = "These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",
+		en = "These rewards are available to anyone who purchased a World of Warcraft: Forever upgrade.",
+		-- TODO: de = "",
+		-- TODO: es = "",
+		-- TODO: mx = "",
+		-- TODO: fr = "",
+		-- TODO: it = "",
+		-- TODO: ko = "",
+		-- TODO: pt = "",
+		-- TODO: ru = "",
+		cn = "这些奖励是提供给购买了魔兽世界：无限升级包的玩家的。",
+		tw = "這些獎勵是提供給購買了魔獸世界：永恆升级包的玩家的。",
 	},
 });
+-- NOTE: Released on September 12, 2026. (BlizzCon 2026)
+-- NOTE: No longer available on the store since January 11, 2027.
 WARCRAFT_FOREVER_COLLECTION = createHeader({
 	readable = "Warcraft Forever Collection",
 	icon = 1120721,
 	text = {
-		en = "World of Warcraft: Forever Collection",
+		en = "Warcraft Forever Collection",
+		-- TODO: de = "",
+		-- TODO: es = "",
+		-- TODO: mx = "",
+		-- TODO: fr = "",
+		-- TODO: it = "",
+		-- TODO: ko = "",
+		-- TODO: pt = "",
+		-- TODO: ru = "",
+		cn = "魔兽無限收藏",
+		tw = "魔獸永恆收藏",
 	},
 	description = {
-		en = "These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",
+		en = "These rewards are available to anyone who purchased Warcraft Forever Collection or physical equivalents.",
+		-- TODO: de = "",
+		-- TODO: es = "",
+		-- TODO: mx = "",
+		-- TODO: fr = "",
+		-- TODO: it = "",
+		-- TODO: ko = "",
+		-- TODO: pt = "",
+		-- TODO: ru = "",
+		cn = "这些奖励是提供给购买了魔兽無限收藏或其实体等价物的玩家的。",
+		tw = "這些獎勵是提供給購買了魔獸永恆收藏或其實體等價物的玩家的。",
 	},
 });
 
@@ -683,7 +727,7 @@ root(ROOTS.Promotions, n(COLLECTORS_EDITION, bubbleDownSelf({ ["u"] = REAL_MONEY
 	})),
 	-- #endif
 	-- #if ANYCLASSIC
-	n(TBC_CLASSIC_ANNIVERSARY_OUTLAND_UPGRADE, bubbleDownSelf({ ["timeline"] = { ADDED_2_5_5, REMOVED_3_0_2, ADDED_5_5_2 } }, { -- For historical context, MOP Classic originally used the same IDs as Retail, but these were removed from Classic with the release of SoO.
+	n(TBC_CLASSIC_ANNIVERSARY_OUTLAND_UPGRADE, bubbleDownSelf({ ["timeline"] = { ADDED_2_5_5, REMOVED_3_0_2, ADDED_5_5_2 } }, {	-- For historical context, MOP Classic originally used the same IDs as Retail, but these were removed from Classic with the release of SoO.
 		["description"] = "These rewards were made available to anyone who purchased the Outland Heroic Pack of The Burning Crusade Classic Anniversary.",
 		["groups"] = {
 			-- #if BEFORE WRATH
@@ -1456,11 +1500,11 @@ root(ROOTS.Promotions, n(COLLECTORS_EDITION, bubbleDownSelf({ ["u"] = REAL_MONEY
 				iensemble(279182),	-- Ensemble: Veteran Adventurer's Outdoor Wear (COSMETIC!)
 				i(280599),	-- Veteran Adventurer's Loyal Companion (MOUNT!)
 			}),
-			n(WARCRAFT_FOREVER_COLLECTION, {
+			n(WARCRAFT_FOREVER_COLLECTION, bubbleDownSelf({ ["timeline"] = { "removed 12.1.7.99999" }, }, {	--TODO: available through January 11, 2027
 				--- RETAIL ---
 				i(280554),	-- Boardcraft Forsaken Figurine (DECOR!)
 				i(280556),	-- Boardcraft Human Figurine (DECOR!)
-			}),
+			})),
 		},
 	})),
 })));

@@ -27,11 +27,7 @@ local OnTooltipForDarkmoonFaire = [[function(t, tooltipInfo)
 	local reputation = t.reputation;
 	if reputation < 42000 then
 		local addRepInfo = _.Modules.FactionData.AddReputationTooltipInfo;
--- #if AFTER TBC
-		local repPerTierTurnIn = 250;
--- #else
 		local repPerTierTurnIn = 100;
--- #endif
 		local tierOneMaxRep = ]] .. TIER_ONE_MAX_REPUTATION[2] .. [[;
 		if reputation < tierOneMaxRep then
 			addRepInfo(tooltipInfo, reputation, "Complete Tier 1 Quests", repPerTierTurnIn, tierOneMaxRep);
@@ -56,11 +52,7 @@ local OnTooltipForDarkmoonFaire = [[function(t, tooltipInfo)
 				end
 			end
 		end
--- #if AFTER TBC
-		local repPerDeckTurnIn = 350;
--- #else
 		local repPerDeckTurnIn = 150;
--- #endif
 		addRepInfo(tooltipInfo, reputation, "Turn in Decks.", repPerDeckTurnIn, 42000);
 	end
 end]];
@@ -515,10 +507,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.DARKMOON_FAIRE, n(DARKMOON_FAIRE_HEADER, 
 				},
 			}),
 			q(7905, {	-- The Darkmoon Faire [A]
-				["providers"] = {
-					{ "n", 14842 },	-- Melnan Darkstone <Darkmoon Faire Barker>
-					{ "i", 19338 },	-- Free Ticket Voucher
-				},
+				["qg"] = 14842,	-- Melnan Darkstone <Darkmoon Faire Barker>
+				["qi"] = 19338,	-- Free Ticket Voucher
 				["coord"] = { 29.2, 68.4, MAP.IRONFORGE },
 				["lvl"] = 6,
 				["races"] = ALLIANCE_ONLY,
@@ -527,10 +517,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.DARKMOON_FAIRE, n(DARKMOON_FAIRE_HEADER, 
 				},
 			}),
 			q(7926, {	-- The Darkmoon Faire [H]
-				["providers"] = {
-					{ "n", 14843 },	-- Kruban Darkblade <Darkmoon Faire Barker>
-					{ "i", 19338 },	-- Free Ticket Voucher
-				},
+				["qg"] = 14843,	-- Kruban Darkblade <Darkmoon Faire Barker>
+				["qi"] = 19338,	-- Free Ticket Voucher
 				["coord"] = { 52.2, 66.0, MAP.ORGRIMMAR },
 				["lvl"] = 6,
 				["races"] = HORDE_ONLY,

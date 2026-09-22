@@ -929,11 +929,9 @@ do
 	-- Appearance-based Classes
 	local AppearanceVariantClasses = { CLASSNAME }
 
-	local AndAppearanceCollectible = app.IsRetail and app.ReturnTrue or function(t)
-		if not t.rwp and app.Settings.OnlyRWP then
-			return false;
-		end
-		if (t.q or 0) < 2 and app.Settings.OnlyNotTrash then
+	local AndAppearanceCollectible = (app.IsRetail or app.IsForever) and app.ReturnTrue or function(t)
+		-- White/Grey items are not collectible in Classic builds unless they're BOP.
+		if (t.q or 0) < 2 and (t.b or 0) ~= 1 then
 			return false;
 		end
 		return true;
@@ -954,9 +952,9 @@ do
 	local AndAppearance = {
 		__name = "AndAppearance",
 		CACHE = function() return CACHE end,
-		collectible = app.IsRetail and function(t)
+		collectible = function(t)
 			return app.Settings.Collectibles.Transmog
-		end or AndAppearanceCollectible,
+		end,
 		collected = collected_Completionist,
 		visualID = function(t)
 			local sourceInfo = C_TransmogCollection_GetSourceInfo(t[KEY])
@@ -1371,9 +1369,17 @@ app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, acco
 	AccountSources = ATTAccountWideData.Sources
 
 	if not accountWideData.SourceItemsOnCharacter then accountWideData.SourceItemsOnCharacter = {}; end
-
+	
 	-- saved var global will exist at this point
 	CharacterData = ATTCharacterData
+	
+	-- Delete the original Transmog tracking table for classic pre-cata
+	if ATTAccountWideData.Transmog then
+		ATTAccountWideData.Transmog = nil;
+		for guid,character in pairs(CharacterData) do
+			character.Transmog = nil;
+		end
+	end
 end);
 
 if app.IsRetail then

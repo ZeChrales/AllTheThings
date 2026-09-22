@@ -63,11 +63,17 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 				}),
 			},
 		})),
-		q(7666,	-- Again Into the Great Ossuary [A]
-		bubbleDownSelf({["timeline"] = { REMOVED_4_0_3 }}, {
+		q(7666,	{ -- Again Into the Great Ossuary [A]
 			["qg"] = 928,	-- Lord Grayson Shadowbreaker <Paladin Trainer>
 			["sourceQuest"] = 7647,	-- Judgment and Redemption
-			["coord"] = { 37.6, 32.6, STORMWIND_CITY },
+			["coords"] = {
+				-- #if AFTER WRATH
+				{ 48.6, 50.0, STORMWIND_CITY },
+				-- #else
+				{ 37.6, 32.6, STORMWIND_CITY },
+				-- #endif
+			},
+			["timeline"] = { REMOVED_4_0_3 },
 			["classes"] = { PALADIN },
 			["races"] = ALLIANCE_ONLY,
 			["repeatable"] = true,
@@ -75,12 +81,12 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 			["groups"] = {
 				i(18746),	-- Divination Scryer
 			},
-		})),
-		q(7669,	-- Again Into the Great Ossuary [H]
-		bubbleDownSelf({["timeline"] = { REMOVED_4_0_3 }}, {
+		}),
+		q(7669, {	-- Again Into the Great Ossuary [H]
 			["qg"] = 13417,	-- Sagorne Creststrider <Shaman Trainer>
 			["sourceQuest"] = 8258,	-- The Darkreaver Menace
 			["coord"] = { 38.7, 35.9, ORGRIMMAR },
+			["timeline"] = { REMOVED_4_0_3 },
 			["classes"] = { SHAMAN },
 			["races"] = HORDE_ONLY,
 			["repeatable"] = true,
@@ -88,7 +94,7 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 			["groups"] = {
 				i(18746),	-- Divination Scryer
 			},
-		})),
+		}),
 		q(27140, {	-- Alexi's Gambit
 			["qg"] = 45110,	-- Alexi Barov <House of Barov>
 			["timeline"] = { ADDED_4_0_3, REMOVED_5_0_4 },
@@ -350,12 +356,16 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 		}),
 		q(7647,	-- Judgment and Redemption
 		bubbleDownSelf({["timeline"] = { REMOVED_4_0_3 }}, {
-			["providers"] = {
-				{ "n", 928 },	-- Lord Grayson Shadowbreaker <Paladin Trainer>
-				{ "i", 18804 },	-- Lord Grayson's Satchel
-			},
+			["qg"] = 928,	-- Lord Grayson Shadowbreaker <Paladin Trainer>
+			["qi"] = 18804,	-- Lord Grayson's Satchel
 			["sourceQuest"] = 7646,	-- The Divination Scryer
-			["coord"] = { 37.6, 32.6, STORMWIND_CITY },
+			["coords"] = {
+				-- #if AFTER WRATH
+				{ 48.6, 50.0, STORMWIND_CITY },
+				-- #else
+				{ 37.6, 32.6, STORMWIND_CITY },
+				-- #endif
+			},
 			["classes"] = { PALADIN },
 			["races"] = ALLIANCE_ONLY,
 			["lvl"] = 60,
@@ -380,10 +390,8 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 		})),
 		q(5522, {	-- Leonid Barthalomew
 			["sourceQuest"] = 4735,	-- Egg Collection
-			["providers"] = {
-				{ "n", 10267 },	-- Tinkee Steamboil
-				{ "i", 13761 },	-- Frozen Eggs
-			},
+			["qg"] = 10267,	-- Tinkee Steamboil
+			["qi"] = 13761,	-- Frozen Eggs
 			["coord"] = { 65.2, 23.8, BURNING_STEPPES },
 			["timeline"] = { REMOVED_4_0_3 },
 			["lvl"] = 57,
@@ -417,10 +425,8 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 		q(5463, {	-- Menethil's Gift (1/2)
 			["description"] = "Take the Keepsake to the symbol on the floor in Baron Rivendare's room in Stratholme.",
 			["sourceQuest"] = 5462,	-- The Dying, Ras Frostwhisper
-			["providers"] = {
-				{ "n", 11036 },	-- Leonid Barthalomew the Revered <The Argent Dawn>
-				{ "i", 13585 },	-- Keepsake of Remembrance
-			},
+			["qg"] = 11036,	-- Leonid Barthalomew the Revered <The Argent Dawn>
+			["qi"] = 13585,	-- Keepsake of Remembrance
 			["coord"] = { 81.7, 57.8, EASTERN_PLAGUELANDS },
 			["timeline"] = { REMOVED_4_0_3 },
 			["maps"] = { STRATHOLME },
@@ -547,10 +553,8 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 		},
 		q(5465, {	-- Soulbound Keepsake
 			["sourceQuest"] = 5464,	-- Menethil's Gift (2/2)
-			["providers"] = {
-				{ "n", 11036 },	-- Leonid Barthalomew the Revered <The Argent Dawn>
-				{ "i", 13624 },	-- Soulbound Keepsake
-			},
+			["qg"] = 11036,	-- Leonid Barthalomew the Revered <The Argent Dawn>
+			["qi"] = 13624,	-- Soulbound Keepsake
 			["coord"] = { 81.7, 57.8, EASTERN_PLAGUELANDS },
 			["timeline"] = { REMOVED_4_0_3 },
 			["lvl"] = 57,
@@ -607,10 +611,8 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 		}),
 		q(5461, {	-- The Human, Ras Frostwhisper
 			["sourceQuest"] = 5384,	-- Kirtonos the Herald
-			["providers"] = {
-				{ "n", 11286 },	-- Magistrate Marduke
-				{ "i", 13544 },	-- Spectral Essence
-			},
+			["qg"] = 11286,	-- Magistrate Marduke
+			["qi"] = 13544,	-- Spectral Essence
 			["coord"] = { 70.6, 74.1, WESTERN_PLAGUELANDS },
 			["timeline"] = { REMOVED_4_0_3 },
 			["maps"] = { ARATHI_HIGHLANDS },
@@ -685,10 +687,8 @@ local SCHOLOMANCE_LEGACY_DATA = bubbleDownSelf({ ["timeline"] = { ADDED_1_3_0, R
 		}),
 		q(5466, {	-- The Lich, Ras Frostwhisper
 			["sourceQuest"] = 5465,	-- Soulbound Keepsake
-			["providers"] = {
-				{ "n", 11286 },	-- Magistrate Marduke
-				{ "i", 13544 },	-- Spectral Essence
-			},
+			["qg"] = 11286,	-- Magistrate Marduke
+			["qi"] = 13544,	-- Spectral Essence
 			["coord"] = { 70.6, 74.1, WESTERN_PLAGUELANDS },
 			["timeline"] = { REMOVED_4_0_3 },
 			["lvl"] = 57,

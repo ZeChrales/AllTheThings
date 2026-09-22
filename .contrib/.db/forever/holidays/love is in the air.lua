@@ -14,16 +14,16 @@ root(ROOTS.Holidays, applyevent(EVENTS.LOVE_IS_IN_THE_AIR, n(createHeader({
 	},
 	text = {
 		en = "Love is in the Air",
-		-- TODO: de = "",
+		de = "Liebe liegt in der Luft",
 		es = "Amor en el aire",
 		mx = "Amor en el aire",
-		-- TODO: fr = "",
-		-- TODO: it = "",
-		-- TODO: ko = "",
-		-- TODO: pt = "",
-		-- TODO: ru = "",
+		fr = "De l'amour dans l'air",
+		it = "Amore nell'Aria",
+		ko = "온누리에 사랑을",
+		pt = "O Amor Está No Ar",
+		ru = "Любовная лихорадка",
 		cn = "情人节",
-		-- TODO: tw = "",
+		tw = "愛就在身邊",
 	},
 }), {
 	["timeline"] = { TIMELINE.ADDED_1_60_1 },
@@ -65,7 +65,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.LOVE_IS_IN_THE_AIR, n(createHeader({
 			q(9024, {	-- Aristan's Hunch
 				["sourceQuest"] = 8903,	-- Dangerous Love (A)
 				["qg"] = 16105,	-- Aristan Mottar
-				["coord"] = { 54.6, 65.6, MAP.STORMWIND_CITY },
+				["coord"] = { 54.6, 65.6, MAP.STORMWIND_CITY },	-- CRIEVE NOTE: This npc has never had a wrath coordinate, someone will need to find it and add it.
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 				["groups"] = {
@@ -79,7 +79,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.LOVE_IS_IN_THE_AIR, n(createHeader({
 			}),
 			q(8903, {	-- Dangerous Love (A)
 				["qg"] = 16105,	-- Aristan Mottar
-				["coord"] = { 54.6, 65.6, MAP.STORMWIND_CITY },
+				["coord"] = { 54.6, 65.6, MAP.STORMWIND_CITY },	-- CRIEVE NOTE: This npc has never had a wrath coordinate, someone will need to find it and add it.
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 				["groups"] = {
@@ -100,59 +100,47 @@ root(ROOTS.Holidays, applyevent(EVENTS.LOVE_IS_IN_THE_AIR, n(createHeader({
 				},
 			}),
 			q(8897, {	-- Dearest Colara, [Stormwind City]
-				["providers"] = {
-					{ "n", 16005 },	-- Lieutenant Jocryn Heldric
-					{ "i", 21921 },	-- Carefully Penned Note
-				},
-				["coord"] = { 57.0, 59.8, MAP.STORMWIND_CITY },
+				["qg"] = 16005,	-- Lieutenant Jocryn Heldric
+				["qi"] = 21921,	-- Carefully Penned Note
+				["coord"] = { 57.0, 59.8, MAP.STORMWIND_CITY },	-- CRIEVE NOTE: This npc has never had a wrath coordinate, someone will need to find it and add it.
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 			}),
 			q(8898, {	-- Dearest Colara, [Ironforge]
-				["providers"] = {
-					{ "n", 16009 },	-- Tormek Stoneriver
-					{ "i", 21920 },	-- Creased Letter
-				},
+				["qg"] = 16009,	-- Tormek Stoneriver
+				["qi"] = 21920,	-- Creased Letter
 				["coord"] = { 32.4, 66.0, MAP.IRONFORGE },
 				["maps"] = { MAP.STORMWIND_CITY },
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 			}),
 			q(8899, {	-- Dearest Colara, [Darnassus]
-				["providers"] = {
-					{ "n", 16001 },	-- Aldris Fourclouds
-					{ "i", 21925 },	-- Immaculate Letter
-				},
+				["qg"] = 16001,	-- Aldris Fourclouds
+				["qi"] = 21925,	-- Immaculate Letter
 				["coord"] = { 42.0, 42.0, MAP.DARNASSUS },
 				["maps"] = { MAP.STORMWIND_CITY },
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 			}),
 			q(8900, {	-- Dearest Elenia, [Orgrimmar]
-				["providers"] = {
-					{ "n", 16007 },	-- Orok Deathbane
-					{ "i", 21926 },	-- Slightly Creased Note
-				},
+				["qg"] = 16007,	-- Orok Deathbane
+				["qi"] = 21926,	-- Slightly Creased Note
 				["coord"] = { 51.2, 70.2, MAP.ORGRIMMAR },
 				["maps"] = { MAP.UNDERCITY },
 				["races"] = HORDE_ONLY,
 				["isYearly"] = true,
 			}),
 			q(8901, {	-- Dearest Elenia, [Thunder Bluff]
-				["providers"] = {
-					{ "n", 16008 },	-- Temma of the Wells
-					{ "i", 22264 },	-- Carefully Written Letter
-				},
+				["qg"] = 16008,	-- Temma of the Wells
+				["qi"] = 22264,	-- Carefully Written Letter
 				["coord"] = { 44.8, 59.6, MAP.THUNDER_BLUFF },
 				["maps"] = { MAP.UNDERCITY },
 				["races"] = HORDE_ONLY,
 				["isYearly"] = true,
 			}),
 			q(8902, {	-- Dearest Elenia, [Undercity]
-				["providers"] = {
-					{ "n", 16003 },	-- Deathguard Tor
-					{ "i", 22265 },	-- Lovingly Composed Letter
-				},
+				["qg"] = 16003,	-- Deathguard Tor
+				["qi"] = 22265,	-- Lovingly Composed Letter
 				["coord"] = { 60.6, 59.6, MAP.TIRISFAL_GLADES },
 				["maps"] = { MAP.UNDERCITY },
 				["races"] = HORDE_ONLY,
@@ -178,7 +166,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.LOVE_IS_IN_THE_AIR, n(createHeader({
 				["coords"] = {
 					{ 38.2, 80.4, MAP.DARNASSUS },
 					{ 41.0, 55.2, MAP.IRONFORGE },
-					{ 78.6, 17.6, MAP.STORMWIND_CITY },
+					{ 78.6, 17.6, MAP.STORMWIND_CITY },	-- CRIEVE NOTE: This npc has never had a wrath coordinate, someone will need to find it and add it.
 				},
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
@@ -212,7 +200,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.LOVE_IS_IN_THE_AIR, n(createHeader({
 			q(9025, {	-- Morgan's Discovery
 				["sourceQuest"] = 9024,	-- Aristan's Hunch
 				["qg"] = 279,	-- Morgan Pestle
-				["coord"] = { 56.2, 64.8, MAP.STORMWIND_CITY },
+				["coord"] = { 56.2, 64.8, MAP.STORMWIND_CITY },	-- CRIEVE NOTE: This npc has never had a wrath coordinate, someone will need to find it and add it.
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 				["groups"] = {
@@ -223,7 +211,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.LOVE_IS_IN_THE_AIR, n(createHeader({
 			q(9028, {	-- The Source Revealed (A)
 				["sourceQuest"] = 9027,	-- Tracing the Source (A) (2/2)
 				["qg"] = 16106,	-- Evert Sorisam
-				["coord"] = { 39.8, 46.8, MAP.STORMWIND_CITY },
+				["coord"] = { 39.8, 46.8, MAP.STORMWIND_CITY },	-- CRIEVE NOTE: This npc has never had a wrath coordinate, someone will need to find it and add it.
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 			}),
@@ -237,14 +225,14 @@ root(ROOTS.Holidays, applyevent(EVENTS.LOVE_IS_IN_THE_AIR, n(createHeader({
 			q(9026, {	-- Tracing the Source (A) (1/2)
 				["sourceQuest"] = 9025,	-- Morgan's Discovery
 				["qg"] = 16105,	-- Aristan Mottar
-				["coord"] = { 54.6, 65.6, MAP.STORMWIND_CITY },
+				["coord"] = { 54.6, 65.6, MAP.STORMWIND_CITY },	-- CRIEVE NOTE: This npc has never had a wrath coordinate, someone will need to find it and add it.
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 			}),
 			q(9027, {	-- Tracing the Source (A) (2/2)
 				["sourceQuest"] = 9026,	-- Tracing the Source (A) (1/2)
 				["qg"] = 6740,	-- Innkeeper Allison <Innkeeper>
-				["coord"] = { 52.8, 65.4, MAP.STORMWIND_CITY },
+				["coord"] = { 60.6, 75.0, MAP.STORMWIND_CITY },
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 			}),

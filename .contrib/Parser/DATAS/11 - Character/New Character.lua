@@ -270,7 +270,7 @@ root(ROOTS.Character, n(NEW_CHARACTER, {
 				-- ["races"] = { DRAENEI },
 				["timeline"] = { ADDED_4_0_3, REMOVED_9_1_5 },
 			}),
-			i(6126, {	-- Trapper's Boots [Orc]
+			i(6126, {	-- Trapper's Pants [Orc]
 				["timeline"] = { REMOVED_4_0_3 }
 			}),
 			i(6137, {	-- Thug Pants
@@ -280,7 +280,7 @@ root(ROOTS.Character, n(NEW_CHARACTER, {
 			i(6127, {	-- Trapper's Boots [Orc]
 				["timeline"] = { REMOVED_4_0_3 }
 			}),
-			i(6138, {	-- Trapper's Boots
+			i(6138, {	-- Trapper's Boots [CATA+] / Thug Boots [Classic]
 				-- ["races"] = { ORC, TAUREN, TROLL },
 				["timeline"] = { REMOVED_9_1_5 },
 			}),
@@ -1310,7 +1310,7 @@ root(ROOTS.Character, n(NEW_CHARACTER, {
 				["timeline"] = { REMOVED_4_0_3 }
 			}),
 			i(6135, {	-- Primitive Kilt
-				["timeline"] = { ADDED_3_0_2, REMOVED_4_0_3 }	-- Unsure when it got added/removed
+				["timeline"] = { REMOVED_4_0_3 }
 			}),
 			i(52539, {	-- Primal Pants
 				--["races"] = { DWARF },
@@ -1960,6 +1960,11 @@ root(ROOTS.Character, n(NEW_CHARACTER, {
 	}),
 	-- #endif
 	filter(SHIRTS, {
+		-- #if BEFORE 2.0.1
+		i(6097, {	-- Acolyte's Shirt
+			["races_disp"] = { HUMAN, GNOME },
+		}),
+		-- #endif
 		i(6125, {	-- Brawler's Harness
 			["description"] = "Former Starter Shirt for Orc, Troll, Tauren & Undead Warriors",
 			["timeline"] = { REMOVED_4_0_3 },
@@ -2006,6 +2011,11 @@ root(ROOTS.Character, n(NEW_CHARACTER, {
 			["description"] = "Former Starter Shirt for Night Elf Warriors",
 			["timeline"] = { REMOVED_4_0_3 },
 		}),
+		-- #if BEFORE 2.0.1
+		i(38, {	-- Recruit's Shirt
+			["description"] = "Former Starter Shirt for Human Warriors",
+		}),
+		-- #endif
 		i(148, {	-- Rugged Trapper's Shirt
 			["description"] = "Former Starter Shirt for Dwarf & Night Elf Hunters",
 			["timeline"] = { REMOVED_4_0_3 },
@@ -2030,7 +2040,7 @@ root(ROOTS.Character, n(NEW_CHARACTER, {
 			["description"] = "Former Starter Shirt for Orc, Tauren & Troll Hunters",
 			["timeline"] = { REMOVED_4_0_3 },
 		}),
-		i(6136, {	-- Trapper's Shirt
+		i(6136, {	-- Trapper's Shirt [CATA+] / Thug Shirt [Classic]
 			["description"] = "Former Starter Shirt for Troll Rogues",
 			["timeline"] = { REMOVED_4_0_3 },
 		}),

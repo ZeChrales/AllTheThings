@@ -16,14 +16,6 @@ FEAST_OF_WINTER_VEIL_HEADER = createHeader({
 	-- #endif
 	text = {
 		en = WOWAPI_GetSpellName(21953),
-		-- TODO: de = "",
-		-- TODO: es = "",
-		-- TODO: mx = "",
-		-- TODO: fr = "",
-		-- TODO: it = "",
-		-- TODO: ko = "",
-		-- TODO: pt = "",
-		-- TODO: ru = "",
 		cn = "冬幕节",	-- WOWAPI_GetSpellName(21953) == 冬幕大餐
 		tw = "冬幕節",
 	},
@@ -644,6 +636,10 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(FEAST_OF_WINTER_V
 			["provider"] = { "i", 34191 },	-- Handful of Snowflakes
 			["timeline"] = { ADDED_3_0_2 },
 			["sym"] = {{ "achievement_criteria" }},
+		}),
+		ach(62502, {	-- Master of Merry Mayhem
+			["maps"] = { FOUNDERS_POINT, RAZORWIND_SHORES },
+			["timeline"] = { ADDED_12_1_5 },
 		}),
 		ach(273, {	-- On Metzen!
 			["provider"] = { "n", 15664 },	-- Metzen the Reindeer
@@ -1870,7 +1866,7 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(FEAST_OF_WINTER_V
 				-- #endif
 			},
 			["coords"] = {
-				-- #if AFTER CATA
+				-- #if AFTER WRATH
 				{ 62.8, 70.2, STORMWIND_CITY },
 				-- #else
 				{ 55.0, 59.2, STORMWIND_CITY },
@@ -2123,10 +2119,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(FEAST_OF_WINTER_V
 		}),
 		q(7063, {	-- The Feast of Winter Veil (Alliance)
 			["sourceQuest"] = 7062,	-- The Reason for the Season (Alliance)
-			["providers"] = {
-				{ "n", 2916 },	-- Historian Karnik
-				{ "i", 17735 },	-- The Feast of Winter Veil (QI!)
-			},
+			["qg"] = 2916,	-- Historian Karnik
+			["qi"] = 17735,	-- The Feast of Winter Veil (QI!)
 			["coord"] = { 77.2, 11.8, IRONFORGE },
 			["races"] = ALLIANCE_ONLY,
 			["timeline"] = { ADDED_1_2_0 },
@@ -2135,10 +2129,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(FEAST_OF_WINTER_V
 		}),
 		q(7061, {	-- The Feast of Winter Veil (Horde)
 			["sourceQuest"] = 6964,	-- The Reason for the Season (Horde)
-			["providers"] = {
-				{ "n", 13417 },	-- Sagorne Creststrider <Shaman Trainer>
-				{ "i", 17735 },	-- The Feast of Winter Veil (QI!)
-			},
+			["qg"] = 13417,	-- Sagorne Creststrider <Shaman Trainer>
+			["qi"] = 17735,	-- The Feast of Winter Veil (QI!)
 			["coord"] = { 38.6, 36.2, ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["timeline"] = { ADDED_1_2_0 },
@@ -2711,8 +2703,8 @@ root(ROOTS.Holidays, applyevent(EVENTS.FEAST_OF_WINTER_VEIL, n(FEAST_OF_WINTER_V
 			},
 		}),
 		n(13435, {	-- Khole Jinglepocket <Smokywood Pastures>
-			-- #if AFTER CATA
-			["coord"] = { 63.0, 70.6, STORMWIND_CITY },
+			-- #if AFTER WRATH
+			["coord"] = { 62.8, 70.2, STORMWIND_CITY },
 			-- #else
 			["coord"] = { 55.0, 59.6, STORMWIND_CITY },
 			-- #endif

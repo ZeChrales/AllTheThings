@@ -599,7 +599,7 @@ crit(34641,{achID=10309,id=2,u=3})}})}}),
 h(-537,{awp=80100,description="These rewards are available to anyone who purchases Warcraft 3: Refogred, Spoils of War Edition.",u=3,g={
 ach(13196,{u=3}),
 mnt(281554,{b=1,itemID=164571,lvl=10,u=3})}}),
-h(-794,{awp=120100,description="These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",u=3,g={
+h(-797,{awp=120100,description="These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",u=3,g={
 h(-522,{u=3,g={
 mnt(1309109,{itemID=280519,u=3}),
 en(271755,{questID=95979,spellID=1289417,tmogSetID=5702,u=3,g={
@@ -631,7 +631,7 @@ s(310901,279177,{f=2,loc=43}),
 s(310902,279178,{f=2,loc=44}),
 s(310903,279179,{f=3})}}),
 mnt(1309376,{itemID=280599,u=3})}}),
-h(-795,{u=3,g={
+h(-795,{rwp=120107,u=3,g={
 de(27076,{itemID=280554,spellID=1309251,u=3}),
 de(27077,{itemID=280556,spellID=1309253,u=3})}})}})}}),
 h(-538,{

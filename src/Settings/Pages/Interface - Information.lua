@@ -315,54 +315,41 @@ local function ProcessForCompletedBy(t, reference, tooltipInfo)
 	end
 
 	-- Pre-WOD Known By types
-	if app.GameBuildVersion < 60000 then
-		id = reference.achievementID;
-		if id then
-			-- Prior to Cata, Achievements were not tracked account wide
-			for guid,character in pairs(ATTCharacterData) do
-				if character.Achievements and character.Achievements[id] then
-					tinsert(knownBy, character);
-				end
+	if app.GameBuildVersion >= 60000 then
+		return;
+	end
+	local key = reference.key;
+	if not key then return; end
+	id = reference[key];
+	if not id then return; end
+	
+	if key == "achievementID" then
+		-- Prior to Cata, Achievements were not tracked account wide
+		for guid,character in pairs(ATTCharacterData) do
+			if character.Achievements and character.Achievements[id] then
+				tinsert(knownBy, character);
 			end
-			BuildKnownByInfoForKind(tooltipInfo, L.COMPLETED_BY);
 		end
-
+		BuildKnownByInfoForKind(tooltipInfo, L.COMPLETED_BY);
+	else
 		local itemID = reference.itemID;
 		if itemID then
 			local knownByGUID = {};
-
-			-- Prior to Cata, transmog was not tracked account wide
-			id = reference.sourceID;
-			for guid,character in pairs(ATTCharacterData) do
-				if character.Transmog and character.Transmog[id] then
-					if ATTAccountWideData.Sources and ATTAccountWideData.Sources[id] then
-						character.Transmog[id] = nil;
-					else
-						knownByGUID[guid] = character;
-					end
-				end
-			end
 			if app.GameBuildVersion < 30000 then
 				-- Prior to Wrath, mounts, pets, and toys were not tracked account wide
-				id = reference.spellID;
-				if id and reference.filterID == 100 then	-- Mounts only!
+				if key == "mountID" then
 					for guid,character in pairs(ATTCharacterData) do
-						if character.Spells and character.Spells[id] then
+						if character.Mounts and character.Mounts[id] then
 							knownByGUID[guid] = character;
 						end
 					end
-				end
-
-				id = reference.speciesID;
-				if id then
+				elseif key == "speciesID" then
 					for guid,character in pairs(ATTCharacterData) do
 						if character.BattlePets and character.BattlePets[id] then
 							knownByGUID[guid] = character;
 						end
 					end
-				end
-
-				if reference.toyID then
+				elseif key == "toyID" then
 					for guid,character in pairs(ATTCharacterData) do
 						if character.Toys and character.Toys[itemID] then
 							knownByGUID[guid] = character;
@@ -1030,19 +1017,16 @@ local InformationTypes = {
 		Process = function(t, reference, tooltipInfo)
 			local f = reference.f
 			if f then
-				local filterName = ConversionMethods.filterID(f, reference)
-				local filterForRWP = reference.filterForRWP;
-				if filterForRWP then
+				local locName = ConversionMethods.filterID(reference.loc, reference)
+				if locName then
 					tinsert(tooltipInfo, {
 						left = t.text,
-						right = filterName .. " -> " .. ConversionMethods.filterID(filterForRWP, reference),
+						right = ConversionMethods.filterID(f, reference) .. " / " .. locName,
 					});
 				else
-					local loc = reference.loc
-					local locName = ConversionMethods.filterID(loc, reference)
 					tinsert(tooltipInfo, {
 						left = t.text,
-						right = loc and filterName.." / "..locName or filterName,
+						right = ConversionMethods.filterID(f, reference),
 					});
 				end
 			end
@@ -1713,10 +1697,12 @@ settings.CreateInformationType("rawfields", {
 			left = "Self:",
 			right = tostring(data)
 		});
+		local link
 		for k, v in pairs(data) do
+			link = app:SearchLink(v)
 			tinsert(tooltipInfo, {
 				left = tostring(k),
-				right = tostring(v)
+				right = link and (link.." "..tostring(v)) or tostring(v)
 			});
 		end
 	end
@@ -1734,10 +1720,12 @@ settings.CreateInformationType("rawfields-row", {
 				left = "Row:",
 				right = tostring(app.ActiveRowReference)
 			});
+			local link
 			for k, v in pairs(app.ActiveRowReference) do
+				link = app:SearchLink(v)
 				tinsert(tooltipInfo, {
 					left = tostring(k),
-					right = tostring(v)
+					right = link and (link.." "..tostring(v)) or tostring(v)
 				});
 			end
 		end

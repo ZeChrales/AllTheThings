@@ -47,7 +47,9 @@ ExportDB.OnTooltipDB.ForTimbermawHold = [[~function(t, tooltipInfo)
 		if reputation < ]] .. (HONORED - 1) .. [[ then
 			addRepInfo(tooltipInfo, reputation, "Kill Deadwood Furbolgs (Stops at Honored)", 5, ]] .. (HONORED - 1) .. [[, ]] .. UNFRIENDLY .. [[);
 		end
-		addRepInfo(tooltipInfo, reputation, "Kill Winterfall Furbolgs", 5, 42000, ]] .. UNFRIENDLY .. [[);
+		if reputation < ]] .. (REVERED - 1) .. [[ then
+			addRepInfo(tooltipInfo, reputation, "Kill Winterfall Furbolgs (Stops at Revered)", 5, ]] .. (REVERED - 1) .. [[, ]] .. UNFRIENDLY .. [[);
+		end
 		-- #endif
 		-- #if AFTER CATA
 		local repPerTurnIn = 2000;
@@ -142,6 +144,7 @@ root(ROOTS.Zones, m(KALIMDOR, {
 						7158,	-- Deadwood Shaman
 					},
 					["lvl"] = lvlsquish(45, 45, 15),
+					["_drop"] = { "g" },	-- Major Healing Potion
 				}),
 				q(28524, {	-- Delivery for Donova
 					["qg"] = 11556,	-- Salfa
@@ -307,10 +310,8 @@ root(ROOTS.Zones, m(KALIMDOR, {
 					["hordeQuestData"] = q(8485, {	-- The Brokering of Peace (H)
 						["maps"] = { ORGRIMMAR },
 					}),
-					["providers"] = {
-						{ "n", 11555 },	-- Gorn One Eye
-						{ "i", 21155 },	-- Timbermaw Offering of Peace
-					},
+					["qg"] = 11555,	-- Gorn One Eye
+					["qi"] = 21155,	-- Timbermaw Offering of Peace
 					["coords"] = {
 						-- #if AFTER CATA
 						{ 64.4, 5.1, FELWOOD },

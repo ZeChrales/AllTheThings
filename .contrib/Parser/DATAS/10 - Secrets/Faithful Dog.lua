@@ -45,7 +45,7 @@ root(ROOTS.Secrets, n(FAITHFUL_DOG, {
 				34193,	-- Clearing the Garden [H]
 			},
 			["providers"] = {
-				{ "n",  87553 },	-- Dog
+				{ "n", 87553 },	-- Dog
 				{ "i", 147420 },	-- Pebble
 			},
 			["coords"] = {

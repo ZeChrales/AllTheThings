@@ -717,14 +717,10 @@ L.OBJECT_ID = "Object ID"
 L.OBJECT_TYPE = "Object Type"
 L.OBJECTIVES = "Objectives"
 L.OBJECTS = "Objects"
-L.ONLY_NOT_TRASH = "Filter Trash Items"
-L.ONLY_NOT_TRASH_TOOLTIP = "Enable this option to ignore white/grey items. Blizzard does not yet provide API for it in Classic."
 L.ONLY_OBTAINABLE_CHECKBOX = "Only Obtainable"
 L.ONLY_OBTAINABLE_CHECKBOX_TOOLTIP = "Enable this option if you want to see only obtainable shared appearances."
 L.ONLY_RELEVANT_CHECKBOX = "Only Relevant"
 L.ONLY_RELEVANT_CHECKBOX_TOOLTIP = "Enable this option if you only want to see shared appearances that your character can unlock.\n\nNOTE: We recommend you keep this off as knowing the unlock requirements for an item can be helpful in identifying why an item is Not Collected."
-L.ONLY_RWP = "Only RWP"
-L.ONLY_RWP_TOOLTIP = "Enable this option to only track transmog that get removed from the game in the future. Only Items tagged with 'removed with patch' data count toward this. If you find an item not tagged that should be tagged, please let me know!\n\nYou can change which sort of loot displays for you based on the Filters tab."
 L.OPEN_AUTOMATICALLY = "Open Automatically"
 L.OPEN_AUTOMATICALLY_DESC = "If you aren't a Blizzard Developer, it might be a good idea to uncheck this. This was done to force Blizzard to fix and/or acknowledge these bugs."
 L.OPEN_MINILIST_FOR = "Open mini list for "
@@ -1397,7 +1393,7 @@ localize(L.HEADER_NAMES, {
 	[-29] = "Event Completion",
 	[-30] = "Exploration",
 	[-31] = FACTION,
-	[-32] = C_Spell.GetSpellName(218950),
+	[-32] = _.WOWAPI.GetSpellName(218950),
 	[-33] = GARRISON_FOLLOWERS,
 	[-34] = "Group Finder",
 	[-35] = MINIMAP_TRACKING_HIDDEN_QUESTS,
@@ -1416,8 +1412,8 @@ localize(L.HEADER_NAMES, {
 	[-49] = "Scenario Completion",
 	[-50] = "Secrets",
 	[-51] = WARDROBE_SETS,
-	[-52] = C_Spell.GetSpellName(400433),
-	[-53] = C_Spell.GetSpellName(415581),
+	[-52] = _.WOWAPI.GetSpellName(400433),
+	[-53] = _.WOWAPI.GetSpellName(415581),
 	[-54] = "D.R.I.V.E. Racing",
 	[-55] = SPECIAL,
 	[-56] = "Treasures",
@@ -1454,7 +1450,7 @@ localize(L.HEADER_NAMES, {
 	[-94] = INVTYPE_HEAD,
 	[-95] = INVTYPE_LEGS,
 	[-96] = INVTYPE_NECK,
-	[-97] = C_Item.GetItemSubClassInfo(3,11),
+	[-97] = _.WOWAPI.GetItemSubClassInfo(3,11),
 	[-98] = INVTYPE_SHOULDER,
 	[-99] = INVTYPE_TRINKET,
 	[-100] = INVTYPE_WAIST,
@@ -1467,7 +1463,7 @@ localize(L.HEADER_NAMES, {
 	[-115] = "Buildings",
 	[-116] = GARRISON_MISSIONS,
 	[-117] = "Garrison Mission Loot",
-	[-118] = C_Spell.GetSpellName(182108).." Tower",
+	[-118] = _.WOWAPI.GetSpellName(182108).." Tower",
 	[-119] = C_Map.GetAreaInfo(7288),
 	[-120] = C_Map.GetAreaInfo(7291),
 	[-121] = C_Map.GetAreaInfo(7290),
@@ -1486,29 +1482,29 @@ localize(L.HEADER_NAMES, {
 	[-142] = ISLANDS_HEADER,
 	[-143] = WORLD_MAP_THREATS,
 	[-144] = "Outposts",
-	[-145] = C_Spell.GetSpellName(417520),
+	[-145] = _.WOWAPI.GetSpellName(417520),
 	[-146] = C_Map.GetAreaInfo(9663),
 	[-147] = C_Map.GetAreaInfo(9664),
 	[-148] = select(1,GetCategoryInfo(15308)),
-	[-149] = C_Spell.GetSpellName(290253),
-	[-150] = C_Spell.GetSpellName(279443),
+	[-149] = _.WOWAPI.GetSpellName(290253),
+	[-150] = _.WOWAPI.GetSpellName(279443),
 	[-151] = COVENANT_MISSIONS_TITLE,
 	[-152] = ANIMA_DIVERSION_ORIGIN_TOOLTIP,
 	[-153] = "Broker Ve'ken & Broker Ve'nott",
-	[-154] = C_Spell.GetSpellName(280630),
-	[-155] = C_Spell.GetSpellName(348869),
+	[-154] = _.WOWAPI.GetSpellName(280630),
+	[-155] = _.WOWAPI.GetSpellName(348869),
 	[-156] = "Covenant Assaults",
-	[-157] = C_Spell.GetSpellName(339041),
+	[-157] = _.WOWAPI.GetSpellName(339041),
 	[-158] = select(1,GetCategoryInfo(15441)),
-	[-159] = C_Spell.GetSpellName(321076),
+	[-159] = _.WOWAPI.GetSpellName(321076),
 	[-160] = COVENANT_SANCTUM_FEATURE_KYRIAN,
 	[-161] = C_PetJournal.GetPetInfoBySpeciesID(3065),
 	[-162] = "Loyalty",
-	[-163] = C_Spell.GetSpellName(3166),
+	[-163] = _.WOWAPI.GetSpellName(3166),
 	[-164] = "Humility",
 	[-165] = COVENANT_SANCTUM_FEATURE_NECROLORDS,
-	[-166] = C_Spell.GetSpellName(321078),
-	[-167] = C_Spell.GetSpellName(321077),
+	[-166] = _.WOWAPI.GetSpellName(321078),
+	[-167] = _.WOWAPI.GetSpellName(321077),
 	[-168] = COVENANT_SANCTUM_FEATURE_NIGHT_FAE,
 	[-169] = C_Map.GetAreaInfo(12840),
 	[-170] = COVENANT_SANCTUM_TAB_RENOWN,
@@ -1524,7 +1520,7 @@ localize(L.HEADER_NAMES, {
 	[-180] = "Set C",
 	[-181] = "Set D",
 	[-182] = COVENANT_SANCTUM_FEATURE_VENTHYR,
-	[-183] = C_Spell.GetSpellName(321079),
+	[-183] = _.WOWAPI.GetSpellName(321079),
 	[-185] = "Drakewatcher Manuscript",
 	[-187] = "Dreamsurge",
 	[-191] = "Primal Storms",
@@ -1672,9 +1668,9 @@ localize(L.HEADER_NAMES, {
 	[-355] = DUNGEON_FLOOR_DIREMAUL5.." (" .. L.EAST ..")",
 	[-356] = DUNGEON_FLOOR_DIREMAUL1.." (" .. L.NORTH ..")",
 	[-357] = DUNGEON_FLOOR_DIREMAUL2.." (" .. L.WEST ..")",
-	[-358] = C_Spell.GetSpellName(21127),
-	[-359] = DUNGEON_FLOOR_DESOLACE22.." ("..C_Spell.GetSpellName(251097)..")",
-	[-360] = DUNGEON_FLOOR_DESOLACE21.." ("..C_Spell.GetSpellName(251095)..")",
+	[-358] = _.WOWAPI.GetSpellName(21127),
+	[-359] = DUNGEON_FLOOR_DESOLACE22.." (".._.WOWAPI.GetSpellName(251097)..")",
+	[-360] = DUNGEON_FLOOR_DESOLACE21.." (".._.WOWAPI.GetSpellName(251095)..")",
 	[-361] = "Graveyard",
 	[-362] = "Library",
 	[-363] = "Armory",
@@ -1689,21 +1685,21 @@ localize(L.HEADER_NAMES, {
 	[-372] = "Cache of Madness",
 	[-373] = "Flexible (5.4)",
 	[-374] = "Junkyard",
-	[-375] = C_Spell.GetSpellName(251998),
+	[-375] = _.WOWAPI.GetSpellName(251998),
 	[-376] = "Leeching Vaults",
 	[-377] = "Reliquary of Opulence",
 	[-378] = "Blood from Stone",
 	[-379] = "Audience with Arrogance",
 	[-380] = "Divergent",
-	[-381] = C_Spell.GetSpellName(430253),
-	[-382] = C_Spell.GetSpellName(456522),
+	[-381] = _.WOWAPI.GetSpellName(430253),
+	[-382] = _.WOWAPI.GetSpellName(456522),
 	[-383] = "Delves TWW S1",
 	[-384] = "Delves TWW S2",
 	[-385] = "Delves TWW S3",
 	[-386] = "Alcaz Island",
 	[-387] = C_Map.GetAreaInfo(9310),
 	[-388] = C_Map.GetAreaInfo(1769),
-	[-389] = C_Spell.GetSpellName(147343),
+	[-389] = _.WOWAPI.GetSpellName(147343),
 	[-390] = "Kukuru's Cache",
 	[-391] = "Assault on the Dark Portal",
 	[-393] = "Sargerei War Council",
@@ -1715,7 +1711,7 @@ localize(L.HEADER_NAMES, {
 	[-399] = "DF Rare Rotation",
 	[-400] = "Emerald Bounty",
 	[-401] = "Eon's Fringe",
-	[-402] = C_Spell.GetSpellName(408633),
+	[-402] = _.WOWAPI.GetSpellName(408633),
 	[-403] = "Zskera Vaults",
 	[-404] = "Sniffenseeking",
 	[-405] = "Fifth Rock Mouse",
@@ -1751,12 +1747,12 @@ localize(L.HEADER_NAMES, {
 	[-435] = "The Lessons of the Blackfist",
 	[-436] = "Volund's Folly",
 	[-437] = "Event Roll",
-	[-438] = DUNGEON_FLOOR_NIGHTMARERAID8.." "..C_Spell.GetSpellName(133137),
-	[-439] = DUNGEON_FLOOR_NIGHTMARERAID9.." "..C_Spell.GetSpellName(133137),
-	[-440] = DUNGEON_FLOOR_NIGHTMARERAID7.." "..C_Spell.GetSpellName(133137),
-	[-441] = DUNGEON_FLOOR_NIGHTMARERAID8.." "..C_Spell.GetSpellName(78741),
-	[-442] = DUNGEON_FLOOR_NIGHTMARERAID9.." "..C_Spell.GetSpellName(78741),
-	[-443] = DUNGEON_FLOOR_NIGHTMARERAID7.." "..C_Spell.GetSpellName(78741),
+	[-438] = DUNGEON_FLOOR_NIGHTMARERAID8.." ".._.WOWAPI.GetSpellName(133137),
+	[-439] = DUNGEON_FLOOR_NIGHTMARERAID9.." ".._.WOWAPI.GetSpellName(133137),
+	[-440] = DUNGEON_FLOOR_NIGHTMARERAID7.." ".._.WOWAPI.GetSpellName(133137),
+	[-441] = DUNGEON_FLOOR_NIGHTMARERAID8.." ".._.WOWAPI.GetSpellName(78741),
+	[-442] = DUNGEON_FLOOR_NIGHTMARERAID9.." ".._.WOWAPI.GetSpellName(78741),
+	[-443] = DUNGEON_FLOOR_NIGHTMARERAID7.." ".._.WOWAPI.GetSpellName(78741),
 	[-444] = SPLASH_BATTLEFORAZEROTH_8_3_0_FEATURE1_TITLE,
 	[-445] = "Lost Area",
 	[-446] = "Corrupted Area",
@@ -1772,20 +1768,20 @@ localize(L.HEADER_NAMES, {
 	[-456] = "Broken Mirror",
 	[-457] = "Broken Mirror",
 	[-458] = "Broken Mirror",
-	[-459] = C_Spell.GetSpellName(386485),
-	[-460] = C_Spell.GetSpellName(381284),
-	[-461] = C_Spell.GetSpellName(365311),
-	[-462] = C_Spell.GetSpellName(382288),
+	[-459] = _.WOWAPI.GetSpellName(386485),
+	[-460] = _.WOWAPI.GetSpellName(381284),
+	[-461] = _.WOWAPI.GetSpellName(365311),
+	[-462] = _.WOWAPI.GetSpellName(382288),
 	[-463] = "Clan Aylaag",
 	[-464] = "Grand Hunts",
 	[-465] = "Iskaara Fishing",
-	[-466] = C_Spell.GetSpellName(388945),
+	[-466] = _.WOWAPI.GetSpellName(388945),
 	[-467] = "Bartering",
 	[-468] = "Dream Infusion",
 	[-470] = "Fyrakk Assaults",
 	[-471] = "Lorewalking",
 	[-472] = "Horrific Visions Revisited",
-	[-473] = C_Spell.GetSpellName(445256),
+	[-473] = _.WOWAPI.GetSpellName(445256),
 	[-474] = "Elemental Unrest",
 	[-475] = select(2,GetAchievementInfo(4786)),
 	[-476] = "Plunderstorm",
@@ -1818,7 +1814,7 @@ localize(L.HEADER_NAMES, {
 	[-504] = "Guest Relations",
 	[-505] = "Secrets of Azeroth",
 	[-506] = "Community Clues",
-	[-507] = C_Spell.GetSpellName(181765),
+	[-507] = _.WOWAPI.GetSpellName(181765),
 	[-508] = "Uuna's World Tour",
 	[-509] = RPE_GEAR_UPDATE,
 	[-510] = GUILD,
@@ -2021,8 +2017,8 @@ localize(L.HEADER_NAMES, {
 	[-789] = "Kobold Endeavor",
 	[-792] = "Upgrade: Hero",
 	[-793] = "Upgrade: Myth",
-	[-794] = "World of Warcraft: Forever Collector's Edition",
-	[-795] = "World of Warcraft: Forever Collection",
+	[-795] = "Warcraft Forever Collection",
+	[-797] = "World of Warcraft: Forever",
 })
 localize(L.HEADER_DESCRIPTIONS, {
 	[-24] = "Contains things that are rewarded upon completing that event.",
@@ -2157,8 +2153,8 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-783] = "The 2025 bundle was available from 16 July to 15 October 2025",
 	[-784] = "The 2025 bundle was available from 16 July to 15 October 2025",
 	[-785] = "The 2026 bundle was available from 6 August to 31 October 2026.\n\nPlayers who already owned a reward from the bundle can exchange it for alternate rewards or Trader's Tender.",
-	[-794] = "These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",
-	[-795] = "These rewards are available to anyone who purchased World of Warcraft: Forever Collector's Edition or digital equivalents.",
+	[-795] = "These rewards are available to anyone who purchased Warcraft Forever Collection or physical equivalents.",
+	[-797] = "These rewards are available to anyone who purchased a World of Warcraft: Forever upgrade.",
 })
 localize(L.HEADER_LORE, {
 	[-74] = "One of these dragons will spawn randomly at the associated coordinates across Azeroth.",
@@ -2804,8 +2800,8 @@ localize(L.HEADER_ICONS, {
 	[-789] = 2061718,
 	[-792] = _.asset("interface_upgrade"),
 	[-793] = _.asset("interface_upgrade"),
-	[-794] = 1120721,
 	[-795] = 1120721,
+	[-797] = 1120721,
 })
 localize(L.HEADER_EVENTS, {
 	[-37] = 1,
@@ -3021,7 +3017,6 @@ _.Modules.Events.SetEventInformation(242, {
 	_.Modules.Events.CreateSchedule({["hour"]=10,["minute"]=0,["month"]=11,["monthDay"]=16,["weekday"]=3,["year"]=2027},{["hour"]=10,["minute"]=0,["month"]=12,["monthDay"]=7,["weekday"]=3,["year"]=2027})
 })
 _.Modules.Events.SetEventInformation(133900, {
-	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=13,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=9,["monthDay"]=13,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=20,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=9,["monthDay"]=20,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=27,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=9,["monthDay"]=27,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=10,["monthDay"]=4,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=10,["monthDay"]=4,["weekday"]=1,["year"]=2026}),
@@ -3073,7 +3068,8 @@ _.Modules.Events.SetEventInformation(133900, {
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=8,["monthDay"]=22,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=8,["monthDay"]=22,["weekday"]=1,["year"]=2027}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=8,["monthDay"]=29,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=8,["monthDay"]=29,["weekday"]=1,["year"]=2027}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=5,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=5,["weekday"]=1,["year"]=2027}),
-	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=12,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=12,["weekday"]=1,["year"]=2027})
+	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=12,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=12,["weekday"]=1,["year"]=2027}),
+	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=19,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=19,["weekday"]=1,["year"]=2027})
 })
 _.Modules.Events.SetEventInformation(133899, {
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=23,["weekday"]=3,["year"]=2025},{["hour"]=23,["minute"]=59,["month"]=3,["monthDay"]=19,["weekday"]=5,["year"]=2026}),
@@ -3153,31 +3149,31 @@ _.FilterConstants = {
 }
 L.FILTER_ID_TYPES = {
 	[1] = INVTYPE_HOLDABLE,
-	[2] = C_Item.GetItemSubClassInfo(4,5),
-	[3] = C_Item.GetItemSubClassInfo(8,3),
-	[4] = C_Item.GetItemSubClassInfo(4,1),
-	[5] = C_Item.GetItemSubClassInfo(4,2),
-	[6] = C_Item.GetItemSubClassInfo(4,3),
-	[7] = C_Item.GetItemSubClassInfo(4,4),
-	[8] = C_Item.GetItemSubClassInfo(4,6),
+	[2] = _.WOWAPI.GetItemSubClassInfo(4,5),
+	[3] = _.WOWAPI.GetItemSubClassInfo(8,3),
+	[4] = _.WOWAPI.GetItemSubClassInfo(4,1),
+	[5] = _.WOWAPI.GetItemSubClassInfo(4,2),
+	[6] = _.WOWAPI.GetItemSubClassInfo(4,3),
+	[7] = _.WOWAPI.GetItemSubClassInfo(4,4),
+	[8] = _.WOWAPI.GetItemSubClassInfo(4,6),
 	[9] = INVTYPE_TABARD,
 	[10] = INVTYPE_BODY,
 	[11] = "Artifacts",
-	[20] = C_Item.GetItemSubClassInfo(2,15),
-	[21] = C_Item.GetItemSubClassInfo(2,0),
-	[22] = C_Item.GetItemSubClassInfo(2,1),
-	[23] = C_Item.GetItemSubClassInfo(2,4),
-	[24] = C_Item.GetItemSubClassInfo(2,5),
-	[25] = C_Item.GetItemSubClassInfo(2,7),
-	[26] = C_Item.GetItemSubClassInfo(2,8),
-	[27] = C_Item.GetItemSubClassInfo(2,19),
-	[28] = C_Item.GetItemSubClassInfo(2,10),
-	[29] = C_Item.GetItemSubClassInfo(2,6),
-	[31] = C_Item.GetItemSubClassInfo(2,3),
-	[32] = C_Item.GetItemSubClassInfo(2,2),
-	[33] = C_Item.GetItemSubClassInfo(2,18),
-	[34] = C_Item.GetItemSubClassInfo(2,13),
-	[35] = C_Item.GetItemSubClassInfo(2,9),
+	[20] = _.WOWAPI.GetItemSubClassInfo(2,15),
+	[21] = _.WOWAPI.GetItemSubClassInfo(2,0),
+	[22] = _.WOWAPI.GetItemSubClassInfo(2,1),
+	[23] = _.WOWAPI.GetItemSubClassInfo(2,4),
+	[24] = _.WOWAPI.GetItemSubClassInfo(2,5),
+	[25] = _.WOWAPI.GetItemSubClassInfo(2,7),
+	[26] = _.WOWAPI.GetItemSubClassInfo(2,8),
+	[27] = _.WOWAPI.GetItemSubClassInfo(2,19),
+	[28] = _.WOWAPI.GetItemSubClassInfo(2,10),
+	[29] = _.WOWAPI.GetItemSubClassInfo(2,6),
+	[31] = _.WOWAPI.GetItemSubClassInfo(2,3),
+	[32] = _.WOWAPI.GetItemSubClassInfo(2,2),
+	[33] = _.WOWAPI.GetItemSubClassInfo(2,18),
+	[34] = _.WOWAPI.GetItemSubClassInfo(2,13),
+	[35] = _.WOWAPI.GetItemSubClassInfo(2,9),
 	[36] = INVTYPE_THROWN,
 	[37] = INVTYPE_AMMO,
 	[40] = INVTYPE_HEAD,
@@ -3192,11 +3188,11 @@ L.FILTER_ID_TYPES = {
 	[51] = INVTYPE_NECK,
 	[52] = INVTYPE_FINGER,
 	[53] = INVTYPE_TRINKET,
-	[54] = C_Item.GetItemSubClassInfo(3,11),
+	[54] = _.WOWAPI.GetItemSubClassInfo(3,11),
 	[55] = AUCTION_CATEGORY_CONSUMABLES,
-	[56] = C_Item.GetItemClassInfo(5),
+	[56] = _.WOWAPI.GetItemClassInfo(5),
 	[57] = INVTYPE_PROFESSION_GEAR,
-	[61] = C_Item.GetItemClassInfo(3),
+	[61] = _.WOWAPI.GetItemClassInfo(3),
 	[100] = MOUNTS,
 	[101] = AUCTION_CATEGORY_BATTLE_PETS,
 	[102] = TOY,
@@ -3205,9 +3201,9 @@ L.FILTER_ID_TYPES = {
 	[105] = TRACKER_FILTER_ACHIEVEMENTS,
 	[106] = CALENDAR_FILTER_WEEKLY_HOLIDAYS,
 	[110] = PAPERDOLL_SIDEBAR_TITLES,
-	[111] = C_Item.GetItemClassInfo(16),
+	[111] = _.WOWAPI.GetItemClassInfo(16),
 	[113] = INVTYPE_BAG,
-	[114] = C_Item.GetItemSubClassInfo(13,0),
+	[114] = _.WOWAPI.GetItemSubClassInfo(13,0),
 	[200] = AUCTION_CATEGORY_RECIPES,
 }
 L.FILTER_ID_ICONS = {
@@ -5740,7 +5736,7 @@ local ObjectNames = {
 	[112888] = "Dusty Shelf",
 	[112948] = "Intrepid's Locked Strongbox",
 	[113757] = "Shadowforge Cache",
-	[113768] = C_Spell.GetSpellName(61820),
+	[113768] = _.WOWAPI.GetSpellName(61820),
 	[113769] = C_Spell.GetSpellName(61820),
 	[113770] = C_Spell.GetSpellName(61820),
 	[113771] = C_Spell.GetSpellName(61820),
@@ -6273,6 +6269,12 @@ local ObjectNames = {
 	[181281] = "Mana Thistle",
 	[181283] = "Emitter Spare Part",
 	[181287] = "Frozen Rune",
+	[181332] = "Flame of Stormwind",
+	[181333] = "Flame of Ironforge",
+	[181334] = "Flame of Darnassus",
+	[181335] = "Flame of the Undercity",
+	[181336] = "Flame of Orgrimmar",
+	[181337] = "Flame of Thunder Bluff",
 	[181366] = "Four Horsemen Chest",
 	[181372] = "Hellfire Spineleaf",
 	[181385] = "Ravager Egg",
@@ -6657,6 +6659,8 @@ local ObjectNames = {
 	[188104] = "Cart Release",
 	[188113] = "Frostberry Bush",
 	[188120] = "Fields, Factories and Workshops",
+	[188128] = "Flame of the Exodar",
+	[188129] = "Flame of Silvermoon",
 	[188131] = "Wine Crate",
 	[188133] = "Blue Dragon Egg",
 	[188140] = "Crystallized Mana",
@@ -8167,7 +8171,7 @@ local ObjectNames = {
 	[225726] = "Iron Shredder Decommission Orders",
 	[225778] = "Barum's Notes",
 	[226468] = "Buffeting Galefury",
-	[226469] = C_Spell.GetSpellName(154259),
+	[226469] = _.WOWAPI.GetSpellName(154259),
 	[226521] = "Draenor Clans Archaeology Find",
 	[226831] = "Astrologer's Box",
 	[226854] = "Armored Elekk Tusk",
@@ -14204,6 +14208,12 @@ local ObjectIcons = {
 	[181147] = 134939,
 	[181150] = 133743,
 	[181153] = 134939,
+	[181332] = 135813,
+	[181333] = 135265,
+	[181334] = 135265,
+	[181335] = 135265,
+	[181336] = 135265,
+	[181337] = 135265,
 	[181597] = 135867,
 	[181598] = 135867,
 	[181629] = 135160,
@@ -14268,6 +14278,8 @@ local ObjectIcons = {
 	[187851] = 133751,
 	[187905] = 651736,
 	[188085] = 134058,
+	[188128] = 135265,
+	[188129] = 135265,
 	[188164] = 132761,
 	[188365] = 133250,
 	[188418] = 134939,
@@ -77935,12 +77947,8 @@ L.OBJECT = "Objeto de entorno"
 L.OBJECT_ID = "Objeto de entorno ID"
 L.OBJECT_TYPE = "Tipo de objeto"
 L.OBJECTIVES = "Objetivos"
-L.ONLY_NOT_TRASH = "Filtrar objetos basura"
-L.ONLY_NOT_TRASH_TOOLTIP = "Habilite esta opción para ignorar los elementos blancos o grises. Blizzard aún no ofrece una API para ello en Classic."
 L.ONLY_RELEVANT_CHECKBOX = "Sólo relevante"
 L.ONLY_RELEVANT_CHECKBOX_TOOLTIP = "Activa esta opción si quiere ver sólo las apariencias compartidas que tu personaje puede desbloquear.\n\nNOTA: Recomendamos mantener esto desactivado porque saber los requerimientos de desbloqueo de un objeto puede ayudar a identificar porque un objeto no es Coleccionado."
-L.ONLY_RWP = "Sólo Eliminado con el parche"
-L.ONLY_RWP_TOOLTIP = "Activa esta opción para rastrear solamente las transfiguraciones que serán eliminadas del juego en un futuro. Sólo los objetos etiquetados con 'Eliminado en el Parche' cuentan. Si encuentras un objeto sin etiquetar que debería estarlo, dímelo por favor!\n\nPuedes cambiar el tipo de botín que se muestra en la pestaña de Filtros."
 L.OPEN_AUTOMATICALLY = "Abrir automáticamente"
 L.OPEN_AUTOMATICALLY_DESC = "Si no eres un desarrollador de Blizzard, puede ser buena idea que desactives esto. Esto se hizo para forzar a Blizzard a arreglar y/o conocer algunos errores."
 L.OPEN_MINILIST_FOR = "Abrir Mini lista para"
@@ -86954,8 +86962,6 @@ L.NO_ENTRIES_DESC = "Si cree que se trata de un error, intente activar el modo d
 L.NOT_COLLECTED = "|T" .. _.asset("unknown") .. ":0|t |cffff9333No coleccionado|r"
 L.NPC_ID = "ID de Pnj"
 L.OBJECT_ID = "ID de objeto de entorno"
-L.ONLY_RWP = "Sólo Removido con el parche"
-L.ONLY_RWP_TOOLTIP = "Activa esta opción para rastrear solamente las transfiguraciones que serán eliminadas del juego en un futuro. Sólo los objetos etiquetados con 'Removido en el Parche' cuentan. Si encuentras un objeto sin etiquetar que debería estarlo, dímelo por favor!\n\nPuedes cambiar el tipo de botín que se muestra en la pestaña de Filtros."
 L.OPEN_AUTOMATICALLY_DESC = "Si no eres un desarrollador de Blizzard, puede ser buena idea que desactives esto. Esto se hizo para forzar a Blizzard a arreglar y/o conocer algunos bug."
 L.OTHER_ROW_INSTRUCTIONS = "|cff3399ffclick izquierdo para Expandir/Contraer\nclick derecho para abrir una mini lista\n" .. SHIFT_KEY_TEXT .. " + click para actualizar las Colecciones\n" .. CTRL_KEY_TEXT .. " + click para Expandir/Contraer recursivamente\n" .. SHIFT_KEY_TEXT .. " + click derecho para ordenar grupos o listas emergentes\n" .. ALT_KEY_TEXT .. " + click derecho para marcar puntos de referencia|r"
 L.OTHER_ROW_INSTRUCTIONS_AH = "|cff3399ffclick izquierdo para Expandir/Contraer\nclick derecho para abrir una mini lista\n" .. SHIFT_KEY_TEXT .. " + click para buscar en la Casa de Subastas|r"
@@ -88795,14 +88801,10 @@ L.OBJECT_ID = "物体 ID"
 L.OBJECT_TYPE = "物体类型"
 L.OBJECTIVES = "目标"
 L.OBJECTS = "物件"
-L.ONLY_NOT_TRASH = "过滤垃圾物品"
-L.ONLY_NOT_TRASH_TOOLTIP = "启用此选项可忽略白色/灰色物品。暴雪尚未在经典怀旧服中提供 API。"
 L.ONLY_OBTAINABLE_CHECKBOX = "仅可获得"
 L.ONLY_OBTAINABLE_CHECKBOX_TOOLTIP = "如果只想查看可获得的共享外观，请启用此选项。"
 L.ONLY_RELEVANT_CHECKBOX = "仅相关"
 L.ONLY_RELEVANT_CHECKBOX_TOOLTIP = "如果你只想看到你的角色可以解锁的共享外观，请启用此选项。\n\n注意：我们建议你保持这个关闭，因为了解一个物品的解锁要求可以帮助识别为什么一个物品没有被收藏。"
-L.ONLY_RWP = "仅‘随补丁移除’"
-L.ONLY_RWP_TOOLTIP = "启用此选项仅跟踪将来会从游戏中删除的幻化。只有标记为“随补丁移除”的数据的物品才会计入此数据。如果您发现未标记但应标记的物品，请告诉我！\n\n您可以根据“过滤器”选项卡更改显示的战利品类型。"
 L.OPEN_AUTOMATICALLY = "自动开启"
 L.OPEN_AUTOMATICALLY_DESC = "如果你不是暴雪开发者，最好是取消勾选此项。这样做是为了迫使暴雪修复和/或承认这些错误。"
 L.OPEN_MINILIST_FOR = "打开小列表："
@@ -89276,7 +89278,7 @@ localize(L.HEADER_NAMES, {
 	[-106] = "神秘运势之风",
 	[-115] = "建筑",
 	[-117] = "要塞任务拾取",
-	[-118] = C_Spell.GetSpellName(182108).." 塔",
+	[-118] = _.WOWAPI.GetSpellName(182108).." 塔",
 	[-130] = "要塞",
 	[-132] = "能量的平衡",
 	[-133] = "基础外观",
@@ -89648,6 +89650,8 @@ localize(L.HEADER_NAMES, {
 	[-787] = "马鲁凯文化",
 	[-788] = "始祖龟文化",
 	[-789] = "狗头人文化",
+	[-795] = "魔兽無限收藏",
+	[-797] = "魔兽世界：无限",
 })
 localize(L.HEADER_DESCRIPTIONS, {
 	[-24] = "包含完成事件时奖励的事物。",
@@ -89781,6 +89785,8 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-783] = "2025年纪念包可在2025年7月16日至10月15日使用",
 	[-784] = "2025年纪念包可在2025年7月16日至10月15日使用",
 	[-785] = "2026年纪念包可在2026年8月6日至10月31日使用。\n\n已经拥有包内奖励的玩家可以将其兑换为其他奖励或商贩的凭证。",
+	[-795] = "这些奖励是提供给购买了魔兽無限收藏或其实体等价物的玩家的。",
+	[-797] = "这些奖励是提供给购买了魔兽世界：无限升级包的玩家的。",
 })
 localize(L.HEADER_LORE, {
 	[-74] = "这些龙中的一只会在艾泽拉斯的相关坐标随机生成。",
@@ -90502,6 +90508,12 @@ localize(ObjectNames, {
 	[181281] = "法力蓟",
 	[181283] = "发射器备用零件",
 	[181287] = "冰冻符文",
+	[181332] = "暴风城烈焰",
+	[181333] = "铁炉堡烈焰",
+	[181334] = "达纳苏斯烈焰",
+	[181335] = "幽暗城烈焰",
+	[181336] = "奥格瑞玛烈焰",
+	[181337] = "雷霆崖烈焰",
 	[181366] = "四骑士之箱",
 	[181372] = "地狱火刺叶",
 	[181385] = "掠食者的卵",
@@ -97441,12 +97453,8 @@ L.OBJECT = "物體"
 L.OBJECT_ID = "物件 ID"
 L.OBJECT_TYPE = "物件類型"
 L.OBJECTIVES = "目標"
-L.ONLY_NOT_TRASH = "排除垃圾物品"
-L.ONLY_NOT_TRASH_TOOLTIP = "啟用此選項可忽略白色/灰色物品。暴雪尚未在經典懷舊服中提供 API。"
 L.ONLY_RELEVANT_CHECKBOX = "僅相關"
 L.ONLY_RELEVANT_CHECKBOX_TOOLTIP = "如果你只想看到你的角色可以解鎖的共享外觀，請啟用此選項。\n\n注意：我們建議你保持這個關閉，因為了解一個物品的解鎖要求可以幫助識別為什麼一個物品沒有被收藏。"
-L.ONLY_RWP = "僅‘隨更新移除’"
-L.ONLY_RWP_TOOLTIP = "啟用此選項僅追蹤未來會從遊戲中刪除的塑形。只有標記為“隨更新移除”的資料的物品才會計入此資料。如果您發現未標記但應標記的物品，請告訴我！\n\n您可以依據“篩選器”選項卡更改顯示的戰利品類型。"
 L.OPEN_AUTOMATICALLY = "自動開啟"
 L.OPEN_AUTOMATICALLY_DESC = "如果你不是暴雪開發者，最好是取消勾選此項。這樣做是為了迫使暴雪修復或承認這些錯誤。"
 L.OPEN_MINILIST_FOR = "打開小列表："
@@ -97965,6 +97973,8 @@ localize(L.HEADER_NAMES, {
 	[-758] = "不散暗影",
 	[-759] = "攤牌",
 	[-770] = "詛咒狂湧",
+	[-795] = "魔獸永恆收藏",
+	[-797] = "魔獸世界：永恆",
 })
 localize(L.HEADER_DESCRIPTIONS, {
 	[-24] = "包含完成探究時獎勵的東西。",
@@ -97998,6 +98008,8 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-713] = "包含只能由最高等級角色獲得的物品。",
 	[-721] = "包含在當前區域可取得，但來源直接來自另一個區域的內容。",
 	[-722] = "這些獎勵是提供給購買了暗黑破壞神II：獄火重生 ─ 術士軍臨的玩家的。",
+	[-795] = "這些獎勵是提供給購買了魔獸永恆收藏或其實體等價物的玩家的。",
+	[-797] = "這些獎勵是提供給購買了魔獸世界：永恆升级包的玩家的。",
 })
 localize(L.HEADER_LORE, {
 	[-74] = "這些龍中的一隻會在艾澤拉斯的相關座標隨機生成。",

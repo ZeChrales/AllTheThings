@@ -1,7 +1,7 @@
 ﻿---@diagnostic disable: deprecated
 local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
-local ach,ah,cat,cq,crit,cs,cu,d,e,en,faction,flt,h,heir,hqt,i,ill,inst,m,mm,mnt,n,o,p,prof,q,r,s,sp,title,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateCategory,_.CreateCharacterUnlockQuest,_.CreateAchievementCriteria,_.CreateCharacterUnlockSpell,_.CreateCurrencyClass,_.CreateDifficulty,_.CreateEncounter,_.CreateEnsemble,_.CreateFaction,_.CreateFilter,_.CreateCustomHeader,_.CreateHeirloom,_.CreateHQT,_.CreateItem,_.CreateIllusion,_.CreateInstance,_.CreateMap,_.CreateMountMod,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfession,_.CreateQuest,_.CreateRecipe,_.CreateItemSource,_.CreateSpell,_.CreateTitle,_.CreateToy,_.CreateExpansion;
+local ach,ah,cat,cq,crit,cs,cu,d,de,e,en,faction,flt,h,heir,hqt,i,ill,inst,m,mm,mnt,n,o,p,prof,q,r,s,sp,title,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateCategory,_.CreateCharacterUnlockQuest,_.CreateAchievementCriteria,_.CreateCharacterUnlockSpell,_.CreateCurrencyClass,_.CreateDifficulty,_.CreateDecor,_.CreateEncounter,_.CreateEnsemble,_.CreateFaction,_.CreateFilter,_.CreateCustomHeader,_.CreateHeirloom,_.CreateHQT,_.CreateItem,_.CreateIllusion,_.CreateInstance,_.CreateMap,_.CreateMountMod,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfession,_.CreateQuest,_.CreateRecipe,_.CreateItemSource,_.CreateSpell,_.CreateTitle,_.CreateToy,_.CreateExpansion;
 categories.Holidays=
 h(-36,{difficultyID=19,SortPriority=30,SortType="EventStart",g={
 h(-12,{awp=30002,g={
@@ -12,15 +12,7 @@ h(-557,{e=7,maps={1,27},g={
 h(-12,{e=7,g={
 ach(18579,{awp=100107,e=7}),
 ach(41212,{awp=110200,e=7}),
-ach(63253,{awp=120100,e=7,g={
-crit(114942,{achID=63253,e=7,id=1,questID=96910}),
-crit(114943,{achID=63253,e=7,id=2,questID=96911}),
-crit(114944,{achID=63253,e=7,id=3,questID=96952}),
-crit(114945,{achID=63253,e=7,id=4,questID=96924}),
-crit(114946,{achID=63253,e=7,id=5,questID=96925}),
-crit(114947,{achID=63253,e=7,id=6,questID=96926}),
-crit(114948,{achID=63253,e=7,id=7,questID=96922}),
-crit(114949,{achID=63253,e=7,id=8,questID=96923})}}),
+ach(63253,{awp=120100,e=7}),
 ach(1684,{awp=30002,e=7,r=2,rwp=50004,sym={{"meta_achievement",1186,1185,2796,295,303,1936}},u=2,g={
 title(101,{e=7,u=2})}}),
 ach(1683,{awp=30002,e=7,g={
@@ -28,7 +20,7 @@ title(101,{e=7}),
 crit(7564,{achID=2144,id=6})}}),
 ach(3496,{awp=20202,e=7,providers={{"i",33977},{"i",37828}}}),
 ach(1260,{awp=30002,e=7,maps={111}}),
-ach(1293,{awp=20202,e=7,providers={{"i",33016},{"i",33017},{"i",33018},{"i",33019},{"i",33020},{"i",33021}},rwp=30002,u=2}),
+ach(1293,{awp=20403,e=7,providers={{"i",33016},{"i",33017},{"i",33018},{"i",33019},{"i",33020},{"i",33021}},rwp=30200,u=2}),
 ach(2796,{awp=30002,e=7,providers={{"i",37571},{"i",37599}},g={
 crit(6182,{achID=1683,e=7,id=2})}}),
 ach(1183,{awp=30002,e=7,g={
@@ -94,27 +86,27 @@ h(-29,{e=7,g={
 i(243291,{b=1,description="Granted for achieving a minimum of 33% shared progress & then killing Keggor at the end of the Brewfest Banquet event.",e=7,g={
 i(37829,{awp=20403,e=7})}}),
 i(243292,{b=1,description="Granted for achieving a minimum of 66% shared progress & then killing Keggor at the end of the Brewfest Banquet event.",e=7,g={
-s(289543,241232,{e=7,f=2,loc=41}),
-s(289580,241341,{e=7,f=2,loc=41}),
-s(289582,241343,{e=7,f=2,loc=40}),
-s(289584,241345,{e=7,f=2,loc=40}),
-s(289586,241347,{e=7,f=2,loc=46}),
-s(289588,241350,{e=7,f=2,loc=46}),
-s(296325,249857,{e=7,f=2,loc=45}),
-s(296326,249858,{e=7,f=2,loc=45})}}),
-i(243293,{b=1,description="Granted for achieving 100% shared progress & then killing Keggor at the end of the Brewfest Banquet event.",e=7,g={
-s(289543,241232,{e=7,f=2,loc=41}),
-s(289580,241341,{e=7,f=2,loc=41}),
-s(289582,241343,{e=7,f=2,loc=40}),
-s(289584,241345,{e=7,f=2,loc=40}),
-s(289586,241347,{e=7,f=2,loc=46}),
-s(289588,241350,{e=7,f=2,loc=46}),
-s(296325,249857,{e=7,f=2,loc=45}),
 s(296326,249858,{e=7,f=2,loc=45}),
+s(289582,241343,{e=7,f=2,loc=40}),
+s(289586,241347,{e=7,f=2,loc=46}),
+s(289543,241232,{e=7,f=2,loc=41}),
+s(296325,249857,{e=7,f=2,loc=45}),
+s(289584,241345,{e=7,f=2,loc=40}),
+s(289588,241350,{e=7,f=2,loc=46}),
+s(289580,241341,{e=7,f=2,loc=41}),
+s(311130,279530,{awp=120100,e=7,f=2,loc=45}),
+s(311131,279531,{awp=120100,e=7,f=2,loc=40}),
+s(311127,279524,{awp=120100,e=7,f=2,loc=46}),
+s(311129,279529,{awp=120100,e=7,f=2,loc=41}),
+s(311135,279535,{awp=120100,e=7,f=2,loc=45}),
+s(311132,279532,{awp=120100,e=7,f=2,loc=40}),
+s(311133,279533,{awp=120100,e=7,f=2,loc=41}),
+s(311134,279534,{awp=120100,e=7,f=2,loc=46})}}),
+i(243293,{b=1,description="Granted for achieving 100% shared progress & then killing Keggor at the end of the Brewfest Banquet event.",e=7,g={
 s(292907,245950,{e=7,f=3}),
+s(293193,246784,{e=7,f=24}),
 s(292912,245955,{e=7,f=23}),
 s(292916,245959,{e=7,f=1}),
-s(293193,246784,{e=7,f=24}),
 s(293206,246801,{e=7,f=33})}})}}),
 h(-45,{e=7,g={
 q(90870,{coords={
@@ -213,7 +205,7 @@ i(38287,{b=1,e=7,f=53,lvl=27,rwp=30002,spellID=51955,u=2}),
 i(38280,{b=1,e=7,r=2}),
 i(38281,{b=1,e=7,r=1})}}),(function(t)if GetCVar("portal")=="EU" then	local quests={[11117]=1,[11431]=1,[11118]=1,[11120]=1}for i,quest in ipairs(t.g)do	if quest.questID and quests[quest.questID] then	quest.u=2 end	end	end	return t end)(
 h(-45,{e=7,g={
-ah(18579,{awp=100107,e=7,type="a",g={
+ah(18579,{awp=100107,e=7,isYearly=1,type="a",g={
 q(77152,{coords={
 [2023]={{59.8,38.7}}},e=7,isYearly=1,lvl=10,providers={{"o",405009}},g={
 i(37829,{awp=20403,e=7}),
@@ -262,7 +254,7 @@ q(77095,{coords={
 [2022]={{76.3,35.4}}},e=7,isYearly=1,lvl=10,providers={{"o",404981}},g={
 i(37829,{awp=20403,e=7}),
 crit(60568,{achID=18579,e=7,id=12})}})}}),
-ah(41212,{awp=110002,e=7,type="a",g={
+ah(41212,{awp=110002,e=7,isYearly=1,type="a",g={
 q(84305,{coords={
 [2339]={{44.1,46.1}}},e=7,isYearly=1,lvl=10,providers={{"o",457168}},g={
 i(37829,{awp=20403,e=7}),
@@ -303,6 +295,39 @@ q(84316,{coords={
 [2255]={{56.7,38.7}}},e=7,isYearly=1,lvl=10,providers={{"o",457183}},g={
 i(37829,{awp=20403,e=7}),
 crit(71566,{achID=41212,awp=110200,e=7,id=2})}})}}),
+ah(63253,{awp=120100,e=7,isYearly=1,type="a",g={
+q(96910,{coords={
+[2393]={{54.8,69.8}}},e=7,isYearly=1,providers={{"o",656382}},g={
+i(37829,{awp=20403,e=7}),
+crit(114942,{achID=63253,e=7,id=1})}}),
+q(96911,{coords={
+[2395]={{47.7,67.7}}},e=7,isYearly=1,providers={{"o",656389}},g={
+i(37829,{awp=20403,e=7}),
+crit(114943,{achID=63253,e=7,id=2})}}),
+q(96952,{coords={
+[2541]={{61.6,70}}},e=7,isYearly=1,providers={{"o",656486}},g={
+i(37829,{awp=20403,e=7}),
+crit(114944,{achID=63253,e=7,id=3})}}),
+q(96925,{coords={
+[2576]={{64.2,60.7}}},e=7,isYearly=1,providers={{"o",656402}},g={
+i(37829,{awp=20403,e=7}),
+crit(114946,{achID=63253,e=7,id=5})}}),
+q(96924,{coords={
+[2413]={{69.1,51.2}}},e=7,isYearly=1,providers={{"o",656401}},g={
+i(37829,{awp=20403,e=7}),
+crit(114945,{achID=63253,e=7,id=4})}}),
+q(96926,{coords={
+[2405]={{41.6,74.6}}},e=7,isYearly=1,providers={{"o",656403}},g={
+i(37829,{awp=20403,e=7}),
+crit(114947,{achID=63253,e=7,id=6})}}),
+q(96922,{coords={
+[2437]={{45.4,65}}},e=7,isYearly=1,providers={{"o",656396}},g={
+i(37829,{awp=20403,e=7}),
+crit(114948,{achID=63253,e=7,id=7})}}),
+q(96923,{coords={
+[2437]={{37.4,22.9}}},e=7,isYearly=1,providers={{"o",656397}},g={
+i(37829,{awp=20403,e=7}),
+crit(114949,{achID=63253,e=7,id=8})}})}}),
 q(29397,{awp=40001,coords={
 [27]={{53.6,38.6}}},e=7,isYearly=1,qgs={24468},qis={33955},r=2,sourceQuests={11318},g={
 s(27941,56836,{e=7,f=2,spellID=101582})}}),
@@ -443,11 +468,11 @@ i(37829,{awp=20403,e=7})}}),
 q(12318,{awp=20403,coords={
 [1]={{47.9,26.9}},
 [27]={{46.2,52.8}}},e=7,isBreadcrumb=1,lvl=10,nextQuests={12062},qgs={27584,28329},rwp=30303,sourceQuests={11441,11442,11446,11447},u=2}),
-q(12193,{awp=20202,coords={
-[27]={{53.6,38.6}}},e=7,qgs={24468},qis={33955},r=2,rwp=30002,u=2,g={
+q(12193,{awp=20403,coords={
+[27]={{46.4,40.3}}},e=7,qgs={24468},qis={33955},r=2,rwp=30200,sourceQuests={11318},u=2,g={
 s(15238,33016,{e=7,f=2,spellID=41920,u=2})}}),
-q(12194,{awp=20202,coords={
-[1]={{42.6,17.6}}},e=7,qgs={24497},qis={33955},r=1,rwp=30002,u=2,g={
+q(12194,{awp=20403,coords={
+[1]={{46.3,14.8}}},e=7,qgs={24510},qis={33955},r=1,rwp=30200,sourceQuests={11409},u=2,g={
 s(15238,33016,{e=7,f=2,spellID=41920,u=2})}}),
 q(11454,{awp=20202,coords={
 [1]={{44.3,17.5}},
@@ -481,8 +506,8 @@ q(11447,{altQuests={11446},awp=20202,coords={
 i(33034,{e=7,f=55,lvl=23,spellID=44114}),
 i(34020,{e=7,f=55,lvl=11,spellID=44111}),
 i(34017,{e=7,f=55,spellID=44107})}})}})),
-h(-47,{e=7,g={(function(t)if C_Item.GetItemCount(t.itemID,true)<1 then	local any if t.g then	for i,o in ipairs(t.g)do	if C_Item.GetItemCount(o.itemID,true)>0 then	any=true break end	end	end	if not any then return t end	end	t.u=nil t.rwp=30002 if t.g then	for i,o in ipairs(t.g)do	o.u=nil o.rwp=30002 end	end	return t end)(
-s(15238,33016,{awp=20403,description="Fill up the stein with one brew, relog, and then manually refresh your collection. Once it has registered, move on to the next brew and repeat.\n\nBarleybrew Clear and Thunder 45 can only be found in Dun Morogh, while Small Step Brew and Jungle River Water can be only found in Durotar. Gordok Grog is in both areas. Players can use the opposite faction's kegs; it just requires a little traveling!",e=7,f=2,lore="This stein was the reward from the 2008 Brewfest.",rwp=30002,spellID=41920,u=2,g={
+h(-47,{e=7,g={(function(t)if _.WOWAPI.GetItemCount(t.itemID,true)<1 then	local any if t.g then	for i,o in ipairs(t.g)do	if _.WOWAPI.GetItemCount(o.itemID,true)>0 then	any=true break end	end	end	if not any then return t end	end	t.u=nil t.rwp=30002 if t.g then	for i,o in ipairs(t.g)do	o.u=nil o.rwp=30002 end	end	return t end)(
+s(15238,33016,{awp=20403,description="Fill up the stein with one brew, relog, and then manually refresh your collection. Once it has registered, move on to the next brew and repeat.\n\nBarleybrew Clear and Thunder 45 can only be found in Dun Morogh, while Small Step Brew and Jungle River Water can be only found in Durotar. Gordok Grog is in both areas. Players can use the opposite faction's kegs; it just requires a little traveling!",e=7,f=2,lore="This stein was the reward from the 2008 Brewfest.",rwp=30200,spellID=41920,u=2,g={
 s(15239,33017,{b=1,coords={
 [27]={{55.8,38.2}}},e=7,f=2,providers={{"o",186183}},spellID=41921,u=2}),
 s(15240,33018,{b=1,coords={
@@ -499,7 +524,7 @@ s(105141,169450,{e=7,f=2,spellID=41921}),
 s(105142,169452,{e=7,f=2,spellID=41943}),
 s(105143,169453,{e=7,f=2,spellID=41944}),
 s(105144,169454,{e=7,f=2,spellID=41945}),
-s(105145,169455,{e=7,f=2,spellID=41946})}}),(function(t)if C_Item.GetItemCount(t.itemID,true)<1 then	local any if t.g then	for i,o in ipairs(t.g)do	if C_Item.GetItemCount(o.itemID,true)>0 then	any=true break end	end	end	if not any then return t end	end	t.u=nil t.rwp=40001 if t.g then	for i,o in ipairs(t.g)do	o.u=nil o.rwp=40001 end	end	return t end)(
+s(105145,169455,{e=7,f=2,spellID=41946})}}),(function(t)if _.WOWAPI.GetItemCount(t.itemID,true)<1 then	local any if t.g then	for i,o in ipairs(t.g)do	if _.WOWAPI.GetItemCount(o.itemID,true)>0 then	any=true break end	end	end	if not any then return t end	end	t.u=nil t.rwp=40001 if t.g then	for i,o in ipairs(t.g)do	o.u=nil o.rwp=40001 end	end	return t end)(
 s(18084,37892,{awp=30002,description="Fill up the stein with one brew, relog, and then manually refresh your collection. Once it has registered, move on to the next brew and repeat.\n\nBarleybrew Clear and Thunder 45 can only be found in Dun Morogh, while Small Step Brew and Jungle River Water can be only found in Durotar. Gordok Grog is in both areas. Players can use the opposite faction's kegs; it just requires a little traveling!",e=7,f=2,lore="This stein was the reward from the 2009 & 2010 Brewfest.",rwp=40001,spellID=41920,u=2,g={
 s(18085,37893,{b=1,coords={
 [27]={{55.8,38.2}}},e=7,f=2,providers={{"o",186183}},spellID=41921,u=2}),
@@ -512,7 +537,7 @@ s(18088,37896,{b=1,coords={
 [1]={{40.8,18}}},e=7,f=2,providers={{"o",186186}},spellID=41945,u=2}),
 s(18087,37895,{b=1,coords={
 [1]={{40.2,17.4}}},e=7,f=2,providers={{"o",186187}},spellID=41946,u=2})}})),
-s(27941,56836,{awp=40001,e=7,f=2,lore="This stein was the reward from the 2011 Brewfest onward.",spellID=101582}),(function(t)if C_Item.GetItemCount(t.itemID,true)<1 then	local any if t.g then	for i,o in ipairs(t.g)do	if C_Item.GetItemCount(o.itemID,true)>0 then	any=true break end	end	end	if not any then return t end	end	t.u=nil t.rwp=20403 if t.g then	for i,o in ipairs(t.g)do	o.u=nil o.rwp=20403 end	end	return t end)(
+s(27941,56836,{awp=40001,e=7,f=2,lore="This stein was the reward from the 2011 Brewfest onward.",spellID=101582}),(function(t)if _.WOWAPI.GetItemCount(t.itemID,true)<1 then	local any if t.g then	for i,o in ipairs(t.g)do	if _.WOWAPI.GetItemCount(o.itemID,true)>0 then	any=true break end	end	end	if not any then return t end	end	t.u=nil t.rwp=20403 if t.g then	for i,o in ipairs(t.g)do	o.u=nil o.rwp=20403 end	end	return t end)(
 s(15167,32912,{awp=20202,description="Fill up the stein with one brew, relog, and then manually refresh your collection. Once it has registered, move on to the next brew and repeat.\n\nBarleybrew Clear and Thunder 45 can only be found in Dun Morogh, while Small Step Brew and Jungle River Water can be only found in Durotar. Gordok Grog is in both areas. Players can use the opposite faction's kegs; it just requires a little traveling!",e=7,f=2,lore="This stein was the reward from the 2007 Brewfest.",rwp=20403,spellID=41920,u=2,g={
 s(15169,32915,{b=1,coords={
 [27]={{55.8,38.2}}},e=7,f=2,providers={{"o",186183}},spellID=41921,u=2}),
@@ -526,6 +551,11 @@ s(15172,32919,{b=1,coords={
 s(15173,32920,{b=1,coords={
 [1]={{40.2,17.4}}},e=7,f=2,providers={{"o",186187}},spellID=41946,u=2})}}))}}),
 h(-58,{e=7,g={
+h(-22,{awp=120100,e=7,g={
+de(25672,{cost={{"i",37829,50}},crs={271372,271603,272030,272042},e=7,itemID=280339,spellID=1308296}),
+de(25673,{cost={{"i",37829,50}},crs={271372,271603,272030,272042},e=7,itemID=280341,spellID=1308298}),
+de(25674,{cost={{"i",37829,75}},crs={271372,271603,272030,272042},e=7,itemID=280343,spellID=1308300}),
+de(25666,{cost={{"i",37829,125}},crs={271372,271603,272030,272042},e=7,itemID=280337,spellID=1308294})}}),
 n(23604,{awp=20202,coords={
 [1]={{41,18.3}}},e=7,r=1,g={
 i(34065,{e=7,f=55,lvl=3,spellID=5005})}}),
@@ -561,7 +591,7 @@ i(167732,{awp=80105,b=2,cost={{"i",37829,500}},e=7,f=55,spellID=293780}),
 i(187998,{awp=90105,b=2,cost={{"i",37829,500}},e=7,f=55,spellID=361235}),
 i(122341,{awp=60100,b=2,cost={{"i",37829,500}},e=7,f=55,spellID=180736}),
 i(151615,{awp=70205,b=2,cost={{"i",37829,500}},e=7,f=55,spellID=247251})}})}}),
-n(207496,{coords={
+n(207496,{awp=100107,coords={
 [2112]={{29.8,56.6}}},e=7,sym={{"sub","common_vendor",23710}}}),
 n(152871,{awp=80200,coords={
 [27]={{56.5,37.5}}},e=7,r=2,g={
@@ -603,6 +633,8 @@ i(37816,{awp=20403,b=1,cost={{"i",37829,20}},e=7,f=106,lvl=10,spellID=62062})}})
 n(153574,{awp=80200,coords={
 [27]={{54.8,38.6}}},e=7,r=2,g={
 toy(169865,{b=1,cost={{"i",169599,5}},e=7})}}),
+n(272042,{awp=120100,coords={
+[1]={{40.3,17.3}}},e=7,r=1,sym={{"select","itemID",280335,248101}}}),
 n(24510,{awp=20202,e=7,OnUpdate=function(t)if not(_.IsQuestFlaggedCompleted(t.sourceQuests[1]))then	t.description="You are unable to purchase the rams from the vendor because you did not complete the 'Brewfest Riding Rams' quest back in 2007. :(" if t.g then	for i,item in ipairs(t.g)do	item.u=2 end	end	else	t.description="You completed the 'Brewfest Riding Rams' quest?! BUY THE RAMS RIGHT NOW!\n\nAlso kinda jealous...\n - Crieve" if t.g then	for i,item in ipairs(t.g)do	item.u=nil end	end	end	end,r=1,sourceQuests={11419},g={
 mnt(43900,{b=1,cost=1000000,e=7,itemID=33977,lvl=10}),
 mnt(43899,{b=1,cost=100000,e=7,itemID=33976,lvl=10,rwp=20403,u=2})}}),
@@ -616,6 +648,10 @@ i(34017,{e=7,f=55,spellID=44107})}}),
 n(155133,{awp=80200,coords={
 [1]={{42.2,18.5}}},e=7,r=1,g={
 toy(169865,{b=1,cost={{"i",169599,5}},e=7})}}),
+n(272030,{awp=120100,coords={
+[27]={{56.1,36.6}}},e=7,r=2,sym={{"select","itemID",280335,248101}}}),
+n(271372,{awp=120100,coords={
+[2351]={{52.4,54.4}}},e=7,r=1}),
 n(23511,{awp=20202,coords={
 [1]={{40.9,16.8}},
 [27]={{55.6,36.6}}},e=7,g={
@@ -655,6 +691,8 @@ i(169468,{e=7,f=55,spellID=11008}),
 i(169467,{e=7,f=55,spellID=11008}),
 i(169466,{e=7,f=55,spellID=11009}),
 i(169469,{e=7,f=55,spellID=11007})}}),
+n(271603,{awp=120100,coords={
+[2352]={{54.3,32.7}}},e=7,r=2}),
 n(23481,{awp=20202,coords={
 [27]={{55.33,37.17}}},e=7,r=2,g={
 i(34063,{e=7,f=55,lvl=7,spellID=5006}),
@@ -5241,7 +5279,7 @@ i(128314,{awp=60200,e=14,f=55,spellID=189387}),
 i(128315,{awp=60200,e=14,f=55,spellID=189389}),
 mnt(191314,{e=14,itemID=128671,lvl=10})}})}}),
 n(13435,{awp=20300,coords={
-[84]={{63,70.6}}},e=14,g={
+[84]={{62.8,70.2}}},e=14,g={
 r(44958,{b=1,e=14,itemID=34319,requireSkill=197,skillID=2540})}}),
 n(13429,{awp=20300,coords={
 [90]={{68.4,39.8}}},e=14,g={
@@ -7739,7 +7777,7 @@ q(8984,{coords={
 q(9026,{coords={
 [84]={{54.6,65.6}}},e=9,isYearly=1,qgs={16105},r=2,rwp=30300,sourceQuests={9025},u=2}),
 q(9027,{coords={
-[84]={{52.8,65.4}}},e=9,isYearly=1,qgs={6740},r=2,rwp=30300,sourceQuests={9026},u=2}),
+[84]={{60.6,75}}},e=9,isYearly=1,qgs={6740},r=2,rwp=30300,sourceQuests={9026},u=2}),
 q(8982,{coords={
 [90]={{66.8,44.4}}},e=9,isYearly=1,qgs={16108},r=1,rwp=30300,sourceQuests={8980},u=2}),
 q(8983,{coords={
@@ -9646,7 +9684,7 @@ s(16406,35279,{b=1,e=11,f=9}),
 s(16407,35280,{b=1,e=11,f=9}),
 crit(5270,{achID=263,awp=30002,e=11,id=3})}}),
 q(9332,{coords={
-[89]={{64.1,46.7}}},e=11,isYearly=1,providers={{"i",23184}},r=1,g={
+[89]={{64.1,46.7}}},e=11,isYearly=1,providers={{"o",181334}},qis={23184},r=1,g={
 i(23247,{b=1,e=11,f=106,spellID=28806}),
 i(23211,{b=1,e=11,f=55,spellID=29334}),
 i(23326,{b=1,e=11,f=55,spellID=29333}),
@@ -9655,7 +9693,7 @@ i(23435,{b=1,e=11,f=55,spellID=29335}),
 i(23246,{b=1,e=11,f=55,spellID=47175}),
 i(34684,{b=1,e=11,f=106,spellID=45417})}}),
 q(9331,{coords={
-[87]={{65.2,24.7}}},e=11,isYearly=1,providers={{"i",23183}},r=1,g={
+[87]={{65.2,24.7}}},e=11,isYearly=1,providers={{"o",181333}},qis={23183},r=1,g={
 i(23247,{b=1,e=11,f=106,spellID=28806}),
 i(23211,{b=1,e=11,f=55,spellID=29334}),
 i(23326,{b=1,e=11,f=55,spellID=29333}),
@@ -9664,7 +9702,7 @@ i(23435,{b=1,e=11,f=55,spellID=29335}),
 i(23246,{b=1,e=11,f=55,spellID=47175}),
 i(34684,{b=1,e=11,f=106,spellID=45417})}}),
 q(9324,{coords={
-[85]={{46.5,37.6}}},e=11,isYearly=1,providers={{"i",23179}},r=2,g={
+[85]={{46.5,37.6}}},e=11,isYearly=1,providers={{"o",181336}},qis={23179},r=2,g={
 i(23247,{b=1,e=11,f=106,spellID=28806}),
 i(23211,{b=1,e=11,f=55,spellID=29334}),
 i(23326,{b=1,e=11,f=55,spellID=29333}),
@@ -9673,7 +9711,7 @@ i(23435,{b=1,e=11,f=55,spellID=29335}),
 i(23246,{b=1,e=11,f=55,spellID=47175}),
 i(34684,{b=1,e=11,f=106,spellID=45417})}}),
 q(11935,{awp=20003,coords={
-[110]={{69.7,42.7}}},e=11,isYearly=1,providers={{"i",35568}},r=2,g={
+[110]={{69.7,42.7}}},e=11,isYearly=1,providers={{"o",188129}},qis={35568},r=2,g={
 i(23247,{b=1,e=11,f=106,spellID=28806}),
 i(23211,{b=1,e=11,f=55,spellID=29334}),
 i(23326,{b=1,e=11,f=55,spellID=29333}),
@@ -9682,7 +9720,7 @@ i(23435,{b=1,e=11,f=55,spellID=29335}),
 i(23246,{b=1,e=11,f=55,spellID=47175}),
 i(34684,{b=1,e=11,f=106,spellID=45417})}}),
 q(9330,{coords={
-[84]={{49.8,72.9}}},e=11,isYearly=1,providers={{"i",23182}},r=1,g={
+[84]={{49.8,72.9}}},e=11,isYearly=1,providers={{"o",181332}},qis={23182},r=1,g={
 i(23247,{b=1,e=11,f=106,spellID=28806}),
 i(23211,{b=1,e=11,f=55,spellID=29334}),
 i(23326,{b=1,e=11,f=55,spellID=29333}),
@@ -9691,7 +9729,7 @@ i(23435,{b=1,e=11,f=55,spellID=29335}),
 i(23246,{b=1,e=11,f=55,spellID=47175}),
 i(34684,{b=1,e=11,f=106,spellID=45417})}}),
 q(11933,{awp=20003,coords={
-[103]={{40.8,26.3}}},e=11,isYearly=1,providers={{"i",35569}},r=1,g={
+[103]={{40.8,26.3}}},e=11,isYearly=1,providers={{"o",188128}},qis={35569},r=1,g={
 i(23247,{b=1,e=11,f=106,spellID=28806}),
 i(23211,{b=1,e=11,f=55,spellID=29334}),
 i(23326,{b=1,e=11,f=55,spellID=29333}),
@@ -9700,7 +9738,7 @@ i(23435,{b=1,e=11,f=55,spellID=29335}),
 i(23246,{b=1,e=11,f=55,spellID=47175}),
 i(34684,{b=1,e=11,f=106,spellID=45417})}}),
 q(9326,{coords={
-[90]={{68.7,8.5}}},e=11,isYearly=1,providers={{"i",23181}},r=2,g={
+[90]={{68.7,8.5}}},e=11,isYearly=1,providers={{"o",181335}},qis={23181},r=2,g={
 i(23247,{b=1,e=11,f=106,spellID=28806}),
 i(23211,{b=1,e=11,f=55,spellID=29334}),
 i(23326,{b=1,e=11,f=55,spellID=29333}),
@@ -9709,7 +9747,7 @@ i(23435,{b=1,e=11,f=55,spellID=29335}),
 i(23246,{b=1,e=11,f=55,spellID=47175}),
 i(34684,{b=1,e=11,f=106,spellID=45417})}}),
 q(9325,{coords={
-[88]={{21.9,27.3}}},e=11,isYearly=1,providers={{"i",23180}},r=2,g={
+[88]={{21.9,27.3}}},e=11,isYearly=1,providers={{"o",181337}},qis={23180},r=2,g={
 i(23247,{b=1,e=11,f=106,spellID=28806}),
 i(23211,{b=1,e=11,f=55,spellID=29334}),
 i(23326,{b=1,e=11,f=55,spellID=29333}),
@@ -11003,9 +11041,9 @@ s(21638,45073,{b=1,e=15,f=1,spellID=61815}),
 p(200,{e=15,itemID=44794,npcID=32791,spellID=61725}),
 s(21596,44800,{e=15,f=2,loc=42}),
 mnt(102349,{awp=40300,e=15,itemID=72145,lvl=10}),
-s(7547,19028,{e=15,f=2,loc=42,rwp=70205,spellID=61980,u=2}),
-s(2635,6835,{e=15,f=2,loc=46,rwp=70205,u=2}),
-s(2633,6833,{e=15,f=10}),
+s(7547,19028,{awp=10300,e=15,f=2,loc=42,rwp=70205,spellID=61980,u=2}),
+s(2635,6835,{awp=10300,e=15,f=2,loc=46,rwp=70205,u=2}),
+s(2633,6833,{awp=10300,e=15,f=10}),
 i(155905,{awp=70305,e=15,f=55,spellID=258904})}})}}),
 h(-12,{e=15,g={
 ach(2797,{awp=30002,e=15,r=2,rwp=50004,sym={{"meta_achievement",2676,2418,2436,2576,2416,2419,2421,2422}},u=2,g={
@@ -11474,7 +11512,8 @@ ach(3457,{awp=30002,e=21}),
 i(116392,{awp=60002,e=21,f=55,spellID=171439}),
 s(200148,217373,{awp=110200,cost=10000000,e=21,f=2,loc=40}),
 mm(208858,{awp=100107,b=1,cost=500000000,e=21,questID=77875}),
-i(138400,{awp=70003,b=1,e=21,f=55,spellID=215757})}}),
+i(138400,{awp=70003,b=1,description="Harlan Sweete can be found in Freehold on Tiragarde Sound, Kul Tiras.",e=21,f=55,spellID=215757}),
+s(311470,280333,{awp=120100,cost=10000000,e=21,f=2,loc=40})}}),
 n(122396,{awp=70205,coords={
 [210]={{39.6,84.2}}},e=21,g={
 toy(150547,{b=1,description="To purchase this toy, you must have earned the achievement |cFFFFD700Avast Ye, Admiral|r.",e=21})}})}})}}),
@@ -11490,10 +11529,10 @@ h(-45,{e=6,g={
 q(8194,{coords={
 [210]={{41.4,73}}},cost={{"i",19807,5}},e=6,qgs={15078},repeatable=1,requireSkill=356}),
 q(8229,{coords={
-[85]={{53.25,70.65}}},e=6,qgs={15116},r=1,repeatable=1,requireSkill=356,g={
+[87]={{28.2,74.4}}},e=6,qgs={15119},r=2,repeatable=1,requireSkill=356,g={
 i(19978,{e=6,requireSkill=356})}}),
 q(8228,{coords={
-[84]={{54.8,63.1}}},e=6,qgs={15119},r=2,repeatable=1,requireSkill=356,g={
+[85]={{52.4,73}}},e=6,qgs={15116},r=1,repeatable=1,requireSkill=356,g={
 i(19978,{e=6,requireSkill=356})}}),
 q(8193,{coords={
 [210]={{41.4,73}}},cost={{"i",19807,40}},e=6,qgs={15077},repeatable=1,requireSkill=356,g={

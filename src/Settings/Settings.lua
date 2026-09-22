@@ -1,6 +1,11 @@
 local appName, app = ...
 local L = app.L;
 
+-- Global Locals
+--- @type function,
+local pairs
+	= pairs
+
 -- Module locals
 local filterSet = app.Modules.Filter.Set;
 
@@ -99,7 +104,7 @@ settings.RequiredForInsaneMode = {
 	RuneforgeLegendaries = app.GameBuildVersion >= 90000,
 	Titles = true,
 	Toys = true,
-	Transmog = app.GameBuildVersion >= 40000,
+	Transmog = app.GameBuildVersion >= 40000 or app.IsForever,
 	-- Expansion Filters
 	Classic = true,
 	TBC = app.GameBuildVersion >= 20000,
@@ -128,7 +133,7 @@ settings.RequiredForRankedMode = {
 	Reputations = true,
 	Titles = true,
 	Toys = true,
-	Transmog = app.GameBuildVersion >= 40000,
+	Transmog = app.GameBuildVersion >= 40000 or app.IsForever,
 	-- Expansion Filters
 	Classic = true,
 	TBC = app.GameBuildVersion >= 20000,
@@ -153,7 +158,7 @@ settings.RequiredForCoreMode = {
 	Illusions = app.GameBuildVersion >= 70000,
 	Mounts = true,
 	Toys = true,
-	Transmog = app.GameBuildVersion >= 40000,
+	Transmog = app.GameBuildVersion >= 40000 or app.IsForever,
 	-- Expansion Filters
 	Classic = true,
 	TBC = app.GameBuildVersion >= 20000,
@@ -307,9 +312,7 @@ local GeneralSettingsBase = {
 		["Thing:RuneforgeLegendaries"] = app.GameBuildVersion >= 90000,
 		["Thing:Titles"] = true,
 		["Thing:Toys"] = true,
-		["Thing:Transmog"] = app.GameBuildVersion >= 40000,
-		["Only:RWP"] = app.GameBuildVersion < 40000,
-		["Only:NotTrash"] = app.GameBuildVersion <= 40000,
+		["Thing:Transmog"] = app.GameBuildVersion >= 40000 or app.IsForever,
 		["Skip:AutoRefresh"] = false,
 		["Show:CompletedGroups"] = false,
 		["Show:CollectedThings"] = false,
@@ -348,10 +351,6 @@ local GeneralSettingsBase = {
 };
 local FilterSettingsBase = {
 	__index = app.Presets[app.Class] or app.Presets.ALL,
-};
-local TransmogPresets = app.PresetTransmogs or app.Presets;
-local TransmogFilterSettingsBase = {
-	__index = TransmogPresets[app.Class] or TransmogPresets.ALL,
 };
 local TooltipSettingsBase = {
 	__index = {
@@ -458,6 +457,11 @@ local TooltipSettingsBase = {
 		["c"] = true,
 		["r"] = true,
 		["u"] = true,
+
+		-- TEMPORARY
+		["achID"] = true,
+		["creatureID"] = true,
+		["itemID"] = true,
 	},
 };
 local UnobtainableSettingsBase = {
@@ -488,9 +492,9 @@ if season > 0 then
 			function(group)
 				return maximumSkillLevel >= (group.learnedAt or 0);
 			end);
-			
-			app.AddEventHandler("OnUpdateModeFilters", function(self)
-				if self:Get("Filter:BySkillLevel") and not self:Get("DebugMode") then
+
+			app.AddEventHandler("OnUpdateModeFilters", function(settings)
+				if settings:Get("Filter:BySkillLevel") and not settings:Get("DebugMode") then
 					filterSet.SkillLevel(true)
 				else
 					filterSet.SkillLevel()
@@ -535,9 +539,7 @@ settings.Initialize = function(self)
 	local PerCharacter = app.LocalizeGlobal("AllTheThingsSettingsPerCharacter", true)
 	if PerCharacter then AllTheThingsSettingsPerCharacter = PerCharacter; end
 	if not PerCharacter.Filters then PerCharacter.Filters = {}; end
-	if not PerCharacter.TransmogFilters then PerCharacter.TransmogFilters = {}; end
 	setmetatable(PerCharacter.Filters, FilterSettingsBase);
-	setmetatable(PerCharacter.TransmogFilters, TransmogFilterSettingsBase);
 
 	-- force re-enable of optional filters which become not optional
 	-- (any filterID's here must be 'true' in all class presets)
@@ -837,12 +839,6 @@ end
 settings.GetFilter = function(self, filterID)
 	return RawFilters[filterID];
 end
-settings.GetFilterForTransmogBase = function(self, filterID)
-	return app.PresetTransmogs.ALL[filterID];
-end
-settings.GetFilterForTransmog = function(self, filterID)
-	return AllTheThingsSettingsPerCharacter.TransmogFilters[filterID];
-end
 settings.SetFilter = function(self, filterID, value)
 	RawFilters[filterID] = value;
 	settings:UpdateMode(1);
@@ -892,10 +888,6 @@ settings.GetModeString = function(self)
 			mode = app.ClassName .. " " .. mode
 		end
 
-		if app.GameBuildVersion < 40000 and self:Get("Only:RWP") and self.Collectibles.Transmog then
-			mode = "RWP " .. mode;
-		end
-
 		local solo = not app.MODE_DEBUG_OR_ACCOUNT
 		local keyPrefix, thingName, thingActive
 		local insaneTotalCount, insaneCount = 0, 0;
@@ -915,7 +907,7 @@ settings.GetModeString = function(self)
 						and keyPrefix == "Thing"
 					then
 						thingCount = thingCount + 1
-						table.insert(things, thingName)
+						things[#things + 1] = thingName
 					end
 					if self.RequiredForInsaneMode[thingName] then
 						insaneTotalCount = insaneTotalCount + 1;
@@ -1030,7 +1022,7 @@ settings.GetShortModeString = function(self)
 					-- This prevents the heirloom uprades and quests locked from being displayed as a mode.
 					if key ~= "Thing:HeirloomUpgrades" or settings:Get("Thing:Heirlooms") then
 						thingCount = thingCount + 1
-						table.insert(things, thingName)
+						things[#things + 1] = thingName
 					end
 					if self.RequiredForInsaneMode[thingName] then
 						insaneTotalCount = insaneTotalCount + 1;
@@ -1660,26 +1652,18 @@ settings.ToggleFilters = function(self)
 end
 settings.ActivateNextProfile = function(self)
 	if AllTheThingsProfiles and AllTheThingsProfiles.Profiles then
-		local profiles = {}
+		local profileKeys = {}
+		local ActiveProfile = self:GetProfile()
 		for key in pairs(AllTheThingsProfiles.Profiles) do
-			table.insert(profiles, { name = key })
-			if key == settings:GetProfile(true) then
-				currentProfile = #profiles
-			end
+			profileKeys[#profileKeys + 1] = key
 		end
-		if #profiles >= 2 and currentProfile then
-			table.sort(profiles, function(a, b) return a.name < b.name end)
-			local currentProfile
-			for i, profile in ipairs(profiles) do
-				if profile.name == settings:GetProfile(true) then
-					currentProfile = i
-					break
-				end
-			end
-			local nextProfile = currentProfile % #profiles + 1
+		if #profileKeys >= 2 and ActiveProfile then
+			app.Sort(profileKeys, app.SortDefaults.Strings)
+			local currentProfile = app.indexOf(profileKeys, ActiveProfile)
+			local nextProfile = currentProfile % #profileKeys + 1
 			local announceProfile = settings:Get("Profile:ShowProfileLoadedMessage")
 			settings:Set("Profile:ShowProfileLoadedMessage", true)
-			settings:SetProfile(profiles[nextProfile].name)
+			settings:SetProfile(profileKeys[nextProfile])
 			settings:ApplyProfile()
 			settings:UpdateMode(1)
 			settings:Set("Profile:ShowProfileLoadedMessage", announceProfile)
@@ -1842,11 +1826,6 @@ settings.UpdateMode = function(self, doRefresh)
 		filterSet.Trackable()
 
 		settings:SetThingTracking("Debug");
-		if app.IsClassic then
-			-- Modules
-			self.OnlyRWP = false;
-			self.OnlyNotTrash = false;
-		end
 	else
 		app.MODE_DEBUG = nil;
 		filterSet.Visible(true)
@@ -1904,8 +1883,6 @@ settings.UpdateMode = function(self, doRefresh)
 		else
 			filterSet.Event()
 		end
-		self.OnlyRWP = app.GameBuildVersion < 40000 and self:Get("Only:RWP");
-		self.OnlyNotTrash = app.IsClassic and self:Get("Only:NotTrash");
 	end
 	app.MODE_DEBUG_OR_ACCOUNT = app.MODE_DEBUG or app.MODE_ACCOUNT;
 	app.HandleEvent("OnUpdateModeFilters", self)
@@ -1965,7 +1942,7 @@ settings.UpdateMode = function(self, doRefresh)
 	else
 		filterSet.Level()
 	end
-	
+
 	self.Collectibles.Loot = self:Get("LootMode");
 
 	-- refresh forced from toggle

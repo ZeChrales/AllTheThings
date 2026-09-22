@@ -19,16 +19,16 @@ HALLOWS_END_HEADER = createHeader({
 		en = WOWAPI_GetCategoryName(158),
 		-- #else
 		en = "Hallow's End",
-		-- TODO: de = "",
+		de = "Schlotternächte",
 		es = "Halloween",
 		mx = "Halloween",
-		-- TODO: fr = "",
-		-- TODO: it = "",
-		-- TODO: ko = "",
-		-- TODO: pt = "",
-		-- TODO: ru = "",
+		fr = "Sanssaint",
+		it = "Veglia delle Ombre",
+		ko = "할로윈 축제",
+		pt = "Noturnália",
+		ru = "Тыквовин",
 		cn = "万圣节",
-		-- TODO: tw = "",
+		tw = "萬鬼節",
 		-- #endif
 	},
 });
@@ -716,6 +716,10 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 			["provider"] = { "i", 37583 },	-- G.N.E.R.D.S.
 			["timeline"] = { ADDED_3_0_2 },
 		}),
+		ach(62501, {	-- I Ain't Afraid of no Ghost
+			["maps"] = { FOUNDERS_POINT, RAZORWIND_SHORES },
+			["timeline"] = { ADDED_12_1_5 },
+		}),
 		ach(288, {	-- Out With It
 			["description"] = "Eat 2-10 Tricky Treats quickly to trigger the debuff. Results may vary.",
 			["cost"] = { { "i", 33226, 3 } },	-- Tricky Treat
@@ -788,6 +792,10 @@ root(ROOTS.Holidays, applyevent(EVENTS.HALLOWS_END, n(HALLOWS_END_HEADER, {
 				["provider"] = { "i", 33292 },	-- Hallowed Helm
 			}),
 			-- #endif
+		}),
+		ach(62500, {	-- Sweet Tooth
+			["maps"] = { FOUNDERS_POINT, RAZORWIND_SHORES },
+			["timeline"] = { ADDED_12_1_5 },
 		}),
 		ach(981, {	-- That Sparkling Smile
 			["provider"] = { "i", 37604 },	-- Tooth Pick
