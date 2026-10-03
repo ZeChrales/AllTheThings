@@ -14,6 +14,15 @@ maproot(MAP.KALIMDOR, MAP.DARNASSUS, {
 				["races"] = ALLIANCE_ONLY,
 			}),
 		}),
+		n(PROFESSIONS, {
+			prof(ALCHEMY, {
+				n(4160, {	-- Ainethil <Artisan Alchemist>
+					["coord"] = { 55.6, 24.6, MAP.DARNASSUS },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = ALCHEMY_RECIPES.EXPERT,
+				}),
+			}),
+		}),
 		n(QUESTS, {
 			q(7799, {	-- A Donation of Mageweave
 				["qg"] = 14725,	-- Raedon Duskstriker
@@ -326,6 +335,31 @@ maproot(MAP.KALIMDOR, MAP.DARNASSUS, {
 							{ "o", 89635 },	-- Sunscorched Shell
 						},
 						["coord"] = { 11.7, 37.1, MAP.THOUSAND_NEEDLES },
+					}),
+				},
+			}),
+			q(98067, {	-- Eyes of the Sentinels
+				["qg"] = 8396,	-- Sentinel Dalia Sunblade
+				["coord"] = { 39.8, 89.3, MAP.DARNASSUS },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["maps"] = { MAP.TELDRASSIL },
+				["races"] = ALLIANCE_ONLY,
+				["groups"] = {
+					objective(1, {	-- Cenarion Hold depths entrance
+						["provider"] = { "i", 279378 },	-- Lunar Pendant
+						["coord"] = { 33.7, 16.2, MAP.DARNASSUS },
+					}),
+					objective(2, {	-- Darnassus Bank
+						["provider"] = { "i", 279378 },	-- Lunar Pendant
+						["coord"] = { 41.0, 43.4, MAP.DARNASSUS },
+					}),
+					objective(3, {	-- Craftsman's Terrace Inn
+						["provider"] = { "i", 279378 },	-- Lunar Pendant
+						["coord"] = { 66.3, 15.6, MAP.DARNASSUS },
+					}),
+					objective(4, {	-- City Gate
+						["provider"] = { "i", 279378 },	-- Lunar Pendant
+						["coord"] = { 35.8, 54.2, MAP.TELDRASSIL },
 					}),
 				},
 			}),
@@ -930,7 +964,7 @@ maproot(MAP.KALIMDOR, MAP.DARNASSUS, {
 				["coord"] = { 61.0, 17.7, MAP.DARNASSUS },
 				["races"] = ALLIANCE_ONLY,
 				["groups"] = {
-					i(11223, {	-- Formula: Enchant Bracer - Dodge (RECIPE!) / Formula: Enchant Bracer - Deflection
+					i(11223, {	-- Formula: Enchant Bracer - Deflection (RECIPE!)
 						["isLimited"] = true,
 					}),
 					i(16217, {	-- Formula: Enchant Shield - Greater Stamina (RECIPE!)
@@ -988,15 +1022,13 @@ maproot(MAP.KALIMDOR, MAP.DARNASSUS, {
 			n(4228, {	-- Vaean <Enchanting Supplies>
 				["coord"] = { 58.6, 14.7, MAP.DARNASSUS },
 				["races"] = ALLIANCE_ONLY,
-				["sym"] = {
-					{ "select","itemID",
-						20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
-						20752,	-- Formula: Minor Mana Oil (RECIPE!)
-						20758,	-- Formula: Minor Wizard Oil (RECIPE!)
-						6342,	-- Formula: Enchant Chest - Minor Mana (RECIPE!)
-						22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
-					},
-				},
+				["sym"] = {{ "select","itemID",
+					20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
+					20752,	-- Formula: Minor Mana Oil (RECIPE!)
+					20758,	-- Formula: Minor Wizard Oil (RECIPE!)
+					6342,	-- Formula: Enchant Chest - Minor Intellect (RECIPE!)
+					22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
+				}},
 			}),
 			n(4175, {	-- Vinasia <Cloth Armor Merchant>
 				["coord"] = { 60.7, 72.5, MAP.DARNASSUS },

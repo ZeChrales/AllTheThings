@@ -317,13 +317,18 @@ local function PrintQuestInfoViaCallback(questID, new)
 	RequestLoadQuestByID(questID, PrintQuestInfoCallback, new)
 end
 local DirtyQuests = {}
-local IsQuestFlaggedCompletedForObject;
 local CACHE = "Quests"
 app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, accountWideData, characterData)
 	if not currentCharacter[CACHE] then currentCharacter[CACHE] = {} end
 	if not accountWideData[CACHE] then accountWideData[CACHE] = {} end
 	if not currentCharacter.PriorQuests then currentCharacter.PriorQuests = {} end
 	if not accountWideData.OneTimeQuests then accountWideData.OneTimeQuests = {} end
+
+	-- Current character collections shouldn't use '2' ever... so clear any 'inaccurate' data
+	local currentQuestsCache = currentCharacter[CACHE]
+	for questID,completion in pairs(currentQuestsCache) do
+		if completion == 2 then currentQuestsCache[questID] = nil; end
+	end
 
 	ATTCharacterData = characterData;
 	OneTimeQuests = accountWideData.OneTimeQuests
@@ -499,24 +504,6 @@ local OtherCharacterCompletedQuests = setmetatable({}, {
 	end
 })
 local IsPartySyncActive = false;
-IsQuestFlaggedCompletedForObject = function(t)
-	local questID = t.questID;
-	if questID then
-		if IsQuestFlaggedCompleted(questID) then return 1; end
-		if not t.repeatable then
-			-- ATT Account cache tracking (may eventually remove)
-			if app.IsAccountTracked("Quests", questID) then return 2 end
-			-- WoW Account tracking
-			if app.Settings.AccountWide.Quests and IsQuestFlaggedCompletedOnAccount(questID) then return 2 end
-		end
-	end
-	-- account-mode: any character is viable to complete the quest, so alt quest completion shouldn't count for this quest
-	-- this quest cannot be obtained if any altQuest is completed on this character and not tracking as account mode
-	-- If the quest has an altQuest which was completed on this character and this character is not in Party Sync nor tracking Locked Quests, return shared completed
-	if not app.MODE_DEBUG_OR_ACCOUNT and not IsPartySyncActive and not app.Settings.Collectibles.QuestsLocked and t.altcollected then
-		return 2;
-	end
-end
 local CollectibleAsQuest = function(t)
 	-- consolidated representation of whether a Thing can be collectible via QuestID
 	local questID = t.questID;
@@ -919,7 +906,7 @@ app.CheckInaccurateQuestInfo = function(questRef, questChange, forceShow)
 				RealQuest = realQuest and true or false,
 			};
 			app.Modules.Contributor.AddReportData(
-				questType,
+				"Quest",
 				id,
 				BuildDiscordQuestInfoTable(id, "inaccurate-quest", questChange, questRef, checks),
 				L.REPORT_INACCURATE_QUEST)
@@ -1093,6 +1080,7 @@ if C_QuestLog_GetAllCompletedQuestIDs then
 		app.CallbackHandlers.DelayedCallback(SyncDirtyQuests, 0.5)
 	end
 
+	-- Setup Retail PriorQuests
 	app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, accountWideData, characterData)
 		-- convert cached quests into the current CompleteQuestSequence so unflagged quests can be properly tracked and reported at startup
 		local priorQuests = currentCharacter.PriorQuests
@@ -1129,6 +1117,7 @@ else	-- no C_QuestLog_GetAllCompletedQuestIDs
 			app.CallbackHandlers.DelayedCallback(SyncDirtyQuests, 0.5)
 		end
 	end
+	-- Setup Classic PriorQuests
 	app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, accountWideData, characterData)
 		-- convert cached quests into the current RawQuests so they don't all appear 'dirty' on first refresh
 		local priorQuests = currentCharacter.PriorQuests
@@ -2969,7 +2958,7 @@ app.GetQuestName = function(questID)
 	return QuestNameFromID[questID];
 end;
 app.IsQuestFlaggedCompleted = IsQuestFlaggedCompleted;
-app.IsQuestFlaggedCompletedForObject = IsQuestFlaggedCompletedForObject;
+app.IsQuestFlaggedCompletedForObject = function() app.print("IsQuestFlaggedCompletedForObject is no longer implemented") end
 app.IsQuestReadyForTurnIn = C_QuestLog_ReadyForTurnIn;
 app.IsQuestSaved = IsQuestSaved;
 end

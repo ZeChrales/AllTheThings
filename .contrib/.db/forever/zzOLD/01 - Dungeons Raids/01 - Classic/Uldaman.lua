@@ -28,9 +28,7 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 				prof(ENCHANTING, {
 					n(11073, {	-- Annora <Master Enchanter>
 						["description"] = "To get the Annora to spawn, you'll have to kill all scorpions first.",
-						-- #if BEFORE 2.1.0
-						["groups"] = EXPERT_ARTISAN_ENCHANTING,
-						-- #endif
+						["groups"] = ENCHANTING_RECIPES.ARTISAN,
 					}),
 				}),
 			}),
@@ -900,10 +898,3 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 		},
 	}),
 }));
-
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { ADDED_6_0_2 } }, {
-	inst(239, {
-		q(35605),	-- Uldaman Reward Quest - Normal completion
-		q(35610),	-- Uldaman Bonus Reward
-	}),
-})));

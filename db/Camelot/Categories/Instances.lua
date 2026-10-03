@@ -1,7 +1,7 @@
 ﻿---@diagnostic disable: deprecated
 local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
-local ach,ah,cl,crit,e,faction,flt,h,i,inst,mnt,n,o,prof,q,qo,r,s,settings,x=_.CreateAchievement,_.CreateHeader,_.CreateCharacterClass,_.CreateAchievementCriteria,_.CreateEncounter,_.CreateFaction,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateInstance,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateProfession,_.CreateQuest,_.CreateQuestObjective,_.CreateRecipe,_.CreateItemSource,_.Settings,_.CreateExpansion;
+local ach,ah,cl,crit,e,faction,flt,h,i,inst,mnt,n,o,p,prof,q,qo,r,s,settings,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateCharacterClass,_.CreateAchievementCriteria,_.CreateEncounter,_.CreateFaction,_.CreateFilter,_.CreateCustomHeader,_.CreateItem,_.CreateInstance,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateProfession,_.CreateQuest,_.CreateQuestObjective,_.CreateRecipe,_.CreateItemSource,_.Settings,_.CreateToy,_.CreateExpansion;
 categories.Instances=
 h(-75,{SortPriority=1,g={
 h(-318,{
@@ -330,11 +330,11 @@ qo(1,{coords={
 q(8928,{coords={
 [1446]={{52.4,27.2}}},cost={{"i",21939,1}},lvl=58,maps={1452},qgs={16014},sourceQuests={8925}}),
 q(8922,{coords={
-[1455]={{43.5,52.6}}},lvl=58,maps={1446},providers={{"i",21985}},qgs={16013},r=2,sourceQuests={8905,8906,8907,8908,8909,8910,8911,8912}}),
+[1455]={{43.5,52.6}}},lvl=58,maps={1446},qgs={16013},qis={21985},r=2,sourceQuests={8905,8906,8907,8908,8909,8910,8911,8912}}),
 q(8923,{coords={
-[1454]={{35,38.3}}},lvl=58,maps={1446},providers={{"i",22382}},qgs={16012},r=1,sourceQuests={8913,8914,8915,8916,8917,8918,8919,8920}}),
+[1454]={{35,38.3}}},lvl=58,maps={1446},qgs={16012},qis={22382},r=1,sourceQuests={8913,8914,8915,8916,8917,8918,8919,8920}}),
 q(8948,{coords={
-[1423]={{30.9,16.8}}},lvl=58,maps={234,235,236,237,238},providers={{"i",21983}},qgs={16016},sourceQuests={8947}}),
+[1423]={{30.9,16.8}}},lvl=58,maps={234,235,236,237,238},qgs={16016},qis={21983},sourceQuests={8947}}),
 q(8947,{coords={
 [1423]={{30.9,16.8}}},cost={{"i",15407,4},{"i",14342,3},{"i",12810,20},{"i",11371,3}},lvl=58,qgs={16016},sourceQuests={8946}}),
 q(8997,{lvl=58,maps={33,1455},qgs={16033},r=2,sourceQuests={8996}}),
@@ -440,393 +440,273 @@ qo(1,{providers={{"i",21987}}}),
 qo(2,{providers={{"i",21988}}}),
 qo(3,{providers={{"i",21989}}}),
 qo(4,{providers={{"i",22014}}})}})})}),
-h(-61,{isRaid=1,lvl=60,g={
-n(6109,{coords={
-[1447]={{53.3,80.4}}},isRaid=1,lvl=60,g={
-i(18704,{c={3},lvl=60}),
-s(163811,19130,{f=27}),
-s(163439,18202,{f=34}),
-s(163263,17070,{f=20}),
-s(163606,18542,{f=26}),
-s(163813,19132,{f=4,loc=40}),
-s(163442,18208,{f=3}),
-s(163605,18541,{f=3}),
-s(163610,18547,{f=7,loc=45}),
-s(163608,18545,{f=4,loc=46}),
-s(163812,19131,{f=4,loc=47})}}),
-h(-74,{coords={
-[1425]={{63.3,27.8}},
-[1431]={{45.4,39.6}},
-[1440]={{94.2,35.7}},
-[1444]={{51.2,10.9}}},isRaid=1,lvl=60,g={
-h(-45,{
-q(8446,{lvl=60,providers={{"i",20644}}}),
-q(8447,{coords={
-[1450]={{36.18,41.79}}},lvl=60,qgs={11832},sourceQuests={8446},g={
-i(20600,{b=1,f=52,lvl=60})}})}),
-h(-19,{crs={14887,14888,14889,14890},g={
-i(20644,{b=1,lvl=60}),
-s(164365,20619,{f=7,loc=47}),
-s(164363,20617,{f=6,loc=46}),
-s(164362,20616,{f=7,loc=43}),
-s(164361,20615,{f=5,loc=43}),
-s(164364,20618,{f=4,loc=44}),
-s(164340,20579,{f=3}),
-s(164341,20580,{b=1,f=23,lvl=60}),
-s(164342,20581,{f=28}),
-s(164343,20582,{f=1}),
-prof(393,{
-i(20381)})}}),
-n(14889,{isRaid=1,lvl=60,g={
-s(164360,20599,{f=33}),
-s(164367,20623,{f=5,loc=40}),
-i(20622,{b=1,f=51,lvl=60}),
-s(164366,20621,{f=6,loc=47}),
-i(20624,{b=1,f=52,lvl=60})}}),
-n(14888,{isRaid=1,lvl=60,g={
-s(164371,20628,{f=5,loc=40}),
-s(164369,20626,{f=4,loc=43}),
-s(164373,20630,{f=7,loc=44}),
-s(164368,20625,{f=4,loc=45}),
-s(164370,20627,{f=5,loc=46}),
-s(164372,20629,{f=6,loc=47})}}),
-n(14890,{isRaid=1,lvl=60,g={
-s(164338,20577,{f=25}),
-s(164375,20633,{f=5,loc=41}),
-s(164376,20634,{f=5,loc=47}),
-s(164374,20631,{f=4,loc=47}),
-i(20632,{b=1,f=52,lvl=60})}}),
-n(14887,{isRaid=1,lvl=60,g={
-s(164339,20578,{f=20}),
-s(164378,20637,{f=7,loc=41}),
-s(164377,20635,{f=4,loc=42}),
-s(164379,20638,{f=6,loc=46}),
-s(164380,20639,{b=1,f=7,loc=46,lvl=60}),
-i(20636,{b=1,f=53,lvl=60,spellID=24998})}})}}),
-n(12397,{coords={
-[1419]={{36.6,75.8}}},isRaid=1,lvl=60,g={
-i(18665,{c={5},f=53,lvl=60}),
-s(163279,17113,{f=28}),
-s(163278,17112,{f=23}),
-s(163609,18546,{f=6,loc=40}),
-i(17111,{b=1,f=51,lvl=60,spellID=7711}),
-s(163441,18204,{f=3}),
-s(163816,19135,{f=4,loc=43}),
-s(163607,18544,{f=5,loc=44}),
-s(163815,19134,{f=5,loc=45}),
-s(163814,19133,{f=4,loc=46}),
-i(18543,{b=1,f=52,lvl=60})}})}}),
-inst(741,{coords={
-[33]={{54.18,83.25}}},crs={14387},isLockoutShared=1,isRaid=1,lore="The Molten Core was created during the War of the Three Hammers more than 300 years ago. Near the end of the war, Thaurissan, the leader of the Dark Iron Dwarves, sought to summon a powerful fire elemental to defeat the combined forces of the Bronzebeard and Wildhammer clans. He was more successful than he could have imagined, as he released Ragnaros the Firelord from millennia of captivity under the Redridge Mountains.\n\nRagnaros destroyed the city of Thaurissan and created the volcano of Blackrock Mountain. He dwells there to this day with his elemental servants and the enslaved remnants of the Dark Iron dwarf clan. The burning lake where Ragnaros lies sleeping acts as a rift connecting to the plane of fire, allowing the malicious elementals to pass through.",lvl=50,mapID=232,sourceQuests={7848},["zone-text-areaID"]=2717,g={
-ah(17182,{isRaid=1,type="i",g={
-s(163282,17182,{b=1,c={1,2,7,11},cost={{"i",17193,1},{"i",17204,1}},f=24,lvl=60,spellID=21142})}}),
-ah(19019,{isRaid=1,type="i",g={
-q(7785,{c={1,2,3,4,8,9},coords={
-[1451]={{21.7,8.6}}},cost={{"i",18564,1},{"i",18563,1}},description="This quest becomes available once you have looted either of the two Bindings of the Windseeker.\n\nWARNING: You may want to immediately travel to Silithus when you do as the Essence of the Firelord only drops from Ragnaros if you are on this quest!",lvl=60,providers={{"i",19016}},qgs={14347}}),
-q(7786,{altQuests={7521},c={1,2,3,4,8,9},coords={
-[1451]={{21.7,8.6}}},lvl=60,qgs={14347},sourceQuests={7785},g={
-qo(1,{providers={{"i",17771}}}),
-qo(2,{providers={{"i",19017}}}),
-qo(3,{providers={{"i",18563}}}),
-qo(4,{providers={{"i",18564}}}),
-n(14435,{description="This is a 40-man raid boss.",modelScale=20,g={
-i(19018,{b=1,lvl=60})}})}}),
-q(7787,{c={1,2,3,4,8,9},coords={
-[1451]={{21.7,8.6}}},lvl=60,providers={{"i",19018}},qgs={14347},sourceQuests={7786},g={
-s(163747,19019,{b=1,f=25,lvl=60})}})}}),
-h(-31,{
-faction(749,{coords={
-[1447]={{79.2,73.6}}},icon=135861,qgs={13278}})}),
-h(-45,{
-q(7486,{coords={
-[1447]={{79.2,73.6}}},lvl=55,providers={{"o",179551}},qgs={13278},sourceQuests={6824},g={
-i(18399,{b=1,f=52}),
-i(18398,{b=1,f=52})}}),
-q(6823,{coords={
-[1447]={{79.2,73.6}}},lvl=55,minReputation={749,9000},qgs={13278},sourceQuests={6822}}),
-q(7633,{c={3},coords={
-[1448]={{47,24.48}}},lvl=60,qgs={14524},sourceQuests={7632}}),
-q(7848,{coords={
-[35]={{54.2,83.3}}},description="Complete this quest to be able to quickly teleport to Molten Core by simply talking to Lothos.",lvl=55,maps={242},qgs={14387},g={
-qo(1,{providers={{"i",18412},{"o",179553}}})}}),
-q(6821,{coords={
-[1447]={{79.2,73.6}}},lvl=55,maps={250},qgs={13278},sourceQuests={6804,6805},g={
-qo(1,{providers={{"i",17322}}})}}),
-q(6824,{coords={
-[1447]={{79.2,73.6}}},lvl=55,qgs={13278},sourceQuests={6823},g={
-qo(1,{providers={{"i",17332}}}),
-qo(2,{providers={{"i",17329}}}),
-qo(3,{providers={{"i",17331}}}),
-qo(4,{providers={{"i",17330}}})}}),
-q(6804,{coords={
-[1447]={{79.2,73.6}}},lvl=55,maps={1423},qgs={13278},g={
-qo(1,{cost={{"i",17310,1}},crs={8519,8520,8521,8522},providers={{"i",17309}}})}}),
-q(6805,{coords={
-[1447]={{79.2,73.6}}},lvl=55,maps={1451},qgs={13278},g={
-qo(1,{providers={{"n",11744}}}),
-qo(2,{providers={{"n",11746}}})}}),
-q(7632,{c={3},coords={
-[1448]={{47,24.48}}},cost={{"i",18703,1}},description="To find Vartrus go to the Irontree Woods in Felwood, there is an island in the middle of the green sludge with a little hill on it, go up the hill and Vartrus will appear to you.",lvl=60,qgs={14524}}),
-q(6822,{coords={
-[1447]={{79.2,73.6}}},lvl=55,qgs={13278},sourceQuests={6821},g={
-qo(1,{providers={{"n",11658}}}),
-qo(2,{providers={{"n",11668}}}),
-qo(3,{providers={{"n",11673}}}),
-qo(4,{providers={{"n",12101}}})}})}),
-h(-47,{
-i(17333,{b=1,description="Return to the Duke at Honored reputation after completing the Hands of the Enemy quest to receive this item from a dialog option.",minReputation={749,9000},sourceQuests={6824},spellID=21358}),
-i(22754,{b=1,description="Return to the Duke at Revered reputation to be given a version of your Quintessence that can be used more than once.",minReputation={749,21000},sourceQuests={6824},spellID=21358})}),
+inst(227,{coords={
+[1440]={{14,11.1}}},icon=136325,lore="Situated along the Zoram Strand of Ashenvale, Blackfathom Deeps was once a glorious temple dedicated to the night elves' moon-goddess, Elune. However, the great Sundering shattered the temple - sinking it beneath the waves of the Veiled Sea. There it remained untouched - until, drawn by its ancient power - the naga and satyr emerged to plumb its secrets. Legends hold that the ancient beast, Aku'mai, has taken up residence within the temple's ruins. Aku'mai, a favored pet of the primordial Old Gods, has preyed upon the area ever since. Drawn to Aku'mai's presence, the cult known as the Twilight's Hammer has also come to bask in the Old Gods' evil presence.",lvl=19,mapID=221,["zone-text-areaID"]=719,g={
 h(-63,{
-i(20951,{description="For this to drop, you must be on the Scrying Goggles? No Problem! quest."}),
-i(17010),
-i(17011),
-s(163071,16802,{f=4,loc=45}),
-s(163068,16799,{f=4,loc=43}),
-s(163133,16864,{f=7,loc=45}),
-s(163130,16861,{f=7,loc=43}),
-s(163097,16828,{f=5,loc=45}),
-s(163099,16830,{f=5,loc=43}),
-s(163107,16838,{f=6,loc=45}),
-s(163109,16840,{f=6,loc=43}),
-s(163075,16806,{f=4,loc=45}),
-s(163073,16804,{f=4,loc=43}),
-s(163120,16851,{f=6,loc=45}),
-s(163119,16850,{f=6,loc=43}),
-s(163086,16817,{f=4,loc=45}),
-s(163127,16858,{f=7,loc=45}),
-s(163126,16857,{f=7,loc=43}),
-s(163096,16827,{f=5,loc=45}),
-s(163094,16825,{f=5,loc=43}),
-s(163088,16819,{f=4,loc=43})}),
-h(-19,{crs={11982,11988,12056,12057,12118,12259,12264},g={
-r(22750,{b=1,itemID=18260,requireSkill=333}),
-r(22749,{b=1,itemID=18259,requireSkill=333}),
-r(22727,{b=1,itemID=18252}),
-r(26087,{itemID=21371,requireSkill=197}),
-r(22759,{itemID=18265}),
-r(22757,{b=1,itemID=18264}),
-r(22732,{itemID=18257,requireSkill=171}),
-r(22793,{b=1,itemID=18290}),
-r(22795,{b=1,itemID=18292,requireSkill=202}),
-r(22797,{b=1,itemID=18291,requireSkill=202})}}),
-prof(186,{
-i(11382)}),
-e(1519,{npcID=12118,g={
-i(17329),
-s(163738,18878,{f=20}),
-s(163270,17077,{f=27}),
-s(163730,18870,{f=6,loc=40}),
-i(17109,{f=51}),
-s(163823,19145,{f=4,loc=42}),
-s(163824,19146,{f=5,loc=43}),
-s(163074,16805,{f=4,loc=44}),
-s(163132,16863,{f=7,loc=44}),
-s(163724,18861,{f=7,loc=46}),
-s(163732,18872,{f=4,loc=46}),
-s(163735,18875,{f=5,loc=46}),
-s(163069,16800,{f=4,loc=47}),
-s(163098,16829,{f=5,loc=47}),
-s(163106,16837,{f=6,loc=47}),
-s(163128,16859,{f=7,loc=47}),
-i(18879,{b=1,f=52,lvl=60}),
-i(19147,{b=1,f=52,lvl=60}),
-r(19801,{b=1,c={3},itemID=16665,lvl=60,requireSkill=50})}}),
-e(1520,{npcID=11982,g={
-s(163266,17073,{b=1,f=24,lvl=60}),
-s(163700,18822,{f=26}),
-s(163440,18203,{f=34}),
-s(163262,17069,{f=32}),
-s(163820,19142,{f=1}),
-i(17065,{f=51}),
-s(163707,18829,{f=6,loc=41}),
-s(163701,18823,{f=5,loc=44}),
-s(163821,19143,{f=7,loc=44}),
-s(163817,19136,{f=4,loc=45}),
-s(163065,16796,{f=4,loc=46}),
-s(163104,16835,{f=5,loc=46}),
-s(163112,16843,{f=6,loc=46}),
-s(163079,16810,{f=4,loc=46}),
-s(163724,18861,{f=7,loc=46}),
-s(163116,16847,{f=6,loc=46}),
-s(163124,16855,{f=7,loc=46}),
-s(163136,16867,{f=7,loc=46}),
-s(163091,16822,{f=5,loc=46}),
-s(163083,16814,{f=4,loc=46}),
-s(163702,18824,{f=7,loc=47}),
-s(163822,19144,{f=6,loc=47}),
-i(18821,{b=1,f=52,lvl=60}),
-i(18820,{b=1,f=53,lvl=60,spellID=23271})}}),
-e(1521,{npcID=12259,g={
-i(17331),
-s(163738,18878,{f=20}),
-s(163270,17077,{f=27}),
-s(163730,18870,{f=6,loc=40}),
-s(163823,19145,{f=4,loc=42}),
-s(163824,19146,{f=5,loc=43}),
-s(163108,16839,{f=6,loc=44}),
-s(163081,16812,{f=4,loc=44}),
-s(163129,16860,{f=7,loc=44}),
-s(163095,16826,{f=5,loc=44}),
-s(163724,18861,{f=7,loc=46}),
-s(163732,18872,{f=4,loc=46}),
-s(163735,18875,{f=5,loc=46}),
-s(163118,16849,{f=6,loc=47}),
-s(163131,16862,{f=7,loc=47}),
-i(18879,{b=1,f=52,lvl=60}),
-i(19147,{b=1,f=52,lvl=60})}}),
-e(1522,{npcID=12057,g={
-i(18564,{b=1}),
-s(163700,18822,{f=26}),
-s(163275,17105,{f=23}),
-s(163710,18832,{f=25}),
-s(163264,17071,{f=20}),
-s(163259,17066,{f=8,spellID=15438}),
-s(163820,19142,{f=1}),
-s(163064,16795,{f=4,loc=40}),
-s(163103,16834,{f=5,loc=40}),
-s(163082,16813,{f=4,loc=40}),
-s(163111,16842,{f=6,loc=40}),
-s(163077,16808,{f=4,loc=40}),
-s(163115,16846,{f=6,loc=40}),
-s(163135,16866,{f=7,loc=40}),
-s(163123,16854,{f=7,loc=40}),
-s(163090,16821,{f=5,loc=40}),
-s(163707,18829,{f=6,loc=41}),
-s(163701,18823,{f=5,loc=44}),
-s(163821,19143,{f=7,loc=44}),
-s(163817,19136,{f=4,loc=45}),
-s(163724,18861,{f=7,loc=46}),
-s(163702,18824,{f=7,loc=47}),
-s(163822,19144,{f=6,loc=47}),
-i(18821,{b=1,f=52,lvl=60}),
-i(18820,{b=1,f=53,lvl=60,spellID=23271})}}),
-e(1524,{npcID=12056,g={
-i(18563,{b=1}),
-s(163700,18822,{f=26}),
-s(163820,19142,{f=1}),
-s(163066,16797,{f=4,loc=41}),
-s(163105,16836,{f=5,loc=41}),
-s(163707,18829,{f=6,loc=41}),
-s(163113,16844,{f=6,loc=41}),
-s(163076,16807,{f=4,loc=41}),
-s(163125,16856,{f=7,loc=41}),
-s(163701,18823,{f=5,loc=44}),
-s(163821,19143,{f=7,loc=44}),
-s(163817,19136,{f=4,loc=45}),
-s(163724,18861,{f=7,loc=46}),
-s(163702,18824,{f=7,loc=47}),
-s(163822,19144,{f=6,loc=47}),
-i(18821,{b=1,f=52,lvl=60}),
-i(17110,{f=52}),
-i(18820,{b=1,f=53,lvl=60,spellID=23271})}}),
-e(1523,{npcID=12264,g={
-i(17332),
-s(163738,18878,{f=20}),
-s(163270,17077,{f=27}),
-s(163730,18870,{f=6,loc=40}),
-s(163823,19145,{f=4,loc=42}),
-s(163824,19146,{f=5,loc=43}),
-s(163070,16801,{f=4,loc=44}),
-s(163100,16831,{f=5,loc=44}),
-s(163121,16852,{f=6,loc=44}),
-s(163724,18861,{f=7,loc=46}),
-s(163732,18872,{f=4,loc=46}),
-s(163735,18875,{f=5,loc=46}),
-s(163080,16811,{f=4,loc=47}),
-s(163072,16803,{f=4,loc=47}),
-s(163093,16824,{f=5,loc=47}),
-i(18879,{b=1,f=52,lvl=60}),
-i(19147,{b=1,f=52,lvl=60})}}),
-e(1525,{npcID=12098,g={
-i(17330),
-s(163267,17074,{f=29,spellID=21180}),
-s(163293,17223,{b=1,description="Use Shadowstrike to create this item.",f=29,lvl=58,providers={{"i",17074}},spellID=21181}),
-s(163738,18878,{f=20}),
-s(163270,17077,{f=27}),
-s(163730,18870,{f=6,loc=40}),
-s(163117,16848,{f=6,loc=41}),
-s(163085,16816,{f=4,loc=41}),
-s(163092,16823,{f=5,loc=41}),
-s(163137,16868,{f=7,loc=41}),
-s(163823,19145,{f=4,loc=42}),
-s(163824,19146,{f=5,loc=43}),
-s(163724,18861,{f=7,loc=46}),
-s(163732,18872,{f=4,loc=46}),
-s(163735,18875,{f=5,loc=46}),
-i(18879,{b=1,f=52,lvl=60}),
-i(19147,{b=1,f=52,lvl=60})}}),
-e(1526,{npcID=11988,g={
-i(17203),
-s(163700,18822,{f=26}),
-s(163717,18842,{f=28}),
-s(163273,17103,{f=25}),
-s(163265,17072,{f=31}),
-s(163820,19142,{f=1}),
-s(163707,18829,{f=6,loc=41}),
-s(163067,16798,{f=4,loc=42}),
-s(163134,16865,{f=7,loc=42}),
-s(163102,16833,{f=5,loc=42}),
-s(163110,16841,{f=6,loc=42}),
-s(163078,16809,{f=4,loc=42}),
-s(163114,16845,{f=6,loc=42}),
-s(163122,16853,{f=7,loc=42}),
-s(163089,16820,{f=5,loc=42}),
-s(163084,16815,{f=4,loc=42}),
-s(163701,18823,{f=5,loc=44}),
-s(163821,19143,{f=7,loc=44}),
-s(163817,19136,{f=4,loc=45}),
-s(163724,18861,{f=7,loc=46}),
-s(163702,18824,{f=7,loc=47}),
-s(163822,19144,{f=6,loc=47}),
-i(18821,{b=1,f=52,lvl=60}),
-i(18820,{b=1,f=53,lvl=60,spellID=23271})}}),
-e(1527,{npcID=12018,providers={{"o",179703}},g={
-i(18703,{b=1,c={3},lvl=60}),
-i(18646,{b=1,c={5},description="Reagent for the Splinter of Nordrassil. Used by Priests to create Benediction and Anathema.",f=53,lvl=60,spellID=23101}),
-s(163689,18803,{f=24}),
-s(163690,18805,{f=20}),
-s(163819,19139,{f=5,loc=41}),
-s(163695,18810,{f=5,loc=41}),
-s(163696,18811,{f=3}),
-s(163697,18812,{f=6,loc=43}),
-s(163693,18808,{f=4,loc=44}),
-s(163694,18809,{f=4,loc=45}),
-s(163691,18806,{f=7,loc=47}),
-i(19140,{b=1,f=52,lvl=60})}}),
-e(1528,{npcID=11502,g={
-i(17204,{b=1,spellID=21160}),
-i(19017,{b=1,c={1,2,3,4,8,9},description="For this to drop, you must be on the 'Thunderaan the Windseeker' quest."}),
-s(163269,17076,{f=26}),
-s(163274,17104,{f=22,spellID=21185}),
-s(163698,18816,{f=20}),
-s(163276,17106,{f=8}),
-s(163699,18817,{f=6,loc=40}),
-i(18814,{b=1,f=51,lvl=60}),
-s(163272,17102,{f=3}),
-s(163277,17107,{f=3}),
-s(163818,19137,{f=7,loc=45}),
-s(163157,16909,{f=5,loc=46}),
-s(163186,16938,{f=6,loc=46}),
-s(163202,16954,{f=7,loc=46}),
-s(163170,16922,{f=4,loc=46}),
-s(163194,16946,{f=6,loc=46}),
-s(163210,16962,{f=7,loc=46}),
-s(163178,16930,{f=4,loc=46}),
-s(163163,16915,{f=4,loc=46}),
-s(163149,16901,{f=5,loc=46}),
-i(17063,{f=52}),
-i(19138,{b=1,f=52,lvl=60}),
-i(18815,{b=1,f=53,lvl=60,spellID=23266}),
-i(17082,{f=53}),
-i(21110,{b=1})}})}}),
-inst(3065,{awp=16001,coords={
-[1455]={{50,50}}},lvl=13,["zone-text-areaID"]=16919,g={
-n(3493),
-n(3495),
-n(3494),
-n(3496)}}),
+s(156318,1454,{f=21}),
+s(157288,3414,{f=23}),
+s(157287,3413,{f=20}),
+s(156900,2567,{f=20}),
+s(156330,1481,{f=21}),
+s(157290,3416,{f=6,loc=42,spellID=1292749}),
+s(157291,3417,{f=26}),
+i(1491,{f=52}),
+s(156578,2034,{f=4,loc=42}),
+s(156743,2271,{f=28}),
+s(157289,3415,{f=28}),
+s(156335,1486,{f=4,loc=42})}),
+h(-45,{
+q(6564,{crs={4802},description="For this to drop, you need to be on the Essence of Aku'Mai quest.",lvl=17,qss={16790},r=1,sourceQuests={6563}}),
+q(6565,{coords={
+[1440]={{11.6,34.3}}},lvl=17,qgs={12736},r=1,sourceQuests={6564},g={
+qo(1,{providers={{"n",12902}}}),
+s(163372,17695,{f=4,loc=41}),
+i(17694,{f=52})}}),
+q(908,{coords={
+[1440]={{11.6,34.3}}},lvl=21,qgs={12736},r=1,g={
+qo(1,{providers={{"i",16762}}})}}),
+q(6921,{coords={
+[1440]={{11.6,34.3}}},lvl=21,qgs={12736},r=1,g={
+qo(1,{providers={{"i",16762}}})}}),
+q(6922,{lvl=21,maps={1440},qss={16782},r=1,g={
+s(163139,16886,{f=25}),
+s(163140,16887,{f=1})}}),
+q(1200,{lvl=18,maps={1457},qgs={4787},r=2,sourceQuests={1198},g={
+qo(1,{crs={4832},providers={{"i",5881}}}),
+s(158748,7002,{f=8}),
+s(158747,7001,{f=27}),
+s(304885,270031,{awp=16001,b=1,f=5,loc=46})}}),
+q(6561,{lvl=18,maps={1456},qgs={4787},r=1,g={
+qo(1,{crs={4832},providers={{"i",5881}}}),
+s(158748,7002,{f=8}),
+s(158747,7001,{f=27}),
+s(304885,270031,{awp=16001,b=1,f=5,loc=46})}}),
+q(1198,{coords={
+[1457]={{28.7,52.1}}},description="This quest is also available to Horde, though the questgiver is a bit out of the way. (And, of course, it doesn't grant the Darnassus rep.)",isBreadcrumb=1,lvl=18,nextQuests={1200},qgs={4786}}),
+q(971,{coords={
+[1455]={{50.8,5.6}}},lvl=10,qgs={2786},r=2,sourceQuests={968},g={
+qo(1,{description="Guarded by a few Naga in the underwater room directly to the right of Ghamoo-ra.",providers={{"i",5359},{"o",13949}}}),
+i(6743,{b=1,f=52})}}),
+q(1275,{coords={
+[1439]={{38.3,43}}},lvl=18,qgs={8997},r=2,sourceQuests={3765},g={
+qo(1,{crs={4788,4789,4798,4799,4802,4803,4805,4807,4831},providers={{"i",5952}}}),
+s(158749,7003,{b=1,f=6,loc=43}),
+s(158750,7004,{b=1,f=3}),
+s(304876,270021,{awp=16001,b=1,f=5,loc=43})}}),
+q(3765,{coords={
+[1453]={{36.2,67.6}}},isBreadcrumb=1,lvl=20,maps={1439},nextQuests={1275},qgs={4984},r=2}),
+q(6563,{coords={
+[1440]={{11.6,34.3}}},lvl=17,qgs={12736},r=1,sourceQuests={6562},g={
+qo(1,{providers={{"i",16784},{"o",178184},{"o",178185},{"o",178186}}})}}),
+q(6562,{coords={
+[1442]={{47.3,64.4}}},isBreadcrumb=1,lvl=17,maps={1440},nextQuests={6563},qgs={11862},r=1}),
+q(1199,{coords={
+[1457]={{38.3,43}}},lvl=20,qgs={4784},r=2,g={
+qo(1,{crs={4809,4810,4811,4812,4813,4814},providers={{"i",5879}}}),
+s(158746,7000,{b=1,f=5,loc=45}),
+s(158745,6998,{b=1,f=4,loc=47}),
+s(304880,270025,{awp=16001,b=1,f=6,loc=44})}})}),
+h(-56,{
+o(19018,{
+s(156647,2143,{f=5,loc=47,lvl=22}),
+i(5500),
+i(5504)})}),
+n(4887,{
+s(158719,6908,{f=4,loc=45}),
+i(273839,{awp=16001,f=52,spellID=1292670}),
+s(158718,6907,{f=6,loc=42,spellID=1292692})}),
+n(4831,{
+r(1255109,{awp=16001,b=1,itemID=252798,requireSkill=165}),
+s(160218,11121,{f=25}),
+s(156166,888,{f=5,loc=44}),
+s(157130,3078,{f=32})}),
+o(177964,{description="In the water below the Twilight bridge.\n\nWARNING: Spawns Baron Aquanis.",r=1,sourceQuests={6921},g={
+i(16762),
+n(12876,{description="This boss can only be summoned by Horde players on the Amongst the Ruins quest.",g={
+i(16782,{b=1,lvl=21})}})}}),
+n(6243,{
+s(158717,6906,{f=6,loc=44}),
+i(1470,{f=113}),
+s(158716,6905,{f=22}),
+i(273840,{awp=16001,f=53,spellID=1292674})}),
+n(12902,{awp=16001,g={
+s(308622,273843,{f=32}),
+s(308620,273841,{f=24}),
+s(308621,273842,{f=6,loc=47,spellID=1292683})}}),
+n(4830,{
+s(158713,6902,{f=5,loc=43}),
+s(158715,6904,{f=20}),
+s(158712,6901,{f=3})}),
+n(4832,{
+s(158714,6903,{f=4,loc=46}),
+s(156206,1155,{f=28,spellID=1292652}),
+s(308623,273846,{awp=16001,f=6,loc=45})}),
+n(4829,{
+s(158721,6910,{f=4,loc=46}),
+s(158722,6911,{f=5,loc=45}),
+s(158720,6909,{f=26}),
+crit(18526,{achID=62032,awp=16001,id=2})})}}),
+inst(231,{coords={
+[1426]={{18.4,38.6}}},icon=136336,lore="Located in Dun Morogh, the technological wonder known as Gnomeregan has been the gnomes' capital city for generations. Recently, a hostile race of mutant troggs infested several regions of Dun Morogh - including the great gnome city. In a desperate attempt to destroy the invading troggs, High Tinker Mekkatorque ordered the emergency venting of the city's radioactive waste tanks. Several gnomes sought shelter from the airborne pollutants as they waited for the troggs to die or flee. Unfortunately, though the troggs became irradiated from the toxic assault - their siege continued, unabated. Those gnomes who were not killed by noxious seepage were forced to flee, seeking refuge in the nearby dwarven city of Ironforge. There, High Tinker Mekkatorque set out to enlist brave souls to help his people reclaim their beloved city.\n\nIt is rumored that Mekkatorque's once-trusted advisor, Mekgineer Thermaplug, betrayed his people by allowing the invasion to happen. Now, his sanity shattered, Thermaplug remains in Gnomeregan - furthering his dark schemes and acting as the city's new techno-overlord.",lvl=19,mapID=226,["zone-text-areaID"]=133,g={
+h(-63,{
+s(159404,9510,{crs={6228,6235,7079,7800},f=6,loc=47}),
+i(5108,{crs={6212},f=5,loc=42,lvl=27}),
+s(159399,9490,{crs={6206,6207,6212,6220,6222,6223,6225,6226,6227,6230,6232,6233,6234,6329,7603},f=26}),
+i(9308),
+i(9326,{b=1,crs={6212},lvl=28}),
+s(159398,9489,{crs={6212,6220,6227,6230,6232,6233,6234,7603},f=27}),
+s(159396,9487,{crs={6206,6207,6211,6212,6220,6223,6230,6232,6233,6234,6329,6391,7603},f=31}),
+s(159400,9491,{f=4,loc=44}),
+s(159402,9508,{crs={6212,6223,6230,6232,6233,6234},f=4,loc=42}),
+s(159397,9488,{crs={6206,6207,6211,6212,6223,6225,6226,6227,6230,6232,6233,6234,6329,7603},f=23}),
+s(159403,9509,{crs={6206,6207,6212,6218,6220,6223,6227,6230,6232,6233,6234,6329,6391,7603},f=5,loc=46,spellID=1293003}),
+i(9309,{description="These can drop from any mechanical unit in Gnomeregan.",r=2}),
+s(159395,9486,{crs={6206,6207,6211,6212,6220,6223,6224,6225,6227,6230,6232,6233,6234,6329,6392},f=22}),
+s(159394,9485,{crs={6206,6207,6212,6220,6223,6226,6227,6230,6232,6233,6234,6329,7603},f=21}),
+i(9279,{b=1,description="This can be looted from creatures outside of the instance.",rwp=50004})}),
+h(-45,{
+ah(142487,{type="o",g={
+q(2951,{cost={{"i",9308,1}},providers={{"o",142487}}}),
+q(4601,{cost={{"i",9308,1}},providers={{"o",15084}}}),
+q(4602,{cost={{"i",9308,1}},providers={{"o",15085}}}),
+q(2952,{cost={{"i",9308,1}},providers={{"o",142487}},sourceQuests={2951},g={
+i(9363,{b=1})}}),
+q(4605,{cost={{"i",9308,1}},providers={{"o",15084}},sourceQuests={4601},g={
+i(9363,{b=1})}}),
+q(4606,{cost={{"i",9308,1}},providers={{"o",15085}},sourceQuests={4602},g={
+i(9363,{b=1})}}),
+q(2953,{cost={{"i",9308,1}},providers={{"o",142487}},repeatable=1,sourceQuests={2952},g={
+i(9363,{b=1})}}),
+q(4603,{cost={{"i",9308,1}},providers={{"o",15084}},repeatable=1,sourceQuests={4605},g={
+i(9363,{b=1})}}),
+q(4604,{cost={{"i",9308,1}},providers={{"o",15085}},repeatable=1,sourceQuests={4606},g={
+i(9363,{b=1})}})}}),
+q(2904,{lvl=20,maps={1434},qgs={7850},g={
+s(159421,9536,{f=4,loc=41}),
+s(159420,9535,{f=6,loc=43}),
+s(304894,270042,{awp=16001,f=5,loc=43})}}),
+q(2931,{coords={
+[1442]={{59.6,67}}},isBreadcrumb=1,lvl=25,nextQuests={2930},qgs={4077},r=2}),
+q(2842,{coords={
+[1454]={{75.6,25.2}}},description="Although this quest is available from level 20, if you take or complete it, it makes it impossible to obtain the 'Rig Wars' quest, which is available at level 25. However, if you take 'Rig Wars' first, you can have both quest without problems.",lvl=20,maps={1434},qgs={3413},r=1}),
+q(2930,{coords={
+[1455]={{70.2,48.4}}},lvl=25,qgs={7950},r=2,sourceQuests={2931},g={
+qo(1,{providers={{"i",9316}}}),
+s(159427,9604,{f=24}),
+s(159428,9605,{f=3})}}),
+q(2924,{coords={
+[1455]={{68.2,46.2}}},lvl=24,qgs={6169},r=2,sourceQuests={2925},g={
+qo(1,{description="These are scattered throughout the instance. They are loud mechanical mailboxes.",providers={{"i",9278},{"o",142344}}})}}),
+q(2926,{coords={
+[1426]={{45.8,49.2}}},lvl=20,qgs={1268},r=2,sourceQuests={2927},g={
+qo(1,{cost={{"i",9283,1}},crs={6329},providers={{"i",9284}}})}}),
+q(2948,{coords={
+[1455]={{36.2,3.8}}},cost={{"i",1206,1},{"i",2842,1},{"i",9362,1},{"g",3000}},lvl=28,qgs={6826},r=2,sourceQuests={2947},g={
+i(9538,{f=52})}}),
+q(2843,{coords={
+[1434]={{27.6,77.4}}},lvl=20,qgs={7853},r=1,sourceQuests={2842},g={
+i(9173,{description="You do not need to keep this in your inventory. You can simply discard it after transporting. To get another one, simply speak to Scooty again and tell him that you lost the first one."})}}),
+q(2945,{description="Take this to The Sparklematic 5200.",lvl=24,qss={9326},g={
+i(9362,{b=1,f=52})}}),
+q(2928,{coords={
+[1453]={{62.8,34.8}}},lvl=20,qgs={6579},r=2,g={
+qo(1,{providers={{"i",9309}}}),
+s(159430,9608,{b=1,f=21}),
+s(159431,9609,{b=1,f=4,loc=44}),
+s(304897,270045,{awp=16001,b=1,f=5,loc=44})}}),
+q(2925,{coords={
+[1457]={{59.2,45.2}}},isBreadcrumb=1,lvl=24,nextQuests={2924},qgs={6142},r=2}),
+q(2950,{coords={
+[1454]={{75.8,25.2}}},cost={{"i",1206,1},{"i",2842,1},{"i",9362,1},{"g",3000}},lvl=28,qgs={3412},r=1,sourceQuests={2949},g={
+i(9588,{f=52})}}),
+q(2947,{lvl=28,maps={1455},providers={{"o",142487}},r=2,sourceQuests={2945},g={
+i(9362,{b=1,f=52})}}),
+q(2949,{lvl=28,maps={1454},providers={{"o",142487}},r=1,sourceQuests={2945},g={
+i(9362,{b=1,f=52})}}),
+q(2841,{coords={
+[1454]={{75.8,25.2}}},lc={1,"questID",2842},lvl=25,qgs={3412},r=1,g={
+qo(1,{providers={{"i",9153},{"o",142477}}}),
+qo(2,{crs={7800},providers={{"i",9299}}}),
+s(159432,9623,{f=4,loc=42}),
+s(159434,9625,{f=6,loc=46}),
+s(159433,9624,{f=5,loc=46})}}),
+q(2922,{coords={
+[1455]={{70.4,49.4}}},lvl=20,qgs={7944},r=2,sourceQuests={2923},g={
+qo(1,{providers={{"i",9277}}})}}),
+q(2927,{coords={
+[1455]={{69.6,50.6}}},isBreadcrumb=1,lvl=20,nextQuests={2926},qgs={6569},r=2}),
+q(2929,{coords={
+[1455]={{69.2,49.2}}},lvl=25,qgs={7937},r=2,g={
+qo(1,{providers={{"n",7800}}}),
+s(159432,9623,{f=4,loc=42}),
+s(159434,9625,{f=6,loc=46}),
+s(159433,9624,{f=5,loc=46})}}),
+q(2962,{coords={
+[1426]={{45.8,49.2}}},lvl=20,qgs={1268},r=2,sourceQuests={2926},g={
+qo(1,{cost={{"i",9364,1}},crs={6219},providers={{"i",9365}}})}}),
+q(2923,{coords={
+[1453]={{51.6,48.6}}},isBreadcrumb=1,lvl=20,maps={1455},nextQuests={2922},qgs={7917},r=2})}),
+h(-47,{
+ah(9363,{description="Kill hostile creatures for [Grime-Encrusted Object], clean them at the Sparklematic 5200 to receive this box.",providers={{"i",9363}},type="i",g={
+i(9280),
+i(10299,{b=1,f=51,lvl=26}),
+i(10298,{b=1,f=52,lvl=25})}})}),
+o(142345,{cost={{"i",9279,1}},description="This is located outside of the instance just to the north of both the elevator or the transporter.",rwp=50004,g={
+i(9280)}}),
+n(6231,{description="Located outside the instance near the teleporter.",g={
+i(9277),
+s(159364,9444,{f=8,lvl=21})}}),
+e(419,{npcID=7361,g={
+s(159365,9445,{f=6,loc=44})}}),
+o(142475,{cost={{"i",9280,1}},description="This is located in the bottom of the Dormitories.",g={
+i(9282),
+r(3952,{description="If you are an Engineer, you will also get these plans by turning in the Yellow Punch Card.",itemID=14639,requireSkill=202})}}),
+o(142476,{cost={{"i",9282,1}},description="This is located at the bottom of the platform in the Engineering Labs.",g={
+i(9281)}}),
+e(420,{npcID=7079,g={
+s(159370,9452,{f=28,spellID=11789}),
+s(159371,9453,{f=20}),
+s(159372,9454,{f=4,loc=47})}}),
+e(421,{npcID=6235,g={
+i(6893,{b=1,description="This key allows you to get into the back door of Gnomeregan.",spellID=3366}),
+s(159366,9446,{f=25}),
+s(159367,9448,{f=4,loc=43}),
+i(9447,{f=52})}}),
+o(142696,{cost={{"i",9281,1}},description="This is located in the Workshop below Crowd Pummeler.",g={
+i(9316),
+r(3959,{description="If you are an Engineer and have a 'Security DELTA Access Card', you will also get these plans when you turn in your Red Punch Card.",itemID=4413,providers={{"i",9327}},requireSkill=202})}}),
+e(418,{npcID=6229,g={
+s(159368,9449,{b=1,f=24,lvl=29,spellID=13494}),
+s(159369,9450,{f=5,loc=47})}}),
+n(6228,{description="This is a Rare Creature and, as such, is not always present.",g={
+i(5108,{f=5,loc=42,lvl=27}),
+s(159374,9456,{f=31}),
+s(159375,9457,{f=23}),
+s(159373,9455,{f=5,loc=43})}}),
+e(422,{npcID=7800,g={
+s(159377,9459,{f=22}),
+s(159376,9458,{f=8,spellID=1292880}),
+s(159401,9492,{f=4,loc=40,spellID=11826}),
+i(9461,{f=52}),
+r(3966,{itemID=4415,requireSkill=202}),
+r(3959,{itemID=4413,requireSkill=202}),
+r(8339,{itemID=6716}),
+r(3944,{itemID=4411,requireSkill=202}),
+r(8243,{itemID=6672,requireSkill=202}),
+r(3971,{b=1,itemID=7742,requireSkill=202}),
+r(9269,{b=1,itemID=7560,requireSkill=202}),
+r(9273,{b=1,itemID=7561,requireSkill=202}),
+r(3968,{itemID=4416,requireSkill=202}),
+i(7192,{f=200,requireSkill=202}),
+r(3972,{itemID=4417,requireSkill=202}),
+r(3928,{itemID=4408,requireSkill=202}),
+r(3954,{itemID=4412,requireSkill=202}),
+r(3960,{itemID=4414,requireSkill=202}),
+r(3940,{itemID=4410,requireSkill=202}),
+r(3933,{itemID=4409,requireSkill=202}),
+crit(18529,{achID=62032,awp=16001,id=3})}})}}),
 inst(226,{coords={
-[1454]={{50.6,51.6}}},lore="Ragefire Chasm consists of a network of volcanic caverns that lie below the orcs' new capital city of Orgrimmar. Recently, rumors have spread that a cult loyal to the demonic Shadow Council has taken up residence within the Chasm's fiery depths. This cult, known as the Burning Blade, threatens the very sovereignty of Durotar. Many believe that the orc Warchief, Thrall, is aware of the Blade's existence and has chosen not to destroy it in the hopes that its members might lead him straight to the Shadow Council. Either way, the dark powers emanating from Ragefire Chasm could undo all that the orcs have fought to attain",lvl=13,mapID=213,["zone-text-areaID"]=2437,g={
+[1454]={{50.6,51.6}}},icon=136350,lore="Ragefire Chasm consists of a network of volcanic caverns that lie below the orcs' new capital city of Orgrimmar. Recently, rumors have spread that a cult loyal to the demonic Shadow Council has taken up residence within the Chasm's fiery depths. This cult, known as the Burning Blade, threatens the very sovereignty of Durotar. Many believe that the orc Warchief, Thrall, is aware of the Blade's existence and has chosen not to destroy it in the hopes that its members might lead him straight to the Shadow Council. Either way, the dark powers emanating from Ragefire Chasm could undo all that the orcs have fought to attain",lvl=13,mapID=213,["zone-text-areaID"]=2437,g={
 h(-45,{
 q(5728,{coords={
 [1454]={{32,37.8}}},lvl=9,qgs={4949},r=1,sourceQuests={5727},g={
@@ -840,7 +720,7 @@ s(162316,15424,{b=1,f=22}),
 s(162337,15445,{b=1,f=23}),
 s(162335,15443,{b=1,f=20}),
 s(162336,15444,{b=1,f=28})}}),
-q(5724,{lvl=9,maps={1456},providers={{"i",14381}},qgs={11834},r=1,sourceQuests={5722},g={
+q(5724,{lvl=9,maps={1456},qgs={11834},qis={14381},r=1,sourceQuests={5722},g={
 s(162341,15452,{b=1,f=4,loc=43}),
 s(162342,15453,{b=1,f=5,loc=43})}}),
 q(5722,{coords={
@@ -879,17 +759,189 @@ n(11519,{awp=16001,g={
 s(308384,273007,{b=1,f=5,loc=47,lvl=13}),
 s(308383,273005,{b=1,f=3,lvl=13}),
 s(308382,273003,{b=1,f=20,lvl=13,spellID=1291568})}})}}),
+inst(234,{coords={
+[1413]={{40.94,94.55}}},lore="Ten thousand years ago - during the War of the Ancients, the mighty demigod, Agamaggan, came forth to battle the Burning Legion. Though the colossal boar fell in combat, his actions helped save Azeroth from ruin. Yet over time, in the areas where his blood fell, massive thorn-ridden vines sprouted from the earth.\n\nThe quillboar - believed to be the mortal offspring of the mighty god, came to occupy these regions and hold them sacred. The heart of these thorn-colonies was known as the Razorfen. The great mass of Razorfen Kraul was conquered by the old crone, Charlga Razorflank. Under her rule, the shamanistic quillboar stage attacks on rival tribes as well as Horde villages. Some speculate that Charlga has even been negotiating with agents of the Scourge - aligning her unsuspecting tribe with the ranks of the Undead for some insidious purpose.",lvl=17,mapID=301,["zone-text-areaID"]=491,g={
+h(-45,{
+q(1102,{coords={
+[1456]={{36.2,59.8}}},lvl=29,qgs={4451},r=1,g={
+qo(1,{providers={{"i",5793}}}),
+s(158658,6725,{f=8}),
+s(157700,4197,{f=4,loc=41}),
+s(158671,6742,{f=6,loc=45})}}),
+q(6522,{lvl=28,maps={1458},qss={17008},r=1}),
+q(1221,{coords={
+[1413]={{62.4,37.6}}},lvl=20,qgs={3446},g={
+qo(1,{crs={4781},providers={{"i",5876},{"i",5880},{"i",6684},{"o",20920}}}),
+qo(2,{coords={
+[1413]={{62.3,37.6}}},providers={{"i",5880},{"o",21277}}}),
+qo(3,{coords={
+[1413]={{62.3,37.6}}},providers={{"i",5897},{"o",21530}}}),
+qo(4,{coords={
+[1413]={{62.3,37.6}}},providers={{"i",6684},{"o",68865}}}),
+i(6755,{b=1,g={
+i(6756,{b=1,f=113})}})}}),
+q(1109,{coords={
+[1458]={{49,69.8}}},lvl=30,qgs={2055},r=1,g={
+qo(1,{providers={{"i",5801}}})}}),
+q(1100,{coords={
+[1441]={{30,24}}},lvl=29,providers={{"o",19861}},qis={5790},qss={5791},r=2}),
+q(1142,{coords={
+[1457]={{69.4,67.6}}},lvl=25,qgs={4510},r=2,g={
+qo(1,{description="Drops from any creature in the Dungeon.",providers={{"i",5825}}}),
+s(158676,6751,{f=3}),
+s(158677,6752,{f=5,loc=47})}}),
+q(1101,{coords={
+[1444]={{89.6,46.6}}},lvl=29,qgs={4048},r=2,sourceQuests={1100},g={
+qo(1,{providers={{"i",5792}}}),
+s(158658,6725,{f=8}),
+s(157700,4197,{f=4,loc=41}),
+s(158671,6742,{f=6,loc=45}),
+s(157107,3041,{f=31,lvl=26})}}),
+q(1144,{lvl=22,qgs={4508},g={
+i(6748,{f=52}),
+i(6750,{f=52}),
+i(6749,{f=52})}})}),
+h(-63,{
+i(3172,{crs={4511,4512,4514}}),
+i(5801,{crs={4538,4539}}),
+s(156336,1488,{f=6,loc=42}),
+s(156738,2264,{f=5,loc=41}),
+i(2039,{f=52}),
+s(157772,4438,{f=6,loc=43}),
+s(156541,1975,{f=26}),
+s(156542,1976,{f=24}),
+s(156889,2549,{f=28}),
+s(156390,1727,{f=25}),
+s(156108,776,{f=20}),
+s(157377,3569,{crs={4517},f=4,loc=42}),
+s(156543,1978,{f=5,loc=44})}),
+n(6168,{description="Warriors will need to kill this boss for their racial armor quest. If you are the leader of the group, don't be surprised if they ask to kill this boss first.",g={
+s(308683,274155,{awp=16001,f=5,loc=40}),
+i(274152,{awp=16001,f=53,spellID=1293306}),
+i(6841,{f=55})}}),
+n(4424,{
+s(308684,274158,{awp=16001,f=28}),
+s(158639,6681,{f=20})}),
+n(4428,{
+s(156989,2816,{f=23}),
+s(158641,6685,{f=4,loc=41}),
+s(158640,6682,{f=4,loc=42})}),
+n(4438,{
+s(158637,6679,{f=29})}),
+n(4420,{
+s(158643,6687,{f=22}),
+s(308688,274161,{awp=16001,f=6,loc=46}),
+s(158642,6686,{f=6,loc=40})}),
+n(4842,{description="After you kill Overlord Ramtusk, go west over a bridge to a plateau.\n\nThis is a Rare Creature and, as such, is not always present.",g={
+s(158645,6689,{f=28}),
+s(158644,6688,{f=5,loc=40})}}),
+n(4425,{description="This is a Rare Creature and, as such, is not always present.",g={
+s(158650,6696,{f=32}),
+i(6695,{f=51}),
+s(158651,6697,{f=4,loc=41})}}),
+n(4422,{
+s(158647,6691,{f=20}),
+i(274160,{awp=16001,f=36}),
+s(158646,6690,{f=5,loc=46})}),
+e(901,{npcID=4421,g={
+i(5793),
+i(5792),
+i(17008,{b=1,lvl=28}),
+s(158648,6692,{f=21}),
+s(158649,6694,{f=8}),
+i(6693,{f=52,spellID=1293199}),
+crit(18528,{achID=62032,awp=16001,id=9})}})}}),
 inst(2999,{awp=16001,coords={
-[1420]={{50,50}}},lvl=15,["zone-text-areaID"]=16611,g={
-n(3353),
-n(3357),
-n(3355),
-n(3354),
-n(3408),
-n(3411),
-n(3412)}}),
+[1420]={{50,50}}},icon=_.asset("ruinsoflordaeron"),lvl=15,["zone-text-areaID"]=16611,g={
+h(-45,{
+q(92401,{coords={
+[1421]={{44.4,43}}},lvl=15,qgs={250686},r=1,g={
+s(298257,251485,{b=1,f=20}),
+s(298258,251486,{b=1,f=4,loc=43})}}),
+q(95250,{lvl=16,qgs={265701},r=2,g={
+qo(1,{crs={250660},providers={{"i",268518}}}),
+s(311530,279865,{b=1,f=3}),
+s(311531,279864,{b=1,f=26}),
+i(279867,{b=1,f=52})}}),
+q(95195,{lvl=16,qss={268535},r=2,g={
+qo(1,{providers={{"i",268540}}}),
+s(311532,279868,{b=1,f=5,loc=46}),
+s(311533,279869,{b=1,f=6,loc=42})}}),
+q(95189,{lvl=15,maps={1453},qss={268579},r=2,g={
+i(280567,{b=1,f=55})}}),
+q(95204,{lvl=15,maps={1453},qss={275521},r=1,g={
+i(280567,{b=1,f=55})}}),
+q(92421,{coords={
+[1458]={{57.8,89.8}}},lvl=15,qgs={266484},r=1,g={
+qo(1,{providers={{"i",268580}}}),
+s(311536,279875,{b=1,f=5,loc=43}),
+s(311534,279874,{b=1,f=23})}}),
+q(92415,{lvl=15,maps={1453},qss={251522},r=2}),
+q(95161,{coords={
+[1453]={{56.2,54.2}}},lvl=15,maps={1431},qgs={14450},qis={251522},r=2,sourceQuests={92415},g={
+i(279870,{b=1,f=51})}}),
+q(95216,{coords={
+[1458]={{46.6,72}}},lvl=16,qgs={11835},r=1,g={
+qo(1,{crs={250483},providers={{"i",275443}}}),
+s(311537,279876,{b=1,f=25}),
+s(311552,279877,{b=1,f=4,loc=44})}}),
+q(92422,{coords={
+[1420]={{65.2,60.2}}},lvl=15,qgs={251001},r=1,g={
+qo(1,{providers={{"n",250657}}}),
+s(298268,251533,{b=1,f=22,spellID=1309369}),
+s(298269,251534,{b=1,f=28,spellID=1309369})}}),
+q(97288,{lvl=16,maps={1458},qss={280438},r=1}),
+q(97289,{coords={
+[1458]={{48.4,69.4}}},lvl=16,qgs={2055},qis={268518},r=1,sourceQuests={97288}}),
+q(97290,{coords={
+[1458]={{46.2,63}}},lvl=16,qgs={271613},r=1,sourceQuests={97289},g={
+s(311530,279865,{b=1,f=3}),
+s(311531,279864,{b=1,f=26}),
+i(279867,{b=1,f=52})}}),
+q(97291,{coords={
+[1458]={{48.4,69.4}}},lvl=16,qgs={2055},r=1,sourceQuests={97290},g={
+qo(1,{coords={
+[1458]={{63.4,40},{63.4,47.4},{68.8,40},{69,47.4}}},crs={4554},providers={{"i",281246}}}),
+qo(2,{providers={{"i",281300}}}),
+qo(3,{coords={
+[1458]={{75.6,51.6}}},crs={4585},providers={{"i",8923}}})}}),
+q(97292,{coords={
+[1458]={{48.4,69.4}}},lvl=16,qgs={2055},r=1,sourceQuests={97291},g={
+qo(1,{providers={{"i",281327}}})}})}),
+h(-46,{
+e(3408,{description="This is a Rare Creature and, as such, is not always present.",npcID=255699,g={
+s(158620,6641,{b=1,f=26,lvl=22}),
+s(158621,6642,{b=1,f=6,loc=42,lvl=22})}})}),
+h(-63,{
+i(268535,{b=1})}),
+e(3353,{npcID=250483,g={
+s(306401,271201,{b=1,f=6,loc=45,lvl=15}),
+s(306403,271203,{b=1,f=28,lvl=15}),
+s(306402,271202,{b=1,f=5,loc=43,lvl=15})}}),
+e(3355,{npcID=250660,g={
+s(306405,271205,{b=1,f=6,loc=42,lvl=15}),
+s(306406,271206,{b=1,f=4,loc=42,lvl=15}),
+s(306404,271204,{b=1,f=20,lvl=15}),
+i(280438,{b=1,r=1})}}),
+e(3411,{npcID=256035,g={
+s(306412,271212,{f=5,loc=42}),
+s(306418,271218,{f=25}),
+s(306411,271211,{f=6,loc=47})}}),
+e(3357,{npcID=250631,g={
+s(306408,271208,{b=1,f=6,loc=44,lvl=17}),
+s(306407,271207,{b=1,f=4,loc=46,lvl=17}),
+s(306416,271216,{b=1,f=23,lvl=17})}}),
+e(3412,{npcID=256097,g={
+s(306409,271209,{b=1,f=6,loc=46,lvl=16}),
+s(306417,271217,{b=1,f=22,lvl=16,spellID=1322303}),
+s(306410,271210,{b=1,f=4,loc=45,lvl=16})}}),
+e(3354,{npcID=250657,g={
+s(306415,271215,{b=1,f=28,lvl=19}),
+s(306413,271213,{b=1,f=8,lvl=19}),
+s(306414,271214,{b=1,f=4,loc=47,lvl=19}),
+crit(116049,{achID=62031,id=2})}})}}),
 inst(64,{coords={
-[1421]={{36.6,65.6}}},lore="During the Third War, the wizards of the Kirin Tor battled against the undead armies of the Scourge. When the wizards of Dalaran died in battle, they would rise soon after - adding their former might to the growing Scourge. Frustrated by their lack of progress (and against the advice of his peers) the Archmage, Arugal elected to summon extra-dimensional entities to bolster Dalaran's diminishing ranks. Arugal's summoning brought the ravenous worgen into the world of Azeroth. The feral wolf-men slaughtered not only the Scourge, but quickly turned on the wizards themselves. The worgen sieged the keep of the noble, Baron Silverlaine. Situated above the tiny hamlet of Pyrewood, the keep quickly fell into shadow and ruin. Driven mad with guilt, Arugal adopted the worgen as his children and retreated to the newly dubbed 'Shadowfang Keep'. It's said he still resides there, protected by his massive pet, Fenrus - and haunted by the vengeful ghost of Baron Silverlaine.",lvl=14,mapID=310,["zone-text-areaID"]=209,g={
+[1421]={{36.6,65.6}}},icon=136357,lore="During the Third War, the wizards of the Kirin Tor battled against the undead armies of the Scourge. When the wizards of Dalaran died in battle, they would rise soon after - adding their former might to the growing Scourge. Frustrated by their lack of progress (and against the advice of his peers) the Archmage, Arugal elected to summon extra-dimensional entities to bolster Dalaran's diminishing ranks. Arugal's summoning brought the ravenous worgen into the world of Azeroth. The feral wolf-men slaughtered not only the Scourge, but quickly turned on the wizards themselves. The worgen sieged the keep of the noble, Baron Silverlaine. Situated above the tiny hamlet of Pyrewood, the keep quickly fell into shadow and ruin. Driven mad with guilt, Arugal adopted the worgen as his children and retreated to the newly dubbed 'Shadowfang Keep'. It's said he still resides there, protected by his massive pet, Fenrus - and haunted by the vengeful ghost of Baron Silverlaine.",lvl=14,mapID=310,["zone-text-areaID"]=209,g={
 h(-45,{
 q(1014,{coords={
 [1421]={{44.2,39.8}}},lvl=18,qgs={1938},r=1,g={
@@ -922,7 +974,9 @@ s(156263,1318,{f=22}),
 s(156331,1482,{f=25}),
 s(156333,1484,{f=28})}),
 n(3914,{
-s(158082,5254,{f=5,loc=41})}),
+s(308571,273456,{awp=16001,f=34}),
+s(158082,5254,{f=5,loc=41}),
+i(273457,{awp=16001,b=1,f=51,lvl=17,spellID=1292222})}),
 n(3864,{
 s(158426,6341,{f=1}),
 i(932,{f=113})}),
@@ -932,33 +986,204 @@ s(158619,6633,{f=25}),
 s(158376,6226,{f=4,loc=42})}),
 e(97,{npcID=3887,g={
 s(158416,6323,{f=23,spellID=1292142}),
-i(6321,{f=52,spellID=1292121})}}),
+i(6321,{f=52,spellID=1292121}),
+s(308573,273637,{awp=16001,b=1,f=25,lvl=21})}}),
 e(98,{npcID=4278,g={
 s(157158,3191,{f=22}),
 s(158414,6320,{f=8}),
-s(158426,6341,{f=1})}}),
+s(158426,6341,{f=1}),
+i(273643,{awp=16001,b=1,f=53,lvl=21,spellID=1292252})}}),
 n(3872,{description="This is a Rare Creature and, as such, is not always present.\nCan be found in place of a Tormented Officer patrolling the outdoor wall section just after the boss Commander Springvale.\nThe Rare can be seen at the entrance of the Dungeon via the /tar command..",g={
 s(158620,6641,{b=1,f=26,lvl=22}),
 s(158621,6642,{b=1,f=6,loc=42,lvl=22})}}),
 n(4279,{
 s(158412,6318,{f=28}),
-s(158413,6319,{f=5,loc=45,spellID=1292149})}),
+s(158413,6319,{f=5,loc=45,spellID=1292149}),
+s(308574,273645,{awp=16001,b=1,f=2,loc=40,lvl=21,spellID=1292268})}),
 n(4274,{
 s(157191,3230,{f=5,loc=43}),
-s(158425,6340,{f=3})}),
+s(158425,6340,{f=3}),
+s(308575,273646,{awp=16001,b=1,f=6,loc=47,lvl=22})}),
 n(4627,{
 s(158274,5943,{f=6,loc=43})}),
 n(3927,{
 s(157436,3748,{f=4,loc=41,spellID=1292150}),
-s(158410,6314,{f=3})}),
+s(158410,6314,{f=3}),
+s(308576,273647,{awp=16001,b=1,f=5,loc=46,lvl=21})}),
 n(4275,{
 i(5442),
 s(158372,6220,{f=20}),
 s(158417,6324,{f=4,loc=42}),
 s(158446,6392,{f=4,loc=45}),
 crit(3263,{achID=62031,awp=16001,id=5})})}}),
+inst(63,{coords={
+[1436]={{42.2,82.6}}},icon=136332,lore="Once the greatest gold production center in the human lands, the Dead Mines were abandoned when the Horde razed Stormwind city during the First War. Now the Defias Brotherhood has taken up residence and turned the dark tunnels into their private sanctum. It is rumored that the thieves have conscripted the clever goblins to help them build something terrible at the bottom of the mines - but what that may be is still uncertain. Rumor has it that the way into the Deadmines lies through the quiet, unassuming village of Moonbrook.",lvl=10,mapID=291,["zone-text-areaID"]=1581,g={
+h(-45,{
+q(168,{coords={
+[1453]={{70.2,40.8}}},lvl=14,qgs={656},r=2,g={
+qo(1,{providers={{"i",1894}}}),
+s(156580,2036,{b=1,f=5,loc=44}),
+s(156581,2037,{b=1,f=6,loc=47}),
+s(304863,270007,{awp=16001,b=1,f=4,loc=45})}}),
+q(92753,{awp=16001,coords={
+[1436]={{52.5,53}}},lvl=9,qgs={253092},qis={254553},r=2,sourceQuests={92752}}),
+q(92819,{awp=16001,coords={
+[1436]={{52.5,53}}},lvl=9,qgs={253279},r=2,sourceQuests={92753}}),
+q(167,{coords={
+[1453]={{70.2,40.8}}},lvl=15,qgs={656},r=2,g={
+qo(1,{providers={{"i",1875}}}),
+s(156499,1893,{b=1,f=22}),
+s(304868,270012,{awp=16001,b=1,f=4,loc=44}),
+s(304869,270013,{awp=16001,b=1,f=5,loc=47})}}),
+q(214,{coords={
+[1436]={{56.7,47.4}}},lvl=14,qgs={820},r=2,sourceQuests={153,155},g={
+qo(1,{crs={594,619,824},description="Can also drop from any Defias mob in the Deadmines.",providers={{"i",915}}}),
+s(158311,6094,{b=1,f=22}),
+s(156615,2089,{b=1,f=20}),
+s(156605,2074,{b=1,f=25}),
+s(304861,270005,{awp=16001,b=1,f=23})}}),
+q(166,{coords={
+[1436]={{56.3,47.5}}},lvl=14,qgs={234},r=2,sourceQuests={155},g={
+qo(1,{providers={{"i",3637}}}),
+s(158307,6087,{b=1,f=6,loc=46}),
+s(156584,2042,{b=1,f=28,spellID=1292011}),
+s(156583,2041,{b=1,f=5,loc=42})}}),
+q(373,{coords={
+[1453]={{57.7,47.9}}},crs={1646},description="Drops from VanCleef. Deliver it to Baros Alexston in Stormwind City.",lvl=16,qss={2874},r=2}),
+q(2040,{coords={
+[1453]={{62.8,34.8}}},lvl=15,qgs={6579},r=2,sourceQuests={2041},g={
+qo(1,{providers={{"i",7365}}}),
+s(158977,7607,{b=1,f=27}),
+s(158976,7606,{b=1,f=6,loc=44}),
+s(304871,270015,{awp=16001,b=1,f=5,loc=43}),
+s(304872,270016,{awp=16001,b=1,f=5,loc=46})}})}),
+h(-46,{
+n(596,{coords={
+[1436]={{44,78.3}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
+s(157521,3902,{f=28,lvl=13}),
+s(158287,5967,{f=4,loc=45,lvl=13})}}),
+n(626,{coords={
+[1436]={{42.2,82.6}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
+i(1875),
+s(156666,2167,{f=5,loc=44}),
+s(156665,2166,{f=6,loc=46}),
+s(156667,2168,{f=4,loc=47,lvl=16})}}),
+n(599,{coords={
+[1436]={{42.2,79.9}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
+s(157090,3019,{f=4,loc=42,lvl=13}),
+s(157827,4660,{f=4,loc=47,lvl=13})}})}),
+h(-63,{
+s(160035,10402,{b=1,crs={4416},f=5,loc=47,lvl=15}),
+s(160034,10401,{crs={634,4417},f=5,loc=44,lvl=14}),
+s(160033,10400,{b=1,crs={634,4417},f=5,loc=46,lvl=14}),
+s(156533,1951,{crs={657,1732},f=25,lvl=14}),
+s(156537,1959,{crs={623},f=22,lvl=12}),
+s(156520,1927,{crs={594},f=21,lvl=10}),
+s(156521,1928,{crs={1726},f=28,lvl=11}),
+s(156518,1925,{crs={1725},f=25,lvl=11}),
+s(156530,1943,{crs={3947},f=6,loc=46,lvl=14}),
+s(156527,1936,{crs={622},f=20,lvl=13}),
+s(156531,1944,{crs={1731},f=5,loc=44,lvl=13}),
+i(1894,{crs={623,624,625}}),
+p(50,{crs={657},itemID=8492,npcID=7387,spellID=10683}),
+r(6703,{b=1,crs={657},itemID=5787,requireSkill=165}),
+s(156536,1958,{crs={625},f=23,lvl=12}),
+s(159084,7997,{b=1,c={4},description="Can drop in Westfall and The Deadmines.",f=5,loc=40}),
+i(915),
+s(156522,1929,{crs={1729,4418},f=4,loc=46,lvl=13}),
+s(157839,4676,{crs={624},f=6,loc=44,lvl=12}),
+s(156523,1930,{crs={598},f=3,lvl=13}),
+s(156525,1934,{crs={636},f=5,loc=46,lvl=15}),
+s(156519,1926,{crs={824},f=23,lvl=10}),
+s(156532,1945,{crs={641},f=5,loc=44,lvl=13})}),
+n(3586,{description="This is a Rare Creature and, as such, is not always present.",g={
+s(158166,5443,{b=1,f=8,lvl=17,spellID=1291906}),
+s(158167,5444,{b=1,f=3,lvl=17})}}),
+n(644,{
+s(158043,5187,{b=1,f=24,lvl=16}),
+s(156160,872,{b=1,f=22,lvl=18,spellID=1291896}),
+s(308447,273289,{awp=16001,b=1,f=4,loc=46,lvl=17})}),
+n(642,{
+i(7365),
+s(156668,2169,{b=1,f=20,lvl=16}),
+s(156528,1937,{b=1,f=25,lvl=18}),
+i(285292,{awp=16001,b=1,f=36,lvl=16})}),
+n(643,{
+s(158047,5194,{b=1,f=22,lvl=18}),
+s(158048,5195,{b=1,f=4,loc=44,lvl=17}),
+s(308448,273293,{awp=16001,b=1,f=6,loc=43,lvl=16,spellID=1292039}),
+r(1263034,{awp=16001,itemID=273092})}),
+n(1763,{
+s(158052,5199,{b=1,f=5,loc=46,lvl=16,spellID=1291915}),
+i(1156,{b=1,f=52,lvl=17}),
+s(308449,273297,{awp=16001,b=1,f=23,lvl=18})}),
+n(646,{
+s(158803,7230,{b=1,f=24,lvl=18}),
+s(158049,5196,{b=1,f=21,lvl=17}),
+s(158045,5192,{b=1,f=25,lvl=17,spellID=1291987}),
+i(284715,{awp=16001,b=1,f=52,lvl=17})}),
+n(647,{
+s(158054,5201,{b=1,f=28,lvl=17}),
+s(158053,5200,{b=1,f=29,lvl=17}),
+s(160036,10403,{b=1,f=5,loc=45,lvl=17})}),
+n(639,{
+i(2874,{b=1,lvl=16}),
+i(3637),
+s(158044,5191,{b=1,f=25,lvl=19}),
+s(158046,5193,{b=1,f=3,lvl=19}),
+s(158055,5202,{b=1,f=4,loc=42,lvl=17}),
+s(160032,10399,{b=1,f=5,loc=42,lvl=17}),
+crit(3262,{achID=62031,awp=16001,id=4})}),
+n(645,{
+p(44,{itemID=8490,npcID=7380,spellID=10677}),
+s(158051,5198,{b=1,f=27,lvl=17,spellID=1322312}),
+s(158050,5197,{b=1,f=23,lvl=16}),
+i(273298,{awp=16001,b=1,f=53,lvl=18,spellID=12883})})}}),
+inst(3065,{awp=16001,coords={
+[1455]={{50,50}}},icon=_.asset("hallofthanes"),lore="Hidden beneath the High Seat of Ironforge, the Hall of Thanes is part of the legendary \"Old Ironforge\", forever incapable of access in Classic Azeroth until WoW: Forever. The Hall of Thanes is the resting place of the Legendary Dwarves of the Eastern Kingdoms, but has recently been invaded by the hostile Dark Iron Dwarves",lvl=13,["zone-text-areaID"]=16919,g={
+h(-45,{
+q(96395,{lvl=10,qgs={265002},r=2,g={
+qo(1,{providers={{"n",261306}}}),
+s(311432,279899,{b=1,f=3}),
+s(311435,279900,{b=1,f=5,loc=46})}}),
+q(96403,{coords={
+[1455]={{32.4,44.8}}},lvl=10,qgs={265003},r=2,g={
+qo(1,{providers={{"i",274289},{"o",457387}}}),
+s(311433,279898,{b=1,f=1}),
+s(311429,280096,{b=1,f=4,loc=44})}}),
+q(96394,{coords={
+[1455]={{33.2,47.8}}},lvl=10,qgs={264943},r=2,g={
+qo(1,{providers={{"n",263389}}}),
+qo(2,{providers={{"n",263390}}}),
+s(311431,279897,{b=1,f=5,loc=45}),
+s(311428,280095,{b=1,f=6,loc=43})}}),
+q(96393,{coords={
+[1426]={{64.8,58.4}}},lvl=9,qgs={264936},r=2,sourceQuests={96391},g={
+qo(1,{crs={261319},providers={{"i",274286}}}),
+s(311430,279894,{b=1,f=31}),
+s(311436,279895,{b=1,f=24}),
+s(311434,279896,{b=1,f=27})}}),
+q(98423,{lvl=9,qss={281030},r=2,g={
+qo(1,{coords={
+[1455]={{39.3,56}}},providers={{"n",2784}}})}})}),
+e(3493,{npcID=261306,g={
+s(306395,271096,{b=1,f=4,loc=43,lvl=13}),
+i(270227,{b=1,f=51,lvl=13}),
+s(306396,271097,{b=1,f=3,lvl=13})}}),
+e(3495,{npcID=261316,g={
+s(306394,271095,{b=1,f=20,lvl=13}),
+s(305005,270231,{b=1,f=5,loc=44,lvl=13}),
+s(305004,270230,{b=1,f=6,loc=45,lvl=13})}}),
+e(3494,{npcID=261311,g={
+s(306397,271098,{b=1,f=6,loc=42,lvl=13}),
+s(305002,270228,{b=1,f=28,lvl=13}),
+s(305003,270229,{b=1,f=6,loc=47,lvl=13})}}),
+e(3496,{npcID=261319,g={
+s(305019,270260,{b=1,f=5,loc=46,lvl=13}),
+s(305018,270256,{b=1,f=21,lvl=13}),
+s(305020,270261,{b=1,f=4,loc=42,lvl=13})}})}}),
 inst(238,{coords={
-[1453]={{51.6,69.4}}},lore="The Stockade is a high-security prison complex, hidden beneath the canal district of Stormwind city. Presided over by Warden Thelwater, the Stockade is home to petty crooks, political insurgents, murderers and a score of the most dangerous criminals in the land. Recently, a prisoner-led revolt has resulted in a state of pandemonium within the stockade - where the guards have been driven out and the convicts roam free. Warden Thelwater has managed to escape the holding area and is currently enlisting brave thrill-seekers to venture into the prison and kill the uprising's mastermind - the cunning felon, Bazil Thredd.",lvl=15,mapID=225,["zone-text-areaID"]=717,["zone-text-names"]={"Stormwind Stockade"},g={
+[1453]={{51.6,69.4}}},icon=136358,lore="The Stockade is a high-security prison complex, hidden beneath the canal district of Stormwind city. Presided over by Warden Thelwater, the Stockade is home to petty crooks, political insurgents, murderers and a score of the most dangerous criminals in the land. Recently, a prisoner-led revolt has resulted in a state of pandemonium within the stockade - where the guards have been driven out and the convicts roam free. Warden Thelwater has managed to escape the holding area and is currently enlisting brave thrill-seekers to venture into the prison and kill the uprising's mastermind - the cunning felon, Bazil Thredd.",lvl=15,mapID=225,["zone-text-areaID"]=717,["zone-text-names"]={"Stormwind Stockade"},g={
 h(-45,{
 q(389,{coords={
 [1453]={{57.7,47.9}}},lvl=16,qgs={1646},r=2,sourceQuests={373}}),
@@ -981,35 +1206,157 @@ q(391,{coords={
 [1453]={{51.6,69.4}}},lvl=16,qgs={1719},r=2,sourceQuests={389},g={
 qo(1,{providers={{"i",2926}}})}}),
 q(386,{coords={
-[1433]={{26,43}}},lvl=22,qgs={859},r=2,g={
+[1433]={{21.2,46.6}}},lvl=22,qgs={859},r=2,g={
 qo(1,{providers={{"i",3630}}}),
 s(156262,1317,{f=28}),
 s(157286,3400,{f=25})}})}),
 h(-63,{
-i(1076,{f=52})}),
+i(1076,{f=52}),
+i(274092,{awp=16001,f=36})}),
 n(1720,{description="This is a rare that was not always present.",g={
 s(157039,2942,{f=34}),
 s(157189,3228,{f=6,loc=43}),
 s(157038,2941,{f=20})}}),
 n(1666,{
 i(3640),
+s(308601,273808,{awp=16001,f=4,loc=43}),
 s(156749,2280,{f=28,spellID=1292546})}),
 n(1663,{
 i(3628)}),
-n(1717),
+n(1717,{awp=16001,g={
+s(308602,273809,{f=21}),
+s(308603,273810,{f=6,loc=44})}}),
 n(1696,{
-i(3630)}),
+i(3630),
+s(308599,273805,{awp=16001,f=5,loc=42}),
+i(273806,{awp=16001,f=52}),
+s(308598,273804,{awp=16001,f=5,loc=41}),
+i(273820,{awp=16001,f=52,spellID=1292575})}),
 n(1716,{
-i(2926)})}}),
+i(2926),
+s(308615,273827,{awp=16001,f=25,spellID=1292594}),
+s(308617,273829,{awp=16001,f=33}),
+s(308613,273824,{awp=16001,f=5,loc=44,spellID=1292581}),
+s(308614,273825,{awp=16001,f=3})})}}),
+inst(240,{coords={
+[1413]={{45.9,35.7}},
+[1414]={{52,55.2}}},icon=136364,lore="Recently, a night elf druid named Naralex discovered a network of underground caverns within the heart of the Barrens. Dubbed the 'Wailing Caverns', these natural caves were filled with steam fissures which produced long, mournful wails as they vented. Naralex believed he could use the caverns' underground springs to restore lushness and fertility to the Barrens - but to do so would require siphoning the energies of the fabled Emerald Dream.\n\nOnce connected to the Dream, however, the druid's vision somehow became a nightmare. Soon the Wailing Caverns began to change - the waters turned foul and the once-docile creatures inside metamorphosed into vicious, deadly predators. It is said that Naralex himself still resides somewhere inside the heart of the labyrinth, trapped beyond the edges of the Emerald Dream. Even his former acolytes have been corrupted by their master's waking nightmare - transformed into the wicked Druids of the Fang.",lvl=10,mapID=279,["zone-text-areaID"]=718,["zone-text-names"]={"The Wailing Caverns","Las Cuevas de los Lamentos"},g={
+h(-45,{description="To get to the quest giver hub outside the instance:\n\nWhen facing the mouth of the cave, you should see that the entrance looks like a skull. The questgivers are in the left eye. To get there, climb up the mountain, drop onto the head, drop onto the brow, drop onto the nose, face the instance, and go into the eye on the left",g={
+q(1487,{coords={
+[1413]={{46,35.7}}},lvl=15,qgs={5768},g={
+qo(1,{providers={{"n",3636}}}),
+qo(2,{providers={{"n",5755}}}),
+qo(3,{providers={{"n",5761}}}),
+qo(4,{providers={{"n",5056}}}),
+r(7955,{itemID=6476,requireSkill=165}),
+s(159089,8071,{b=1,f=27}),
+s(158503,6481,{b=1,f=6,loc=44})}}),
+q(1486,{coords={
+[1413]={{46,35.7}}},lvl=13,qgs={5767},g={
+qo(1,{providers={{"i",6443}}}),
+s(158502,6480,{b=1,f=5,loc=46}),
+i(918,{b=1,f=113})}}),
+q(1489,{coords={
+[1413]={{52.3,31.9}}},lvl=10,qgs={3448},qis={10414},r=1,sourceQuests={880}}),
+q(3370,{coords={
+[1413]={{48.2,32.8}}},description="She lives in a house on top of the mountain.",lvl=15,qgs={8418},r=2,sourceQuests={6981},g={
+qo(1,{providers={{"i",10649}}}),
+s(160118,10657,{b=1,f=4,loc=41}),
+s(160119,10658,{b=1,f=6,loc=47})}}),
+q(3369,{coords={
+[1413]={{48.2,32.8}}},description="She lives in a house on top of the mountain.",lvl=15,qgs={8418},r=1,sourceQuests={6981},g={
+qo(1,{providers={{"i",10649}}}),
+s(160118,10657,{b=1,f=4,loc=41}),
+s(160119,10658,{b=1,f=6,loc=47})}}),
+q(914,{coords={
+[1456]={{75.6,31.2}}},lvl=10,qgs={5770},r=1,sourceQuests={1490},g={
+qo(1,{providers={{"i",9738}}}),
+qo(2,{providers={{"i",9739}}}),
+qo(3,{providers={{"i",9740}}}),
+qo(4,{providers={{"i",9741}}}),
+s(158508,6505,{b=1,f=28}),
+s(158507,6504,{b=1,f=25}),
+s(304873,270018,{awp=16001,b=1,f=24})}}),
+q(1490,{coords={
+[1456]={{74.7,30.2}}},lvl=10,qgs={5769},r=1,sourceQuests={1489}}),
+q(962,{coords={
+[1456]={{23.6,21.4}}},lvl=14,qgs={3419},r=1,g={
+qo(1,{providers={{"i",5339},{"o",13891}}}),
+s(160209,10919,{b=1,f=4,loc=44}),
+s(304864,270008,{awp=16001,b=1,f=5,loc=44}),
+s(304865,270009,{awp=16001,b=1,f=6,loc=47})}}),
+q(1491,{coords={
+[1413]={{62.4,37.6}}},lvl=13,qgs={3446},sourceQuests={865},g={
+qo(1,{crs={3638,3640,5763},providers={{"i",6464}}})}}),
+q(6981,{coords={
+[1413]={{63,37.2}}},providers={{"i",10441}},qgs={3442}})}}),
+h(-56,{awp=16001,g={
+o(409692,{coords={
+[1413]={{52.83,54.7}}},g={
+i(209846,{b=1})}})}}),
+h(-58,{
+n(5783,{coords={
+[1413]={{45.9,35.7}}},g={
+r(7953,{itemID=6474,requireSkill=165}),
+r(7954,{itemID=6475,requireSkill=165})}})}),
+h(-63,{
+i(6443,{description="Drops from Deviate creatures in the Wailing Caverns."}),
+s(160046,10413,{crs={3840},f=5,loc=44,lvl=14})}),
+prof(393,{
+i(6470,{description="Can drop-, as well as be skinned from all deviates within the Wailing Caverns."}),
+i(6471,{description="Can drop-, as well as be skinned from all deviates within the Wailing Caverns, although the droprate is low."})}),
+e(474,{npcID=3671,g={
+i(9739),
+s(158158,5404,{b=1,f=5,loc=41,lvl=18}),
+s(160045,10412,{b=1,f=5,loc=45,lvl=16}),
+i(273088,{awp=16001,b=1,f=51,lvl=17}),
+i(6446,{b=1,f=113})}}),
+e(477,{npcID=3653,g={
+s(160906,13245,{b=1,f=8,lvl=18}),
+s(158487,6447,{b=1,f=8,lvl=16}),
+s(308425,273084,{awp=16001,b=1,f=3,lvl=17,spellID=1291748})}}),
+e(476,{npcID=3670,g={
+i(9740),
+s(158498,6472,{b=1,f=23,lvl=19}),
+s(158499,6473,{b=1,f=5,loc=42,lvl=18}),
+s(308426,273089,{awp=16001,b=1,f=4,loc=45,lvl=17,spellID=1291758})}}),
+e(475,{npcID=3669,g={
+i(9738),
+s(158493,6465,{b=1,f=4,loc=42,lvl=17}),
+s(158491,6460,{b=1,f=6,loc=45,lvl=17}),
+s(160043,10410,{b=1,f=5,loc=46,lvl=17})}}),
+e(478,{npcID=3674,g={
+s(158488,6448,{b=1,f=20,lvl=17}),
+s(158489,6449,{b=1,f=3,lvl=18}),
+s(308431,273137,{awp=16001,b=1,f=1,lvl=17,spellID=1291782})}}),
+n(5912,{description="This is a Rare Creature and, as such, is not always present.",g={
+s(158072,5243,{b=1,f=27,lvl=18,spellID=1291686}),
+s(158618,6632,{b=1,f=3,lvl=16})}}),
+e(479,{npcID=3673,g={
+i(9741),
+s(158497,6469,{b=1,f=32,lvl=19}),
+s(158290,5970,{b=1,f=4,loc=44,lvl=18}),
+s(160044,10411,{b=1,f=5,loc=47,lvl=17}),
+s(158490,6459,{b=1,f=6,loc=47,lvl=18})}}),
+e(480,{npcID=5775,g={
+s(158617,6631,{b=1,f=28,lvl=18}),
+s(158616,6630,{b=1,f=8,lvl=19}),
+s(158615,6629,{b=1,f=3,lvl=17,spellID=1291698})}}),
+e(481,{npcID=3654,g={
+i(10441,{b=1,lvl=15}),
+s(158492,6461,{b=1,f=4,loc=41,lvl=20}),
+s(158613,6627,{b=1,f=6,loc=42,lvl=18}),
+i(6463,{b=1,f=52,lvl=19}),
+crit(18524,{achID=62031,awp=16001,id=3})}})}}),
 x(1,{awp=10100,g={
 inst(760,{coords={
 [1445]={{52.3,76.2}}},cost={{"i",16309,1}},isRaid=1,lore="Onyxia is the daughter of the mighty dragon Deathwing, and sister of the scheming Nefarian, Lord of Blackrock Spire.\n\nIt is said that Onyxia delights in corrupting the mortal races by meddling in their political affairs. To this end it is believed that she takes on various humanoid forms and uses her charm and power to influence delicate matters between the different races. Some believe that Onyxia has even assumed an alias once used by her father - the title of the royal House Prestor. When not meddling in mortal concerns, Onyxia resides in a fiery cave below the Dragonmurk, a dismal swamp located within Dustwallow Marsh. There she is guarded by her kin, the remaining members of the insidious black dragonflight.",lvl=60,mapID=248,sourceQuests={6502,6602},["zone-text-areaID"]=2159,g={
 h(-45,{
 q(7635,{awp=10001,c={3},coords={
-[1448]={{47,24.48}}},cost={{"i",18705,1}},lvl=60,qgs={14525},rwp=40003,sourceQuests={7633},g={
+[1448]={{47,24.48}}},cost={{"i",18705,1}},lvl=60,qgs={14525},rwp=40003,g={
 i(18724,{b=1,c={3},lvl=60})}}),
 q(7634,{awp=10001,c={3},coords={
-[1448]={{47,24.48}}},cost={{"i",18704,1}},lvl=60,maps={1452},qgs={14526},rwp=40003,sourceQuests={7633},g={
+[1448]={{47,24.48}}},cost={{"i",18704,1}},lvl=60,maps={1452},qgs={14526},rwp=40003,g={
 i(18714,{b=1,c={3},f=113,lvl=60,spellID=29414})}}),
 q(7496,{awp=10001,coords={
 [1453]={{67.2,85.1}}},lvl=60,qgs={1748},r=2,rwp=100000,sourceQuests={7495},g={
@@ -1021,10 +1368,10 @@ q(7491,{awp=10001,coords={
 i(18403,{b=1,f=52}),
 i(18404,{b=1,f=51}),
 i(18406,{b=1,f=53,spellID=1287808})}}),
-q(7507,{c={1,2},description="You get this quest by looting Nostro's Compendium from bosses in Dire Maul.\n\nYou can also buy it on the Auction House for a hefty price!",lvl=60,maps={234},providers={{"i",18401}},rwp=30300,g={
+q(7507,{c={1,2},description="You get this quest by looting Nostro's Compendium from bosses in Dire Maul.\n\nYou can also buy it on the Auction House for a hefty price!",lvl=60,maps={234},qss={18401},rwp=30300,g={
 i(18513,{b=1,lvl=60})}}),
 q(7636,{awp=10001,c={3},coords={
-[1448]={{47,24.48}}},description="You must defeat the 4 demons listed below by yourself with no pet in order to complete this quest.",lvl=60,maps={1428,1449,1451,1452},providers={{"i",18708}},qgs={14524},rwp=40003,sourceQuests={7633},g={
+[1448]={{47,24.48}}},description="You must defeat the 4 demons listed below by yourself with no pet in order to complete this quest.",lvl=60,maps={1428,1449,1451,1452},qgs={14524},qis={18708},rwp=40003,g={
 qo(1,{coords={
 [1449]={{34.5,41.1}}},crs={14527,14533},description="There are two things that can make this fight difficult: her pet, a felhound named Precious and low nature resistance. Most hunters tend to CC Precious by freeze trapping it. Using ranged attacks is useless because she casts a debuff that substantially lowers ranged attack power. Your best bet is to use aspect of the wild + a greater nature protection potion (to dull and absorb her lightning bolts) and melee her until she falls.\n\nLocated in Un'goro Crater.",providers={{"i",18952}}}),
 qo(2,{coords={
@@ -1036,7 +1383,7 @@ qo(4,{coords={
 i(18707,{b=1,cost={{"i",18724,1}},lvl=60,spellID=23192,g={
 s(163648,18713,{b=1,c={3},f=32,lvl=60})}}),
 s(163649,18715,{b=1,c={3},description="Go back to Felwood after having completed all the quests and a chat icon will become available, allowing you to interact with one of the ancients. Speak to him and he will give you the staff.",f=28,lvl=60,sourceQuests={7634,7635,7636}})}}),
-q(7508,{c={1,2},lvl=60,maps={234},providers={{"i",18513}},qgs={14368},rwp=30300,sourceQuests={7507}}),
+q(7508,{c={1,2},lvl=60,maps={234},qgs={14368},qis={18513},rwp=30300,sourceQuests={7507}}),
 q(7509,{c={1,2},lvl=60,maps={234},qgs={14368},rwp=30300,sourceQuests={7508},g={
 qo(1,{cost={{"i",18488,1}},crs={10184},description="Drops from Onyxia when you use the Heated Ancient Blade on her corpse.",providers={{"i",18492}}}),
 i(18488,{cost={{"i",18489,1}},description="Once the boss uses her Breath attack on your Unfired Ancient Blade, loot this item from the ground and then impale the corpse of Onyxia once you defeat her.",providers={{"o",179562}},spellID=22906}),
@@ -1048,8 +1395,8 @@ r(19093,{awp=10001,itemID=15769,requireSkill=165,rwp=100000})}}),
 q(7493,{coords={
 [1454]={{52.2,75.8}}},learnedAt=300,lvl=60,qgs={14392},r=1,requireSkill=165,sourceQuests={7491},g={
 r(19093,{awp=10001,itemID=15769,requireSkill=165,rwp=100000})}}),
-q(7495,{awp=10001,lvl=60,maps={1453},providers={{"i",18423}},r=2,rwp=100000}),
-q(7490,{awp=10001,lvl=60,maps={1454},providers={{"i",18422}},r=1,rwp=100000})}),
+q(7495,{awp=10001,lvl=60,maps={1453},qss={18423},r=2,rwp=100000}),
+q(7490,{awp=10001,lvl=60,maps={1454},qss={18422},r=1,rwp=100000})}),
 prof(393,{
 i(15410)}),
 n(10184,{
@@ -1078,13 +1425,13 @@ i(21108,{awp=10900,b=1,rwp=40003,u=15})})}}),
 inst(742,{awp=10600,coords={
 [33]={{64.2,71}}},isLockoutShared=1,isRaid=1,lore="In the dark recesses of the mountain's peak, Nefarian, the eldest son of Deathwing, conducts some of his most awful experimentation, controlling mighty beings like puppets and combining the eggs of different dragonflights with horrific results. Should he prove successful, even darker pursuits rest on the horizon.\n\nAnd, yet, the Lord of Blackrock is not a mere scientist - he is a great dragon cornered in his lair. Can he truly be defeated by mortal hands?",lvl=50,mapID=287,providers={{"o",179879}},sourceQuests={7761},u=13,["zone-text-areaID"]=2677,g={
 h(-45,{u=13,g={
-q(7781,{maps={1453},providers={{"i",19003}},r=2,u=13}),
+q(7781,{maps={1453},qss={19003},r=2,u=13}),
 q(7782,{coords={
 [1453]={{78,18}}},qgs={1748},r=2,sourceQuests={7781},u=13,g={
 s(163881,19366,{b=1,f=1,lvl=60,u=13}),
 i(19383,{b=1,f=51,lvl=60,u=13}),
 i(19384,{b=1,f=52,lvl=60,u=13})}}),
-q(7783,{maps={1454},providers={{"i",19002}},r=1,u=13}),
+q(7783,{maps={1454},qss={19002},r=1,u=13}),
 q(7784,{coords={
 [1454]={{32,37.8}}},qgs={4949},r=1,sourceQuests={7783},u=13,g={
 i(19383,{b=1,f=51,lvl=60,u=13}),
@@ -1498,10 +1845,10 @@ q(8044,{c={1},coords={
 [1434]={{15.3,14.4}}},lvl=58,minReputation={270,42000},qgs={14902},sourceQuests={8043},u=14,g={
 i(19577,{b=1,c={1},f=51,lvl=58,spellID=24428,u=14})}})}}),
 q(8240,{coords={
-[1434]={{14.5,15.8}}},cost={{"i",19709,1},{"i",19714,1},{"i",19707,1},{"i",19712,1},{"i",19710,1},{"i",19711,1},{"i",19715,1},{"i",19713,1},{"i",19708,1}},description="Costs 1 bijou of any color per turn in. There are 9 colors and 8 (+1 for Shaman/Paladin) classes in the game, as such, some guilds assign specific classes specific color bijous and treat one as a wild card.",lvl=58,qgs={15070},repeatable=1,u=14,g={
+[1434]={{14.5,15.8}}},cost={{"i",19709,1},{"i",19714,1},{"i",19707,1},{"i",19712,1},{"i",19710,1},{"i",19711,1},{"i",19715,1},{"i",19713,1},{"i",19708,1}},description="Costs 1 bijou of any color per turn in. There are 9 colors and 8 (+1 for Shaman/Paladin) classes in the game, as such, some guilds assign specific classes specific color bijous and treat one as a wild card.",lvl=58,qgs={15070},qis={19707,19708,19710,19711,19712,19713,19714,19715},repeatable=1,u=14,g={
 i(19858,{b=1,spellID=24226,u=14})}}),
 q(8201,{coords={
-[1434]={{15.3,15.5}}},lvl=58,qgs={14910},u=14,g={
+[1434]={{15.3,15.5}}},lvl=58,qgs={14910},qis={19883},u=14,g={
 qo(1,{cost={{"i",19881,5},{"i",19883,1}},providers={{"i",19880}},u=14}),
 s(164252,20216,{b=1,f=5,loc=45,u=14}),
 s(164251,20215,{b=1,f=6,loc=45,u=14}),
@@ -1522,7 +1869,7 @@ q(8246,{coords={
 i(20077,{b=1,spellID=24422,u=14}),
 i(20076,{b=1,spellID=24421,u=14}),
 i(20078,{b=1,spellID=24420,u=14})}}),
-q(8183,{description="Turning this quest in will cause a world buff to drop for those on the island or in Booty Bay. Announce when you're going to do this for folks looking to get WBs for raid!",lvl=58,maps={1434},providers={{"i",19802}},u=14,g={
+q(8183,{description="Turning this quest in will cause a world buff to drop for those on the island or in Booty Bay. Announce when you're going to do this for folks looking to get WBs for raid!",lvl=58,maps={1434},qss={19802},u=14,g={
 i(19948,{b=1,f=53,spellID=24574,u=14}),
 i(19950,{b=1,f=53,spellID=24658,u=14}),
 i(19949,{b=1,f=53,spellID=24661,u=14})}}),
@@ -1623,7 +1970,8 @@ o(180166,{learnedAt=280,u=14}),
 o(180165,{learnedAt=210,u=14}),
 o(180164,{learnedAt=230,u=14})}}),
 prof(186,{u=14,g={
-i(19774,{providers={{"o",180215}},u=14})}}),
+i(19774,{providers={{"o",180215}},u=14}),
+o(180215,{learnedAt=275,u=14})}}),
 prof(393,{u=14,g={
 i(19768,{crs={11360,11361,15067},u=14}),
 i(19767,{crs={11368},u=14})}}),
@@ -1663,7 +2011,7 @@ i(19930,{f=53,spellID=24268,u=14}),
 i(19871,{f=51,u=14})}}),
 n(11382,{u=14,g={
 ach(881,{providers={{"i",19872}},u=14}),
-i(19872,{b=1,f=100,lvl=60,spellID=24242,u=14}),
+mnt(24242,{b=1,itemID=19872,lvl=60,u=14}),
 s(164036,19867,{f=25,u=14}),
 s(164039,19874,{f=29,spellID=25669,u=14}),
 s(164110,20038,{f=32,u=14}),
@@ -1708,7 +2056,7 @@ s(164085,19965,{f=20,u=14}),
 s(164101,19993,{f=32,u=14})}})}}),
 n(14509,{u=14,g={
 ach(880,{providers={{"i",19902}},u=14}),
-i(19902,{b=1,f=100,lvl=60,spellID=24252,u=14}),
+mnt(24252,{b=1,itemID=19902,lvl=60,u=14}),
 s(164054,19896,{f=34,u=14}),
 s(164058,19901,{f=25,u=14}),
 s(164267,20266,{f=7,loc=46,u=14}),
@@ -1855,7 +2203,7 @@ s(164546,21394,{b=1,c={1},f=3,lvl=60,u=15})}}),
 q(8558,{c={1},coords={
 [1451]={{51.1,38.9}}},cost={{"i",20858,5},{"i",20862,5},{"i",20873,2},{"i",20886,1}},minReputation={609,42000},qgs={15499},u=15,g={
 s(164545,21392,{b=1,c={1},f=21,lvl=60,u=15})}})}}),
-q(8791,{lvl=60,maps={1451},providers={{"i",21220}},u=15,g={
+q(8791,{lvl=60,maps={1451},qss={21220},u=15,g={
 i(21507,{b=1,f=51,lvl=60,u=15}),
 i(21504,{b=1,f=51,lvl=60,u=15}),
 i(21505,{b=1,f=51,lvl=60,u=15}),
@@ -2123,7 +2471,7 @@ q(8560,{c={1},cost={{"i",20865,5},{"i",20861,5},{"i",20876,2},{"i",20927,1}},min
 s(164502,21332,{b=1,c={1},f=7,loc=46,lvl=60,u=15})}}),
 q(8559,{c={1},cost={{"i",20859,5},{"i",20865,5},{"i",20882,2},{"i",20928,1}},minReputation={910,0},qgs={15503},repeatable=1,u=15,g={
 s(164503,21333,{b=1,c={1},f=7,loc=47,lvl=60,u=15})}})}}),
-q(8801,{providers={{"i",21221}},u=15}),
+q(8801,{qss={21221},u=15}),
 q(8789,{cost={{"i",18562,3},{"i",21232,1}},qgs={15380},repeatable=1,u=15,g={
 s(164481,21242,{b=1,f=21,lvl=60,u=15}),
 s(164484,21269,{b=1,f=8,lvl=60,u=15}),
@@ -2221,10 +2569,10 @@ r(25079,{b=1,itemID=20730,requireSkill=333,u=15}),
 r(25073,{b=1,itemID=20727,requireSkill=333,u=15}),
 r(25080,{b=1,itemID=20731,requireSkill=333,u=15})}}),
 h(-63,{u=15,g={
-i(21218,{b=1,f=100,lvl=60,spellID=25953,u=15}),
-i(21323,{b=1,f=100,lvl=60,spellID=26056,u=15}),
-i(21321,{b=1,f=100,lvl=60,spellID=26054,u=15}),
-i(21324,{b=1,f=100,lvl=60,spellID=26055,u=15}),
+mnt(25953,{b=1,itemID=21218,lvl=60,u=15}),
+mnt(26056,{b=1,itemID=21323,lvl=60,u=15}),
+mnt(26054,{b=1,itemID=21321,lvl=60,u=15}),
+mnt(26055,{b=1,itemID=21324,lvl=60,u=15}),
 s(164763,21837,{crs={15229,15230,15233,15235,15236,15247,15249,15250,15262,15264},f=23,u=15}),
 s(164766,21856,{crs={15229,15230,15233,15235,15236,15247,15249,15250,15262,15264},f=22,u=15}),
 s(164764,21838,{crs={15229,15230,15233,15235,15236,15247,15249,15250,15262,15264},f=4,loc=42,u=15}),
@@ -2404,15 +2752,15 @@ ach(425,{c={5,8,9,11},providers={{"i",22589},{"i",22630},{"i",22631},{"i",22632}
 q(9251,{c={5,8,9,11},lvl=60,maps={320},qgs={15192},sourceQuests={9250},u=16,g={
 qo(1,{providers={{"i",22733}},u=16}),
 qo(2,{providers={{"i",22734}},u=16})}}),
-q(9257,{c={5},maps={317},providers={{"i",22737}},qgs={15192},sourceQuests={9251},u=16,g={
+q(9257,{c={5},maps={317},qgs={15192},qis={22737},sourceQuests={9251},u=16,g={
 s(165013,22631,{b=1,f=28,lvl=60,spellID=28148,u=16})}}),
-q(9270,{c={8},maps={317},providers={{"i",22737}},qgs={15192},sourceQuests={9251},u=16,g={
+q(9270,{c={8},maps={317},qgs={15192},qis={22737},sourceQuests={9251},u=16,g={
 s(165010,22589,{b=1,f=28,lvl=60,spellID=28148,u=16})}}),
-q(9271,{c={9},maps={317},providers={{"i",22737}},qgs={15192},sourceQuests={9251},u=16,g={
+q(9271,{c={9},maps={317},qgs={15192},qis={22737},sourceQuests={9251},u=16,g={
 s(165012,22630,{b=1,f=28,lvl=60,spellID=28148,u=16})}}),
-q(9269,{c={11},maps={317},providers={{"i",22737}},qgs={15192},sourceQuests={9251},u=16,g={
+q(9269,{c={11},maps={317},qgs={15192},qis={22737},sourceQuests={9251},u=16,g={
 s(165014,22632,{b=1,f=28,lvl=60,spellID=28148,u=16})}}),
-q(9250,{c={5,8,9,11},cost={{"i",22726,40}},description="Collect 40 of the Splinters to craft the Frame of Atiesh. This starts the quest chain for Atiesh. You will need to coordinate with your guild to get priority on Splinters.",lvl=60,providers={{"i",22727}},u=16})}}),
+q(9250,{c={5,8,9,11},cost={{"i",22726,40}},description="Collect 40 of the Splinters to craft the Frame of Atiesh. This starts the quest chain for Atiesh. You will need to coordinate with your guild to get priority on Splinters.",lvl=60,qss={22727},u=16})}}),
 h(-12,{u=16,g={
 ach(15637,{awp=11403,providers={{"n",15990}},rwp=11500,u=2}),
 s(169660,191481,{awp=11403,b=1,description="This was obtained from killing Kel'Thuzad in Naxxramas40 on 'Season of Mastery' realms, while entire raid having the buff Undying Vanquisher that meant no one died before killing Kel'Thuzad in that raid lockout, (you could obtain Rune of Teleportation: Frostwyrm's Lair to bypass most of the raid making it so you only had to kill Sapphiron and Kel'Thuzad to obtain this as well)\n\nSince 'Season of Mastery' servers are no longer available, this tabard is now unobtainable in classic, maybe it comes back in 'Season of Discovery?' who knows.",f=9,rwp=11500,u=2})}}),
@@ -2677,7 +3025,7 @@ s(165025,22664,{f=6,loc=42,lvl=60,u=16})}}),
 q(9245,{c={3,7},coords={
 [1423]={{81,59.6}}},cost={{"i",15408,16},{"i",15407,3},{"i",7080,5},{"i",22682,5},{"g",2000000}},lvl=60,OnUpdate=_.OnUpdateDB.OMARIONS_HANDBOOK,qgs={16376},sourceQuests={9233},u=16,g={
 s(165027,22666,{f=6,loc=44,lvl=60,u=16})}}),
-q(9233,{description="You must not have a profession above 270 skill for you to get this item from Omarion.",lvl=60,minReputation={529,21000},OnUpdate=_.OnUpdateDB.OMARIONS_HANDBOOK,providers={{"i",22719}},u=16}),
+q(9233,{description="You must not have a profession above 270 skill for you to get this item from Omarion.",lvl=60,minReputation={529,21000},OnUpdate=_.OnUpdateDB.OMARIONS_HANDBOOK,qss={22719},u=16}),
 q(9241,{c={4,11},coords={
 [1423]={{81,59.6}}},cost={{"i",15407,3},{"i",12810,12},{"i",7080,3},{"i",22682,4},{"g",2000000}},lvl=60,OnUpdate=_.OnUpdateDB.OMARIONS_HANDBOOK,qgs={16376},sourceQuests={9233},u=16,g={
 s(165024,22663,{f=5,loc=43,lvl=60,u=16})}}),
@@ -2696,7 +3044,7 @@ q(9122,{altQuests={9121,9123,9378},coords={
 [1423]={{81.5,58.3}}},cost={{"i",20725,1},{"i",12363,2},{"g",300000}},lvl=60,minReputation={529,21000},qgs={16116},u=16}),
 q(9123,{altQuests={9121,9122,9378},coords={
 [1423]={{81.5,58.3}}},lvl=60,minReputation={529,42000},qgs={16116},u=16}),
-q(9120,{lvl=60,providers={{"i",22520}},u=16,g={
+q(9120,{lvl=60,qss={22520},u=16,g={
 i(23206,{b=1,f=53,u=16}),
 i(23207,{b=1,f=53,u=16})}}),
 q(9229,{coords={
@@ -2899,109 +3247,14 @@ i(23067,{b=1,c={3},f=52,lvl=60,u=16}),
 i(23059,{b=1,c={1},f=52,lvl=60,u=16}),
 i(23064,{b=1,c={11},f=52,lvl=60,u=16}),
 i(23065,{b=1,c={7},f=52,lvl=60,u=16})}})}})}}),
-inst(227,{coords={
-[1440]={{14,11.1}}},lore="Situated along the Zoram Strand of Ashenvale, Blackfathom Deeps was once a glorious temple dedicated to the night elves' moon-goddess, Elune. However, the great Sundering shattered the temple - sinking it beneath the waves of the Veiled Sea. There it remained untouched - until, drawn by its ancient power - the naga and satyr emerged to plumb its secrets. Legends hold that the ancient beast, Aku'mai, has taken up residence within the temple's ruins. Aku'mai, a favored pet of the primordial Old Gods, has preyed upon the area ever since. Drawn to Aku'mai's presence, the cult known as the Twilight's Hammer has also come to bask in the Old Gods' evil presence.",lvl=19,mapID=221,["zone-text-areaID"]=719,g={
-h(-63,{
-s(156318,1454,{f=21}),
-s(157288,3414,{f=23}),
-s(157287,3413,{f=20}),
-s(156900,2567,{f=20}),
-s(156330,1481,{f=21}),
-s(157290,3416,{f=6,loc=42,spellID=1292749}),
-s(157291,3417,{f=26}),
-i(1491,{f=52}),
-s(156578,2034,{f=4,loc=42}),
-s(156743,2271,{f=28}),
-s(157289,3415,{f=28}),
-s(156335,1486,{f=4,loc=42})}),
-h(-45,{
-q(6564,{crs={4802},description="For this to drop, you need to be on the Essence of Aku'Mai quest.",lvl=17,providers={{"i",16790}},r=1,rwp=40003,sourceQuests={6563}}),
-q(6565,{coords={
-[1440]={{11.6,34.3}}},lvl=17,qgs={12736},r=1,rwp=40003,sourceQuests={6564},g={
-qo(1,{providers={{"n",12902}}}),
-s(163372,17695,{f=4,loc=41}),
-i(17694,{f=52})}}),
-q(908,{coords={
-[1440]={{11.6,34.3}}},description="This quest gets marked as completed when you complete the quest 'Amongst the Ruins' (6921).",lvl=21,qgs={12736},r=1,rwp=10204,u=2,g={
-qo(1,{providers={{"i",16762}},u=2})}}),
-q(6921,{awp=10204,coords={
-[1440]={{11.6,34.3}}},lvl=21,qgs={12736},r=1,rwp=40003,g={
-qo(1,{providers={{"i",16762}}})}}),
-q(6922,{lvl=21,maps={1440},providers={{"i",16782}},r=1,rwp=60002,g={
-s(163139,16886,{f=25}),
-s(163140,16887,{f=1})}}),
-q(1200,{lvl=18,maps={1457},qgs={4787},r=2,rwp=40003,sourceQuests={1198},g={
-qo(1,{crs={4832},providers={{"i",5881}}}),
-s(158748,7002,{f=8}),
-s(158747,7001,{f=27})}}),
-q(6561,{lvl=18,maps={1456},qgs={4787},r=1,rwp=40003,g={
-qo(1,{crs={4832},providers={{"i",5881}}}),
-s(158748,7002,{f=8}),
-s(158747,7001,{f=27})}}),
-q(1198,{coords={
-[1457]={{28.7,52.1}}},description="This quest is also available to Horde, though the questgiver is a bit out of the way. (And, of course, it doesn't grant the Darnassus rep.)",isBreadcrumb=1,lvl=18,nextQuests={1200},qgs={4786},rwp=40003}),
-q(971,{coords={
-[1455]={{50.8,5.6}}},lvl=10,qgs={2786},r=2,rwp=40003,sourceQuests={968},g={
-qo(1,{description="Guarded by a few Naga in the underwater room directly to the right of Ghamoo-ra.",providers={{"i",5359},{"o",13949}}}),
-i(6743,{b=1,f=52})}}),
-q(1275,{coords={
-[1439]={{38.3,43}}},lvl=18,qgs={8997},r=2,rwp=40003,sourceQuests={3765},g={
-qo(1,{crs={4788,4789,4798,4799,4802,4803,4805,4807,4831},providers={{"i",5952}}}),
-s(158749,7003,{b=1,f=6,loc=43}),
-s(158750,7004,{b=1,f=3})}}),
-q(3765,{coords={
-[1453]={{21.6,55.6}}},isBreadcrumb=1,lvl=20,maps={1439},nextQuests={1275},qgs={4984},r=2,rwp=40003}),
-q(6563,{coords={
-[1440]={{11.6,34.3}}},lvl=17,qgs={12736},r=1,rwp=40003,sourceQuests={6562},g={
-qo(1,{providers={{"i",16784},{"o",178184},{"o",178185},{"o",178186}}})}}),
-q(6562,{coords={
-[1442]={{47.3,64.4}}},isBreadcrumb=1,lvl=17,maps={1440},nextQuests={6563},qgs={11862},r=1,rwp=40003}),
-q(1199,{coords={
-[1457]={{38.3,43}}},lvl=20,qgs={4784},r=2,rwp=40003,g={
-qo(1,{crs={4809,4810,4811,4812,4813,4814},providers={{"i",5879}}}),
-s(158746,7000,{b=1,f=5,loc=45}),
-s(158745,6998,{b=1,f=4,loc=47})}})}),
-h(-56,{
-o(19018,{
-s(156647,2143,{f=5,loc=47,lvl=22}),
-i(5500),
-i(5504)})}),
-n(4887,{rwp=60002,g={
-s(158718,6907,{f=6,loc=42,spellID=1292692}),
-s(158719,6908,{f=4,loc=45})}}),
-n(4831,{rwp=60002,g={
-s(160218,11121,{f=25}),
-s(157130,3078,{f=32}),
-s(156166,888,{f=5,loc=44})}}),
-o(177964,{description="In the water below the Twilight bridge.\n\nWARNING: Spawns Baron Aquanis.",r=1,rwp=60002,sourceQuests={6921},g={
-i(16762),
-n(12876,{description="This boss can only be summoned by Horde players on the Amongst the Ruins quest.",g={
-i(16782,{b=1,lvl=21})}})}}),
-n(6243,{rwp=60002,g={
-s(158717,6906,{f=6,loc=44}),
-i(1470,{f=113}),
-s(158716,6905,{f=22})}}),
-n(4830,{rwp=60002,g={
-s(158715,6904,{f=20}),
-s(158713,6902,{f=5,loc=43}),
-s(158712,6901,{f=3})}}),
-n(4832,{rwp=60002,g={
-s(156206,1155,{f=28,spellID=1292652}),
-s(158714,6903,{f=4,loc=46})}}),
-n(4829,{rwp=60002,g={
-ach(632),
-s(158720,6909,{f=26}),
-s(158722,6911,{f=5,loc=45}),
-s(158721,6910,{f=4,loc=46}),
-crit(18526,{achID=62032,awp=16001,id=2})}})}}),
 inst(228,{coords={
 [35]={{39.06,18.12}}},description="The best route for a full clear is to enter Shadowforge City first time through the Dark Iron Highway. The Detention Block can be cleared whenever.",lore="Once the capital city of the Dark Iron dwarves, this volcanic labyrinth now serves as the seat of power for Ragnaros the Firelord. Ragnaros has uncovered the secret to creating life from stone and plans to build an army of unstoppable golems to aid him in conquering the whole of Blackrock Mountain. Obsessed with defeating Nefarian and his draconic minions, Ragnaros will go to any extreme to achieve final victory.",lvl=42,mapID=242,["zone-text-areaID"]=1584,g={
 h(-31,{
 faction(59,{maps={1427},OnTooltip=_.OnTooltipDB.ThoriumBrotherhood})}),
 h(-45,{
-q(7604,{lvl=60,providers={{"i",18628}},g={
+q(7604,{lvl=60,qss={18628},g={
 r(21161,{itemID=18592,requireSkill=164})}}),
-q(4264,{description="After completing the Abandoned Hope quest, kill trash until this item drops for you. If your group has not yet killed the Dark Keeper, they have a fairly high chance to drop this item as well.",lvl=50,providers={{"i",11446}},r=2,rwp=30002,sourceQuests={4242}}),
+q(4264,{description="After completing the Abandoned Hope quest, kill trash until this item drops for you. If your group has not yet killed the Dark Keeper, they have a fairly high chance to drop this item as well.",lvl=50,qss={11446},r=2,rwp=30002,sourceQuests={4242}}),
 q(4282,{lvl=50,qgs={9023},r=2,rwp=30002,sourceQuests={4264},g={
 qo(1,{providers={{"i",11464}}}),
 qo(2,{providers={{"i",11465}}})}}),
@@ -3050,7 +3303,7 @@ q(6642,{cost={{"i",11370,10}},lvl=60,maxReputation={59,42000},qgs={12944},repeat
 q(6643,{cost={{"i",17010,1}},lvl=60,maxReputation={59,42000},qgs={12944},repeatable=1}),
 q(6644,{cost={{"i",17011,1}},lvl=60,maxReputation={59,42000},qgs={12944},repeatable=1}),
 q(4122,{coords={
-[1418]={{5.9,47.6}}},lvl=52,providers={{"i",11286}},qgs={9080},r=1,rwp=40003,sourceQuests={4082}}),
+[1418]={{5.9,47.6}}},lvl=52,qgs={9080},qis={11286},r=1,rwp=40003,sourceQuests={4082}}),
 q(4126,{coords={
 [1426]={{46.8,52.4}}},lvl=50,qgs={1267},r=2,rwp=40003,sourceQuests={4128},g={
 qo(1,{providers={{"i",11312}}}),
@@ -3112,7 +3365,7 @@ q(6402,{coords={
 [1428]={{84.7,69}}},lvl=50,qgs={9560},r=2,rwp=30002,sourceQuests={4322}}),
 q(4361,{lvl=50,qgs={9021},r=2,rwp=40003,sourceQuests={4342}}),
 q(6501,{coords={
-[1453]={{78.2,18.1}}},description="Go to Haleh in Winterspring. Use the blue rune on the ground inside the cave to reach her. Don't bother going to Dustwallow Marsh.",lvl=50,providers={{"i",16662}},qgs={1748},r=2,rwp=30002,sourceQuests={6403}}),
+[1453]={{78.2,18.1}}},description="Go to Haleh in Winterspring. Use the blue rune on the ground inside the cave to reach her. Don't bother going to Dustwallow Marsh.",lvl=50,qgs={1748},qis={16662},r=2,rwp=30002,sourceQuests={6403}}),
 q(4002,{coords={
 [1454]={{31.61,37.83}}},lvl=48,qgs={4949},r=1,rwp=40003,sourceQuests={4001}}),
 q(4362,{coords={
@@ -3149,7 +3402,7 @@ q(4061,{coords={
 [1418]={{3.02,47.81}}},lvl=52,maps={1428},qgs={9079},r=1,rwp=40003,g={
 qo(1,{crs={7032,7039,8981},providers={{"i",11266}}})}}),
 q(4062,{coords={
-[1418]={{3.02,47.81}}},lvl=52,providers={{"i",11267}},qgs={9079},r=1,rwp=40003,sourceQuests={4061}}),
+[1418]={{3.02,47.81}}},lvl=52,qgs={9079},qis={11267},r=1,rwp=40003,sourceQuests={4061}}),
 q(4063,{coords={
 [1418]={{25.95,44.87}}},lvl=52,qgs={2921},r=1,rwp=40003,sourceQuests={4062},g={
 qo(1,{providers={{"i",11268}}}),
@@ -3170,16 +3423,16 @@ i(12102,{b=1,f=52})}}),
 q(4083,{cost={{"i",6037,10},{"i",7910,2},{"i",3577,20}},crs={9037},description="If you are a miner with 230 skill, speak with Gloom'rel to have him summon the Spectral Chalice.\n\nAfter you deposit the required items, speak to Gloom'rel again to learn how to smelt Dark Iron Ore.",lvl=40,providers={{"o",164869}},requireSkill=186,g={
 r(14891,{learnedAt=230,requireSkill=186,skillID=2946})}}),
 q(4183,{coords={
-[1428]={{85.8,69}}},lvl=48,providers={{"i",11366}},qgs={9562},r=2,rwp=30002,sourceQuests={4182}}),
+[1428]={{85.8,69}}},lvl=48,qgs={9562},qis={11366},r=2,rwp=30002,sourceQuests={4182}}),
 q(4184,{coords={
-[1433]={{30,44.5}}},lvl=48,providers={{"i",11367}},qgs={344},r=2,rwp=30002,sourceQuests={4183}}),
+[1433]={{24.9,44.4}}},lvl=48,qgs={344},qis={11367},r=2,rwp=30002,sourceQuests={4183}}),
 q(4185,{coords={
 [1453]={{78.2,18.1}}},lvl=48,qgs={1748},r=2,rwp=30002,sourceQuests={4184},g={
 qo(1,{providers={{"n",1749}}})}}),
 q(4186,{coords={
-[1453]={{78.2,18.1}}},lvl=48,providers={{"i",11368}},qgs={1748},r=2,rwp=30002,sourceQuests={4185}}),
+[1453]={{78.2,18.1}}},lvl=48,qgs={1748},qis={11368},r=2,rwp=30002,sourceQuests={4185}}),
 q(4223,{coords={
-[1433]={{30,44.5}}},lvl=48,qgs={344},r=2,rwp=30002,sourceQuests={4186}}),
+[1433]={{24.9,44.4}}},lvl=48,qgs={344},r=2,rwp=30002,sourceQuests={4186}}),
 q(4224,{coords={
 [1428]={{84.74,69.02}}},lvl=48,qgs={9560},r=2,rwp=30002,sourceQuests={4223},g={
 qo(1,{coords={
@@ -3194,38 +3447,27 @@ q(4324,{coords={
 h(-58,{
 n(12944,{
 i(18628,{b=1,cost={{"i",17203,1}},description="With a Sulfuron Ingot in your bags, speak with Lokhtos and click on the new chat option to obtain a Thorium Brotherhood Contract.",lvl=60,minReputation={59,0}}),
-r(23799,{b=1,itemID=19444,minReputation={59,3000},requireSkill=333,u=13}),
 i(17022,{b=1,f=200,minReputation={59,3000},requireSkill=10660}),
 r(20849,{b=1,itemID=17018,minReputation={59,3000},requireSkill=197}),
 i(17023,{b=1,f=200,minReputation={59,3000},requireSkill=10658}),
-i(17051,{b=1,f=200,minReputation={59,3000},requireSkill=9788}),
-r(25146,{b=1,itemID=20761,minReputation={59,3000},requireSkill=171,u=15}),
-r(23803,{b=1,itemID=19448,minReputation={59,9000},requireSkill=333,u=13}),
+r(20874,{b=1,itemID=17051,learnedAt=290,minReputation={59,3000},requireSkill=9788,skillID=2938}),
+r(25146,{b=1,itemID=20761,learnedAt=301,minReputation={59,3000},requireSkill=171,skillID=2937}),
 i(17025,{b=1,f=200,minReputation={59,9000},requireSkill=10656}),
 r(20848,{b=1,itemID=17017,minReputation={59,9000},requireSkill=197}),
 r(23666,{b=1,itemID=19219,minReputation={59,9000},requireSkill=197,u=13}),
 r(23707,{b=1,itemID=19330,minReputation={59,9000},requireSkill=165,u=13}),
-i(17060,{b=1,f=200,minReputation={59,9000},requireSkill=17041}),
-i(19206,{b=1,f=200,minReputation={59,9000},requireSkill=9788,u=13}),
-i(17059,{b=1,f=200,minReputation={59,9000},requireSkill=17039}),
-i(17049,{b=1,f=200,minReputation={59,9000},requireSkill=9788}),
-r(23804,{b=1,itemID=19449,minReputation={59,21000},requireSkill=333,u=13}),
+r(20897,{b=1,itemID=17060,learnedAt=320,minReputation={59,9000},requireSkill=17041,skillID=2938}),
+r(20890,{b=1,itemID=17059,learnedAt=320,minReputation={59,9000},requireSkill=17039,skillID=2938}),
+r(20872,{b=1,itemID=17049,learnedAt=290,minReputation={59,9000},requireSkill=9788,skillID=2938}),
 i(19331,{b=1,f=200,minReputation={59,21000},requireSkill=10656,u=13}),
 i(19332,{b=1,f=200,minReputation={59,21000},requireSkill=10660,u=13}),
 r(23667,{b=1,itemID=19220,minReputation={59,21000},requireSkill=197,u=13}),
 i(19333,{b=1,f=200,minReputation={59,21000},requireSkill=10658,u=13}),
-i(19208,{b=1,f=200,minReputation={59,21000},requireSkill=9787,u=13}),
-i(19209,{b=1,f=200,minReputation={59,21000},requireSkill=9787,u=13}),
-i(19207,{b=1,f=200,minReputation={59,21000},requireSkill=9788,u=13}),
-i(17052,{b=1,f=200,minReputation={59,21000},requireSkill=9788}),
-i(17053,{b=1,f=200,minReputation={59,21000},requireSkill=9788}),
-i(19211,{b=1,f=200,minReputation={59,42000},requireSkill=17039,u=13}),
-i(20040,{b=1,f=200,minReputation={59,42000},u=14}),
-i(19210,{b=1,f=200,minReputation={59,42000},requireSkill=17040,u=13}),
-i(19212,{b=1,f=200,minReputation={59,42000},requireSkill=17041,u=13})}),
+r(20876,{b=1,itemID=17052,learnedAt=320,minReputation={59,21000},requireSkill=9788,skillID=2938}),
+r(20873,{b=1,itemID=17053,learnedAt=320,minReputation={59,21000},requireSkill=9788,skillID=2938})}),
 n(9499,{
 i(15759,{f=200}),
-r(17560,{b=1,itemID=13483}),
+r(17560,{b=1,itemID=13483,learnedAt=275,requireSkill=171,skillID=2937}),
 i(11325,{f=55,spellID=14814})})}),
 h(-63,{
 i(11468),
@@ -3235,9 +3477,9 @@ i(11129),
 i(11269,{crs={8905,8906,8907,8908}}),
 i(15781,{crs={8903},f=200}),
 i(15770,{crs={8898},f=200}),
-r(15293,{b=1,description="|cFFFFD700Plans: Dark Iron Mail|r can spawn in one of four spots.\n\n|cFFFFFFFFLocation 1:|r Located in the |cFFFFD700West Garrison|r. After going up the ramp from where |cFFFFD700General Angerforge|r is located on your left are some tables. It will be located in the back corner where the Fireguard Destroyer is and two tables in front of it. This table is close to the table that has vases on it that is near the keg.\n\n|cFFFFFFFFLocation 2:|r In |cFFFFD700Golem Lord Argelmach's|r room. When you walk into the room it will be in the back left corner where in between barrels. There will be two barrels to the left and one barrel to the right of it.\n\n|cFFFFFFFFLocation 3:|r In |cFFFFD700The Manufactory|r, on a bench.\n\n|cFFFFFFFFLocation 4:|r After leaving the room with |cFFFFD700Ambassador Flamelash|r you will cross a bridge that leads into the |cFFFFD700Mold Foundry|r. Once you enter the room you will continue straight until you see the ramp. Instead of going down the ramp you will jump off the ledge to the right of the ramp. After landing on the ground you will see the plans located here.",itemID=11614,providers={{"o",173232}},requireSkill=164}),
-r(15295,{b=1,description="|cFFFFD700Plans: Dark Iron Shoulders|r spawn in one of two spots.\n\n|cFFFFFFFFLocation 1:|r In |cFFFFD700General Angerforge's|r room. They are sitting on the bottom shelf next to the floating crystal.\n\n|cFFFFFFFFLocation 2:|r On the ground in the |cFFFFD700Detention Block|r. After passing Lexlort you will continue down into the room. When you come across the first split into two rooms you will enter the room on the left. They will be located on the seat behind the bench which is located next to the 3 red jugs.",itemID=11615,providers={{"o",173232}},requireSkill=164}),
-i(11611,{crs={9554,10043},f=200,requireSkill=9787}),
+r(15293,{b=1,description="|cFFFFD700Plans: Dark Iron Mail|r can spawn in one of four spots.\n\n|cFFFFFFFFLocation 1:|r Located in the |cFFFFD700West Garrison|r. After going up the ramp from where |cFFFFD700General Angerforge|r is located on your left are some tables. It will be located in the back corner where the Fireguard Destroyer is and two tables in front of it. This table is close to the table that has vases on it that is near the keg.\n\n|cFFFFFFFFLocation 2:|r In |cFFFFD700Golem Lord Argelmach's|r room. When you walk into the room it will be in the back left corner where in between barrels. There will be two barrels to the left and one barrel to the right of it.\n\n|cFFFFFFFFLocation 3:|r In |cFFFFD700The Manufactory|r, on a bench.\n\n|cFFFFFFFFLocation 4:|r After leaving the room with |cFFFFD700Ambassador Flamelash|r you will cross a bridge that leads into the |cFFFFD700Mold Foundry|r. Once you enter the room you will continue straight until you see the ramp. Instead of going down the ramp you will jump off the ledge to the right of the ramp. After landing on the ground you will see the plans located here.",itemID=11614,learnedAt=265,providers={{"o",173232}},requireSkill=164,skillID=2938}),
+r(15295,{b=1,description="|cFFFFD700Plans: Dark Iron Shoulders|r spawn in one of two spots.\n\n|cFFFFFFFFLocation 1:|r In |cFFFFD700General Angerforge's|r room. They are sitting on the bottom shelf next to the floating crystal.\n\n|cFFFFFFFFLocation 2:|r On the ground in the |cFFFFD700Detention Block|r. After passing Lexlort you will continue down into the room. When you come across the first split into two rooms you will enter the room on the left. They will be located on the seat behind the bench which is located next to the 3 red jugs.",itemID=11615,learnedAt=275,providers={{"o",173232}},requireSkill=164,skillID=2938}),
+r(15294,{crs={9554,10043},itemID=11611,learnedAt=270,requireSkill=9787,skillID=2938}),
 r(19799,{crs={8920},itemID=16049,requireSkill=202}),
 r(19796,{crs={8897},itemID=16048,requireSkill=202}),
 r(22704,{description="On the floor next to Golem Lord Argelmach.",itemID=18235,providers={{"o",179552}}}),
@@ -3266,7 +3508,7 @@ s(160290,11626,{f=3}),
 s(160288,11624,{f=4,loc=41}),
 s(164865,22240,{f=6,loc=47,u=15})}}),
 e(370,{npcID=9025,g={
-r(15596,{itemID=11813,rwp=30100}),
+r(15596,{itemID=11813,learnedAt=285,requireSkill=333,skillID=2940}),
 s(160295,11631,{f=8}),
 s(160296,11632,{f=7,loc=41}),
 s(164864,22234,{f=4,loc=41,u=15}),
@@ -3294,7 +3536,7 @@ s(160312,11726,{f=6,loc=42,spellID=1292574}),
 s(164877,22271,{f=5,loc=46,u=15}),
 i(22257,{f=52,spellID=1300755,u=15})}),
 n(9028,{
-i(11610,{f=200,requireSkill=9787}),
+r(15292,{itemID=11610,learnedAt=260,requireSkill=9787,skillID=2938}),
 s(160309,11702,{f=21,spellID=1300763}),
 s(160311,11722,{f=6,loc=41}),
 s(160310,11703,{f=7,loc=45}),
@@ -3337,7 +3579,7 @@ s(160357,11842,{f=6,loc=41}),
 s(160356,11841,{f=4,loc=46})}})}),
 h(-352,{
 e(373,{npcID=9024,g={
-r(13898,{itemID=11207,requireSkill=333}),
+r(13898,{itemID=11207,learnedAt=285,requireSkill=333,skillID=2940}),
 s(160325,11750,{f=28,spellID=1300781}),
 s(160323,11748,{f=27}),
 s(160322,11747,{f=5,loc=42}),
@@ -3393,7 +3635,7 @@ s(163420,18043,{f=5,loc=47}),
 s(164881,22275,{f=5,loc=47,u=15})}}),
 e(9543,{description="Speak to him to start the encounter.",npcID=9543,g={
 i(11313),
-i(11612,{f=200,requireSkill=9788}),
+r(15296,{itemID=11612,learnedAt=280,requireSkill=9788,skillID=2938}),
 i(2663,{f=113,rwp=40001,spellID=14828}),
 i(2662,{f=113,rwp=40001,spellID=29415}),
 i(11742,{f=113})}}),
@@ -3458,16 +3700,16 @@ crit(3266,{achID=62033,awp=16001,id=7})}})})}}),
 inst(229,{lore="The mighty fortress carved within the fiery bowels of Blackrock Mountain was designed by the master dwarf-mason, Franclorn Forgewright. Intended to be the symbol of Dark Iron power, the fortress was held by the sinister dwarves for centuries. However, Nefarian - the cunning son of the dragon, Deathwing - had other plans for the great keep. He and his draconic minions took control of the upper Spire and made war on the dwarves' holdings in the mountain's volcanic depths. Realizing that the dwarves were led by the mighty fire elemental, Ragnaros - Nefarian vowed to crush his enemies and claim the whole of Blackrock mountain for himself.",lvl=50,mapID=250,["zone-text-areaID"]=1583,g={
 h(-45,{
 q(6601,{coords={
-[1445]={{56.8,87.4}}},lvl=55,maps={1443},providers={{"i",16888}},qgs={10321},r=1,rwp=40003,sourceQuests={6585}}),
+[1445]={{56.8,87.4}}},lvl=55,maps={1443},qgs={10321},qis={16888},r=1,rwp=40003,sourceQuests={6585}}),
 q(5001,{lvl=55,qgs={10257},r=2,rwp=40003,g={
 qo(1,{providers={{"i",12345},{"o",175334}}})}}),
 q(4982,{lvl=55,qgs={10257},r=1,rwp=40003,sourceQuests={4981},g={
 qo(1,{providers={{"i",12345},{"o",175334}}})}}),
-q(4983,{lvl=55,maps={1418},providers={{"i",12652}},qgs={10257},r=1,rwp=40003,sourceQuests={4982},g={
+q(4983,{lvl=55,maps={1418},qgs={10257},qis={12652},r=1,rwp=40003,sourceQuests={4982},g={
 s(162621,15858,{f=4,loc=44}),
 s(162622,15859,{f=6,loc=45})}}),
 q(7761,{coords={
-[1428]={{34.9,27.9}}},lvl=55,maps={33},providers={{"i",18987},{"o",179880}},qgs={9046},rwp=60003}),
+[1428]={{34.9,27.9}}},lvl=55,maps={33},providers={{"o",179880}},qgs={9046},qis={18987},rwp=60003}),
 q(6602,{coords={
 [1443]={{40.8,78.6},{42.4,96.8},{49.6,56.4},{50.6,75.2},{52,39.4},{54,3.2},{55.6,66.6},{59.8,37.6},{62.8,22.6}}},lvl=55,qgs={10182},r=1,rwp=40003,sourceQuests={6601},g={
 qo(1,{providers={{"i",16663}}}),
@@ -3488,7 +3730,7 @@ q(8181,{coords={
 s(164254,20218,{b=1,f=3}),
 s(164255,20219,{b=1,f=3})}}),
 q(4765,{coords={
-[1428]={{84.8,69}}},lvl=57,providers={{"i",12437}},qgs={9565},r=2,rwp=40003,sourceQuests={4764},g={
+[1428]={{84.8,69}}},lvl=57,qgs={9565},qis={12437},r=2,rwp=40003,sourceQuests={4764},g={
 s(162623,15860,{f=7,loc=43}),
 s(162624,15861,{f=5,loc=47})}}),
 q(4764,{coords={
@@ -3512,15 +3754,15 @@ q(4941,{coords={
 qo(1,{coords={
 [1454]={{34.4,38.4}}},providers={{"n",3144}}})}}),
 q(6570,{coords={
-[1422]={{50.8,77.8}}},lvl=55,maps={1445},providers={{"i",16787}},qgs={11872},r=1,rwp=40003,sourceQuests={6569},g={
+[1422]={{50.8,77.8}}},lvl=55,maps={1445},qgs={11872},qis={16787},r=1,rwp=40003,sourceQuests={6569},g={
 i(16787,{f=51,spellID=19937})}}),
 q(4862,{coords={
 [1428]={{65.8,22}}},lvl=55,qgs={10260},rwp=40003,g={
 qo(1,{description="Interacting with a spider egg may spawn baby spiders, beware!",providers={{"i",12530},{"o",175606}}}),
-i(12529,{spellID=16450})}}),
+p(90,{itemID=12529,npcID=10598,spellID=16450})}}),
 q(5124,{coords={
-[1452]={{61,38.8}}},cost={{"i",7910,4},{"i",7078,2},{"i",12655,6},{"i",12812,1}},lvl=55,qgs={10637},requireSkill=9788,rwp=40003,sourceQuests={5103},g={
-i(12699,{b=1,f=200,requireSkill=9788}),
+[1452]={{61,38.8}}},cost={{"i",7910,4},{"i",7078,2},{"i",12655,6},{"i",12812,1}},lvl=55,qgs={10637},requireSkill=9788,sourceQuests={5103},g={
+r(16655,{b=1,itemID=12699,learnedAt=285,requireSkill=9788,skillID=2938}),
 s(160593,12631,{f=7,loc=44,lvl=53,requireSkill=9788,spellID=7721})}}),
 q(4974,{coords={
 [1454]={{32,37.8}}},lvl=55,qgs={4949},r=1,rwp=40003,sourceQuests={4941},g={
@@ -3528,7 +3770,7 @@ qo(1,{providers={{"i",12630}}}),
 i(13965,{f=53,spellID=1318944}),
 i(13968,{f=53,spellID=1287840}),
 i(13966,{f=53,spellID=1287842})}}),
-q(5089,{lvl=55,providers={{"i",12780}},r=2,rwp=40003}),
+q(5089,{lvl=55,qss={12780},r=2,rwp=40003}),
 q(5102,{coords={
 [1428]={{84.6,68.8}}},lvl=55,qgs={9560},r=2,rwp=40003,sourceQuests={5089},g={
 qo(1,{providers={{"n",10363}}}),
@@ -3540,7 +3782,7 @@ i(12812,{b=1,providers={{"o",176089}},requireSkill=9788})}}),
 q(4729,{coords={
 [1428]={{65.8,22}}},lvl=55,qgs={10260},rwp=40003,g={
 qo(1,{cost={{"i",12262,1}},crs={10221},description="Can be pulled outside of the room without engaging the boss.",providers={{"i",12263}}}),
-i(12264,{spellID=15999})}}),
+p(89,{itemID=12264,npcID=10259,spellID=15999})}}),
 q(5067,{coords={
 [1452]={{61,38.8}}},cost={{"i",12736,5},{"i",12360,5},{"i",12735,5},{"i",12731,1},{"g",500000}},lvl=57,maps={317,476},qgs={10637},repeatable=1,rwp=40003,sourceQuests={5047},g={
 s(160620,12756,{f=5,loc=46})}}),
@@ -3549,7 +3791,7 @@ q(5167,{coords={
 s(160680,12903,{f=6,loc=46}),
 s(160696,12945,{f=6,loc=46})}}),
 q(5126,{coords={
-[1452]={{63.8,73.8}}},description="Have an Unforged Rune Covered Breastplate in your bags to make his dialog available.",learnedAt=275,lvl=55,providers={{"i",12806}},qgs={10918},requireSkill=164,rwp=40003}),
+[1452]={{63.8,73.8}}},description="Have an Unforged Rune Covered Breastplate in your bags to make his dialog available.",learnedAt=275,lvl=55,qgs={10918},qis={12806},requireSkill=164,rwp=40003}),
 q(5081,{coords={
 [1428]={{84.6,68.8}}},lvl=55,qgs={9560},r=2,rwp=40003,sourceQuests={5002},g={
 qo(1,{providers={{"n",9237}}}),
@@ -3562,7 +3804,7 @@ s(161199,13959,{f=7,loc=45,spellID=1298501}),
 s(161201,13962,{f=5,loc=45})}}),
 q(4766,{altQuests={4764},coords={
 [1453]={{74,30}}},lvl=57,qgs={2285},r=2,rwp=40003}),
-q(5002,{lvl=55,maps={1428},providers={{"i",12770}},qgs={10257},r=2,rwp=40003,sourceQuests={5001}}),
+q(5002,{lvl=55,maps={1428},qgs={10257},qis={12770},r=2,rwp=40003,sourceQuests={5001}}),
 q(4866,{coords={
 [1428]={{65,23.6}}},description="You need to setup a coordinated group ONLY for this. If the healer or ANYONE removes the poison, you have to reset and try again.\n\nBefore the group starts, set your hearth to Stormwind or have a mage for a quick port to Stormwind after the group has gotten their bites.",lvl=55,qgs={9563},rwp=40003,g={
 qo(1,{providers={{"n",10596}}}),
@@ -3572,7 +3814,7 @@ q(6569,{coords={
 qo(1,{providers={{"i",16786}}})}}),
 q(4981,{coords={
 [1418]={{5.8,47.6}}},lvl=55,qgs={9080},r=1,rwp=40003}),
-q(5047,{crs={10430},description="Kill The Beast in UBRS. Using Pip's Skinner and a 300 Skill Skinner, skin the boss and Pip Quickwit will appear. Everyone in the raid can pick up this quest at that time.",lvl=57,maps={1452},providers={{"i",12710}},qgs={10776},rwp=40003}),
+q(5047,{crs={10430},description="Kill The Beast in UBRS. Using Pip's Skinner and a 300 Skill Skinner, skin the boss and Pip Quickwit will appear. Everyone in the raid can pick up this quest at that time.",lvl=57,maps={1452},qgs={10776},qis={12710},rwp=40003}),
 q(4701,{coords={
 [1428]={{85.6,69}}},lvl=55,qgs={9562},r=2,rwp=40003,g={
 qo(1,{providers={{"n",10220}}}),
@@ -3599,7 +3841,7 @@ q(5127,{coords={
 [1452]={{63.8,73.8}}},learnedAt=275,lvl=55,qgs={10918},requireSkill=9788,rwp=40003,sourceQuests={5126},g={
 qo(1,{cost={{"i",12848,1}},crs={10899},providers={{"i",12847}},requireSkill=9788}),
 qo(2,{providers={{"i",12806}},requireSkill=9788}),
-i(12696,{b=1,f=200,requireSkill=9788}),
+r(16667,{b=1,itemID=12696,learnedAt=280,requireSkill=9788,skillID=2938}),
 i(9224,{f=55,lvl=40,requireSkill=9788,spellID=11406}),
 i(12849,{b=1,requireSkill=9788})}}),
 q(4788,{coords={
@@ -3614,7 +3856,7 @@ qo(1,{coords={
 [1423]={{72.4,13}}},providers={{"i",12411},{"o",175487}}}),
 qo(2,{coords={
 [1423]={{72.7,15.7}}},providers={{"i",12412},{"o",175488}}})}}),
-q(5160,{description="Speak with Awbee in UBRS to accept this quest. Most tanks skip the two mobs near Awbee, so you should mention it to them.",lvl=57,maps={1452},providers={{"i",12923}},qgs={10740},rwp=40003}),
+q(5160,{description="Speak with Awbee in UBRS to accept this quest. Most tanks skip the two mobs near Awbee, so you should mention it to them.",lvl=57,maps={1452},qgs={10740},qis={12923},rwp=40003}),
 q(4724,{coords={
 [1418]={{5.8,47.6}}},lvl=55,qgs={9081},r=1,rwp=40003,g={
 qo(1,{providers={{"n",10220}}}),
@@ -3638,19 +3880,19 @@ q(6583,{coords={
 qo(1,{coords={
 [1435]={{80.2,57.2}}},providers={{"i",16870}},qgs={12900}})}}),
 q(6568,{coords={
-[1443]={{40.8,78.6},{42.4,96.8},{49.6,56.4},{50.6,75.2},{52,39.4},{54,3.2},{55.6,66.6},{59.8,37.6},{62.8,22.6}}},lvl=55,maps={1422},providers={{"i",16785}},qgs={10182},r=1,rwp=40003,sourceQuests={6567}}),
+[1443]={{40.8,78.6},{42.4,96.8},{49.6,56.4},{50.6,75.2},{52,39.4},{54,3.2},{55.6,66.6},{59.8,37.6},{62.8,22.6}}},lvl=55,maps={1422},qgs={10182},qis={16785},r=1,rwp=40003,sourceQuests={6567}}),
 q(4809,{coords={
 [1452]={{61.6,38.6}}},lvl=50,qgs={10468},rwp=40003,sourceQuests={4808},g={
 qo(1,{crs={7447,7448,7449},providers={{"i",12444}}})}}),
 q(4907,{coords={
 [1452]={{61.6,38.6}}},isBreadcrumb=1,lvl=57,nextQuests={4734},qgs={10468},rwp=40003,sourceQuests={4810}}),
-q(4867,{lvl=55,providers={{"i",12730}},qgs={10799},rwp=40003,g={
+q(4867,{lvl=55,qgs={10799},qis={12730},rwp=40003,g={
 qo(1,{providers={{"i",12712}}}),
 i(15867,{f=53,spellID=19638})}}),
 q(4769,{coords={
 [1458]={{49.8,68.2}}},isBreadcrumb=1,lvl=57,nextQuests={4768},qgs={5204},r=1,rwp=40003}),
 q(4903,{coords={
-[1418]={{5.8,47.6}}},description="Talk to Warlord Goretooth and read through his full dialog for the item that starts the quest to be given to you.",lvl=55,providers={{"i",12563}},qgs={9077},r=1,rwp=40003,g={
+[1418]={{5.8,47.6}}},description="Talk to Warlord Goretooth and read through his full dialog for the item that starts the quest to be given to you.",lvl=55,qgs={9077},qis={12563},r=1,rwp=40003,g={
 qo(1,{providers={{"n",9568}}}),
 qo(2,{providers={{"n",9196}}}),
 qo(3,{providers={{"n",9237}}}),
@@ -3683,12 +3925,12 @@ s(163031,16716,{crs={9258,9692},f=5,loc=45,lvl=53,rwp=40003}),
 s(163032,16717,{crs={9262,9692},f=5,loc=44,lvl=54,rwp=40003})}),
 h(-353,{
 h(-63,{
-r(20013,{crs={9198},itemID=16244,requireSkill=333,rwp=20300}),
-r(20031,{crs={9216},itemID=16250,requireSkill=333}),
+r(20013,{crs={9198},itemID=16244,learnedAt=315,requireSkill=333,skillID=2940}),
+r(20031,{crs={9216},itemID=16250,learnedAt=320,requireSkill=333,skillID=2940}),
 r(18457,{crs={9264},itemID=14513,requireSkill=197}),
 i(15749,{crs={9259},f=200,requireSkill=10658}),
 i(15775,{crs={9260},f=200,requireSkill=10658}),
-r(17574,{crs={9262,9264},itemID=13494,requireSkill=171}),
+r(17574,{crs={9262,9264},itemID=13494,learnedAt=305,requireSkill=171,skillID=2937}),
 i(21982,{crs={9196,9197,9198,9199,9200,9201,9216,9217,9218,10584},rwp=40003,u=15}),
 i(12219,{rwp=40003})}),
 n(9257,{description="DO NOT KILL this mob if you are trying to get the Burning Felguard to spawn.",g={
@@ -3745,7 +3987,7 @@ s(164903,22325,{f=5,loc=45,u=15}),
 s(164894,22306,{f=4,loc=45,u=15}),
 i(22398,{f=54,rwp=50004,spellID=27853,u=15})}}),
 n(9596,{description="This is a Rare Creature and, as such, is not always present.",g={
-i(12838,{f=200,requireSkill=17041}),
+r(16994,{itemID=12838,learnedAt=320,requireSkill=17041,skillID=2938}),
 s(160587,12621,{f=21}),
 s(160598,12637,{f=7,loc=44}),
 s(160596,12634,{f=6,loc=45})}}),
@@ -3766,7 +4008,7 @@ s(164863,22232,{f=6,loc=45,u=15}),
 s(160917,13259,{f=7,loc=47}),
 i(13178,{f=52})}}),
 e(393,{npcID=9736,g={
-i(12835,{f=200,requireSkill=17041}),
+r(16991,{itemID=12835,learnedAt=295,requireSkill=17041,skillID=2938}),
 s(160911,13253,{f=4,loc=44}),
 s(160910,13252,{f=5,loc=45}),
 i(13247,{b=1,description="Contains a random green item.",rwp=60002})}}),
@@ -3800,7 +4042,7 @@ crit(18534,{achID=62033,awp=16001,id=9})}})}),
 h(-354,{cost={{"i",12344,1}},g={
 h(-63,{
 i(12607,{crs={10442,10447,10814},rwp=60002}),
-r(20030,{crs={10317},itemID=16247,requireSkill=333,rwp=60002}),
+r(20030,{crs={10317},itemID=16247,learnedAt=315,requireSkill=333,skillID=2940}),
 r(31016,{c={4},crs={10318},itemID=24102,lvl=60,rank=9,rwp=40001,u=16}),
 s(160918,13260,{f=6,loc=47})}),
 n(9816,{rwp=60002,g={
@@ -3827,15 +4069,15 @@ i(12930,{f=53,spellID=1301707})}}),
 n(10899,{rwp=60002,g={
 i(18779,{lvl=50,rwp=40001,spellID=23231}),
 i(12848,{b=1,description="Found on the rack behind Anvilcrack in Upper Blackrock Spire.",providers={{"o",175970}},rwp=40003,spellID=17048}),
-i(12834,{f=200,requireSkill=17039}),
+r(16990,{itemID=12834,learnedAt=320,requireSkill=17039,skillID=2938}),
 i(12728,{f=200,requireSkill=10658}),
-i(12837,{f=200,requireSkill=17040}),
+r(16993,{itemID=12837,learnedAt=320,requireSkill=17040,skillID=2938}),
 s(163423,18048,{f=23}),
 s(160992,13502,{f=7,loc=45}),
 s(160991,13498,{f=7,loc=46}),
 s(163422,18047,{f=6,loc=47,spellID=1301625})}}),
 n(10339,{rwp=60002,g={
-r(17638,{itemID=13522,rwp=50004}),
+r(17638,{itemID=13522,learnedAt=315,requireSkill=171,rwp=50004,skillID=2937}),
 i(12871),
 s(160702,12953,{f=6,loc=40}),
 s(164860,22225,{f=4,loc=40,u=15}),
@@ -3885,7 +4127,7 @@ n(10363,{rwp=60002,g={
 ach(1307),
 i(16663,{rwp=40003}),
 i(15730,{b=1,f=200,requireSkill=10656}),
-r(17635,{itemID=13519}),
+r(17635,{itemID=13519,learnedAt=315,requireSkill=171,skillID=2937}),
 s(160567,12592,{f=26}),
 s(160569,12602,{f=8}),
 s(164870,22253,{f=1,u=15}),
@@ -3930,10 +4172,10 @@ q(5526,{coords={
 qo(1,{awp=10200,cost={{"i",18501,1},{"i",18539,1}},providers={{"i",18540}},u=1101}),
 s(163602,18535,{f=8,u=1101}),
 s(163603,18536,{f=1,u=1101})}}),
-q(7499,{c={1},lvl=54,maps={236,237,238},providers={{"i",18357},{"n",14383}},rwp=40003,u=1101,g={
+q(7499,{c={1},lvl=54,maps={236,237,238},providers={{"n",14383}},qss={18357},rwp=40003,u=1101,g={
 i(18466,{f=53,u=1101})}}),
 q(7631,{c={9},coords={
-[1428]={{12.6,31.6}}},lvl=60,maps={236,237,238},providers={{"i",18818}},qgs={14436},rwp=40003,sourceQuests={7629},u=1101,g={
+[1428]={{12.6,31.6}}},lvl=60,maps={236,237,238},qgs={14436},qis={18818},rwp=40003,sourceQuests={7629},u=1101,g={
 ach(2357,{c={9},sourceQuests={7631},u=1101}),
 mnt(23161,{awp=10200,c={9},providers={{"n",14502},{"n",14504}},u=1101})}}),
 q(7482,{coords={
@@ -3942,11 +4184,11 @@ qo(1,{providers={{"o",179544}},u=1101})}}),
 q(7481,{coords={
 [1444]={{75.3,43.8}}},lvl=54,maps={236,237,238},qgs={14373},r=1,rwp=40003,u=1101,g={
 qo(1,{providers={{"o",179544}},u=1101})}}),
-q(7649,{cost={{"i",18780,1},{"i",18779,1}},maps={236,250},providers={{"i",18769},{"n",14368}},requireSkill=9788,rwp=40003,u=13,g={
+q(7649,{cost={{"i",18780,1},{"i",18779,1}},maps={236,250},providers={{"n",14368}},qss={18769},requireSkill=9788,rwp=40003,u=13,g={
 i(12727,{b=1,f=200,requireSkill=9788,u=13})}}),
-q(7650,{cost={{"i",18782,1},{"i",18781,1}},lvl=50,maps={236,317,476},providers={{"i",18770},{"n",14368}},requireSkill=9788,rwp=40003,u=13,g={
-i(12726,{b=1,f=200,requireSkill=9788,u=13})}}),
-q(7651,{cost={{"i",18784,1},{"i",18783,1}},lvl=50,maps={236,237,238,250,317},providers={{"i",18771},{"n",14368}},requireSkill=9788,rwp=40003,u=13,g={
+q(7650,{cost={{"i",18782,1},{"i",18781,1}},lvl=50,maps={236,317,476},providers={{"n",14368}},qss={18770},requireSkill=9788,rwp=40003,u=13,g={
+r(16744,{b=1,itemID=12726,learnedAt=320,requireSkill=9788,skillID=2938,u=13})}}),
+q(7651,{cost={{"i",18784,1},{"i",18783,1}},lvl=50,maps={236,237,238,250,317},providers={{"n",14368}},qss={18771},requireSkill=9788,rwp=40003,u=13,g={
 i(12725,{b=1,f=200,requireSkill=9788,u=13})}}),
 q(7494,{coords={
 [1453]={{54.8,62.6}},
@@ -3954,13 +4196,13 @@ q(7494,{coords={
 [1457]={{39,63.6}}},isBreadcrumb=1,lvl=54,maps={1444},nextQuests={7488},qgs={2198,10877,10878},r=2,rwp=40003,u=1101}),
 q(5525,{cost={{"i",18250,1}},description="Freeing him gets you access to his Cache.\n\nNOTE: Do not free him until after you have finished your Tribute Run!",lvl=54,maps={235},qgs={14338},rwp=40003,u=1101}),
 q(7429,{cost={{"i",18250,1}},description="Freeing him gets you access to his Cache.\n\nNOTE: Do not free him until after you have finished your Tribute Run!",lvl=54,maps={235},maxReputation={169,42000},qgs={14338},repeatable=1,rwp=40003,sourceQuests={5525},u=1101}),
-q(7505,{c={7},lvl=54,maps={236,237,238},providers={{"i",18363},{"n",14381}},r=1,rwp=40003,u=1101,g={
+q(7505,{c={7},lvl=54,maps={236,237,238},providers={{"n",14381}},qss={18363},r=1,rwp=40003,u=1101,g={
 i(18471,{f=53,spellID=1318476,u=1101})}}),
-q(7498,{c={4},lvl=54,maps={236,237,238},providers={{"i",18356},{"n",14383}},rwp=40003,u=1101,g={
+q(7498,{c={4},lvl=54,maps={236,237,238},providers={{"n",14383}},qss={18356},rwp=40003,u=1101,g={
 i(18465,{f=53,u=1101})}}),
-q(7502,{c={9},lvl=54,maps={236,237,238},providers={{"i",18360},{"n",14382}},rwp=40003,u=1101,g={
+q(7502,{c={9},lvl=54,maps={236,237,238},providers={{"n",14382}},qss={18360},rwp=40003,u=1101,g={
 i(18467,{f=53,spellID=1318479,u=1101})}}),
-q(7504,{c={5},lvl=54,maps={236,237,238},providers={{"i",18362},{"n",14381}},rwp=40003,u=1101,g={
+q(7504,{c={5},lvl=54,maps={236,237,238},providers={{"n",14381}},qss={18362},rwp=40003,u=1101,g={
 i(18469,{f=53,spellID=1318480,u=1101})}}),
 q(7488,{coords={
 [1444]={{30.4,46.2}}},lvl=54,maps={239},qgs={7877},r=2,rwp=40003,sourceQuests={7494},u=1101,g={
@@ -3981,9 +4223,9 @@ q(7441,{coords={
 qo(1,{awp=10200,providers={{"i",18261}},u=1101}),
 s(163520,18410,{f=26,u=1101}),
 s(163521,18411,{f=5,loc=47,spellID=24090,u=1101})}}),
-q(7500,{c={8},lvl=54,maps={236,237,238},providers={{"i",18358},{"n",14383}},rwp=40003,u=1101,g={
+q(7500,{c={8},lvl=54,maps={236,237,238},providers={{"n",14383}},qss={18358},rwp=40003,u=1101,g={
 i(18468,{f=53,u=1101})}}),
-q(7506,{c={11},lvl=54,maps={236,237,238},providers={{"i",18364},{"n",14381}},rwp=40003,u=1101,g={
+q(7506,{c={11},lvl=54,maps={236,237,238},providers={{"n",14381}},qss={18364},rwp=40003,u=1101,g={
 i(18470,{f=53,spellID=1318478,u=1101})}}),
 q(5518,{cost={{"i",18240,1},{"i",14341,2},{"i",8170,8},{"i",14048,4}},lvl=56,maps={235},qgs={14338},rwp=40003,u=1101,g={
 r(22813,{learnedAt=285,requireSkill=197,skillID=2948,u=1101}),
@@ -3994,9 +4236,9 @@ i(18258,{lvl=55,spellID=22736,u=1101})}}),
 q(5528,{description="With Stomper Kreeg left alive, kill |cFFFFD700King Gordok|r to become king, and then return to the courtyard.\n\nHe sells these items after you have completed the quest and if you are Friendly with him.",lvl=56,maps={235},qgs={14322},rwp=40003,u=1101,g={
 i(18269,{b=1,f=55,spellID=22789,u=1101}),
 i(18284,{b=1,f=55,spellID=22790,u=1101})}}),
-q(7503,{c={3},lvl=54,maps={236,237,238},providers={{"i",18361},{"n",14382}},rwp=40003,u=1101,g={
+q(7503,{c={3},lvl=54,maps={236,237,238},providers={{"n",14382}},qss={18361},rwp=40003,u=1101,g={
 i(18473,{f=53,u=1101})}}),
-q(7501,{c={2},lvl=54,maps={236,237,238},providers={{"i",18359},{"n",14382}},rwp=40003,u=1101,g={
+q(7501,{c={2},lvl=54,maps={236,237,238},providers={{"n",14382}},qss={18359},rwp=40003,u=1101,g={
 i(18472,{f=53,spellID=1318477,u=1101})}}),
 q(7461,{lvl=56,maps={236,237,238},qgs={14358},rwp=40003,u=1101,g={
 qo(1,{providers={{"n",11496}},u=1101}),
@@ -4254,164 +4496,6 @@ s(163496,18375,{f=5,loc=43,u=1101}),
 s(163501,18380,{f=7,loc=46,u=1101}),
 s(163499,18378,{f=6,loc=46,u=1101}),
 i(18395,{f=52,u=1101})}})}})}}),
-inst(231,{coords={
-[1426]={{18.4,38.6}}},lore="Located in Dun Morogh, the technological wonder known as Gnomeregan has been the gnomes' capital city for generations. Recently, a hostile race of mutant troggs infested several regions of Dun Morogh - including the great gnome city. In a desperate attempt to destroy the invading troggs, High Tinker Mekkatorque ordered the emergency venting of the city's radioactive waste tanks. Several gnomes sought shelter from the airborne pollutants as they waited for the troggs to die or flee. Unfortunately, though the troggs became irradiated from the toxic assault - their siege continued, unabated. Those gnomes who were not killed by noxious seepage were forced to flee, seeking refuge in the nearby dwarven city of Ironforge. There, High Tinker Mekkatorque set out to enlist brave souls to help his people reclaim their beloved city.\n\nIt is rumored that Mekkatorque's once-trusted advisor, Mekgineer Thermaplug, betrayed his people by allowing the invasion to happen. Now, his sanity shattered, Thermaplug remains in Gnomeregan - furthering his dark schemes and acting as the city's new techno-overlord.",lvl=19,mapID=226,["zone-text-areaID"]=133,g={
-h(-63,{
-s(159404,9510,{crs={6228,6235,7079,7800},f=6,loc=47}),
-i(5108,{crs={6212},f=5,loc=42,lvl=27}),
-s(159399,9490,{crs={6206,6207,6212,6220,6222,6223,6225,6226,6227,6230,6232,6233,6234,6329,7603},f=26}),
-i(9308),
-i(9326,{b=1,crs={6212},lvl=28}),
-s(159398,9489,{crs={6212,6220,6227,6230,6232,6233,6234,7603},f=27}),
-s(159396,9487,{crs={6206,6207,6211,6212,6220,6223,6230,6232,6233,6234,6329,6391,7603},f=31}),
-s(159400,9491,{f=4,loc=44}),
-s(159402,9508,{crs={6212,6223,6230,6232,6233,6234},f=4,loc=42}),
-s(159397,9488,{crs={6206,6207,6211,6212,6223,6225,6226,6227,6230,6232,6233,6234,6329,7603},f=23}),
-s(159403,9509,{crs={6206,6207,6212,6218,6220,6223,6227,6230,6232,6233,6234,6329,6391,7603},f=5,loc=46,spellID=1293003}),
-i(9309,{description="These can drop from any mechanical unit in Gnomeregan.",r=2}),
-s(159395,9486,{crs={6206,6207,6211,6212,6220,6223,6224,6225,6227,6230,6232,6233,6234,6329,6392},f=22}),
-s(159394,9485,{crs={6206,6207,6212,6220,6223,6226,6227,6230,6232,6233,6234,6329,7603},f=21}),
-i(9279,{b=1,description="This can be looted from creatures outside of the instance.",rwp=50004})}),
-h(-45,{
-ah(142487,{type="o",g={
-q(2951,{cost={{"i",9308,1}},providers={{"o",142487}}}),
-q(4601,{cost={{"i",9308,1}},providers={{"o",15084}}}),
-q(4602,{cost={{"i",9308,1}},providers={{"o",15085}}}),
-q(2952,{cost={{"i",9308,1}},providers={{"o",142487}},sourceQuests={2951},g={
-i(9363,{b=1})}}),
-q(4605,{cost={{"i",9308,1}},providers={{"o",15084}},sourceQuests={4601},g={
-i(9363,{b=1})}}),
-q(4606,{cost={{"i",9308,1}},providers={{"o",15085}},sourceQuests={4602},g={
-i(9363,{b=1})}}),
-q(2953,{cost={{"i",9308,1}},providers={{"o",142487}},repeatable=1,sourceQuests={2952},g={
-i(9363,{b=1})}}),
-q(4603,{cost={{"i",9308,1}},providers={{"o",15084}},repeatable=1,sourceQuests={4605},g={
-i(9363,{b=1})}}),
-q(4604,{cost={{"i",9308,1}},providers={{"o",15085}},repeatable=1,sourceQuests={4606},g={
-i(9363,{b=1})}})}}),
-q(2904,{lvl=20,maps={1434},qgs={7850},rwp=40003,g={
-s(159421,9536,{f=4,loc=41}),
-s(159420,9535,{f=6,loc=43})}}),
-q(2931,{coords={
-[1442]={{59.6,67}}},isBreadcrumb=1,lvl=25,nextQuests={2930},qgs={4077},r=2,rwp=40003}),
-q(2842,{coords={
-[1454]={{75.6,25.2}}},description="Although this quest is available from level 20, if you take or complete it, it makes it impossible to obtain the 'Rig Wars' quest, which is available at level 25. However, if you take 'Rig Wars' first, you can have both quest without problems.",lvl=20,maps={1434},qgs={3413},r=1,rwp=40003}),
-q(2930,{coords={
-[1455]={{70.2,48.4}}},lvl=25,qgs={7950},r=2,rwp=40003,sourceQuests={2931},g={
-qo(1,{providers={{"i",9316}}}),
-s(159427,9604,{f=24}),
-s(159428,9605,{f=3})}}),
-q(2924,{coords={
-[1455]={{68.2,46.2}}},lvl=24,qgs={6169},r=2,rwp=40003,sourceQuests={2925},g={
-qo(1,{description="These are scattered throughout the instance. They are loud mechanical mailboxes.",providers={{"i",9278},{"o",142344}}})}}),
-q(2926,{coords={
-[1426]={{45.8,49.2}}},lvl=20,qgs={1268},r=2,sourceQuests={2927},g={
-qo(1,{cost={{"i",9283,1}},crs={6329},providers={{"i",9284}}})}}),
-q(2948,{coords={
-[1455]={{36.2,3.8}}},cost={{"i",1206,1},{"i",2842,1},{"i",9362,1},{"g",3000}},lvl=28,qgs={6826},r=2,sourceQuests={2947},g={
-i(9538,{f=52})}}),
-q(2843,{coords={
-[1434]={{27.6,77.4}}},lvl=20,qgs={7853},r=1,rwp=40003,sourceQuests={2842},g={
-i(9173,{description="You do not need to keep this in your inventory. You can simply discard it after transporting. To get another one, simply speak to Scooty again and tell him that you lost the first one."})}}),
-q(2945,{description="Take this to The Sparklematic 5200.",lvl=24,providers={{"i",9326}},g={
-i(9362,{b=1,f=52})}}),
-q(2928,{coords={
-[1453]={{55.5,12.5}}},lvl=20,qgs={6579},r=2,rwp=40003,g={
-qo(1,{providers={{"i",9309}}}),
-s(159430,9608,{b=1,f=21}),
-s(159431,9609,{b=1,f=4,loc=44})}}),
-q(2925,{coords={
-[1457]={{59.2,45.2}}},isBreadcrumb=1,lvl=24,nextQuests={2924},qgs={6142},r=2,rwp=40003}),
-q(2950,{coords={
-[1454]={{75.8,25.2}}},cost={{"i",1206,1},{"i",2842,1},{"i",9362,1},{"g",3000}},lvl=28,qgs={3412},r=1,sourceQuests={2949},g={
-i(9588,{f=52})}}),
-q(2947,{lvl=28,maps={1455},providers={{"o",142487}},r=2,sourceQuests={2945},g={
-i(9362,{b=1,f=52})}}),
-q(2949,{lvl=28,maps={1454},providers={{"o",142487}},r=1,sourceQuests={2945},g={
-i(9362,{b=1,f=52})}}),
-q(2841,{coords={
-[1454]={{75.8,25.2}}},lc={1,"questID",2842},lvl=25,qgs={3412},r=1,rwp=40003,g={
-qo(1,{providers={{"i",9153},{"o",142477}}}),
-qo(2,{crs={7800},providers={{"i",9299}}}),
-s(159432,9623,{f=4,loc=42}),
-s(159434,9625,{f=6,loc=46}),
-s(159433,9624,{f=5,loc=46})}}),
-q(2922,{coords={
-[1455]={{70.4,49.4}}},lvl=20,qgs={7944},r=2,rwp=40003,sourceQuests={2923},g={
-qo(1,{providers={{"i",9277}}})}}),
-q(2927,{coords={
-[1455]={{69.6,50.6}}},isBreadcrumb=1,lvl=20,nextQuests={2926},qgs={6569},r=2,rwp=40003}),
-q(2929,{coords={
-[1455]={{69.2,49.2}}},lvl=25,qgs={7937},r=2,rwp=40003,g={
-qo(1,{providers={{"n",7800}}}),
-s(159432,9623,{f=4,loc=42}),
-s(159434,9625,{f=6,loc=46}),
-s(159433,9624,{f=5,loc=46})}}),
-q(2962,{coords={
-[1426]={{45.8,49.2}}},lvl=20,qgs={1268},r=2,rwp=40003,sourceQuests={2926},g={
-qo(1,{cost={{"i",9364,1}},crs={6219},providers={{"i",9365}}})}}),
-q(2923,{coords={
-[1453]={{40.6,30}}},isBreadcrumb=1,lvl=20,maps={1455},nextQuests={2922},qgs={7917},r=2,rwp=40003})}),
-h(-47,{
-ah(9363,{description="Kill hostile creatures for [Grime-Encrusted Object], clean them at the Sparklematic 5200 to receive this box.",providers={{"i",9363}},type="i",g={
-i(9280),
-i(10299,{b=1,f=51,lvl=26}),
-i(10298,{b=1,f=52,lvl=25})}})}),
-o(142345,{cost={{"i",9279,1}},description="This is located outside of the instance just to the north of both the elevator or the transporter.",rwp=50004,g={
-i(9280)}}),
-n(6231,{description="Located outside the instance near the teleporter.",rwp=40003,g={
-i(9277),
-s(159364,9444,{f=8,lvl=21})}}),
-e(419,{npcID=7361,g={
-s(159365,9445,{f=6,loc=44})}}),
-o(142475,{cost={{"i",9280,1}},description="This is located in the bottom of the Dormitories.",g={
-i(9282),
-r(3952,{description="If you are an Engineer, you will also get these plans by turning in the Yellow Punch Card.",itemID=14639,requireSkill=202})}}),
-o(142476,{cost={{"i",9282,1}},description="This is located at the bottom of the platform in the Engineering Labs.",g={
-i(9281)}}),
-e(420,{npcID=7079,g={
-s(159370,9452,{f=28,spellID=11789}),
-s(159371,9453,{f=20}),
-s(159372,9454,{f=4,loc=47})}}),
-e(421,{npcID=6235,g={
-i(6893,{b=1,description="This key allows you to get into the back door of Gnomeregan.",spellID=3366}),
-s(159366,9446,{f=25}),
-s(159367,9448,{f=4,loc=43}),
-i(9447,{f=52})}}),
-o(142696,{cost={{"i",9281,1}},description="This is located in the Workshop below Crowd Pummeler.",g={
-i(9316),
-r(3959,{description="If you are an Engineer and have a 'Security DELTA Access Card', you will also get these plans when you turn in your Red Punch Card.",itemID=4413,providers={{"i",9327}},requireSkill=202})}}),
-e(418,{npcID=6229,g={
-s(159368,9449,{b=1,f=24,lvl=29,spellID=13494}),
-s(159369,9450,{f=5,loc=47})}}),
-n(6228,{description="This is a Rare Creature and, as such, is not always present.",g={
-i(5108,{f=5,loc=42,lvl=27}),
-s(159374,9456,{f=31}),
-s(159375,9457,{f=23}),
-s(159373,9455,{f=5,loc=43})}}),
-e(422,{npcID=7800,g={
-ach(634),
-s(159377,9459,{f=22}),
-s(159376,9458,{f=8,spellID=1292880}),
-s(159401,9492,{f=4,loc=40,spellID=11826}),
-i(9461,{f=52}),
-r(3966,{itemID=4415,requireSkill=202}),
-r(3959,{itemID=4413,requireSkill=202}),
-r(8339,{itemID=6716}),
-r(3944,{itemID=4411,requireSkill=202}),
-r(8243,{itemID=6672,requireSkill=202}),
-r(3971,{b=1,itemID=7742,requireSkill=202}),
-r(9269,{b=1,itemID=7560,requireSkill=202}),
-r(9273,{b=1,itemID=7561,requireSkill=202}),
-r(3968,{itemID=4416,requireSkill=202}),
-i(7192,{f=200,requireSkill=202,rwp=30002}),
-r(3972,{itemID=4417,requireSkill=202}),
-r(3928,{itemID=4408,requireSkill=202}),
-r(3954,{itemID=4412,requireSkill=202}),
-r(3960,{itemID=4414,requireSkill=202}),
-r(3940,{itemID=4410,requireSkill=202}),
-r(3933,{itemID=4409,requireSkill=202}),
-crit(18529,{achID=62032,awp=16001,id=3})}})}}),
 inst(232,{coords={
 [1443]={{35.7,55.5}}},lore="Protected by the fierce Maraudine centaur, Maraudon is one of the most sacred sites within Desolace. The great temple/cavern is the burial place of Zaetar, one of two immortal sons born to the demigod, Cenarius. Legend holds that Zaetar and the earth elemental princess, Theradras, sired the misbegotten centaur race. It is said that upon their emergence, the barbaric centaur turned on their father and killed him. Some believe that Theradras, in her grief, trapped Zaetar's spirit within the winding cavern - used its energies for some malign purpose. The subterranean tunnels are populated by the vicious, long-dead ghosts of the Centaur Khans, as well as Theradras' own raging, elemental minions.",lvl=41,mapID=280,["zone-text-areaID"]=2100,g={
 h(-45,{
@@ -4431,7 +4515,7 @@ q(7044,{coords={
 [1443]={{32.1,64}}},lvl=41,qgs={13697},rwp=40003,g={
 qo(1,{providers={{"i",17703}}}),
 qo(2,{providers={{"i",17702}}})}}),
-q(7066,{description="This quest becomes available after you defeat Princess Theradras.",lvl=39,maps={1450},providers={{"i",17760}},qgs={12238},rwp=40003}),
+q(7066,{description="This quest becomes available after you defeat Princess Theradras.",lvl=39,maps={1450},qgs={12238},qis={17760},rwp=40003}),
 q(7070,{coords={
 [1445]={{66.4,49.3}}},lvl=39,qgs={4967},r=2,rwp=40003,g={
 qo(1,{crs={11777,11778},providers={{"i",17756}}}),
@@ -4443,7 +4527,7 @@ qo(1,{crs={11777,11778},providers={{"i",17756}}}),
 i(17773,{f=51}),
 i(17772,{f=51})}}),
 q(7067,{coords={
-[1443]={{50.5,86.7}}},lvl=39,providers={{"i",17781}},qgs={13717},rwp=40003,g={
+[1443]={{50.5,86.7}}},lvl=39,qgs={13717},qis={17781},rwp=40003,g={
 qo(1,{cost={{"i",17765,1},{"i",17764,1},{"i",17763,1},{"i",17762,1},{"i",17761,1},{"i",17757,1}},providers={{"i",17758}}}),
 i(17757,{coords={
 [1443]={{28.1,62.4}}},crs={13718},spellID=21960}),
@@ -4561,7 +4645,7 @@ s(160191,10823,{f=25}),
 i(10824,{f=51})}}),
 q(3525,{lvl=32,providers={{"o",152097}},qgs={8516},rwp=40003,sourceQuests={3523},g={
 i(10710,{f=52})}}),
-q(3523,{lvl=32,providers={{"i",10682}},qgs={8516},rwp=40003})}),
+q(3523,{lvl=32,qgs={8516},qis={10682},rwp=40003})}),
 h(-63,{
 i(3172,{crs={7333,7334}}),
 s(160079,10573,{f=26}),
@@ -4606,94 +4690,6 @@ s(160156,10764,{f=6,loc=42}),
 s(160154,10762,{f=4,loc=42}),
 s(160157,10765,{f=5,loc=44}),
 crit(18530,{achID=62033,awp=16001,id=1})}})}}),
-inst(234,{coords={
-[1413]={{40.94,94.55}}},lore="Ten thousand years ago - during the War of the Ancients, the mighty demigod, Agamaggan, came forth to battle the Burning Legion. Though the colossal boar fell in combat, his actions helped save Azeroth from ruin. Yet over time, in the areas where his blood fell, massive thorn-ridden vines sprouted from the earth.\n\nThe quillboar - believed to be the mortal offspring of the mighty god, came to occupy these regions and hold them sacred. The heart of these thorn-colonies was known as the Razorfen. The great mass of Razorfen Kraul was conquered by the old crone, Charlga Razorflank. Under her rule, the shamanistic quillboar stage attacks on rival tribes as well as Horde villages. Some speculate that Charlga has even been negotiating with agents of the Scourge - aligning her unsuspecting tribe with the ranks of the Undead for some insidious purpose.",lvl=17,mapID=301,["zone-text-areaID"]=491,g={
-h(-45,{
-q(1102,{coords={
-[1456]={{36.2,59.8}}},lvl=29,qgs={4451},r=1,rwp=40003,g={
-qo(1,{providers={{"i",5793}}}),
-s(158658,6725,{f=8}),
-s(157700,4197,{f=4,loc=41}),
-s(158671,6742,{f=6,loc=45})}}),
-q(6522,{lvl=28,maps={1458},providers={{"i",17008}},r=1,rwp=40003}),
-q(1221,{coords={
-[1413]={{62.4,37.6}}},lvl=20,qgs={3446},rwp=40003,g={
-qo(1,{crs={4781},providers={{"i",5876},{"i",5880},{"i",6684},{"o",20920}}}),
-qo(2,{coords={
-[1413]={{62.3,37.6}}},providers={{"i",5880},{"o",21277}}}),
-qo(3,{coords={
-[1413]={{62.3,37.6}}},providers={{"i",5897},{"o",21530}}}),
-qo(4,{coords={
-[1413]={{62.3,37.6}}},providers={{"i",6684},{"o",68865}}}),
-i(6755,{b=1,g={
-i(6756,{b=1,f=113})}})}}),
-q(1109,{coords={
-[1458]={{49,69.8}}},lvl=30,qgs={2055},r=1,rwp=40003,g={
-qo(1,{providers={{"i",5801}}})}}),
-q(1100,{coords={
-[1441]={{30,24}}},lvl=29,providers={{"i",5790},{"i",5791},{"o",19861}},r=2,rwp=40003}),
-q(1142,{coords={
-[1457]={{69.4,67.6}}},lvl=25,qgs={4510},r=2,rwp=40003,g={
-qo(1,{description="Drops from any creature in the Dungeon.",providers={{"i",5825}}}),
-s(158676,6751,{f=3}),
-s(158677,6752,{f=5,loc=47})}}),
-q(1101,{coords={
-[1444]={{89.6,46.6}}},lvl=29,qgs={4048},r=2,rwp=40003,sourceQuests={1100},g={
-qo(1,{providers={{"i",5792}}}),
-s(158658,6725,{f=8}),
-s(157700,4197,{f=4,loc=41}),
-s(158671,6742,{f=6,loc=45}),
-s(157107,3041,{f=31,lvl=26})}}),
-q(1144,{lvl=22,qgs={4508},rwp=40003,g={
-i(6748,{f=52}),
-i(6750,{f=52}),
-i(6749,{f=52})}})}),
-h(-63,{
-i(3172,{crs={4511,4512,4514}}),
-i(5801,{crs={4538,4539}}),
-s(156336,1488,{f=6,loc=42}),
-s(156738,2264,{f=5,loc=41}),
-i(2039,{f=52}),
-s(157772,4438,{f=6,loc=43}),
-s(156541,1975,{f=26}),
-s(156542,1976,{f=24}),
-s(156889,2549,{f=28}),
-s(156390,1727,{f=25}),
-s(156108,776,{f=20}),
-s(157377,3569,{awp=100107,crs={4517},f=4,loc=42,rwp=60002}),
-s(156543,1978,{f=5,loc=44})}),
-n(6168,{description="Warriors will need to kill this boss for their racial armor quest. If you are the leader of the group, don't be surprised if they ask to kill this boss first.",rwp=60002,g={
-i(6841,{f=55,rwp=40003})}}),
-n(4424,{rwp=60002,g={
-s(158639,6681,{f=20})}}),
-n(4428,{rwp=60002,g={
-s(156989,2816,{f=23}),
-s(158641,6685,{f=4,loc=41}),
-s(158640,6682,{f=4,loc=42})}}),
-n(4438,{rwp=60002,g={
-s(158637,6679,{f=29})}}),
-n(4420,{rwp=60002,g={
-s(158643,6687,{f=22}),
-s(158642,6686,{f=6,loc=40})}}),
-n(4842,{description="After you kill Overlord Ramtusk, go west over a bridge to a plateau.\n\nThis is a Rare Creature and, as such, is not always present.",rwp=60002,g={
-s(158645,6689,{f=28}),
-s(158644,6688,{f=5,loc=40})}}),
-n(4425,{description="This is a Rare Creature and, as such, is not always present.",rwp=60002,g={
-s(158650,6696,{f=32}),
-i(6695,{f=51}),
-s(158651,6697,{f=4,loc=41})}}),
-n(4422,{rwp=60002,g={
-s(158647,6691,{f=20}),
-s(158646,6690,{f=5,loc=46})}}),
-e(901,{npcID=4421,g={
-ach(635),
-i(5793),
-i(5792),
-i(17008,{b=1,lvl=28,rwp=40003}),
-s(158648,6692,{f=21}),
-s(158649,6694,{f=8}),
-i(6693,{f=52,spellID=1293199}),
-crit(18528,{achID=62032,awp=16001,id=9})}})}}),
 inst(316,{coords={
 [1420]={{82.6,32.4}}},lore="The Monastery was once a proud bastion of Lordaeron's priesthood - a center for learning and enlightenment. With the rise of the undead Scourge during the Third War, the peaceful Monastery was converted into a stronghold of the fanatical Scarlet Crusade. The Crusaders are intolerant of all non-human races, regardless of alliance or affiliation. They believe that any and all outsiders are potential carriers of the undead plague - and must be destroyed. Reports indicate that adventurers who enter the monastery are forced to contend with Scarlet Commander Mograine - who commands a large garrison of fanatically devoted warriors. However, the monastery's true master is High Inquisitor Whitemane - a fearsome priestess who possesses the ability to resurrect fallen warriors to do battle in her name.",lvl=25,mapID=435,["zone-text-areaID"]=796,g={
 h(-361,{awp=100107,rwp=50004,g={
@@ -4883,7 +4879,7 @@ q(5802,{coords={
 [1446]={{51.5,28.8}}},lvl=55,maps={1449},qgs={5411},r=1,rwp=40003,sourceQuests={5514},g={
 qo(1,{coords={
 [1449]={{49.6,47.6}}},cost={{"i",12359,2},{"i",14644,1}},providers={{"i",14645}},rwp=50004})}}),
-q(5582,{lvl=55,maxReputation={529,42000},providers={{"i",13920}},repeatable=1,rwp=40003,sourceQuests={5529}}),
+q(5582,{lvl=55,maxReputation={529,42000},qss={13920},repeatable=1,rwp=40003,sourceQuests={5529}}),
 q(5384,{coords={
 [1422]={{70.2,73.7}}},lvl=55,qgs={11216},rwp=40003,sourceQuests={5515},g={
 qo(1,{providers={{"n",10506}}}),
@@ -4894,17 +4890,17 @@ q(5515,{coords={
 [1422]={{70.2,73.7}}},lvl=55,qgs={11216},rwp=40003,sourceQuests={5382},g={
 qo(1,{providers={{"i",13725}},rwp=50004})}}),
 q(7647,{c={2},coords={
-[1453]={{48.6,50}}},lvl=60,providers={{"i",18804}},qgs={928},r=2,rwp=40003,sourceQuests={7646},g={
+[1453]={{48.6,50}}},lvl=60,qgs={928},qis={18804},r=2,rwp=40003,sourceQuests={7646},g={
 qo(1,{cost={{"i",18749,1}},crs={14516,14568},providers={{"i",18799}}}),
 qo(2,{providers={{"i",18792}}}),
 mnt(23214,{c={2},lvl=60,r=2})}}),
 q(5522,{coords={
-[1428]={{65.2,23.8}}},lvl=57,providers={{"i",13761}},qgs={10267},rwp=40003,sourceQuests={4735}}),
+[1428]={{65.2,23.8}}},lvl=57,qgs={10267},qis={13761},rwp=40003,sourceQuests={4735}}),
 q(7667,{awp=10400,c={7},coords={
 [1454]={{39.2,48.4}}},cost={{"i",18335,1},{"i",12800,1}},lvl=58,qgs={13417},r=1,rwp=40003}),
 q(5463,{coords={
-[1423]={{81.7,57.8}}},description="Take the Keepsake to the symbol on the floor in Baron Rivendare's room in Stratholme.",lvl=57,maps={317},providers={{"i",13585}},qgs={11036},rwp=40003,sourceQuests={5462}}),
-q(5464,{lvl=57,maps={317},providers={{"i",13624},{"o",176631}},rwp=40003,sourceQuests={5463}}),
+[1423]={{81.7,57.8}}},description="Take the Keepsake to the symbol on the floor in Baron Rivendare's room in Stratholme.",lvl=57,maps={317},qgs={11036},qis={13585},rwp=40003,sourceQuests={5462}}),
+q(5464,{lvl=57,maps={317},providers={{"o",176631}},qis={13624},rwp=40003,sourceQuests={5463}}),
 q(5538,{coords={
 [1422]={{42.66,83.77}}},cost={{"i",14628,1},{"g",150000}},lvl=55,qgs={11056},r=2,rwp=40003,sourceQuests={5537}}),
 q(5514,{coords={
@@ -4923,7 +4919,7 @@ q(964,{coords={
 [1420]={{83.3,69.2}}},lvl=55,maps={1422},qgs={11057},r=1,rwp=40003,sourceQuests={838},g={
 qo(1,{crs={1783,1784,1785,1787,1788,1789},providers={{"i",14619}},rwp=50004})}}),
 q(5465,{coords={
-[1423]={{81.7,57.8}}},lvl=57,providers={{"i",13624}},qgs={11036},rwp=40003,sourceQuests={5464}}),
+[1423]={{81.7,57.8}}},lvl=57,qgs={11036},qis={13624},rwp=40003,sourceQuests={5464}}),
 q(7668,{c={7},coords={
 [1454]={{38.7,35.9}}},lvl=55,qgs={13417},r=1,rwp=10700,sourceQuests={7667},u=2,g={
 qo(1,{awp=10300,crs={14516},providers={{"i",18880}},rwp=50004}),
@@ -4933,9 +4929,9 @@ q(8258,{altQuests={7668},awp=10700,c={7},coords={
 qo(1,{awp=10300,crs={14516},providers={{"i",18880}},rwp=50004,u=14}),
 s(164185,20134,{f=6,loc=40,u=14})}}),
 q(5462,{coords={
-[1422]={{70.6,74.1}}},lvl=57,providers={{"i",13544},{"i",13585}},qgs={11286},rwp=40003,sourceQuests={5461}}),
+[1422]={{70.6,74.1}}},lvl=57,qgs={11286},qis={13544,13585},rwp=40003,sourceQuests={5461}}),
 q(5461,{coords={
-[1422]={{70.6,74.1}}},lvl=57,maps={1417},providers={{"i",13544}},qgs={11286},rwp=40003,sourceQuests={5384},g={
+[1422]={{70.6,74.1}}},lvl=57,maps={1417},qgs={11286},qis={13544},rwp=40003,sourceQuests={5384},g={
 qo(1,{coords={
 [1417]={{17.9,69.4}}},providers={{"i",13585},{"o",176630}},rwp=50004})}}),
 q(5505,{coords={
@@ -4955,7 +4951,7 @@ qo(1,{awp=10300,coords={
 [1422]={{43.4,83.6}}},crs={11023},providers={{"i",13469}},rwp=50004}),
 i(14022,{f=53,spellID=18307})}}),
 q(5466,{coords={
-[1422]={{70.6,74.1}}},lvl=57,providers={{"i",13544}},qgs={11286},rwp=40003,sourceQuests={5465},g={
+[1422]={{70.6,74.1}}},lvl=57,qgs={11286},qis={13544},rwp=40003,sourceQuests={5465},g={
 qo(1,{awp=10300,providers={{"i",13626}},rwp=50004}),
 s(161210,14002,{f=8}),
 s(161208,13984,{f=20}),
@@ -4965,8 +4961,8 @@ h(-56,{awp=10300,rwp=50004,g={
 i(12736,{awp=11101,b=1,description="Can be found inside the chemistry lab in Scholomance, in Ras Frostwhisper's room.",providers={{"o",175965}}})}}),
 h(-63,{awp=10300,rwp=50004,g={
 i(20520,{spellID=27869}),
-r(20035,{crs={10469},itemID=16255,requireSkill=333}),
-r(20032,{crs={10499},itemID=16254,requireSkill=333}),
+r(20035,{crs={10469},itemID=16255,learnedAt=320,requireSkill=333,skillID=2940}),
+r(20032,{crs={10499},itemID=16254,learnedAt=320,requireSkill=333,skillID=2940}),
 r(19102,{awp=11101,crs={11582},itemID=15776,requireSkill=165,rwp=40003}),
 r(19098,{awp=11101,crs={10499},itemID=15773,requireSkill=165,rwp=40003}),
 i(22526,{u=16}),
@@ -5041,7 +5037,7 @@ i(18691,{f=51}),
 s(161601,14577,{f=4,loc=46})}}),
 n(10508,{awp=10300,rwp=50004,g={
 i(13626,{cost={{"i",13752,1}},description="Use the Keepsake on him before he dies to turn him back into a human."}),
-r(17637,{itemID=13521}),
+r(17637,{itemID=13521,learnedAt=315,requireSkill=171,skillID=2937}),
 s(161555,14487,{f=23}),
 s(161192,13952,{f=21,spellID=1298413}),
 s(163638,18696,{f=8}),
@@ -5103,7 +5099,7 @@ n(10504,{awp=10300,rwp=50004,g={
 s(163037,16722,{f=7,loc=43,lvl=52,rwp=40003})}}),
 n(1853,{awp=10300,description="You must fully clear out the six rooms around Headmaster's Study before this boss will spawn on the bottom floor. It is recommended that you clear the top floor last so that you have an opportunity to properly position your group.",rwp=50004,g={
 r(18458,{itemID=14514,requireSkill=197}),
-r(17580,{b=1,itemID=13501,requireSkill=171}),
+r(17580,{b=1,itemID=13501,learnedAt=310,requireSkill=171,skillID=2937}),
 s(161187,13937,{f=28,spellID=18264}),
 s(161188,13938,{f=27}),
 s(161193,13953,{f=25}),
@@ -5135,7 +5131,7 @@ q(5125,{cost={{"i",12845,1}},qgs={10917},rwp=40003,sourceQuests={5122},g={
 i(17044,{f=51}),
 i(17045,{f=52})}}),
 q(5861,{coords={
-[1423]={{7.6,43.6}}},lvl=52,providers={{"i",14872}},qgs={1855},rwp=40003,sourceQuests={5848}}),
+[1423]={{7.6,43.6}}},lvl=52,qgs={1855},qis={14872},rwp=40003,sourceQuests={5848}}),
 q(5243,{coords={
 [1423]={{81.6,57.8}}},cost={{"i",13180,5}},description="When mousing over the crates, look for 'Requires: Disarm Trap'. If you see this, it's a trap and shouldn't be touched.\n\nIf you are a dwarf, use find treasure and on the mini map it will show a dot for the holy water in the crate. It will only show crates with items in it on the mini map and not bad crates.",lvl=55,qgs={11036},rwp=40003,g={
 s(160898,13216,{f=4,loc=40}),
@@ -5172,7 +5168,7 @@ i(17001,{f=52})}}),
 q(5742,{coords={
 [1423]={{7.4,43.6}}},lvl=52,qgs={1855},rwp=40003,sourceQuests={5542,5543,5544}}),
 q(5862,{coords={
-[1422]={{50.8,77.8}}},lvl=52,providers={{"i",14872}},qgs={11872},rwp=40003,sourceQuests={5861}}),
+[1422]={{50.8,77.8}}},lvl=52,qgs={11872},qis={14872},rwp=40003,sourceQuests={5861}}),
 q(5213,{coords={
 [1423]={{81.4,59.6}}},lvl=55,qgs={11035},rwp=40003,sourceQuests={5212},g={
 qo(1,{providers={{"i",13176},{"o",176249}}}),
@@ -5201,7 +5197,7 @@ q(5282,{coords={
 [1423]={{14.4,33.6}}},lvl=55,qgs={11140},rwp=40003,sourceQuests={5281},g={
 qo(1,{crs={10384,10385,11122},providers={{"i",13289}}}),
 s(160933,13315,{f=1,spellID=17448})}}),
-q(5262,{lvl=55,providers={{"i",13250}},rwp=40003,sourceQuests={5251}})}),
+q(5262,{lvl=55,qss={13250},rwp=40003,sourceQuests={5251}})}),
 h(-56,{
 o(181085,{
 i(13180,{b=1,spellID=17291})})}),
@@ -5232,7 +5228,7 @@ h(-365,{coords={
 h(-63,{
 i(12811,{description="Can drop from any Scarlet Crusade member in Stratholme in addition to the Scarlet Oracle and the Crimson Elite in the Plaguelands."}),
 i(12734,{b=1,description="These can be found in 4 places in the Scarlet Enclave.\n\n1&2: Malor's Room on the Table\n3: In the next room before you split to Cannon Master or Archivist.\n4: In Archivist's room on a box in the back.",providers={{"o",175966}}}),
-r(20036,{crs={10422},itemID=16249,requireSkill=333}),
+r(20036,{crs={10422},itemID=16249,learnedAt=320,requireSkill=333,skillID=2940}),
 r(18441,{crs={10384},itemID=14495,requireSkill=197,rwp=40003}),
 r(19103,{crs={10425},itemID=15777,requireSkill=165,rwp=40003}),
 r(23082,{crs={10426},itemID=18658,requireSkill=202}),
@@ -5258,7 +5254,7 @@ s(160969,13389,{f=4,loc=46}),
 s(160971,13391,{f=4,loc=47}),
 i(13392,{f=52})}}),
 e(443,{npcID=10558,g={
-i(13379,{spellID=18400}),
+toy(13379),
 s(160960,13378,{f=5,loc=42}),
 s(160964,13384,{f=7,loc=45}),
 s(160963,13383,{f=6,loc=46}),
@@ -5280,9 +5276,9 @@ i(12845,{description="Located in Malor's Strongbox. Can be turned in to Aurius o
 n(11120,{description="Found in the Hoard on the way to Cannon Master Willey.",providers={{"o",176325}},g={
 i(18781,{lvl=50,rwp=40003,spellID=23232}),
 i(13351,{rwp=40003}),
-i(12827,{awp=30002,description="You must be a Blacksmith in order to loot this from the Plans on the floor.",f=200,requireSkill=17040,rwp=20001})}}),
+r(16983,{description="You must be a Blacksmith in order to loot this from the Plans on the floor.",itemID=12827,learnedAt=285,requireSkill=17040,skillID=2938})}}),
 e(446,{npcID=10997,g={
-i(12839,{f=200,requireSkill=9787}),
+r(16995,{itemID=12839,learnedAt=320,requireSkill=9787,skillID=2938}),
 s(164929,22406,{f=28,u=15}),
 s(164927,22404,{f=34,u=15}),
 s(160961,13380,{f=31}),
@@ -5305,7 +5301,7 @@ s(163650,18716,{f=5,loc=47})}}),
 e(449,{crs={10812,10813},g={
 i(13250,{b=1,lvl=55}),
 r(18456,{itemID=14512,requireSkill=197}),
-r(17636,{itemID=13520}),
+r(17636,{itemID=13520,learnedAt=315,requireSkill=171,skillID=2937}),
 s(160945,13348,{f=26}),
 s(163651,18717,{f=24}),
 s(160950,13360,{f=20}),
@@ -5330,7 +5326,7 @@ s(165056,22736,{collectible=false,description="He drops this midway through the 
 h(-366,{coords={
 [1423]={{48.18,21.9}}},cost={{"i",12382,1}},providers={{"o",175369}},g={
 h(-63,{
-r(20033,{crs={10398},itemID=16248,requireSkill=333}),
+r(20033,{crs={10398},itemID=16248,learnedAt=315,requireSkill=333,skillID=2940}),
 r(19092,{crs={10406},itemID=15768,requireSkill=165,rwp=20005}),
 s(163025,16710,{crs={10405},f=5,loc=43,lvl=52,rwp=40003})}),
 n(10809,{description="This is a Rare Creature and, as such, is not always present.",g={
@@ -5352,7 +5348,7 @@ i(13508,{f=55,spellID=126})}}),
 n(11121,{description="Found outside of Baroness Anastari's ziggurat.",providers={{"o",176325}},g={
 i(18783,{lvl=50,rwp=40001,spellID=23233}),
 i(13350,{rwp=40003}),
-i(12830,{awp=30002,description="You must be a Blacksmith in order to loot this from the Plans on the floor. This will despawn once a player interacts with it.",f=200,requireSkill=17039,rwp=20001})}}),
+r(16985,{description="You must be a Blacksmith in order to loot this from the Plans on the floor. This will despawn once a player interacts with it.",itemID=12830,learnedAt=290,requireSkill=17039,skillID=2938})}}),
 e(451,{npcID=10436,g={
 s(161006,13534,{f=27}),
 s(163659,18729,{f=32}),
@@ -5365,7 +5361,7 @@ s(163660,18730,{f=4,loc=44}),
 s(163019,16704,{b=1,f=4,loc=47,lvl=54,rwp=40003}),
 i(13514,{description="This can be used on raid bosses and in PVP... Probably not a bad idea to keep on you.",f=55,spellID=17639})}}),
 e(453,{npcID=10438,g={
-i(12833,{f=200,requireSkill=17040}),
+r(16988,{itemID=12833,learnedAt=320,requireSkill=17040,skillID=2938}),
 s(163666,18737,{f=21}),
 s(160996,13524,{f=1}),
 s(163663,18734,{f=3}),
@@ -5396,7 +5392,7 @@ i(13515,{f=53,spellID=1299443})}}),
 e(456,{npcID=10440,rwp=40003,g={
 i(13251),
 ach(729,{providers={{"i",13335}}}),
-i(13335,{b=1,f=100,lvl=60,spellID=17481}),
+mnt(17481,{b=1,itemID=13335,lvl=60}),
 s(160994,13505,{f=26,spellID=17625}),
 s(160952,13368,{f=20}),
 s(164931,22408,{f=27,u=15}),
@@ -5420,113 +5416,6 @@ s(163002,16687,{b=1,f=4,loc=46,lvl=56}),
 s(163024,16709,{b=1,f=5,loc=46,lvl=56}),
 s(163034,16719,{b=1,f=5,loc=46,lvl=56}),
 crit(18471,{achID=62033,awp=16001,id=13})}})}})}}),
-inst(63,{coords={
-[1436]={{42.2,82.6}}},lore="Once the greatest gold production center in the human lands, the Dead Mines were abandoned when the Horde razed Stormwind city during the First War. Now the Defias Brotherhood has taken up residence and turned the dark tunnels into their private sanctum. It is rumored that the thieves have conscripted the clever goblins to help them build something terrible at the bottom of the mines - but what that may be is still uncertain. Rumor has it that the way into the Deadmines lies through the quiet, unassuming village of Moonbrook.",lvl=10,mapID=291,["zone-text-areaID"]=1581,g={
-h(-45,{
-q(168,{coords={
-[1453]={{65.4,21.2}}},lvl=14,qgs={656},r=2,rwp=40003,g={
-qo(1,{providers={{"i",1894}}}),
-s(156580,2036,{b=1,f=5,loc=44}),
-s(156581,2037,{b=1,f=6,loc=47})}}),
-q(167,{coords={
-[1453]={{65.4,21.2}}},lvl=15,qgs={656},r=2,rwp=40003,g={
-qo(1,{providers={{"i",1875}}}),
-s(156499,1893,{b=1,f=22})}}),
-q(214,{coords={
-[1436]={{56.7,47.4}}},lvl=14,qgs={820},r=2,rwp=40003,sourceQuests={153,155},g={
-qo(1,{crs={594,619,824},description="Can also drop from any Defias mob in the Deadmines.",providers={{"i",915}}}),
-s(158311,6094,{b=1,f=22}),
-s(156615,2089,{b=1,f=20}),
-s(156605,2074,{b=1,f=25})}}),
-q(166,{coords={
-[1436]={{56.3,47.5}}},lvl=14,qgs={234},r=2,rwp=40003,sourceQuests={155},g={
-qo(1,{providers={{"i",3637}}}),
-s(158307,6087,{b=1,f=6,loc=46}),
-s(156584,2042,{b=1,f=28,spellID=1292011}),
-s(156583,2041,{b=1,f=5,loc=42})}}),
-q(373,{coords={
-[1453]={{49,30.2}}},description="Drops from VanCleef. Deliver it to Baros Alexston in Stormwind City.",lvl=16,providers={{"i",2874},{"n",1646}},r=2,rwp=40003}),
-q(2040,{coords={
-[1453]={{55.5,12.5}}},lvl=15,qgs={6579},r=2,rwp=40003,sourceQuests={2041},g={
-qo(1,{providers={{"i",7365}}}),
-s(158977,7607,{b=1,f=27}),
-s(158976,7606,{b=1,f=6,loc=44})}})}),
-h(-46,{
-n(596,{coords={
-[1436]={{44,78.3}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
-s(157521,3902,{awp=100107,f=28,lvl=13,rwp=40003}),
-s(158287,5967,{awp=100107,f=4,loc=45,lvl=13,rwp=40003})}}),
-n(626,{coords={
-[1436]={{42.2,82.6}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
-i(1875),
-s(156666,2167,{f=5,loc=44}),
-s(156665,2166,{f=6,loc=46}),
-s(156667,2168,{f=4,loc=47,lvl=16})}}),
-n(599,{coords={
-[1436]={{42.2,79.9}}},description="This is a Rare Creature and, as such, is not always present.\n\nLocated in the cavern before the instance.",g={
-s(157090,3019,{awp=100107,f=4,loc=42,lvl=13,rwp=40003}),
-s(157827,4660,{awp=100107,f=4,loc=47,lvl=13,rwp=40003})}})}),
-h(-63,{
-s(160035,10402,{b=1,crs={4416},f=5,loc=47,lvl=15,rwp=40003}),
-s(160034,10401,{crs={634,4417},f=5,loc=44,lvl=14}),
-s(160033,10400,{b=1,crs={634,4417},f=5,loc=46,lvl=14}),
-s(156533,1951,{crs={657,1732},f=25,lvl=14}),
-s(156537,1959,{crs={623},f=22,lvl=12}),
-s(156520,1927,{crs={594},f=21,lvl=10,rwp=40003}),
-s(156521,1928,{awp=100107,crs={1726},f=28,lvl=11,rwp=40003}),
-s(156518,1925,{awp=100107,crs={1725},f=25,lvl=11,rwp=40003}),
-s(156530,1943,{awp=100107,crs={3947},f=6,loc=46,lvl=14,rwp=40003}),
-s(156527,1936,{awp=100107,crs={622},f=20,lvl=13,rwp=40003}),
-s(156531,1944,{awp=100107,crs={1731},f=5,loc=44,lvl=13,rwp=40003}),
-i(1894,{crs={623,624,625}}),
-i(8492,{crs={657},f=101,spellID=10683}),
-s(156536,1958,{crs={625},f=23,lvl=12}),
-s(159084,7997,{b=1,c={4},description="Can drop in Westfall and The Deadmines. Rogues typically keep this mask for appearance sets.",f=2,loc=40}),
-i(915),
-s(156522,1929,{crs={1729,4418},f=4,loc=46,lvl=13}),
-s(157839,4676,{crs={624},f=6,loc=44,lvl=12}),
-s(156523,1930,{crs={598},f=3,lvl=13}),
-s(156525,1934,{crs={636},f=5,loc=46,lvl=15,rwp=40003}),
-s(156519,1926,{crs={824},f=23,lvl=10}),
-s(156532,1945,{awp=100107,crs={641},f=5,loc=44,lvl=13,rwp=40003}),
-r(6703,{b=1,crs={657},itemID=5787,requireSkill=165})}),
-n(3586,{description="This is a Rare Creature and, as such, is not always present.",rwp=40003,g={
-s(158166,5443,{b=1,f=8,lvl=17,spellID=1291906}),
-s(158167,5444,{b=1,f=3,lvl=17})}}),
-n(644,{rwp=40003,g={
-s(158043,5187,{b=1,description="This item was redesigned to a rare quality item called 'Foe Reaper' in Patch 2.3, so if you are making a twink, you may want to keep this item despite it being lower quality now.",f=24,lvl=16}),
-s(156160,872,{b=1,f=22,lvl=18,spellID=1291896})}}),
-n(642,{rwp=40003,g={
-i(7365),
-s(156668,2169,{b=1,f=20,lvl=16}),
-s(156528,1937,{b=1,f=25,lvl=18})}}),
-n(643,{rwp=40003,g={
-s(158047,5194,{b=1,f=22,lvl=18}),
-s(158048,5195,{b=1,f=4,loc=44,lvl=17})}}),
-n(1763,{rwp=40003,g={
-s(158052,5199,{b=1,f=5,loc=46,lvl=16,spellID=1291915}),
-i(1156,{b=1,f=52,lvl=17})}}),
-n(646,{rwp=40003,g={
-s(158803,7230,{b=1,f=24,lvl=18}),
-s(158049,5196,{b=1,f=21,lvl=17}),
-s(158045,5192,{b=1,f=25,lvl=17,spellID=1291987})}}),
-n(647,{rwp=40003,g={
-s(158054,5201,{b=1,f=28,lvl=17}),
-s(158053,5200,{b=1,f=29,lvl=17}),
-s(160036,10403,{b=1,f=5,loc=45,lvl=17})}}),
-n(639,{rwp=40003,g={
-ach(628,{r=2}),
-i(2874,{b=1,lvl=16}),
-i(3637),
-s(158044,5191,{b=1,f=25,lvl=19}),
-s(158046,5193,{b=1,f=3,lvl=19}),
-s(158055,5202,{b=1,f=4,loc=42,lvl=17}),
-s(160032,10399,{b=1,f=5,loc=42,lvl=17}),
-crit(3262,{achID=62031,awp=16001,id=4})}}),
-n(645,{rwp=40003,g={
-i(8490,{f=101,spellID=10677}),
-s(158051,5198,{b=1,f=27,lvl=17}),
-s(158050,5197,{b=1,f=23,lvl=16})}})}}),
 inst(237,{coords={
 [1435]={{69.2,54.8}}},lore="Over a thousand years ago, the powerful Gurubashi Empire was torn apart by a massive civil war. An influential group of troll priests, known as the Atal'ai, attempted to bring back an ancient blood god named Hakkar the Soulflayer. Though the priests were defeated and ultimately exiled, the great troll empire buckled in upon itself. The exiled priests fled far to the north, into the Swamp of Sorrows. There they erected a great temple to Hakkar - where they could prepare for his arrival into the physical world. The great dragon Aspect, Ysera, learned of the Atal'ai's plans and smashed the temple beneath the marshes. To this day, the temple's drowned ruins are guarded by the green dragons who prevent anyone from getting in or out. However, it is believed that some of the fanatical Atal'ai may have survived Ysera's wrath - and recommitted themselves to the dark service of Hakkar.",lvl=45,mapID=220,["zone-text-areas"]={1417,1477},g={
 h(-45,{
@@ -5571,7 +5460,7 @@ qo(1,{providers={{"i",11318}}})}}),
 q(3512,{coords={
 [1435]={{13.7,71.7}}},description="This quest chain seems to be an incomplete one as there is no follow-up. Still an interesting quest chain as most people do not know about it. It essentially details how Eranikus is not actually dead and likely prepares the player for the Opening of AQ quest chain that does involve Eranikus once again.",lvl=48,maps={1452},OnUpdate=function(t)if not _.IsQuestFlaggedCompleted(3374)and(_.IsQuestFlaggedCompleted(3373)and _.WOWAPI.GetItemCount(10455,true)<1)then	if not settings.AccountWide.Quests then	t.u=2 else	t.u=nil end	t.description="|cffaa0000You deleted the item needed to complete the previous quest. As such, you'll be unable to complete this one. Sorry!|r" end	end,qgs={5353},rwp=40003,sourceQuests={3374}}),
 q(3446,{coords={
-[1446]={{52.6,45.8}}},lvl=46,providers={{"i",10466},{"o",148836}},qgs={7771},rwp=40003,sourceQuests={3444}}),
+[1446]={{52.6,45.8}}},lvl=46,providers={{"o",148836}},qgs={7771},qis={10466},rwp=40003,sourceQuests={3444}}),
 q(1475,{coords={
 [1453]={{64.2,20.8}}},lvl=38,qgs={5384},r=2,rwp=40003,sourceQuests={1469},g={
 qo(1,{description="Scattered around the inside and outside of the instance.",providers={{"i",6288},{"o",37099}}}),
@@ -5587,7 +5476,7 @@ qo(1,{crs={5719},providers={{"i",20022}},u=14}),
 s(164093,19982,{f=3,spellID=1300663,u=14}),
 s(164095,19984,{f=5,loc=40,u=14}),
 s(164257,20255,{f=5,loc=47,spellID=17746,u=14})}}),
-q(3373,{description="Interact with the Essence Font located in the back corner of the room after you defeat Eranikus to turn in this quest and loot the Essence of Eranikus.",lvl=48,providers={{"i",10454},{"o",148512}},rwp=40003,g={
+q(3373,{description="Interact with the Essence Font located in the back corner of the room after you defeat Eranikus to turn in this quest and loot the Essence of Eranikus.",lvl=48,providers={{"o",148512}},qss={10454},rwp=40003,g={
 i(10455,{f=53,spellID=12766})}}),
 q(3374,{coords={
 [1435]={{13.7,71.7}}},cost={{"i",10455,1}},description="You get the Oathstone by talking to Itharius, at the cave in the SW part of Swamp of Sorrows. You must have the Chained Essence first.",lvl=48,OnUpdate=function(t)if not t.collected and _.IsQuestFlaggedCompleted(3373)and _.WOWAPI.GetItemCount(10455,true)<1 then	if not settings.AccountWide.Quests then	t.u=2 else	t.u=nil end	t.description="|cffaa0000You have completed the previous quest, but deleted the item needed to complete this quest. As such, you'll be unable to complete the quest chain. Sorry!|r" end	end,providers={{"i",10589}},qgs={5353},rwp=40003,sourceQuests={3373}}),
@@ -5624,12 +5513,12 @@ i(20130,{f=53,spellID=363881,u=14}),
 s(164308,20517,{f=7,loc=41,spellID=1300680,u=14}),
 s(164309,20521,{f=7,loc=40,u=14})}}),
 q(4146,{coords={
-[1413]={{62.5,38.7}}},lvl=47,providers={{"i",11319}},qgs={8496},r=1,rwp=40003,sourceQuests={4147},g={
+[1413]={{62.5,38.7}}},lvl=47,qgs={8496},qis={11319},r=1,rwp=40003,sourceQuests={4147},g={
 qo(1,{providers={{"i",11318}}})}})}),
 h(-63,{
 i(11318,{crs={5226,5228,8384}}),
 i(6181),
-r(20014,{crs={5259},itemID=16216,requireSkill=333,rwp=40003}),
+r(20014,{crs={5259},itemID=16216,learnedAt=285,requireSkill=333,skillID=2940}),
 i(15733,{f=200,requireSkill=10656,rwp=40003}),
 s(160102,10627,{f=28}),
 s(160103,10628,{f=26}),
@@ -5713,46 +5602,20 @@ inst(239,{coords={
 h(-44,{
 prof(333,{
 n(11073,{description="To get the Annora to spawn, you'll have to kill all scorpions first.",g={
-r(13920,{lvl=35,rank=4,requireSkill=333,rwp=80001}),
+r(13920,{lvl=35,rank=4,requireSkill=333}),
 h(-243,{
 r(13935,{learnedAt=255,requireSkill=333,skillID=2940}),
-r(13815,{learnedAt=230,requireSkill=333,skillID=2940}),
-r(13635,{learnedAt=175,requireSkill=333,skillID=2940}),
-r(13657,{learnedAt=195,requireSkill=333,rwp=50004,skillID=2940}),
-r(13746,{learnedAt=225,requireSkill=333,skillID=2940}),
-r(13640,{learnedAt=180,requireSkill=333,skillID=2940}),
-r(13663,{learnedAt=205,requireSkill=333,skillID=2940}),
 r(13939,{learnedAt=260,requireSkill=333,skillID=2940}),
-r(13822,{learnedAt=230,requireSkill=333,skillID=2940}),
-r(13637,{learnedAt=180,requireSkill=333,skillID=2940}),
-r(13644,{learnedAt=190,requireSkill=333,skillID=2940}),
-r(13700,{learnedAt=220,requireSkill=333,skillID=2940}),
-r(13948,{learnedAt=270,requireSkill=333,skillID=2940}),
-r(13890,{learnedAt=245,requireSkill=333,skillID=2940}),
-r(13794,{learnedAt=225,requireSkill=333,rwp=50004,skillID=2940}),
-r(13642,{learnedAt=185,requireSkill=333,skillID=2940}),
-r(13836,{learnedAt=235,requireSkill=333,skillID=2940}),
-r(13648,{learnedAt=190,requireSkill=333,skillID=2940}),
 r(13941,{learnedAt=265,requireSkill=333,skillID=2940}),
-r(13661,{learnedAt=200,requireSkill=333,skillID=2940}),
-r(13887,{learnedAt=245,requireSkill=333,skillID=2940}),
-r(13858,{learnedAt=240,requireSkill=333,skillID=2940}),
-r(13917,{learnedAt=250,requireSkill=333,skillID=2940})}),
-flt(50,{
+r(13917,{learnedAt=250,requireSkill=333,skillID=2940}),
+r(13948,{learnedAt=270,requireSkill=333,skillID=2940})}),
+flt(56,{
 r(17181,{learnedAt=250,requireSkill=333,skillID=2940}),
-r(17180,{learnedAt=250,requireSkill=333,skillID=2940}),
-r(13702,{learnedAt=220,requireSkill=333,rwp=50004,skillID=2940})}),
-h(-101,{
-r(14810,{learnedAt=195,requireSkill=333,skillID=2940}),
-r(14809,{learnedAt=175,requireSkill=333,skillID=2940})}),
+r(17180,{learnedAt=250,requireSkill=333,skillID=2940})}),
 h(-245,{
 r(13937,{learnedAt=260,requireSkill=333,skillID=2940}),
 r(13905,{learnedAt=250,requireSkill=333,skillID=2940}),
-r(13943,{learnedAt=265,requireSkill=333,skillID=2940}),
-r(13695,{learnedAt=220,requireSkill=333,skillID=2940}),
-r(13631,{learnedAt=175,requireSkill=333,skillID=2940}),
-r(13659,{learnedAt=200,requireSkill=333,skillID=2940}),
-r(13693,{learnedAt=215,requireSkill=333,skillID=2940})})}})})}),
+r(13943,{learnedAt=265,requireSkill=333,skillID=2940})})}})})}),
 h(-45,{
 q(2964,{coords={
 [1455]={{77.2,11.8}}},lvl=45,qgs={2916},r=2,rwp=40003,sourceQuests={2977}}),
@@ -5762,13 +5625,13 @@ q(2200,{coords={
 [1455]={{36.4,3.6}}},lvl=37,qgs={6826},r=2,rwp=40003,sourceQuests={2199},g={
 i(7667,{spellID=9489})}}),
 q(2340,{coords={
-[1418]={{2.6,46}}},lvl=37,providers={{"i",7887}},qgs={6868},r=1,rwp=40003,sourceQuests={2339}}),
-q(2201,{lvl=37,providers={{"i",7668}},qgs={6912},r=2,rwp=40003,sourceQuests={2200},g={
+[1418]={{2.6,46}}},lvl=37,qgs={6868},qis={7887},r=1,rwp=40003,sourceQuests={2339}}),
+q(2201,{lvl=37,qgs={6912},qis={7668},r=2,rwp=40003,sourceQuests={2200},g={
 qo(1,{providers={{"i",7669}}}),
 qo(2,{providers={{"i",7670}}}),
 qo(3,{providers={{"i",7671}}})}}),
 q(2339,{coords={
-[1418]={{2.6,46}}},lvl=37,providers={{"i",7668}},qgs={6868},r=1,rwp=40003,sourceQuests={2338},g={
+[1418]={{2.6,46}}},lvl=37,qgs={6868},qis={7668},r=1,rwp=40003,sourceQuests={2338},g={
 qo(1,{providers={{"i",7669}}}),
 qo(2,{providers={{"i",7670}}}),
 qo(3,{providers={{"i",7671}}}),
@@ -5793,19 +5656,19 @@ qo(1,{providers={{"i",8053}}})}}),
 q(3375,{coords={
 [1455]={{36.4,3.6}}},cost={{"i",1708,1},{"i",3857,1},{"i",3827,1}},lvl=37,qgs={6826},r=2,repeatable=1,rwp=40003,sourceQuests={2199},g={
 i(7667,{spellID=9489})}}),
-q(2204,{lvl=37,providers={{"i",7667}},r=2,rwp=40003,sourceQuests={2201},g={
+q(2204,{lvl=37,qss={7667},r=2,rwp=40003,sourceQuests={2201},g={
 qo(1,{providers={{"i",7672}}})}}),
 q(2361,{coords={
 [1455]={{36.4,3.6}}},lvl=37,qgs={6826},r=2,rwp=40003,sourceQuests={2204},g={
 i(7673,{f=51})}}),
 q(2977,{coords={
-[1446]={{37.7,81.5}}},lvl=45,maps={1455},providers={{"i",6064},{"o",142343}},r=2,rwp=40003,sourceQuests={2954}}),
+[1446]={{37.7,81.5}}},lvl=45,maps={1455},providers={{"o",142343}},qis={6064},r=2,rwp=40003,sourceQuests={2954}}),
 q(2967,{coords={
-[1446]={{37.7,81.5}}},lvl=45,maps={1456},providers={{"i",6064},{"o",142343}},r=1,rwp=40003,sourceQuests={2954}}),
+[1446]={{37.7,81.5}}},lvl=45,maps={1456},providers={{"o",142343}},qis={6064},r=1,rwp=40003,sourceQuests={2954}}),
 q(2946,{coords={
-[1455]={{77.2,11.8}}},lvl=45,providers={{"i",6064}},qgs={2916},r=2,rwp=40003,sourceQuests={2963}}),
+[1455]={{77.2,11.8}}},lvl=45,qgs={2916},qis={6064},r=2,rwp=40003,sourceQuests={2963}}),
 q(2966,{coords={
-[1456]={{75.6,31.2}}},lvl=45,providers={{"i",6064}},qgs={5770},r=1,rwp=40003,sourceQuests={2965}}),
+[1456]={{75.6,31.2}}},lvl=45,qgs={5770},qis={6064},r=1,rwp=40003,sourceQuests={2965}}),
 q(2240,{lvl=35,qgs={6906},r=2,rwp=40003,sourceQuests={2398},g={
 s(159435,9626,{f=22}),
 s(159436,9627,{f=1})}}),
@@ -5816,20 +5679,20 @@ q(1139,{coords={
 qo(1,{providers={{"i",5824}}}),
 i(6723,{f=51})}}),
 q(2278,{description="Right click on The Discs of Norgannon after defeating Archaedas to start this quest.",lvl=40,providers={{"o",131474}}}),
-q(2279,{lvl=40,providers={{"i",6064}},r=2,rwp=40003}),
-q(2280,{lvl=40,providers={{"i",6064}},r=1}),
+q(2279,{lvl=40,qss={6064},r=2,rwp=40003}),
+q(2280,{lvl=40,qss={6064},r=1}),
 q(2439,{coords={
 [1455]={{69.9,18.6}}},cost={{"i",8070,1}},lvl=40,qgs={5387},r=2,rwp=40003,sourceQuests={2279},g={
 i(9587,{b=1,f=113})}}),
 q(2440,{coords={
 [1456]={{34.6,47.2}}},cost={{"i",8070,1}},lvl=40,qgs={3978},r=1,rwp=40003,sourceQuests={2280},g={
 i(9587,{b=1,f=113})}}),
-q(2198,{lvl=37,providers={{"i",7666}},r=2,rwp=40003}),
+q(2198,{lvl=37,qss={7666},r=2,rwp=40003}),
 q(2954,{coords={
 [1446]={{37.7,81.5}}},lvl=45,providers={{"o",142343}},rwp=40003,sourceQuests={2946,2966}}),
-q(2318,{lvl=37,providers={{"i",7886}},qgs={6912},r=1,rwp=40003,sourceQuests={2284}}),
+q(2318,{lvl=37,qgs={6912},qis={7886},r=1,rwp=40003,sourceQuests={2284}}),
 q(2338,{coords={
-[1418]={{2.6,46}}},lvl=37,providers={{"i",7886}},qgs={6868},r=1,rwp=40003,sourceQuests={2318}})}),
+[1418]={{2.6,46}}},lvl=37,qgs={6868},qis={7886},r=1,rwp=40003,sourceQuests={2318}})}),
 h(-63,{
 i(7666,{b=1,lvl=37}),
 s(159349,9420,{f=5,loc=40}),
@@ -5914,7 +5777,7 @@ e(472,{npcID=4854,g={
 i(7670),
 s(159346,9416,{f=29}),
 s(159345,9415,{f=4,loc=42}),
-s(159344,9414,{f=5,loc=46})}}),
+s(159344,9414,{f=5,loc=46,spellID=1320726})}}),
 e(473,{npcID=2748,g={
 ach(638),
 i(7672),
@@ -5922,108 +5785,6 @@ s(159347,9418,{f=26}),
 s(159343,9413,{f=24}),
 i(11118,{f=52}),
 crit(18531,{achID=62033,awp=16001,id=2})}})}}),
-inst(240,{coords={
-[1413]={{45.9,35.7}},
-[1414]={{52,55.2}}},lore="Recently, a night elf druid named Naralex discovered a network of underground caverns within the heart of the Barrens. Dubbed the 'Wailing Caverns', these natural caves were filled with steam fissures which produced long, mournful wails as they vented. Naralex believed he could use the caverns' underground springs to restore lushness and fertility to the Barrens - but to do so would require siphoning the energies of the fabled Emerald Dream.\n\nOnce connected to the Dream, however, the druid's vision somehow became a nightmare. Soon the Wailing Caverns began to change - the waters turned foul and the once-docile creatures inside metamorphosed into vicious, deadly predators. It is said that Naralex himself still resides somewhere inside the heart of the labyrinth, trapped beyond the edges of the Emerald Dream. Even his former acolytes have been corrupted by their master's waking nightmare - transformed into the wicked Druids of the Fang.",lvl=10,mapID=279,["zone-text-areaID"]=718,["zone-text-names"]={"The Wailing Caverns","Las Cuevas de los Lamentos"},g={
-h(-45,{description="To get to the quest giver hub outside the instance:\n\nWhen facing the mouth of the cave, you should see that the entrance looks like a skull. The questgivers are in the left eye. To get there, climb up the mountain, drop onto the head, drop onto the brow, drop onto the nose, face the instance, and go into the eye on the left",g={
-q(1487,{coords={
-[1413]={{46,35.7}}},lvl=15,qgs={5768},rwp=40003,g={
-qo(1,{providers={{"n",3636}}}),
-qo(2,{providers={{"n",5755}}}),
-qo(3,{providers={{"n",5761}}}),
-qo(4,{providers={{"n",5056}}}),
-r(7955,{itemID=6476,requireSkill=165}),
-s(159089,8071,{b=1,f=27}),
-s(158503,6481,{b=1,f=6,loc=44})}}),
-q(1486,{coords={
-[1413]={{46,35.7}}},lvl=13,qgs={5767},rwp=40003,g={
-qo(1,{providers={{"i",6443}}}),
-s(158502,6480,{b=1,f=5,loc=46}),
-i(918,{b=1,f=113})}}),
-q(1489,{coords={
-[1413]={{52.3,31.9}}},lvl=10,providers={{"i",10414}},qgs={3448},r=1,rwp=40003,sourceQuests={880}}),
-q(3370,{coords={
-[1413]={{48.2,32.8}}},description="She lives in a house on top of the mountain.",lvl=15,qgs={8418},r=2,rwp=40003,sourceQuests={6981},g={
-qo(1,{providers={{"i",10649}}}),
-s(160118,10657,{b=1,f=4,loc=41}),
-s(160119,10658,{b=1,f=6,loc=47})}}),
-q(3369,{coords={
-[1413]={{48.2,32.8}}},description="She lives in a house on top of the mountain.",lvl=15,qgs={8418},r=1,rwp=40003,sourceQuests={6981},g={
-qo(1,{providers={{"i",10649}}}),
-s(160118,10657,{b=1,f=4,loc=41}),
-s(160119,10658,{b=1,f=6,loc=47})}}),
-q(914,{coords={
-[1456]={{75.6,31.2}}},lvl=10,qgs={5770},r=1,rwp=40003,sourceQuests={1490},g={
-qo(1,{providers={{"i",9738}}}),
-qo(2,{providers={{"i",9739}}}),
-qo(3,{providers={{"i",9740}}}),
-qo(4,{providers={{"i",9741}}}),
-s(158508,6505,{b=1,f=28}),
-s(158507,6504,{b=1,f=25})}}),
-q(1490,{coords={
-[1456]={{74.7,30.2}}},lvl=10,qgs={5769},r=1,rwp=40003,sourceQuests={1489}}),
-q(962,{coords={
-[1456]={{23.6,21.4}}},lvl=14,qgs={3419},r=1,rwp=40003,g={
-qo(1,{providers={{"i",5339},{"o",13891}}}),
-s(160209,10919,{b=1,f=4,loc=44})}}),
-q(1491,{coords={
-[1413]={{62.4,37.6}}},lvl=13,qgs={3446},rwp=40003,sourceQuests={865},g={
-qo(1,{crs={3638,3640,5763},providers={{"i",6464}}})}}),
-q(6981,{coords={
-[1413]={{63,37.2}}},providers={{"i",10441}},qgs={3442},rwp=40003})}}),
-h(-58,{
-n(5783,{coords={
-[1413]={{45.9,35.7}}},rwp=40003,g={
-r(7953,{itemID=6474,requireSkill=165}),
-r(7954,{itemID=6475,requireSkill=165})}})}),
-h(-63,{
-i(6443,{description="Drops from Deviate creatures in the Wailing Caverns."}),
-n(3840,{
-s(160046,10413,{f=5,loc=44,lvl=14}),
-i(208015)})}),
-prof(393,{
-i(6470,{description="Can drop-, as well as be skinned from all deviates within the Wailing Caverns."}),
-i(6471,{description="Can drop-, as well as be skinned from all deviates within the Wailing Caverns, although the droprate is low."})}),
-e(474,{npcID=3671,g={
-i(9739),
-s(158158,5404,{b=1,f=5,loc=41,lvl=18}),
-s(160045,10412,{b=1,f=5,loc=45,lvl=16}),
-i(6446,{b=1,f=113})}}),
-e(477,{npcID=3653,g={
-s(160906,13245,{b=1,f=8,lvl=18}),
-s(158487,6447,{b=1,f=8,lvl=16})}}),
-e(476,{npcID=3670,g={
-i(9740),
-s(158498,6472,{b=1,f=23,lvl=19}),
-s(158499,6473,{b=1,f=5,loc=42,lvl=18})}}),
-e(475,{npcID=3669,g={
-i(9738),
-s(158493,6465,{b=1,f=4,loc=42,lvl=17}),
-s(158491,6460,{b=1,f=6,loc=45,lvl=17}),
-s(160043,10410,{b=1,f=5,loc=46,lvl=17})}}),
-e(478,{npcID=3674,g={
-s(158488,6448,{b=1,f=20,lvl=17}),
-s(158489,6449,{b=1,f=3,lvl=18})}}),
-n(5912,{description="This is a Rare Creature and, as such, is not always present.",g={
-s(158072,5243,{b=1,f=27,lvl=18,spellID=1291686}),
-s(158618,6632,{b=1,f=3,lvl=16})}}),
-e(479,{npcID=3673,g={
-i(9741),
-s(158497,6469,{b=1,f=32,lvl=19}),
-s(158290,5970,{b=1,f=4,loc=44,lvl=18}),
-s(160044,10411,{b=1,f=5,loc=47,lvl=17}),
-s(158490,6459,{b=1,f=6,loc=47,lvl=18})}}),
-e(480,{npcID=5775,g={
-s(158617,6631,{b=1,f=28,lvl=18}),
-s(158616,6630,{b=1,f=8,lvl=19}),
-s(158615,6629,{b=1,f=3,lvl=17,spellID=1291698})}}),
-e(481,{npcID=3654,g={
-ach(630),
-i(10441,{b=1,lvl=15}),
-s(158492,6461,{b=1,f=4,loc=41,lvl=20}),
-s(158613,6627,{b=1,f=6,loc=42,lvl=18}),
-i(6463,{b=1,f=52,lvl=19}),
-crit(18524,{achID=62031,awp=16001,id=3})}})}}),
 inst(241,{coords={
 [1446]={{39,19}}},lore="Troll legends tell of a powerful sword called Sul'thraze the Lasher, a weapon capable of instilling fear and weakness in even the most formidable of foes. Long ago, the weapon was split in half. However, rumors have circulated that the two halves may be found somewhere within Zul'Farrak's walls. Reports have also suggested that a band of mercenaries fleeing Gadgetzan wandered into the city and became trapped. Their fate remains unknown. But perhaps most disturbing of all are the hushed whispers of an ancient creature sleeping within a sacred pool at the city's heart - a mighty demigod who will wreak untold destruction upon any adventurer foolish enough to awaken him.",lvl=39,mapID=219,["zone-text-areaID"]=978,g={
 h(-45,{

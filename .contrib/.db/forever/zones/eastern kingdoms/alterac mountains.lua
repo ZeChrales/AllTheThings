@@ -29,6 +29,9 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ALTERAC_MOUNTAINS, {
 			exploration(284),	-- The Uplands
 		}),
 		n(FACTIONS, {
+			faction(FACTION_FOREVER_KIRIN_TOR, {
+				timeline = { TIMELINE.ADDED_1_60_1 },
+			}),
 			faction(FACTION_RAVENHOLDT, {	-- Ravenholdt
 				["icon"] = 132292,
 				["OnTooltip"] = [[_.OnTooltipDB.Ravenholdt]],
@@ -606,6 +609,39 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ALTERAC_MOUNTAINS, {
 					i(6976),	-- Whirlwind Warhammer
 				},
 			}),
+			q(94912, {	-- Child of Nature
+				["qg"] = 270459,	-- Alfina Nightgaze
+				["coord"] = { 11.8, 56.6, MAP.ALTERAC_MOUNTAINS },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = ALLIANCE_ONLY,
+				["lvl"] = 10,
+			}),
+			q(94947, {	-- Welcome to Azeroth
+				["qg"] = 259084,	-- Denaaris Stargale
+				["coord"] = { 12.3, 56.4, MAP.ALTERAC_MOUNTAINS },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = ALLIANCE_ONLY,
+				["lvl"] = 7,
+			}),
+			q(99191, {	-- A Donation of Wool
+				["qg"] = 276170,	-- Belanaa Windveil
+				["coord"] = { 11.6, 57.9, MAP.ALTERAC_MOUNTAINS },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = ALLIANCE_ONLY,
+				["lvl"] = 12,
+				["groups"] = {
+					objective(1, {	-- 0/60 Wool Cloth
+						["provider"] = { "i", 2592 },	-- Wool Cloth
+					}),
+				},
+			}),
+			q(94946, {	-- The Magical City of Dalaran
+				["qg"] = 259084,	-- Denaaris Stargale
+				["coord"] = { 12.3, 56.4, MAP.ALTERAC_MOUNTAINS },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = ALLIANCE_ONLY,
+				["lvl"] = 7,
+			}),
 		}),
 		n(RARES, {
 			n(14222, {	-- Araga
@@ -669,6 +705,27 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ALTERAC_MOUNTAINS, {
 			}),
 		}),
 		n(VENDORS, {
+			n(32287, {	-- Archmage Alvareaux <Quartermaster>
+				coord = { 14.0, 63.2, MAP.ALTERAC_MOUNTAINS },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				groups = bubbleDownClassicRep(FACTION_FOREVER_KIRIN_TOR, {
+					{		-- Neutral
+					}, {	-- Friendly
+						i(276986),	-- Pattern: Azure Gustwoven Hood (RECIPE!)
+						i(276987),	-- Pattern: Azure Gustwoven Spaulders (RECIPE!)
+						i(276990),	-- Pattern: Azure Stormsewn Cowl (RECIPE!)
+						i(276991),	-- Pattern: Azure Stormsewn Epaulets (RECIPE!)
+						i(276988),	-- Pattern: Azure Windraveled Cover (RECIPE!)
+						i(276989),	-- Pattern: Azure Windraveled Drapes (RECIPE!)
+						i(276984),	-- Plans: Azure Skyforged Helm (RECIPE!)
+						i(276985),	-- Plans: Azure Skyforged Pauldrons (RECIPE!)
+					}, {	-- Honored
+					}, {	-- Revered
+					}, {	-- Exalted
+						i(285327),	-- Kirin Tor Tabard
+					},
+				}),
+			}),
 			n(2480, {	-- Bro'kin <Alchemy Supplies>
 				["coord"] = { 38.0, 38.0, MAP.ALTERAC_MOUNTAINS },
 				["groups"] = {

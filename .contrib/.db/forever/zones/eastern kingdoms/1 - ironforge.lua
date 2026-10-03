@@ -31,17 +31,17 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.IRONFORGE, {
 				n(4258, {	-- Bengus Deepforge <Artisan Blacksmith>
 					["coord"] = { 52.6, 40.8, MAP.IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
-					["groups"] = APPRENTICE_JOURNEYMAN_EXPERT_BLACKSMITHING,
+					["groups"] = BLACKSMITHING_RECIPES.EXPERT,
 				}),
 				n(5164, {	-- Grumnus Steelshaper <Armor Crafter>
 					["coord"] = { 50.2, 42.6, MAP.IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
-					["groups"] = CLASSIC_ARMORSMITHING,
+					["groups"] = BLACKSMITHING_RECIPES.ARMORSMITHING,
 				}),
 				n(11146, {	-- Ironus Coldsteel <Special Weapon Crafter>
 					["coord"] = { 50.8, 43.0, MAP.IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
-					["groups"] = CLASSIC_WEAPONSMITHING,
+					["groups"] = BLACKSMITHING_RECIPES.WEAPONSMITHING,
 				}),
 			}),
 		}),
@@ -333,6 +333,23 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.IRONFORGE, {
 						["rank"] = 1,
 					}),
 				},
+			}),
+			q(95041, {	-- Data Hoaders
+				["qg"] = 11028,	-- Jemma Quikswitch
+				["coord"] = { 67.7, 44.2, MAP.IRONFORGE },
+				["races"] = ALLIANCE_ONLY,
+				["maps"] = { MAP.DUN_MOROGH },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["lvl"] = 7,
+				["groups"] = {
+					objective(1, {	-- 0/7 Gnomeregan Archival Data
+						["providers"] = {
+							{ "o", 629596 },	-- Snowdrift
+							{ "i", 267413 },	-- Gnomeregan Archival Data
+						},
+						coord = { 26.3, 41.2, DUN_MOROGH },
+					}),
+				}
 			}),
 			q(5639, {	-- Desperate Prayer
 				["altQuests"] = {
@@ -875,6 +892,13 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.IRONFORGE, {
 					r(355),		-- Taunt
 				},
 			}),
+			q(97263, {	-- Your Package Has Arrived
+				["provider"] = { "o", 660964 },	-- Misplaced Packages
+				["qi"] = 277505,	-- Misplaced Package
+				["coord"] = { 72.6, 48.5, MAP.IRONFORGE },
+				["races"] = ALLIANCE_ONLY,
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+			}),
 		}),
 		n(VENDORS, {
 			n(7978, {	-- Bimble Longberry <Fruit Vendor>
@@ -907,8 +931,14 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.IRONFORGE, {
 				["races"] = ALLIANCE_ONLY,
 				["sym"] = {{"sub", "common_vendor", 5565}},	-- Jillian Tanner <Leatherworking Supplies>
 				["groups"] = {
+					i(252784, {	-- Pattern: Forceful Medium Armor Kit (RECIPE!)
+						["timeline"] = { TIMELINE.ADDED_1_60_1 },
+					}),
 					i(18731, {	-- Pattern: Heavy Leather Ball (RECIPE!)
 						["isLimited"] = true,
+					}),
+					i(252783, {	-- Pattern: Mystic Medium Armor Kit (RECIPE!)
+						["timeline"] = { TIMELINE.ADDED_1_60_1 },
 					}),
 				},
 			}),
@@ -1041,6 +1071,24 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.IRONFORGE, {
 				["races"] = ALLIANCE_ONLY,
 				["groups"] = {
 					i(2901),	-- Mining Pick
+				},
+			}),
+			n(258306, {	-- Granny Finespindle
+				["coord"] = { 39.3, 33.7, MAP.IRONFORGE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = ALLIANCE_ONLY,
+				["groups"] = {
+					i(252761),	-- Pattern: Black Whelp Slippers (RECIPE!)
+					i(252762),	-- Pattern: Dark Leather Boots (RECIPE!)
+					i(252832),	-- Pattern: Mender's Leather Belt (RECIPE!)
+					i(252764),	-- Pattern: Moonglow Boots (RECIPE!)
+					i(252763),	-- Pattern: Murloc Scale Shoes (RECIPE!)
+					i(252826),	-- Pattern: Prowler's Leather Belt (RECIPE!)
+					i(252830),	-- Pattern: Skirmisher's Leather Belt (RECIPE!)
+					i(252831),	-- Pattern: Skycaller's Leather Belt (RECIPE!)
+					i(252827),	-- Pattern: Skulker's Leather Belt (RECIPE!)
+					i(252828),	-- Pattern: Stalker's Leather Belt (RECIPE!)
+					i(252829),	-- Pattern: Warden's Leather Belt (RECIPE!)
 				},
 			}),
 			n(5103, {	-- Grenil Steelfury
@@ -1225,16 +1273,14 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.IRONFORGE, {
 			n(5107, {	-- Mangorn Flinthammer
 				["coord"] = { 32.0, 58.8, MAP.IRONFORGE },
 				["races"] = ALLIANCE_ONLY,
-				["sym"] = {{"select","itemID",
-					847,	-- Chainmail Armor
-					1845,	-- Chainmail Belt
-					849,	-- Chainmail Boots
-					1846,	-- Chainmail Bracers
-					850,	-- Chainmail Gloves
-					848,	-- Chainmail Pants
-				}},
 				["groups"] = {
 					i(17187),	-- Banded Buckler
+					i(847),		-- Chainmail Armor
+					i(1845),	-- Chainmail Belt
+					i(849),		-- Chainmail Boots
+					i(1846),	-- Chainmail Bracers
+					i(850),		-- Chainmail Gloves
+					i(848),		-- Chainmail Pants
 					i(1202),	-- Wall Shield
 				},
 			}),
@@ -1356,7 +1402,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.IRONFORGE, {
 				["coord"] = { 66.6, 54.6, MAP.IRONFORGE },
 				["races"] = ALLIANCE_ONLY,
 				["groups"] = {
-					i(13478, {	-- Recipe: Elixir of Superior Defense (RECIPE!)
+					i(13478, {	-- Recipe: Elixir of Greater Defense (RECIPE!)
 						["isLimited"] = true,
 					}),
 					i(5642, {	-- Recipe: Free Action Potion (RECIPE!)
@@ -1405,11 +1451,18 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.IRONFORGE, {
 			n(5158, {	-- Tilli Thistlefuzz <Enchanting Supplies>
 				["coord"] = { 60.8, 44.2, MAP.IRONFORGE },
 				["races"] = ALLIANCE_ONLY,
-				["groups"] = appendGroups(VANILLA_ENCHANTING_COMMON_RECIPES, {
+				["sym"] = {{ "select","itemID",
+					20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
+					20752,	-- Formula: Minor Mana Oil (RECIPE!)
+					20758,	-- Formula: Minor Wizard Oil (RECIPE!)
+					6342,	-- Formula: Enchant Chest - Minor Intellect (RECIPE!)
+					22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
+				}},
+				["groups"] = {
 					i(6349, {	-- Formula: Enchant 2H Weapon - Lesser Intellect (RECIPE!)
 						["isLimited"] = true,
 					}),
-				}),
+				},
 			}),
 			n(8117, {	-- Wizbang Booms
 				["coord"] = { 31.8, 63.4, MAP.IRONFORGE },

@@ -403,78 +403,21 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 				["lvl"] = 60,
 			})),
 			-- #endif
-			-- #if SEASON_OF_DISCOVERY
-			applyclassicphase(SOD_PHASE_FOUR, q(84495, {	-- Fiery Plate Gauntlets
-				["sourceQuest"] = 5103,	-- Hot Fiery Death
-				["qg"] = 10637,	-- Malyfous Darkhammer <The Thorium Brotherhood>
-				["coord"] = { 61.0, 38.8, MAP.WINTERSPRING },
-				["timeline"] = { ADDED_1_15_3 },
-				["cost"] = {
-					{ "i", 12812, 1 },	-- Unfired Plate Gauntlets
-					{ "i", 12655, 6 },	-- Enchanted Thorium Bar
-					{ "i", 7078, 2 },	-- Essence of Fire
-					{ "i", 7910, 4 },	-- Star Ruby
-				},
-				["requireSkill"] =
-					-- #if AFTER TBC
-					BLACKSMITHING,
-					-- #else
-					9788,	-- Armorsmith
-					-- #endif
-				["lvl"] = 55,
-				["groups"] = {
-					i(227909, {	-- Plans: Fiery Plate Gauntlets of the Hidden Technique (RECIPE!)
-						["timeline"] = { ADDED_1_15_3 },
-					}),
-					i(227865, {	-- Fiery Plate Gauntlets of the Hidden Technique
-						["timeline"] = { ADDED_1_15_3 },
-					}),
-				},
-			})),
-			-- #endif
 			q(5124, {	-- Fiery Plate Gauntlets
 				["sourceQuest"] = 5103,	-- Hot Fiery Death
 				["qg"] = 10637,	-- Malyfous Darkhammer <The Thorium Brotherhood>
 				["coord"] = { 61.0, 38.8, MAP.WINTERSPRING },
-				["timeline"] = {
-					-- #if SEASON_OF_DISCOVERY
-					REMOVED_1_15_3,
-					-- #else
-					REMOVED_4_0_3,
-					-- #endif
-				},
 				["cost"] = {
 					{ "i", 12812, 1 },	-- Unfired Plate Gauntlets
 					{ "i", 12655, 6 },	-- Enchanted Thorium Bar
 					{ "i", 7078, 2 },	-- Essence of Fire
 					{ "i", 7910, 4 },	-- Star Ruby
 				},
-				["requireSkill"] =
-					-- #if AFTER TBC
-					BLACKSMITHING,
-					-- #else
-					9788,	-- Armorsmith
-					-- #endif
+				["requireSkill"] = ARMORSMITH,
 				["lvl"] = 55,
 				["groups"] = {
-					i(12699, {	-- Plans: Fiery Plate Gauntlets (RECIPE!)
-						["timeline"] = {
-							-- #if SEASON_OF_DISCOVERY
-							REMOVED_1_15_3,
-							-- #else
-							REMOVED_4_0_3,
-							-- #endif
-						},
-					}),
-					i(12631, {	-- Fiery Plate Gauntlets
-						["timeline"] = {
-							-- #if SEASON_OF_DISCOVERY
-							REMOVED_1_15_3,
-							-- #else
-							REMOVED_4_0_3,
-							-- #endif
-						},
-					}),
+					i(12699),	-- Plans: Fiery Plate Gauntlets (RECIPE!)
+					i(12631),	-- Fiery Plate Gauntlets
 				},
 			}),
 			q(4974, {	-- For The Horde!
@@ -569,7 +512,7 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					-- #if AFTER TBC
 					BLACKSMITHING,
 					-- #else
-					9788,	-- Armorsmith
+					ARMORSMITH,
 					-- #endif
 				["lvl"] = 55,
 				["groups"] = {
@@ -870,7 +813,7 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					-- #if AFTER TBC
 					BLACKSMITHING,
 					-- #else
-					9788,	-- Armorsmith
+					ARMORSMITH,
 					-- #endif
 				["learnedAt"] = 275,
 				["lvl"] = 55,
@@ -883,10 +826,8 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					objective(2, {	-- 0/1 Unforged Rune Covered Breastplate
 						["provider"] = { "i", 12806 },	-- Unforged Rune Covered Breastplate
 					}),
-					i(12696, {	-- Plans: Demon Forged Breastplate (RECIPE!)
-						["timeline"] = { REMOVED_4_0_3 },
-					}),
-					i(9224),	-- Elixir of Demonslaying
+					i(12696),	-- Plans: Demon Forged Breastplate (RECIPE!)
+					i(9224),	-- Potion of Demonslaying
 					i(12849, {	-- Demon Kissed Sack
 						["timeline"] = { REMOVED_4_0_3 },
 					}),
@@ -1450,7 +1391,6 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 		-- #endif
 			n(ZONE_DROPS, {
 				i(16244, {	-- Formula: Enchant Gloves - Greater Strength
-					["timeline"] = { REMOVED_2_3_0 },	-- Learned from Trainer
 					["cr"] = 9198,	-- Spirestone Mystic
 				}),
 				i(16250, {	-- Formula: Enchant Weapon - Superior Striking (RECIPE!)
@@ -2041,12 +1981,7 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					applyclassicphase(TBC_PHASE_ONE, i(21955, {	-- Design: Black Diamond Crab (RECIPE!)
 						["timeline"] = { ADDED_2_0_5 },
 					})),
-					i(12835, {	-- Plans: Annihilator (RECIPE!)
-						-- #if SEASON_OF_DISCOVERY
-						["description"] = "Blizzard stated that Annihilator was an item that forced 1 member of the raid into a role that did not fit their design, so they've decided to not include Annihilator.",
-						["timeline"] = { REMOVED_1_15_0 },
-						-- #endif
-					}),
+					i(12835),	-- Plans: Annihilator (RECIPE!)
 					-- #if AFTER 4.0.3
 					i(12264),	-- Worg Pup (PET!)
 					-- #endif
@@ -2148,9 +2083,6 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 					ach(643),	-- Lower Blackrock Spire
 					ach(5052, {	-- Lower Blackrock Spire Guild Run
 						["timeline"] = { ADDED_4_0_3 },
-					}),
-					i(142370, {	-- Plans: Arcanite Champion
-						["timeline"] = { ADDED_7_1_5 },
 					}),
 					i(12780, {	-- General Drakkisath's Command
 						["timeline"] = { REMOVED_4_0_3 },
@@ -2292,7 +2224,6 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 						-- Danny Donkey: This is an ordinary drop from these mobs, not from Skinning.
 					}),
 					i(16247, {	-- Formula: Enchant 2H Weapon - Superior Impact (RECIPE!)
-						["timeline"] = { REMOVED_6_0_2 },
 						["cr"] = 10317,	-- Blackhand Elite <Blackhand Legion>
 					}),
 					applyclassicphase(PHASE_SIX_CLASS_BOOKS, i(24102, {	-- Manual of Eviscerate IX
@@ -2499,9 +2430,7 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 							["provider"] = { "o", 175970 },	-- Unforged Runic Breastplate
 							["timeline"] = { REMOVED_4_0_3 },
 						}),
-						i(12834, {	-- Plans: Arcanite Champion (RECIPE!)
-							["timeline"] = { REMOVED_6_0_2 },
-						}),
+						i(12834),	-- Plans: Arcanite Champion (RECIPE!)
 						-- #if SEASON_OF_DISCOVERY
 						applyclassicphase(SOD_PHASE_FOUR, i(228312, {	-- Plans: Invincible Mail (RECIPE!)
 							["timeline"] = { ADDED_1_15_3 },
@@ -2510,9 +2439,7 @@ BLACKROCK_SPIRE_INSTANCE = inst(229, {	-- Blackrock Spire
 						i(12728, {	-- Plans: Invulnerable Mail (RECIPE!)
 							["timeline"] = { REMOVED_6_0_2 },
 						}),
-						i(12837, {	-- Plans: Masterwork Stormhammer (RECIPE!)
-							["timeline"] = { REMOVED_6_0_2 },
-						}),
+						i(12837),	-- Plans: Masterwork Stormhammer (RECIPE!)
 						i(18048, {	-- Mastersmith's Hammer
 							["timeline"] = { REMOVED_6_0_2 },
 						}),
@@ -3226,10 +3153,3 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 	BLACKROCK_SPIRE_INSTANCE,
 }));
 -- #endif
-
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { ADDED_6_0_2 } }, {
-	inst(229, {
-		q(36866),	-- Lower Blackrock Spires Reward Quest - Normal completion
-		q(36867),	-- Lower Blackrock Spires Bonus Reward Quest — kill Urok Doomhowl
-	}),
-})));

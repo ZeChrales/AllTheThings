@@ -1121,6 +1121,8 @@ namespace ATT
             Consolidate_ListOrdering(data);
             Objects.AssignFactionID(data);
 
+            Consolidate_VerifySourcedReferences(data);
+
             // OnTooltip references should be stored in ExportDB.OnTooltipDB, so mark those which are referenced
             CheckExportDataRefs(data, "OnTooltip");
 
@@ -1134,6 +1136,33 @@ namespace ATT
             CheckExportDataRefs(data, "OnClick");
 
             Consolidate_TrackUsage(data);
+        }
+
+        private static void Consolidate_VerifySourcedReferences(Data data)
+        {
+            // Quest Starters should be Sourced
+            if (data.TryGetValue("qss", out List<object> qss))
+            {
+                foreach (decimal qs in qss.AsTypedEnumerable<decimal>())
+                {
+                    if (!TryGetSOURCED("modItemID", qs, out var sourcedList) || sourcedList.Count == 0)
+                    {
+                        LogDebugWarn($"Non-Sourced Quest Starter (qs) {qs}", data);
+                    }
+                }
+            }
+
+            // Provider Items should be Sourced
+            if (data.TryGetValue(out Providers providers))
+            {
+                foreach (decimal pi in providers.GetProviderType("i"))
+                {
+                    if (!TryGetSOURCED("modItemID", pi, out var sourcedList) || sourcedList.Count == 0)
+                    {
+                        LogDebugWarn($"Non-Sourced Item Provider {pi}", data);
+                    }
+                }
+            }
         }
 
         private static void Consolidate_CheckUnsortedDuplicates(Data data)
@@ -1946,6 +1975,15 @@ namespace ATT
                 }
             }
 
+            // ensure Quest Starters are referenced
+            if (data.TryGetValue("qss", out List<object> qss))
+            {
+                foreach (var qs in qss.AsTypedEnumerable<decimal>())
+                {
+                    Items.MarkItemAsReferenced(qs);
+                }
+            }
+
             if (data.TryGetValue("f", out long f) && f >= 0)
             {
                 FILTERS_WITH_REFERENCES[f] = true;
@@ -2695,7 +2733,7 @@ namespace ATT
                             //        if (TryGetTypeDBObjectChildren(child, out List<CriteriaTree> childTrees))
                             //        {
                             //            LogWarn($"Criteria {achID}:{criteriaID} is weird. It uses unsupported CriteriaUID: {ToJSON(childTrees.Select(c => c.CriteriaID).ToList())}");
-                            //            Log($"Please ensure the data is accurate and add [\"_noautomation\"] = true, to the crit() group to remove this warning.");
+                            //            Log($"Please ensure the data is accurate and add _noautomation = true, to the crit() group to remove this warning.");
                             //            return;
                             //        }
                             //    }
@@ -2707,7 +2745,7 @@ namespace ATT
 
                 // See if we didn't end up with a valid UID with nothing nested
                 LogWarn($"Criteria {achID}:{criteriaID} is weird. It uses unsupported CriteriaUID: {ToJSON(criteriaTreeData.EnumerateChildren().Select(t => t.CriteriaID).Where(id => id > 0).ToList())}");
-                Log($"--- Please ensure the data is accurate and add [\"_noautomation\"] = true, to the crit() group to remove this warning.");
+                Log($"--- Please ensure the data is accurate and add _noautomation = true, to the crit() group to remove this warning.");
                 return;
             }
 
@@ -4871,6 +4909,10 @@ namespace ATT
                 LogDebug($"INFO: Type Conversion {conversionObject.ConvertedKey}=>{conversionObject.ObjectType} ({convertValue})");
                 data.Remove(conversionObject.ConvertedKey);
                 data[conversionObject.ObjectType] = convertValue;
+                if (DebugMode)
+                {
+                    CaptureDebugDBData(data);
+                }
             }
         }
 

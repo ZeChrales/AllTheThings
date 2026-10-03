@@ -1,7 +1,7 @@
 ﻿---@diagnostic disable: deprecated
 local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
-local ach,cl,exp,faction,h,i,m,n,pvprank,q,qo,s=_.CreateAchievement,_.CreateCharacterClass,_.CreateExploration,_.CreateFaction,_.CreateCustomHeader,_.CreateItem,_.CreateMap,_.CreateNPC,_.CreatePVPRank,_.CreateQuest,_.CreateQuestObjective,_.CreateItemSource;
+local ach,cl,exp,faction,h,i,m,mnt,n,pvprank,q,qo,s=_.CreateAchievement,_.CreateCharacterClass,_.CreateExploration,_.CreateFaction,_.CreateCustomHeader,_.CreateItem,_.CreateMap,_.CreateMount,_.CreateNPC,_.CreatePVPRank,_.CreateQuest,_.CreateQuestObjective,_.CreateItemSource;
 categories.PVP=
 h(-303,{pvp=1,SortPriority=55,g={
 h(-12,{
@@ -234,7 +234,7 @@ i(20560,{b=1,f=55})}),
 h(-58,{
 n(13216,{coords={
 [1459]={{44.3,18.3}}},r=2,g={
-i(19030,{b=1,f=100,lvl=60,spellID=23510}),
+mnt(23510,{b=1,itemID=19030,lvl=60}),
 s(163751,19032,{b=1,f=9}),
 i(19045,{b=1,f=55,spellID=23539}),
 s(163786,19102,{b=1,f=28,lvl=60}),
@@ -272,7 +272,7 @@ i(17349,{b=1,f=55,lvl=35,spellID=21394}),
 i(17352,{b=1,f=55,lvl=35,spellID=21396})}}),
 n(13218,{coords={
 [1459]={{49.3,82.5}}},r=1,g={
-i(19029,{b=1,f=100,lvl=60,spellID=23509}),
+mnt(23509,{b=1,itemID=19029,lvl=60}),
 s(163750,19031,{b=1,f=9}),
 i(19046,{b=1,f=55,spellID=23538}),
 s(163787,19103,{b=1,f=21,lvl=60}),
@@ -1015,7 +1015,7 @@ pvprank(11),
 pvprank(12),
 pvprank(13),
 pvprank(14)}}),
-h(-210,{r=2,symselector=3,g={
+h(-210,{r=2,symselector=4,g={
 h(-101,{
 s(163703,18825,{b=1,f=8,lvl=60,spellID=13959}),
 s(163727,18867,{b=1,f=24,lvl=60}),
@@ -1179,7 +1179,7 @@ i(18862,{b=1,c={5},f=53,spellID=23276}),
 i(18857,{b=1,c={4},f=53,spellID=23273}),
 i(18858,{b=1,c={9},f=53,spellID=23273}),
 i(18854,{b=1,c={1},f=53,spellID=5579})}}),
-h(-211,{r=1,symselector=4,g={
+h(-211,{r=1,symselector=5,g={
 h(-101,{
 s(163709,18831,{b=1,f=22,lvl=60}),
 s(165286,23464,{b=1,f=23,lvl=60}),

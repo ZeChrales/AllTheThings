@@ -1660,7 +1660,7 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-43] = "This section contains Pet Battle related quests and tamers.",
 	[-44] = "This section will only show your current character's professions outside of Account and Debug Mode.",
 	[-47] = "Contains Things which are rewarded or are available from other content within the containing section.\nThey are consolidated here in an effort to reduce duplication from many possible Sources.",
-	[-49] = "Contains Things which are rewarded that upon completing that scenario.",
+	[-49] = "Contains Things which are rewarded upon scenario completion.",
 	[-50] = "The Mind-Seekers are an enigmatic cult of meta-puzzle architects who test Adventurers through obscure clues hidden in forgotten corners of the world.\nThey are neither benevolent nor malevolent; rather, they seem to derive sustenance from the collective effort, frustration, and eventual triumph of those who pursue their riddles. Solving their elaborate challenges proves one's mastery of Azeroth's deepest secrets.\n\nHere you will find records of currently available riddles they have scattered throughout Azeroth, challenging the denizens to solve them and, in time, join their ranks.",
 	[-213] = "This section will show you things that you could buy in the In-Game Shop in Retail.",
 	[-304] = "These items require the Legionnaire/Knight-Captain rank from Classic/Rated Battlegrounds or higher to purchase.",
@@ -1841,7 +1841,7 @@ localize(L.HEADER_ICONS, {
 	[-299] = 133278,
 	[-303] = _.asset("category_pvp"),
 	[-304] = 132487,
-	[-305] = 2022761,
+	[-305] = 132487,
 	[-315] = 135764,
 	[-318] = 132738,
 	[-341] = 132874,
@@ -2032,7 +2032,6 @@ _.Modules.Events.SetEventInformation(242, {
 	_.Modules.Events.CreateSchedule({["hour"]=10,["minute"]=0,["month"]=11,["monthDay"]=16,["weekday"]=3,["year"]=2027},{["hour"]=10,["minute"]=0,["month"]=12,["monthDay"]=7,["weekday"]=3,["year"]=2027})
 })
 _.Modules.Events.SetEventInformation(133900, {
-	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=20,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=9,["monthDay"]=20,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=27,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=9,["monthDay"]=27,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=10,["monthDay"]=4,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=10,["monthDay"]=4,["weekday"]=1,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=10,["monthDay"]=11,["weekday"]=1,["year"]=2026},{["hour"]=23,["month"]=10,["monthDay"]=11,["weekday"]=1,["year"]=2026}),
@@ -2084,7 +2083,8 @@ _.Modules.Events.SetEventInformation(133900, {
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=8,["monthDay"]=29,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=8,["monthDay"]=29,["weekday"]=1,["year"]=2027}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=5,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=5,["weekday"]=1,["year"]=2027}),
 	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=12,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=12,["weekday"]=1,["year"]=2027}),
-	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=19,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=19,["weekday"]=1,["year"]=2027})
+	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=19,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=19,["weekday"]=1,["year"]=2027}),
+	_.Modules.Events.CreateSchedule({["hour"]=21,["month"]=9,["monthDay"]=26,["weekday"]=1,["year"]=2027},{["hour"]=23,["month"]=9,["monthDay"]=26,["weekday"]=1,["year"]=2027})
 })
 _.Modules.Events.SetEventInformation(133899, {
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=23,["weekday"]=3,["year"]=2025},{["hour"]=23,["minute"]=59,["month"]=3,["monthDay"]=19,["weekday"]=5,["year"]=2026}),

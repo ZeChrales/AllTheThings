@@ -53,6 +53,13 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 				}),
 			}),
 			n(PROFESSIONS, {
+				prof(ENCHANTING, {
+					n(11074, {	-- Hgarth <Artisan Enchanter>
+						["coord"] = { 49.2, 57.2, MAP.STONETALON_MOUNTAINS },
+						["races"] = HORDE_ONLY,
+						["groups"] = ENCHANTING_RECIPES.EXPERT,
+					}),
+				}),
 				prof(FISHING, {
 					o(180662),	-- Schooner Wreckage
 				}),
@@ -578,6 +585,23 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 						i(6677),	-- Spellcrafter Wand
 					},
 				}),
+				q(79980, {	-- Scramble
+					sourceQuest = 79192,	-- Stepping Stones
+					provider = { "o", 424005 },	-- Pocket Litter
+					coord = { 40.8, 52.5, STONETALON_MOUNTAINS },
+					timeline = { TIMELINE.ADDED_1_60_1 },
+					lvl = 14,
+					groups = {
+						i(216619, {	-- Student Fodder
+							["description"] = "This item gives you 4 bars of Rested Experience when consumed.",
+						}),
+						i(217314),	-- Moonsight Rifle
+						i(217315),	-- Precision Bow
+						i(3463),	-- Silver Star
+						i(3464),	-- Feathered Arrow
+						i(3465),	-- Exploding Shot
+					},
+				}),
 				q(1068, {	-- Shredding Machines
 					["sourceQuest"] = 1062,	-- Goblin Invaders
 					["qg"] = 4049,	-- Seereth Stonebreak
@@ -684,6 +708,18 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					["maps"] = { MAP.ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 17,
+				}),
+				q(79974, {	-- Wet Job
+					sourceQuest = 79980,	-- Scramble
+					provider = { "o", 424012 },	-- Mound of Dirt
+					coord = { 39.6, 49.9, STONETALON_MOUNTAINS },
+					timeline = { TIMELINE.ADDED_1_60_1 },
+					maps = { LOCH_MODAN },
+					lvl = 14,
+					groups = {
+						i(20709),	-- Rumsey Rum Light
+						i(5432),	-- Hickory Pipe
+					},
 				}),
 				q(1084, {	-- Wounded Ancients
 					["sourceQuest"] = 1091,	-- Kaela's Update

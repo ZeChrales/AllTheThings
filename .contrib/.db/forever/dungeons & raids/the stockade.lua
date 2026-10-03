@@ -5,6 +5,7 @@
 root(ROOTS.Instances, {
 	inst(238, {	-- The Stockade
 		["lore"] = "The Stockade is a high-security prison complex, hidden beneath the canal district of Stormwind city. Presided over by Warden Thelwater, the Stockade is home to petty crooks, political insurgents, murderers and a score of the most dangerous criminals in the land. Recently, a prisoner-led revolt has resulted in a state of pandemonium within the stockade - where the guards have been driven out and the convicts roam free. Warden Thelwater has managed to escape the holding area and is currently enlisting brave thrill-seekers to venture into the prison and kill the uprising's mastermind - the cunning felon, Bazil Thredd.",
+		["icon"] = 136358,
 		["zone-text-areaID"] = 717,	-- The Stockade
 		["zone-text-names"] = {
 			"Stormwind Stockade",	-- enUS
@@ -89,7 +90,7 @@ root(ROOTS.Instances, {
 				}),
 				q(386, {	-- What Comes Around...
 					["qg"] = 859,	-- Guard Berton
-					["coord"] = { 26.0, 43.0, MAP.REDRIDGE_MOUNTAINS },
+					["coord"] = { 21.2, 46.6, MAP.REDRIDGE_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 22,
 					["groups"] = {
@@ -103,6 +104,9 @@ root(ROOTS.Instances, {
 			}),
 			n(ZONE_DROPS, {
 				i(1076),	-- Defias Renegade Ring
+				i(274092, {	-- Sharpened Cutlery
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 			}),
 			n(1720, {	-- Bruegal Ironknuckle
 				["description"] = "This is a rare that was not always present.",
@@ -114,17 +118,51 @@ root(ROOTS.Instances, {
 			}),
 			n(1666, {	-- Kam Deepfury
 				i(3640),	-- Head of Deepfury
+				i(273808, {	-- Bridgebreaker Bindings
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 				i(2280),	-- Kam's Walking Stick
 			}),
 			n(1663, {	-- Dextren Ward
 				i(3628),	-- Hand of Dextren Ward
 			}),
-			n(1717),	-- Hamhock
+			n(1717, {	-- Hamhock
+				i(273809, {	-- Hamhock's Cleaver
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
+				i(273810, {	-- Ogre Grips
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
+			}),
 			n(1696, {	-- Targorr the Dread
 				i(3630),	-- Head of Targorr
+				i(273805, {	-- Blackrock Harness
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
+				i(273806, {	-- Dark Horde Band
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
+				i(273804, {	-- Executioner Mantle
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
+				i(273820, {	-- Nightskulker Ring
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 			}),
 			n(1716, {	-- Bazil Thredd
 				i(2926),	-- Head of Bazil Thredd
+				i(273827, {	-- Debt Collector
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
+				i(273829, {	-- Concealed Hand Crossbow
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
+				i(273824, {	-- Defias Jailbreakers
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
+				i(273825, {	-- Red Wool Cloak
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 			}),
 		},
 	}),
