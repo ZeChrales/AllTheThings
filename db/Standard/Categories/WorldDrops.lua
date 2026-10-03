@@ -1073,7 +1073,9 @@ s(4644,13004,{f=27,lvl=22}),
 s(2004,5216,{f=27,lvl=17}),
 s(4705,13065,{f=27,lvl=20}),
 s(2002,5214,{f=27,lvl=12}),
-s(6062,15280,{f=27,lvl=21})})}),
+s(6062,15280,{f=27,lvl=21})}),
+flt(36,{
+i(5379,{lvl=2})})}),
 flt(7,{
 s(3188,8312,{f=7,loc=42,lvl=22}),
 s(3190,8314,{f=7,loc=44,lvl=21}),
@@ -3605,6 +3607,7 @@ i(5465,{coords={
 i(1475,{coords={
 [106]={{18.8,35.8}}},crs={17522,17523,17683},description="Cataclysm messed up with the drop sources for Small Venom Sac, and unfortunately for Horde players the only reliable farming spot is on Bloodmyst Isle."}),
 i(5468,{crs={2173,6033},description="Drops from frenzies found in bodies of water.",maps={21}}),
+i(3174,{crs={217,442,930,949,1111,1195,1780,1781,3819,3820,3821,4005,4006,4007,4040},maps={21,47,48,49,56,63,65}}),
 i(3182,{crs={3819,3820,3821},description="Drops from spiders in previously lower intermediate level vanilla zones, and are most abundant in Ashenvale. Spiders often share a spawn with other beasts, so kill the bear or whatever if you cannot find spiders.",maps={63}}),
 i(67229,{awp=40003,coords={
 [62]={{45.2,40.8},{47.4,29.5}},
@@ -7253,7 +7256,7 @@ r(139176,{learnedAt=75,requireSkill=202,skillID=2502}),
 r(139196,{learnedAt=75,requireSkill=202,skillID=2502}),
 r(143714,{learnedAt=75,requireSkill=202,skillID=2502}),
 r(139192,{learnedAt=75,requireSkill=202,skillID=2502})}}),
-q(32630,{awp=50300,lvl=32,providers={{"i",94847}},rwp=50400,u=2})}),
+q(32630,{awp=50300,lvl=32,qss={94847},rwp=50400,u=2})}),
 prof(773,{
 i(104233,{awp=50400,b=1,rwp=70003,u=2}),
 i(104221,{awp=50400,b=1,rwp=70003,u=2}),
@@ -7315,8 +7318,8 @@ i(74844,{description="Drops from Jinyu, Sprites or Zandalari. Located in almost 
 i(76061),
 cu(395,{awp=40003,rwp=60002,u=2}),
 cu(396,{awp=40003,rwp=60002,u=2})})}}),
-x(6,{awp=70003,g={
-h(-51,{awp=60003,g={
+x(6,{awp=60003,g={
+h(-51,{
 s(57491,106440,{f=4,loc=45,lvl=35}),
 s(57492,106441,{f=4,loc=40,lvl=35}),
 s(57493,106442,{f=4,loc=44,lvl=35}),
@@ -7700,8 +7703,8 @@ s(57725,106674,{f=4,loc=46,lvl=39}),
 s(57726,106675,{f=4,loc=42,lvl=39}),
 s(57727,106676,{f=4,loc=47,lvl=39}),
 s(57728,106677,{f=4,loc=41,lvl=39}),
-s(57729,106678,{f=4,loc=43,lvl=39})}}),
-h(-88,{awp=60003,g={
+s(57729,106678,{f=4,loc=43,lvl=39})}),
+h(-88,{
 h(-94,{
 s(57356,106305,{f=7,loc=40,lvl=35}),
 s(67906,118857,{f=7,loc=40,lvl=37}),
@@ -7879,8 +7882,8 @@ i(118883,{f=53,lvl=39,spellID=176930}),
 i(118879,{f=53,lvl=38,spellID=176915}),
 i(118880,{f=53,lvl=40,spellID=177592}),
 i(118877,{f=53,lvl=35,spellID=176904}),
-i(118876,{f=53,lvl=40,spellID=177597})})}}),
-h(-101,{awp=60003,g={
+i(118876,{f=53,lvl=40,spellID=177597})})}),
+h(-101,{
 flt(21,{
 s(65404,116542,{f=21,lvl=37}),
 s(65455,116593,{f=21,lvl=39}),
@@ -8152,10 +8155,10 @@ s(65471,116609,{f=27,lvl=39}),
 s(65454,116592,{f=27,lvl=38}),
 s(65420,116558,{f=27,lvl=37}),
 s(65437,116575,{f=27,lvl=38}),
-s(65403,116541,{f=27,lvl=37})})}}),
-flt(200,{awp=60003,g={
-q(36239,{description="This item can drop from any Draenor mob.",lvl=10,maps={525,535,539,542,543,550},providers={{"i",114984}},r=2,requireSkill=773}),
-q(36435,{description="This item can drop from any Draenor mob.",lvl=10,maps={525,535,539,542,543,550},providers={{"i",115593}},r=1,requireSkill=773}),
+s(65403,116541,{f=27,lvl=37})})}),
+flt(200,{
+q(36239,{description="This item can drop from any Draenor mob.",lvl=10,maps={525,535,539,542,543,550},qss={114984},r=2,requireSkill=773}),
+q(36435,{description="This item can drop from any Draenor mob.",lvl=10,maps={525,535,539,542,543,550},qss={115593},r=1,requireSkill=773}),
 i(116438,{b=1,lvl=10,requireSkill=202}),
 i(114972,{b=1,lvl=10,requireSkill=197}),
 i(114877,{b=1,lvl=10,requireSkill=165}),
@@ -8177,9 +8180,9 @@ i(111387,{b=1,description="This can drop from any Warlords of Draenor mob if you
 r(158765,{collectible=false,rank=9,requireSkill=185,rwp=80001,u=2}),
 r(264642,{awp=80001,requireSkill=185}),
 r(161002,{requireSkill=185,skillID=2543}),
-r(161001,{requireSkill=185,skillID=2543})}})}})}}),
-x(7,{awp=80001,g={
-h(-88,{awp=70003,g={
+r(161001,{requireSkill=185,skillID=2543})}})})}}),
+x(7,{awp=70003,g={
+h(-88,{
 flt(4,{
 s(68540,121390,{b=1,f=4,loc=43,lvl=40}),
 s(68536,121386,{b=1,f=4,loc=45,lvl=40}),
@@ -8284,8 +8287,8 @@ i(141584,{f=53,lvl=40,spellID=227388}),
 i(134379,{b=1,f=53,lvl=40}),
 i(134366,{b=1,f=53,lvl=40}),
 i(141586,{f=53,lvl=40,spellID=228141}),
-i(141585,{f=53,lvl=40,spellID=227868})})}}),
-h(-101,{awp=70003,g={
+i(141585,{f=53,lvl=40,spellID=227868})})}),
+h(-101,{
 s(68532,121382,{b=1,f=24,lvl=40}),
 s(76471,132921,{f=24,lvl=40}),
 s(68526,121376,{b=1,f=25,lvl=40}),
@@ -8306,13 +8309,13 @@ s(68487,121337,{f=31,lvl=40}),
 s(68483,121333,{f=23,lvl=40}),
 s(68491,121341,{f=28,lvl=40}),
 s(68528,121378,{b=1,f=32,lvl=40}),
-s(68525,121375,{b=1,f=23,lvl=40})}}),
-flt(56,{awp=70003,g={
+s(68525,121375,{b=1,f=23,lvl=40})}),
+flt(56,{
 i(151567,{awp=70300}),
 i(124437),
 i(124438),
-i(124439)}}),
-flt(200,{awp=70003,g={
+i(124439)}),
+flt(200,{
 prof(171,{
 r(188323,{b=1,itemID=127925,lvl=10,requireSkill=171,skillID=2479}),
 r(229217,{awp=70100,b=1,itemID=142119,lvl=10,requireSkill=171,skillID=2479})}),
@@ -8348,7 +8351,7 @@ r(186117,{itemID=138010,lvl=10,requireSkill=197,skillID=2534}),
 r(186110,{b=1,description="Drops from murlocs in any Broken Isles zone.",itemID=138003,lvl=10,requireSkill=197,skillID=2534}),
 r(186111,{itemID=138004,lvl=10,requireSkill=197,skillID=2534}),
 r(186107,{b=1,description="Drops from vrykul in any Broken Isles zone.",itemID=138000,lvl=10,requireSkill=197,skillID=2534}),
-r(186108,{itemID=138001,lvl=10,requireSkill=197,skillID=2534})})}})}}),
+r(186108,{itemID=138001,lvl=10,requireSkill=197,skillID=2534})})})}}),
 x(8,{awp=80001,g={
 h(-88,{
 flt(4,{
@@ -9259,7 +9262,7 @@ flt(3),
 flt(50)})}}),
 ah(1810,{description="These containers can be opened by a Rogue with Pick Lock or by using a key of the appropriate level. Items exclusive to the boxes will be listed below.",type="s",g={
 i(169475,{awp=80200,lvl=50,sym={{"select","itemID",170118,170116,170201,170114,170120,170115,170119,170117,170112,169400,169435,169402,169425,169404,169399,169403,169401,169398,169416,169431,169418,169413,169420,169415,169419,169417,169414,169408,169434,169410,169405,169412,169407,169411,169409,169406,169424,169433,169427,169421,169429,169423,169428,169426,169422}}}),
-i(16882,{sym={{"select","itemID",11968,4999,11984,11994,12054,6375,5002,11969,6454,12006,7360,5972,2601,7092,7364,7363,4350,6390,3611,6044,3608,5578,10424,2882,12007,3396,12008,11967}},g={
+i(16882,{awp=11101,sym={{"select","itemID",11968,4999,11984,11994,12054,6375,5002,11969,6454,12006,7360,5972,2601,7092,7364,7363,4350,6390,3611,6044,3608,5578,10424,2882,12007,3396,12008,11967}},g={
 s(1727,4446,{f=20,lvl=10}),
 s(871,2567,{f=20,lvl=10}),
 s(2179,5756,{f=20,lvl=14}),
@@ -9274,7 +9277,7 @@ i(4633),
 i(16885,{sym={{"select","itemID",1728,16215,16218,14494,15746,15755,15743,14499,12689,12695,12683,12693,12684,12694,12704,12691,2163,12044,12014,21953,21949,12057,12046,12002,12034,12004,12035,12026,11991,12056,11976,12025,11990,11977,12055,12015,11989}}}),
 i(4634,{awp=100107,sym={{"select","itemID",11164,7449,5774,7450,4299,3867,3872,3611,3870,6045,3830,10601,4416,4414,13063}},g={
 r(9513,{itemID=7678,requireSkill=185,skillID=2548})}}),
-i(31952,{awp=20100}),
+i(31952,{awp=20003}),
 i(186160,{awp=90100,lvl=50,sym={{"select","itemID",186143,186151,186147,186149,186142,186140,186150,186154,186139,186144,186141,186146,186148,186116,186137,186119,186114,186110,186107,186109,186112,186128,186129,186132,186120,186126,186152,186145}}}),
 i(188787,{awp=90200,lvl=50}),
 i(5758,{awp=100107,g={
@@ -9321,7 +9324,7 @@ toy(36862,{awp=30002,description="Can be pickpocketed from Northrend humanoids."
 x(4,{awp=40003,g={
 flt(102,{
 toy(63269,{awp=40001,description="Can be pickpocketed from Cataclysm humanoids."})})}}),
-x(6,{awp=70003,g={
+x(6,{awp=60003,g={
 q(39107,{c={4},isWeekly=1,lvl=10,qgs={83006}}),
 i(113005,{b=1}),
 i(113006,{b=1}),
@@ -9339,7 +9342,7 @@ q(37285,{c={4},isWeekly=1,lvl=10,qgs={83006},repeatable=1}),
 q(37284,{c={4},isWeekly=1,lvl=10,qgs={83006}}),
 i(113000,{b=1}),
 i(113001,{b=1})}}),
-x(7,{awp=80001,g={
+x(7,{awp=70003,g={
 i(151146,{b=1,spellID=245616}),
 i(151150,{b=1,spellID=245616}),
 i(151148,{b=1,spellID=245616}),

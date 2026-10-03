@@ -958,10 +958,10 @@ hqt(88964,{awp=110200}),
 hqt(88965,{awp=110200}),
 hqt(88966,{awp=110200})}),
 h(-45,{
-q(84370,{isWeekly=1,lvl=70,providers={{"i",227794}}}),
-q(84519,{lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},providers={{"i",228560}},rwp=110100,u=2,g={
+q(84370,{isWeekly=1,lvl=70,qss={227794}}),
+q(84519,{lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},qss={228560},rwp=110100,u=2,g={
 i(228984,{b=1,spellID=456552,u=2})}}),
-q(84520,{lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},providers={{"i",228581}},rwp=110100,u=2,g={
+q(84520,{lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},qss={228581},rwp=110100,u=2,g={
 i(228582,{b=1,spellID=456554,u=2})}}),
 q(81514,{coords={
 [2339]={{47.4,44.4}}},lvl=80,qgs={206017},sourceQuests={83315}}),
@@ -979,8 +979,8 @@ q(81596,{coords={
 q(83500,{coords={
 [2339]={{47.4,44.4}}},lvl=70,qgs={206017},rwp=110100,sourceQuests={81596},u=2,g={
 toy(225547,{b=1,u=2})}}),
-q(86461,{awp=110100,lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},providers={{"i",234330}}}),
-q(86462,{awp=110100,lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},providers={{"i",234329}}}),
+q(86461,{awp=110100,lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},qss={234330}}),
+q(86462,{awp=110100,lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},qss={234329}}),
 q(88947,{awp=110100,coords={
 [2339]={{47.6,44.3}}},isBreadcrumb=1,lvl=80,nextQuests={85242},qgs={206017},rwp=110200,u=2}),
 q(85242,{awp=110100,coords={
@@ -998,7 +998,7 @@ q(85244,{awp=110100,coords={
 [2339]={{47.4,44.4}}},lvl=70,qgs={206017},rwp=110200,sourceQuests={85243},u=2,g={
 s(194664,212170,{f=2,loc=40,lvl=60,u=2}),
 toy(230727,{b=1,u=2})}}),
-q(90779,{awp=110105,description="Can be completed once per TWW Season.\n\nNOTE: This will allow over-capping crests if you are already capped, otherwise the rewarded crests will be considered part of the current cap.",isMonthly=1,lvl=70,providers={{"i",251543}}}),
+q(90779,{awp=110105,description="Can be completed once per TWW Season.\n\nNOTE: This will allow over-capping crests if you are already capped, otherwise the rewarded crests will be considered part of the current cap.",isMonthly=1,lvl=70,qss={251543}}),
 q(90968,{awp=110107,isBreadcrumb=1,lvl=70,nextQuests={90969},rwp=110200,u=2}),
 q(90969,{awp=110107,coords={
 [2339]={{48,43.4}}},lvl=70,qgs={245191},rwp=110200,sourceQuests={90968},u=2}),
@@ -1030,8 +1030,8 @@ i(244696,{b=1,f=55,lvl=80,u=2})}}),
 q(91035,{awp=110107,coords={
 [2339]={{48,43.4}}},lvl=80,qgs={245191},rwp=110200,sourceQuests={91033},u=2,g={
 i(244696,{b=1,f=55,lvl=80,u=2})}}),
-q(90776,{awp=110200,lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},providers={{"i",242849}}}),
-q(90778,{awp=110200,lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},providers={{"i",242850}}}),
+q(90776,{awp=110200,lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},qss={242849}}),
+q(90778,{awp=110200,lvl=70,maps={2249,2250,2251,2259,2269,2277,2299,2301,2302,2310,2312,2347,2396,2420,2452},qss={242850}}),
 q(91780,{awp=110200,lvl=80,rwp=120000,u=2}),
 q(91781,{awp=110200,coords={
 [2339]={{47.4,44.4}}},lvl=70,qgs={206017},rwp=120000,sourceQuests={91780},u=2,g={
@@ -2610,9 +2610,9 @@ q(93511,{coords={
 q(93525,{coords={
 [2393]={{52.5,78.3}}},lvl=90,maps={2507},qgs={242381},sourceQuests={93511},u=2,g={
 toy(264413,{b=1,u=2})}}),
-q(93943,{lvl=80,maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},providers={{"i",254675}},u=2}),
-q(93945,{lvl=80,maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},providers={{"i",254674}},u=2}),
-q(92600,{isMonthly=1,lvl=80,maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},providers={{"i",253245}},u=2})}}),
+q(93943,{lvl=80,maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},qss={254675},u=2}),
+q(93945,{lvl=80,maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},qss={254674},u=2}),
+q(92600,{isMonthly=1,lvl=80,maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},qss={253245},u=2})}}),
 h(-47,{awp=120005,u=2,g={
 i(268650,{f=55,spellID=1283168,u=2,g={
 i(268552,{f=55,spellID=1282778,u=2})}})}}),
@@ -2639,12 +2639,12 @@ n(262455,{isWeekly=1,questID=92888,g={
 ach(63326,{
 s(309591,276163,{f=3}),
 crit(115861,{achID=61906,id=4})}),
-s(303636,264971,{description="The first kill per week per character has a very high chance to grant you this item.",f=28}),
-s(303635,264970,{description="The first kill per week per character has a very high chance to grant you this item.",f=22}),
+s(303636,264971,{description="The first kill per week per character has a somewhat higher chance to grant you this item.",f=28}),
+s(303635,264970,{description="The first kill per week per character has a somewhat higher chance to grant you this item.",f=22}),
 p(4958,{b=1,itemID=262391,npcID=256265,spellID=1268687}),
-s(303846,265368,{description="The first kill per week per character has a very high chance to grant you this item.",f=25}),
-s(303844,265366,{description="The first kill per week per character has a very high chance to grant you this item.",f=21}),
-s(303845,265367,{description="The first kill per week per character has a very high chance to grant you this item.",f=20})}}),
+s(303846,265368,{description="The first kill per week per character has a somewhat higher chance to grant you this item.",f=25}),
+s(303844,265366,{description="The first kill per week per character has a somewhat higher chance to grant you this item.",f=21}),
+s(303845,265367,{description="The first kill per week per character has a somewhat higher chance to grant you this item.",f=20})}}),
 n(265500,{isWeekly=1,questID=97913,g={
 ach(63334,{description="Random tips:\nClicking Valeera's Bonefire gives you 5% main stats for 10min, stacking with normal food buffs.\n\nThe completion buff you get at the end of a Delve carries over and works inside the special boss encounter.",rwp=120100,u=2,g={
 title(776,{u=2})}}),
@@ -2736,7 +2736,7 @@ s(307905,272276,{f=8})}})}),
 flt(50,{
 i(276547,{description="Use before starting your Prey quest to work properly.",f=55,spellID=1306913}),
 i(279290,{providers={{"o",584518}},questID=98043,spellID=1306485}),
-i(276548,{f=55,spellID=1306916}),
+i(276548,{description="Use before starting your Prey quest to work properly.",f=55,spellID=1306916}),
 i(274374,{f=55,providers={{"o",584518},{"o",656489}},questID=86371,spellID=1293799})}),
 flt(104,{
 i(274965),
@@ -2774,10 +2774,10 @@ i(277934)})}}),
 q(97482,{coords={
 [2393]={{52.5,78.3}}},maps={2634},qgs={242381},sourceQuests={97321},g={
 toy(275988)}}),
-q(96612,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},providers={{"i",274965}}}),
-q(96615,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},providers={{"i",274970}}}),
-q(97616,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},providers={{"i",277506}}}),
-q(97910,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},providers={{"i",279012}}})}),
+q(96612,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},qss={274965}}),
+q(96615,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},qss={274970}}),
+q(97616,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},qss={277506}}),
+q(97910,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},qss={279012}})}),
 h(-56,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},g={
 o(656489,{cost={{"i",275910,1}},isWeekly=1,questID=92887,sym={{"select","itemID",262391,264971,264970,265368,265366,265367}}})}}),
 h(-58,{
@@ -2846,10 +2846,10 @@ crit(115843,{achID=61710,id=11}),
 crit(115855,{achID=61710,id=12})}),
 ach(61906,{
 mnt(1261349,{itemID=257199})}),
-ach(61720,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547}}),
-ach(61721,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},g={
+ach(61720,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635}}),
+ach(61721,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},g={
 i(264882,{f=55})}}),
-ach(62206,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547}}),
+ach(62206,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635}}),
 ach(61711,{
 crit(110876,{achID=61711,id=3,maps={2535}}),
 crit(110891,{achID=61711,id=7,maps={2547}}),
@@ -2990,7 +2990,7 @@ crit(111012,{achID=61734,id=2,questID=90806})}),
 ach(61901,{
 title(691),
 crit(111291,{achID=61906,id=2})})}),
-h(-24,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},symselector=3,g={
+h(-24,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},symselector=3,g={
 flt(101,{
 p(4959,{b=1,itemID=262395,npcID=256278,providers={{"o",584508},{"o",584509},{"o",584515},{"o",584518},{"o",623258}},spellID=1268704}),
 p(4957,{b=1,itemID=262396,npcID=256282,providers={{"o",584508},{"o",584509},{"o",584511},{"o",584515},{"o",584518},{"o",584519}},spellID=1268718}),
@@ -3074,12 +3074,14 @@ i(273000)}}),
 o(623258,{VerifyLoot={"armor","weapon","miscellaneous"}}),
 o(584517,{providers={{"i",257386}},VerifyLoot={"armor","weapon","miscellaneous"}}),
 o(584515,{providers={{"i",257387}},VerifyLoot={"armor","weapon","miscellaneous"}}),
-o(658087,{awp=120100,VerifyLoot={"armor","weapon","miscellaneous"}}),
+o(658087,{awp=120100,VerifyLoot={"armor","weapon","miscellaneous"},g={
+i(254983,{b=1,f=55,spellID=1258939})}}),
 o(623259,{VerifyLoot={"armor","weapon","miscellaneous"}}),
 o(584519,{providers={{"i",257386}},VerifyLoot={"armor","weapon","miscellaneous"}}),
 o(584518,{providers={{"i",257387}},VerifyLoot={"armor","weapon","miscellaneous"},g={
 p(4953,{b=1,itemID=262390,npcID=256264,spellID=1268686})}}),
-o(658088,{awp=120100,VerifyLoot={"armor","weapon","miscellaneous"}}),
+o(658088,{awp=120100,VerifyLoot={"armor","weapon","miscellaneous"},g={
+i(254983,{b=1,f=55,spellID=1258939})}}),
 o(584504,{providers={{"n",256593}},rwp=120100,u=2,VerifyLoot={"armor","weapon","miscellaneous"},g={
 i(254983,{b=1,f=55,spellID=1258939,u=2})}}),
 o(584503,{description="Requires Delver's Journey Rank 3 to spawn. When you zone in to a Delve, you may get a message that 'A Sanctified Banner has spawned'. You then need to find the banner (It looks like a Light-themed flagpole, a little taller than your character and slightly glowing), click it and then finish the Delve for an extra chest/goodies.\n\nWhen activating the banner, an elite mob can spawn. If it does, then you will get a Grand Sanctified Spoil instead of a regular one.",providers={{"n",256593}},rwp=120100,sym={{"select","itemID",264971,264970}},u=2,VerifyLoot={"armor","weapon","miscellaneous"},g={
@@ -3188,11 +3190,11 @@ hqt(95875,{awp=120100})}),
 h(-39,{
 i(258738,{b=1,description="Mailed to you after your first death in a delve."})}),
 h(-45,{
-q(93784,{isWeekly=1,lvl=80,providers={{"i",262586}}}),
+q(93784,{isWeekly=1,lvl=80,qss={262586}}),
 q(93453,{coords={
-[2393]={{52.7,77.6}}},lvl=78,providers={{"i",258738},{"n",254616}},g={
+[2393]={{52.7,77.6}}},lvl=78,providers={{"n",254616}},qss={258738},g={
 cq(93866,{b=1,itemID=262966,rwp=120100,spellID=1269622,u=2})}})}),
-h(-55,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},g={
+h(-55,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},g={
 o(609862,{awp=120100,coords={
 [2393]={{52.6,77.3}}},lore="Died in Lordaeron or Undercity.",maps={18},g={
 ach(61456,{description="Acquisition of the Gravestone is locked behind a Hidden Achievement that will not show in your Achievement UI.\n\nYou need to go to the present phase of Lordearon and kill your character while within the confines of the City.\n\nDo a force refresh after killing your character. If this entry disappears, go back to Silvermoon City and apply the Gravestone."})}}),
@@ -3208,7 +3210,7 @@ n(256593,{coords={
 [2535]={{40.57,57.84},{43.12,65.28},{44.41,46.27},{57.38,83.09}},
 [2545]={{23.03,15.09},{24.13,88.14},{64.7,63.5}},
 [2547]={{30,22},{46.6,84.29},{81.36,39.86}}}})}}),
-h(-56,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547},g={
+h(-56,{maps={2502,2503,2505,2506,2510,2525,2528,2535,2545,2547,2633,2635},g={
 o(584752,{description="Contains Chunk of Companion Experience tokens.",g={
 i(254756,{b=1,f=55,spellID=1258625}),
 i(254757,{b=1,f=55,spellID=1258626}),

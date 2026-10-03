@@ -3601,6 +3601,7 @@ i(5465,{coords={
 i(1475,{coords={
 [106]={{18.8,35.8}}},crs={17522,17523,17683},description="Cataclysm messed up with the drop sources for Small Venom Sac, and unfortunately for Horde players the only reliable farming spot is on Bloodmyst Isle.",q=1}),
 i(5468,{crs={2173,6033},description="Drops from frenzies found in bodies of water.",maps={21},q=1}),
+i(3174,{crs={217,442,930,949,1111,1195,1780,1781,3819,3820,3821,4005,4006,4007,4040},maps={21,47,48,49,56,63,65}}),
 i(3182,{crs={3819,3820,3821},description="Drops from spiders in lower intermediate level vanilla zones, and are most abundant in Ashenvale. Spiders often share a spawn with other beasts, so kill the bear or whatever if you cannot find spiders.",maps={63},q=1}),
 i(67229,{awp=40003,coords={
 [62]={{45.2,40.8},{47.4,29.5}},
@@ -7249,7 +7250,7 @@ r(139176,{learnedAt=600,requireSkill=202,u=54}),
 r(139196,{learnedAt=600,requireSkill=202,u=54}),
 r(143714,{learnedAt=600,requireSkill=202,u=54}),
 r(139192,{learnedAt=600,requireSkill=202,u=54})}}),
-q(32630,{awp=50300,providers={{"i",94847}},rwp=50400,u=2})}}),
+q(32630,{awp=50300,qss={94847},rwp=50400,u=2})}}),
 prof(773,{u=50,g={
 r(146638,{awp=50400,b=1,itemID=102534,learnedAt=600,q=2,requireSkill=773,u=50}),
 r(148275,{awp=50400,b=1,itemID=104228,learnedAt=500,q=2,requireSkill=773,u=50}),
@@ -7325,7 +7326,7 @@ i(88567,{awp=50004,q=2}),
 i(4633,{q=2}),
 i(16885,{q=1,sym={{"select","itemID",1728,16215,16218,14494,15746,15755,15743,14499,12689,12695,12683,12693,12684,12694,12704,12691,2163,12044,12014,21953,21949,12057,12046,12002,12034,12004,12035,12026,11991,12056,11976,12025,11990,11977,12055,12015,11989}}}),
 i(4634,{q=2,sym={{"select","itemID",11164,7449,5774,7450,4299,3867,3872,3611,3870,6045,3830,10601,4416,4414,13063}}}),
-i(31952,{awp=20100,q=2}),
+i(31952,{awp=20003,q=2}),
 i(5758,{q=2}),
 i(4632,{q=2}),
 i(43575,{awp=30002,q=1,g={

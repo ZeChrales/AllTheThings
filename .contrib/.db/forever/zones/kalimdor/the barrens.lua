@@ -115,6 +115,23 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 			}),
 		}),
 		n(QUESTS, {
+			q(79007, {	-- ... and that note you found (H)
+				providers = {
+					{ "o", 415106 },	-- Burned-Out Remains
+					{ "o", 424010 },	-- Nailed Plank
+				},
+				coords = {
+					{ 46.4, 73.9, THE_BARRENS },
+					{ 37.5, 50.8, WESTFALL },
+				},
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				races = HORDE_ONLY,
+				lvl = 14,
+				groups = {
+					i(2459),	-- Swiftness Potion
+					i(3388),	-- Strong Troll's Blood Potion
+				},
+			}),
 			q(1153, {	-- A New Ore Sample
 				["sourceQuest"] = 893,	-- Weapons of Choice
 				["qg"] = 3433,	-- Tatternack Steelforge
@@ -1906,6 +1923,18 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 					}),
 				},
 			}),
+			q(98248, {	-- Shipping Label (H)
+				description = "The shipping label appears in your inventory once you seal a waylaid crate for the first time.",
+				qs = 280180,	-- Shipping Label (QS!)
+				qg = 256386,	-- Dokimi <Inventory Intake>
+				coord = { 50.0, 29.2, MAP.THE_BARRENS },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				races = HORDE_ONLY,
+				lvl = 10,
+				groups = {
+					currency(3402),	-- Merchant's Favor x50
+				},
+			}),
 			q(887, {	-- Southsea Freebooters
 				["qg"] = 3391,	-- Gazlowe
 				["coord"] = { 62.68, 36.24, MAP.THE_BARRENS },
@@ -1950,6 +1979,31 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 				["races"] = HORDE_ONLY,
 				["repeatable"] = true,
 				["lvl"] = 14,
+			}),
+			q(79192, {	-- Stepping Stones
+				sourceQuests = {
+					79008,	-- ... and that note you found (A)
+					79007,	-- ... and that note you found (H)
+				},
+				providers = {
+					{ "o", 417072 },	-- Nailed Plank
+					{ "o", 424010 },	-- Nailed Plank
+				},
+				coords = {
+					{ 46.4, 73.8, THE_BARRENS },
+					{ 37.5, 50.8, WESTFALL },
+				},
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				maps = { STONETALON_MOUNTAINS },
+				lvl = 14,
+				groups = {
+					i(3334),	-- Farmer's Shovel
+					i(221498),	-- Sturdy Lunchbox
+					i(1652),	-- Sturdy Lunchbox
+					i(2901),	-- Mining Pick
+					i(4470),	-- Simple Wood
+					i(4471),	-- Flint and Tinder
+				},
 			}),
 			q(888, {	-- Stolen Booty
 				["sourceQuest"] = 892,	-- The Missing Shipment (2/2)
@@ -2582,7 +2636,7 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 			}),
 		}),
 		n(RARES, {
-			n(5797, {	-- Aean Swiftriver <Alliance Outrunner>
+			n(THE_BARRENS_ALLIANCE_OUTRUNNERS, {	-- Alliance Outrunners
 				["coords"] = {
 					{ 45.6, 41.2, MAP.THE_BARRENS },
 					{ 48.8, 42.6, MAP.THE_BARRENS },
@@ -2603,13 +2657,28 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 					{ 46.0, 45.6, MAP.THE_BARRENS },
 				},
 				["races"] = HORDE_ONLY,
-				["crs"] = {
-					5799,	-- Hannah Bladeleaf <Alliance Outrunner>
-					5800,	-- Marcus Bel <Alliance Outrunner>
-					5798,	-- Thora Feathermoon <Alliance Outrunner>
-				},
 				["groups"] = {
-					i(10621),	-- Runed Scroll
+					n(5797, {	-- Aean Swiftriver <Alliance Outrunner>
+						i(285347, {	-- Alliance Outrunner Bow
+							timeline = { TIMELINE.ADDED_1_60_1 },
+						}),
+						i(10621),	-- Runed Scroll (QS!)
+					}),
+					n(5799, {	-- Hannah Bladeleaf <Alliance Outrunner>
+						i(285348, {	-- Alliance Outrunner Healing Rod
+							timeline = { TIMELINE.ADDED_1_60_1 },
+						}),
+					}),
+					n(5800, {	-- Marcus Bel <Alliance Outrunner>
+						i(285350, {	-- Alliance Outrunner Staff
+							timeline = { TIMELINE.ADDED_1_60_1 },
+						}),
+					}),
+					n(5798, {	-- Thora Feathermoon <Alliance Outrunner>
+						i(285346, {	-- Alliance Outrunner's Sword
+							timeline = { TIMELINE.ADDED_1_60_1 },
+						}),
+					}),
 				},
 			}),
 			n(5834, {	-- Azzere the Skyblade
@@ -2662,7 +2731,7 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 				["races"] = HORDE_ONLY,
 				["groups"] = {
 					i(4785, {	-- Brimstone Belt
-						["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+						["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item.",
 					}),
 				},
 			}),
@@ -2723,7 +2792,7 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 				["races"] = HORDE_ONLY,
 				["groups"] = {
 					i(2035, {	-- Sword of the Night Sky
-						["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+						["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item.",
 					}),
 				},
 			}),
@@ -2843,6 +2912,16 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 			}),
 		}),
 		n(VENDORS, {
+			n(248196, {	-- Apothecary Durelle <Alchemist>
+				["coord"] = { 49.8, 29.6, MAP.THE_BARRENS },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["groups"] = ALCHEMY_RECIPES.MERCHANTS_FAVOR_RECIPES_HORDE,
+			}),
+			n(248199, {	-- Beneris <Enchanting>
+				["coord"] = { 49.6, 29.8, MAP.THE_BARRENS },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["groups"] = ENCHANTING_RECIPES.MERCHANTS_FAVOR_RECIPES_HORDE,
+			}),
 			n(3495, {	-- Gagsprocket <Engineering Goods>
 				["coord"] = { 62.7, 36.3, MAP.THE_BARRENS },
 				["groups"] = {
@@ -2850,6 +2929,11 @@ maproot(MAP.KALIMDOR, MAP.THE_BARRENS, {
 						["isLimited"] = true,
 					}),
 				},
+			}),
+			n(248197, {	-- Gor'mak <Blacksmith>
+				["coord"] = { 49.8, 29.6, MAP.THE_BARRENS },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["groups"] = BLACKSMITHING_RECIPES.MERCHANTS_FAVOR_RECIPES_HORDE,
 			}),
 			n(3493, {	-- Grazlix <Armorer & Shieldcrafter>
 				["coord"] = { 62.2, 38.4, MAP.THE_BARRENS },

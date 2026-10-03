@@ -5,6 +5,7 @@
 root(ROOTS.Instances, {
 	inst(64, {	-- Shadowfang Keep
 		["lore"] = "During the Third War, the wizards of the Kirin Tor battled against the undead armies of the Scourge. When the wizards of Dalaran died in battle, they would rise soon after - adding their former might to the growing Scourge. Frustrated by their lack of progress (and against the advice of his peers) the Archmage, Arugal elected to summon extra-dimensional entities to bolster Dalaran's diminishing ranks. Arugal's summoning brought the ravenous worgen into the world of Azeroth. The feral wolf-men slaughtered not only the Scourge, but quickly turned on the wizards themselves. The worgen sieged the keep of the noble, Baron Silverlaine. Situated above the tiny hamlet of Pyrewood, the keep quickly fell into shadow and ruin. Driven mad with guilt, Arugal adopted the worgen as his children and retreated to the newly dubbed 'Shadowfang Keep'. It's said he still resides there, protected by his massive pet, Fenrus - and haunted by the vengeful ghost of Baron Silverlaine.",
+		["icon"] = 136357,
 		["zone-text-areaID"] = 209,	-- Shadowfang Keep
 		["coord"] = { 36.6, 65.6, MAP.SILVERPINE_FOREST },
 		["maps"] = { MAP.SHADOWFANG_KEEP },
@@ -70,20 +71,6 @@ root(ROOTS.Instances, {
 				}),
 			}),
 			n(ZONE_DROPS, {
-				i(60874, {	-- Deathless Sinew
-					["timeline"] = { ADDED_4_0_3 },
-				}),
-				i(60875, {	-- Ghostly Essence
-					["timeline"] = { ADDED_4_0_3 },
-				}),
-				i(60872, {	-- Moonsteel Ingots
-					["provider"] = { "o", 205477 },	-- Moonsteel Ingots
-					["timeline"] = { ADDED_4_0_3 },
-				}),
-				i(60871, {	-- Moontouched Wood
-					["provider"] = { "o", 205479 },	-- Moontouched Wood
-					["timeline"] = { ADDED_4_0_3 },
-				}),
 				i(1935),	-- Assassin's Blade
 				i(3194),	-- Black Malice
 				i(2205, {	-- Duskbringer
@@ -123,7 +110,13 @@ root(ROOTS.Instances, {
 				i(1484),	-- Witching Stave
 			}),
 			n(3914, {	-- Rethilgore <The Cell Keeper>
+				i(273456, {	-- Cell Keeper's Claws
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 				i(5254),	-- Rugged Spaulders
+				i(273457, {	-- Sorcerer Collar
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 			}),
 			n(3864, {	-- Fel Steed/Shadow Charger
 				i(6341),	-- Eerie Stable Lantern
@@ -139,6 +132,9 @@ root(ROOTS.Instances, {
 				["groups"] = {
 					i(6323),	-- Baron's Scepter
 					i(6321),	-- Silverlaine's Family Seal
+					i(273637, {	-- Blade of Silverlaine
+						timeline = { TIMELINE.ADDED_1_60_1 },
+					}),
 				},
 			}),
 			e(98, {	-- Commander Springvale
@@ -147,6 +143,9 @@ root(ROOTS.Instances, {
 					i(3191),	-- Arced War Axe
 					i(6320),	-- Commander's Crest
 					i(6341),	-- Eerie Stable Lantern
+					i(273643, {	-- Worgenbane Talisman
+						timeline = { TIMELINE.ADDED_1_60_1 },
+					}),
 				},
 			}),
 			n(3872, {	-- Deathsworn Captain
@@ -159,10 +158,16 @@ root(ROOTS.Instances, {
 			n(4279, {	-- Odo the Blindwatcher
 				i(6318),	-- Odo's Ley Staff
 				i(6319),	-- Girdle of the Blindwatcher
+				i(273645, {	-- Blindwatcher's Sight
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 			}),
 			n(4274, {	-- Fenrus the Devourer
 				i(3230),	-- Black Wolf Bracers
 				i(6340),	-- Fenrus' Hide
+				i(273646, {	-- Half-Eaten Boots
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 			}),
 			n(4627, {	-- Arugal's Voidwalker
 				i(5943),	-- Rift Bracers
@@ -170,6 +175,9 @@ root(ROOTS.Instances, {
 			n(3927, {	-- Wolf Master Nandos
 				i(3748),	-- Feline Mantle
 				i(6314),	-- Wolfmaster Cape
+				i(273647, {	-- Worgpelt Leggings
+					timeline = { TIMELINE.ADDED_1_60_1 },
+				}),
 			}),
 			n(4275, {	-- Archmage Arugal
 				i(5442),	-- Head of Arugal

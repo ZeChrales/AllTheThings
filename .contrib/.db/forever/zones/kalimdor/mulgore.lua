@@ -123,6 +123,22 @@ maproot(MAP.KALIMDOR, MAP.MULGORE, {
 						["races"] = { TAUREN },
 						["classes"] = { HUNTER },
 					}),
+					q(95805, {	-- Grace of An'she and Mu'sha
+						["qg"] = 2982,	-- Seer Graytongue
+						["coord"] = { 42.5, 90.1, MAP.MULGORE },
+						["timeline"] = { TIMELINE.ADDED_1_60_1 },
+						["races"] = HORDE_ONLY,
+						["groups"] = {
+							objective(1, {	-- Use Pouch of Smoldering Incense at the Ritual Fire
+								["providers"] = {
+									{ "i", 277199 },	-- Pouch of Smoldering Incense
+									{ "o", 660739 },	-- Ritual Fire
+								},
+								["coord"] = { 56.6, 88.7, MAP.MULGORE },
+							}),
+							i(277200),	-- Scorched Leather Pouch
+						},
+					}),
 					q(757, {	-- Rite of Strength
 						["sourceQuest"] = 755,	-- Rites of the Earthmother (1/3)
 						["qg"] = 2982,	-- Seer Graytongue
@@ -174,6 +190,15 @@ maproot(MAP.KALIMDOR, MAP.MULGORE, {
 						["coords"] = { 44.9, 77.1, MAP.MULGORE },
 						["races"] = { TAUREN },
 						["classes"] = { WARRIOR },
+					}),
+					q(96659, {	-- The Adventurer [Mulgore]
+						--["sourceQuest"] = ,	-- 
+						["qg"] = 2981,	-- Chief Hawkwind
+						["qi"] = 275019,	-- Supply Bundle (PQI!)
+						["coord"] = { 44.2, 76.0, MAP.MULGORE },
+						["timeline"] = { TIMELINE.ADDED_1_60_1 },
+						["races"] = HORDE_ONLY,
+						["lvl"] = 4,
 					}),
 					q(780, {	-- The Battleboars
 						["sourceQuest"] = 750,	-- The Hunt Continues
@@ -277,6 +302,11 @@ maproot(MAP.KALIMDOR, MAP.MULGORE, {
 			exploration(819),	-- Windfury Ridge
 			exploration(396),	-- Winterhoof Water Well
 		}),
+		n(FACTIONS, {
+			faction(FACTION_FOREVER_EARTHEN_RING, {
+				timeline = { TIMELINE.ADDED_1_60_1 },
+			}),
+		}),
 		n(QUESTS, {
 			q(833, {	-- A Sacred Burial
 				["qg"] = 3233,	-- Lorekeeper Raintotem
@@ -294,6 +324,150 @@ maproot(MAP.KALIMDOR, MAP.MULGORE, {
 				["qi"] = 7626,	-- Bundle of Furs
 				["coord"] = { 38.6, 81.6, MAP.MULGORE },
 				["races"] = HORDE_ONLY,
+			}),
+			q(97927, {	-- Camping 101: Alchemy [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				maps = { MAP.THUNDER_BLUFF },
+				requireSkill = ALCHEMY,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1230564),	-- Alchemy: Mana Well
+				},
+			}),
+			q(97928, {	-- Camping 101: Blacksmithing [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				maps = { MAP.THUNDER_BLUFF },
+				requireSkill = BLACKSMITHING,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1230171),	-- Blacksmithing: Sharpening Wheel
+				},
+			}),
+			q(96661, {	-- Camping 101: Cooking [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				races = HORDE_ONLY,
+				lvl = 4,
+			}),
+			q(97929, {	-- Camping 101: Enchanting [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				requireSkill = ENCHANTING,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1230643),	-- Enchanting: Enchanted Lute
+				},
+			}),
+			q(97930, {	-- Camping 101: Engineering [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				requireSkill = ENGINEERING,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1230656),	-- Engineering: Reagent Bot
+				},
+			}),
+			q(97931, {	-- Camping 101: First Aid [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				requireSkill = FIRST_AID,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1230117),	-- First Aid: First Aid Kit
+				},
+			}),
+			q(97932, {	-- Camping 101: Fishing [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				requireSkill = FISHING,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1229745),	-- Fishing: Fish Bowl
+				},
+			}),
+			q(97933, {	-- Camping 101: Herbalism [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				maps = { MAP.THUNDER_BLUFF },
+				requireSkill = HERBALISM,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1229705),	-- Herbalism: Incense Candle
+				},
+			}),
+			q(97934, {	-- Camping 101: Leatherworking [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				requireSkill = LEATHERWORKING,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1229432),	-- Leatherworking: Camp Tent
+				},
+			}),
+			q(97935, {	-- Camping 101: Mining [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				maps = { MAP.THUNDER_BLUFF },
+				requireSkill = MINING,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1230161),	-- Mining: Lodestone
+				},
+			}),
+			q(97936, {	-- Camping 101: Skinning [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				requireSkill = SKINNING,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1229517),	-- Skinning: Camp Chair
+				},
+			}),
+			q(97937, {	-- Camping 101: Tailoring [Mulgore]
+				sourceQuest = 96605,	-- The Great Outdoors [Mulgore]
+				qg = 265810,	-- Kaga Wildhoof <Adventurer>
+				coord = { 46.2, 67.2, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				requireSkill = TAILORING,
+				races = HORDE_ONLY,
+				lvl = 4,
+				groups = {
+					recipe(1263425),	-- Tailoring: Camp Chair
+				},
 			}),
 			q(743, {	-- Dangers of the Windfury
 				["qg"] = 2985,	-- Ruul Eagletalon
@@ -618,6 +792,14 @@ maproot(MAP.KALIMDOR, MAP.MULGORE, {
 					i(3079),	-- Skorn's Rifle
 				},
 			}),
+			q(96605, {	-- The Great Outdoors [Mulgore]
+				["sourceQuest"] = 96659,	-- The Adventurer [Mulgore]
+				["qg"] = 265810,	-- Kaga Wildhoof <Adventurer>
+				["coord"] = { 46.2, 67.2, MAP.MULGORE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = HORDE_ONLY,
+				["lvl"] = 4,
+			}),
 			q(6065, {	-- The Hunter's Path [Thunder Bluff]
 				["qg"] = 3038,	-- Kary Thunderhorn <Hunter Trainer>
 				["coord"] = { 58.4, 88.0, MAP.THUNDER_BLUFF },
@@ -749,6 +931,13 @@ maproot(MAP.KALIMDOR, MAP.MULGORE, {
 					recipe(982),	-- Revive Pet
 				},
 			}),
+			q(95350, {	-- Welcome to Azeroth
+				sourceQuest = 95349,	-- The Earthen Ring
+				qg = 259119,	-- Alaana Stormwalker
+				coord = { 33.4, 22.4, MAP.MULGORE },
+				races = { SKYBORNE_HORDE },
+				lvl = 7,
+			}),
 			q(760, {	-- Wildmane Cleansing
 				["sourceQuest"] = 759,	-- Wildmane Totem
 				["qg"] = 2948,	-- Mull Thunderhorn
@@ -787,6 +976,101 @@ maproot(MAP.KALIMDOR, MAP.MULGORE, {
 					objective(1, {	-- Cleanse the Winterhoof Water Well
 						["provider"] = { "i", 5411 },	-- Winterhoof Cleansing Totem
 						["coord"] = { 53.0, 66.0, MAP.MULGORE },
+					}),
+				},
+			}),
+			q(96130, { -- Chakuyak
+				["qg"] = 3065, -- Yaw Sharpmane
+				["coord"] = { 46.9, 59.6, MAP.MULGORE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = HORDE_ONLY,
+				["lvl"] = 5,
+				["groups"] = {
+					objective(1, { -- Chakuyak's Pelt
+						["provider"] = { "i", 270302 }, -- Chakuyak's Pelt
+						["cr"] = 268558, -- Chakuyak
+						["coord"] = { 38.5, 63.1, MAP.MULGORE },
+					}),
+				},
+			}),
+			q(99079, { -- Longwalker Malah
+				["qg"] = 3222, -- Brave Wildrunner
+				["coord"] = { 46.6, 63.0, MAP.MULGORE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = HORDE_ONLY,
+				["lvl"] = 4,
+				["groups"] = {
+					objective(1, { -- Find Longwalker Malah
+						["provider"] = { "n", 275789 }, -- Malah Longwind
+						["coord"] = { 57.6, 63.2, MAP.MULGORE },
+					}),
+				},
+			}),
+			q(99080, { -- Drive Them Out
+				["qg"] = 2993, -- Baine Bloodhoof
+				["coord"] = { 47.4, 60.2, MAP.MULGORE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = HORDE_ONLY,
+				["lvl"] = 4,
+				["groups"] = {
+					objective(1, { -- Galak Centaur slain
+						["provider"] = { "n", 2967 }, -- Galak Centaur
+						["coord"] = { 59.3, 57.3, MAP.MULGORE },
+					}),
+					objective(2, { -- Galak Outrunner slain
+						["provider"] = { "n", 2968 }, -- Galak Outrunner
+						["coord"] = { 59.8, 59.4, MAP.MULGORE },
+					}),
+					objective(3, { -- Herak's Head
+						["provider"] = { "i", 286075 }, -- Herak's Head
+						["cr"] = 275767, -- Herak the Pillager
+						["coord"] = { 60.5, 59.7, MAP.MULGORE },
+					}),
+				},
+			}),
+			q(99081, { -- Grim Tidings
+				["qg"] = 275789, -- Malah Longwind
+				["qi"] = 286104, -- Longwalker Malah's Report
+				["coord"] = { 57.6, 63.2, MAP.MULGORE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = HORDE_ONLY,
+				["lvl"] = 4,
+			}),
+			q(99082, { -- The High Chieftain
+				["qg"] = 2993, -- Baine Bloodhoof
+				["coord"] = { 47.4, 60.2, MAP.MULGORE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = HORDE_ONLY,
+				["lvl"] = 4,
+				["groups"] = {
+					i(286740), -- Proud Brave's Guard
+					i(286741), -- Centaur Skull Basher
+				},
+			}),
+			q(99101, { -- Our Ancient Enemy
+				["qg"] = 3222, -- Brave Wildrunner
+				["qi"] = 286104, -- Longwalker Malah's Report
+				["coord"] = { 46.6, 63.0, MAP.MULGORE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = HORDE_ONLY,
+				["lvl"] = 4,
+				["groups"] = {
+					objective(1, { -- Bring Longwalker Malah's Report to Baine Bloodhoof
+						["provider"] = { "n", 2993 }, -- Baine Bloodhoof
+						["coord"] = { 47.4, 60.2, MAP.MULGORE },
+					}),
+				},
+			}),
+			q(99108, { -- Sparring Match
+				["qg"] = 3063, -- Krang Stonehoof
+				["coord"] = { 49.4, 60.4, MAP.MULGORE },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = HORDE_ONLY,
+				["lvl"] = 4,
+				["groups"] = {
+					objective(1, { -- Novice Warrior slain
+						["provider"] = { "n", 10721 }, -- Novice Warrior
+						["coord"] = { 49.0, 62.0, MAP.MULGORE },
 					}),
 				},
 			}),
@@ -900,6 +1184,26 @@ maproot(MAP.KALIMDOR, MAP.MULGORE, {
 					i(6325),	-- Recipe: Brilliant Smallfish (RECIPE!)
 					i(6328),	-- Recipe: Longjaw Mud Snapper (RECIPE!)
 				},
+			}),
+			n(264078, {	-- Sutara Plainstalker <Quartermaster>
+				coord = { 34.6, 22.8, MAP.MULGORE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				groups = bubbleDownClassicRep(FACTION_FOREVER_EARTHEN_RING, {
+					{		-- Neutral
+					}, {	-- Friendly
+						i(276978),	-- Pattern: Cloudy Gustwoven Hood (RECIPE!)
+						i(276979),	-- Pattern: Cloudy Gustwoven Spaulders (RECIPE!)
+						i(276982),	-- Pattern: Cloudy Stormsewn Cowl (RECIPE!)
+						i(276983),	-- Pattern: Cloudy Stormsewn Epaulets (RECIPE!)
+						i(276980),	-- Pattern: Cloudy Windraveled Cover (RECIPE!)
+						i(276981),	-- Pattern: Cloudy Windraveled Drapes (RECIPE!)
+						i(276976),	-- Plans: Cloudy Skyforged Helm (RECIPE!)
+						i(276977),	-- Plans: Cloudy Skyforged Pauldrons (RECIPE!)
+					}, {	-- Honored
+					}, {	-- Revered
+					}, {	-- Exalted
+					},
+				}),
 			}),
 			n(3081, {	-- Wunna Darkmane <Trade Goods>
 				["coord"] = { 46.2, 58.2, MAP.MULGORE },

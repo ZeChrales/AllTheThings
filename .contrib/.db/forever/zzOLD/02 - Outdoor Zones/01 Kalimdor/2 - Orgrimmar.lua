@@ -29,27 +29,42 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 			}),
 			n(PROFESSIONS, {
 				prof(ALCHEMY, {
-					n(3347, {	-- Yelmak <Alchemy Trainer>
+					n(11046, {	-- Whuut <Journeyman Alchemist>
+						["coord"] = { 56.0, 33.8, MAP.ORGRIMMAR },
+						["races"] = HORDE_ONLY,
+						["groups"] = ALCHEMY_RECIPES.APPRENTICE,
+					}),
+					n(3347, {	-- Yelmak <Expert Alchemist>
 						["coord"] = { 55.6, 46.6, MAP.ORGRIMMAR },
 						["races"] = HORDE_ONLY,
-						["groups"] = CLASSIC_CATA_ALCHEMY,
+						["groups"] = ALCHEMY_RECIPES.JOURNEYMAN,
 					}),
 				}),
 				prof(BLACKSMITHING, {
 					n(11178, {	-- Borgosh Corebender <Weaponsmith>
 						["coord"] = { 79.6, 23.6, MAP.ORGRIMMAR },
 						["races"] = HORDE_ONLY,
-						["groups"] = CLASSIC_WEAPONSMITHING,
+						["groups"] = BLACKSMITHING_RECIPES.WEAPONSMITHING,
 					}),
 					n(11177, {	-- Okothos Ironrager <Armorsmith>
 						["coord"] = { 79.8, 23.8, MAP.ORGRIMMAR },
 						["races"] = HORDE_ONLY,
-						["groups"] = CLASSIC_ARMORSMITHING,
+						["groups"] = BLACKSMITHING_RECIPES.ARMORSMITHING,
 					}),
-					n(3355, {	-- Saru Steelfury <Blacksmithing Trainer>
+					n(3355, {	-- Saru Steelfury <Artisan Blacksmith>
 						["coord"] = { 76.4, 34.4, MAP.ORGRIMMAR },
 						["races"] = HORDE_ONLY,
-						["groups"] = CLASSIC_CATA_BLACKSMITHING,
+						["groups"] = BLACKSMITHING_RECIPES.EXPERT,
+					}),
+					n(1383, {	-- Snarl <Expert Blacksmith>
+						["coord"] = { 79.8, 23.4, MAP.ORGRIMMAR },
+						["races"] = HORDE_ONLY,
+						["groups"] = BLACKSMITHING_RECIPES.JOURNEYMAN,
+					}),
+					n(10266, {	-- Ug'thok <Journeyman Blacksmith>
+						["coord"] = { 80.6, 23.6, MAP.ORGRIMMAR },
+						["races"] = HORDE_ONLY,
+						["groups"] = BLACKSMITHING_RECIPES.APPRENTICE,
 					}),
 				}),
 				prof(COOKING, {
@@ -60,10 +75,15 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					}),
 				}),
 				prof(ENCHANTING, {
-					n(3345, {	-- Godan <Enchanting Trainer>
-						["coord"] = { 53.4, 49.4, MAP.ORGRIMMAR },
+					n(3345, {	-- Godan <Expert Enchanter>
+						["coord"] = { 53.8, 38.6, MAP.ORGRIMMAR },
 						["races"] = HORDE_ONLY,
-						["groups"] = CLASSIC_CATA_ENCHANTING,
+						["groups"] = ENCHANTING_RECIPES.JOURNEYMAN,
+					}),
+					n(11066, {	-- Jhag <Journeyman Enchanter>
+						["coord"] = { 53.6, 38.2, MAP.ORGRIMMAR },
+						["races"] = HORDE_ONLY,
+						["groups"] = ENCHANTING_RECIPES.APPRENTICE,
 					}),
 				}),
 				prof(ENGINEERING, {
@@ -234,8 +254,7 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					["lvl"] = 32,
 					["groups"] = {
 						i(7979, {	-- Plans: Barbaric Iron Breastplate (RECIPE!)
-							["description"] =
-								"This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
+							["description"] = "This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
 						}),
 					},
 				}),
@@ -367,6 +386,16 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 						},
 					},
 				}),
+				q(93739, {	-- Exploring the Horde
+					["sourceQuest"] = 95350,	-- Welcome to Azeroth
+					["qg"] = 4949,	-- Thrall <Warchief>
+					["coord"] = { 32.0, 37.8, MAP.ORGRIMMAR },
+					["races"] = { SKYBORNE_HORDE },
+					["lvl"] = 7,
+					["groups"] = {
+						i(286426),	-- Honorbound Cloak
+					},
+				}),
 				q(5726, {	-- Hidden Enemies (1/5)
 					["qg"] = 4949,	-- Thrall <Warchief>
 					["coord"] = { 32.0, 37.8, MAP.ORGRIMMAR },
@@ -425,8 +454,7 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					["lvl"] = 32,
 					["groups"] = {
 						i(7980, {	-- Plans: Barbaric Iron Helm (RECIPE!)
-							["description"] =
-								"This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
+							["description"] = "This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
 						}),
 					},
 				}),
@@ -442,8 +470,7 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					["lvl"] = 32,
 					["groups"] = {
 						i(7982, {	-- Plans: Barbaric Iron Gloves (RECIPE!)
-							["description"] =
-								"This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
+							["description"] = "This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
 						}),
 					},
 				}),
@@ -463,6 +490,7 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					},
 				}),
 				q(65601, {	-- Love Hurts
+					["sourceQuest"] = 1507,	-- Devourer of Souls [Orgrimmar]
 					["qg"] = 5909,	-- Cazul
 					["coord"] = { 47.2, 46.6, MAP.ORGRIMMAR },
 					["classes"] = { WARLOCK },
@@ -501,8 +529,7 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					["lvl"] = 32,
 					["groups"] = {
 						i(7978, {	-- Plans: Barbaric Iron Shoulders (RECIPE!)
-						["description"] =
-							"This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
+							["description"] = "This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
 						}),
 					},
 				}),
@@ -683,8 +710,7 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					["lvl"] = 32,
 					["groups"] = {
 						i(7981, {	-- Plans: Barbaric Iron Boots (RECIPE!)
-						["description"] =
-							"This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
+							["description"] = "This recipe can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths, this recipe is not soulbound and can be mailed to Horde alts.",
 						}),
 					},
 				}),
@@ -836,7 +862,6 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 				}),
 				n(12793, {	-- Brave Stonehide <Officer Accessories Quartermaster>
 					["description"] = "Found within the Hall of Legends.",
-					["maps"] = { MAP.ORGRIMMAR },
 					["coord"] = { 40.6, 69.5, MAP.ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
@@ -1023,23 +1048,14 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 				n(3346, {	-- Kithas <Enchanting Supplies>
 					["coord"] = { 53.6, 38.0, MAP.ORGRIMMAR },
 					["races"] = HORDE_ONLY,
-					["sym"] = {
-						{ "select","itemID",
-							20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
-							20752,	-- Formula: Minor Mana Oil (RECIPE!)
-							20758,	-- Formula: Minor Wizard Oil (RECIPE!)
-							6342,	-- Formula: Enchant Chest - Minor Mana (RECIPE!)
-							22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
-						},
-					},
-					["groups"] = {
+					["groups"] = appendGroups(ENCHANTING_RECIPES.COMMON_RECIPES, {
 						i(6349, {	-- Formula: Enchant 2H Weapon - Lesser Intellect (RECIPE!)
 							["isLimited"] = true,
 						}),
-						i(6346, {	-- Formula: Enchant Chest - Lesser Mana (RECIPE!)
+						i(6346, {	-- Formula: Enchant Chest - Lesser Intellect (RECIPE!)
 							["isLimited"] = true,
 						}),
-					},
+					}),
 				}),
 				n(8122, {	-- Kizzak Sparks
 					["coord"] = { 57.8, 56.6, MAP.ORGRIMMAR },
@@ -1056,7 +1072,7 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 					["coord"] = { 56.2, 34.2, MAP.ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(13478, {	-- Recipe: Elixir of Superior Defense (RECIPE!)
+						i(13478, {	-- Recipe: Elixir of Greater Defense (RECIPE!)
 							["isLimited"] = true,
 						}),
 						i(5642, {	-- Recipe: Free Action Potion (RECIPE!)
@@ -1838,6 +1854,63 @@ root(ROOTS.Zones, m(MAP.KALIMDOR, {
 						i(2469),	-- Studded Gloves
 						i(3890),	-- Studded Hat
 						i(2465),	-- Studded Pants
+					},
+				}),
+				n(5812, {	-- Tumi <Heavy Armor Merchant>
+					["coord"] = { 82.4, 23.6, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(2419),	-- Augmented Chain Belt
+						i(2420),	-- Augmented Chain Boots
+						i(2421),	-- Augmented Chain Bracers
+						i(2422),	-- Augmented Chain Gloves
+						i(3891),	-- Augmented Chain Helm
+						i(2418),	-- Augmented Chain Leggings
+						i(2417),	-- Augmented Chain Vest
+						i(847),	-- Chainmail Armor
+						i(1845),	-- Chainmail Belt
+						i(849),	-- Chainmail Boots
+						i(1846),	-- Chainmail Bracers
+						i(850),	-- Chainmail Gloves
+						i(848),	-- Chainmail Pants
+						i(2451),	-- Crested Heater Shield
+						i(62260),	-- Grunts Chain Belt
+						i(62261),	-- Grunts Chain Boots
+						i(62262),	-- Grunts Chain Bracers
+						i(62266),	-- Grunts Chain Circlet
+						i(62263),	-- Grunts Chain Gloves
+						i(62264),	-- Grunts Chain Leggings
+						i(62265),	-- Grunts Chain Vest
+						i(62253),	-- Grunts Plate Armor
+						i(62254),	-- Grunts Plate Belt
+						i(62255),	-- Grunts Plate Boots
+						i(62256),	-- Grunts Plate Bracers
+						i(62257),	-- Grunts Plate Gloves
+						i(62259),	-- Grunts Plate Helm
+						i(62258),	-- Grunts Plate Leggings
+						i(2448),	-- Heavy Pavise
+						i(2446),	-- Kite Shield
+						i(2392),	-- Light Mail Armor
+						i(2393),	-- Light Mail Belt
+						i(2395),	-- Light Mail Boots
+						i(2396),	-- Light Mail Bracers
+						i(2397),	-- Light Mail Gloves
+						i(2394),	-- Light Mail Leggings
+						i(17189),	-- Metal Buckler
+						i(17190),	-- Ornate Buckler
+						i(2148),	-- Polished Scale Belt
+						i(2149),	-- Polished Scale Boots
+						i(2150),	-- Polished Scale Bracers
+						i(2151),	-- Polished Scale Gloves
+						i(2152),	-- Polished Scale Leggings
+						i(2153),	-- Polished Scale Vest
+						i(17192),	-- Reinforced Targe
+						i(1853),	-- Scalemail Belt
+						i(287),	-- Scalemail Boots
+						i(1852),	-- Scalemail Bracers
+						i(718),	-- Scalemail Gloves
+						i(286),	-- Scalemail Pants
+						i(285),	-- Scalemail Vest
 					},
 				}),
 				n(3314, {	-- Urtharo <Weapon Merchant>

@@ -15,15 +15,17 @@ local C_ArtifactUI_GetAppearanceInfoByID
 	= C_ArtifactUI.GetAppearanceInfoByID
 
 -- WoW API Cache
+--- @type function
 local GetItemInfo = app.WOWAPI.GetItemInfo;
+--- @type function
 local IsArtifactRelicItem = app.WOWAPI.IsArtifactRelicItem;
 
 local CurrentArtifactRelicItemLevels = {}
 local pairs, select, math_floor,tinsert,tremove
 	= pairs, select, math.floor,tinsert,tremove
+--- @type table,function,function,function,
 local L, ColorizeRGB, contains, CloneDictionary
 	= app.L, app.Modules.Color.ColorizeRGB, app.contains, app.CloneDictionary
-local GetRelativeField = app.GetRelativeField
 local GetDetailedItemLevelInfo = GetDetailedItemLevelInfo;
 local ArtifactDB = setmetatable(app.ArtifactDB or {}, { __index = function(t,key)
 	app.PrintDebug("ArtifactID not in DB!",key)
@@ -38,26 +40,31 @@ app.GetArtifactModItemID = GetArtifactModItemID
 
 local KEY, CACHE, SETTING = "artifactID", "Artifacts", "Transmog"
 local CLASSNAME = "Artifact"
-local ArtifactInfoStatic, ArtifactInfoCached
--- This is for Artifact data which doesn't change while playing
-ArtifactInfoStatic = setmetatable({}, { __index = function(t,key)
-	local info = { C_ArtifactUI_GetAppearanceInfoByID(key) }
-	if info[1] then
-		-- copy our DB data into the info
-		CloneDictionary(ArtifactDB[key], info)
-		t[key] = info
-		ArtifactInfoCached[key] = info
+
+local ArtifactInfoUnlockedMeta = { __index = function(t,key)
+	-- unlocked lookup
+	if key == 5 then
+		local id = t[2]
+		if not id then return end
+
+		local unlocked = select(5, C_ArtifactUI_GetAppearanceInfoByID(id))
+		-- we can cache 'true' results
+		if unlocked then
+			t[5] = unlocked
+		end
+		return unlocked
 	end
-	return info
-end})
--- This is for Artifact data which can change while playing (collection status)
-ArtifactInfoCached = setmetatable({}, { __index = function(t,key)
+end}
+-- This is for Artifact data which doesn't change while playing
+local ArtifactInfoStatic = setmetatable({}, { __index = function(t,key)
 	local info = { C_ArtifactUI_GetAppearanceInfoByID(key) }
 	if info[1] then
 		-- copy our DB data into the info
 		CloneDictionary(ArtifactDB[key], info)
+		-- hook the unlocked metatable
+		setmetatable(info, ArtifactInfoUnlockedMeta)
 		t[key] = info
-		ArtifactInfoStatic[key] = info
+		-- ArtifactInfoCached[key] = info
 	end
 	return info
 end})
@@ -199,14 +206,16 @@ app.CreateArtifact = app.CreateClass(CLASSNAME, KEY, {
 
 app.AddGenericFieldConverter(KEY);
 app.AddEventHandler("OnRefreshCollections", function()
-	local object
-	wipe(ArtifactInfoCached)
+	-- app.PrintDebug("OnRefreshCollections.Artifact")
+	local info, class
+	local ClassIndex = app.ClassIndex
 	local saved, none = {}, {}
 	for id,_ in pairs(app.GetRawFieldContainer(KEY)) do
-		object = app.SearchForObject(KEY, id, "field")
+		info = ArtifactInfoStatic[id]
+		class = info.class
 		-- This artifact is listed for the current class
-		if not GetRelativeField(object, "nmc", true) then
-			if ArtifactInfoCached[id][5] then
+		if not class or class == ClassIndex then
+			if info[5] then
 				saved[id] = true
 			else
 				none[id] = true
@@ -216,6 +225,17 @@ app.AddEventHandler("OnRefreshCollections", function()
 	-- Character Cache
 	app.SetBatchCached(CACHE, saved, 1)
 	app.SetBatchCached(CACHE, none)
+	-- app.PrintDebugPrior("---- Done")
+end)
+app.AddEventHandlerOnce("OnRefreshCollections", function()
+	-- app.PrintDebug("OnRefreshCollections.Artifact.FRESH")
+	for key,value in pairs(ArtifactInfoStatic) do
+		-- wipe the 'false' unlock keys to allow metatable checks
+		if value[5] == false then
+			value[5] = nil
+		end
+	end
+	-- app.PrintDebugPrior("---- Done")
 end)
 app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, accountWideData)
 	if not currentCharacter[CACHE] then currentCharacter[CACHE] = {} end

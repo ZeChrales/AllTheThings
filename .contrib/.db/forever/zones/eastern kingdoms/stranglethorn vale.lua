@@ -159,7 +159,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.STRANGLETHORN_VALE, {
 			prof(BLACKSMITHING, {
 				n(2836, {	-- Brikk Keencraft <Master Blacksmith>
 					["coord"] = { 29.0, 75.4, MAP.STRANGLETHORN_VALE },
-					["groups"] = ARTISAN_BLACKSMITHING,
+					["groups"] = BLACKSMITHING_RECIPES.ARTISAN,
 				}),
 			}),
 			prof(ENGINEERING, {
@@ -1344,7 +1344,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.STRANGLETHORN_VALE, {
 				["learnedAt"] = 210,
 				["lvl"] = 40,
 				["groups"] = {
-					i(7985),	-- Plans: Ornate Mithril Shoulder (RECIPE!)
+					i(7985),	-- Plans: Ornate Mithril Shoulders (RECIPE!)
 				},
 			}),
 			q(595, {	-- The Bloodsail Buccaneers (1/5)
@@ -2003,6 +2003,25 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.STRANGLETHORN_VALE, {
 						["isLimited"] = true,
 					}),
 				},
+			}),
+			n(265575, {	-- Gezzy Gunkgear <Booty Bay Quartermaster>
+				coord = { 28.2, 74.8, MAP.STRANGLETHORN_VALE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				groups = bubbleDownClassicRep(FACTION_BOOTY_BAY, {
+					{	-- Neutral
+						
+					}, {	-- Friendly
+						i(274745),	-- Deckswabber's Mitts
+						i(274746),	-- Sea Giant's Toe Ring
+						i(274747),	-- Soggy Boots
+					}, {	-- Honored
+						i(274748),	-- Booty Bay Bruiser's Buckshot
+						i(274749),	-- Souvenier Sea Shell
+					}, {	-- Revered
+						i(274022),	-- Tough Guy's Eyepatch
+					}, {	-- Exalted
+					},
+				}),
 			}),
 			n(2848, {	-- Glyx Brewright <Alchemy Supplies>
 				["coord"] = { 28.0, 78.0, MAP.STRANGLETHORN_VALE },

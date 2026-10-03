@@ -165,7 +165,7 @@ L.AUCTIONS_NO_DATA = "No auctions cached. Waiting on Auction data."
 L.AUCTIONS_NO_LIMIT = "NO LIMIT"
 L.AUCTIONS_OTHER_ITEMS_DESC = "All items that could be used for some non-transmog related purpose such as for an achievement are displayed here."
 L.AUCTIONS_QUEST_ITEMS_DESC = "All items that trigger a non-character unlock quest."
-L.AUCTIONS_REMOVED_ITEMS_DESC = "All items that were removed from game that you could probably still collect for a... nominal fee.\n\nAlso if you have found something here, feel free to post about it on the ATT Discord's #classic-general channel! I'm sure some folks might want to find these."
+L.AUCTIONS_REMOVED_ITEMS_DESC = "All items that were removed from game that you could probably still collect for a... nominal fee.\n\nAlso if you have found something here, feel free to post about it on the ATT Discord's #forever-general channel! I'm sure some folks might want to find these."
 L.AUCTIONS_REPUTATION_DESC = "All items that can be used to increase reputation for a faction that you have not collected yet are displayed here."
 L.AUCTIONS_SCAN_CLICK_DESC = "Click this button to perform a full scan of the auction house. This information will appear within this window and clear out the existing data."
 L.AUCTIONS_SCAN_CLICK_TEXT = "Click to run a Full Scan"
@@ -759,7 +759,7 @@ L.PLAYER_TITLE_THE_CONTRIBUTOR = "|cffa335ee%s|r"
 L.PLAYER_TITLE_THE_EXTERMINATOR = "|cffa335ee%s the Exterminator|r"
 L.PLAYER_TITLE_THE_HUGGLER = "|cffF58CBA%s the Huggler|r"
 L.PLAYER_TOOLTIP_INVOCATOR = "|c" .. _.DefaultColors.White .. "Ask me to summon removed bosses!|r"
-L.PLEASE_REPORT_MESSAGE = "Please report this to the ATT Discord in #classic-errors! Thanks!"
+L.PLEASE_REPORT_MESSAGE = "Please report this to the ATT Discord in #forever-reports! Thanks!"
 L.POPOUT = "Popout List"
 L.PRECISION_SLIDER = "Precision Level"
 L.PRECISION_SLIDER_TOOLTIP = "Use this to customize your desired level of precision in percentage calculations.\n\nDefault: 2"
@@ -1013,7 +1013,7 @@ L.SOULBINDCONDUITS_CHECKBOX = "|T" .. _.asset("Expansion_SL") .. ":0|t Conduits"
 L.SOULBINDCONDUITS_CHECKBOX_TOOLTIP = "Enable this option to track Shadowlands Conduits."
 L.SOUNDPACK = "Soundpack"
 L.SOURCE_ID = "Source ID"
-L.SOURCE_ID_MISSING = "Please report this Item and where it was acquired to the ATT Discord in #classic-errors!"
+L.SOURCE_ID_MISSING = "Please report this Item and where it was acquired to the ATT Discord in #forever-reports!"
 L.SOURCE_LOCATIONS_CHECKBOX = "Source Locations"
 L.SOURCE_LOCATIONS_CHECKBOX_TOOLTIP = "Enable this option if you want to see full Source Location Paths for objects within the ATT database in the tooltip."
 L.SOURCELESS = "Sourceless"
@@ -1213,6 +1213,7 @@ _.CategoryIcons = {
 -- Custom Header Database Module
 _.HeaderConstants = {
 	ACHIEVEMENTS = -12,
+	BLACK_MARKET_AUCTION_HOUSE = -554,
 	CHARACTER = -731,
 	CHILDRENS_WEEK_HEADER = -559,
 	COMMON_BOSS_DROPS = -19,
@@ -1221,6 +1222,7 @@ _.HeaderConstants = {
 	DARKMOON_FAIRE_HEADER = -37,
 	DROPS = -27,
 	DUNGEONS_AND_RAIDS = -75,
+	EXPANSION_FEATURES = -735,
 	EXPLORATION = -30,
 	FACTIONS = -31,
 	FEAST_OF_WINTER_VEIL_HEADER = -574,
@@ -1252,7 +1254,6 @@ _.HeaderConstants = {
 	WEAPONS = -101,
 	WORLD_BOSSES = -61,
 	WORLD_DROPS = -698,
-	WORLD_EVENTS = -734,
 	ZONE_DROPS = -63,
 }
 _.HeaderData = {
@@ -1285,7 +1286,6 @@ localize(L.HEADER_NAMES, {
 	[-59] = "Weapon Master",
 	[-61] = WORLD.." "..RAID_BOSSES,
 	[-63] = ZONE.." "..BATTLE_PET_SOURCE_1,
-	[-74] = "Dragons of Nightmare",
 	[-75] = GROUP_FINDER,
 	[-78] = DUNGEON_FLOOR_NAXXRAMAS2,
 	[-79] = DUNGEON_FLOOR_NAXXRAMAS1,
@@ -1326,9 +1326,7 @@ localize(L.HEADER_NAMES, {
 	[-366] = "Service Entrance",
 	[-367] = "Atal'ai Defenders",
 	[-388] = C_Map.GetAreaInfo(1769),
-	[-481] = "The Ahn'Qiraj War Effort",
-	[-483] = "The Scepter of the Shifting Sands",
-	[-484] = "Scourge Invasion",
+	[-554] = BLACK_MARKET_AUCTION_HOUSE,
 	[-559] = "Children's Week",
 	[-574] = "Feast of Winter Veil",
 	[-576] = "Hallow's End",
@@ -1343,7 +1341,6 @@ localize(L.HEADER_NAMES, {
 	[-611] = "Silithid Royalty",
 	[-698] = TRANSMOG_SOURCE_4,
 	[-721] = TRACKER_FILTER_REMOTE_ZONES,
-	[-723] = "Elemental Invasions",
 	[-724] = "Elders of Eastern Kingdoms",
 	[-725] = "Elders of Kalimdor",
 	[-726] = "Elders of the Alliance",
@@ -1351,8 +1348,10 @@ localize(L.HEADER_NAMES, {
 	[-728] = "Elders of the Horde",
 	[-731] = CHARACTER,
 	[-732] = BUG_CATEGORY2,
-	[-734] = BATTLE_PET_SOURCE_7,
+	[-735] = EXPANSION_FILTER_TEXT,
 	[-796] = "Starter Gear",
+	[-799] = "Library Books",
+	[-800] = "Alliance Outrunners",
 })
 localize(L.HEADER_DESCRIPTIONS, {
 	[-25] = "Warlocks can teach their demons new tricks. Some of the higher level grimoires can only be purchased from the Demon Trainer in your faction's capital cities.",
@@ -1372,15 +1371,13 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-365] = "Stratholme is divided into two sides.\n\nThis side is commonly referred to as the \"Live\" or \"Scarlet\" side, which the Scarlet Crusade has taken over.",
 	[-366] = "Stratholme is divided into two sides.\n\nThis side is commonly referred to as the \"Dead\" or \"Scourge\" side, which the Scourge has taken over.",
 	[-367] = "You must kill all 6 mini bosses around the room in order to unlock the way to Jammal'an the Prophet.",
-	[-481] = "When Phase 5 is eventually released, the Ruins of Ahn'Qiraj and Temple of Ahn'Qiraj will not be immediately available. Instead, server communities will have to undertake a massive war effort to open the raids by gathering supplies to prepare for the war and completing an epic questline that ultimately culminates in the banging of a gong to open the gates and release the horrors within upon the world.\n\nOnce both factions have finished their contribution, there is a 5-day grace period where. Afterwards, there is a server-wide 10 hour event which spans several zones in Kalimdor the moment someone bangs the gong.\n\nHow quickly Ahn'Qiraj opens depends on the server and its faction balance.\n\nWe recommend delaying the War Effort as long as possible to allow for the most number of people to obtain the Scarab Lord mount as everyone that finishes The Scepter of the Shifting Sands quest line will be granted the same rewards!",
-	[-483] = "In addition to all players on a realm working towards completing the War Effort, one player had to create the Scepter of the Shifting Sands - a very difficult task that could only be solved by a server's top guild back when the questline was added. After the war effort was finished and the army of the Alliance and the Horde arrived in Silithus, the Scepter of the Shifting Sands could be used on the Scarab Gong. Doing so resulted in the opening of Ahn'Qiraj. The first player to bang the Scarab Gong on each server would be rewarded with the Scarab Lord title (in Burning Crusade, the title will not be available in Classic!) and the Black Qiraji Resonating Crystal mount. Anyone else who followed them within 10 hours was rewarded with the title as well.\n\nAlthough it is still possible to complete the questline for the Scepter of the Shifting Sands after the gates have been opened on your server, doing so will not reward neither the Black Qiraji Resonating Crystal nor the Scarab Lord title.",
-	[-484] = "The Scourge Invasion was a world event in Patch 1.11 and again during the Wrath of the Lich King Pre-Patch during 3.0.1 that heralded the opening of Naxxramas, the citadel of the dreaded Kel'Thuzad.\n\nSeveral regions of Azeroth came under attack by Scourge forces. Members of the Argent Dawn organized a worldwide counter to the Scourge invasion, keeping an eye out for any necropolis sightings and passing on their information to all adventurers willing to aid them in their struggle.\n\nWith each victory against the Scourge, the defense grows stronger. As more and more invasion attempts are beaten back by the defenders, the Argent Dawn will be able to bestow increasingly more powerful blessings upon those fighting the invaders. If the mortal races focus on clearing the Scourge camps all over the world that have sprung up beneath each necropolis, perhaps the invasion can effectively be halted or even repelled. Those who wish to take up arms against the undead invaders should speak with a representative of the Argent Dawn to learn what regions need help and how the defense is holding up.",
+	[-554] = "Instead of buying items from other players like the regular Auction House, items on the Black Market are generated and listed by NPCs. The items are listed for one day only. The items for sale vary from items that were difficulty to acquire to TCG items that have no other source. All items are listed infrequently, so it should not be seen as a reliable way to farm rarities.",
 	[-721] = "Contains content which is available in the current Zone, but is directly Sourced in another Zone.",
-	[-723] = "Reports of elemental incursions in different parts of Kalimdor are increasing. Every few days, a new wave of elementals blasts its way into the regions of Silithus, Un'Goro Crater, Azshara, and Winterspring - ostensibly, for the sole reason of seeing just how far into these territories they can penetrate before being beaten back by the forces of the Horde or the Alliance. Investigate these regions and aid your allies in countering these mysterious invasions.",
+	[-735] = "This section is for systems introduced during an expansion that involve several zones.\nIf an expansion feature is exclusive to a single zone, then it can be found within that zone in ATT, otherwise for the sake of reducing database duplication and bloat, it can be found below.",
 	[-796] = "The following contains gear that can be acquired by creating a brand new character of a given class and race.",
+	[-800] = "The outrunners patrol all over the Barrens as a group terrorizing Horde players that get too close.",
 })
 localize(L.HEADER_LORE, {
-	[-74] = "One of these dragons will spawn randomly at the associated coordinates across Azeroth.",
 	[-318] = "The Dungeon Set 2 class sets, commonly referred to as Tier 0.5, are obtained by completing a long quest chain to upgrade the first set available as drops in end game dungeons into stronger versions of themselves. In current WoW, these sets are covetted by Collectors as the quest chain was completely removed from the game with Cataclysm. In WoW Classic, you should finish this quest chain on all of your characters before then!",
 	[-349] = "These can be farmed infinitely by resetting the boss.",
 	[-388] = "The Timbermaw Furbolgs inhabit two areas: Azshara and Felwood. They are presumed to be the only furbolg tribe to escape demonic corruption, though this may not be true due to the existence of Krolg, an uncorrupted furbolg of unknown tribe, and the Stillpine tribe on Azuremyst Isle in Burning Crusade. However, many other races kill furbolg blindly now, without bothering to see if they are friend or foe. For this reason, the Timbermaw furbolg trust very few.\n\nAdventurers who seek out Timbermaw Hold in northern Felwood and prove themselves as friends of the Timbermaw will learn that the furbolgs value their friends above all else. Though they possess no fine jewels or any worldly riches, the Timbermaw's shamanistic tradition is still strong. They know much about the art of crafting armors from animal hides, and they are more than happy to share their healing/resurrection knowledge with friends of their tribe. Besides, any reputation above Unfriendly will also grant you untroubled access to Moonglade and Winterspring through their tunnels.",
@@ -1411,7 +1408,6 @@ localize(L.HEADER_ICONS, {
 	[-59] = 135580,
 	[-61] = _.asset("interface_world_boss"),
 	[-63] = _.asset("interface_zone_drop"),
-	[-74] = 134157,
 	[-75] = _.asset("category_d&r"),
 	[-78] = 135442,
 	[-79] = 236271,
@@ -1452,9 +1448,7 @@ localize(L.HEADER_ICONS, {
 	[-366] = 134247,
 	[-367] = 134177,
 	[-388] = 236696,
-	[-481] = 132594,
-	[-483] = 133062,
-	[-484] = 135228,
+	[-554] = _.asset("category_blackmarket"),
 	[-559] = _.asset("holiday_children"),
 	[-574] = _.asset("holiday_winter_veil"),
 	[-576] = _.asset("holiday_hallows_end"),
@@ -1469,7 +1463,6 @@ localize(L.HEADER_ICONS, {
 	[-611] = 133575,
 	[-698] = _.asset("category_worlddrops"),
 	[-721] = 237382,
-	[-723] = 135793,
 	[-724] = 135982,
 	[-725] = 135982,
 	[-726] = 135982,
@@ -1477,8 +1470,10 @@ localize(L.HEADER_ICONS, {
 	[-728] = 135982,
 	[-731] = _.asset("category_itemsets"),
 	[-732] = _.asset("category_zones"),
-	[-734] = _.asset("category_event"),
+	[-735] = _.asset("category_expansionfeatures"),
 	[-796] = 135018,
+	[-799] = 133739,
+	[-800] = 236449,
 })
 localize(L.HEADER_EVENTS, {
 	[-37] = 1,
@@ -1510,11 +1505,6 @@ localize(L.EVENT_REMAPPING, {
 	[375] = 1,
 })
 -- Programmatic Event Scheduling
-_.Modules.Events.SetEventInformation(13, {
-	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=1,["weekday"]=5,["year"]=2025},{["hour"]=23,["minute"]=59,["month"]=5,["monthDay"]=7,["weekday"]=4,["year"]=2025}),
-	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=1,["weekday"]=6,["year"]=2026},{["hour"]=23,["minute"]=59,["month"]=5,["monthDay"]=7,["weekday"]=5,["year"]=2026}),
-	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=1,["weekday"]=7,["year"]=2027},{["hour"]=23,["minute"]=59,["month"]=5,["monthDay"]=7,["weekday"]=6,["year"]=2027})
-})
 _.Modules.Events.SetEventInformation(133899, {
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=23,["weekday"]=3,["year"]=2025},{["hour"]=23,["minute"]=59,["month"]=3,["monthDay"]=19,["weekday"]=5,["year"]=2026}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=23,["weekday"]=4,["year"]=2026},{["hour"]=23,["minute"]=59,["month"]=3,["monthDay"]=19,["weekday"]=6,["year"]=2027}),
@@ -1560,8 +1550,12 @@ _.Modules.Events.SetEventInformation(14, {
 	_.Modules.Events.CreateSchedule({["hour"]=10,["minute"]=0,["month"]=12,["monthDay"]=16,["weekday"]=4,["year"]=2026},{["hour"]=6,["minute"]=0,["month"]=1,["monthDay"]=2,["weekday"]=7,["year"]=2027}),
 	_.Modules.Events.CreateSchedule({["hour"]=10,["minute"]=0,["month"]=12,["monthDay"]=16,["weekday"]=5,["year"]=2027},{["hour"]=6,["minute"]=0,["month"]=1,["monthDay"]=2,["weekday"]=1,["year"]=2028})
 })
+_.Modules.Events.SetEventInformation(13, {
+	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=1,["weekday"]=5,["year"]=2025},{["hour"]=23,["minute"]=59,["month"]=5,["monthDay"]=7,["weekday"]=4,["year"]=2025}),
+	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=1,["weekday"]=6,["year"]=2026},{["hour"]=23,["minute"]=59,["month"]=5,["monthDay"]=7,["weekday"]=5,["year"]=2026}),
+	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=1,["weekday"]=7,["year"]=2027},{["hour"]=23,["minute"]=59,["month"]=5,["monthDay"]=7,["weekday"]=6,["year"]=2027})
+})
 _.Modules.Events.SetEventInformation(1, {
-	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=8,["monthDay"]=7,["weekday"]=6,["year"]=2026},{["hour"]=0,["minute"]=0,["month"]=8,["monthDay"]=17,["weekday"]=2,["year"]=2026},{["remappedID"]=375}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=4,["weekday"]=6,["year"]=2026},{["hour"]=0,["minute"]=0,["month"]=9,["monthDay"]=14,["weekday"]=2,["year"]=2026},{["remappedID"]=374}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=2,["weekday"]=6,["year"]=2026},{["hour"]=0,["minute"]=0,["month"]=10,["monthDay"]=12,["weekday"]=2,["year"]=2026},{["remappedID"]=375}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=11,["monthDay"]=6,["weekday"]=6,["year"]=2026},{["hour"]=0,["minute"]=0,["month"]=11,["monthDay"]=16,["weekday"]=2,["year"]=2026},{["remappedID"]=374}),
@@ -1571,7 +1565,8 @@ _.Modules.Events.SetEventInformation(1, {
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=3,["monthDay"]=5,["weekday"]=6,["year"]=2027},{["hour"]=0,["minute"]=0,["month"]=3,["monthDay"]=15,["weekday"]=2,["year"]=2027},{["remappedID"]=374}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=4,["monthDay"]=2,["weekday"]=6,["year"]=2027},{["hour"]=0,["minute"]=0,["month"]=4,["monthDay"]=12,["weekday"]=2,["year"]=2027},{["remappedID"]=375}),
 	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=7,["weekday"]=6,["year"]=2027},{["hour"]=0,["minute"]=0,["month"]=5,["monthDay"]=17,["weekday"]=2,["year"]=2027},{["remappedID"]=374}),
-	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=6,["monthDay"]=4,["weekday"]=6,["year"]=2027},{["hour"]=0,["minute"]=0,["month"]=6,["monthDay"]=14,["weekday"]=2,["year"]=2027},{["remappedID"]=375})
+	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=6,["monthDay"]=4,["weekday"]=6,["year"]=2027},{["hour"]=0,["minute"]=0,["month"]=6,["monthDay"]=14,["weekday"]=2,["year"]=2027},{["remappedID"]=375}),
+	_.Modules.Events.CreateSchedule({["hour"]=0,["minute"]=0,["month"]=7,["monthDay"]=2,["weekday"]=6,["year"]=2027},{["hour"]=0,["minute"]=0,["month"]=7,["monthDay"]=12,["weekday"]=2,["year"]=2027},{["remappedID"]=374})
 })
 -- Filter Database Module
 _.FilterConstants = {
@@ -1802,6 +1797,7 @@ _.FlightPathNames = {
 	[85] = "Northpass Tower, Eastern Plaguelands",
 	[86] = "Eastwall Tower, Eastern Plaguelands",
 	[87] = "Crown Guard Tower, Eastern Plaguelands",
+	[3207] = "zzOLDRiverglades, Farholde Keep",
 	[3276] = "Farholde Keep, Riverglades",
 }
 -- Object Database Module
@@ -2511,16 +2507,13 @@ local ObjectNames = {
 	[179544] = "Skeletal Remains of Telmius Dreamseeker",
 	[179545] = "The Prince's Chest",
 	[179547] = "A Dusty Tome",
-	[179551] = "Hydraxis' Coffer",
 	[179552] = "Schematic: Field Repair Bot 74A",
-	[179553] = "Core Fragment",
 	[179559] = "Felvine Shard",
 	[179562] = "Ancient Heated Blade",
 	[179564] = "Gordok Tribute",
 	[179565] = "Dusty Reliquary",
 	[179644] = "Imprisoned Doomguard",
 	[179697] = "Arena Treasure Chest",
-	[179703] = "Cache of the Firelord",
 	[179826] = "Secret Plans: Fiery Flux",
 	[179827] = "Wanted/Missing/Lost & Found",
 	[179879] = "Orb of Command",
@@ -2558,9 +2551,6 @@ local ObjectNames = {
 	[180503] = "Sandy Cookbook",
 	[180526] = "Gong of Bethekk",
 	[180570] = "Keg",
-	[180633] = "Crystalline Tear",
-	[180642] = "Inconspicuous Crate",
-	[180652] = "Freshly Dug Dirt",
 	[180655] = "Floating Debris",
 	[180656] = "Lesser Sagefish School",
 	[180657] = "(DEPRECATED) Sparse Firefin Snapper School",
@@ -2569,7 +2559,6 @@ local ObjectNames = {
 	[180663] = "Sagefish School",
 	[180666] = "Draconic for Dummies",
 	[180667] = "Draconic for Dummies",
-	[180669] = "Swirling Maelstrom",
 	[180682] = "Oily Blackmouth School",
 	[180683] = "Firefin Snapper School",
 	[180684] = "Greater Sagefish School",
@@ -2577,7 +2566,6 @@ local ObjectNames = {
 	[180690] = "Large Scarab Coffer",
 	[180691] = "Scarab Coffer",
 	[180712] = "Stonescale Eel Swarm",
-	[180717] = "The Scarab Gong",
 	[180743] = "Carefully Wrapped Present",
 	[180746] = "Gently Shaken Gift",
 	[180747] = "Gaily Wrapped Present",
@@ -2625,6 +2613,41 @@ local ObjectNames = {
 	[207724] = "Shipwreck Debris",
 	[253069] = "Blacker Lotus",
 	[375544] = "Wooden Figurine",
+	[386759] = "Library Book",
+	[406918] = "Messenger Bag",
+	[408014] = "Gnomish Tome",
+	[409562] = "Spellbook",
+	[409692] = "Scrolls",
+	[415106] = "Burned-Out Remains",
+	[415107] = "Burned-Out Remains",
+	[417072] = "Nailed Plank",
+	[424005] = "Pocket Litter",
+	[424006] = "Hastily Rolled-Up Satchel",
+	[424007] = "Carved Figurine",
+	[424010] = "Nailed Plank",
+	[424012] = "Mound of Dirt",
+	[457387] = "Dwarven Heirloom",
+	[562103] = "Waterlogged Saw",
+	[578937] = "Ripe Stormapple",
+	[578959] = "Flutterfly Dust",
+	[581822] = "Bloodstained Satchel",
+	[613286] = "Raw Windstone",
+	[623295] = "Abandonded Belongings",
+	[629596] = "Snowdrift",
+	[649051] = "Wanted: Incinerator Gar'im",
+	[660729] = "The Forsaken Ally",
+	[660730] = "Trollbane Conquests",
+	[660731] = "Field Accounts of Horde Razings",
+	[660732] = "Cycles of Morality",
+	[660964] = "Misplaced Packages",
+	[664122] = "Gozwin's Mechanic's Log",
+	[672508] = "Flintfire's Shipment",
+	[673384] = "Water Barrel",
+	[673385] = "Grain Sack",
+	[673399] = "Stolen Weapon",
+	[694772] = "Fishing Trap",
+	[694785] = "Junk Pile",
+	[695222] = "Coalbeard's Rifle",
 	[100000000] = "Sentinax Portal",
 	[100000001] = "Unlit Torch",
 } _.ObjectNames = ObjectNames
@@ -2887,7 +2910,6 @@ local ObjectIcons = {
 	[179485] = 461122,
 	[179501] = 132761,
 	[179552] = 134939,
-	[179553] = 134116,
 	[179559] = 132884,
 	[179562] = 135279,
 	[179564] = 985959,
@@ -2910,17 +2932,12 @@ local ObjectIcons = {
 	[180501] = 134419,
 	[180503] = 133741,
 	[180526] = 132594,
-	[180633] = 132787,
-	[180642] = 132763,
-	[180652] = 133849,
 	[180662] = 132594,
 	[180666] = 134457,
 	[180667] = 134457,
-	[180669] = 133001,
 	[180685] = 132594,
 	[180690] = 132595,
 	[180691] = 132594,
-	[180717] = 133575,
 	[180743] = 133202,
 	[180746] = 133202,
 	[180747] = 133202,
@@ -3240,6 +3257,7 @@ local ObjectModels = {
 	[68865] = 202821,
 	[73940] = 219553,
 	[73941] = 219553,
+	[83763] = 198055,
 	[85562] = 196976,
 	[85563] = 197617,
 	[86492] = 200960,
@@ -3648,16 +3666,13 @@ local ObjectModels = {
 	[179544] = 199673,
 	[179545] = 196976,
 	[179547] = 198028,
-	[179551] = 200953,
 	[179552] = 203431,
-	[179553] = 189214,
 	[179559] = 201617,
 	[179562] = 189687,
 	[179564] = 200953,
 	[179565] = 200953,
 	[179644] = 202443,
 	[179697] = 219372,
-	[179703] = 199748,
 	[179826] = 198451,
 	[179827] = 199473,
 	[179879] = 203892,
@@ -3694,9 +3709,6 @@ local ObjectModels = {
 	[180503] = 198020,
 	[180526] = 201029,
 	[180570] = 198006,
-	[180633] = 201617,
-	[180642] = 200963,
-	[180652] = 204112,
 	[180655] = 219411,
 	[180656] = 219406,
 	[180657] = 219405,
@@ -3705,7 +3717,6 @@ local ObjectModels = {
 	[180663] = 219406,
 	[180666] = 198055,
 	[180667] = 198044,
-	[180669] = 219411,
 	[180682] = 219404,
 	[180683] = 219405,
 	[180684] = 219406,
@@ -3713,7 +3724,6 @@ local ObjectModels = {
 	[180690] = 200952,
 	[180691] = 200952,
 	[180712] = 219407,
-	[180717] = 202508,
 	[180743] = 199604,
 	[180746] = 199605,
 	[180747] = 199606,
@@ -3755,6 +3765,25 @@ local ObjectModels = {
 	[207724] = 219411,
 	[253069] = 219437,
 	[375544] = 201094,
+	[386759] = 198036,
+	[408014] = 198039,
+	[409562] = 198039,
+	[409692] = 198453,
+	[415106] = 197145,
+	[415107] = 197145,
+	[417072] = 200454,
+	[424005] = 197641,
+	[424006] = 203429,
+	[424007] = 200296,
+	[424010] = 200454,
+	[424012] = 189528,
+	[562103] = 202616,
+	[649051] = 199424,
+	[660730] = 200913,
+	[660731] = 243446,
+	[660964] = 198085,
+	[694772] = 200357,
+	[694785] = 195075,
 	[100000001] = 201129,
 } _.ObjectModels = ObjectModels
 -- Phase Database Module
@@ -3806,14 +3835,6 @@ local phases = {
 		buildVersion = 11301,
 		state = 2,
 	},
-	[12] = {
-		name = "Phase 2",
-		description = "|cFFAAFFAAThis was not available until Phase 2 of WoW Classic.|r",
-		lore = "|cFFFFAAAAIncluded World PvP and PvP Honor Titles.|r",
-		minimumBuildVersion = 11301,
-		buildVersion = 11302,
-		state = 2,
-	},
 	[13] = {
 		name = "Phase 3",
 		description = "|cFFAAFFAAThis was not available until Phase 3 of WoW Classic.|r",
@@ -3838,48 +3859,12 @@ local phases = {
 		buildVersion = 11305,
 		state = 2,
 	},
-	[1501] = {
-		name = "AQ War Effort",
-		description = "|cFFAAFFAAThis was only available during the Ahn'Qiraj War Effort.|r",
-		lore = "|cFFFFAAAAIf the War Effort has been completed on your server, simply turn this off.|r",
-		minimumBuildVersion = 11301,
-		state = 2,
-	},
-	[1502] = {
-		name = "Gates Unopened",
-		description = "|cFFAAFFAAThis was only available up until the Scarab Lords on your server have rung the gong.|r",
-		lore = "|cFFFFAAAAIf the Gates of Anh'Qiraj have been opened on your server, simply turn this off.|r",
-		minimumBuildVersion = 11301,
-		state = 2,
-	},
-	[1503] = {
-		name = "10-Hour War",
-		description = "|cFFAAFFAAThis was only available during the 10 Hour War after the Scarab Lord(s) bang the gong.|r",
-		lore = "|cFFFFAAAAIf the Gates of Anh'Qiraj have been opened on your server, simply turn this off.|r",
-		minimumBuildVersion = 11301,
-		state = 2,
-	},
-	[1504] = {
-		name = "Catch-Up",
-		description = "|cFFAAFFAAThis became available near the end of Phase 5 in order to provide Catch-Up Nature Resist gear for those still working on AQ40.|r",
-		lore = "|cFFFFAAAAIf the Catch-Up Gear is available, simply turn this on.|r",
-		minimumBuildVersion = 11301,
-		buildVersion = 11306,
-		state = 2,
-	},
 	[16] = {
 		name = "Phase 6",
 		description = "|cFFAAFFAAThis was not available until Phase 6 of WoW Classic.|r",
 		lore = "|cFFFFAAAAIncluded Naxxramas, which was heralded by the Scourge Invasion.|r",
 		minimumBuildVersion = 11301,
 		buildVersion = 11306,
-		state = 2,
-	},
-	[1601] = {
-		name = "Scourge Invasion",
-		description = "|cFFAAFFAAThis was only available during the Scourge Invasion.|r",
-		lore = "|cFFFFAAAAIf the Scourge Invasion has ended on your server, simply turn this off.|r",
-		minimumBuildVersion = 11301,
 		state = 2,
 	},
 	[17] = {
@@ -4122,7 +4107,7 @@ L.PLAYER_TITLE_SCARAB_LORD = "|c" .. _.DefaultColors.Raid .. "Skarabäusfürst %
 L.PLAYER_TITLE_THE_COMPLETIONIST = "|c" .. _.DefaultColors.Raid .. "%s der Vervollständiger|r"
 L.PLAYER_TITLE_THE_EXTERMINATOR = "|cffa335ee%s der Vernichter|r"
 L.PLAYER_TITLE_THE_HUGGLER = "|cffF58CBA%s der Huggler|r"
-L.PLEASE_REPORT_MESSAGE = "Bitte melden Sie den Fehler an das ATT Discord in #classic-errors! Danke!"
+L.PLEASE_REPORT_MESSAGE = "Bitte melden Sie den Fehler an das ATT Discord in #forever-reports! Danke!"
 L.PREREQUISITE_QUESTS = "Es gibt Quests, deren Abschluss Voraussetzung ist um dies zu erhalten:"
 L.PRESET_UPDATE_SUCCESS = "Die Voreinstellung wurde erfolgreich aktualisiert."
 L.PROFESSION_LIST = "Berufsliste"
@@ -4190,7 +4175,7 @@ L.SKIP_CUTSCENES_CHECKBOX = "Zwischensequenzen automatisch überspringen"
 L.SKIP_CUTSCENES_CHECKBOX_TOOLTIP = "Aktiviere diese Option, wenn ATT automatisch alle Zwischensequenzen für Euch überspringen soll."
 L.SORT_BY_PROGRESS_CHECKBOX = "Nach Fortschritt sortieren"
 L.SOULBINDCONDUITS_CHECKBOX = "|T" .. _.asset("Expansion_SL") .. ":0|t Medien"
-L.SOURCE_ID_MISSING = "Bitte meldet diesen Gegenstand und wo er erhalten wurde an das ATT Discord in #classic-errors!"
+L.SOURCE_ID_MISSING = "Bitte meldet diesen Gegenstand und wo er erhalten wurde an das ATT Discord in #forever-reports!"
 L.SOURCES = "Quelle(n)"
 L.SOURCES_DESC = "Zeigt die Quelle dieses Dings an.\n\nInsbesondere, ein bestimmter Händler/NPC, Quest, Boss, etc."
 L.SPEC_CHECKBOX = "Spezialisierungen"
@@ -4263,7 +4248,6 @@ localize(L.HEADER_NAMES, {
 	[-37] = "Dunkelmond-Jahrmarkt",
 	[-48] = "Reitlehrerin",
 	[-59] = "Waffenmeisterin",
-	[-74] = "Drachen des Alptraums",
 	[-341] = "Geteilte Vorlagen",
 	[-342] = "Einzigartige Vorlagen",
 	[-343] = "Kopfgeld",
@@ -4275,7 +4259,6 @@ localize(L.HEADER_NAMES, {
 	[-365] = "Haupttor",
 	[-366] = "Dienstboteneingang",
 	[-367] = "Verteidiger der Atal'ai",
-	[-483] = "Das Szepter der Sandstürme",
 	[-559] = "Kinderwoche",
 	[-574] = "Winterhauchfest",
 	[-576] = "Schlotternächte",
@@ -4994,15 +4977,12 @@ localize(ObjectNames, {
 	[179544] = "Die sterblichen Überreste von Telmius Traumsucher",
 	[179545] = "Die Truhe des Prinzen",
 	[179547] = "Ein verstaubter Foliant",
-	[179551] = "Hydraxis Truhe",
 	[179552] = "Bauplan: Feldreparaturbot 74A",
-	[179553] = "Kernfragment",
 	[179559] = "Teufelsrankensplitter",
 	[179562] = "Erhitzte Uralte Klinge",
 	[179564] = "Tribut der Gordok",
 	[179565] = "Staubiger Reliquienschrein",
 	[179697] = "Arenaschatztruhe",
-	[179703] = "Behälter des Feuerfürsten",
 	[179826] = "Geheimpläne: Feuriger Fluxus",
 	[179827] = "Gesucht/Vermisst/Verloren & Gefunden",
 	[179879] = "Befehlskugel",
@@ -5039,9 +5019,6 @@ localize(ObjectNames, {
 	[180503] = "Sandiges Kochbuch",
 	[180526] = "Gong von Bethekk",
 	[180570] = "Bierfässchen",
-	[180633] = "Kristallträne",
-	[180642] = "Unscheinbare Kiste",
-	[180652] = "Frisch aufgewühlter Dreck",
 	[180655] = "Schwimmende Trümmer",
 	[180656] = "Ein kleiner Schwarm Weisenfische",
 	[180657] = "Ein spärlicher Schwarm Feuerflossenschnapper",
@@ -5050,7 +5027,6 @@ localize(ObjectNames, {
 	[180663] = "Ein Schwarm Weisenfische",
 	[180666] = "Drakonisch für Dummies",
 	[180667] = "Drakonisch für Dummies",
-	[180669] = "Wirbelnder Mahlstrom",
 	[180682] = "Ein Schwarm öliger Schwarzmaulfische",
 	[180683] = "Ein Schwarm Feuerflossenschnapper",
 	[180684] = "Ein Schwarm großer Weisenfische",
@@ -5058,7 +5034,6 @@ localize(ObjectNames, {
 	[180690] = "Großer Skarabäuskasten",
 	[180691] = "Skarabäuskasten",
 	[180712] = "Steinschuppenaalschwarm",
-	[180717] = "Der Skarabäusgong",
 	[180743] = "Sorgfältig verpacktes Geschenk",
 	[180746] = "Leicht geschütteltes Geschenk",
 	[180747] = "Fröhlich verpacktes Geschenk",
@@ -5099,6 +5074,20 @@ localize(ObjectNames, {
 	[207724] = "Schiffswracktrümmer",
 	[253069] = "Schwärzerer Lotus",
 	[375544] = "Holzstatuette",
+	[386759] = "Bibliotheksbuch",
+	[406918] = "Kuriertasche",
+	[408014] = "Gnomenfoliant",
+	[409562] = "Zauberbuch",
+	[409692] = "Schriftrollen",
+	[415106] = "Ausgebrannte Überreste",
+	[415107] = "Ausgebrannte Überreste",
+	[417072] = "Festgenagelte Planke",
+	[424005] = "Taschenmüll",
+	[424006] = "Hastig eingerollter Beutel",
+	[424007] = "Geschnitzte Figure",
+	[424010] = "Planke mit Nagel",
+	[424012] = "Erdhaufen",
+	[581822] = "Blutbefleckter Beutel",
 	[100000001] = "Nicht angezündete Fackel",
 })
 for key,value in pairs({
@@ -5107,7 +5096,6 @@ for key,value in pairs({
 })
 do phases[key].name = value; end
 for key,value in pairs({
-	[12] = "|cFFAAFFAADies war erst Phase 2 von WoW Classic verfügbar.|r",
 	[13] = "|cFFAAFFAADies war erst Phase 3 von WoW Classic verfügbar.|r",
 	[14] = "|cFFAAFFAADies war erst Phase 4 von WoW Classic verfügbar.|r",
 	[15] = "|cFFAAFFAADies war erst Phase 5 von WoW Classic verfügbar.|r",
@@ -5324,7 +5312,7 @@ L.PLAYER_TITLE_SCARAB_LORD = "|c" .. _.DefaultColors.Raid .. "Seigneur scarabée
 L.PLAYER_TITLE_THE_COMPLETIONIST = "|c" .. _.DefaultColors.Raid .. "%s le Finaliste|r"
 L.PLAYER_TITLE_THE_EXTERMINATOR = "|cffa335ee%s l'Exterminateur|r"
 L.PLAYER_TITLE_THE_HUGGLER = "|cffF58CBA%s le Huggler|r"
-L.PLEASE_REPORT_MESSAGE = "Merci de signaler sur le serveur Discord d’ATT dans le canal #classic-errors ! Merci !"
+L.PLEASE_REPORT_MESSAGE = "Merci de signaler sur le serveur Discord d’ATT dans le canal #forever-reports ! Merci !"
 L.PRECISION_SLIDER = "Niveau de précision"
 L.PRECISION_SLIDER_TOOLTIP = "Utilisez cette option pour personnaliser le niveau de précision souhaité dans les calculs de pourcentage.\n\nDéfaut : 2"
 L.PROFESSION_LIST = "Liste des métiers"
@@ -5384,7 +5372,7 @@ L.SKIP_AUTO_REFRESH_TOOLTIP = "Par défaut (non coché), toute modification des 
 L.SORT_BY_PROGRESS_CHECKBOX = "Trier par progression"
 L.SORT_BY_PROGRESS_CHECKBOX_TOOLTIP = "Activer cette option si vous souhaitez trier les groupes (" .. SHIFT_KEY_TEXT .. " + clic droit) par % de progression au lieu de les trier par leur nom."
 L.SOULBINDCONDUITS_CHECKBOX = "|T" .. _.asset("Expansion_SL") .. ":0|t Intermédiaires"
-L.SOURCE_ID_MISSING = "Veuillez signaler cet objet et le lieu où il a été acquis sur le Discord d’ATT, dans le salon #classic-errors !"
+L.SOURCE_ID_MISSING = "Veuillez signaler cet objet et le lieu où il a été acquis sur le Discord d’ATT, dans le salon #forever-reports !"
 L.SOUTH = "Sud"
 L.SPEC_CHECKBOX = "Spécialisations"
 L.SPLIT = "Par difficulté"
@@ -5446,7 +5434,6 @@ localize(L.HEADER_NAMES, {
 	[-37] = "Foire de Sombrelune",
 	[-48] = "Instructrice de monte",
 	[-59] = "Maître d'armes",
-	[-74] = "Dragons du Cauchemar",
 	[-318] = "Ensembles Tier 0.5",
 	[-341] = "Apparences Partagées",
 	[-342] = "Apparence unique",
@@ -5460,8 +5447,6 @@ localize(L.HEADER_NAMES, {
 	[-365] = "Grande porte",
 	[-366] = "Entrée de service",
 	[-367] = "Défenseurs atal’ai",
-	[-481] = "Effort de guerre d’Ahn'Qiraj",
-	[-483] = "Le Sceptre des Sables changeants",
 	[-559] = "Semaine des enfants",
 	[-574] = "Voile d'hiver",
 	[-576] = "Sanssaint",
@@ -6179,15 +6164,12 @@ localize(ObjectNames, {
 	[179544] = "Squelette de Telmius Cherche-Rêve",
 	[179545] = "Le coffre du prince",
 	[179547] = "Un tome poussiéreux",
-	[179551] = "Coffre d'Hydraxis",
 	[179552] = "Schéma : Robot réparateur 74A",
-	[179553] = "Fragment du Magma",
 	[179559] = "Fragment de gangrevigne",
 	[179562] = "Ancienne épée chauffée",
 	[179564] = "Tribut des Gordok",
 	[179565] = "Reliquaire poussiéreux",
 	[179697] = "Coffre au trésor de l'arène",
-	[179703] = "Cachette du seigneur du Feu",
 	[179826] = "Plans secrets : Flux embrasé",
 	[179827] = "Avis de recherche / Disparu / Trouvé & Perdu",
 	[179879] = "Orbe de commandement",
@@ -6224,9 +6206,6 @@ localize(ObjectNames, {
 	[180503] = "Livre de cuisine sableux",
 	[180526] = "Gong de Bethekk",
 	[180570] = "Tonneau",
-	[180633] = "Larme cristalline",
-	[180642] = "Caisse anodine",
-	[180652] = "Terre fraîchement remuée",
 	[180655] = "Déchets flottants",
 	[180656] = "Petit banc de sagerelles",
 	[180657] = "Banc clairsemé de lutjans de nagefeu",
@@ -6235,7 +6214,6 @@ localize(ObjectNames, {
 	[180663] = "Banc de sagerelles",
 	[180666] = "Le draconique pour les nuls",
 	[180667] = "Le draconique pour les nuls",
-	[180669] = "Maelström tourbillonnant",
 	[180682] = "Banc de bouches-noires huileux",
 	[180683] = "Banc de lutjans de nagefeu",
 	[180684] = "Banc de grandes sagerelles",
@@ -6243,7 +6221,6 @@ localize(ObjectNames, {
 	[180690] = "Grand coffre de scarabées",
 	[180691] = "Coffre de scarabées",
 	[180712] = "Banc d'anguilles pierre-écaille",
-	[180717] = "Le gong du Scarabée",
 	[180743] = "Cadeau soigneusement emballé",
 	[180746] = "Cadeau secoué doucement",
 	[180747] = "Cadeau à l'emballage multicolore",
@@ -6284,6 +6261,19 @@ localize(ObjectNames, {
 	[207724] = "Débris d’épave",
 	[253069] = "Lotus encore plus noir",
 	[375544] = "Figurine en bois",
+	[386759] = "Livre de la bibliothèque",
+	[406918] = "Sac de messager",
+	[408014] = "Tome gnome",
+	[409562] = "Grimoire",
+	[409692] = "Parchemins",
+	[415106] = "Restes brûlés",
+	[415107] = "Restes brûlés",
+	[417072] = "Planche à clous",
+	[424005] = "Litière de poche",
+	[424006] = "Besace roulée à la hâte",
+	[424007] = "Figurine sculptée",
+	[424010] = "Planche clouée",
+	[424012] = "Monticule de terre",
 	[100000001] = "Torche éteinte",
 })
 for key,value in pairs({
@@ -6292,7 +6282,6 @@ for key,value in pairs({
 })
 do phases[key].name = value; end
 for key,value in pairs({
-	[12] = "|cFFAAFFAACeci n'était pas disponible avant le Phase 2 du WoW Classic.|r",
 	[13] = "|cFFAAFFAACeci n'était pas disponible avant le Phase 3 du WoW Classic.|r",
 	[14] = "|cFFAAFFAACeci n'était pas disponible avant le Phase 4 du WoW Classic.|r",
 	[15] = "|cFFAAFFAACeci n'était pas disponible avant le Phase 5 du WoW Classic.|r",
@@ -6356,7 +6345,6 @@ localize(L.HEADER_NAMES, {
 	[-342] = "Aspetto unico",
 	[-343] = "Premio",
 	[-350] = "I Cavalieri dell'Apocalisse",
-	[-483] = "Scettro delle Sabbie Mutevoli",
 	[-586] = "Pesce di stagione: spigola estiva",
 	[-587] = "Pesce di stagione: calamari invernali",
 	[-724] = "Anziani dei Regni Orientali",
@@ -6708,12 +6696,10 @@ localize(ObjectNames, {
 	[179544] = "Resti Scheletrici di Telmius Cercasogni",
 	[179545] = "Cassa del Principe",
 	[179552] = "Schema: Robot di Riparazione 74A",
-	[179553] = "Frammento di Nucleo",
 	[179559] = "Frammento di Vil Vite",
 	[179564] = "Tributo dei Gordok",
 	[179565] = "Reliquiario Polveroso",
 	[179697] = "Cassa del Tesoro dell'Arena",
-	[179703] = "Cassa del Signore del Fuoco",
 	[179879] = "Globo del Comando",
 	[179880] = "Marchio di Drakkisath",
 	[179914] = "Pila d'Ossa",
@@ -6734,15 +6720,12 @@ localize(ObjectNames, {
 	[180501] = "Frammento di Tavoletta del Crepuscolo",
 	[180503] = "Libro di Ricette Insabbiato",
 	[180570] = "Barile",
-	[180633] = "Lacrima di Cristallo",
-	[180642] = "Cassa Incospicua",
 	[180655] = "Relitti Galleggianti",
 	[180658] = "Banco di Pesci Mutanti",
 	[180662] = "Rottami di Goletta",
 	[180663] = "Banco di Pescisalvia",
 	[180666] = "Draconico per Negati",
 	[180667] = "Draconico per Negati",
-	[180669] = "Maelstrom Turbinoso",
 	[180682] = "Banco di Boccanera Oleosi",
 	[180683] = "Banco di Barracuda Arcobaleno",
 	[180684] = "Banco di Gran Pescisalvia",
@@ -6750,7 +6733,6 @@ localize(ObjectNames, {
 	[180690] = "Grande Forziere dello Scarabeo",
 	[180691] = "Forziere dello Scarabeo",
 	[180712] = "Banco di Anguille Squamapietra",
-	[180717] = "Gong dello Scarabeo",
 	[180743] = "Regalo Incartato con Cura",
 	[180746] = "Dono Dolcemente Scosso",
 	[180747] = "Regalo Incartato Gioiosamente",
@@ -6782,7 +6764,6 @@ for key,value in pairs({
 })
 do phases[key].name = value; end
 for key,value in pairs({
-	[12] = "|cFFAAFFAAQuesto non era disponibile fino al Phase 2 di WoW Classic.|r",
 	[13] = "|cFFAAFFAAQuesto non era disponibile fino al Phase 3 di WoW Classic.|r",
 	[14] = "|cFFAAFFAAQuesto non era disponibile fino al Phase 4 di WoW Classic.|r",
 	[15] = "|cFFAAFFAAQuesto non era disponibile fino al Phase 5 di WoW Classic.|r",
@@ -6857,7 +6838,7 @@ L.PLAYER_TITLE_SCARAB_LORD = "|c" .. _.DefaultColors.Raid .. "Senhor dos Escarav
 L.PLAYER_TITLE_THE_COMPLETIONIST = "|c" .. _.DefaultColors.Raid .. "%s, o Complecionista|r"
 L.PLAYER_TITLE_THE_EXTERMINATOR = "|cffa335ee%s o Exterminador|r"
 L.PLAYER_TITLE_THE_HUGGLER = "|cffF58CBA%s o Abraçador|r"
-L.PLEASE_REPORT_MESSAGE = "Por favor reporte isso no Discord do ATT em #classic-errors! Obrigado!"
+L.PLEASE_REPORT_MESSAGE = "Por favor reporte isso no Discord do ATT em #forever-reports! Obrigado!"
 L.PROGRESS = "Progresso"
 L.RACE_LOCKED = "Travado por raça"
 L.RECIPES_CHECKBOX = "Receitas"
@@ -6900,7 +6881,6 @@ localize(L.HEADER_NAMES, {
 	[-365] = "Portão Principal",
 	[-366] = "Entrada de Serviço",
 	[-367] = "Defensores Atal'ai",
-	[-483] = "Cetro das Areias Cambiantes",
 	[-559] = "Semana das Crianças",
 	[-574] = "Festa do Véu de Inverno",
 	[-576] = "Noturnália",
@@ -7541,13 +7521,11 @@ localize(ObjectNames, {
 	[179544] = "Restos Descarnados de Telmius Romanesca",
 	[179545] = "Baú do Príncipe",
 	[179552] = "Diagrama: Robô de Reparos em Campo 74A",
-	[179553] = "Fragmento de Núcleo",
 	[179559] = "Lasca de Vinhavil",
 	[179562] = "Lâmina Antiga Incandescente",
 	[179564] = "Homenagem a Gordok",
 	[179565] = "Relicário Empoeirado",
 	[179697] = "Baú do Tesouro da Arena",
-	[179703] = "Baú do Senhor do Fogo",
 	[179827] = "Procurados/Desaparecidos/Achados e Perdidos",
 	[179879] = "Orbe de Comando",
 	[179880] = "Marca de Drakkisath",
@@ -7576,15 +7554,12 @@ localize(ObjectNames, {
 	[180503] = "Livro de Receitas da Sandy",
 	[180526] = "Gongo de Bethekk",
 	[180570] = "Barril",
-	[180633] = "Lágrima Cristalina",
-	[180642] = "Caixote Inconspícuo",
 	[180655] = "Destroços Flutuantes",
 	[180658] = "Cardume de Peixes Anormais",
 	[180662] = "Destroços da Escuna",
 	[180663] = "Cardume de Sabichões",
 	[180666] = "Dracônico para Leigos",
 	[180667] = "Dracônico para Leigos",
-	[180669] = "Voragem Serpenteante",
 	[180682] = "Cardume de Bocaneras Oleosos",
 	[180683] = "Cardume de Pargos Pinafogos",
 	[180684] = "Cardume de Sabichões Maiores",
@@ -7592,7 +7567,6 @@ localize(ObjectNames, {
 	[180690] = "Grande Arca do Escaravelho",
 	[180691] = "Arca do Escaravelho",
 	[180712] = "Grande Cardume de Enguias Petrescamas",
-	[180717] = "O Gongo do Escaravelho",
 	[180743] = "Presente Cuidadosamente Embrulhado",
 	[180746] = "Presente Chacoalhado Gentilmente",
 	[180747] = "Presente Alegremente Embrulhado",
@@ -7624,6 +7598,16 @@ localize(ObjectNames, {
 	[207724] = "Destroços do Naufrágio",
 	[253069] = "Lótus Mais Preto",
 	[375544] = "Estatueta de Madeira",
+	[406918] = "Bolsa de Mensageiro",
+	[408014] = "Tomo Gnômico",
+	[415106] = "Restos Queimados",
+	[415107] = "Restos Queimados",
+	[417072] = "Tábua com Pregos",
+	[424005] = "Lixo de Bolso",
+	[424006] = "Algibeira Enrolada às Pressas",
+	[424007] = "Estatueta Entalhada",
+	[424010] = "Tábua com Pregos",
+	[424012] = "Monturo de Terra",
 	[100000001] = "Tocha Apagada",
 })
 for key,value in pairs({
@@ -7632,7 +7616,6 @@ for key,value in pairs({
 })
 do phases[key].name = value; end
 for key,value in pairs({
-	[12] = "|cFFAAFFAAIsto não estava disponível até Phase 2 de WoW Classic.|r",
 	[13] = "|cFFAAFFAAIsto não estava disponível até Phase 3 de WoW Classic.|r",
 	[14] = "|cFFAAFFAAIsto não estava disponível até Phase 4 de WoW Classic.|r",
 	[15] = "|cFFAAFFAAIsto não estava disponível até Phase 5 de WoW Classic.|r",
@@ -8061,7 +8044,7 @@ L.PLAYER_TITLE_SCARAB_LORD = "|c" .. _.DefaultColors.Raid .. "Повелител
 L.PLAYER_TITLE_THE_COMPLETIONIST = "|c" .. _.DefaultColors.Raid .. "%s Завершающий|r"
 L.PLAYER_TITLE_THE_EXTERMINATOR = "|cffa335ee%s Истребитель|r"
 L.PLAYER_TITLE_THE_HUGGLER = "|cffF58CBA%s обниматель|r"
-L.PLEASE_REPORT_MESSAGE = "Пожалуйста, сообщите об этом на Discord-сервере ATT в канале #classic-errors! Спасибо!"
+L.PLEASE_REPORT_MESSAGE = "Пожалуйста, сообщите об этом на Discord-сервере ATT в канале #forever-reports! Спасибо!"
 L.POPOUT = "Открываемый список"
 L.PRECISION_SLIDER = "Уровень точности"
 L.PRECISION_SLIDER_TOOLTIP = "Используйте для установления желаемой точности для процентных рассчётов.\n\nПо умолчанию: 2"
@@ -8208,7 +8191,7 @@ L.SORT_BY_PROGRESS_CHECKBOX_TOOLTIP = "Включите данную опцию,
 L.SOULBINDCONDUITS_CHECKBOX = "|T" .. _.asset("Expansion_SL") .. ":0|t Проводники"
 L.SOULBINDCONDUITS_CHECKBOX_TOOLTIP = "Включите для отслеживания Проводников Медиумов."
 L.SOUNDPACK = "Набор звуковых эффектов"
-L.SOURCE_ID_MISSING = "Пожалуйста, сообщите в канале #classic-errors на нашем сервере Discord, где Вы нашли эту вещь!"
+L.SOURCE_ID_MISSING = "Пожалуйста, сообщите в канале #forever-reports на нашем сервере Discord, где Вы нашли эту вещь!"
 L.SOURCE_LOCATIONS_CHECKBOX = "Местонахождение\nИсточников"
 L.SOURCE_LOCATIONS_CHECKBOX_TOOLTIP = "Включите данную опцию, если Вы хотите видеть в подсказке полную информацию о Местонахождении Источников для объектов в базе данных ATT."
 L.SOURCES = "Источник(и)"
@@ -8327,7 +8310,6 @@ localize(L.HEADER_NAMES, {
 	[-59] = "Эксперт по оружию",
 	[-61] = "Мировые Боссы",
 	[-63] = "Добыча локации",
-	[-74] = "Драконы Кошмара",
 	[-243] = "Наложение чар на броню",
 	[-245] = "Наложение чар на оружие",
 	[-318] = "Комплекты T0.5",
@@ -8343,9 +8325,6 @@ localize(L.HEADER_NAMES, {
 	[-365] = "Главные врата",
 	[-366] = "Черный ход",
 	[-367] = "Защитники Атал'ай",
-	[-481] = "Война в Ан'Кираже",
-	[-483] = "Скипетр Зыбучих песков",
-	[-484] = "Вторжение Плети",
 	[-559] = "Детская неделя",
 	[-574] = "Зимний Покров",
 	[-576] = "Тыквовин",
@@ -9068,16 +9047,13 @@ localize(ObjectNames, {
 	[179544] = "Останки Тельмия Сновидца",
 	[179545] = "Сундук принца",
 	[179547] = "Пыльный фолиант",
-	[179551] = "Сундук Гидраксиса",
 	[179552] = "Схема: полевой ремонтный робот 74A",
-	[179553] = "Осколок из Огненных Недр",
 	[179559] = "Осколок сквернита",
 	[179562] = "Древний закаленный клинок",
 	[179564] = "Приношения Гордока",
 	[179565] = "Пыльный реликварий",
 	[179644] = "Плененный страж ужаса",
 	[179697] = "Сундук с сокровищами арены",
-	[179703] = "Тайник повелителя огня",
 	[179826] = "Секретный рецепт: огненный плавень",
 	[179827] = "Розыск/Пропал без вести/Найден",
 	[179879] = "Сфера Приказа",
@@ -9115,9 +9091,6 @@ localize(ObjectNames, {
 	[180503] = "Занесенная песком поваренная книга",
 	[180526] = "Гонг Бетекка",
 	[180570] = "Бочонок",
-	[180633] = "Хрустальная слеза",
-	[180642] = "Не вызывающий подозрений сундук",
-	[180652] = "Только что выброшенная земля",
 	[180655] = "Плавающий мусор",
 	[180656] = "Малый косяк шалфокуня",
 	[180657] = "Косяк огнеперого луциана",
@@ -9126,7 +9099,6 @@ localize(ObjectNames, {
 	[180663] = "Косяк шалфокуня",
 	[180666] = [["Драконий язык для чайников"]],
 	[180667] = [["Драконий язык для чайников"]],
-	[180669] = "Кружащий Водоворот",
 	[180682] = "Косяк масляного черноротика",
 	[180683] = "Косяк огнеперого луциана",
 	[180684] = "Косяк большого шалфокуня",
@@ -9134,7 +9106,6 @@ localize(ObjectNames, {
 	[180690] = "Большой сундук Скарабея",
 	[180691] = "Сундук Скарабея",
 	[180712] = "Стайка каменного угря",
-	[180717] = "Гонг Скарабея",
 	[180743] = "Тщательно упакованный подарок",
 	[180746] = "Слегка помятый подарок",
 	[180747] = "Подарок в яркой упаковке",
@@ -9175,6 +9146,19 @@ localize(ObjectNames, {
 	[207724] = "Обломки кораблекрушения",
 	[253069] = "Чернейший лотос",
 	[375544] = "Деревянная статуэтка",
+	[386759] = "Книга из библиотеки",
+	[406918] = "Сумка посланника",
+	[408014] = "Гномья книга",
+	[409562] = "Книга заклинаний",
+	[409692] = "Свитки",
+	[415106] = "Прогоревшие останки",
+	[415107] = "Прогоревшие останки",
+	[417072] = "Доска с гвоздями",
+	[424005] = "Карманный мусор",
+	[424006] = "Наскоро завернутая сумка",
+	[424007] = "Вырезанная статуэтка",
+	[424010] = "Доска с гвоздями",
+	[424012] = "Куча грязи",
 	[100000001] = "Незажженный факел",
 })
 for key,value in pairs({
@@ -9193,7 +9177,6 @@ for key,value in pairs({
 	[4] = "|cFFFFAAAAЭто больше нельзя будет купить или получить в коллекцию, если у вас нет необходимого PvP титула или если вы не входили в топ % лучших в этом сезоне.|r",
 	[5] = "|cFFFFAAAAЭто нельзя собрать, выучить навсегда или использовать для трансмогрификации.|r",
 	[7] = "|cFFAAFFAAЭта Штучка доступна в Торговой лавке.|r",
-	[12] = "|cFFAAFFAAЭто было недоступно до Phase 2 из WoW Classic.|r",
 	[13] = "|cFFAAFFAAЭто было недоступно до Phase 3 из WoW Classic.|r",
 	[14] = "|cFFAAFFAAЭто было недоступно до Phase 4 из WoW Classic.|r",
 	[15] = "|cFFAAFFAAЭто было недоступно до Phase 5 из WoW Classic.|r",
@@ -9265,7 +9248,6 @@ localize(L.HEADER_NAMES, {
 	[-365] = "정문",
 	[-366] = "공무용 입구",
 	[-367] = "아탈라이 파수병",
-	[-483] = "흐르는 모래의 홀",
 	[-559] = "어린이 주간",
 	[-574] = "겨울맞이 축제",
 	[-576] = "할로윈 축제",
@@ -9922,13 +9904,11 @@ localize(ObjectNames, {
 	[179544] = "카리엘 윈탈루스의 유해",
 	[179545] = "왕자의 궤짝",
 	[179552] = "설계도: 야전수리로봇 74A",
-	[179553] = "핵 조각",
 	[179559] = "악령덩굴 조각",
 	[179562] = "달궈진 고대의 검",
 	[179564] = "고르독 공물",
 	[179565] = "더러운 성물함",
 	[179697] = "투기장 보물상자",
-	[179703] = "불의 군주의 보물",
 	[179827] = "구인광고/분실물센터/지명수배",
 	[179879] = "지배의 보주",
 	[179880] = "드라키사스의 낙인",
@@ -9957,15 +9937,12 @@ localize(ObjectNames, {
 	[180503] = "모래투성이 요리책",
 	[180526] = "베데크의 징",
 	[180570] = "맥주통",
-	[180633] = "눈물의 결정",
-	[180642] = "눈에 띄지 않는 궤짝",
 	[180655] = "표류하는 파편",
 	[180658] = "돌연변이 물고기 떼",
 	[180662] = "범선 잔해",
 	[180663] = "총명어 떼",
 	[180666] = "왕초보를 위한 용언 완전정복",
 	[180667] = "왕초보를 위한 용언 완전정복",
-	[180669] = "회오리치는 소용돌이",
 	[180682] = "기름기 많은 아귀 떼",
 	[180683] = "불지느러미퉁돔 떼",
 	[180684] = "대형 총명어 떼",
@@ -9973,7 +9950,6 @@ localize(ObjectNames, {
 	[180690] = "큰 스카라베 상자",
 	[180691] = "스카라베 상자",
 	[180712] = "돌비늘뱀장어 떼",
-	[180717] = "스카라베 징",
 	[180743] = "정성스럽게 포장된 선물꾸러미",
 	[180746] = "누가 살짝 흔들어 본 선물",
 	[180747] = "화려하게 포장된 선물꾸러미",
@@ -10006,6 +9982,18 @@ localize(ObjectNames, {
 	[201579] = "쐐기돌 조각",
 	[207724] = "난파선 파편",
 	[253069] = "더 검은 연꽃",
+	[386759] = "도서관 책",
+	[406918] = "배낭",
+	[408014] = "노움어 고서",
+	[409692] = "두루마리",
+	[415106] = "불타버린 잔해",
+	[415107] = "불타버린 잔해",
+	[417072] = "못으로 고정한 판자",
+	[424005] = "휴대용 쓰레기통",
+	[424006] = "황급히 만 주머니",
+	[424007] = "조각상",
+	[424010] = "못으로 고정한 판자",
+	[424012] = "흙무더기",
 	[100000001] = "불을 붙이지 않은 횃불",
 })
 for key,value in pairs({
@@ -10014,7 +10002,6 @@ for key,value in pairs({
 })
 do phases[key].name = value; end
 for key,value in pairs({
-	[12] = "|cFFAAFFAAPhase 2(WoW Classic)까지 사용할 수 없습니다.|r",
 	[13] = "|cFFAAFFAAPhase 3(WoW Classic)까지 사용할 수 없습니다.|r",
 	[14] = "|cFFAAFFAAPhase 4(WoW Classic)까지 사용할 수 없습니다.|r",
 	[15] = "|cFFAAFFAAPhase 5(WoW Classic)까지 사용할 수 없습니다.|r",
@@ -10521,7 +10508,7 @@ L.PLAYER_TITLE_SCARAB_LORD = "|c" .. _.DefaultColors.Raid .. "Señor Escarabajo 
 L.PLAYER_TITLE_THE_COMPLETIONIST = "|c" .. _.DefaultColors.Raid .. "%s el Completista|r"
 L.PLAYER_TITLE_THE_EXTERMINATOR = "|cffa335ee%s el Exterminador|r"
 L.PLAYER_TITLE_THE_HUGGLER = "|cffF58CBA%s el Abrazador|r"
-L.PLEASE_REPORT_MESSAGE = "¡Por favor, reporte esto al Discord de ATT en #classic-errors! ¡gracias!"
+L.PLEASE_REPORT_MESSAGE = "¡Por favor, reporte esto al Discord de ATT en #forever-reports! ¡gracias!"
 L.POPOUT = "Lista ventana emergente"
 L.PRECISION_SLIDER = "Nivel de precisión"
 L.PRECISION_SLIDER_TOOLTIP = "Usa esto para personalizar el nivel de precisión deseado en los cálculos de porcentajes.\n\nPor defecto: 2"
@@ -10701,7 +10688,7 @@ L.SOULBINDCONDUITS_CHECKBOX = "|T" .. _.asset("Expansion_SL") .. ":0|t Conductos
 L.SOULBINDCONDUITS_CHECKBOX_TOOLTIP = "Activa esta opción para rastrear Conductos de Shadowlands."
 L.SOUNDPACK = "Paquete de sonidos"
 L.SOURCE_ID = "Fuente ID"
-L.SOURCE_ID_MISSING = "Por favor, reporta este objeto y dónde fue obtenido al Discord de ATT en #classic-errors!"
+L.SOURCE_ID_MISSING = "Por favor, reporta este objeto y dónde fue obtenido al Discord de ATT en #forever-reports!"
 L.SOURCE_LOCATIONS_CHECKBOX = "Ubicaciones de fuentes"
 L.SOURCE_LOCATIONS_CHECKBOX_TOOLTIP = "Activa esta opción si quieres ver el camino entero de ubicaciones de fuente de objetos en la base de datos de ATT en la ventana emergente."
 L.SOURCELESS = "Sin fuente"
@@ -10840,7 +10827,6 @@ localize(L.HEADER_NAMES, {
 	[-59] = "Maestro armero",
 	[-61] = "Jefes de mundo",
 	[-63] = "Botín de zona",
-	[-74] = "Dragones de la pesadilla",
 	[-243] = "Encantamientos de armadura",
 	[-245] = "Encantamientos de armas",
 	[-298] = "Titulos de honor",
@@ -10853,8 +10839,6 @@ localize(L.HEADER_NAMES, {
 	[-365] = "Puerta principal",
 	[-366] = "Entrada del servicio",
 	[-367] = "Defensores Atal'ai",
-	[-483] = "El cetro del Mar de Dunas",
-	[-484] = "Invasión de la plaga",
 	[-559] = "Semana de los Niños",
 	[-574] = "El festín del Festival de Invierno",
 	[-576] = "Halloween",
@@ -10867,7 +10851,6 @@ localize(L.HEADER_NAMES, {
 	[-587] = "Pescado de temporada: calamares de invierno",
 	[-588] = "Gran espectáculo de pesca de Tuercespina",
 	[-611] = "Realeza Silitida",
-	[-723] = "Incursiones elementales",
 	[-724] = "Ancestros de los Reinos del Este",
 	[-725] = "Ancestros de Kalimdor",
 	[-726] = "Ancestros de la Alianza",
@@ -10891,12 +10874,10 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-357] = "Se puede acceder a esta parte de la mazmorra desde el portal más al oeste. (lado izquierdo)",
 	[-365] = "Stratholme está dividida en dos lados.\n\nEste lado se conoce comúnmente como el lado \"Vivo\" o \"Escarlata\", que ha sido tomado por la Cruzada Escarlata.",
 	[-366] = "Stratholme está dividida en dos lados.\n\nEste lado se conoce comúnmente como el lado de los 'Muertos' o del 'Azote', que el Azote ha tomado.",
-	[-483] = "Además de que todos los jugadores de un reino trabajaran para completar el Esfuerzo de Guerra, un jugador tenía que crear el El cetro del Mar de Dunas, una tarea muy difícil que solo podía ser resuelta por la mejor hermandad de un servidor cuando se añadió la cadena de misiones. Una vez finalizado el esfuerzo de guerra y llegados los ejércitos de la Alianza y la Horda a Silithus, el El cetro del Mar de Dunas podía usarse en el Gong del Escarabajo. Al hacerlo, se abría Ahn'Qiraj. El primer jugador en golpear el Gong del Escarabajo en cada servidor era recompensado con el título de Señor del Escarabajo (en Burning Crusade, ¡el título no estará disponible en Classic!) y la montura Cristal resonador negro Qiraji. Cualquiera que lo siguiera en las siguientes 10 horas también era recompensado con el título.\n\nAunque todavía es posible completar la cadena de misiones del El cetro del Mar de Dunas después de que se hayan abierto las puertas en tu servidor, hacerlo no otorgará ni el Cristal resonador negro Qiraji ni el título de Señor del Escarabajo.",
 	[-721] = "Contiene contenido que está disponible en la Zona actual, pero que se obtiene directamente de otra Zona.",
-	[-723] = "Aumentan los informes de incursiones elementales en diferentes partes de Kalimdor. Cada pocos días, una nueva oleada de elementales se abre paso a la fuerza en las regiones de Silithus, el Cráter de Un'Goro, Azshara y Cuna del Invierno, aparentemente con el único propósito de ver hasta dónde pueden penetrar en estos territorios antes de ser repelidos por las fuerzas de la Horda o la Alianza. Investiga estas regiones y ayuda a tus aliados a contrarrestar estas misteriosas invasiones.",
+	[-735] = "Esta sección está destinada a sistemas introducidos durante una expansión que involucre varias zonas.\nSi una función de expansión es exclusiva de una sola zona, se puede encontrar dentro de esa zona en ATT; de lo contrario, para reducir la duplicación y el tamaño excesivo de la base de datos, se puede encontrar a continuación.",
 })
 localize(L.HEADER_LORE, {
-	[-74] = "Uno de estos dragones aparecerá aleatoriamente en las coordenadas asociadas en todo Azeroth.",
 	[-318] = "Los conjuntos de clase del Conjunto de Mazmorra nivel 2, comúnmente conocidos como Tier 0.5, se obtienen al completar una larga cadena de misiones para mejorar el primer conjunto disponible como botín en las mazmorras del final del juego y convertirlo en versiones más poderosas. En el WoW actual, estos conjuntos son codiciados por los coleccionistas, ya que la cadena de misiones se eliminó por completo del juego con Cataclysm. ¡En WoW Classic, deberías completar esta cadena de misiones con todos tus personajes antes de esa fecha!",
 })
 localize(ObjectNames, {
@@ -11591,15 +11572,12 @@ localize(ObjectNames, {
 	[179544] = "Restos esqueléticos de Telmius Buscasueños",
 	[179545] = "El cofre del Príncipe",
 	[179547] = "Un tomo polvoriento",
-	[179551] = "Arca de Hydraxis",
 	[179552] = "Esquema: robot de reparación de campo 74A",
-	[179553] = "Trozo del Núcleo",
 	[179559] = "Fragmento de gangrevid",
 	[179562] = "Hoja antigua candente",
 	[179564] = "Tributo a Gordok",
 	[179565] = "Relicario polvoriento",
 	[179697] = "Arqueta de la arena",
-	[179703] = "Alijo del Señor del Fuego",
 	[179826] = "Diseños secretos: flujo ígneo",
 	[179827] = "Se busca/Desaparecido/Objetos perdidos",
 	[179879] = "Orbe de orden",
@@ -11636,9 +11614,6 @@ localize(ObjectNames, {
 	[180503] = "Libro de cocina de Sandy",
 	[180526] = "Gong de Bethekk",
 	[180570] = "Barril",
-	[180633] = "Lágrima cristalina",
-	[180642] = "Cajón inadvertido",
-	[180652] = "Tierra removida",
 	[180655] = "Restos flotando",
 	[180656] = "Banco de sabiolas inferior",
 	[180657] = "Banco de pargos de fuego escaso",
@@ -11647,7 +11622,6 @@ localize(ObjectNames, {
 	[180663] = "Banco de sabiolas",
 	[180666] = "Dracónico para torpes",
 	[180667] = "Dracónico para torpes",
-	[180669] = "Remolino de vorágine",
 	[180682] = "Banco de bocanegras grasos",
 	[180683] = "Banco de pargos de fuego",
 	[180684] = "Banco de sabiolas superior",
@@ -11655,7 +11629,6 @@ localize(ObjectNames, {
 	[180690] = "Arca del escarabajo grande",
 	[180691] = "Arca del escarabajo",
 	[180712] = "Banco de anguilas escama pétrea",
-	[180717] = "El gong del Escarabajo",
 	[180743] = "Presente envuelto con cuidado",
 	[180746] = "Obsequio ligeramente agitado",
 	[180747] = "Presente con envoltorio alegre",
@@ -11695,6 +11668,19 @@ localize(ObjectNames, {
 	[207724] = "Restos de naufragio",
 	[253069] = "Loto renegrido",
 	[375544] = "Figurilla de madera",
+	[386759] = "Libro de la biblioteca",
+	[406918] = "Bolsa de mensajero",
+	[408014] = "Tomo gnómico",
+	[409562] = "Libro de hechizos",
+	[409692] = "Pergaminos",
+	[415106] = "Restos carbonizados",
+	[415107] = "Restos carbonizados",
+	[417072] = "Tablón claveteado",
+	[424005] = "Basura de bolsillo",
+	[424006] = "Cartera enrollada a toda prisa",
+	[424007] = "Figurilla tallada",
+	[424010] = "Tablón claveteado",
+	[424012] = "Túmulo de barro",
 	[100000001] = "Antorcha apagada",
 })
 for key,value in pairs({
@@ -11705,16 +11691,10 @@ for key,value in pairs({
 	[5] = "No aprendible",
 	[7] = "Puesto comercial",
 	[1101] = "La masacre",
-	[12] = "Fase 2",
 	[13] = "Fase 3",
 	[14] = "Fase 4",
 	[15] = "Fase 5",
-	[1501] = "Esfuerzo de guerra de AQ",
-	[1502] = "Puertas cerradas",
-	[1503] = "Guerra de 10 horas",
-	[1504] = "Ponerse al día",
 	[16] = "Fase 6",
-	[1601] = "Invasión de la Plaga",
 	[17] = "Fase 1",
 	[30] = "Fase 1",
 })
@@ -11727,16 +11707,10 @@ for key,value in pairs({
 	[5] = "|cFFFFAAAAEsto no se puede recolectar, aprender ni usar para transfiguración de forma permanente.|r",
 	[7] = "|cFFAAFFAAEste artículo está disponible en el puesto comercial.|r",
 	[1101] = "|cFFAAFFAAEsto estuvo disponible con el lanzamiento de la fase La masacre de WoW Classic.|r",
-	[12] = "|cFFAAFFAAEsto no estuvo disponible hasta Fase 2 de WoW Classic.|r",
 	[13] = "|cFFAAFFAAEsto no estuvo disponible hasta Fase 3 de WoW Classic.|r",
 	[14] = "|cFFAAFFAAEsto no estuvo disponible hasta Fase 4 de WoW Classic.|r",
 	[15] = "|cFFAAFFAAEsto no estuvo disponible hasta Fase 5 de WoW Classic.|r",
-	[1501] = "|cFFAAFFAAEsto solo estuvo disponible durante el esfuerzo de guerra de Ahn'Qiraj.|r",
-	[1502] = "|cFFAAFFAAEsto solo estuvo disponible hasta que los Señores Escarabajo de tu servidor tocaron el gong.|r",
-	[1503] = "|cFFAAFFAAEsto solo estaba disponible durante la Guerra de las 10 horas después de que el/los Señor(es) Escarabajo(s) tocaran el gong.|r",
-	[1504] = "|cFFAAFFAAEsto estuvo disponible cerca del final de la Fase 5 para proporcionar equipo de resistencia a la naturaleza para aquellos que todavía estaban trabajando en AQ40.|r",
 	[16] = "|cFFAAFFAAEsto no estuvo disponible hasta Fase 6 de WoW Classic.|r",
-	[1601] = "|cFFAAFFAAEsto solo estaba disponible durante la Invasión de la Plaga.|r",
 	[17] = "|cFFAAFFAAEsto no estuvo disponible hasta Fase 1 de TBC Classic.|r",
 	[30] = "|cFFAAFFAAEsto no estuvo disponible hasta Fase 1 de Wrath Classic.|r",
 })
@@ -11744,16 +11718,10 @@ do phases[key].description = value; end
 for key,value in pairs({
 	[3] = "|cFFFFAAAAFomentar el uso de dinero real en cualquier versión del juego está ampliamente mal visto. Participa en este contenido bajo tu propia responsabilidad.|r",
 	[1101] = "|cFFFFAAAAIncluye La masacre|r",
-	[12] = "|cFFFFAAAAIncluidos JvJ de mundo y titulos de honor JvJ.|r",
 	[13] = "|cFFFFAAAAIncluidos Guarida de Alanegra y la finalización de Trueno furioso|r",
 	[14] = "|cFFFFAAAAIncluidos Zul'Gurub y los dragones del mundo.|r",
 	[15] = "|cFFFFAAAASe incluyó Ahn'Qiraj, que fue precedido por un evento de apertura único.|r",
-	[1501] = "|cFFFFAAAASi el esfuerzo de guerra se ha completado en tu servidor, simplemente desactiva esta opción.|r",
-	[1502] = "|cFFFFAAAASi se han abierto las Puertas de Ahn'Qiraj en tu servidor, simplemente desactiva esto.|r",
-	[1503] = "|cFFFFAAAASi se han abierto las Puertas de Ahn'Qiraj en tu servidor, simplemente desactiva esto.|r",
-	[1504] = "|cFFFFAAAASi el equipo de ponerse al día está disponible, simplemente actívelo|r",
 	[16] = "|cFFFFAAAASe Incluyó Naxxramas, que fue anunciado por la Invasión de la Plaga.|r",
-	[1601] = "|cFFFFAAAASi la invasión de la Plaga ha finalizado en tu servidor, simplemente desactiva esta opción.|r",
 	[17] = "|cFFFFAAAAIncluye Karazhan, Guarida de Magtheridon y la Guarida de Gruul.|r",
 	[30] = "|cFFFFAAAAIncluye Naxxramas, Sagrario obsidiana, y El ojo de la eternidad.|r",
 })
@@ -11918,7 +11886,7 @@ L.PATCH_TOOLTIP = "Click a este botón para cambiar el parche.\n\nCambiar este v
 L.PATREON_BUTTON_TOOLTIP = "Haz click en este botón para copiar el enlace a la página de Patreon de All The Things.\n\nAquí puedes ver cómo dar soporte financiero al Addon!"
 L.PERSONAL_LOOT_DESC = "Cada jugador tiene una probabilidad independiente de despojar un objeto útil para su clase ...\n\n ... O inútil como los anillos.\n\nHaz click dos veces para crear un grupo automáticamente si estás sólo."
 L.PET_DESC = "Haz click en este botón para seleccionar una mascota aleatoria basado en lo que te falta."
-L.PLEASE_REPORT_MESSAGE = "¡Por favor, reporta esto al Discord de ATT en #classic-errors! ¡gracias!"
+L.PLEASE_REPORT_MESSAGE = "¡Por favor, reporta esto al Discord de ATT en #forever-reports! ¡gracias!"
 L.PRESET_CORE = "El modo básico habilita los coleccionables visibles en el diario de colecciones de las tropas."
 L.PRESET_INSANE = "|c" .. _.DefaultColors.Insane .. "Modo Enfermo|r ¡Activa todas |c" .. _.DefaultColors.Insane .. "las opciones coloreadas|r y te da un verdadero desafío!"
 L.PRESET_NONE = "El modo Ninguna de las Cosas desactiva el seguimiento de todos los coleccionables. ¡Vaya reto!"
@@ -12021,9 +11989,7 @@ localize(L.HEADER_NAMES, {
 	[-36] = "Fiestas",
 	[-59] = "Maestro de armas",
 	[-63] = "Botín de la zona",
-	[-74] = "Dragones de pesadilla",
 	[-367] = "Defensores de Atal'ai",
-	[-723] = "Invasiones elementales",
 	[-727] = "Ancestros de los calabozos",
 })
 localize(L.HEADER_DESCRIPTIONS, {
@@ -12035,8 +12001,6 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-357] = "Se puede acceder a esta parte del calabozo desde el portal más al oeste. (lado izquierdo)",
 	[-365] = "Stratholme está dividida en dos partes.\n\nEsta parte se conoce comúnmente como la parte \"Viva\" o \"Escarlata\", que ha sido tomado por la Cruzada Escarlata.",
 	[-366] = "Stratholme está dividida en dos partes.\n\nEste lado se conoce comúnmente como la parte de los 'No Muertos' o de la 'Plaga', que la Plaga ha tomado.",
-	[-483] = "Además de que todos los jugadores de un reino trabajaran para completar el Esfuerzo de Guerra, un jugador tenía que crear el El cetro del Mar de Dunas, una tarea muy difícil que solo podía ser completada por la mejor hermandad de un servidor cuando se añadió la cadena de misiones. Una vez finalizado el esfuerzo de guerra y llegaran los ejércitos de la Alianza y la Horda a Silithus, el El cetro del Mar de Dunas podía usarse en el Gong del Escarabajo. Al hacerlo, se abría Ahn'Qiraj. El primer jugador en golpear el Gong del Escarabajo en cada servidor era recompensado con el título de Señor del Escarabajo (en Burning Crusade, ¡el título no estará disponible en Classic!) y la montura Cristal resonador negro Qiraji. Cualquiera que lo siguiera en las siguientes 10 horas también era recompensado con el título.\n\nAunque todavía es posible completar la cadena de misiones del El cetro del Mar de Dunas después de que se hayan abierto las puertas en tu servidor, hacerlo no otorgará ni el Cristal resonador negro Qiraji ni el título de Señor del Escarabajo.",
-	[-723] = "Aumentan los informes de invasiones elementales en diferentes partes de Kalimdor. Cada pocos días, una nueva oleada de elementales se abre paso a la fuerza en las regiones de Silithus, el Cráter de Un'Goro, Azshara y Cuna del Invierno, aparentemente con el único propósito de ver hasta dónde pueden penetrar en estos territorios antes de ser repelidos por las fuerzas de la Horda o la Alianza. Investiga estas regiones y ayuda a tus aliados a contrarrestar estas misteriosas invasiones.",
 })
 localize(ObjectNames, {
 	[76] = "Un tarro vacío",
@@ -12210,7 +12174,7 @@ L.AUCTIONS_NO_DATA = "尚未缓存拍卖数据，正在等待拍卖数据。"
 L.AUCTIONS_NO_LIMIT = "无限制"
 L.AUCTIONS_OTHER_ITEMS_DESC = "此处显示了所有可用于非幻化用途（例如成就）的物品。"
 L.AUCTIONS_QUEST_ITEMS_DESC = "所有可以触发非角色解锁任务的物品。"
-L.AUCTIONS_REMOVED_ITEMS_DESC = "所有已从游戏移除、但你大概仍能花点小钱收集到的物品。\n\n另外，如果你在这里发现了什么，欢迎在 ATT Discord 的 #classic-general 频道发帖！我相信有些人会想找到这些东西。"
+L.AUCTIONS_REMOVED_ITEMS_DESC = "所有已从游戏移除、但你大概仍能花点小钱收集到的物品。\n\n另外，如果你在这里发现了什么，欢迎在 ATT Discord 的 #forever-general 频道发帖！我相信有些人会想找到这些东西。"
 L.AUCTIONS_REPUTATION_DESC = "此处显示了所有可用于提升你尚未收集的阵营声望的物品。"
 L.AUCTIONS_SCAN_CLICK_DESC = "点击此按钮对拍卖行执行一次完整扫描。扫描结果将显示在此窗口中，并会清除已有数据。"
 L.AUCTIONS_SCAN_CLICK_TEXT = "点击执行完整扫描"
@@ -12751,7 +12715,7 @@ L.PLAYER_TITLE_SCARAB_LORD = "|c" .. _.DefaultColors.Raid .. "甲虫之王 %s|r"
 L.PLAYER_TITLE_THE_COMPLETIONIST = "|c" .. _.DefaultColors.Raid .. "%s 完美主义者|r"
 L.PLAYER_TITLE_THE_EXTERMINATOR = "|cffa335ee%s消灭者|r"
 L.PLAYER_TITLE_THE_HUGGLER = "|cffF58CBA拥抱者%s|r"
-L.PLEASE_REPORT_MESSAGE = "请把错误报告给 ATT Discord 的 #classic-errors！谢谢！"
+L.PLEASE_REPORT_MESSAGE = "请把错误报告给 ATT Discord 的 #forever-reports！谢谢！"
 L.POPOUT = "弹出列表"
 L.PRECISION_SLIDER = "百分比精确度"
 L.PRECISION_SLIDER_TOOLTIP = "使用此选项可自定义百分比计算中所需的精度级别。\n\n默认：2"
@@ -12993,7 +12957,7 @@ L.SOULBINDCONDUITS_CHECKBOX = "|T" .. _.asset("Expansion_SL") .. ":0|t 导灵器
 L.SOULBINDCONDUITS_CHECKBOX_TOOLTIP = "启用此选项来追踪暗影国度灵魂羁绊的导灵器。"
 L.SOUNDPACK = "声音包"
 L.SOURCE_ID = "来源 ID"
-L.SOURCE_ID_MISSING = "请在 ATT Discord 的 #classic-errors 中报告此物品及其获取地点！"
+L.SOURCE_ID_MISSING = "请在 ATT Discord 的 #forever-reports 中报告此物品及其获取地点！"
 L.SOURCE_LOCATIONS_CHECKBOX = "来源位置"
 L.SOURCE_LOCATIONS_CHECKBOX_TOOLTIP = "如果你想在鼠标提示中看到 ATT 数据库中对象的完整来源位置路径，请启用此选项。"
 L.SOURCELESS = "无来源"
@@ -13147,7 +13111,6 @@ localize(L.HEADER_NAMES, {
 	[-59] = "武器大师",
 	[-61] = "世界首领",
 	[-63] = "地区掉落",
-	[-74] = "梦魇之龙",
 	[-243] = "护甲附魔",
 	[-245] = "武器附魔",
 	[-298] = HONOR .. PAPERDOLL_SIDEBAR_TITLES,
@@ -13164,9 +13127,6 @@ localize(L.HEADER_NAMES, {
 	[-365] = "正门",
 	[-366] = "后门",
 	[-367] = "阿塔莱防御者",
-	[-481] = "安其拉之战捐献",
-	[-483] = "流沙节杖",
-	[-484] = "天灾入侵",
 	[-559] = "儿童周",
 	[-574] = "冬幕节",
 	[-576] = "万圣节",
@@ -13179,7 +13139,6 @@ localize(L.HEADER_NAMES, {
 	[-587] = "时令鱼类：冬鱿鱼",
 	[-588] = "荆棘谷钓鱼大赛",
 	[-611] = "安其拉三宝",
-	[-723] = "元素入侵",
 	[-724] = "东部王国的长者",
 	[-725] = "卡利姆多的长者",
 	[-726] = "联盟的长者",
@@ -13204,14 +13163,10 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-365] = "斯坦索姆分为两侧。\n\n这一侧通常被称为“活人”侧或“血色”侧，现已被血色十字军占据。",
 	[-366] = "斯坦索姆分为两侧。\n\n这一侧通常被称为“亡灵”侧或“天灾”侧，现已被天灾军团占据。",
 	[-367] = "你必须击杀大厅周围的全部6名小首领，才能解锁通往预言者迦玛兰的道路。",
-	[-481] = "当第五阶段最终上线时，安其拉废墟和安其拉神庙不会即刻开放。相反，服务器上的全体玩家需开展一场大规模的备战行动，通过收集战备物资并完成一条史诗任务线，最终敲响铜锣，才能开启这些团队副本，让其中的恐怖之物降临世间。\n\n一旦两个阵营都完成各自的贡献，会有一个5天的宽限期。之后，一旦有人敲响铜锣，就会触发一个持续10小时、横跨卡利姆多多个区域的全服事件。\n\n安其拉开放的速度取决于服务器及其阵营平衡。\n\n我们建议尽可能推迟备战行动，以便让更多人获得 “甲虫之王” 坐骑，因为所有完成 “流沙节杖” 任务线的玩家都会获得相同奖励！",
-	[-483] = "除了服务器上所有玩家共同努力完成备战任务外，还需要一名玩家制作出流沙节杖 —— 这是一项极为艰巨的任务，在该任务线刚推出时，只有服务器上顶尖的公会才能完成。当备战任务结束，联盟与部落的军队抵达希利苏斯后，流沙节杖可用于敲响甲虫之锣。敲响铜锣后，安其拉之门就会开启。每个服务器上第一个敲响甲虫之锣的玩家将获得 “甲虫之王” 称号（在《燃烧的远征》中，经典旧世的这个称号不会再出现！）以及黑色其拉共鸣水晶坐骑。在随后10小时内敲响铜锣的其他玩家也能获得该称号。\n\n尽管在服务器上安其拉之门开启后，玩家仍可完成流沙节杖的任务线，但完成后既不会获得黑色其拉共鸣水晶坐骑，也不会获得 “甲虫之王” 称号。",
-	[-484] = "天灾入侵是1.11补丁中的一项世界事件，并在巫妖王之怒前置补丁3.0.1中再度开启，预示着令人闻风丧胆的克尔苏加德的要塞 ——纳克萨玛斯即将开放。\n\n艾泽拉斯的多个地区遭到了天灾军团部队的袭击。银色黎明的成员组织了一场对抗天灾入侵的全球反击，他们密切监视着任何浮空死灵城堡的动向，并将情报分享给所有愿意投身这场战斗的冒险者。\n\n每一次对天灾军团的胜利，都会让防线愈发坚固。随着越来越多的入侵企图被守军击退，银色黎明将为抗击入侵者的勇士们赋予越来越强大的祝福。\n\n如果凡人们齐心协力，清除散落在世界各地、每一座浮空死灵城堡下方出现的天灾营地，这场入侵或许就能被有效遏制，甚至彻底击退。\n\n凡有意拿起武器对抗亡灵入侵者的勇士，可与银色黎明的代表交谈，了解哪些地区需要支援，以及防线当前的状况。",
 	[-721] = "包含当前区域可用但实际源自其他区域的内容。",
-	[-723] = "在卡利姆多的不同地区，元素入侵的报告正在增加。每隔几天，一股新的元素浪潮就会强行涌入希利苏斯、安戈洛环形山、艾萨拉和冬泉谷的区域——显然，只是为了看看它们能在这些领土上深入到什么程度，直到被部落或联盟的军队击退。调查这些地区并帮助你的盟友对抗这些神秘的入侵。",
+	[-735] = "这个部分是为在一个扩展中引入的系统而设立的，这些系统涉及几个区域。\n如果一个扩展功能仅限于一个区域，那么它可以在 ATT 中的那个区域找到，否则为了减少数据库重复和膨胀，它可以在下面找到。",
 })
 localize(L.HEADER_LORE, {
-	[-74] = "这些龙中的一只会在艾泽拉斯的相关坐标随机生成。",
 	[-318] = "地下城套装的第2套职业套装，通常称为 T0.5，是通过完成一条漫长的任务链来获得的，该任务链将作为终极地下城掉落的第一个套装升级为更强大的版本。在当前的魔兽世界中，这些套装受到收藏家的追捧，因为随着大灾变，这条任务链已被完全从游戏中移除。在魔兽世界经典版中，你应该在所有角色上完成这条任务链！",
 	[-349] = "这些物品可以通过重置首领无限刷取。",
 	[-388] = "木喉熊怪居住在两个区域：艾萨拉和费伍德森林。人们认为他们是唯一一支未被恶魔腐化的熊怪部族，不过由于存在克罗格（一只未被腐化、所属部族不明的熊怪）以及《燃烧的远征》中秘蓝岛上的深须部族，这一点或许并不属实。然而，现在许多其他种族不加分辨地就对熊怪痛下杀手，根本不去判断对方是敌是友。正因如此，木喉熊怪极少信任他人。\n\n那些前往费伍德森林北部的木喉要塞，并证明自己是木喉熊怪之友的冒险者会发现，熊怪们将朋友看得比什么都重要。尽管他们没有珍贵的珠宝或任何世俗财富，但木喉熊怪的萨满传统依然深厚。他们精通用兽皮制作护甲的技艺，而且非常乐意与他们部族的朋友分享治疗与复活的知识。此外，只要与他们的声望高于 “冷淡”，你就能畅通无阻地通过他们的隧道进入月光林地和冬泉谷。",
@@ -13806,13 +13761,11 @@ localize(ObjectNames, {
 	[179544] = "卡里尔·温萨鲁斯的骸骨",
 	[179545] = "王子的箱子",
 	[179552] = "结构图：修理机器人74A型",
-	[179553] = "熔核碎片",
 	[179559] = "水晶碎片",
 	[179562] = "上古淬火之剑",
 	[179564] = "戈多克贡品",
 	[179565] = "覆满灰尘的箱子",
 	[179697] = "竞技场财宝箱",
-	[179703] = "炎魔之王的宝箱",
 	[179827] = "通缉/寻物/招领",
 	[179879] = "命令宝珠",
 	[179880] = "达基萨斯的烙印",
@@ -13848,15 +13801,12 @@ localize(ObjectNames, {
 	[180503] = "盖满沙子的烹饪书",
 	[180526] = "贝瑟克之锣",
 	[180570] = "小桶",
-	[180633] = "水晶之泪",
-	[180642] = "不起眼的箱子",
 	[180655] = "漂浮的碎片",
 	[180658] = "变异鱼群",
 	[180662] = "帆船残骸",
 	[180663] = "鼠尾鱼群",
 	[180666] = "龙语傻瓜教程",
 	[180667] = "龙语傻瓜教程",
-	[180669] = "湍急的漩涡",
 	[180682] = "黑口鱼群",
 	[180683] = "火鳞鳝鱼群",
 	[180684] = "大型鼠尾鱼群",
@@ -13864,7 +13814,6 @@ localize(ObjectNames, {
 	[180690] = "大型圣甲虫箱",
 	[180691] = "圣甲虫箱",
 	[180712] = "石鳞鳗群",
-	[180717] = "甲虫之锣",
 	[180743] = "节日礼物",
 	[180746] = "轻轻摇晃过的礼品",
 	[180747] = "节日礼物",
@@ -13905,6 +13854,17 @@ localize(ObjectNames, {
 	[190484] = "文件箱 #3",
 	[201579] = "钥石碎片",
 	[207724] = "船只残骸",
+	[386759] = "图书馆书籍",
+	[406918] = "信使行囊",
+	[409692] = "卷轴",
+	[415106] = "焦焚残骸",
+	[415107] = "焦焚残骸",
+	[417072] = "镶钉木板",
+	[424005] = "垃圾袋",
+	[424006] = "草草收起的包裹",
+	[424007] = "雕刻塑像",
+	[424010] = "镶钉木板",
+	[424012] = "一堆泥土",
 	[100000000] = "森提纳克斯号传送门",
 	[100000001] = "未点燃的火把",
 })
@@ -13916,16 +13876,10 @@ for key,value in pairs({
 	[5] = "不可学",
 	[7] = "商栈",
 	[1101] = "厄运之槌",
-	[12] = "阶段2",
 	[13] = "阶段3",
 	[14] = "阶段4",
 	[15] = "阶段5",
-	[1501] = "安其拉战争活动",
-	[1502] = "大门未开启",
-	[1503] = "10小时战争",
-	[1504] = "追赶",
 	[16] = "阶段6",
-	[1601] = "天灾入侵",
 	[17] = "阶段1",
 	[30] = "阶段1",
 })
@@ -13938,16 +13892,10 @@ for key,value in pairs({
 	[5] = "|cFFFFAAAA这不能永久收集、学习或用于幻化。|r",
 	[7] = "|cFFAAFFAA该物品可在商栈购买。|r",
 	[1101] = "|cFFAAFFAA这在 厄运之槌 的 经典旧世 阶段发布时可用了。|r",
-	[12] = "|cFFAAFFAA该功能直到 阶段2 的 经典旧世 才可用。|r",
 	[13] = "|cFFAAFFAA该功能直到 阶段3 的 经典旧世 才可用。|r",
 	[14] = "|cFFAAFFAA该功能直到 阶段4 的 经典旧世 才可用。|r",
 	[15] = "|cFFAAFFAA该功能直到 阶段5 的 经典旧世 才可用。|r",
-	[1501] = "|cFFAAFFAA这仅在安其拉战争期间可用。|r",
-	[1502] = "|cFFAAFFAA这项功能仅在你们服务器上的圣甲虫领主敲响战锣之前有效。|r",
-	[1503] = "|cFFAAFFAA这仅在十小时战争期间，圣甲虫领主敲响战锣后方可获得。|r",
-	[1504] = "|cFFAAFFAA这在第五阶段末期推出，目的是为仍在挑战安其拉神殿（AQ40）的玩家提供追赶自然抗性装备。|r",
 	[16] = "|cFFAAFFAA该功能直到 阶段6 的 经典旧世 才可用。|r",
-	[1601] = "|cFFAAFFAA这仅在天灾入侵期间可用。|r",
 	[17] = "|cFFAAFFAA该功能直到 阶段1 的 燃烧的远征 才可用。|r",
 	[30] = "|cFFAAFFAA该功能直到 阶段1 的 巫妖王之怒 才可用。|r",
 })
@@ -13955,16 +13903,10 @@ do phases[key].description = value; end
 for key,value in pairs({
 	[3] = "|cFFFFAAAA在游戏的任何版本中，鼓励使用真实货币的行为均不受认可。参与此类内容需自行承担风险。|r",
 	[1101] = "|cFFFFAAAA包含厄运之槌。|r",
-	[12] = "|cFFFFAAAA包含世界 PvP 和 PvP 荣誉称号。|r",
 	[13] = "|cFFFFAAAA包含黑翼之巢和完成的雷霆之怒。|r",
 	[14] = "|cFFFFAAAA包含祖尔格拉布和世界巨龙。|r",
 	[15] = "|cFFFFAAAA包含安其拉，其前身举办了一场独特的开幕活动。|r",
-	[1501] = "|cFFFFAAAA如果您的服务器上的战争行动已经完成，只需将其关闭即可。|r",
-	[1502] = "|cFFFFAAAA如果您的服务器上已开启安其拉之门，只需将其关闭即可。|r",
-	[1503] = "|cFFFFAAAA如果您的服务器上已开启安其拉之门，只需将其关闭即可。|r",
-	[1504] = "|cFFFFAAAA如果追赶模式可用，只需将其打开即可。|r",
 	[16] = "|cFFFFAAAA包含纳克萨玛斯，它以天灾入侵为标志。|r",
-	[1601] = "|cFFFFAAAA如果您的服务器上的天灾入侵已经结束，只需关闭此功能即可。|r",
 	[17] = "|cFFFFAAAA包括卡拉赞、玛瑟里顿巢穴和格鲁尔的巢穴。|r",
 	[30] = "|cFFFFAAAA包含纳克萨玛斯、黑曜石圣殿和永恒之眼。|r",
 })
@@ -14378,7 +14320,7 @@ L.PLAYER_TITLE_SCARAB_LORD = "|c" .. _.DefaultColors.Raid .. "聖甲蟲領主 %s
 L.PLAYER_TITLE_THE_COMPLETIONIST = "|c" .. _.DefaultColors.Raid .. "%s 完美主義者|r"
 L.PLAYER_TITLE_THE_EXTERMINATOR = "|cffa335ee%s消滅者|r"
 L.PLAYER_TITLE_THE_HUGGLER = "|cffF58CBA擁抱者%s|r"
-L.PLEASE_REPORT_MESSAGE = "請把錯誤回報給 ATT Discord 的 #classic-errors！謝謝！"
+L.PLEASE_REPORT_MESSAGE = "請把錯誤回報給 ATT Discord 的 #forever-reports！謝謝！"
 L.POPOUT = "彈出列表"
 L.PRECISION_SLIDER = "百分比精確度"
 L.PRECISION_SLIDER_TOOLTIP = "使用此選項可自訂百分比計算中所需的精度級別。\n\n預設：2"
@@ -14536,7 +14478,7 @@ L.SOULBINDCONDUITS_CHECKBOX = "|T" .. _.asset("Expansion_SL") .. ":0|t 導靈器
 L.SOULBINDCONDUITS_CHECKBOX_TOOLTIP = "啟用此選項來追蹤暗影之境靈魂羈絆的導靈器。"
 L.SOUNDPACK = "聲音包"
 L.SOURCE_ID = "來源 ID"
-L.SOURCE_ID_MISSING = "請在 ATT Discord 的 #classic-errors 中回報此物品及其獲得地點！"
+L.SOURCE_ID_MISSING = "請在 ATT Discord 的 #forever-reports 中回報此物品及其獲得地點！"
 L.SOURCE_LOCATIONS_CHECKBOX = "來源位置"
 L.SOURCE_LOCATIONS_CHECKBOX_TOOLTIP = "如果你想在指標提示中看到 ATT 資料庫中對象的完整來源位置路線，請啟用此選項。"
 L.SOURCELESS = "無來源"
@@ -14651,7 +14593,6 @@ localize(L.HEADER_NAMES, {
 	[-59] = "武器大師",
 	[-61] = "世界首領",
 	[-63] = "地區掉落",
-	[-74] = "夢魘之龍",
 	[-243] = "護甲附魔",
 	[-318] = "T0.5套裝",
 	[-341] = "共享外觀",
@@ -14663,9 +14604,6 @@ localize(L.HEADER_NAMES, {
 	[-365] = "主門",
 	[-366] = "僕從入口",
 	[-367] = "阿塔萊防衛者",
-	[-481] = "安其拉之戰捐獻",
-	[-483] = "流沙節杖",
-	[-484] = "天譴軍團入侵",
 	[-559] = "兒童週",
 	[-574] = "冬幕節",
 	[-576] = "萬鬼節",
@@ -14694,9 +14632,6 @@ localize(L.HEADER_DESCRIPTIONS, {
 	[-356] = "副本的這部分可以從最北邊的傳送門進入。",
 	[-357] = "副本的這部分可以從最西邊的傳送門進入。（左側）",
 	[-721] = "包含在當前區域可取得，但來源直接來自另一個區域的內容。",
-})
-localize(L.HEADER_LORE, {
-	[-74] = "這些龍中的一隻會在艾澤拉斯的相關座標隨機生成。",
 })
 localize(ObjectNames, {
 	[31] = "老舊獅子雕像",
@@ -14744,7 +14679,6 @@ localize(ObjectNames, {
 	[180248] = "可口魚魚群",
 	[180456] = "次級風石",
 	[180461] = "風石",
-	[180717] = "甲蟲之鑼",
 	[100000000] = "考古學家的推車",
 })
 for key,value in pairs({
@@ -14765,7 +14699,6 @@ for key,value in pairs({
 	[4] = "|cFFFFAAAA除非您擁有所需的 PvP 頭銜、所需的 PvP 等級或處於該賽季的前 %，否則無法再購買或解鎖塑形。|r",
 	[5] = "|cFFFFAAAA這不能永久收集、學習或用於塑形。|r",
 	[7] = "|cFFAAFFAA該物品可以在貿易站購買|r",
-	[12] = "|cFFAAFFAA該功能直到 Phase 2 的 WoW Classic 才可用。|r",
 	[13] = "|cFFAAFFAA該功能直到 Phase 3 的 WoW Classic 才可用。|r",
 	[14] = "|cFFAAFFAA該功能直到 Phase 4 的 WoW Classic 才可用。|r",
 	[15] = "|cFFAAFFAA該功能直到 Phase 5 的 WoW Classic 才可用。|r",

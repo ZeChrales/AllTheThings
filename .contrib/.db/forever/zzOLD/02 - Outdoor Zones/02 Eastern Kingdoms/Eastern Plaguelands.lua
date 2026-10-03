@@ -1361,10 +1361,14 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 							i(13724),	-- Enriched Manna Biscuit
 						},
 						{	-- Honored
-							i(19446),	-- Formula: Enchant Bracer - Argent Versatility / CLASSIC: Formula: Enchant Bracer - Mana Regeneration (RECIPE!)
+							--[[Commented out until confirmed
+							i(19446),	-- Formula: Enchant Bracer - Mana Regeneration (RECIPE!)
+							--]]
 							i(19216),	-- Pattern: Argent Boots (RECIPE!)
 							i(19328),	-- Pattern: Dawn Treaders (RECIPE!)
+							--[[Commented out until confirmed
 							i(19203),	-- Plans: Girdle of the Dawn (RECIPE!)
+							--]]
 							i(19442),	-- Recipe: Powerful Anti-Venom (RECIPE!)
 							i(13482),	-- Recipe: Transmute Air to Fire (RECIPE!)
 							i(22014, {	-- Hallowed Brazier
@@ -1413,10 +1417,14 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 									5513,	-- Mantles of the Dawn
 								},
 							}),
+							--[[Commented out until confirmed
 							i(19447),	-- Formula: Enchant Bracer - Healing Power (RECIPE!)
+							--]]
 							i(19217),	-- Pattern: Argent Shoulders (RECIPE!)
 							i(19329),	-- Pattern: Golden Mantle of the Dawn (RECIPE!)
+							--[[Commented out until confirmed
 							i(19205),	-- Plans: Gloves of the Dawn (RECIPE!)
+							--]]
 							i(13810),	-- Blessed Sunfruit
 							i(13813),	-- Blessed Sunfruit Juice
 						},
@@ -1444,10 +1452,10 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 				i(12840, {	-- Minion's Scourgestone / Inert Minion's Scourgestone
 					["description"] = "Can drop from weak Undead creature in the Plaguelands and associated dungeons so long as you are equipped with one of the Argent Dawn trinkets.",
 				}),
-				i(16242, {	-- Formula: Enchant Chest - Major Mana (RECIPE!)
+				i(16242, {	-- Formula: Enchant Chest - Major Intellect (RECIPE!)
 					["cr"] = 9452,	-- Scarlet Enchanter
 				}),
-				i(16222, {	-- Formula: Enchant Shield - Vitality / TBC-10.1.5:Formula: Enchant Shield - Superior Versatility / CLASSIC: Formula: Enchant Shield - Superior Spirit (RECIPE!)
+				i(16222, {	-- Formula: Enchant Shield - Superior Spirit (RECIPE!)
 					["cr"] = 9447,	-- Scarlet Warder
 				}),
 				i(18512, {	-- Larval Acid
@@ -1494,7 +1502,6 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 						{ 67.8, 39.8, MAP.EASTERN_PLAGUELANDS },
 						{ 83.6, 44.0, MAP.EASTERN_PLAGUELANDS },
 					},
-					["timeline"] = { ADDED_1_11_1 },
 					["crs"] = {
 						8546,	-- Dark Adept <Cult of the Damned>
 						8550,	-- Shadowmage <Cult of the Damned>

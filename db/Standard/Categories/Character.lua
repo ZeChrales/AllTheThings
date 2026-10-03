@@ -1,7 +1,7 @@
 ﻿---@diagnostic disable: deprecated
 local appName, _ = ...
 _.AddEventHandler("OnBuildDataCache", function(categories)
-local ach,ah,campsite,cl,crit,de,en,ens,exp,faction,flt,gach,h,heir,hqt,i,ill,m,mnt,n,o,p,q,r,ra,s,sp,title,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateWarbandScene,_.CreateCharacterClass,_.CreateAchievementCriteria,_.CreateDecor,_.CreateEnsemble,_.CreateEnsembleSpell,_.CreateExploration,_.CreateFaction,_.CreateFilter,_.CreateGuildAchievement,_.CreateCustomHeader,_.CreateHeirloom,_.CreateHQT,_.CreateItem,_.CreateIllusion,_.CreateMap,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateQuest,_.CreateRecipe,_.CreateRace,_.CreateItemSource,_.CreateSpell,_.CreateTitle,_.CreateToy,_.CreateExpansion;
+local ach,ah,campsite,cl,cq,crit,de,en,ens,exp,faction,flt,gach,h,heir,hqt,i,ill,m,mnt,n,o,p,q,r,ra,s,sp,title,toy,x=_.CreateAchievement,_.CreateHeader,_.CreateWarbandScene,_.CreateCharacterClass,_.CreateCharacterUnlockQuest,_.CreateAchievementCriteria,_.CreateDecor,_.CreateEnsemble,_.CreateEnsembleSpell,_.CreateExploration,_.CreateFaction,_.CreateFilter,_.CreateGuildAchievement,_.CreateCustomHeader,_.CreateHeirloom,_.CreateHQT,_.CreateItem,_.CreateIllusion,_.CreateMap,_.CreateMount,_.CreateNPC,_.CreateObject,_.CreateSpecies,_.CreateQuest,_.CreateRecipe,_.CreateRace,_.CreateItemSource,_.CreateSpell,_.CreateTitle,_.CreateToy,_.CreateExpansion;
 categories.Character=
 h(-731,{SortPriority=40,g={
 h(-12,{
@@ -992,6 +992,74 @@ q(50248,{coords={
 q(50254,{coords={
 [85]={{37.8,81}}},qgs={126065,133523},r=1,u=2}),
 ra(34,{description="To unlock this questline you need to be logged in on a |cFFa335eelevel 40 Character|r.",r=2,g={
+ah(143925,{coords={
+[1186]={{61.44,24.35}}},icon=1786409,type="n",g={
+x(1,{
+cq(53591,{an="e:537",coords={
+[78]={{52.89,55.76}}},icon=1786409,qgs={143925},races={34}}),
+cq(53600,{an="e:1702",coords={
+[199]={{39.11,9.31}}},icon=1786409,qgs={143925},races={34}}),
+cq(53585,{an="e:348",coords={
+[26]={{13.52,46.81}}},icon=1786409,qgs={143925},races={34}}),
+cq(53587,{an="e:1584",coords={
+[35]={{33.4,24.7}}},icon=1786409,qgs={143925},races={34}}),
+cq(53594,{an="e:1438",coords={
+[17]={{61.82,12.74}}},icon=1786409,qgs={143925},races={34}})}),
+x(2,{
+cq(53592,{an="e:3538",coords={
+[100]={{53.15,64.89}}},icon=1786409,qgs={143925},races={34}}),
+cq(53597,{an="e:3866",coords={
+[105]={{72.41,17.65}}},icon=1786409,qgs={143925},races={34}}),
+cq(53599,{an="e:3746",coords={
+[104]={{50.77,35.28}}},icon=1786409,qgs={143925},races={34}})}),
+x(3,{
+cq(53586,{an="e:4658",coords={
+[118]={{76.97,18.68}}},icon=1786409,qgs={143925},races={34}}),
+cq(53596,{an="e:4168",coords={
+[115]={{45.34,49.92}}},icon=1786409,qgs={143925},races={34}})}),
+x(4,{
+cq(53601,{an="e:5039",coords={
+[198]={{57.16,77.09}}},icon=1786409,qgs={143925},races={34}})}),
+x(5,{
+cq(53595,{an="e:6085",coords={
+[379]={{57.68,62.81}}},icon=1786409,qgs={143925},races={34}}),
+cq(53598,{an="e:6001",coords={
+[376]={{31.51,73.57}}},icon=1786409,qgs={143925},races={34}})}),
+x(6,{
+cq(53590,{an="e:7139",coords={
+[550]={{65.74,8.24}}},icon=1786409,qgs={143925},races={34}}),
+cq(53588,{an="e:6892",coords={
+[543]={{46.69,38.75}}},icon=1786409,qgs={143925},races={34}})}),
+x(7,{
+cq(53589,{an="e:8648",coords={
+[646]={{71.68,48.01}}},icon=1786409,qgs={143925},races={34}}),
+cq(53593,{an="e:7806",coords={
+[650]={{44.66,72.87}}},icon=1786409,qgs={143925},races={34}})}),
+x(8,{
+cq(80102,{an="e:9623",awp=110005,coords={
+[942]={{64.21,29.44}}},icon=1786409,qgs={143925},races={34}}),
+cq(80101,{awp=110005,coords={
+[895]={{88.22,71.53}}},icon=1786409,qgs={143925},races={34}}),
+cq(80100,{awp=110005,coords={
+[862]={{38.24,72.38}}},icon=1786409,qgs={143925},races={34}}),
+cq(80099,{awp=110005,coords={
+[863]={{34.34,45.15}}},icon=1786409,qgs={143925},races={34}})}),
+x(9,{
+cq(80104,{an="e:11438",awp=110005,coords={
+[1525]={{19.94,38.81}}},icon=1786409,qgs={143925},races={34}}),
+cq(80106,{an="e:13455",awp=110005,coords={
+[1565]={{66.47,50.55}}},icon=1786409,qgs={143925},races={34}}),
+cq(80105,{an="e:11412",awp=110005,coords={
+[1533]={{51.75,13.14}}},icon=1786409,qgs={143925},races={34}}),
+cq(80103,{an="e:13406",awp=110005,coords={
+[1536]={{53.49,59.79}}},icon=1786409,qgs={143925},races={34}})}),
+x(10,{
+cq(80107,{an="e:14012",awp=110005,coords={
+[2022]={{32.36,54.9}}},icon=1786409,qgs={143925},races={34}}),
+cq(80108,{an="e:14017",awp=110005,coords={
+[2024]={{80.09,38.96}}},icon=1786409,qgs={143925},races={34}}),
+cq(80109,{an="e:14655",awp=110005,coords={
+[2133]={{52.73,27.67}}},icon=1786409,qgs={143925},races={34}})})}}),
 q(51813,{coords={
 [84]={{52,13.8}}},lc={1,"achID",12515},lvl=40,qgs={126332,133197},r=2,sourceQuests={50239}}),
 q(53351,{coords={
@@ -1959,7 +2027,7 @@ i(101304,{b=1,c={1},f=52,lvl=35,u=2}),
 i(101305,{b=1,c={1},f=52,lvl=35,u=2}),
 i(101303,{b=1,c={1},f=53,lvl=35,spellID=126237,u=2}),
 i(101306,{b=1,c={1},f=53,lvl=35,spellID=133631,u=2})}})}})}})}}),
-x(6,{awp=70003,g={
+x(6,{awp=60003,g={
 ah(9060,{awp=60200,description="These were obtained by boosting a character to Level 100 for each class and specialization.",rwp=70305,type="a",u=2,g={
 cl(6,{u=2,g={
 i(142023,{b=1,f=55,u=2,g={
@@ -2729,8 +2797,8 @@ i(117347,{b=1,c={1},f=52,lvl=35,u=2}),
 i(117348,{b=1,c={1},f=52,lvl=35,u=2}),
 i(117346,{b=1,c={1},f=53,lvl=35,spellID=126237,u=2}),
 i(117349,{b=1,c={1},f=53,lvl=35,spellID=133631,u=2})}})}})}})}}),
-x(7,{awp=80001,g={
-ah(9060,{awp=70003,description="These were obtained by creating a Level 100 Class Trial for each class and specialization.",rwp=80001,type="a",u=2,g={
+x(7,{awp=70003,g={
+ah(9060,{description="These were obtained by creating a Level 100 Class Trial for each class and specialization.",rwp=80001,type="a",u=2,g={
 cl(6,{u=2,g={
 i(142023,{b=1,f=55,u=2,g={
 s(74071,129435,{b=1,c={6},f=25,lvl=40,u=2})}}),
@@ -6092,8 +6160,8 @@ i(154114,{b=1,c={1},f=52,lvl=45}),
 i(154116,{b=1,c={1},f=53,lvl=45}),
 i(154117,{b=1,c={1},f=53,lvl=45})})})}})}})}),
 h(-31,{sharedDescription="This is a hidden reputation. It might not count towards reputation achievements.",g={
-faction(469,{icon=374217,r=2}),
-faction(67,{icon=374221,r=1}),
+faction(469,{awp=10001,icon=374217,r=2}),
+faction(67,{awp=10001,icon=374221,r=1}),
 faction(891,{collectible=false,r=2}),
 faction(892,{collectible=false,r=1}),
 faction(1118,{awp=30002,collectible=false}),
@@ -7975,11 +8043,11 @@ s(8899,22631,{b=1,c={5},f=28,spellID=28148,u=2}),
 s(8898,22630,{b=1,c={9},f=28,spellID=28148,u=2}),
 s(36447,71086,{b=1,c={5,7,8,9,11,13},f=28,lvl=35,spellID=101641}),
 s(39516,77949,{b=1,c={4},f=20,spellID=107082}),
-s(145985,186414,{b=1,c={3},f=32,lvl=60,spellID=353511}),
-s(24303,49623,{b=1,c={1,2,6},f=22,lvl=30,spellID=71903}),
+s(145985,186414,{awp=90100,b=1,c={3},f=32,lvl=60,spellID=353511}),
+s(24303,49623,{awp=30300,b=1,c={1,2,6},f=22,lvl=30,spellID=71903}),
 s(7098,17182,{b=1,c={1,2,6,7,11,13},f=24,lvl=25,spellID=21142}),
 s(7545,19019,{b=1,f=25,lvl=25}),
-s(15886,34334,{b=1,c={1,3,4},f=32,lvl=27,spellID=46699}),
+s(15886,34334,{awp=20402,b=1,c={1,3,4},f=32,lvl=27,spellID=46699}),
 s(39517,77950,{b=1,c={4},f=20,spellID=107082}),
 s(22178,46017,{b=1,c={2,5,7,10,11,13},f=23,spellID=64415}),
 s(15136,32837,{b=1,c={1,4,6,10,12},collectible=false,f=25,lvl=27}),
@@ -8047,7 +8115,7 @@ q(63494,{coords={
 q(63498,{coords={
 [1186]={{51.7,33.1}}},lvl=50,qgs={176828},races={34},sourceQuests={63494},g={
 i(184894,{b=1,races={34}})}}),
-q(63501,{lvl=50,providers={{"i",184894}},races={34},sourceQuests={63498},g={
+q(63501,{lvl=50,qss={184894},races={34},sourceQuests={63498},g={
 i(184916,{races={34}}),
 i(184915,{races={34}}),
 i(184917,{races={34}})}}),
@@ -8500,10 +8568,10 @@ q(65425,{c={9},coords={
 [84]={{79.5,69.8}}},description="Start this quest via your own Sayaad(Succubus/Incubus Pet).",qgs={184600},r=2,rwp=100105,u=2}),
 q(65424,{c={9},coords={
 [85]={{74.6,47.4}}},description="Start this quest via your own Sayaad(Succubus/Incubus Pet).",qgs={184600},r=1,rwp=100105,u=2}),
-q(76427,{awp=100105,c={9},isBreadcrumb=1,lvl=30,providers={{"i",208227}},r=1}),
+q(76427,{awp=100105,c={9},isBreadcrumb=1,lvl=30,qss={208227},r=1}),
 q(76430,{awp=100105,c={9},coords={
 [85]={{42.5,51.8}}},lvl=30,qgs={207051},r=1}),
-q(76410,{awp=100105,c={9},isBreadcrumb=1,lvl=30,nextQuests={75538},providers={{"i",208226}},r=2}),
+q(76410,{awp=100105,c={9},isBreadcrumb=1,lvl=30,nextQuests={75538},qss={208226},r=2}),
 q(75538,{awp=100105,c={9},coords={
 [84]={{43.6,79.3}}},lvl=30,qgs={204198},r=2,sourceQuests={76410}}),
 q(75539,{awp=100105,c={9},coords={
@@ -8527,7 +8595,7 @@ q(75544,{awp=100105,c={9},coords={
 sp(417884),
 i(208108,{b=1})}}),
 q(76163,{awp=100105,c={9},coords={
-[86]={{39.7,53.9}}},description="You get this quest in your mailbox next weekly reset after finishing 'When Revenge Burns Green'",lvl=30,providers={{"i",206681},{"o",405945}},sourceQuests={75544},g={
+[86]={{39.7,53.9}}},description="You get this quest in your mailbox next weekly reset after finishing 'When Revenge Burns Green'",lvl=30,providers={{"o",405945}},qss={206681},sourceQuests={75544},g={
 i(207101,{b=1,c={9},f=111,lvl=11,spellID=416229})}})}}),
 h(-88,{
 s(264,1396,{f=4,loc=46,rwp=90105,u=2}),

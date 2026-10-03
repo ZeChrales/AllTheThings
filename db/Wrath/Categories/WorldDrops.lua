@@ -3444,6 +3444,7 @@ i(7075,{coords={
 [1451]={{31.4,14}}},crs={5465,7031,7032,7135,7136,9396,11746,11747},maps={232},q=1}),
 i(2675,{description="Drops from crawlers in the level bracket 10-20 like crawlers throughout the shoreline in Ashenvale, Darskshore and Westfall.",maps={1436,1439,1440},q=1}),
 i(2674,{description="Drops from crawlers in the level bracket 10-20 like crawlers throughout the shoreline in Ashenvale, Darskshore and Westfall.",maps={1436,1439,1440},q=1}),
+i(1081,{crs={217,442,505,539,569,930,949,1111,1184,1185,1195,2348,2349,2350,2563,2565,3819,3820,3821,4005,4006,4007,4040,4263,4264},maps={1416,1417,1424,1431,1432,1433,1437,1440,1442},q=1,rwp=40003}),
 i(2924,{coords={
 [1432]={{54.3,57.8}}},crs={1693},description="Drops from crocolisks in the level bracket 10-20 like crocolisks in Loch Modan.",q=1}),
 i(22644,{awp=20001,coords={
@@ -3585,6 +3586,7 @@ i(5465,{coords={
 i(1475,{description="Can drop from spiders in the level bracket 5-20, and are most abundant in Loch Modan and Stonetalon Mountains. Spiders often share a spawn with other beasts, so kill the bear or whatever if you cannot find spiders.",maps={1432,1442},q=1}),
 i(5468,{coords={
 [1439]={{33,70},{40,20}}},crs={2173,2174,6033},description="Drops from frenzies found in bodies of water.",maps={1421},q=1}),
+i(3174,{crs={217,442,505,539,569,930,949,1111,1184,1185,1195,1780,1781,3819,3820,3821,4005,4006,4007,4040,4263,4264},maps={1421,1431,1432,1433,1437,1440,1442},q=1}),
 i(3182,{crs={3819,3820,3821},description="Drops from spiders in the level bracket 16-36, and are most abundant in Ashenvale. Spiders often share a spawn with other beasts, so kill the bear or whatever if you cannot find spiders.",maps={1440},q=1}),
 i(5471,{coords={
 [1440]={{19.7,29.9},{39.5,63.6},{69.9,62.7}}},crs={3816,3817,3818},description="Drops from stags in Ashenvale as well as some other vanilla zones.",q=1}),
@@ -5968,7 +5970,7 @@ i(43622,{awp=30002,q=2}),
 i(4633,{q=2}),
 i(16885,{q=1,sym={{"select","itemID",1728,16215,16218,14494,15746,15755,15743,14499,12689,12695,12683,12693,12684,12694,12704,12691,2163,12044,12014,21953,21949,12057,12046,12002,12034,12004,12035,12026,11991,12056,11976,12025,11990,11977,12055,12015,11989}}}),
 i(4634,{q=2,sym={{"select","itemID",11164,7449,5774,7450,4299,3867,3872,3611,3870,6045,3830,10601,4416,4414,13063}}}),
-i(31952,{awp=20100,q=2}),
+i(31952,{awp=20003,q=2}),
 i(5758,{q=2}),
 i(4632,{q=2}),
 i(43575,{awp=30002,q=1,g={

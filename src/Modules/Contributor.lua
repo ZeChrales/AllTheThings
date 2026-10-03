@@ -84,6 +84,13 @@ local LorewalkingIgnoredReportTypes = {
 	Quest = true,
 	["Inaccurate Unflagged Quests"] = true,
 }
+local ReportTitleSuffixFuncs = {
+	Quest = function()
+		local mapID, px, py, fake = app.GetPlayerPosition()
+		local mapName = app.GetMapName(mapID)
+		return " ("..(mapName or "Unknown Map")..")"
+	end,
+}
 local function DoReport(reporttype, id)
 	-- ignore certain contrib reports if the player is in Lorewalking
 	if LorewalkingIgnoredReportTypes[reporttype] and GetPlayerAura(463943) then return end
@@ -138,7 +145,12 @@ local function DoReport(reporttype, id)
 		keyedData[#keyedData + 1] = val
 	end
 	-- common report data
-	reportData[#reportData + 1] = "### "..reporttype..":"..id
+	local headerTitle = "### "..reporttype..":"..id
+	local titleSuffix = ReportTitleSuffixFuncs[reporttype]
+	if titleSuffix then
+		headerTitle = headerTitle..titleSuffix()
+	end
+	reportData[#reportData + 1] = headerTitle
 	reportData[#reportData + 1] = "```vbnet"	-- discord fancy box start (testing: https://highlightjs.org/demo)
 	-- add distinct ordered/keyed data
 	app.ArrayAppendDistinct(reportData, orderedReportData, keyedData)
@@ -2825,6 +2837,7 @@ MobileDB.GameObject = {
 	[413246] = true,	-- Elemental Silt Mound
 	[413563] = true,	-- Heavy Trunk (archival assault)
 	[413590] = true,	-- Bountiful Coffer
+	[413874] = true,	-- Rich Bismuth
 	[413875] = true,	-- Rich Aqirite
 	[414080] = true,	-- Molten Treatise Vol. 2
 	[414082] = true,	-- Molten Treatise Vol. 4
@@ -3120,6 +3133,7 @@ MobileDB.GameObject = {
 	[523286] = true,	-- Wild Refulgent Copper
 	[523287] = true,	-- Voidbound Refulgent Copper
 	[523288] = true,	-- Umbral Tin
+	[523290] = true,	-- Umbral Tin Seam
 	[523293] = true,	-- Voidbound Umbral Tin
 	[523295] = true,	-- Brilliant Silver
 	[523297] = true,	-- Rich Brilliant Silver
@@ -3427,6 +3441,7 @@ MobileDB.GameObject = {
 	[609857] = true,	-- The Classic
 	[609858] = true,	-- Budget Friendly (q:93453)
 	[609867] = true,	-- Delver's Delight
+	[610259] = true,	-- Ripe Grapes (q:92417)
 	[611269] = true,	-- Feathered Trinket (q:93339)
 	[612079] = true,	-- Foul Carcass (q:93397)
 	[612081] = true,	-- Foul Carcass (q:93397)
@@ -3804,7 +3819,9 @@ local function OnPLAYER_SOFT_INTERACT_CHANGED(previousGuid, newGuid)
 	-- only check object soft-interact (for now)
 	if guidtype ~= "GameObject" then return end
 
-	local objRef = SearchForObject("objectID", id, "field") or SearchForObject("objectID", id)
+	-- commenting out the fallback search for now
+	-- don't really see a reason this logic should run on 'items' or anything else marked with an object provider
+	local objRef = SearchForObject("objectID", id, "field") -- or SearchForObject("objectID", id)
 	-- only check sourced objects
 	if not objRef then return end
 	-- app.PrintDebug("GameObject",app:SearchLink(objRef))

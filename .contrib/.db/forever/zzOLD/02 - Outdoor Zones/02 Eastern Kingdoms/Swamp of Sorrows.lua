@@ -47,7 +47,7 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					n(1386, {	-- Rogvar <Alchemy Trainer>
 						["coord"] = { 49.8, 56.0, MAP.SWAMP_OF_SORROWS },
 						["races"] = HORDE_ONLY,
-						["groups"] = EXPERT_ARTISAN_ALCHEMY,
+						["groups"] = ALCHEMY_RECIPES.ARTISAN,
 					}),
 				}),
 				prof(SKINNING, {
@@ -628,7 +628,7 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					["coord"] = { 44.6, 56.8, MAP.SWAMP_OF_SORROWS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(11223, {	-- Formula: Enchant Bracer - Dodge (RECIPE!) / Formula: Enchant Bracer - Deflection (RECIPE!)
+						i(11223, {	-- Formula: Enchant Bracer - Deflection (RECIPE!)
 							["isLimited"] = true,
 						}),
 						i(12232),	-- Recipe: Carrion Surprise (RECIPE!)
@@ -639,7 +639,7 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					["coord"] = { 45.6, 51.6, MAP.SWAMP_OF_SORROWS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(7995, {	-- Plans: Mithril Scale Bracers (RECIPE!)
+						i(7995, {	-- Plans: Mithril Plate Bracers (RECIPE!)
 							["isLimited"] = true,
 						}),
 					},
@@ -663,7 +663,7 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					["coord"] = { 45.4, 57.0, MAP.SWAMP_OF_SORROWS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(9300, {	-- Recipe: Elixir of Demonslaying (RECIPE!)
+						i(9300, {	-- Recipe: Potion of Demonslaying (RECIPE!)
 							["isLimited"] = true,
 						}),
 					},

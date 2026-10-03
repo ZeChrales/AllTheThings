@@ -820,10 +820,8 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 				}),
 				q(4183, {	-- The True Masters (1/6)
 					["sourceQuest"] = 4182,	-- Dragonkin Menace
-					["providers"] = {
-						{ "n", 9562 },	-- Helendis Riverhorn
-						{ "i", 11366 },	-- Helendis Riverhorn's Letter
-					},
+					["qg"] = 9562,	-- Helendis Riverhorn
+					["qi"] = 11366,	-- Helendis Riverhorn's Letter
 					["coord"] = { 85.8, 69.0, MAP.BURNING_STEPPES },
 					["timeline"] = { REMOVED_3_0_2 },
 					["races"] = ALLIANCE_ONLY,
@@ -831,11 +829,9 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 				}),
 				q(4184, {	-- The True Masters (2/6)
 					["sourceQuest"] = 4183,	-- The True Masters (1/6)
-					["providers"] = {
-						{ "n", 344 },	-- Magistrate Solomon
-						{ "i", 11367 },	-- Solomon's Plea to Bolvar
-					},
-					["coord"] = { 30.0, 44.5, MAP.REDRIDGE_MOUNTAINS },
+					["qg"] = 344,	-- Magistrate Solomon
+					["qi"] = 11367,	-- Solomon's Plea to Bolvar
+					["coord"] = { 24.9, 44.4, MAP.REDRIDGE_MOUNTAINS },
 					["timeline"] = { REMOVED_3_0_2 },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 48,
@@ -867,7 +863,7 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 				q(4223, {	-- The True Masters (5/6)
 					["sourceQuest"] = 4186,	-- The True Masters (4/6)
 					["qg"] = 344,	-- Magistrate Solomon
-					["coord"] = { 30.0, 44.5, MAP.REDRIDGE_MOUNTAINS },
+					["coord"] = { 24.9, 44.4, MAP.REDRIDGE_MOUNTAINS },
 					["timeline"] = { REMOVED_3_0_2 },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 48,
@@ -951,12 +947,14 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 						}),
 					},
 					{	-- Friendly
-						applyclassicphase(PHASE_THREE_ENCHANTS, i(19444)),	-- Formula: Enchant Weapon - Strength (RECIPE!)
+						--[[Commented out until confirmed
+						i(19444),	-- Formula: Enchant Weapon - Strength (RECIPE!)
+						--]]
 						i(17022),	-- Pattern: Corehound Boots (RECIPE!)
 						i(17018),	-- Pattern: Flarecore Gloves (RECIPE!)
 						i(17023),	-- Pattern: Molten Helm (RECIPE!)
 						i(17051),	-- Plans: Dark Iron Bracers (RECIPE!)
-						applyclassicphase(PHASE_FIVE, i(20761)),	-- Recipe: Transmute Elemental Fire (RECIPE!)
+						i(20761),	-- Recipe: Transmute Elemental Fire (RECIPE!)
 					},
 					{	-- Honored
 						-- #if SEASON_OF_DISCOVERY
@@ -970,13 +968,17 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 							["timeline"] = { ADDED_1_15_3 },
 						})),
 						-- #endif
-						applyclassicphase(PHASE_THREE_ENCHANTS, i(19448)),	-- Formula: Enchant Weapon - Mighty Versatility / CLASSIC: Formula: Enchant Weapon - Mighty Spirit (RECIPE!)
+						--[[ BWL Removed until confirmed
+						applyclassicphase(PHASE_THREE_ENCHANTS, i(19448)),	-- Formula: Enchant Weapon - Mighty Spirit (RECIPE!)
+						--]]
 						i(17025),	-- Pattern: Black Dragonscale Boots (RECIPE!)
 						i(17017),	-- Pattern: Flarecore Mantle (RECIPE!)
 						applyclassicphase(PHASE_THREE_RECIPES, i(19219)),	-- Pattern: Flarecore Robe (RECIPE!)
 						applyclassicphase(PHASE_THREE_RECIPES, i(19330)),	-- Pattern: Lava Belt (RECIPE!)
 						i(17060),	-- Plans: Dark Iron Destroyer (RECIPE!)
+						--[[ BWL Removed until confirmed
 						applyclassicphase(PHASE_THREE_RECIPES, i(19206)),	-- Plans: Dark Iron Helm (RECIPE!)
+						--]]
 						i(17059),	-- Plans: Dark Iron Reaver (RECIPE!)
 						i(17049),	-- Plans: Fiery Chain Girdle (RECIPE!)
 
@@ -1217,26 +1219,30 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 						-- #endif
 					},
 					{	-- Revered
+						--[[ BWL Removed until confirmed
 						applyclassicphase(PHASE_THREE_ENCHANTS, i(19449)),	-- Formula: Enchant Weapon - Mighty Intellect (RECIPE!)
+						--]]
 						applyclassicphase(PHASE_THREE_RECIPES, i(19331)),	-- Pattern: Chromatic Gauntlets (RECIPE!)
 						applyclassicphase(PHASE_THREE_RECIPES, i(19332)),	-- Pattern: Corehound Belt (RECIPE!)
 						applyclassicphase(PHASE_THREE_RECIPES, i(19220)),	-- Pattern: Flarecore Leggings (RECIPE!)
 						applyclassicphase(PHASE_THREE_RECIPES, i(19333)),	-- Pattern: Molten Belt (RECIPE!)
+
+						--[[ BWL Removed until confirmed
 						applyclassicphase(PHASE_THREE_RECIPES, i(19208)),	-- Plans: Black Amnesty (RECIPE!)
 						applyclassicphase(PHASE_THREE_RECIPES, i(19209)),	-- Plans: Blackfury (RECIPE!)
 						applyclassicphase(PHASE_THREE_RECIPES, i(19207)),	-- Plans: Dark Iron Gauntlets (RECIPE!)
+						--]]
 						i(17052),	-- Plans: Dark Iron Leggings (RECIPE!)
 						i(17053),	-- Plans: Fiery Chain Shoulders (RECIPE!)
 					},
 					{	-- Exalted
+						--[[ BWL Removed until confirmed
 						applyclassicphase(PHASE_THREE_RECIPES, i(19211)),	-- Plans: Blackguard (RECIPE!)
-						applyclassicphase(PHASE_FOUR_DARKIRON_RECIPES,  i(20040)),	-- Plans: Dark Iron Boots (RECIPE!)
+						applyclassicphase(PHASE_THREE_RECIPES, i(19212)),	-- Plans: Nightfall (RECIPE!)
 						applyclassicphase(PHASE_THREE_RECIPES, i(19210)),	-- Plans: Ebon Hand (RECIPE!)
-						applyclassicphase(PHASE_THREE_RECIPES, i(19212, {	-- Plans: Nightfall (RECIPE!)
-							-- #if SEASON_OF_DISCOVERY
-							["timeline"] = { REMOVED_1_15_0 },
-							-- #endif
-						})),
+						--- P4
+						applyclassicphase(PHASE_FOUR_DARKIRON_RECIPES,  i(20040)),	-- Plans: Dark Iron Boots (RECIPE!)
+						--]]
 					},
 				})),
 				n(9499, {	-- Plugger Spazzring
@@ -1370,12 +1376,7 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 				e(370, {	-- Lord Roccor
 					["creatureID"] = 9025,
 					["groups"] = {
-						i(45050, {	-- Formula: Smoking Heart of the Mountain [BOP] (RECIPE!)
-							["timeline"] = { ADDED_3_1_0 },
-						}),
-						i(11813, {	-- Formula: Smoking Heart of the Mountain [BOE] (RECIPE!)
-							["timeline"] = { REMOVED_3_1_0 },
-						}),
+						i(11813),	-- Formula: Smoking Heart of the Mountain [BOE] (RECIPE!)
 						i(11631),	-- Stoneshell Guard
 						i(11632),	-- Earthslag Shoulders
 						applyclassicphase(PHASE_FIVE, i(22234)),	-- Mantle of Lost Hope
@@ -1878,16 +1879,7 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 					["description"] = "Speak to him to start the encounter.",
 					["groups"] = {
 						i(11313),	-- Ribbly's Head
-						-- #if SEASON_OF_DISCOVERY
-						applyclassicphase(SOD_PHASE_FOUR, i(227901, {	-- Plans: Tempered Dark Iron Plate (RECIPE!)
-							["timeline"] = { ADDED_1_15_3 },
-						})),
-						-- #endif
-						i(11612, {	-- Plans: Dark Iron Plate (RECIPE!)
-							-- #if SEASON_OF_DISCOVERY
-							["timeline"] = { REMOVED_1_15_3 },
-							-- #endif
-						}),
+						i(11612),	-- Plans: Dark Iron Plate (RECIPE!)
 						i(2663, {	-- Ribbly's Bandolier
 							["timeline"] = { REMOVED_4_0_1 },
 						}),
@@ -2279,21 +2271,3 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 	}),
 }));
 
-root(ROOTS.HiddenQuestTriggers, {
-	expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { ADDED_6_0_2 } }, {
-		inst(228, {
-			q(35899),	-- Blackrock Depths (Detention Block) Reward Quest - Normal completion
-			q(35901),	-- Blackrock Depths (Detention Bonus) Reward Quest
-			q(35902),	-- Blackrock Depths (Upper City) Reward Quest - Normal completion
-			q(35903),	-- Blackrock Depths (Detention Bonus) Reward Quest
-			q(35904),	-- Blackrock Depths (Everything) Reward Quest
-		}),
-	})),
-	expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeline"] = { ADDED_11_0_5 } }, {
-		inst(228, {
-			q(82739),	-- ???
-			q(82740),	-- Twilight Scheming (New 11.0 ID)
-			-- Both of these keep getting reported completed on turnin of seemingly any BRD class quest regardless of race or faction
-		}),
-	})),
-});

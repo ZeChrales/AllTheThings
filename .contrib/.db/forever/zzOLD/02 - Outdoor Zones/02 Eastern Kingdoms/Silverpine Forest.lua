@@ -47,6 +47,14 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					},
 				}),
 			}),
+			n(PROFESSIONS, {
+				prof(ALCHEMY, {
+					n(1937, {	-- Apothecary Renferrel <Royal Apothecary Society>
+						coord = { 42.8, 40.8, MAP.SILVERPINE_FOREST },
+						groups = ALCHEMY_RECIPES.DISCOLORED_HEALING_POTION,
+					}),
+				}),
+			}),
 			n(QUESTS, {
 				q(530, {	-- A Husband's Revenge
 					["sourceQuest"] = 441,	-- Raleigh and the Undercity
@@ -581,10 +589,8 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
 					["groups"] = {
-						i(4597, {	-- Recipe: Discolored Healing Potion (RECIPE!)
-							["description"] = "This item can be sold on the Neutral Auction House to Alliance Alchemists for a... nominal fee.\n\nOnly naturally accessible to Horde Alchemists.",
-						}),
-						i(4596),	-- Discolored Healing Potion
+						i(4597),	-- Recipe: Minor Discolored Healing Potion (RECIPE!)
+						i(4596),	-- Minor Discolored Healing Potion
 					},
 				}),
 				q(1359, {	-- Zinge's Delivery
@@ -605,14 +611,14 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(8491, {	-- Black Tabby Cat (PET!)
-							["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+							["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item.",
 							["timeline"] = { ADDED_1_11_1 },
 						}),
 						i(4437, {	-- Channeler's Staff
-							["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+							["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item.",
 						}),
 						i(4436, {	-- Jewel-encrusted Sash
-							["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+							["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item.",
 						}),
 					},
 				}),
@@ -726,15 +732,13 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 				n(5758, {	-- Leo Sarn <Enchanting Supplies>
 					["coord"] = { 54.0, 82.2, MAP.SILVERPINE_FOREST },
 					["races"] = HORDE_ONLY,
-					["sym"] = {
-						{ "select","itemID",
-							20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
-							20752,	-- Formula: Minor Mana Oil (RECIPE!)
-							20758,	-- Formula: Minor Wizard Oil (RECIPE!)
-							22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
-							6342,	-- Formula: Enchant Chest - Minor Mana (RECIPE!)
-						},
-					},
+					["sym"] = {{ "select","itemID",
+						20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
+						20752,	-- Formula: Minor Mana Oil (RECIPE!)
+						20758,	-- Formula: Minor Wizard Oil (RECIPE!)
+						22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
+						6342,	-- Formula: Enchant Chest - Minor Mana (RECIPE!)
+					}},
 					["groups"] = {
 						i(6349, {	-- Formula: Enchant 2H Weapon - Lesser Intellect (RECIPE!)
 							["isLimited"] = true,
@@ -744,17 +748,15 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 				n(5757, {	-- Lilly <Enchanting Supplies>
 					["coord"] = { 43.0, 50.8, MAP.SILVERPINE_FOREST },
 					["races"] = HORDE_ONLY,
-					["sym"] = {
-						{ "select","itemID",
-							20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
-							20752,	-- Formula: Minor Mana Oil (RECIPE!)
-							20758,	-- Formula: Minor Wizard Oil (RECIPE!)
-							22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
-							6342,	-- Formula: Enchant Chest - Minor Mana (RECIPE!)
-						},
-					},
+					["sym"] = {{ "select","itemID",
+						20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
+						20752,	-- Formula: Minor Mana Oil (RECIPE!)
+						20758,	-- Formula: Minor Wizard Oil (RECIPE!)
+						22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
+						6342,	-- Formula: Enchant Chest - Minor Mana (RECIPE!)
+					}},
 					["groups"] = {
-						i(6346),	-- Formula: Enchant Chest - Lesser Mana (RECIPE!)
+						i(6346),	-- Formula: Enchant Chest - Lesser Intellect (RECIPE!)
 					},
 				}),
 				n(9553, {	-- Nadia Vernon <Bowyer>
@@ -806,7 +808,7 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					},
 				}),
 				i(4767, {	-- Coppercloth Gloves
-					["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+					["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item.",
 					["cr"] = 3578,	-- Dalaran Miner
 				}),
 				i(5110, {	-- Dalaran Wizard's Robe

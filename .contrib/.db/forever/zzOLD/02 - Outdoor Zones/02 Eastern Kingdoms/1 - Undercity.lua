@@ -23,6 +23,13 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(PROFESSIONS, {
+				prof(ALCHEMY, {
+					n(4611, {	-- Doctor Herbert Halsey <Artisan Alchemist>
+						["coord"] = { 47.6, 73.0, MAP.UNDERCITY },
+						["races"] = HORDE_ONLY,
+						["groups"] = ALCHEMY_RECIPES.EXPERT,
+					}),
+				}),
 				prof(TAILORING, {
 					n(4578, {	-- Josephine Lister <Master Shadoweave Tailor>
 						["coord"] = { 87.0, 20.8, MAP.UNDERCITY },
@@ -348,6 +355,7 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					["lvl"] = 10,
 				}),
 				q(65593, {	-- Hearts of the Lovers
+					["sourceQuest"] = 1472,	-- Devourer of Souls [Undercity]
 					["altQuests"] = { 65610 },	-- Wish You Were Here
 					["qg"] = 5675,	-- Carendin Halgar
 					["coord"] = { 85.0, 25.6, MAP.UNDERCITY },
@@ -835,6 +843,23 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 20,
 				}),
+				q(97583, {	-- WRIGGLE.
+					description = "Spam /dance at the excitable slimes that patrol around the Undercity.",
+					qg = 269452,	-- Excitable Slime
+					coords = {
+						{ 57.6, 63.4, MAP.UNDERCITY },
+						{ 64.6, 65.0, MAP.UNDERCITY },
+						{ 83.4, 45.4, MAP.UNDERCITY },
+						{ 74.6, 23.2, MAP.UNDERCITY },
+						{ 53.2, 29.4, MAP.UNDERCITY },
+					},
+					timeline = { TIMELINE.ADDED_1_60_1 },
+					cost = {{ "i", 278265, 1 }},	-- Nutritious Slime Sludge
+					races = HORDE_ONLY,
+					groups = {
+						i(275682),	-- Excitable Slime
+					},
+				}),
 			}),
 			n(TREASURES, {
 				o(180666, {	-- Draconic for Dummies
@@ -871,9 +896,9 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 						i(9301, {	-- Recipe: Elixir of Shadow Power (RECIPE!)
 							["isLimited"] = true,
 						}),
-						i(13477, {
+						i(13477, {	-- Recipe: Superior Mana Potion (RECIPE!)
 							["isLimited"] = true,
-						}),	-- Recipe: Superior Mana Potion (RECIPE!)
+						}),
 					},
 				}),
 				n(4602, {	-- Benijah Fenner
@@ -894,6 +919,15 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 						i(15808),	-- Fine Light Crossbow
 						i(15809),	-- Heavy Crossbow
 						i(15807),	-- Light Crossbow
+					},
+				}),
+				n(4612, {	-- Boyle <Sludge Seller>
+					["coord"] = { 56.2, 64.6, MAP.UNDERCITY },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(278265, {	-- Nutritious Slime Sludge
+							timeline = { TIMELINE.ADDED_1_60_1 },
+						}),
 					},
 				}),
 				n(4569, {	-- Charles Seaton <Blade Merchant>
@@ -1350,10 +1384,15 @@ root(ROOTS.Zones, m(MAP.EASTERN_KINGDOMS, {
 					},
 				}),
 				n(4617, {	-- Thaddeus Webb <Enchanting Supplies>
-					["sym"] = { {"sub", "common_recipes_vendor", 3346 } },	-- Kithas <Enchanting Supplies>
 					["coord"] = { 62.0, 60.8, MAP.UNDERCITY },
 					["races"] = HORDE_ONLY,
-					["groups"] = appendGroups(VANILLA_ENCHANTING_COMMON_RECIPES, {}),
+					["sym"] = {{ "select","itemID",
+						20753,	-- Formula: Lesser Wizard Oil (RECIPE!)
+						20752,	-- Formula: Minor Mana Oil (RECIPE!)
+						20758,	-- Formula: Minor Wizard Oil (RECIPE!)
+						6342,	-- Formula: Enchant Chest - Minor Intellect (RECIPE!)
+						22307,	-- Pattern: Enchanted Mageweave Pouch (RECIPE!)
+					}},
 				}),
 				n(4559, {	-- Timothy Weldon
 					["coord"] = { 63.6, 39.6, MAP.UNDERCITY },

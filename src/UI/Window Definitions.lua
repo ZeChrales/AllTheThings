@@ -3012,7 +3012,7 @@ function app:CreateMiniListForGroup(group)
 		--Debugging = true,
 		Preload = true,
 		Defaults = {
-			["visible"] = true,
+			visible = true,
 		},
 		OnInit = function(self)
 			OnInitForPopout(self, (group.OnPopout and group:OnPopout()) or group)
@@ -3118,6 +3118,10 @@ end
 
 local DelayedCallback = app.CallbackHandlers.DelayedCallback
 OnInitForPopout = function(self, group)
+	if not group or type(group) ~= "table" then
+		app.PrintDebug("OnInitForPopout received invalid group",self.Suffix,tostring(group))
+		return
+	end
 	-- being a search result means it has already received certain processing
 	if not group.isBaseSearchResult then
 		local skipFull = app.GetRelativeValue(group, "skipFull")

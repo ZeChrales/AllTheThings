@@ -714,6 +714,20 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ARATHI_HIGHLANDS, {
 				["maps"] = { MAP.BADLANDS },
 				["lvl"] = 30,
 			}),
+			q(79976, {	-- This Must Be The Place
+				sourceQuest = 79975,	-- Eagle's Fist
+				providers = {
+					{ "o", 406918 },	-- Messenger Bag
+					{ "o", 424006 },	-- Hastily Rolled-Up Satchel
+				},
+				coord = { 22.5, 24.2, ARATHI_HIGHLANDS },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				lvl = 14,
+				groups = {
+					i(211527),	-- Cozy Sleeping Bag
+					i(216619),	-- Student Fodder
+				},
+			}),
 			q(694, {	-- Trelane's Defenses
 				["sourceQuest"] = 693,	-- Wand over Fist
 				["qg"] = 2789,	-- Skuerto
@@ -1060,7 +1074,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ARATHI_HIGHLANDS, {
 			}),
 			i(5624, {	-- Circlet of the Order
 				["cr"] = 2584,	-- Stromgarde Defender
-				["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the creatures that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+				["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the creatures that drop this item.",
 				["coords"] = {
 					{ 26.0, 58.0, MAP.ARATHI_HIGHLANDS },
 					{ 22.0, 62.2, MAP.ARATHI_HIGHLANDS },
@@ -1095,7 +1109,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ARATHI_HIGHLANDS, {
 					2780,	-- Caretaker Nevlin
 					2781,	-- Caretaker Weston
 				},
-				["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the creatures that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+				["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the creatures that drop this item.",
 				["coord"] = { 22.8, 61.4, MAP.ARATHI_HIGHLANDS },
 			}),
 			i(1993, {	-- Ogremind Ring

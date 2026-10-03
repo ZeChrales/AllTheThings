@@ -229,6 +229,20 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.LOCH_MODAN, {
 					r(11452),	-- Restorative Potion
 				},
 			}),
+			q(86585, {	-- Banner of the Fallen
+				["qg"] = 269153,	-- Mountaineer Ylva
+				["qi"] = 253247,	-- Banner of Ironforge
+				["coord"] = { 31.8, 86.2, MAP.LOCH_MODAN },
+				["timeline"] = { TIMELINE.ADDED_1_60_1 },
+				["races"] = ALLIANCE_ONLY,
+				["groups"] = {
+					objective(1, {	-- 0/1 Headsplitter slain
+						["provider"] = { "n", 269185 },	-- Headsplitter
+					}),
+					i(281253),	-- Mountaineer's Greataxe
+					i(281254),	-- Invader's Mace
+				},
+			}),
 			q(2038, {	-- Bingles' Missing Supplies
 				["sourceQuest"] = 2039,	-- Find Bingles
 				["qg"] = 6577,	-- Bingles Blastenheimer
@@ -291,6 +305,14 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.LOCH_MODAN, {
 					i(3678),	-- Recipe: Crocolisk Steak (RECIPE!)
 					i(2240),	-- Rugged Cape
 				},
+			}),
+			q(79975, {	-- Eagle's Fist
+				sourceQuest = 79974,	-- Wet Job
+				provider = { "o", 424007 },	-- Carved Figurine
+				coord = { 49.5, 12.8, LOCH_MODAN },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				maps = { ARATHI_HIGHLANDS },
+				lvl = 14,
 			}),
 			q(298, {	-- Excavation Progress Report
 				["qg"] = 1344,	-- Prospector Ironband
@@ -427,6 +449,19 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.LOCH_MODAN, {
 					i(1832),	-- Lucky Trousers
 				},
 			}),
+			q(86776, {	-- Ingredients for the Forge
+				-- CRIEVE NOTE: This might be a mining exclusive quest
+				qg = 167,	-- Morhan Coppertongue <Metalsmith>
+				coord = { 34.0, 46.6, LOCH_MODAN },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				maps = { ARATHI_HIGHLANDS },
+				cost = {{ "i", 2841, 10 }},	-- Bronze Bar
+				races = ALLIANCE_ONLY,
+				lvl = 15,
+				["groups"] = {
+					i(3576),	-- Tin Bar
+				},
+			}),
 			q(436, {	-- Ironband's Excavation
 				["qg"] = 1105,	-- Jern Hornhelm
 				["coord"] = { 37.2, 47.4, MAP.LOCH_MODAN },
@@ -526,6 +561,22 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.LOCH_MODAN, {
 				["coord"] = { 33.9, 50.9, MAP.LOCH_MODAN },
 				["races"] = { DWARF, GNOME },
 				["lvl"] = 10,
+			}),
+			q(86667, {	-- Snowbound
+				qg = 49808,	-- Grenhild Darktalon
+				coord = { 36.4, 48.2, LOCH_MODAN },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				races = ALLIANCE_ONLY,
+				lvl = 10,
+				groups = {
+					objective(1, {	-- 0/1 Jar of Snow
+						providers = {
+							{ "i", 279379 },	-- Jar of Snow
+							{ "i", 279380 },	-- Ceramic Jar
+						},
+						coord = { 19.9, 62.6, MAP.LOCH_MODAN },
+					}),
+				},
 			}),
 			q(1338, {	-- Stormpike's Order
 				["sourceQuest"] = 1339,	-- Mountaineer Stormpike's Task
@@ -644,6 +695,9 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.LOCH_MODAN, {
 					i(6189),	-- Durable Chain Shoulders
 					i(6191),	-- Kimbra Boots
 					i(1449),	-- Minor Channeling Ring
+					i(270019, {	-- Loch Walkers
+						timeline = { TIMELINE.ADDED_1_60_1 },
+					}),
 				},
 			}),
 		}),
