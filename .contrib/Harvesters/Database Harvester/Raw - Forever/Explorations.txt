@@ -1371,3 +1371,9 @@
 17808@@@Ashwood's Fall
 17809@@@Forlorn Pit
 17824@@@The Eventide
+1.60.1.70291
+17845@@@Dreambound Pinnacle
+17847@@@Twilight Hollow
+1.60.1.70425
+17852@@@Hyjal Crater
+17853@@@Sunken Hollow

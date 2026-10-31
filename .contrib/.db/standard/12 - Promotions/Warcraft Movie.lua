@@ -2,7 +2,7 @@
 --        P R O M O T I O N S   M O D U L E        --
 -----------------------------------------------------
 
-WARCRAFT_MOVIE = createHeader({
+local WARCRAFT_MOVIE = createHeader({
 	readable = "Warcraft Movie",
 	icon = 133885,
 	text = {
@@ -33,9 +33,9 @@ WARCRAFT_MOVIE = createHeader({
 	},
 });
 
-root(ROOTS.Promotions, n(WARCRAFT_MOVIE, bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {
-	["timeline"] = { ADDED_7_0_3 },
-	["groups"] = {
+root(ROOTS.Promotions, n(WARCRAFT_MOVIE, bubbleDown({ u = REMOVED_FROM_GAME }, {
+	timeline = { ADDED_7_0_3 },
+	groups = {
 		a(ach(11210)),	-- Fight for the Alliance
 		h(ach(11211)),	-- Fight for the Horde
 		a(i(140997, {	-- Alliance Strongbox

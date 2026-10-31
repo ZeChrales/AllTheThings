@@ -77,7 +77,7 @@ function app:CreateDynamicProfessionCategory(name, commands, professionID, speci
 									specializations[spellID] = specialization;
 								end
 							end
-							
+
 							local expansions = setmetatable({}, {
 								__index = function(t, expansionID)
 									local expansion = app.CreateExpansion(expansionID);
@@ -104,6 +104,8 @@ function app:CreateDynamicProfessionCategory(name, commands, professionID, speci
 											recipe.sourceParent = mostAccessibleSource;
 											local u = GetRelativeValue(mostAccessibleSource, "u");
 											if u then recipe.u = u; end
+											local phase = GetRelativeValue(mostAccessibleSource, "phase");
+											if phase then recipe.phase = phase; end
 											local e = GetRelativeValue(mostAccessibleSource, "e");
 											if e then recipe.e = e; end
 											local awp = GetRelativeValue(mostAccessibleSource, "awp");
@@ -200,4 +202,4 @@ end
 app:CreateDynamicProfessionCategory("Leatherworking", { "attlw" }, 165, { 10656, 10658, 10660 });
 app:CreateDynamicProfessionCategory("Mining", { "attmining" }, 186);
 app:CreateDynamicProfessionCategory("Skinning", { "attskinning" }, 393);
-app:CreateDynamicProfessionCategory("Tailoring", { "atttailoring" }, 197, { 26798, 26801, 26797 });
+app:CreateDynamicProfessionCategory("Tailoring", { "atttailoring" }, 197, app.GameBuildVersion > 20000 and { 26798, 26801, 26797 } or nil);

@@ -806,10 +806,10 @@ de(1862,{crs={255213,255326},itemID=245656,spellID=1239614}),
 de(8974,{awp=120007,crs={255213,255326},itemID=252004,spellID=1253894}),
 de(8975,{awp=120007,crs={255213,255326},itemID=252005,spellID=1253895}),
 de(1742,{crs={255213,255326},itemID=245551,spellID=1238949}),
-de(17874,{awp=120000,crs={255221,255230,255301},itemID=266245,spellID=1277999}),
-de(17873,{awp=120000,crs={255221,255230,255301},itemID=266244,spellID=1277998}),
 de(17918,{awp=120000,crs={255221,255230,255301},itemID=266443,spellID=1278237}),
 de(17919,{awp=120000,crs={255221,255230,255301},itemID=266444,spellID=1278238}),
+de(17874,{awp=120000,crs={255221,255230,255301},itemID=266245,spellID=1277999}),
+de(17873,{awp=120000,crs={255221,255230,255301},itemID=266244,spellID=1277998}),
 i(274673,{awp=120100,cost={{"c",3363,50}},crs={254687,257297},spellID=1294712}),
 i(274676,{awp=120100,cost={{"c",3363,50}},crs={254687,257297},spellID=1294717}),
 i(274675,{awp=120100,cost={{"c",3363,50}},crs={254687,257297},spellID=1294715}),
@@ -868,8 +868,20 @@ de(25546,{itemID=276230,spellID=1299046})}}),
 de(25105,{awp=120100,crs={267794,267795},itemID=277138,spellID=1301691}),
 de(25101,{awp=120100,crs={267794,267795},itemID=277142,spellID=1301698}),
 de(25675,{awp=120100,crs={271366,271604},itemID=280335,spellID=1308292}),
-de(4157,{awp=120100,crs={271366,271604},itemID=248101,spellID=1246265})}}),
-h(-58,{
+de(26020,{awp=120105,crs={271366,271604},itemID=282086,spellID=1312990}),
+de(26010,{awp=120105,crs={271366,271604},itemID=282081,spellID=1312960}),
+de(26887,{awp=120105,crs={271366,271604},itemID=282098,spellID=1313008}),
+de(26050,{awp=120105,crs={271366,271604},itemID=282072,spellID=1312941}),
+de(26018,{awp=120105,crs={271366,271604},itemID=282090,spellID=1313001}),
+de(26889,{awp=120105,crs={271366,271604},itemID=282075,spellID=1312944}),
+de(26888,{awp=120105,crs={271366,271604},itemID=282100,spellID=1313011}),
+de(26882,{awp=120105,crs={271366,271604},itemID=282092,spellID=1313004}),
+de(26886,{awp=120105,crs={271366,271604},itemID=282095,spellID=1313006}),
+de(26009,{awp=120105,crs={271366,271604},itemID=282051,spellID=1312906}),
+de(26019,{awp=120105,crs={271366,271604},itemID=282077,spellID=1312952}),
+de(4157,{awp=120100,crs={271366,271604},itemID=248101,spellID=1246265}),
+de(26051,{awp=120105,crs={271366,271604},itemID=282083,spellID=1312978})}}),
+h(-58,{awp=110207,g={
 n(263258,{awp=120100,coords={
 [2351]={{55.2,61.9}},
 [2352]={{55.1,43.6}}},g={
@@ -879,18 +891,18 @@ n(267856,{awp=120100,coords={
 [2351]={{53.1,54.5}},
 [2352]={{55.2,43.6}}},g={
 i(276297,{spellID=1299345})}}),
-n(255654,{awp=110207,coords={
+n(255654,{coords={
 [2352]={{41.6,61.8}}},g={
-i(262562),
 i(262563),
+i(262562),
 i(262564),
 i(262565)}}),
-n(257168,{awp=110207,coords={
+n(257168,{coords={
 [2351]={{39,74}},
 [2352]={{62,82.2}}},g={
 de(26477,{awp=120100,itemID=279458,spellID=1306771}),
 de(3913,{awp=120100,itemID=247776,spellID=1245274}),
-de(26491,{awp=120100,itemID=279455,spellID=1306767})}})}),
+de(26491,{awp=120100,itemID=279455,spellID=1306767})}})}}),
 h(-714,{awp=120000,g={
 h(-47,{
 cu(3363)}),
@@ -1325,10 +1337,10 @@ crit(118085,{achID=63605,id=52})}}),
 n(266726,{crs={242053},description="This Souvenir can be found in the back of Kirt's Public Carriage.",maps={2352},g={
 crit(118086,{achID=63605,id=53})}}),
 n(266727,{coords={
-[2352]={{60.3,52.5}}},description="On a turtle who may waddle around a bit...",g={
+[2352]={{48,53.8},{48.2,57.8},{52.6,61.6},{61,55.4},{64.8,56.2}}},crs={270576},description="On a turtle who may waddle around a bit...",g={
 crit(118087,{achID=63605,id=54})}}),
 n(266728,{coords={
-[2352]={{36.8,46.8}}},description="Area wide spawn. If you don't see the Souvenir, do as the area vignette states: 'Stay a While and Glisten'. Sit in middle Beach Chair and Relax. Nearby geysir will spit out the Souvenir... Eventually...",g={
+[2352]={{36.8,46.8}}},description="Area wide spawn. If you don't see the Souvenir, do as the area vignette states: 'Stay a While and Glisten'. Sit in middle Beach Chair and Relax. Nearby geyser will spit out the Souvenir... Eventually...",g={
 crit(118088,{achID=63605,id=55})}}),
 n(266729,{crs={270577},description="This Souvenir can be found flying around the neighborhood on the back of a Kite. Crash into the Kite with your Flying Mount to force it to land on the ground.",maps={2352},g={
 crit(118089,{achID=63605,id=56})}}),
@@ -1507,7 +1519,7 @@ n(266666,{coords={
 [2351]={{67.8,55.5}}},description="On a turtle who may waddle around a bit...",g={
 crit(118027,{achID=63441,id=54})}}),
 n(266667,{coords={
-[2351]={{52.6,73.1}}},description="Area wide spawn. If you don't see the Souvenir, do as the area vignette states: 'Stay a While and Glisten'. Sit in middle Beach Chair and Relax. Nearby geysir will spit out the Souvenir... Eventually...",g={
+[2351]={{52.6,73.1}}},description="Area wide spawn. If you don't see the Souvenir, do as the area vignette states: 'Stay a While and Glisten'. Sit in middle Beach Chair and Relax. Nearby geyser will spit out the Souvenir... Eventually...",g={
 crit(118028,{achID=63441,id=55})}}),
 n(266668,{crs={267939},description="This Souvenir can be found flying around the neighborhood on the back of a Kite. Crash into the Kite with your Flying Mount to force it to land on the ground.",maps={2351},g={
 crit(118029,{achID=63441,id=56})}}),
@@ -1556,10 +1568,10 @@ i(276613,{f=55,spellID=1300021}),
 i(276612,{f=55,spellID=11009})}}),
 n(268106,{coords={
 [2351]={{54.4,56}},
-[2352]={{52.9,39}}},g={
+[2352]={{53.2,38.3}}},g={
 de(26478,{cost={{"c",3363,30}},itemID=280236,spellID=1307970}),
 de(26389,{cost={{"c",3363,25}},itemID=280227,spellID=1307960}),
-de(27044,{cost={{"c",3363,30}},itemID=280846,sourceAchievements={63605},spellID=1309929}),
+de(27044,{cost={{"c",3363,30}},itemID=280846,sourceAchievements={63441,63605},spellID=1309929}),
 de(26483,{cost={{"c",3363,25}},itemID=280223,spellID=1307955}),
 de(26365,{cost={{"c",3363,20}},itemID=280240,spellID=1307974}),
 de(26370,{cost={{"c",3363,20}},itemID=280230,spellID=1307963}),

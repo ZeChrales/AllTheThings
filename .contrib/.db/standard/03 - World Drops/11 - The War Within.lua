@@ -1,8 +1,8 @@
 -----------------------------------------------------
 --       W O R L D   D R O P S   M O D U L E       --
 -----------------------------------------------------
-root(ROOTS.WorldDrops, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeline"] = { ADDED_11_0_2 } }, {
-	n(ARMOR, bubbleDownSelf({ ["timeline"] = { ADDED_11_0_0 } }, {
+root(ROOTS.WorldDrops, expansion(EXPANSION.TWW, {
+	n(ARMOR, {
 		filter(CLOTH, {
 			i(220314),	-- Moth-Ridden Armlets
 			i(220310),	-- Moth-Ridden Hood
@@ -43,7 +43,7 @@ root(ROOTS.WorldDrops, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeline"] = 
 			i(220336),	-- Begrimed Spaulders
 			i(220338),	-- Begrimed Vambraces
 		}),
-	})),
+	}),
 	n(ARMOR, {
 		filter(BACK_F, {
 			i(224624),	-- Spinner's Shawl
@@ -155,4 +155,4 @@ root(ROOTS.WorldDrops, expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeline"] = 
 		i(223100),	-- Pattern: Vambraces of Deepening Darkness (RECIPE!)
 		i(223043),	-- Plans: Sanctified Steps (RECIPE!)
 	}),
-})));
+}));

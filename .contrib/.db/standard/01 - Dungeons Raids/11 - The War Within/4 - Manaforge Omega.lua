@@ -352,11 +352,24 @@ InstanceHelper.ExtraLoots = {
 	},
 }
 
+-- The Catalyst (placed once per difficulty, with that difficulty's tier items as its groups)
+-- The upgrade track must sit on the Catalyst object itself: the runtime lookup selects by catalystID, finds the node carrying the matching trackID, then pops its Class headers.
+local TheCatalyst = function(upgradeTrackID, groups)
+	return o(456208, {	-- The Catalyst
+		description = "This allows converting certain pieces of gear into Tier items for your Class.\n\nMake sure to equip your item first before converting it.",
+		coord = { 50.0, 54.2, DORNOGAL },
+		modelScale = 4,
+		catalystID = 11,	-- ItemBonus.Value_0 TWW:S3
+		upgradeTrackID = upgradeTrackID,
+		groups = groups,
+	})
+end
+
 root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 	inst(1302, {	-- Manaforge Omega
-		["coord"] = { 41.9, 21.5, KARESH },
-		["timeline"] = { ADDED_11_2_0_SEASONSTART },
-		["maps"] = {
+		coord = { 41.9, 21.5, KARESH },
+		timeline = { ADDED_11_2_0_SEASONSTART },
+		maps = {
 			2460,	-- The Forge Core
 			2461,	-- The Unbound Vault
 			2462,	-- Cultivation Chambers
@@ -370,89 +383,89 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 			2470,	-- Devourer's Heart
 			2471,	-- The Dark Heart
 		},
-		["isRaid"] = true,
-		["groups"] = {
+		isRaid = true,
+		groups = {
 			n(ACHIEVEMENTS, {
 				ach(41601, {	-- Might of the Shadowguard
 					crit(103298, {	-- Plexus Sentinel
-						["_encounter"] = { PLEXUS, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { PLEXUS, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103299, {	-- Loom'ithar
-						["_encounter"] = { LOOMITHAR, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { LOOMITHAR, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103300, {	-- Soulbinder Naazindhri
-						["_encounter"] = { NAAZINDHRI, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { NAAZINDHRI, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 				}),
 				ach(41602, {	-- Monsters of the Sands
 					crit(103301, {	-- Forgeweaver Araz
-						["_encounter"] = { ARAZ, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { ARAZ, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103302, {	-- The Soul Hunters
-						["_encounter"] = { HUNTERS, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { HUNTERS, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103303, {	-- Fractillus
-						["_encounter"] = { FRACTILLUS, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { FRACTILLUS, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 				}),
 				ach(41603, {	-- Heart of Darkness
 					crit(103304, {	-- Nexus-King Salhadaar
-						["_encounter"] = { SALHADAAR, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { SALHADAAR, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103305, {	-- Dimensius, the All-Devouring
-						["_encounter"] = { DIMENSIUS, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { DIMENSIUS, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 				}),
 				ach(41598, {	-- Manaforge Omega
 					crit(103298, {	-- Plexus Sentinel
-						["_encounter"] = { PLEXUS, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { PLEXUS, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103299, {	-- Loom'ithar
-						["_encounter"] = { LOOMITHAR, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { LOOMITHAR, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103300, {	-- Soulbinder Naazindhri
-						["_encounter"] = { NAAZINDHRI, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { NAAZINDHRI, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103301, {	-- Forgeweaver Araz
-						["_encounter"] = { ARAZ, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { ARAZ, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103302, {	-- The Soul Hunters
-						["_encounter"] = { HUNTERS, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { HUNTERS, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103303, {	-- Fractillus
-						["_encounter"] = { FRACTILLUS, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { FRACTILLUS, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103304, {	-- Nexus-King Salhadaar
-						["_encounter"] = { SALHADAAR, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { SALHADAAR, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 					crit(103305, {	-- Dimensius, the All-Devouring
-						["_encounter"] = { DIMENSIUS, DIFFICULTY.RAID.MULTI.ALL },
+						_encounter = { DIMENSIUS, DIFFICULTY.RAID.MULTI.ALL },
 					}),
 				}),
 				ach(41599, {	-- Heroic: Manaforge Omega
 					crit(103289, {	-- Plexus Sentinel
-						["_encounter"] = { PLEXUS, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
+						_encounter = { PLEXUS, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
 					}),
 					crit(103290, {	-- Loom'ithar
-						["_encounter"] = { LOOMITHAR, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
+						_encounter = { LOOMITHAR, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
 					}),
 					crit(103291, {	-- Soulbinder Naazindhri
-						["_encounter"] = { NAAZINDHRI, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
+						_encounter = { NAAZINDHRI, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
 					}),
 					crit(103292, {	-- Forgeweaver Araz
-						["_encounter"] = { ARAZ, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
+						_encounter = { ARAZ, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
 					}),
 					crit(103293, {	-- The Soul Hunters
-						["_encounter"] = { HUNTERS, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
+						_encounter = { HUNTERS, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
 					}),
 					crit(103294, {	-- Fractillus
-						["_encounter"] = { FRACTILLUS, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
+						_encounter = { FRACTILLUS, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
 					}),
 					crit(103295, {	-- Nexus-King Salhadaar
-						["_encounter"] = { SALHADAAR, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
+						_encounter = { SALHADAAR, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
 					}),
 					crit(103296, {	-- Dimensius, the All-Devouring
-						["_encounter"] = { DIMENSIUS, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
+						_encounter = { DIMENSIUS, DIFFICULTY.RAID.MULTI.HEROIC_PLUS },
 					}),
 				}),
 				ach(41600),	-- Mythic: Manaforge Omega (automated)
@@ -469,96 +482,96 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 				}),
 				faction(FACTION_MANAFORGE_VANDALS),
 				n(QUESTS, sharedData({
-					["provider"] = { "n", 245344 },	-- Zo'turu <Renown Quartermaster>
-					["coord"] = { 42.0, 22.1, KARESH },
+					provider = { "n", 245344 },	-- Zo'turu <Renown Quartermaster>
+					coord = { 42.0, 22.1, KARESH },
 				},bubbleDownRep(FACTION_MANAFORGE_VANDALS, {
 					{		-- RENOWN 1 --
-						q(92031, { ["timeline"] = { ADDED_11_2_0 } }),	-- Meet the Vandals
+						q(92031, { timeline = { ADDED_11_2_0 } }),	-- Meet the Vandals
 					}, {	-- RENOWN 2 --
-						q(91525, { ["timeline"] = { ADDED_11_2_0 } }),	-- Head Hunting: Loom'ithar
+						q(91525, { timeline = { ADDED_11_2_0 } }),	-- Head Hunting: Loom'ithar
 					}, {	-- RENOWN 3 --
-						q(91483, { ["timeline"] = { ADDED_11_2_0 } }),	-- Hacking the Mainframe
-						q(91481, { ["timeline"] = { ADDED_11_2_0 } }),	-- Speed Siphoner
+						q(91483, { timeline = { ADDED_11_2_0 } }),	-- Hacking the Mainframe
+						q(91481, { timeline = { ADDED_11_2_0 } }),	-- Speed Siphoner
 					}, {	-- RENOWN 4 --
 						q(91476, {	-- Behind Enemy Lines
-							["timeline"] = { ADDED_11_2_0 },
-							["groups"] = { i(249699) },	-- Shadowguard Translocator
+							timeline = { ADDED_11_2_0 },
+							groups = { i(249699) },	-- Shadowguard Translocator
 						}),
 					}, {	-- RENOWN 5 --
-						q(91459, { ["timeline"] = { ADDED_11_2_0 } }),	-- Manaforge Omega: A Walking Shadow [N]
-						q(91460, { ["timeline"] = { ADDED_11_2_0 } }),	-- Manaforge Omega: A Walking Shadow [H]
-						q(91461, { ["timeline"] = { ADDED_11_2_0 } }),	-- Manaforge Omega: A Walking Shadow [M]
+						q(91459, { timeline = { ADDED_11_2_0 } }),	-- Manaforge Omega: A Walking Shadow [N]
+						q(91460, { timeline = { ADDED_11_2_0 } }),	-- Manaforge Omega: A Walking Shadow [H]
+						q(91461, { timeline = { ADDED_11_2_0 } }),	-- Manaforge Omega: A Walking Shadow [M]
 					}, {	-- RENOWN 6 --
 						q(91486, {	-- Attuned to the Aether
-							["provider"] = { "n", 245348 },	-- Ba'choso
-							["coord"] = { 42.0, 22.4, KARESH },
-							["timeline"] = { ADDED_11_2_0 },
+							provider = { "n", 245348 },	-- Ba'choso
+							coord = { 42.0, 22.4, KARESH },
+							timeline = { ADDED_11_2_0 },
 						}),
 					}, {	-- RENOWN 7 --
-						q(91477, { ["timeline"] = { ADDED_11_2_0 } }),	-- Behind Enemy Lines II
-						q(91484, { ["timeline"] = { ADDED_11_2_0 } }),	-- Hacking the Forgeweaver
+						q(91477, { timeline = { ADDED_11_2_0 } }),	-- Behind Enemy Lines II
+						q(91484, { timeline = { ADDED_11_2_0 } }),	-- Hacking the Forgeweaver
 					}, {	-- RENOWN 8 --
 						q(91489, {	-- A Curious Companion
-							["provider"] = { "n", 245357 },	-- Zo'ya
-							["coord"] = { 42.0, 22.4, KARESH },
-							["timeline"] = { ADDED_11_2_0 },
-							["groups"] = { i(246694) },	-- Zo'ya (PET!)
+							provider = { "n", 245357 },	-- Zo'ya
+							coord = { 42.0, 22.4, KARESH },
+							timeline = { ADDED_11_2_0 },
+							groups = { i(246694) },	-- Zo'ya (PET!)
 						}),
 						q(92078, {	-- A New Recipe!
-							["provider"] = { "n", 245348 },	-- Ba'choso
-							["coord"] = { 42.0, 22.4, KARESH },
-							["timeline"] = { ADDED_11_2_0 },
-							["groups"] = {
+							provider = { "n", 245348 },	-- Ba'choso
+							coord = { 42.0, 22.4, KARESH },
+							timeline = { ADDED_11_2_0 },
+							groups = {
 								i(249709),	-- Formula: Gleeful Glamour - Ethereal (RECIPE!)
 								i(249703),	-- Technique: Deal: Cartel Ba (RECIPE!)
 								i(249705),	-- Technique: Deal: Cartel Om (RECIPE!)
 								i(249701),	-- Technique: Deal: Cartel Zo (RECIPE!)
 							},
 						}),
-						q(91526, { ["timeline"] = { ADDED_11_2_0 } }),	-- Head Hunting: Forgeweaver Araz
+						q(91526, { timeline = { ADDED_11_2_0 } }),	-- Head Hunting: Forgeweaver Araz
 						q(91487, {	-- Welcome to the Team
-							["timeline"] = { ADDED_11_2_0 },
-							["groups"] = { i(186640) },	-- Vandal's Gearglider (MOUNT!)
+							timeline = { ADDED_11_2_0 },
+							groups = { i(186640) },	-- Vandal's Gearglider (MOUNT!)
 						}),
 					}, {	-- RENOWN 9 --
 						q(91527, {	-- Head Hunting: The Soul Hunters
-							["timeline"] = { ADDED_11_2_0 },
-							["groups"] = { i(246492) },	-- Soulgorged Augment Rune
+							timeline = { ADDED_11_2_0 },
+							groups = { i(246492) },	-- Soulgorged Augment Rune
 						}),
 					}, {	-- RENOWN 10 --
-						q(91482, { ["timeline"] = { ADDED_11_2_0 } }),	-- Speed Siphoner II
-						q(91478, { ["timeline"] = { ADDED_11_2_0 } }),	-- Behind Enemy Lines III
+						q(91482, { timeline = { ADDED_11_2_0 } }),	-- Speed Siphoner II
+						q(91478, { timeline = { ADDED_11_2_0 } }),	-- Behind Enemy Lines III
 					}, {	-- RENOWN 11 --
-						q(91485, { ["timeline"] = { ADDED_11_2_0 } }),	-- Hacking the Planet
-						q(91528, { ["timeline"] = { ADDED_11_2_0 } }),	-- Head Hunting: Horrors of the Forge
+						q(91485, { timeline = { ADDED_11_2_0 } }),	-- Hacking the Planet
+						q(91528, { timeline = { ADDED_11_2_0 } }),	-- Head Hunting: Horrors of the Forge
 					}, {	-- RENOWN 12 --
-						q(91529, { ["timeline"] = { ADDED_11_2_0 } }),	-- Head Hunting: Nexus-King Salhadaar
+						q(91529, { timeline = { ADDED_11_2_0 } }),	-- Head Hunting: Nexus-King Salhadaar
 					}, {	-- RENOWN 13 --
-						q(91479, { ["timeline"] = { ADDED_11_2_0 } }),	-- Behind Enemy Lines IV
+						q(91479, { timeline = { ADDED_11_2_0 } }),	-- Behind Enemy Lines IV
 						q(91530, {	-- Seeing Eye to Eye
-							["timeline"] = { ADDED_11_2_0 },
-							["groups"] = { i(244913) },	-- Looker Gaz'kreth Jr. (PET!)
+							timeline = { ADDED_11_2_0 },
+							groups = { i(244913) },	-- Looker Gaz'kreth Jr. (PET!)
 						}),
 					}, {	-- RENOWN 14 --
 						q(91954, {	-- Freezing Over
-							["timeline"] = { ADDED_11_2_0 },
-							["groups"] = { i(242728) },	-- The Bone Freezer (MOUNT!)
+							timeline = { ADDED_11_2_0 },
+							groups = { i(242728) },	-- The Bone Freezer (MOUNT!)
 						}),
 						title(640, {	-- Star Savior <Name>
-							["provider"] = IGNORED_VALUE,
-							["coord"] = IGNORED_VALUE,
+							provider = IGNORED_VALUE,
+							coord = IGNORED_VALUE,
 						}),
 					}, {	-- RENOWN 15 --
-						q(91480, { ["timeline"] = { ADDED_11_2_0 } }),	-- Behind Enemy Lines V
+						q(91480, { timeline = { ADDED_11_2_0 } }),	-- Behind Enemy Lines V
 						spell(1239155),	-- Path of the All-Devouring
 					},
 				}))),
 				n(VENDORS, {
 				-- NOTE: There are 3 vendors outside the Raid Entrance. Items they sell are not renown locked.
 				n(245349, {	-- Zo'ropo <Eccentric Engineer>
-					["coord"] = { 42.0, 22.0, KARESH },
-					["groups"] = sharedData({
-						["cost"] = { { "i", 246727, 1 } },	-- Ethereal Essence Sliver
+					coord = { 42.0, 22.0, KARESH },
+					groups = sharedData({
+						cost = { { "i", 246727, 1 } },	-- Ethereal Essence Sliver
 					}, {
 						i(249206),	-- Manaforge Raider's Cosmic Baton (COSMETIC!)
 						i(249170),	-- Manaforge Raider's Cosmic Beamglaive (COSMETIC!)
@@ -636,9 +649,9 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 					}),
 				}),
 				n(245348, {	-- Ba'choso <Curious Curator>
-					["coord"] = { 42.0, 22.4, KARESH },
-					["groups"] = sharedData({
-						["cost"] = { { "i", 245510, 1 } },	-- Loombeast Silk
+					coord = { 42.0, 22.4, KARESH },
+					groups = sharedData({
+						cost = { { "i", 245510, 1 } },	-- Loombeast Silk
 					}, {
 						iensemble(248977),	-- Ensemble: Augur's Ephemeral Brilliance
 						iensemble(248978),	-- Ensemble: Breeze of Fallen Storms
@@ -656,48 +669,28 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 					}),
 				}),
 				n(248304, {	-- Acquirer Ba'theom <Exotic Armor>
-					["coord"] = { 42.1, 23.4, KARESH },
+					coord = { 42.1, 23.4, KARESH },
 					-- Sells Tier set tokens in exchange for Hungering Void Curios
 				}),
 			}),
 			}),
-			o(456208, {	-- The Catalyst
-				["description"] = "This allows converting certain pieces of gear into Tier items for your Class.\n\nMake sure to equip your item first before converting it.",
-				["coord"] = { 50.0, 54.2, DORNOGAL },
-				["modelScale"] = 4,
-				["catalystID"] = 11,	-- ItemBonus.Value_0 TWW:S3
-				["groups"] = {
-					Difficulty(DIFFICULTY.RAID.LFR, {["upgradeTrackID"]=UPGRADETRACKS.VETERAN}).AddGroups(
-						ALL_CLASS_TIERS_HELPER(MANAFORGE_OMEGA_TIER, DIFFICULTY.RAID.LFR)
-					),
-					Difficulty(DIFFICULTY.RAID.NORMAL, {["upgradeTrackID"]=UPGRADETRACKS.CHAMPION}).AddGroups(
-						ALL_CLASS_TIERS_HELPER(MANAFORGE_OMEGA_TIER, DIFFICULTY.RAID.NORMAL)
-					),
-					Difficulty(DIFFICULTY.RAID.HEROIC, {["upgradeTrackID"]=UPGRADETRACKS.HERO}).AddGroups(
-						ALL_CLASS_TIERS_HELPER(MANAFORGE_OMEGA_TIER, DIFFICULTY.RAID.HEROIC)
-					),
-					Difficulty(DIFFICULTY.RAID.MYTHIC, {["upgradeTrackID"]=UPGRADETRACKS.MYTH}).AddGroups(
-						ALL_CLASS_TIERS_HELPER(MANAFORGE_OMEGA_TIER, DIFFICULTY.RAID.MYTHIC)
-					),
-				},
-			}),
 			Difficulty(DIFFICULTY.RAID.MULTI.ALL).AddGroups({
 				n(QUESTS, {
 					q(91140, {	-- A Piece of the Past
-						["qs"] = 245743,	-- A Curious Crystalline Fragment (QS!)
-						["classes"] = { PRIEST },
+						qs = 245743,	-- A Curious Crystalline Fragment (QS!)
+						classes = { PRIEST },
 					}),
 					q(91138, {	-- I am the Creator and Destroyer
-						["sourceQuest"] = 91140,	-- A Piece of the Past
-						["qg"] = 245915,	-- Om'en
-						["coord"] = { 40.4, 27.4, KARESH_TAZAVESH },
-						["classes"] = { PRIEST },
-						["groups"] = { i(250082) },	-- T'uure, Remnant of the Naaru (COSMETIC!)
+						sourceQuest = 91140,	-- A Piece of the Past
+						qg = 245915,	-- Om'en
+						coord = { 40.4, 27.4, KARESH_TAZAVESH },
+						classes = { PRIEST },
+						groups = { i(250082) },	-- T'uure, Remnant of the Naaru (COSMETIC!)
 					}),
 					hqt(91064, {	-- Stay awhile and listen: Alleria Windrunnner
-						["name"] = "Stay awhile and listen: Alleria Windrunnner",
-						["description"] = "Dialogue becomes available after defeating Dimensius.",
-						["qg"] = 242456,	-- Alleria Windrunnner
+						name = "Stay awhile and listen: Alleria Windrunnner",
+						description = "Dialogue becomes available after defeating Dimensius.",
+						qg = 242456,	-- Alleria Windrunnner
 					}),
 				}),
 				BossOnly(PLEXUS),
@@ -721,8 +714,8 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 				BossOnly(SALHADAAR, {
 					i(243365),	-- Maw of the Void
 					i(246727, {	-- Ethereal Essence Sliver
-						["description"] = "Has a small chance dropping as Personal Loot from Nexus-King Salhadaar once you have reached Renown 12 with the Manaforge Vandals.",
-						["minReputation"] = { FACTION_MANAFORGE_VANDALS, 12 },
+						description = "Has a small chance dropping as Personal Loot from Nexus-King Salhadaar once you have reached Renown 12 with the Manaforge Vandals.",
+						minReputation = { FACTION_MANAFORGE_VANDALS, 12 },
 					}),
 				}),
 				BossOnly(DIMENSIUS, {
@@ -733,10 +726,13 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 				}),
 			}),
 			Difficulty(DIFFICULTY.RAID.LFR).AddGroupsWithUpgrades({
+				TheCatalyst(UPGRADETRACKS.VETERAN,
+					ALL_CLASS_TIERS_HELPER(MANAFORGE_OMEGA_TIER, DIFFICULTY.RAID.LFR)
+				),
 				ZoneDrops({}),
 				CommonBossDrops({
 					currency(WEATHERED_ETHEREAL_CREST, {
-						["timeline"] = { ADDED_11_2_0_SEASONSTART, REMOVED_12_0_1_LAUNCH },
+						timeline = { REMOVED_12_0_1_LAUNCH },
 					}),
 				}),
 				header(HEADERS.LFGDungeon, 2799, {	-- Might of the Shadowguard
@@ -753,8 +749,8 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 					Boss(SALHADAAR),
 					Boss(DIMENSIUS, {
 						i(237602, {	-- Hungering Void Curio
-							["sym"] = {{"sub","instance_tier",1302,DIFFICULTY.RAID.LFR}},
-							["up"] = IGNORED_VALUE,
+							sym = {{"sub","instance_tier",1302,DIFFICULTY.RAID.LFR}},
+							up = IGNORED_VALUE,
 						}),
 					}),
 				}),
@@ -786,9 +782,12 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 				}),
 			}),
 			Difficulty(DIFFICULTY.RAID.NORMAL).AddGroupsWithUpgrades({
+				TheCatalyst(UPGRADETRACKS.CHAMPION,
+					ALL_CLASS_TIERS_HELPER(MANAFORGE_OMEGA_TIER, DIFFICULTY.RAID.NORMAL)
+				),
 				CommonBossDrops({
 					currency(CARVED_ETHEREAL_CREST, {
-						["timeline"] = { ADDED_11_2_0_SEASONSTART, REMOVED_12_0_1_LAUNCH },
+						timeline = { REMOVED_12_0_1_LAUNCH },
 					}),
 				}),
 				ZoneDrops({}),
@@ -801,16 +800,16 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 				Boss(SALHADAAR),
 				Boss(DIMENSIUS, {
 					i(237602, {	-- Hungering Void Curio
-						["sym"] = {{"sub","instance_tier",1302,DIFFICULTY.RAID.NORMAL}},
-						["up"] = IGNORED_VALUE,
+						sym = {{"sub","instance_tier",1302,DIFFICULTY.RAID.NORMAL}},
+						up = IGNORED_VALUE,
 					}),
 				}),
 			}),
 			Difficulty(DIFFICULTY.RAID.MULTI.HEROIC_PLUS).AddGroups({
 				n(QUESTS, {
 					q(91413, {	-- A Twilight Oath's End
-						["qs"] = 246446,	-- Mark of the Twilight Oath (QS!)
-						["groups"] = { i(246445) },	-- Royal Voidwing (MOUNT!)
+						qs = 246446,	-- Mark of the Twilight Oath (QS!)
+						groups = { i(246445) },	-- Royal Voidwing (MOUNT!)
 					}),
 				}),
 				BossOnly(PLEXUS),
@@ -821,14 +820,17 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 				BossOnly(FRACTILLUS),
 				BossOnly(SALHADAAR),
 				BossOnly(DIMENSIUS, {
-					i(246446, { ["timeline"] = { REMOVED_12_0_1_SEASONSTART } }),	-- Mark of the Twilight Oath (QS!)
-					ach(41624, { ["timeline"] = { REMOVED_12_0_0 } }),	-- Ahead of the Curve: Dimensius, the All-Devouring
+					i(246446, { timeline = { REMOVED_12_0_1_SEASONSTART } }),	-- Mark of the Twilight Oath (QS!)
+					ach(41624, { timeline = { REMOVED_12_0_0 } }),	-- Ahead of the Curve: Dimensius, the All-Devouring
 				}),
 			}),
 			Difficulty(DIFFICULTY.RAID.HEROIC).AddGroupsWithUpgrades({
+				TheCatalyst(UPGRADETRACKS.HERO,
+					ALL_CLASS_TIERS_HELPER(MANAFORGE_OMEGA_TIER, DIFFICULTY.RAID.HEROIC)
+				),
 				CommonBossDrops({
 					currency(RUNED_ETHEREAL_CREST, {
-						["timeline"] = { ADDED_11_2_0_SEASONSTART, REMOVED_12_0_1_LAUNCH },
+						timeline = { REMOVED_12_0_1_LAUNCH },
 					}),
 				}),
 				ZoneDrops({}),
@@ -841,15 +843,18 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 				Boss(SALHADAAR),
 				Boss(DIMENSIUS, {
 					i(237602, {	-- Hungering Void Curio
-						["sym"] = {{"sub","instance_tier",1302,DIFFICULTY.RAID.HEROIC}},
-						["up"] = IGNORED_VALUE,
+						sym = {{"sub","instance_tier",1302,DIFFICULTY.RAID.HEROIC}},
+						up = IGNORED_VALUE,
 					}),
 				}),
 			}),
 			Difficulty(DIFFICULTY.RAID.MYTHIC).AddGroups({
+				TheCatalyst(UPGRADETRACKS.MYTH,
+					ALL_CLASS_TIERS_HELPER(MANAFORGE_OMEGA_TIER, DIFFICULTY.RAID.MYTHIC)
+				),
 				CommonBossDrops({
 					currency(GILDED_ETHEREAL_CREST, {
-						["timeline"] = { ADDED_11_2_0_SEASONSTART, REMOVED_12_0_1_LAUNCH },
+						timeline = { REMOVED_12_0_1_LAUNCH },
 					}),
 				}),
 				n(QUESTS, {
@@ -881,15 +886,15 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 					ach(41611, {	-- Mythic: Dimensius, the All-Devouring
 						title(615),	-- Void Vanquisher <Name>
 					}),
-					ach(41625, {["timeline"] = { ADDED_11_2_0, REMOVED_12_0_0 }}),	-- Cutting Edge: Dimensius, the All-Devouring
-					ach(41623, applyDataSelf({["timeline"] = { ADDED_11_2_0, REMOVED_12_0_0 } }, {	-- Hall of Fame: Dimensius, the All-Devouring
+					ach(41625, {timeline = { ADDED_11_2_0, REMOVED_12_0_0 }}),	-- Cutting Edge: Dimensius, the All-Devouring
+					ach(41623, applyDataSelf({timeline = { ADDED_11_2_0, REMOVED_12_0_0 } }, {	-- Hall of Fame: Dimensius, the All-Devouring
 						title(614),	-- <Name>, Famed Slayer of Dimensius
 					})),
 					ach(41622),	-- Mythic: Dimensius, the All-Devouring Guild Run
 					i(243061),	-- Unbound Star-Eater (MOUNT!)
 					i(237602, {	-- Hungering Void Curio
-						["sym"] = {{"sub","instance_tier",1302,DIFFICULTY.RAID.MYTHIC}},
-						["up"] = IGNORED_VALUE,
+						sym = {{"sub","instance_tier",1302,DIFFICULTY.RAID.MYTHIC}},
+						up = IGNORED_VALUE,
 					}),
 				}),
 			}),
@@ -899,16 +904,16 @@ root(ROOTS.Instances, expansion(EXPANSION.TWW, {
 
 root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, {
 	inst(1302, {	-- Manaforge Omega
-		["timeline"] = { ADDED_11_2_0_SEASONSTART },
-		["groups"] = {
+		timeline = { ADDED_11_2_0_SEASONSTART },
+		groups = {
 			n(FACTIONS, {
 				header(HEADERS.Faction, FACTION_MANAFORGE_VANDALS, {
 					n(QUESTS, {
 						q(92032, {	-- Triggered with Meet the Vandals (92031)
-							["timeline"] = { ADDED_11_2_0 },
+							timeline = { ADDED_11_2_0 },
 						}),
 						q(92033, {	-- Triggered with Meet the Vandals (92031)
-							["timeline"] = { ADDED_11_2_0 },
+							timeline = { ADDED_11_2_0 },
 						}),
 					}),
 				}),
@@ -916,47 +921,50 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.TWW, {
 		},
 	}),
 	inst(1302, bubbleDown({	-- Manaforge Omega
-		["isWeekly"] = true,
+		isWeekly = true,
 	},{
-		-- All
-		q(91046, name(HEADERS.Item, 245510)),	-- Loombeast Silk chance per week (assumed	-- also triggered on alt with no loot)
-		q(91010, name(HEADERS.Encounter, PLEXUS)),	-- Sentinel Plexus
-		q(91012, name(HEADERS.Encounter, LOOMITHAR)),	-- Loomithar
-		q(91011, name(HEADERS.Encounter, NAAZINDHRI)),	-- Soulbinder Naazindhr
-		q(91013, name(HEADERS.Encounter, ARAZ)),	-- Forgeweaver Araz
-		q(91014, name(HEADERS.Encounter, HUNTERS)),	-- The Soul Hunters
-		q(91015, name(HEADERS.Encounter, FRACTILLUS)),	-- Fractillus
-		q(91016, name(HEADERS.Encounter, SALHADAAR)),	-- Loomithar
-		q(91017, name(HEADERS.Encounter, DIMENSIUS)),	-- Dimensius
-		-- Trash
-		q(91021, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
-		q(91019, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
-		q(91020, name(HEADERS.NPC, 245617)),	-- The Bone Melter
-		q(91018, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
+		timeline = { ADDED_11_2_0_SEASONSTART },
+		groups = {
+			-- All
+			q(91046, name(HEADERS.Item, 245510)),	-- Loombeast Silk chance per week (assumed	-- also triggered on alt with no loot)
+			q(91010, name(HEADERS.Encounter, PLEXUS)),	-- Sentinel Plexus
+			q(91012, name(HEADERS.Encounter, LOOMITHAR)),	-- Loomithar
+			q(91011, name(HEADERS.Encounter, NAAZINDHRI)),	-- Soulbinder Naazindhr
+			q(91013, name(HEADERS.Encounter, ARAZ)),	-- Forgeweaver Araz
+			q(91014, name(HEADERS.Encounter, HUNTERS)),	-- The Soul Hunters
+			q(91015, name(HEADERS.Encounter, FRACTILLUS)),	-- Fractillus
+			q(91016, name(HEADERS.Encounter, SALHADAAR)),	-- Loomithar
+			q(91017, name(HEADERS.Encounter, DIMENSIUS)),	-- Dimensius
+			-- Trash
+			q(91021, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
+			q(91019, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
+			q(91020, name(HEADERS.NPC, 245617)),	-- The Bone Melter
+			q(91018, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
 
-		-- LFR
-		q(90977, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
-		q(90981, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
-		q(90989, name(HEADERS.NPC, 245617)),	-- The Bone Melter
-		q(90985, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
+			-- LFR
+			q(90977, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
+			q(90981, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
+			q(90989, name(HEADERS.NPC, 245617)),	-- The Bone Melter
+			q(90985, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
 
-		-- Normal
-		q(90978, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
-		q(90982, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
-		q(90990, name(HEADERS.NPC, 245617)),	-- The Bone Melter
-		q(90986, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
+			-- Normal
+			q(90978, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
+			q(90982, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
+			q(90990, name(HEADERS.NPC, 245617)),	-- The Bone Melter
+			q(90986, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
 
-		-- Heroic
-		q(90979, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
-		q(90983, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
-		q(90991, name(HEADERS.NPC, 245617)),	-- The Bone Melter
-		q(90987, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
+			-- Heroic
+			q(90979, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
+			q(90983, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
+			q(90991, name(HEADERS.NPC, 245617)),	-- The Bone Melter
+			q(90987, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
 
-		-- Mythic
-		q(90980, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
-		q(90984, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
-		q(90992, name(HEADERS.NPC, 245617)),	-- The Bone Melter
-		q(90988, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
+			-- Mythic
+			q(90980, name(HEADERS.NPC, 239454)),	-- Darkmage Zadus
+			q(90984, name(HEADERS.NPC, 239702)),	-- Watcher Gaz'Kreth
+			q(90992, name(HEADERS.NPC, 245617)),	-- The Bone Melter
+			q(90988, name(HEADERS.NPC, 245601)),	-- Enforcer Jak'tull
 
+		},
 	})),
 }));

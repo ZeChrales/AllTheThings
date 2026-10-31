@@ -3,7 +3,7 @@
 ---------------------------------------------------------------------------
 -- Everything in this file hasn't been implemented yet.
 -- @Darkal - Oi, do the thing! :D
-CRIEVES_I_AM_TOO_LAZY_FOR_THIS_LIST = createHeader({
+local CRIEVES_I_AM_TOO_LAZY_FOR_THIS_LIST = createHeader({
 	readable = "Crieve's Never Implemented List",
 	icon = 132738,
 	text = {
@@ -15,19 +15,20 @@ CRIEVES_I_AM_TOO_LAZY_FOR_THIS_LIST = createHeader({
 		cn = "如果以下内容已在别处归类整理，请将它们从本清单中删除。谢谢。",
 	},
 });
+
 root("NeverImplemented", n(CRIEVES_I_AM_TOO_LAZY_FOR_THIS_LIST, {
 	q(63769),	-- Holiday Reset Yearly Quest
 	q(55296),	-- This quest was reported as missing on Discord, but has no information related to it similar to 6842 and 7069.
 
 	q(8226, {	-- Rare Fish - Pale Ghoulfish
-		-- ["qg"] = 15079,	-- Fishbot 5000
-		-- ["coord"] = { 27.4, 76.9, STRANGLETHORN_VALE },
-		["cost"] = {
+		-- qg = 15079,	-- Fishbot 5000
+		-- coord = { 27.4, 76.9, STRANGLETHORN_VALE },
+		cost = {
 			{ "i", 19804, 1 },	-- Pale Ghoulfish
 		},
-		["requireSkill"] = FISHING,
-		["repeatable"] = true,
-		["groups"] = {
+		requireSkill = FISHING,
+		repeatable = true,
+		groups = {
 			i(7996),	-- Worn Fishing Hat
 		},
 	}),

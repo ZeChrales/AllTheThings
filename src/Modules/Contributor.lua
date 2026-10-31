@@ -4,16 +4,23 @@
 local _, app = ...;
 
 -- Globals
+--- @type function,function,function,function,
 local ipairs,pairs,tostring,setmetatable
 	= ipairs,pairs,tostring,setmetatable
+--- @type function,function,
 local GetQuestID,C_QuestLog_IsOnQuest
 	= GetQuestID,C_QuestLog.IsOnQuest
 
 -- Modules
+--- @type function
 local DelayedCallback = app.CallbackHandlers.DelayedCallback
+--- @type function
 local round = app.round
+--- @type function
 local SearchForObject = app.SearchForObject
+--- @type function
 local GetPlayerAura = app.WOWAPI.GetPlayerAuraBySpellID
+--- @type function
 local GetItemInfoInstant = app.WOWAPI.GetItemInfoInstant
 local DebugPrinting
 
@@ -64,20 +71,39 @@ local Reports = setmetatable({}, { __index = function(t,key)
 end})
 
 
+-- since discord just keeps changing how they color code blocks
+-- will try to use some common format lines for easier adjustments in the future
+local ReportLineFormats = {
+	KeyNum = ",%s=%d",
+	KeyRaw = ",%s#%s",
+	KeyStr = ",%s=\"%s\"",
+	KeySec = ",%s#<secret>",
+	Info = "%s:%s",
+	PlayerLocation = "PlayerLocation: {%s, %s, %s},    -- %s",
+	ATT = "ATT: \"%s\"GameBuild\"%d\"UTC\"%s\"",
+}
 local function GetReportPlayerLocation()
 	local mapID, px, py, fake = app.GetPlayerPosition()
 	local difficultyID, diffName = select(3, GetInstanceInfo())
-	local diffVal = (difficultyID and difficultyID ~= 0 and ("Diff: "..difficultyID) or "")
+	local diffVal = (difficultyID and difficultyID ~= 0 and (" Diff: "..difficultyID) or "")
 	if diffName and diffName ~= "" then
 		diffVal = diffVal.." ["..diffName.."]"
 	end
 	if fake then
-		return UNKNOWN..", "..UNKNOWN..", "..tostring(mapID or UNKNOWN).." \""..(app.GetMapName(mapID) or "??").."\" "..diffVal
+		return ReportLineFormats.PlayerLocation:format(
+			UNKNOWN,
+			UNKNOWN,
+			tostring(mapID or UNKNOWN),
+			(app.GetMapName(mapID) or "??")..diffVal)
 	end
 	-- floor coords to nearest tenth
 	if px then px = ("%.1f"):format(round(px, 1)) end
 	if py then py = ("%.1f"):format(round(py, 1)) end
-	return tostring(px or UNKNOWN)..", "..tostring(py or UNKNOWN)..", "..tostring(mapID or UNKNOWN).." \""..(app.GetMapName(mapID) or "??").."\" "..diffVal
+	return ReportLineFormats.PlayerLocation:format(
+		tostring(px or UNKNOWN),
+		tostring(py or UNKNOWN),
+		tostring(mapID or UNKNOWN),
+		(app.GetMapName(mapID) or "??")..diffVal)
 end
 
 local LorewalkingIgnoredReportTypes = {
@@ -88,7 +114,7 @@ local ReportTitleSuffixFuncs = {
 	Quest = function()
 		local mapID, px, py, fake = app.GetPlayerPosition()
 		local mapName = app.GetMapName(mapID)
-		return " ("..(mapName or "Unknown Map")..")"
+		return "--("..(mapName or "Unknown Map")..")"
 	end,
 }
 local function DoReport(reporttype, id)
@@ -108,11 +134,11 @@ local function DoReport(reporttype, id)
 	local orderedReportData = {}
 	-- id/type are ordered first always if existing
 	if reportData.id then
-		orderedReportData[#orderedReportData + 1] = "id: "..reportData.id
+		orderedReportData[#orderedReportData + 1] = ReportLineFormats.KeyNum:format("id",reportData.id)
 		reportData.id = nil
 	end
 	if reportData.type then
-		orderedReportData[#orderedReportData + 1] = "type: "..reportData.type
+		orderedReportData[#orderedReportData + 1] = ReportLineFormats.KeyStr:format("type",reportData.type)
 		reportData.type = nil
 	end
 	-- secret report data
@@ -132,14 +158,16 @@ local function DoReport(reporttype, id)
 	for k,v in pairs(reportData) do
 		vtype = type(v)
 		if vtype == "number" then
-			val = tostring(k)..": "..tostring(v)
+			val = ReportLineFormats.KeyNum:format(tostring(k),tostring(v))
 		else
 			val = tostring(v)
 			-- EditBox:SetText cannot accept secret values in the end, so trying to maintain them through the report sequence is pointless
 			if issecretvalue(val) then
-				val = tostring(k)..": <secret>"
+				val = ReportLineFormats.KeySec:format(tostring(k))
+			elseif type(v) == "boolean" then
+				val = ReportLineFormats.KeyRaw:format(k,tostring(v))
 			else
-				val = tostring(k)..": \""..tostring(v).."\""
+				val = ReportLineFormats.KeyStr:format(tostring(k),tostring(v))
 			end
 		end
 		keyedData[#keyedData + 1] = val
@@ -151,17 +179,17 @@ local function DoReport(reporttype, id)
 		headerTitle = headerTitle..titleSuffix()
 	end
 	reportData[#reportData + 1] = headerTitle
-	reportData[#reportData + 1] = "```vbnet"	-- discord fancy box start (testing: https://highlightjs.org/demo)
+	reportData[#reportData + 1] = "```lua"	-- discord fancy box start (testing: https://highlightjs.org/demo // https://discord-syntax-highlighting.vercel.app/)
 	-- add distinct ordered/keyed data
 	app.ArrayAppendDistinct(reportData, orderedReportData, keyedData)
 	-- common report data
 	reportData[#reportData + 1] = "---- User Info ----"
-	reportData[#reportData + 1] = "PlayerLocation: "..GetReportPlayerLocation()
+	reportData[#reportData + 1] = GetReportPlayerLocation()
 	local lastQuests = app.TableConcat(app.MostRecentQuestTurnIns, nil, nil, "<") or ""
 	if lastQuests ~= "" then
 		reportData[#reportData + 1] = "LastQuests:"..lastQuests
 	end
-	reportData[#reportData + 1] = "Character: L:"..app.Level.." R:"..app.RaceID.." ("..app.Race..") C:"..app.ClassIndex.." ("..app.Class..")"
+	reportData[#reportData + 1] = "Character: L:"..app.Level.." R:"..app.RaceID.." \""..app.Race.."\" C:"..app.ClassIndex.." \""..app.Class.."\""
 	-- somehow app.CurrentCharacter nil at this point in some situation...
 	-- maybe an app.report triggered before PLAYER_LOGIN... ?
 	local Professions = app.CurrentCharacter and app.CurrentCharacter.Professions
@@ -187,7 +215,51 @@ local function DoReport(reporttype, id)
 		end
 		reportData[#reportData + 1] = "Skills: "..(app.TableConcat(skills) or "")
 	end
-	reportData[#reportData + 1] = "ATT: "..app.Version.." GameBuild: "..app.GameBuildVersion.." UTC: "..date("!%Y-%m-%dT%H:%M:%SZ", time())
+
+	---- Removing Covenants/Renowns/Unlocks info in Reports for now, hasn't been useful in any recent reports
+
+	-- if C_Covenants then	-- Covenants
+	-- 	local covInfo = "";
+	-- 	local covID = C_Covenants.GetActiveCovenantID();
+	-- 	if covID and covID > 0 then
+	-- 		local covData = C_Covenants.GetCovenantData(covID);
+	-- 		if covData then
+	-- 			covInfo = covInfo .. covID..":"..covData.name;
+	-- 			local covRenown = C_CovenantSanctumUI.GetRenownLevel();
+	-- 			if covRenown then
+	-- 				covInfo = covInfo .. ":"..covRenown;
+	-- 			end
+	-- 		else
+	-- 			covInfo = covInfo .. "N/A";
+	-- 		end
+	-- 	else
+	-- 		covInfo = covInfo .. "N/A";
+	-- 	end
+	-- 	reportData[#reportData + 1] = ReportLineFormats.Info:format("cov",covInfo)
+	-- end
+	-- if C_MajorFactions then	-- Renown
+	-- 	local data = {}
+	-- 	-- DF/TWW/MD
+	-- 	for i=9,11 do
+	-- 		local exp = {}
+	-- 		data[i==9 and "DF" or i==10 and "TWW" or i==11 and "MD" or i] = exp
+	-- 		for _,factionID in ipairs(C_MajorFactions.GetMajorFactionIDs(i)) do
+	-- 			local renown = C_MajorFactions.GetMajorFactionData(factionID);
+	-- 			exp[factionID] = renown and renown.renownLevel or "?"
+	-- 		end
+	-- 	end
+	-- 	reportData[#reportData + 1] = ReportLineFormats.Info:format("renown",app:RenderStylizedRawData(data, "Compact"))
+	-- end
+
+	-- if app.GameBuildVersion >= 100000 then	-- Only include this after Dragonflight
+	-- 	local acctUnlocks = {
+	-- 		app.IsQuestFlaggedCompleted(72366) and "DF_CA:Y" or "DF_CA:N",	-- Dragonflight Campaign Complete
+	-- 		app.IsQuestFlaggedCompleted(75658) and "DF_ZC:Y" or "DF_ZC:N",	-- Dragonflight Zaralek Caverns Complete
+	-- 		app.IsQuestFlaggedCompleted(79573) and "WW_CA:Y" or "WW_CA:N",	-- The War Within Campaign Complete
+	-- 	}
+	-- 	reportData[#reportData + 1] = ReportLineFormats.Info:format("unlocks",app.TableConcat(acctUnlocks, nil, nil, "/"))
+	-- end
+	reportData[#reportData + 1] = ReportLineFormats.ATT:format(app.Version,app.GameBuildVersion,date("!%Y-%m-%dT%H:%M:%SZ", time()))
 	reportData[#reportData + 1] = "```";	-- discord fancy box end
 
 	if app:SetupReportDialog(dialogID, "Contributor Report: " .. dialogID, reportData, allowRepeat) then
@@ -296,6 +368,7 @@ api.AddReportData = AddReportData
 -- 5) Then add 0.1 to that number and insert it into this table for the mapID
 -- Effectively, this number should represent 2x the Interaction Coord Distance for a given map
 local MapPrecisionOverrides = {
+-- editorconfig-checker-disable
 	  [24] = 2,	-- Light's Hope Chapel
 	  [46] = 3,	-- Karazhan Catacombs
 	 [555] = 2,	-- Cavern of Lost Spirits
@@ -329,6 +402,7 @@ local MapPrecisionOverrides = {
 	 [887] = 7,	-- The Vindicaar, Antoran Wastes Lower
 	 [940] = 7,	-- The Vindicaar
 	 [942] = 0.30,	-- Stormsong Valley
+-- editorconfig-checker-enable
 	[1021] = 1,	-- Chamber of Heart
 	[1164] = 6,	-- Dazar'alor Hall of Chroniclers
 	[1176] = 3,	-- Breath Of Pa'ku
@@ -440,14 +514,15 @@ end
 -- either by following the player or having player-based decisions that cause them to have any coordinates
 local MobileDB = {}
 MobileDB.Creature = {
+-- editorconfig-checker-disable
 	   [715] = true,	-- Hemet Nesingwary Jr.
 	   [718] = true,	-- Sir S. J. Erlgadin
 	   [951] = true,	-- Brother Paxton
 	  [2079] = true,	-- Ilthalaine
 	  [2545] = true,	-- "Pretty Boy" Duncan
 	  [2608] = true,	-- Commander Amaren
-	 [14305] = true,	-- Human Orhpan
-	 [14444] = true,	-- Orcish Orhpan
+	 [14305] = true,	-- Human Orphan
+	 [14444] = true,	-- Orcish Orphan
 	 [14626] = true,	-- Taskmaster Scrange
 	 [15732] = true,	-- Wonderform Operator
 	 [15891] = true,	-- Lunar Festival Herald
@@ -667,6 +742,7 @@ MobileDB.Creature = {
 	 [98519] = true,	-- Initiate Da-Nel
 	 [98648] = true,	-- Allari the Souleater
 	 [99343] = true,	-- Kor'vas Bloodthorn
+-- editorconfig-checker-enable
 	[100786] = true,	-- Snowfeather
 	[101061] = true,	-- Archdruid Hamuul Runetotem
 	[101344] = true,	-- Hooded Priestess (Horde)
@@ -852,6 +928,7 @@ MobileDB.Creature = {
 -- but also quests objects that are not sourced elsewhere..
 -- Legend: q - Quest, dq - Daily Quest, wq - World Quest, [A] - Alliance, [H] - Horde
 MobileDB.GameObject = {
+-- editorconfig-checker-disable
 		[57] = true,	-- Bloodscalp Lore Tablet (q:26744)
 	   [119] = true,	-- Abercrombie's Crate (q:26680)
 	   [276] = true,	-- Shimmerweed Basket (q:315)
@@ -917,6 +994,7 @@ MobileDB.GameObject = {
 	 [75299] = true,	-- Large Solid Chest
 	 [75300] = true,	-- Large Solid Chest
 	 [97701] = true,	-- Torch
+-- editorconfig-checker-enable
 	[101854] = true,	-- Herod's Door
 	[104591] = true,	-- Chapel Door
 	[106319] = true,	-- Battered Chest
@@ -1013,6 +1091,8 @@ MobileDB.GameObject = {
 	[184568] = true,	-- Lady Vashj Bridge Console
 	[184793] = true,	-- Primitive Chest
 	[184867] = true,	-- Nether Drake Egg (q:10609)
+	[184869] = true,	-- Baa'ri Tablet Fragment (q:10568, 10683)
+	[184870] = true,	-- Baa'ri Tablet Fragment (q:10568, 10683)
 	[184906] = true,	-- Power Converter (q:10584)
 	[184912] = true,	-- The Shattered Halls
 	[184980] = true,	-- Felhound Poo (q:10629)
@@ -2164,6 +2244,7 @@ MobileDB.GameObject = {
 	[282660] = true,	-- Urn of Agussu
 	[282740] = true,	-- Mysterious Trashpile
 	[284468] = true,	-- 7th Legion Supply Crate (q:50966)
+	[284473] = true,	-- Plundered Supplies
 	[287006] = true,	-- Faithless Weapon Rack (q:49665)
 	[287066] = true,	-- Morgrum's Device (q:49282)
 	[287068] = true,	-- Morgrum's Device
@@ -2757,6 +2838,7 @@ MobileDB.GameObject = {
 	[406355] = true,	-- Dreamseed Cache
 	[406356] = true,	-- Dreamseed Cache
 	[406371] = true,	-- Dream Seed Dirt Pile
+	[406385] = true,	-- Dreaming Growth
 	[406804] = true,	-- Armory Door
 	[406805] = true,	-- Cathedral Door
 	[406895] = true,	-- Violet Forget-Me-Not (q:77312)
@@ -3134,10 +3216,13 @@ MobileDB.GameObject = {
 	[523287] = true,	-- Voidbound Refulgent Copper
 	[523288] = true,	-- Umbral Tin
 	[523290] = true,	-- Umbral Tin Seam
+	[523291] = true,	-- Primal Umbral Tin
 	[523293] = true,	-- Voidbound Umbral Tin
+	[523294] = true,	-- Lightfused Umbral Tin
 	[523295] = true,	-- Brilliant Silver
 	[523297] = true,	-- Rich Brilliant Silver
 	[523299] = true,	-- Primal Brilliant Silver
+	[523300] = true,	-- Wild Brilliant Silver
 	[523378] = true,	-- Portal to Nagrand
 	[523409] = true,	-- Shiny Trash Can
 	[523414] = true,	-- Snake Nest (q:88658)
@@ -3312,6 +3397,7 @@ MobileDB.GameObject = {
 	[568199] = true,	-- Bamboo Lumber
 	[568254] = true,	-- Scattered Supplies (q:91384)
 	[568256] = true,	-- Iridescent Mana Silk (q:91996)
+	[568241] = true,	-- Bright Feather (q:91983)
 	[568305] = true,	-- Bamboo Lumber
 	[568333] = true,	-- Fragrant Bloodthistle
 	[568405] = true,	-- Bamboo Lumber
@@ -3379,6 +3465,7 @@ MobileDB.GameObject = {
 	[575032] = true,	-- Ironwood Lumber
 	[576113] = true,	-- Ironwood Lumber
 	[576199] = true,	-- Ironwood Lumber
+	[576212] = true,	-- Bee Hive (q:92537)
 	[576282] = true,	-- Ironwood Lumber
 	[576400] = true,	-- Ironwood Lumber
 	[576402] = true,	-- Ironwood Lumber
@@ -3446,6 +3533,7 @@ MobileDB.GameObject = {
 	[612079] = true,	-- Foul Carcass (q:93397)
 	[612081] = true,	-- Foul Carcass (q:93397)
 	[612102] = true,	-- Transplanted Tranquility Bloom
+	[612154] = true,	-- Bee Hive (q:93401)
 	[612274] = true,	-- Portal to K'aresh (q:85002)
 	[612370] = true,	-- Burning Amani Pinecone
 	[613268] = true,	-- Burning Torch
@@ -3526,6 +3614,7 @@ MobileDB.GameObject = {
 	[642115] = true,	-- Challenger's Cache [Murder Row]
 	[642203] = true,	-- Repair Supplies
 	[642704] = true,	-- Seagull Feather (q:95673)
+	[644613] = true,	-- Sugar Beet (q:95825)
 	[645579] = true,	-- Congealed Bile (q:95953)
 	[649016] = true,	-- Venom-Etched Sword (q:95906)
 	[649481] = true,	-- Wood Debris (q:96111)
@@ -4168,3 +4257,51 @@ app.AddEventHandler("OnStartup", function()
 	Contribute(AllTheThingsSavedVariables.Contributor)
 	DebugPrinting = AllTheThingsSavedVariables.Contributor_DebugPrinting
 end)
+
+do	-- Data Serialization
+
+local IgnoredKeys = {
+	parent = true,
+	sourceParent = true,
+	__merge = true,
+	window = true,
+}
+local TableRefs = {}
+local function Serialize(v)
+	local t = type(v)
+	if t == "string" then
+		return (string.format("%q", v):gsub("\\\n", "\\n"))
+	elseif t == "number" or t == "boolean" then
+		return tostring(v)
+	elseif t == "table" then
+		if TableRefs[v] then
+			return "<REF>"
+		else
+			TableRefs[v] = true
+			local out, n = {}, #v
+			for i = 1, n do out[#out + 1] = Serialize(v[i]) end
+			local keys = {}
+			for k in pairs(v) do
+				if not IgnoredKeys[k] and not (type(k) == "number" and k % 1 == 0 and k >= 1 and k <= n) then
+					keys[#keys + 1] = k
+				end
+			end
+			table.sort(keys, function(a, b) return tostring(a) < tostring(b) end)
+			for _, k in ipairs(keys) do
+				local ks = (type(k) == "string" and k:match("^[%a_][%w_]*$")) and k or ("[" .. Serialize(k) .. "]")
+				out[#out + 1] = ks .. "=" .. Serialize(v[k])
+			end
+			return "{" .. table.concat(out, ",") .. "}"
+		end
+	elseif t == "function" then
+		return "<func>"
+	end
+	return "nil"
+end
+
+app:RegisterDataStyleExporter("Compact", {
+	main = function(data, depth) wipe(TableRefs) return Serialize(data) end,
+	getSub = function() return "" end,	-- Serialize handles the nesting so don't follow default Sub data
+})
+
+end

@@ -2,7 +2,7 @@
 --        P R O M O T I O N S   M O D U L E        --
 -----------------------------------------------------
 
-HEARTHSTONE = createHeader({
+local HEARTHSTONE = createHeader({
 	readable = "Hearthstone",
 	icon = 134414,
 	text = {
@@ -23,7 +23,7 @@ HEARTHSTONE = createHeader({
 		cn = "在《炉石传说》中赢得3场比赛即可获得这些奖励的资格。\n\n这款游戏是免费的，快去下载吧！\n\n注意：这要感谢 IceQ1337！",
 	},
 });
-HEARTHSTONE_MERCENARIES_MODE = createHeader({
+local HEARTHSTONE_MERCENARIES_MODE = createHeader({
 	readable = "Hearthstone Mercenaries",
 	icon = 134414,
 	text = {
@@ -44,7 +44,7 @@ HEARTHSTONE_MERCENARIES_MODE = createHeader({
 		cn = "完成《炉石传说》佣兵战纪模式的教学，并派遣你的队伍执行一次任务，即可获得此奖励。",
 	},
 });
-HEARTHSTONE_10TH_ANNIVERSARY = createHeader({
+local HEARTHSTONE_10TH_ANNIVERSARY = createHeader({
 	readable = "Hearthstone's 10th Anniversary",
 	icon = 134414,
 	text = {
@@ -63,22 +63,22 @@ HEARTHSTONE_10TH_ANNIVERSARY = createHeader({
 });
 
 root(ROOTS.Promotions, {
-	n(HEARTHSTONE, bubbleDown({ ["u"] = REAL_MONEY }, {
-		["timeline"] = {
+	n(HEARTHSTONE, bubbleDown({ u = REAL_MONEY }, {
+		timeline = {
 			-- #if ANYCLASSIC
 			CREATED_5_3_0,
 			-- #else
 			ADDED_5_3_0,
 			-- #endif
 		},
-		["groups"] = {
+		groups = {
 			ach(8345),	-- Hearthstoned
 			i(98618),	-- Hearthsteed (MOUNT!)
 		},
 	})),
-	n(HEARTHSTONE_MERCENARIES_MODE, bubbleDown({ ["u"] = REAL_MONEY }, {
-		["timeline"] = { ADDED_9_1_0 },
-		["groups"] = {
+	n(HEARTHSTONE_MERCENARIES_MODE, bubbleDown({ u = REAL_MONEY }, {
+		timeline = { ADDED_9_1_0 },
+		groups = {
 			-- #if AFTER 11.2.5
 			i(258431),	-- Sarge's Tale (MOUNT!)
 			-- #else
@@ -88,17 +88,17 @@ root(ROOTS.Promotions, {
 		},
 	})),
 	n(HEARTHSTONE_10TH_ANNIVERSARY, {
-		["maps"] = {
+		maps = {
 			DUROTAR,
 			STORMWIND_CITY,
 			VALDRAKKEN,
 		},
-		["timeline"] = { ADDED_10_2_5 },
-		["groups"] = {
+		timeline = { ADDED_10_2_5 },
+		groups = {
 			n(ACHIEVEMENTS, {
 				ach(19866,	{	-- Hearthstoned: Fiery Edition
-					["provider"] = { "i", 163186 },	-- Fiery Hearthsteed (MOUNT!)
-					["u"] = REMOVED_FROM_GAME,	-- May 14, 2024
+					provider = { "i", 163186 },	-- Fiery Hearthsteed (MOUNT!)
+					u = REMOVED_FROM_GAME,	-- May 14, 2024
 				}),
 				achpart(20033, 19724, {	-- Hearthstone Beginner
 					i(211946, {	-- Hearthstone Game Table (TOY!)
@@ -107,51 +107,51 @@ root(ROOTS.Promotions, {
 				}),
 				ach(19724),	-- Hearthstone Card Collection
 			}),
-			n(MAILBOX, bubbleDown({ ["timeline"] = { REMOVED_10_2_6 } }, {
+			n(MAILBOX, sharedData({ timeline = { REMOVED_10_2_6 } }, {
 				i(212154),	-- Hearthstone Invitation Letter (QS!)
 			})),
-			n(QUESTS, bubbleDown({ ["timeline"] = { REMOVED_10_2_6 } }, {
+			n(QUESTS, sharedData({ timeline = { REMOVED_10_2_6 } }, {
 				q(79184, {	-- It's Hearthstone's Anniversary!
-					["provider"] = { "i", 212154 },	-- Hearthstone Invitation Letter (QS!)
-					["groups"] = { i(212157) },	-- An Invitation
+					provider = { "i", 212154 },	-- Hearthstone Invitation Letter (QS!)
+					groups = { i(212157) },	-- An Invitation
 				}),
 				q(79178, {	-- Play Hearthstone!
-					["sourceQuests"] = { 79184 },	-- It's Hearthstone's Anniversary!
-					["provider"] = { "n", 215409 },	-- MC Farala
-					["coord"] = { 61.6, 31.1, VALDRAKKEN },
-					["groups"] = {
+					sourceQuests = { 79184 },	-- It's Hearthstone's Anniversary!
+					provider = { "n", 215409 },	-- MC Farala
+					coord = { 61.6, 31.1, VALDRAKKEN },
+					groups = {
 						i(211965),	-- Hearthstone Wild Card
 						i(212979),	-- Hearthstone Starter Pack
 					},
 				}),
 				q(79693, {	-- Play Hearthstone!
-					["sourceQuests"] = { 79184 },	-- It's Hearthstone's Anniversary!
-					["coord"] = { 61.6, 31.1, STORMWIND_CITY },
-					["races"] = ALLIANCE_ONLY,
-					["groups"] = {
+					sourceQuests = { 79184 },	-- It's Hearthstone's Anniversary!
+					coord = { 61.6, 31.1, STORMWIND_CITY },
+					races = ALLIANCE_ONLY,
+					groups = {
 						i(211965),	-- Hearthstone Wild Card
 						i(212979),	-- Hearthstone Starter Pack
 					},
 				}),
 				q(79694, {	-- Play Hearthstone!
-					["sourceQuests"] = { 79184 },	-- It's Hearthstone's Anniversary!
-					["coord"] = { 61.6, 31.1, ORGRIMMAR },
-					["races"] = HORDE_ONLY,
-					["groups"] = {
+					sourceQuests = { 79184 },	-- It's Hearthstone's Anniversary!
+					coord = { 61.6, 31.1, ORGRIMMAR },
+					races = HORDE_ONLY,
+					groups = {
 						i(211965),	-- Hearthstone Wild Card
 						i(212979),	-- Hearthstone Starter Pack
 					},
 				}),
 			})),
 			n(215146, {	-- Dr. Boom <"Dr. 7">
-				["coords"] = {
+				coords = {
 					{ 53.10, 16.17, DUROTAR },
 					{ 33.99, 20.52, STORMWIND_CITY },
 					{ 62.24, 66.97, VALDRAKKEN },
 				},
-				["provider"] = { "n", 214985 },	-- Ominous Portal
-				["timeline"] = { REMOVED_10_2_6 },
-				["groups"] = {
+				provider = { "n", 214985 },	-- Ominous Portal
+				timeline = { REMOVED_10_2_6 },
+				groups = {
 					i(212335),	-- Collector's Carryall (BAG!)
 					i(212337),	-- Stone of the Hearth (TOY!)
 					i(212522),	-- Compass Rose (MOUNT!)
@@ -186,14 +186,14 @@ root(ROOTS.Promotions, {
 				},
 			}),
 			i(163186, {	-- Fiery Hearthsteed (MOUNT!)
-				["description"] = "Granted to Players who logged in to Hearthstone between March 11th 2024 and May 14th 2024.",
-				["u"] = REMOVED_FROM_GAME,
+				description = "Granted to Players who logged in to Hearthstone between March 11th 2024 and May 14th 2024.",
+				u = REMOVED_FROM_GAME,
 			}),
 			n(VENDORS, {
 				n(215385, {	-- Shady Dealer
-					["coord"] = { 60.6, 59.3, VALDRAKKEN },
-					["timeline"] = { REMOVED_10_2_6 },
-					["groups"] = {
+					coord = { 60.6, 59.3, VALDRAKKEN },
+					timeline = { REMOVED_10_2_6 },
+					groups = {
 						i(211965),	-- Hearthstone Wild Card
 					},
 				}),
@@ -202,36 +202,39 @@ root(ROOTS.Promotions, {
 	}),
 });
 
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.DF, bubbleDownSelf({ ["timeline"] = { ADDED_10_2_5 } }, {
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.DF, {
 	n(HEARTHSTONE, {
-		q(79451),	-- After first daily kill of Dr. Boom (maybe bag loot trigger?)
-		q(79452),	-- After first daily kill of Dr. Boom (maybe something else trigger?)
-		-- q(79441),	-- Looted Sarge (itemID 212606) (automated)
-		q(79186),	-- Completing 'Hearthstone's Anniversary!' (questID 79184)
-		q(79189),	-- Completing 'Hearthstone's Anniversary!' (questID 79184)
-		-- Account lockout from getting the same card again
-		-- Quest
-		q(79409),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
-		q(79416),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
-		q(79419),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
-		q(79420),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
-		q(79422),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
-		q(79425),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
-		q(79428),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
-		q(79583),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
-		-- Loot
-		q(79407),	-- Stolen Hearthstone Card will contain 'Arcane Explosion' card
-		q(79408),	-- Stolen Hearthstone Card will contain 'Pyroblast' card
-		q(79410),	-- Stolen Hearthstone Card will contain 'Preparation' card
-		q(79417),	-- Stolen Hearthstone Card will contain 'Righteousness' card
-		q(79421),	-- Stolen Hearthstone Card will contain 'Chillwind Yeti' card
-		q(79423),	-- Stolen Hearthstone Card will contain 'Grove Tender' card
-		q(79424),	-- Stolen Hearthstone Card will contain 'Abomination' card
-		q(79426),	-- Stolen Hearthstone Card will contain 'Ancient of Lore' card
-		q(79427),	-- Stolen Hearthstone Card will contain 'Hogger' card
-		q(79429),	-- Stolen Hearthstone Card will contain 'Blessing of Kings' card
-		q(79430),	-- Stolen Hearthstone Card will contain 'Forbidden Words' card
-		q(79431),	-- Stolen Hearthstone Card will contain 'Scarlet Crusader' card
-		q(79459),	-- Stolen Hearthstone Card will contain 'Cairne Bloodhoof' card
+		timeline = { ADDED_10_2_5 },
+		groups = {
+			q(79451),	-- After first daily kill of Dr. Boom (maybe bag loot trigger?)
+			q(79452),	-- After first daily kill of Dr. Boom (maybe something else trigger?)
+			-- q(79441),	-- Looted Sarge (itemID 212606) (automated)
+			q(79186),	-- Completing 'Hearthstone's Anniversary!' (questID 79184)
+			q(79189),	-- Completing 'Hearthstone's Anniversary!' (questID 79184)
+			-- Account lockout from getting the same card again
+			-- Quest
+			q(79409),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
+			q(79416),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
+			q(79419),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
+			q(79420),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
+			q(79422),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
+			q(79425),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
+			q(79428),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
+			q(79583),	-- Hearthstone Starter Pack card during 'Play Hearthstone!' (questID 79178)
+			-- Loot
+			q(79407),	-- Stolen Hearthstone Card will contain 'Arcane Explosion' card
+			q(79408),	-- Stolen Hearthstone Card will contain 'Pyroblast' card
+			q(79410),	-- Stolen Hearthstone Card will contain 'Preparation' card
+			q(79417),	-- Stolen Hearthstone Card will contain 'Righteousness' card
+			q(79421),	-- Stolen Hearthstone Card will contain 'Chillwind Yeti' card
+			q(79423),	-- Stolen Hearthstone Card will contain 'Grove Tender' card
+			q(79424),	-- Stolen Hearthstone Card will contain 'Abomination' card
+			q(79426),	-- Stolen Hearthstone Card will contain 'Ancient of Lore' card
+			q(79427),	-- Stolen Hearthstone Card will contain 'Hogger' card
+			q(79429),	-- Stolen Hearthstone Card will contain 'Blessing of Kings' card
+			q(79430),	-- Stolen Hearthstone Card will contain 'Forbidden Words' card
+			q(79431),	-- Stolen Hearthstone Card will contain 'Scarlet Crusader' card
+			q(79459),	-- Stolen Hearthstone Card will contain 'Cairne Bloodhoof' card
+		},
 	}),
-})));
+}));

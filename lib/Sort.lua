@@ -1,4 +1,3 @@
-
 -- Sort lib
 local _, app = ...;
 
@@ -521,7 +520,7 @@ local function Sort(t, compare, nested)
 		end
 	end
 end
--- Safely-sorts a table using a provided comparison function and whether to propogate to nested groups
+-- Safely-sorts a table using a provided comparison function and whether to propagate to nested groups
 -- Wrapping in a pcall since sometimes the sorted values are able to change while being within the sort method. This causes the 'invalid sort order function' error
 app.Sort = function(t, compare, nested)
 	return pcall(Sort, t, compare or defaultComparison, nested);
@@ -531,7 +530,7 @@ local function SortGroup(group, sortType)
 	-- app.PrintDebug("SortGroup", group.parent and group.parent.text, group.text, sortType);
 	if group.g then
 		-- either sort visible groups or by conditional
-        if group.visible then
+		if group.visible then
 			-- app.PrintDebug("sorting",group.hash,"by",sortType)
 			local status,err = app.Sort(group.g, app.SortDefaults[sortType]);
 			if status then

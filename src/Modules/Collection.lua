@@ -3,18 +3,22 @@ local L = app.L
 
 -- Dependencies: Locales, Modules.RetrievingData
 
-local pairs,type
-	= pairs,type
+--- @type function,function,function,
+local pairs,type,tonumber
+	= pairs,type,tonumber
 
+--- @type function,
 local IsRetrieving = app.Modules.RetrievingData.IsRetrieving;
 local Runner = app.CreateRunner("collection")
 
+--- @type function,
 local SearchForObject
 app.AddEventHandler("OnLoad", function()
 	SearchForObject = app.SearchForObject
 end)
 
 -- Collection Events
+--- @type function,
 local Callback = app.CallbackHandlers.Callback
 local FanfareFunctions = setmetatable({
 	Mount = app.Audio.PlayMountFanfare
@@ -123,6 +127,10 @@ app.AddRemovalTypeHandler = function(type, func)
 end
 
 local function HandleCollectionChange(t, isadd)
+	if app.GetRelativeField(t, "_hqt", true) then
+		app.PrintDebug("Ignored Collection on HQT group",app:SearchLink(t))
+		return
+	end
 	-- Report new things to your collection!
 	-- app.PrintDebug("HCC",app:SearchLink(t),isadd and "Collected" or "Removed")
 	-- to test: comment out text/name/link from BattlePet class, then cage & relearn a battle pet
@@ -298,6 +306,12 @@ app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, acco
 		if not cacheKey then
 			app.PrintDebug("STC:NoCACHE",app:SearchLink(t), key, id, accountWide, collected)
 			return
+		end
+		-- in the event a Thing is possible to detect collection via one key/id but actually caches its collection state based on a different key, the class can assign that via CACHEDKEY (ref. FirstCraft type)
+		local cachedKey = t.CACHEDKEY
+		if cachedKey then
+			app.PrintDebug("Collection swapping to CachedKey",id,"=>",cachedKey,":",t[cachedKey],"for cache",cacheKey)
+			id = t[cachedKey]
 		end
 		local oldstate = (accountWide and IsAccountCached or IsCached)(cacheKey, id)
 		local accountCache = accountWideData[cacheKey]

@@ -1,4 +1,3 @@
-
 -- Tooltip Module
 local _, app = ...;
 local L = app.L;
@@ -45,7 +44,7 @@ local function OnLoad_CacheObjectNames()
 	end
 end
 local GetBestObjectIDForName;
-if app.IsRetail then
+if app.IsRetail and not app.IsForever then
 	local InGame = app.Modules.Filter.Filters.InGame
 	GetBestObjectIDForName = function(name)
 		-- Account for Blizzard Shenanigans
@@ -116,6 +115,9 @@ if app.IsRetail then
 	end
 else
 	GetBestObjectIDForName = function(name)
+		-- Account for Blizzard Shenanigans
+		if issecretvalue(name) then return; end
+
 		-- Uses a provided 'name' and scans the ObjectDB to find potentially matching ObjectID's,
 		-- then correlate those search results by closest distance to the player's current position
 		--print("GetBestObjectIDForName:", "'" .. (name or RETRIEVING_DATA) .. "'");
@@ -774,7 +776,7 @@ app.AddEventHandler("OnRefreshComplete", function()
 end);
 
 -- Stores a cache of the 'tooltipInfo' for a given group
--- TODO: this isnt too effective right now since we have to clear the search cache as well
+-- TODO: this isn't too effective right now since we have to clear the search cache as well
 -- basically constantly. some tooltip information types rely on the 'Update' outcome of a group
 -- which is cached with the cached group
 -- perhaps will need to link the Update logic separately from the Search logic and use that

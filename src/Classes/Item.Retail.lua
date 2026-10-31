@@ -1,4 +1,3 @@
-
 local _, app = ...
 local L = app.L
 
@@ -16,6 +15,7 @@ local ItemEventListener = ItemEventListener
 local GetItemInfo = app.WOWAPI.GetItemInfo;
 local GetItemIcon = app.WOWAPI.GetItemIcon;
 local GetItemCount = app.WOWAPI.GetItemCount;
+local GetItemSpell = app.WOWAPI.GetItemSpell;
 local IsBoAOverride = C_Item.IsItemBindToAccountUntilEquip or app.ReturnFalse;
 
 -- CRIEVE NOTE: Add this to Classic's LocalizationDB and then remove this.
@@ -529,7 +529,7 @@ local CreateCostItem = app.CreateClass("CostItem", KEY, {
 		return GetItemCount(t.itemID, true, nil, true, true) or 0;
 	end,
 	collectible = app.ReturnFalse,
-	-- show a check when it is has matching quantity in your bags/reagent bank (bank/warband bank don't count at vendors)
+	-- show a check when it has matching quantity in your bags/reagent bank (bank/warband bank don't count at vendors)
 	saved = function(t)
 		return GetItemCount(t.itemID, nil, nil, true) >= t.total;
 	end,
@@ -556,6 +556,7 @@ if not app.Debugging then return end
 -- No reason to create all this for the avg user, and pretty sure none of this is typically used anyway
 local HarvestedItemDatabase;
 local C_Item_GetItemInventoryTypeByID = C_Item.GetItemInventoryTypeByID;
+--- Retail tooltip used in debug mode to harvest item metadata from tooltip text.
 ---@class ATTItemHarvesterForRetail: GameTooltip
 local ItemHarvester = CreateFrame("GameTooltip", "ATTItemHarvester", UIParent, "GameTooltipTemplate");
 ItemHarvester.AllTheThingsIgnored = true;

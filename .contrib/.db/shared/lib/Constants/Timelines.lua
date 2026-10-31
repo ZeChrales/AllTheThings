@@ -307,9 +307,12 @@ REMOVED_2_5_5_PHASE_2 = "removed 2.5.5.67511";			-- The Burning Crusade Classic 
 CREATED_2_5_6 = "created 2.5.6.68502";					-- The Burning Crusade Classic 2.5.6 launch on July 7th, 2026
 ADDED_2_5_6 = "added 2.5.6.68502";						-- The Burning Crusade Classic 2.5.6 launch on July 7th, 2026
 REMOVED_2_5_6 = "removed 2.5.6.68502";					-- The Burning Crusade Classic 2.5.6 launch on July 7th, 2026
-CREATED_2_5_6_PHASE_3 = "created 2.5.6.69110";			-- The Burning Crusade Classic 2.5.5 phase 3 launch on August 27th, 2026
-ADDED_2_5_6_PHASE_3 = "added 2.5.6.69110";				-- The Burning Crusade Classic 2.5.5 phase 3 launch on August 27th, 2026
-REMOVED_2_5_6_PHASE_3 = "removed 2.5.6.69110";			-- The Burning Crusade Classic 2.5.5 phase 3 launch on August 27th, 2026
+CREATED_2_5_6_PHASE_3 = "created 2.5.6.69110";			-- The Burning Crusade Classic 2.5.6 phase 3 launch on August 27th, 2026
+ADDED_2_5_6_PHASE_3 = "added 2.5.6.69110";				-- The Burning Crusade Classic 2.5.6 phase 3 launch on August 27th, 2026
+REMOVED_2_5_6_PHASE_3 = "removed 2.5.6.69110";			-- The Burning Crusade Classic 2.5.6 phase 3 launch on August 27th, 2026
+CREATED_2_5_6_PHASE_4 = "created 2.5.6.70006";			-- The Burning Crusade Classic 2.5.6 phase 4 launch on October 22nd, 2026
+ADDED_2_5_6_PHASE_4 = "added 2.5.6.70006";				-- The Burning Crusade Classic 2.5.6 phase 4 launch on October 22nd, 2026
+REMOVED_2_5_6_PHASE_4 = "removed 2.5.6.70006";			-- The Burning Crusade Classic 2.5.6 phase 4 launch on October 22nd, 2026
 --- DYNAMIC CLASSIC TIMELINES ---
 REMOVED_TBC_PHASE_TWO = REMOVED_2_5_5_PHASE_2;
 
@@ -690,7 +693,6 @@ DELETED_12_0_0 = "deleted 12.0.0.65459";				-- Midnight 12.0.0/Pre-Patch phase 1
 CREATED_12_0_1 = "created 12.0.1.65818";				-- Midnight 12.0.1/Pre-Patch phase 2 launch on February 10th, 2026
 ADDED_12_0_1 = "added 12.0.1.65818";					-- Midnight 12.0.1/Pre-Patch phase 2 launch on February 10th, 2026
 REMOVED_12_0_1 = "removed 12.0.1.65818";				-- Midnight 12.0.1/Pre-Patch phase 2 launch on February 10th, 2026
-
 CREATED_12_0_1_LAUNCH = "created 12.0.1.66102";			-- Midnight 12.0.1 Early Access Launch on February 26th, 2026
 ADDED_12_0_1_LAUNCH = "added 12.0.1.66102";				-- Midnight 12.0.1 Early Access Launch on February 26th, 2026
 REMOVED_12_0_1_LAUNCH = "removed 12.0.1.66102";			-- Midnight 12.0.1 Early Access Launch on February 26th, 2026
@@ -703,14 +705,14 @@ REMOVED_12_0_5 = "removed 12.0.5.67088";				-- Midnight 12.0.5 launch on April 2
 CREATED_12_0_7 = "created 12.0.7.68182";				-- Midnight 12.0.7 launch on June 16th, 2026
 ADDED_12_0_7 = "added 12.0.7.68182";					-- Midnight 12.0.7 launch on June 16th, 2026
 REMOVED_12_0_7 = "removed 12.0.7.68182";				-- Midnight 12.0.7 launch on June 16th, 2026
-
 CREATED_12_1_0 = "created 12.1.0.69214";				-- Midnight 12.1.0 launch on August 11th, 2026
 ADDED_12_1_0 = "added 12.1.0.69214";					-- Midnight 12.1.0 launch on August 11th, 2026
 REMOVED_12_1_0 = "removed 12.1.0.69214";				-- Midnight 12.1.0 launch on August 11th, 2026
 DELETED_12_1_0 = "deleted 12.1.0.69214";				-- Midnight 12.1.0 launch on August 11th, 2026
-CREATED_12_1_5 = "created 12.1.5";						-- Midnight 12.1.5 launch on October 13th, 2026
-ADDED_12_1_5 = "added 12.1.5";							-- Midnight 12.1.5 launch on October 13th, 2026
-REMOVED_12_1_5 = "removed 12.1.5";						-- Midnight 12.1.5 launch on October 13th, 2026
+CREATED_12_1_5 = "created 12.1.5.70340";				-- Midnight 12.1.5 launch on October 13th, 2026
+ADDED_12_1_5 = "added 12.1.5.70340";					-- Midnight 12.1.5 launch on October 13th, 2026
+REMOVED_12_1_5 = "removed 12.1.5.70340";				-- Midnight 12.1.5 launch on October 13th, 2026
+
 CREATED_12_1_7 = "created 12.1.7";						-- Midnight 12.1.7 launch on December 8th, 2026
 ADDED_12_1_7 = "added 12.1.7";							-- Midnight 12.1.7 launch on December 8th, 2026
 REMOVED_12_1_7 = "removed 12.1.7";						-- Midnight 12.1.7 launch on December 8th, 2026

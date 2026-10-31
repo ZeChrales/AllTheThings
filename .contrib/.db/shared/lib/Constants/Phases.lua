@@ -900,7 +900,7 @@ PHASE_FIVE_WAR = createClassicPhase({
 		-- TODO: ko = "",
 		-- TODO: pt = "",
 		-- TODO: ru = "",
-		cn = "如果您的服务器上已开启安其拉之门，只需将其关闭即可。",		
+		cn = "如果您的服务器上已开启安其拉之门，只需将其关闭即可。",
 		-- TODO: tw = "",
 	},
 });
@@ -1448,17 +1448,17 @@ SOD_PHASE_EIGHT = createClassicPhaseForSOD({
 		tw = "第8階段",
 	},
 	lore = {
-		en = "Included Classic+?",
+		en = "Included the Scarlet Enclave raid, new outdoor and profession content in New Avalon, and a new Legendary weapon questline.",
 		-- TODO: de = "",
-		es = "Incluye Classic+?",
-		mx = "Incluye Classic+?",
+		-- TODO: es = "",
+		-- TODO: mx = "",
 		-- TODO: fr = "",
 		-- TODO: it = "",
 		-- TODO: ko = "",
 		-- TODO: pt = "",
 		-- TODO: ru = "",
-		cn = "包含经典+？",
-		-- TODO: tw = "",
+		-- TODO: cn = "",
+		tw = "包含血色領區團隊副本、新亞法隆的全新戶外與專業技能內容，以及全新的傳說武器任務線。",
 	},
 });
 -- #if SEASON_OF_DISCOVERY
@@ -1853,7 +1853,7 @@ TBC_PHASE_FOUR = createClassicPhase({
 	readable = "TBC Classic - Phase 4",
 	minimumBuildVersion = 20501,
 --	buildVersion = 20504,	-- TBC Classic 2020-2021
-	buildVersion = 20508,	-- TBC Classic 2026-2027
+	buildVersion = 20506,	-- TBC anniversary 2026-2027
 	phaseID = 20,
 	text = {
 		en = "Phase 4",
@@ -2532,7 +2532,7 @@ WRATH_PHASE_FOUR_SHADOWMOURNE = createClassicPhase({
 		-- TODO: ko = "",
 		-- TODO: pt = "",
 		-- TODO: ru = "",
-		cn = "对于所有还没拥有影之哀伤的人来说。",
+		cn = "获取影之哀伤者可将其提供给尚未拥有该物品的玩家。",
 		-- TODO: tw = "",
 	},
 	lore = {
@@ -2680,7 +2680,7 @@ WRATH_PHASE_FOUR_ELEMENTAL_INVASION = createClassicPhase({
 		-- TODO: ko = "",
 		-- TODO: pt = "",
 		-- TODO: ru = "",
-		cn = "元素动乱预资料片事件？",
+		cn = "元素动乱前夕事件？",
 		-- TODO: tw = "",
 	},
 });
@@ -2879,7 +2879,7 @@ CATA_PHASE_HOUR_OF_TWILIGHT = createClassicPhase({
 		-- TODO: ko = "",
 		-- TODO: pt = "",
 		-- TODO: ru = "",
-		cn =  "暮光审判",
+		cn = "暮光审判",
 		-- TODO: tw = "",
 	},
 	description = {

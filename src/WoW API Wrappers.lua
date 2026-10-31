@@ -35,8 +35,8 @@ app.WOWAPI = lib;
 
 -- Priority API assigner.
 -- Can be used to one-line assign the most relevant API to the specified WOWAPI wrapper.
----@param name string
----@param ... function|nil
+---@param name string # Name under which the selected function is stored in `app.WOWAPI`.
+---@param ... function|nil # Candidate API functions in priority order; the first available function is selected.
 local function AssignAPIWrapper(name, ...)
 	for i = 1, select("#", ...) do
 		local api = select(i, ...)  -- Get API Function
@@ -61,6 +61,8 @@ AssignAPIWrapper("SendAddonMessage", C_ChatInfo and C_ChatInfo.SendAddonMessage,
 
 -- Currency APIs
 local C_CurrencyInfo = C_CurrencyInfo;
+---@diagnostic disable-next-line: deprecated
+AssignAPIWrapper("GetCoinTextureString", C_CurrencyInfo and C_CurrencyInfo.GetCoinTextureString, GetCoinTextureString);
 AssignAPIWrapper("GetCurrencyInfo", C_CurrencyInfo and C_CurrencyInfo.GetCurrencyInfo, GetCurrencyInfo);
 AssignAPIWrapper("GetCurrencyLink", C_CurrencyInfo and C_CurrencyInfo.GetCurrencyLink, GetCurrencyLink);
 
@@ -121,6 +123,8 @@ AssignAPIWrapper("GetItemIcon", C_Item and C_Item.GetItemIconByID, GetItemIcon)
 AssignAPIWrapper("GetItemInfoInstant", C_Item and C_Item.GetItemInfoInstant, GetItemInfoInstant)
 AssignAPIWrapper("GetItemID", C_Item and C_Item.GetItemIDForItemInfo, GetItemInfoInstant)
 AssignAPIWrapper("GetItemInfo", C_Item and C_Item.GetItemInfo, GetItemInfo)
+AssignAPIWrapper("GetItemSpell", C_Item and C_Item.GetItemSpell, GetItemSpell)
+AssignAPIWrapper("GetDetailedItemLevelInfo", C_Item and C_Item.GetDetailedItemLevelInfo, GetDetailedItemLevelInfo)
 AssignAPIWrapper("GetItemSpecInfo", C_Item and C_Item.GetItemSpecInfo, GetItemSpecInfo)
 if app.GameBuildVersion >= 70000 then
 	AssignAPIWrapper("IsArtifactRelicItem", C_ItemSocketInfo and C_ItemSocketInfo.IsArtifactRelicItem, IsArtifactRelicItem)
@@ -167,6 +171,17 @@ local C_TradeSkillUI = C_TradeSkillUI;
 ---@diagnostic disable-next-line: deprecated, undefined-global
 AssignAPIWrapper("GetTradeSkillTexture", C_TradeSkillUI and C_TradeSkillUI.GetTradeSkillTexture, GetTradeSkillTexture);
 AssignAPIWrapper("GetTradeSkillDisplayName", C_TradeSkillUI and C_TradeSkillUI.GetTradeSkillDisplayName, app.EmptyFunction);
+local GetTradeSkillLineForRecipe = C_TradeSkillUI and C_TradeSkillUI.GetTradeSkillLineForRecipe;
+AssignAPIWrapper("GetProfessionInfoByRecipeID", C_TradeSkillUI and C_TradeSkillUI.GetProfessionInfoByRecipeID,
+	GetTradeSkillLineForRecipe and
+	--- Adapts the legacy recipe skill-line result to the modern profession-info table shape.
+	---@param recipeID number # Recipe spell ID.
+	---@return {professionID: number}|nil professionInfo # Nil when the recipe has no skill line.
+	function(recipeID)
+		local professionID = GetTradeSkillLineForRecipe(recipeID);
+		if professionID then return { professionID = professionID }; end
+	end or app.EmptyFunction);
+AssignAPIWrapper("IsTradeSkillLinked", C_TradeSkillUI and C_TradeSkillUI.IsTradeSkillLinked, IsTradeSkillLinked);
 
 -- Specialization APIs
 local C_SpecializationInfo = C_SpecializationInfo
@@ -200,7 +215,7 @@ C_Spell and C_Spell.GetSpellCooldown and
 	function(spellIdentifier) local t = C_Spell.GetSpellCooldown(spellIdentifier)
 	return t and t.startTime or 0 end,
 	GetSpellCooldown);
-	
+
 AssignAPIWrapper("GetSpellName",
 	C_Spell and C_Spell.GetSpellName,
 	GetSpellInfo);
@@ -221,8 +236,8 @@ AssignAPIWrapper("GetSpellTabInfo", C_SpellBook and C_SpellBook.GetSpellBookSkil
 -- Aura APIs
 local C_UnitAuras = C_UnitAuras;
 AssignAPIWrapper("GetPlayerAuraBySpellID",
-    C_UnitAuras and C_UnitAuras.GetPlayerAuraBySpellID,
-    GetPlayerAuraBySpellID,
+	C_UnitAuras and C_UnitAuras.GetPlayerAuraBySpellID,
+	GetPlayerAuraBySpellID,
 	app.EmptyFunction);
 
 ---@diagnostic enable: deprecated

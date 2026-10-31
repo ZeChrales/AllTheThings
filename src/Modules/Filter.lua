@@ -65,8 +65,51 @@ api.Filters = {}
 
 local AccountFilters, CharacterFilters, RawCharacterFilters = {}, {}, {}
 
+-- Array-based Filter handling for faster filter evaluation loops
+local AccountArr, CharacterArr = {}, {}
+local nAccount, nCharacter = 0, 0
+
+local FilterOrderList = {
+	-- "Race_Horde", "Race_Alliance", "Race_CurrentFaction", -- these are never actually used directly
+	-- AccountFilters
+	"Unobtainable", "ExpansionContent", "Event", "Skyriding", "PetBattles", "PvP", "ChallengeMaster", "Phase", "UnavailablePersonalLoot",
+	-- Character Filters
+	"Level", "Class", "Race", "InGame", "FilterID", "Bound", "RequireSkill", "CustomCollect", "MinReputation",
+	-- Not used within Acct/Char filter sets
+	-- "CompletedGroups", "Trackable", "Bind", "Visible", "Group",
+
+	-- "RecursiveDefaultCharacterRequirementsFilter",
+	-- "RecursiveCharacterRequirementsFilter",
+	-- "RecursiveGroupRequirementsExtraFilter", "GetRecursiveFilterRequirement",
+	-- "RecursiveDirectGroupRequirementsFilter", "RecursiveGroupRequirementsFilter",
+	-- "RecursiveGroupRequirementsFilter_Account",
+	-- "RecursiveUnobtainableFilter",
+}
+local RankedNames, InRanked = {}, {}
+for i, name in ipairs(FilterOrderList) do RankedNames[i] = name; InRanked[name] = true end
+
+local function RebuildArray(arr, filters)
+	local old, n = #arr, 0
+	for i = 1, #RankedNames do
+		local f = filters[RankedNames[i]]
+		if f then n = n + 1; arr[n] = f end
+	end
+	for name, f in next, filters do        -- unranked filters go last
+		if not InRanked[name] then n = n + 1; arr[n] = f end
+	end
+	for i = n + 1, old do arr[i] = nil end
+	return n
+end
+
+local function RebuildFilterArrays()
+	nAccount = RebuildArray(AccountArr, AccountFilters)
+	nCharacter = RebuildArray(CharacterArr, CharacterFilters)
+end
+
+local FilterNameOf = {}
 -- Helper function to encapsulate simple logic for a 'toggle' filter
 local function DefineToggleFilter(name, filterGroup, filter)
+	FilterNameOf[filter] = name
 	-- Filters capture
 	-- app.PrintDebug("DefineFilter",name,filter)
 	api.Filters[name] = filter;
@@ -74,6 +117,7 @@ local function DefineToggleFilter(name, filterGroup, filter)
 	api.Set[name] = function(active)
 		-- app.PrintDebug("FILTER",name,"->",active)
 		filterGroup[name] = active and api.Filters[name] or nil;
+		RebuildFilterArrays();
 	end
 	-- Get implementation
 	api.Get[name] = function()
@@ -85,6 +129,7 @@ local function DefineToggleFilter(name, filterGroup, filter)
 		LateSetFilters[name] = nil;
 		-- app.PrintDebug("Late Set Filter",name)
 		filterGroup[name] = filter;
+		RebuildFilterArrays();
 	end
 
 	-- Keep track of all raw CharacterFilters
@@ -115,6 +160,13 @@ DefineToggleFilter("Unobtainable", AccountFilters,
 function(item)
 	local u = item.u
 	return not u or SettingsUnobtainable[u];
+end);
+
+-- Phase (shares the Unobtainable settings container, keyed by phase ID)
+DefineToggleFilter("Phase", AccountFilters,
+function(item)
+	local phase = item.phase
+	return not phase or SettingsUnobtainable[phase];
 end);
 
 -- PvP
@@ -168,23 +220,13 @@ local ExclusiveFactions = {
 	[1104]=1,	-- Frenzyheart Tribe
 	[1105]=1,	-- The Oracles
 };
-DefineToggleFilter("MinReputation", CharacterFilters,
-function(item)
-	local minReputation = item.minReputation;
-	if minReputation then
-		if ExclusiveFactions[minReputation[1]] then
-			if minReputation[2] > GetFactionCurrentReputation(minReputation[1]) then
-				return false;
-			else
-				return true;
-			end
-		else
-			return true;
-		end
-	else
-		return true;
+DefineToggleFilter("MinReputation", CharacterFilters, function(item)
+	local minReputation = rawget(item, "minReputation")
+	if minReputation and ExclusiveFactions[minReputation[1]] then
+		return minReputation[2] <= GetFactionCurrentReputation(minReputation[1])
 	end
-end);
+	return true
+end)
 
 -- MaxReputation (TODO)
 -- DefineToggleFilter("MaxReputation", CharacterFilters,
@@ -206,6 +248,7 @@ end);
 DefineToggleFilter("Event", AccountFilters, app.Modules.Events.FilterIsEventActive);
 
 -- ItemUnbound
+---@type function
 local SettingsFilterItemUnbound;
 -- Whether this is a Character-transferable Thing/Item
 local function ItemUnbound(item)	-- FilterItemBind
@@ -357,7 +400,7 @@ RawCharacterFilters.Race = api.Filters.Race;
 -- CustomCollect
 DefineToggleFilter("CustomCollect", CharacterFilters,
 function(item)
-	local customCollect = item.customCollect;
+	local customCollect = rawget(item, "customCollect")
 	if customCollect then
 		for i=1,#customCollect do
 			if not ActiveCustomCollects[customCollect[i]] then return end
@@ -412,7 +455,7 @@ if app.IsRetail and app.GameBuildVersion > 70000 then
 
 	DefineToggleFilter("ExpansionContent", AccountFilters,
 	function(item)
-		-- 'awp' is consolidated when parsed, meaning all common values flow upwards in hierachy
+		-- 'awp' is consolidated when parsed, meaning all common values flow upwards in hierarchy
 		-- so if a Thing has an explicit 'awp' we know that it and all sub-content match that awp
 		local awp = item.awp
 		if awp then
@@ -488,35 +531,49 @@ end
 local function PrintExclusionCause(name, o)
 	app.PrintDebug("F-EX",name,o.hash,o.link or o.name)
 end
-local function ApplySettingsFilters(o, filters)
-	for _,filter in next, filters do
-		-- if not filter(o) then PrintExclusionCause(name, o) return end
-		if not filter(o) then return end
-	end
-	return true;
-end
 
 -- Represents filters which should be applied during Updates to groups
-local function SettingsFilters(item)
-	if ApplySettingsFilters(item, AccountFilters) then
-		-- BoE can skip Character trait filters
-		if SettingsFilterItemUnbound(item) then return true; end
-		return ApplySettingsFilters(item, CharacterFilters)
+local function SettingsFilters(o)
+	local arr, n = AccountArr, nAccount
+	for i = 1, n do
+		if not arr[i](o) then
+			-- PrintExclusionCause(FilterNameOf[arr[i]], o)
+			return
+		end
 	end
+	-- BoE can skip Character trait filters
+	if SettingsFilterItemUnbound(o) then return true end
+	arr, n = CharacterArr, nCharacter
+	for i = 1, n do
+		if not arr[i](o) then
+			-- PrintExclusionCause(FilterNameOf[arr[i]], o)
+			return
+		end
+	end
+	return true
 end
-local function SettingsFilters_Account(item)
-	return ApplySettingsFilters(item, AccountFilters)
+local function SettingsFilters_Account(o)
+	local arr, n = AccountArr, nAccount
+	for i = 1, n do
+		if not arr[i](o) then
+			-- PrintExclusionCause(FilterNameOf[arr[i]], o)
+			return
+		end
+	end
+	return true
 end
-local function SettingsExtraFilters(item, extraFilters)
-	if SettingsFilters(item) then
+local function SettingsExtraFilters(o, extraFilters)
+	if SettingsFilters(o) then
 		if extraFilters then
 			local filters = api.Filters
 			local filter
 			for name in next, extraFilters do
 				filter = filters[name]
 				if filter then
-					-- if not filter(item) then PrintExclusionCause(name, item) return end
-					if not filter(item) then return end
+					if not filter(o) then
+						-- PrintExclusionCause(name, o)
+						return
+					end
 				end
 			end
 		end
@@ -524,16 +581,30 @@ local function SettingsExtraFilters(item, extraFilters)
 	end
 end
 -- Represents filters which should be applied during Updates to groups, but skips the BoE filter
-local function SettingsFilters_IgnoreBoEFilter(item)
-	if ApplySettingsFilters(item, AccountFilters) then
-		return ApplySettingsFilters(item, CharacterFilters)
+local function SettingsFilters_IgnoreBoEFilter(o)
+	local arr, n = AccountArr, nAccount
+	for i = 1, n do
+		if not arr[i](o) then
+			-- PrintExclusionCause(FilterNameOf[arr[i]], o)
+			return
+		end
 	end
+	arr, n = CharacterArr, nCharacter
+	for i = 1, n do
+		if not arr[i](o) then
+			-- PrintExclusionCause(FilterNameOf[arr[i]], o)
+			return
+		end
+	end
+	return true
 end
 api.SettingsFilters.IgnoreBoEFilter = SettingsFilters_IgnoreBoEFilter
 local function CurrentCharacterFilters(o)
 	for _,filter in next, RawCharacterFilters do
-		-- if not filter(o) then PrintExclusionCause(name, o) return end
-		if not filter(o) then return end
+		if not filter(o) then
+			-- PrintExclusionCause(name, o)
+			return
+		end
 	end
 	return true;
 end
@@ -601,7 +672,6 @@ local function RecursiveGroupRequirementsExtraFilter(group, extraFilters)
 	end
 	return true;
 end
-app.RecursiveGroupRequirementsExtraFilter = RecursiveGroupRequirementsExtraFilter;
 api.Filters.RecursiveGroupRequirementsExtraFilter = RecursiveGroupRequirementsExtraFilter
 -- Recursively check outwards within the direct parent chain only to find if any parent group restricts the filter for this character
 local function RecursiveDirectGroupRequirementsFilter(group)
@@ -615,15 +685,14 @@ end
 app.RecursiveDirectGroupRequirementsFilter = RecursiveDirectGroupRequirementsFilter;
 api.Filters.RecursiveDirectGroupRequirementsFilter = RecursiveDirectGroupRequirementsFilter
 local function RecursiveUnobtainableFilter(group)
-	local Unobtainable, Event = AccountFilters.Unobtainable or NoFilter, AccountFilters.Event or NoFilter
+	local Unobtainable, Phase, Event = AccountFilters.Unobtainable or NoFilter, AccountFilters.Phase or NoFilter, AccountFilters.Event or NoFilter
 	while group do
 		---@diagnostic disable-next-line: redundant-parameter
-		if not (Unobtainable(group) and Event(group)) then return; end
+		if not (Unobtainable(group) and Phase(group) and Event(group)) then return; end
 		group = group.parent;
 	end
 	return true;
 end
-app.RecursiveUnobtainableFilter = RecursiveUnobtainableFilter;
 api.Filters.RecursiveUnobtainableFilter = RecursiveUnobtainableFilter
 -- Recursively check outwards to find if any parent group restricts the filter for the current character (regardless of settings)
 local function RecursiveCharacterRequirementsFilter(group)
@@ -633,7 +702,6 @@ local function RecursiveCharacterRequirementsFilter(group)
 	end
 	return true;
 end
-app.RecursiveCharacterRequirementsFilter = RecursiveCharacterRequirementsFilter;
 api.Filters.RecursiveCharacterRequirementsFilter = RecursiveCharacterRequirementsFilter
 local function RecursiveDefaultCharacterRequirementsFilter(group)
 	local defaultClassFilter, defaultRaceFilter = api.Filters.Class, api.Filters.Race;
@@ -643,7 +711,6 @@ local function RecursiveDefaultCharacterRequirementsFilter(group)
 	end
 	return true;
 end
-app.RecursiveDefaultCharacterRequirementsFilter = RecursiveDefaultCharacterRequirementsFilter;
 api.Filters.RecursiveDefaultCharacterRequirementsFilter = RecursiveDefaultCharacterRequirementsFilter
 local function RecursiveFilter(group, filterName)
 	local filter = api.Filters[filterName]
@@ -654,6 +721,27 @@ local function RecursiveFilter(group, filterName)
 	return true;
 end
 app.RecursiveFilter = RecursiveFilter;
+-- Returns a numeric value representing the filtering requirements for the group to be visible.
+-- 1: This group is visible based on Full filtering
+-- 2: This group is visible based on Acct filtering
+-- 3: This group is visible based on no filtering
+local function GetRecursiveFilterRequirement(group, extraFilters)
+	local Full, Acct = app.GroupExtraFilter, SettingsFilters_Account
+	-- Phase 1: full walk. A node that passes Full has already passed Acct.
+	while group do
+		if not Full(group, extraFilters) then break end
+		group = rawget(group, "sourceParent") or group.parent
+	end
+	if not group then return 1 end
+	-- Phase 2: resume the account walk at the node that failed Full.
+	-- Nodes below it passed Full, so they need no Acct re-check.
+	while group do
+		if not Acct(group) then return 3 end
+		group = rawget(group, "sourceParent") or group.parent
+	end
+	return 2
+end
+api.Filters.GetRecursiveFilterRequirement = GetRecursiveFilterRequirement
 
 -- Caching Helpers
 local function CacheSettingsData()
@@ -675,6 +763,7 @@ local function CacheSettingsData()
 	-- app.PrintDebug("SettingsFilterIDs",#SettingsFilterIDs)
 end
 
+RebuildFilterArrays()
 app.AddEventHandler("OnLoad", function()
 	FactionID = app.FactionID;
 	if FactionID == Enum.FlightPathFaction.Horde then
@@ -769,3 +858,129 @@ app.AddEventHandler("OnRecalculate_NewSettings", CacheSettingsData)
 -- 		print(name,stat)
 -- 	end
 -- end
+
+------ Filter performance testing block
+--[[
+local SAMPLE = 200000
+
+local function CollectNodes(g, list)
+	for i = 1, #g do
+		local o = g[i]
+		list[#list + 1] = o
+		local sub = o.g
+		if sub then CollectNodes(sub, list) end
+	end
+	return list
+end
+
+local function Sample(list, max)
+	if #list <= max then return list end
+	local out, step = {}, #list / max
+	for i = 1, max do out[i] = list[math.floor((i - 1) * step) + 1] end
+	return out
+end
+
+local function TimePerCall(f, items)
+	local s = debugprofilestop()
+	for i = 1, #items do f(items[i]) end
+	return (debugprofilestop() - s) * 1e6 / #items  -- ns per call
+end
+
+local function OrderFilters(filters, items)
+	local pool = {}
+	for name, f in next, filters do
+		pool[#pool + 1] = { name = name, f = f, cost = TimePerCall(f, items) }
+	end
+	local ordered, remaining = {}, items
+	while #pool > 0 do
+		local bestI, bestScore, bestRate
+		for i = 1, #pool do
+			local f, rej, n = pool[i].f, 0, #remaining
+			for j = 1, n do if not f(remaining[j]) then rej = rej + 1 end end
+			local rate = n > 0 and rej / n or 0
+			local score = rate > 0 and pool[i].cost / rate or math.huge
+			if not bestScore or score < bestScore then bestI, bestScore, bestRate = i, score, rate end
+		end
+		local pick = table.remove(pool, bestI)
+		pick.rate = bestRate
+		ordered[#ordered + 1] = pick
+		local nextRemaining = {}
+		for j = 1, #remaining do
+			if pick.f(remaining[j]) then nextRemaining[#nextRemaining + 1] = remaining[j] end
+		end
+		remaining = nextRemaining
+	end
+	return ordered, remaining
+end
+local function RankIndependent(filters, items)
+	local out, n = {}, #items
+	for name, f in next, filters do
+		local rej = 0
+		local s = debugprofilestop()
+		for i = 1, n do if not f(items[i]) then rej = rej + 1 end end
+		local cost = (debugprofilestop() - s) * 1e6 / n
+		local rate = rej / n
+		out[#out + 1] = { name = name, cost = cost, rate = rate, score = rate > 0 and cost / rate or math.huge }
+	end
+	table.sort(out, function(a, b) return a.score < b.score end)
+	return out
+end
+
+local function Report(title, ordered)
+	local names = {}
+	for i, p in ipairs(ordered) do
+		names[i] = ("%q"):format(p.name)
+		app.print(("%s %d. %s  %.0f ns  rejects %.1f%%"):format(title, i, p.name, p.cost, p.rate * 100))
+	end
+	app.print(title .. ": " .. table.concat(names, ", "))
+end
+local function KeyReport(list, key)
+	local n, v, present = #list, nil, 0
+	local rawget = rawget
+	local s = debugprofilestop()
+	for i = 1, n do v = list[i][key] end
+	local tIndex = (debugprofilestop() - s) * 1e6 / n
+	s = debugprofilestop()
+	for i = 1, n do v = rawget(list[i], key) end
+	local tRaw = (debugprofilestop() - s) * 1e6 / n
+	for i = 1, n do if rawget(list[i], key) ~= nil then present = present + 1 end end
+	app.print(("%-14s index %4.0f ns | rawget %4.0f ns | present %3.0f%% | dynamic: %s"):format(
+		key, tIndex, tRaw, present / n * 100, app.AllClassFields[key] and "YES" or "no"))
+end
+
+local function GetRoot()
+	return app:GetWindow("Prime").data   -- adapt to however you reach the main hierarchy
+end
+
+local NotInChain = { ItemUnbound = true }   -- add any other exemption-style filters
+
+app.ChatCommands.Add("filter-order", function(args)
+	local items = Sample(CollectNodes(GetRoot().g, {}), SAMPLE)
+	local pool = {}
+	local runner = app.CreateRunner("filtertesting")
+	for name, f in next, api.Filters do
+		if not NotInChain[name] then
+			runner.Run(function()
+				if pcall(f, items[1]) then pool[name] = f
+				else app.print("skipping (errors when called):", name) end
+			end)
+		end
+	end
+	runner.Run(function()
+		local ordered = RankIndependent(pool, items)
+		Report("All", ordered)
+	end)
+	return true
+end, { "Usage : /att filter-order" })
+
+app.ChatCommands.Add("key-report", function(args)
+	local list = CollectNodes(GetRoot().g, {})
+	-- in a chat command, using CollectNodes(GetRoot().g, {}) as `list`:
+	for _, k in ipairs({ "u", "f", "loc", "g", "visible", "__type", "nmc", "requireSkill", "customCollect", "minReputation" }) do
+		KeyReport(list, k)
+	end
+	return true
+end, { "Usage : /att filter-order" })
+
+
+--]]--

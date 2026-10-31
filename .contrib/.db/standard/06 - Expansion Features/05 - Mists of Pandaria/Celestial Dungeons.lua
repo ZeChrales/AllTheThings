@@ -200,18 +200,19 @@ local CELESTIAL_TOKENS = {
 };
 
 root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHASE_ONE_CELESTIAL_DUNGEONS_MSV, {
-	n(CELESTIAL_DUNGEON_DIFFICULTY, bubbleDownSelf({ ["timeline"] = { ADDED_5_5_0 } }, {
-		["lvl"] = 90,
-		["groups"] = {
+	n(CELESTIAL_DUNGEON_DIFFICULTY, {
+		timeline = { ADDED_5_5_0 },
+		lvl = 90,
+		groups = {
 			n(ACHIEVEMENTS, {
 				ach(60901),	-- Pandaria Celestial Hero (automated)
 			}),
 			n(COMMON_BOSS_DROPS, {
-				["OnInit"] = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
-				["description"] = "The following can drop from the final boss of any Celestial dungeon.",
-				["maps"] = CELESTIAL_DUNGEON_MAPS,
-				["crs"] = CELESTIAL_DUNGEON_LAST_BOSSES,
-				["groups"] = appendGroups(
+				OnInit = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
+				description = "The following can drop from the final boss of any Celestial dungeon.",
+				maps = CELESTIAL_DUNGEON_MAPS,
+				crs = CELESTIAL_DUNGEON_LAST_BOSSES,
+				groups = appendGroups(
 					-- #if BEFORE 5.5.3
 					-- Season 1 (Terrace / HoF / MV)
 					applyclassicphase(MOP_PHASE_ONE_CELESTIAL_DUNGEONS_TOES, {	-- Tier Tokens (Terrace)
@@ -276,10 +277,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 			}),
 			-- Alliance Dailies
 			n(QUESTS, sharedData({
-				["qg"] = 64028,	-- Challenger Soong <Challenge Dungeons> (Alliance)
-				["races"] = ALLIANCE_ONLY,
-				["isDaily"] = true,
-				["groups"] = {
+				qg = 64028,	-- Challenger Soong <Challenge Dungeons> (Alliance)
+				races = ALLIANCE_ONLY,
+				isDaily = true,
+				groups = {
 					-- #if AFTER 5.5.5
 					applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR_CELESTIAL_DUNGEONS, currency(AUGUST_STONE_CLUSTER)),
 					-- #endif
@@ -301,10 +302,10 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 			})),
 			-- Horde Dailies
 			n(QUESTS, sharedData({
-				["qg"] = 63994,	-- Challenger Wuli <Challenge Dungeons> (Horde)
-				["races"] = HORDE_ONLY,
-				["isDaily"] = true,
-				["groups"] = {
+				qg = 63994,	-- Challenger Wuli <Challenge Dungeons> (Horde)
+				races = HORDE_ONLY,
+				isDaily = true,
+				groups = {
 					-- #if AFTER 5.5.5
 					applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR_CELESTIAL_DUNGEONS, currency(AUGUST_STONE_CLUSTER)),
 					-- #endif
@@ -327,60 +328,60 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 			n(REWARDS, {
 				-- #if AFTER 5.5.5
 				applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR_CELESTIAL_DUNGEONS, currency(AUGUST_STONE_CLUSTER, {
-					["OnInit"] = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
-					["description"] = "Two tokens drop per boss in Celestial and the final boss of each dungeon will drop an extra three tokens if players have defeated all of the other bosses in the dungeon.",
-					["maps"] = CELESTIAL_DUNGEON_MAPS,
-					["crs"] = CELESTIAL_DUNGEON_BOSSES,
+					OnInit = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
+					description = "Two tokens drop per boss in Celestial and the final boss of each dungeon will drop an extra three tokens if players have defeated all of the other bosses in the dungeon.",
+					maps = CELESTIAL_DUNGEON_MAPS,
+					crs = CELESTIAL_DUNGEON_BOSSES,
 				})),
 				-- #elseif AFTER 5.5.3
 				applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING_CELESTIAL_DUNGEONS, currency(AUGUST_STONE_SHARD, {
-					["OnInit"] = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
-					["description"] = "Two tokens drop per boss in Celestial and the final boss of each dungeon will drop an extra three tokens if players have defeated all of the other bosses in the dungeon.",
-					["maps"] = CELESTIAL_DUNGEON_MAPS,
-					["crs"] = CELESTIAL_DUNGEON_BOSSES,
+					OnInit = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
+					description = "Two tokens drop per boss in Celestial and the final boss of each dungeon will drop an extra three tokens if players have defeated all of the other bosses in the dungeon.",
+					maps = CELESTIAL_DUNGEON_MAPS,
+					crs = CELESTIAL_DUNGEON_BOSSES,
 				})),
 				-- #else
 				currency(AUGUST_STONE_FRAGMENT, {
-					["OnInit"] = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
-					["description"] = "Two tokens drop per boss in Celestial and the final boss of each dungeon will drop an extra three tokens if players have defeated all of the other bosses in the dungeon.",
-					["maps"] = CELESTIAL_DUNGEON_MAPS,
-					["crs"] = CELESTIAL_DUNGEON_BOSSES,
+					OnInit = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
+					description = "Two tokens drop per boss in Celestial and the final boss of each dungeon will drop an extra three tokens if players have defeated all of the other bosses in the dungeon.",
+					maps = CELESTIAL_DUNGEON_MAPS,
+					crs = CELESTIAL_DUNGEON_BOSSES,
 				}),
 				-- #endif
 				i(87208, {	-- Sigil of Power
-					["OnInit"] = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
+					OnInit = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
 					-- #if BEFORE 5.5.3
-					["description"] = "This can drop from any \"physical\" last boss of a Celestial dungeon.",
-					["maps"] = CELESTIAL_DUNGEON_MAPS_SIGIL_OF_POWER,
-					["crs"] = CELESTIAL_DUNGEON_LAST_BOSSES_SIGIL_OF_POWER,
+					description = "This can drop from any \"physical\" last boss of a Celestial dungeon.",
+					maps = CELESTIAL_DUNGEON_MAPS_SIGIL_OF_POWER,
+					crs = CELESTIAL_DUNGEON_LAST_BOSSES_SIGIL_OF_POWER,
 					-- #else
-					["description"] = "This can drop from any last boss of a Celestial dungeon.",
-					["maps"] = CELESTIAL_DUNGEON_MAPS,
-					["crs"] = CELESTIAL_DUNGEON_LAST_BOSSES,
+					description = "This can drop from any last boss of a Celestial dungeon.",
+					maps = CELESTIAL_DUNGEON_MAPS,
+					crs = CELESTIAL_DUNGEON_LAST_BOSSES,
 					-- #endif
 				}),
 				i(87209, {	-- Sigil of Wisdom
-					["OnInit"] = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
+					OnInit = FUNCTION_TEMPLATES.OnInit.CELESTIAL_DUNGEON_DIFFICULTY_BUFFS,
 					-- #if BEFORE 5.5.3
-					["description"] = "This can drop from any \"magical\" last boss of a Celestial dungeon.",
-					["maps"] = CELESTIAL_DUNGEON_MAPS_SIGIL_OF_WISDOM,
-					["crs"] = CELESTIAL_DUNGEON_LAST_BOSSES_SIGIL_OF_WISDOM,
+					description = "This can drop from any \"magical\" last boss of a Celestial dungeon.",
+					maps = CELESTIAL_DUNGEON_MAPS_SIGIL_OF_WISDOM,
+					crs = CELESTIAL_DUNGEON_LAST_BOSSES_SIGIL_OF_WISDOM,
 					-- #else
-					["description"] = "This can drop from any last boss of a Celestial dungeon.",
-					["maps"] = CELESTIAL_DUNGEON_MAPS,
-					["crs"] = CELESTIAL_DUNGEON_LAST_BOSSES,
+					description = "This can drop from any last boss of a Celestial dungeon.",
+					maps = CELESTIAL_DUNGEON_MAPS,
+					crs = CELESTIAL_DUNGEON_LAST_BOSSES,
 					-- #endif
 				}),
 			}),
 			n(VENDORS, {
 				applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR_CELESTIAL_DUNGEONS, {
-					["aqd"] = n(74020, {	-- Welbiz Cheerwhistle <Raid Finder Vendor> [A]
-						["coord"] = { 41.0, 42.5, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
+					aqd = n(74020, {	-- Welbiz Cheerwhistle <Raid Finder Vendor> [A]
+						coord = { 41.0, 42.5, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
 					}),
-					["hqd"] = n(73674, {	-- Blizzix Sparkshiv <Raid Finder Vendor> [H]
-						["coord"] = { 42.9, 74.7, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
+					hqd = n(73674, {	-- Blizzix Sparkshiv <Raid Finder Vendor> [H]
+						coord = { 42.9, 74.7, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
 					}),
-					["groups"] = {
+					groups = {
 						cl(WARRIOR, {
 							-- DPS
 							tokencost(CELESTIAL_TOKENS.SEASON3.PROTECTOR.HELM, i(99046)),	-- Helmet of the Prehistoric Marauder
@@ -569,8 +570,8 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 					},
 				}),
 				applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING_CELESTIAL_DUNGEONS, n(70346, {	-- Ao Pye <Shado-Pan Assault Quartermaster>
-					["coord"] = { 38.0, 64.6, TOWNLONG_STEPPES },
-					["groups"] = {
+					coord = { 38.0, 64.6, TOWNLONG_STEPPES },
+					groups = {
 						cl(WARRIOR, {
 							-- DPS
 							tokencost(CELESTIAL_TOKENS.SEASON2.PROTECTOR.HELM, i(95986)),	-- Helmet of the Last Mogu
@@ -742,8 +743,8 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 					},
 				})),
 				applyclassicphase(MOP_PHASE_ONE_CELESTIAL_DUNGEONS_HOF, n(64606, {	-- Commander Oxheart <Valor Quartermaster>
-					["coord"] = { 37.8, 64.6, TOWNLONG_STEPPES },
-					["groups"] = {
+					coord = { 37.8, 64.6, TOWNLONG_STEPPES },
+					groups = {
 						cl(WARRIOR, {
 							-- DPS
 							tokencost(CELESTIAL_TOKENS.SEASON1.PROTECTOR.HELM, i(86673)),	-- Helmet of Resounding Rings
@@ -915,15 +916,15 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 					},
 				})),
 				n(248108, {	-- Avatar of the August Celestials <August Stone Fragment Exchange>
-					["aqd"] = {
-						["coord"] = { 41.4, 46.3, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
-						["maps"] = { SHRINE_OF_SEVEN_STARS },
+					aqd = {
+						coord = { 41.4, 46.3, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
+						maps = { SHRINE_OF_SEVEN_STARS },
 					},
-					["hqd"] = {
-						["coord"] = { 42.5, 76.6, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
-						["maps"] = { SHRINE_OF_TWO_MOONS },
+					hqd = {
+						coord = { 42.5, 76.6, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
+						maps = { SHRINE_OF_TWO_MOONS },
 					},
-					["groups"] = appendGroups(
+					groups = appendGroups(
 					applyclassicphase(MOP_PHASE_ONE_CELESTIAL_DUNGEONS_TOES, {	-- Tier Tokens (Terrace)
 						frags(60, i(CELESTIAL_TOKENS.SEASON1.CONQUEROR.HELM)),
 						frags(60, i(CELESTIAL_TOKENS.SEASON1.PROTECTOR.HELM)),
@@ -1311,20 +1312,19 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 					},
 					{	-- Bags
 						frags(10, i(248666, {	-- Satchel of Celestial Chance
-							i(87777),	-- Astral Cloud Serpent (MOUNT!)
-							i(87786),	-- Black Riding Yak (MOUNT!)
-							i(87787),	-- Brown Riding Yak (MOP) / Modest Expedition Yak (Retail) (MOUNT!)
-							i(248741),	-- Celestial Riding Crane (MOUNT!)
-							i(87791),	-- Crimson Water Strider (MOUNT!)
-							i(87794),	-- Golden Water Strider (MOUNT!)
-							i(87771),	-- Heavenly Onyx Cloud Serpent (MOUNT!)
-							i(87793),	-- Jade Water Strider (MOUNT!)
-							i(87784),	-- Jungle Riding Crane (MOUNT!)
-							i(87792),	-- Orange Water Strider (MOUNT!)
-							i(84753),	-- White Riding Yak (MOP) / Kafa Yak (Retail) (MOUNT!)
+							i(87777),	-- Reins of the Astral Cloud Serpent (MOUNT!)
+							i(87786),	-- Reins of the Black Riding Yak (MOUNT!)
+							i(87787),	-- Reins of the Brown Riding Yak (MOUNT!)
+							i(248741),	-- Reins of the Celestial Riding Crane (MOUNT!)
+							i(87791),	-- Reins of the Crimson Water Strider (MOUNT!)
+							i(87794),	-- Reins of the Golden Water Strider (MOUNT!)
+							i(87771),	-- Reins of the Heavenly Onyx Cloud Serpent (MOUNT!)
+							i(87793),	-- Reins of the Jade Water Strider (MOUNT!)
+							i(87784),	-- Reins of the Jungle Riding Crane (MOUNT!)
+							i(87792),	-- Reins of the Orange Water Strider (MOUNT!)
+							i(84753),	-- Reins of the White Riding Yak (MOUNT!)
 
-							-- Pets
-							i(86563),	-- Aqua Strider (PET!)
+							i(86563),	-- Hollow Reed (PET!)
 							i(86564),	-- Imbued Jade Fragment (PET!)
 							i(88148),	-- Jade Crane Chick (PET!)
 							i(89587),	-- Porcupette (PET!)
@@ -1342,17 +1342,17 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 						})),
 					}),
 				}),
-				applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING_CELESTIAL_DUNGEONS, n(258121,	-- Sendala the Timeless <August Stone Shard Exchange>
-					bubbleDownSelf({ ["timeline"] = { ADDED_5_5_3 } }, {
-					["aqd"] = {
-						["coord"] = { 42.6, 50.2, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
-						["maps"] = { SHRINE_OF_SEVEN_STARS },
+				applyclassicphase(MOP_PHASE_RISE_OF_THE_THUNDER_KING_CELESTIAL_DUNGEONS, n(258121, {	-- Sendala the Timeless <August Stone Shard Exchange>
+					aqd = {
+						coord = { 42.6, 50.2, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
+						maps = { SHRINE_OF_SEVEN_STARS },
 					},
-					["hqd"] = {
-						["coord"] = { 42.6, 84.4, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
-						["maps"] = { SHRINE_OF_TWO_MOONS },
+					hqd = {
+						coord = { 42.6, 84.4, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
+						maps = { SHRINE_OF_TWO_MOONS },
 					},
-					["groups"] = appendGroups(
+					timeline = { ADDED_5_5_3 },
+					groups = appendGroups(
 					{	-- Tier Tokens
 						shards(60, i(CELESTIAL_TOKENS.SEASON2.CONQUEROR.HELM)),
 						shards(50, i(CELESTIAL_TOKENS.SEASON2.CONQUEROR.SHOULDERS)),
@@ -1676,33 +1676,34 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 					},
 					{	-- Bags
 						shards(10, i(266273, {	-- Cache of Celestial Chance
-							i(94230),	-- Amber Primordial Direhorn (MOUNT!)
+							i(94230),	-- Reins of the Amber Primordial Direhorn (MOUNT!)
+							i(248743),	-- Reins of the Celestial Riding Serpent (MOUNT!)
 							i(95059),	-- Clutch of Ji-Kun (MOUNT!)
-							i(94228),	-- Cobalt Primordial Direhorn (MOUNT!)
-							i(94231),	-- Jade Primordial Direhorn (MOUNT!)
-							i(95057),	-- Thundering Cobalt Cloud Serpent (MOUNT!)
-							i(94229),	-- Slate Primordial Direhorn (MOUNT!)
-							i(93666),	-- Spawn of Horridon (MOUNT!)  [Unconfirmed]
-							i(89783),	-- Son of Galleon (MOUNT!)
-
-							i(87794),	-- Golden Water Strider (MOUNT!)
-							i(87792),	-- Orange Water Strider (MOUNT!)
+							i(87786),	-- Reins of the Black Riding Yak (MOUNT!)
+							i(94231),	-- Reins of the Jade Primordial Direhorn (MOUNT!)
+							i(87771),	-- Reins of the Heavenly Onyx Cloud Serpent (MOUNT!)
+							i(95057),	-- Reins of the Thundering Cobalt Cloud Serpent (MOUNT!)
+							i(87793),	-- Reins of the Jade Water Strider (MOUNT!)
+							i(89783),	-- Son of Galleon's Saddle (MOUNT!)
 
 							i(94295),	-- Primal Egg
-							i(94573),	-- Direhorn Runt (PET!)
+							i(97960),	-- Dark Quivering Blob (PET!)
+							i(86563),	-- Hollow Reed (PET!)
+							i(86564),	-- Imbued Jade Fragment (PET!)
 							i(88148),	-- Jade Crane Chick (PET!)
 							i(94835),	-- Ji-Kun Hatchling (PET!)
-							i(97959),	-- Living Fluid (PET!)  [Unconfirmed]
 							i(94125),	-- Living Sandling (PET!)
-							i(94574),	-- Pygmy Direhorn (PET!)  [Unconfirmed]
+							i(89587),	-- Porcupette (PET!)
+							i(94574),	-- Pygmy Direhorn (PET!)
+							i(97959),	-- Quivering Blob (PET!)
 							i(94152),	-- Son of Animus (PET!)
-							i(94933),	-- Tiny Blue Carp (PET!)  [Unconfirmed]
+							i(94595),	-- Spawn of G'nathus (PET!)
+							i(94933),	-- Tiny Blue Carp (PET!)
 							i(94934),	-- Tiny Green Carp (PET!)
 							i(94932),	-- Tiny Red Carp (PET!)
-							i(94935),	-- Tiny White Carp (PET!)  [Unconfirmed]
-							i(97960),	-- Viscous Horror (PET!)  [Unconfirmed]
+							i(94935),	-- Tiny White Carp (PET!)
 							i(95422),	-- Zandalari Anklerender (PET!)
-							i(95423),	-- Zandalari Footlsasher (PET!)
+							i(95423),	-- Zandalari Footslasher (PET!)
 							i(94126),	-- Zandalari Kneebiter (PET!)
 							i(95424),	-- Zandalari Toenibbler (PET!)
 						})),
@@ -1721,18 +1722,18 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 							currency(395),	-- Justice Points
 						})),
 					}),
-				}))),
-				applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR_CELESTIAL_DUNGEONS, n(267317,	-- Celestial Harbinger <August Stone Cluster Exchange>
-					bubbleDownSelf({ ["timeline"] = { ADDED_5_5_4 } }, {
-					["aqd"] = {
-						["coord"] = { 49.4, 75.2, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
-						["maps"] = { SHRINE_OF_SEVEN_STARS, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
+				})),
+				applyclassicphase(MOP_PHASE_SIEGE_OF_ORGRIMMAR_CELESTIAL_DUNGEONS, n(267317, {	-- Celestial Harbinger <August Stone Cluster Exchange>
+					aqd = {
+						coord = { 49.4, 75.2, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
+						maps = { SHRINE_OF_SEVEN_STARS, SHRINE_OF_SEVEN_STARS_THE_IMPERIAL_EXCHANGE },
 					},
-					["hqd"] = {
-						["coord"] = { 43.8, 42.4, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
-						["maps"] = { SHRINE_OF_TWO_MOONS, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
+					hqd = {
+						coord = { 43.8, 42.4, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
+						maps = { SHRINE_OF_TWO_MOONS, SHRINE_OF_TWO_MOONS_THE_IMPERIAL_MERCANTILE },
 					},
-					["groups"] = appendGroups(
+					timeline = { ADDED_5_5_4 },
+					groups = appendGroups(
 					{	-- Tier Tokens
 						clusters(60, i(CELESTIAL_TOKENS.SEASON3.CONQUEROR.HELM)),
 						clusters(50, i(CELESTIAL_TOKENS.SEASON3.CONQUEROR.SHOULDERS)),
@@ -2077,12 +2078,22 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 						clusters(10, i(276086, {	-- Coffer of Celestial Chance
 							i(95059),	-- Clutch of Ji-Kun (MOUNT!)
 							i(87786),	-- Reins of the Black Riding Yak (MOUNT!)
+							i(94230),	-- Reins of the Amber Primordial Direhorn (MOUNT!)
 							i(248743),	-- Reins of the Celestial Riding Serpent (MOUNT!)
+							i(87791),	-- Reins of the Crimson Water Strider (MOUNT!)
 							i(87794),	-- Reins of the Golden Water Strider (MOUNT!)
+							i(87771),	-- Reins of the Heavenly Onyx Cloud Serpent (MOUNT!)
+							i(87784),	-- Reins of the Jungle Riding Crane (MOUNT!)
 							i(94231),	-- Reins of the Jade Primordial Direhorn (MOUNT!)
+							i(87792),	-- Reins of the Orange Water Strider (MOUNT!)
 							i(84753),	-- Reins of the White Riding Yak (MOUNT!)
+							i(94229),	-- Reins of the Slate Primordial Direhorn (MOUNT!)
+							i(95057),	-- Reins of the Thundering Cobalt Cloud Serpent (MOUNT!)
+							i(90655),	-- Reins of the Thundering Ruby Cloud Serpent (MOUNT!)
+							i(89783),	-- Son of Galleon's Saddle (MOUNT!)
 							i(93666),	-- Spawn of Horridon (MOUNT!)
 
+							i(94295),	-- Primal Egg
 							i(104158),	-- Blackfuse Bombling (PET!)
 							i(97960),	-- Dark Quivering Blob (PET!)
 							i(94573),	-- Direhorn Runt (PET!)
@@ -2103,6 +2114,8 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 							i(94933),	-- Tiny Blue Carp (PET!)
 							i(94934),	-- Tiny Green Carp (PET!)
 							i(94932),	-- Tiny Red Carp (PET!)
+							i(94935),	-- Tiny White Carp (PET!)
+							i(95422),	-- Zandalari Anklerender (PET!)
 							i(95423),	-- Zandalari Footslasher (PET!)
 							i(94126),	-- Zandalari Kneebiter (PET!)
 							i(95424),	-- Zandalari Toenibbler (PET!)
@@ -2122,9 +2135,9 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MOP, applyclassicphase(MOP_PHA
 							currency(395),	-- Justice Points
 						})),
 					}),
-				}))),
+				})),
 			}),
 		},
-	})),
+	}),
 })));
 -- #endif

@@ -4,10 +4,10 @@ local L = app.L;
 local GetProgressColorText = app.Modules.Color.GetProgressColorText;
 
 -- Global locals
-local ipairs, pairs, tonumber, time, type, tinsert, tremove, math_floor, tsort =
-	  ipairs, pairs, tonumber, time, type, tinsert, tremove, math.floor, table.sort;
-local BNGetInfo, BNSendGameData, C_BattleNet, C_ChatInfo, RequestTimePlayed =
-	  BNGetInfo, BNSendGameData, C_BattleNet, C_ChatInfo, RequestTimePlayed;
+local ipairs, pairs, tonumber, time, type, tinsert, tremove, math_floor, tsort
+	= ipairs, pairs, tonumber, time, type, tinsert, tremove, math.floor, table.sort;
+local BNGetInfo, BNSendGameData, C_BattleNet, C_ChatInfo, RequestTimePlayed
+	= BNGetInfo, BNSendGameData, C_BattleNet, C_ChatInfo, RequestTimePlayed;
 
 -- Suppress the user-visible time played chat print when we request it programmatically.
 -- Inspired by Broker_PlayedTime addon
@@ -73,6 +73,9 @@ app.AddEventHandler("OnSavedVariablesAvailable", function(currentCharacter, acco
 end)
 -- Module locals
 local AddonMessagePrefix, MESSAGE_HANDLERS, EnableBattleNet = "ATTSYNC", {}, true;
+local RegionalUniqueNamesEnabled = RegionalUniqueNamesEnabled;
+-- Resolve native whisper name semantics once for this module.
+local HasRegionalUniqueNames = RegionalUniqueNamesEnabled and RegionalUniqueNamesEnabled() or false;
 local uid, pendingReceiveChunksForUser, pendingSendChunksForUser, pendingSendResponsesForUser = 1, {}, {}, {};
 local function ProcessSendChunks()
 	local any;
@@ -269,12 +272,21 @@ local function SendMessageChunks(method, target, detail, msg, chunksize)
 		method(target, msg);
 	end
 end
+--- Logical character identifier, native whisper name, or Battle.net game-account ID.
+---@alias ATTAccountTransportKey string|number
+
+local GetCharacterWhisperTarget;
 local function _SendAddonMessage(target, msg)
 	DebugPrint("SEND.MSG",target,msg:len(),msg:sub(1, 500))
 	C_ChatInfo.SendAddonMessage(AddonMessagePrefix, msg, "WHISPER", target);
 end
+--- Sends an account-sync whisper, queuing chunks when the message exceeds the payload limit.
+--- Regionally unique names use native full names before the queue key is chosen.
+---@param target string # Character name or ATT name-realm identifier.
+---@param detail string|nil # Label shown for queued messages.
+---@param msg string|string[] # Message text or commands to encode.
 local function SendAddonMessage(target, detail, msg)
-	SendMessageChunks(_SendAddonMessage, target, detail, msg, 255);
+	SendMessageChunks(_SendAddonMessage, GetCharacterWhisperTarget(target), detail, msg, 255);
 end
 local function _SendBattleNetMessage(target, msg)
 	DebugPrint("SEND.NET",target,msg:len(),msg:sub(1, 500))
@@ -289,28 +301,81 @@ local function SplitString(separator, text)
 	return res;
 end
 local function TrimString(str)
-    return str and str:gsub("^%s*(.-)%s*$", "%1");
+	return str and str:gsub("^%s*(.-)%s*$", "%1");
 end
 local function CamelCaseName(str)
-    if not str or str == "" then return str; end
-    str = TrimString(str):lower();
-    return str:gsub("(%a)([%w]*)", function(first, rest)
-        return first:upper() .. rest;
-    end);
+	if not str or str == "" then return str; end
+	str = TrimString(str):lower();
+	return str:gsub("(%a)([%w]*)", function(first, rest)
+		return first:upper() .. rest;
+	end);
 end
-local function NormalizeLinkedCharacterIdentifier(identifier,identifierRealm)
-	if not identifier or type(identifier) ~= "string" or identifier == "" then return; end
-	local name, realm = identifier:match("^%s*([%w]+)%s*-?%s*([%w ]-)%s*$");
-	if not name or name == "" then
+--- Saved character record containing identity, a derived Identifier, and account-sync metadata.
+--- Read and updated by Summary serialization and linked-character lookups.
+---@class ATTAccountCharacter: ATTCharacterIdentity
+---@field Identifier? string # Cached normalized name-realm identifier.
+---@field battleTag? string # Battle tag of the character's account.
+---@field factionID? FactionID # Character faction ID.
+---@field lvl? number # Character level.
+---@field classID? ClassID # Character class ID.
+---@field class? string # Class token used by class metadata and colors.
+---@field raceID? RaceID # Character race ID.
+---@field lastPlayed? number # Timestamp of the character's last login or update.
+---@field Deaths? number # Recorded character death count.
+
+--- Builds a name-realm identifier while preserving spaces within complete names.
+--- An explicit realm argument keeps the entire name; missing realms use the current realm.
+---@param identifier string|number|nil # Complete name or combined identifier; non-strings are rejected.
+---@param ... string|nil # Optional explicit realm, including nil for the current realm.
+---@return string|nil identifier # Normalized name followed by a realm without spaces.
+---@return string|nil name # Normalized complete name without the realm suffix.
+local function NormalizeLinkedCharacterIdentifier(identifier, ...)
+	if type(identifier) ~= "string" or identifier == "" then return; end
+	local name, realm = identifier, ...;
+	if select("#", ...) == 0 then
+		identifier = TrimString(identifier);
 		name = identifier;
+		local separator = identifier:find("-", 1, true);
+		if separator then
+			name, realm = identifier:sub(1, separator - 1), identifier:sub(separator + 1);
+		end
+	end
+	name = CamelCaseName(name);
+	if not name or name == "" then return; end
+	if realm ~= nil then
+		if type(realm) ~= "string" then return; end
+		realm = TrimString(realm);
 	end
 	if not realm or realm == "" then
-		realm = identifierRealm or CurrentCharacter.realm
+		realm = CurrentCharacter and CurrentCharacter.realm;
 	end
-    name = CamelCaseName(name);
-	if not name or name == "" then return; end
-	realm = CamelCaseName(realm)
+	if type(realm) ~= "string" then return; end
+	realm = CamelCaseName(realm);
+	if realm == "" then return; end
 	return name .. "-" .. realm:gsub("%s+", ""), name;
+end
+--- Maps logical identifiers to regionally unique native full names, preserving native spelling.
+--- Without regional unique names, identifiers pass through unchanged; numeric IDs always pass through.
+---@param identifier ATTAccountTransportKey # Native full name, ATT name-realm identifier, or Battle.net game-account ID.
+---@return ATTAccountTransportKey target # Whisper recipient with original native spelling; numeric IDs pass through.
+GetCharacterWhisperTarget = function(identifier)
+	if not HasRegionalUniqueNames or type(identifier) ~= "string" then return identifier; end
+	identifier = TrimString(identifier);
+	local normalizedIdentifier = NormalizeLinkedCharacterIdentifier(identifier);
+	local knownName;
+	for _,character in pairs(CharacterData) do
+		if type(character.name) == "string" and character.name ~= "" then
+			-- Native full names take precedence over interpreting name punctuation.
+			if identifier == character.name then return character.name; end
+			local qualified = NormalizeLinkedCharacterIdentifier(character.name, character.realm);
+			if qualified and (identifier == qualified or normalizedIdentifier == qualified) then
+				knownName = character.name;
+			end
+		end
+	end
+	-- Preserve native spelling before a saved character record is available.
+	local name = TrimString(identifier:match("^[^-]+"));
+	return knownName or name or identifier;
 end
 local function AddCharacterLookup(characterByInfo, character)
 	local identifier = NormalizeLinkedCharacterIdentifier(character.name, character.realm)
@@ -321,10 +386,21 @@ local function AddCharacterLookup(characterByInfo, character)
 		characterByInfo[character.guid] = character
 	end
 end
+--- Checks whether a sender is allowed by the explicit or implicit linked-character entries.
+--- Regionally unique senders match allowed native names using the logical links' normalization.
+---@param identifier ATTAccountTransportKey # Character sender name or Battle.net game-account ID.
+---@return boolean linked
 local function IsLinkedCharacter(identifier)
 	if LinkedCharacters[identifier] then return true end
 	local fullIdentifier, shortIdentifier = NormalizeLinkedCharacterIdentifier(identifier);
-	return (fullIdentifier and LinkedCharacters[fullIdentifier]) or (shortIdentifier and LinkedCharacters[shortIdentifier]) or false;
+	if (fullIdentifier and LinkedCharacters[fullIdentifier]) or (shortIdentifier and LinkedCharacters[shortIdentifier]) then return true; end
+	if HasRegionalUniqueNames and type(identifier) == "string" then
+		local nativeName = CamelCaseName(identifier);
+		for linked,allowed in pairs(LinkedCharacters) do
+			if allowed and type(linked) == "string" and CamelCaseName(GetCharacterWhisperTarget(linked)) == nativeName then return true; end
+		end
+	end
+	return false;
 end
 local function UpdateBattleTags()
 	-- Attempt to cache each character's battleTag if it is missing.
@@ -685,7 +761,7 @@ local ser, dser = {}, {}
 do
 local bit = bit32 or bit  -- WoW compatibility
 local function idiv(a, b)
-    return math.floor(a / b)
+	return math.floor(a / b)
 end
 
 local ROW_BITS  = 128
@@ -696,459 +772,458 @@ local rowEnd = "/"
 
 local b64index = {}
 for i = 1, #b64chars do
-    b64index[b64chars:sub(i,i)] = i - 1
+	b64index[b64chars:sub(i,i)] = i - 1
 end
 local function b64encode(bytes)
-    local t = {}
-    local n = #bytes
-    local i = 1
+	local t = {}
+	local n = #bytes
+	local i = 1
 
-    while i <= n do
-        local b1 = bytes[i];     i = i + 1
-        local b2 = bytes[i];     i = i + 1
-        local b3 = bytes[i];     i = i + 1
+	while i <= n do
+		local b1 = bytes[i];     i = i + 1
+		local b2 = bytes[i];     i = i + 1
+		local b3 = bytes[i];     i = i + 1
 
-        -- Compute 6-bit groups
-        local n1 = bit.rshift(b1, 2)
-        local n2 = bit.bor(bit.lshift(bit.band(b1, 3), 4), bit.rshift(b2 or 0, 4))
-        local n3 = bit.bor(bit.lshift(bit.band(b2 or 0, 15), 2), bit.rshift(b3 or 0, 6))
-        local n4 = bit.band(b3 or 0, 63)
+		-- Compute 6-bit groups
+		local n1 = bit.rshift(b1, 2)
+		local n2 = bit.bor(bit.lshift(bit.band(b1, 3), 4), bit.rshift(b2 or 0, 4))
+		local n3 = bit.bor(bit.lshift(bit.band(b2 or 0, 15), 2), bit.rshift(b3 or 0, 6))
+		local n4 = bit.band(b3 or 0, 63)
 
-        -- Always emit 4 chars, but replace with '=' when needed
-        t[#t+1] = b64chars:sub(n1+1, n1+1)
-        t[#t+1] = b64chars:sub(n2+1, n2+1)
+		-- Always emit 4 chars, but replace with '=' when needed
+		t[#t+1] = b64chars:sub(n1+1, n1+1)
+		t[#t+1] = b64chars:sub(n2+1, n2+1)
 
-        if b2 == nil then
-            -- Only 1 byte input → 2 chars + '=='
-            t[#t+1] = "="
-            t[#t+1] = "="
-        elseif b3 == nil then
-            -- Only 2 bytes input → 3 chars + '='
-            t[#t+1] = b64chars:sub(n3+1, n3+1)
-            t[#t+1] = "="
-        else
-            -- Full 3 bytes → 4 chars
-            t[#t+1] = b64chars:sub(n3+1, n3+1)
-            t[#t+1] = b64chars:sub(n4+1, n4+1)
-        end
-    end
+		if b2 == nil then
+			-- Only 1 byte input → 2 chars + '=='
+			t[#t+1] = "="
+			t[#t+1] = "="
+		elseif b3 == nil then
+			-- Only 2 bytes input → 3 chars + '='
+			t[#t+1] = b64chars:sub(n3+1, n3+1)
+			t[#t+1] = "="
+		else
+			-- Full 3 bytes → 4 chars
+			t[#t+1] = b64chars:sub(n3+1, n3+1)
+			t[#t+1] = b64chars:sub(n4+1, n4+1)
+		end
+	end
 
-    return table.concat(t)
+	return table.concat(t)
 end
 local function b64decode(str)
-    local bytes = {}
-    local n = #str
-    local i = 1
+	local bytes = {}
+	local n = #str
+	local i = 1
 
-    while i <= n do
-        local c1 = b64index[str:sub(i,i)]; i = i + 1
-        local c2 = b64index[str:sub(i,i)]; i = i + 1
+	while i <= n do
+		local c1 = b64index[str:sub(i,i)]; i = i + 1
+		local c2 = b64index[str:sub(i,i)]; i = i + 1
 
-        local c3char = str:sub(i,i)
-        local c4char = str:sub(i+1,i+1)
+		local c3char = str:sub(i,i)
+		local c4char = str:sub(i+1,i+1)
 
-        local c3 = b64index[c3char]
-        local c4 = b64index[c4char]
+		local c3 = b64index[c3char]
+		local c4 = b64index[c4char]
 
-        i = i + 2
+		i = i + 2
 
-        -- byte 1 (always present)
-        local b1 = bit.bor(bit.lshift(c1, 2), bit.rshift(c2, 4))
-        bytes[#bytes+1] = bit.band(b1, 0xFF)
+		-- byte 1 (always present)
+		local b1 = bit.bor(bit.lshift(c1, 2), bit.rshift(c2, 4))
+		bytes[#bytes+1] = bit.band(b1, 0xFF)
 
-        -- byte 2 (only if c3 is not padding)
-        if c3char ~= "=" then
-            local b2 = bit.bor(bit.lshift(bit.band(c2, 15), 4), bit.rshift(c3, 2))
-            bytes[#bytes+1] = bit.band(b2, 0xFF)
-        else
-            -- c3 is padding → stop decoding this quartet
-            break
-        end
+		-- byte 2 (only if c3 is not padding)
+		if c3char ~= "=" then
+			local b2 = bit.bor(bit.lshift(bit.band(c2, 15), 4), bit.rshift(c3, 2))
+			bytes[#bytes+1] = bit.band(b2, 0xFF)
+		else
+			-- c3 is padding → stop decoding this quartet
+			break
+		end
 
-        -- byte 3 (only if c4 is not padding)
-        if c4char ~= "=" then
-            local b3 = bit.bor(bit.lshift(bit.band(c3, 3), 6), c4)
-            bytes[#bytes+1] = bit.band(b3, 0xFF)
-        else
-            -- c4 is padding → stop decoding this quartet
-            break
-        end
-    end
+		-- byte 3 (only if c4 is not padding)
+		if c4char ~= "=" then
+			local b3 = bit.bor(bit.lshift(bit.band(c3, 3), 6), c4)
+			bytes[#bytes+1] = bit.band(b3, 0xFF)
+		else
+			-- c4 is padding → stop decoding this quartet
+			break
+		end
+	end
 
-    return bytes
+	return bytes
 end
 
 local function rleEncodeBytes(bytes)
-    local out = {}
-    local n = #bytes
-    local i = 1
+	local out = {}
+	local n = #bytes
+	local i = 1
 
-    while i <= n do
-        local b = bytes[i]
+	while i <= n do
+		local b = bytes[i]
 
-        if b == 0 then
-            -- compress zero run
-            local run = 1
-            while i + run <= n and bytes[i + run] == 0 and run < 255 do
-                run = run + 1
-            end
-            out[#out+1] = 0      -- marker: zero-run
-            out[#out+1] = run    -- run length
-            i = i + run
-        else
-            -- emit raw byte
-            out[#out+1] = b
-            i = i + 1
-        end
-    end
+		if b == 0 then
+			-- compress zero run
+			local run = 1
+			while i + run <= n and bytes[i + run] == 0 and run < 255 do
+				run = run + 1
+			end
+			out[#out+1] = 0      -- marker: zero-run
+			out[#out+1] = run    -- run length
+			i = i + run
+		else
+			-- emit raw byte
+			out[#out+1] = b
+			i = i + 1
+		end
+	end
 
-    return out
+	return out
 end
 
 local function rleDecodeBytes(bytes)
-    local out = {}
-    local n = #bytes
-    local i = 1
+	local out = {}
+	local n = #bytes
+	local i = 1
 
-    while i <= n do
-        local b = bytes[i]
+	while i <= n do
+		local b = bytes[i]
 
-        if b == 0 then
-            -- zero-run marker
-            local run = bytes[i+1]
-            for _ = 1, run do
-                out[#out+1] = 0
-            end
-            i = i + 2
-        else
-            out[#out+1] = b
-            i = i + 1
-        end
-    end
+		if b == 0 then
+			-- zero-run marker
+			local run = bytes[i+1]
+			for _ = 1, run do
+				out[#out+1] = 0
+			end
+			i = i + 2
+		else
+			out[#out+1] = b
+			i = i + 1
+		end
+	end
 
-    return out
+	return out
 end
 
 local function serializeSet(tbl)
-    local rows = {}
+	local rows = {}
 
-    for value in pairs(tbl) do
+	for value in pairs(tbl) do
 		value = tonumber(value) or 0
-        if value >= 1 and value <= 9999999 then
-            local row = idiv(value - 1, ROW_BITS)
-            local offset = (value - 1) % ROW_BITS
+		if value >= 1 and value <= 9999999 then
+			local row = idiv(value - 1, ROW_BITS)
+			local offset = (value - 1) % ROW_BITS
 
-            local byteIndex = idiv(offset, 8) + 1
-            local bitMask = bit.lshift(1, offset % 8)
+			local byteIndex = idiv(offset, 8) + 1
+			local bitMask = bit.lshift(1, offset % 8)
 
-            local rowData = rows[row]
-            if not rowData then
-                rowData = {}
-                for i = 1, ROW_BYTES do rowData[i] = 0 end
-                rows[row] = rowData
-            end
+			local rowData = rows[row]
+			if not rowData then
+				rowData = {}
+				for i = 1, ROW_BYTES do rowData[i] = 0 end
+				rows[row] = rowData
+			end
 
-            rowData[byteIndex] = bit.bor(rowData[byteIndex], bitMask)
-        end
-    end
+			rowData[byteIndex] = bit.bor(rowData[byteIndex], bitMask)
+		end
+	end
 
-    local parts = {}
+	local parts = {}
 
-    for rowIndex, rowData in pairs(rows) do
-        -- RLE compress the byte array BEFORE Base64
-        local rle = rleEncodeBytes(rowData)
-        local encoded = b64encode(rle)
+	for rowIndex, rowData in pairs(rows) do
+		-- RLE compress the byte array BEFORE Base64
+		local rle = rleEncodeBytes(rowData)
+		local encoded = b64encode(rle)
 
-        parts[#parts+1] = rowIndex .. rowIdSep .. encoded
-    end
+		parts[#parts+1] = rowIndex .. rowIdSep .. encoded
+	end
 
-    return table.concat(parts, rowEnd)
+	return table.concat(parts, rowEnd)
 end
 ser.bitarray = serializeSet
 
 local function deserializeSet(str, result)
-    result = result or {}
-    local rowmatch = "([^"..rowEnd.."]+)"
-    local b64match = "^(%d+)"..rowIdSep.."(.+)$"
+	result = result or {}
+	local rowmatch = "([^"..rowEnd.."]+)"
+	local b64match = "^(%d+)"..rowIdSep.."(.+)$"
 
-    for chunk in string.gmatch(str, rowmatch) do
-        local rowIndex, b64 = chunk:match(b64match)
-        rowIndex = tonumber(rowIndex)
+	for chunk in string.gmatch(str, rowmatch) do
+		local rowIndex, b64 = chunk:match(b64match)
+		rowIndex = tonumber(rowIndex)
 
-        local rle = b64decode(b64)
-        local bytes = rleDecodeBytes(rle)
+		local rle = b64decode(b64)
+		local bytes = rleDecodeBytes(rle)
 
-        for byteIndex = 1, #bytes do
-            local byte = bytes[byteIndex]
-            if byte ~= 0 then
-                for bitpos = 0, 7 do
-                    local mask = bit.lshift(1, bitpos)
-                    if bit.band(byte, mask) ~= 0 then
-                        local offset = (byteIndex - 1) * 8 + bitpos
-                        local value = rowIndex * ROW_BITS + offset + 1
-                        result[value] = 1
-                    end
-                end
-            end
-        end
-    end
+		for byteIndex = 1, #bytes do
+			local byte = bytes[byteIndex]
+			if byte ~= 0 then
+				for bitpos = 0, 7 do
+					local mask = bit.lshift(1, bitpos)
+					if bit.band(byte, mask) ~= 0 then
+						local offset = (byteIndex - 1) * 8 + bitpos
+						local value = rowIndex * ROW_BITS + offset + 1
+						result[value] = 1
+					end
+				end
+			end
+		end
+	end
 
-    return result
+	return result
 end
 dser.bitarray = deserializeSet
 
 -- Trie-based nested serialization
 local function trieInsert(root, value)
-    local s = tostring(value)
-    local node = root
+	local s = tostring(value)
+	local node = root
 
-    for i = 1, #s do
-        local digit = s:sub(i,i)
-        node[digit] = node[digit] or {}
-        node = node[digit]
-    end
+	for i = 1, #s do
+		local digit = s:sub(i,i)
+		node[digit] = node[digit] or {}
+		node = node[digit]
+	end
 
-    node.leaf = true
+	node.leaf = true
 end
 
 local function compressLeafChildren(children)
-    -- children are strings like "4", "5", "6"
-    table.sort(children)
+	-- children are strings like "4", "5", "6"
+	table.sort(children)
 
-    local out = {}
-    local i = 1
+	local out = {}
+	local i = 1
 
-    while i <= #children do
-        local start = tonumber(children[i])
-        local finish = start
-        local j = i + 1
+	while i <= #children do
+		local start = tonumber(children[i])
+		local finish = start
+		local j = i + 1
 
-        while j <= #children do
-            local nextVal = tonumber(children[j])
-            if nextVal == finish + 1 then
-                finish = nextVal
-                j = j + 1
-            else
-                break
-            end
-        end
+		while j <= #children do
+			local nextVal = tonumber(children[j])
+			if nextVal == finish + 1 then
+				finish = nextVal
+				j = j + 1
+			else
+				break
+			end
+		end
 
-        if finish > start then
-            out[#out+1] = start .. "-" .. finish
-        else
-            out[#out+1] = tostring(start)
-        end
+		if finish > start then
+			out[#out+1] = start .. "-" .. finish
+		else
+			out[#out+1] = tostring(start)
+		end
 
-        i = j
-    end
+		i = j
+	end
 
-    return out
+	return out
 end
 
 local function serializeNode(node)
-    local leafChildren = {}
-    local branchChildren = {}
+	local leafChildren = {}
+	local branchChildren = {}
 
-    for digit, child in pairs(node) do
-        if digit ~= "leaf" then
-            local sub = serializeNode(child)
-            if sub == "" then
-                -- leaf child
-                leafChildren[#leafChildren+1] = digit
-            else
-                -- branch child
-                branchChildren[#branchChildren+1] = digit .. sub
-            end
-        end
-    end
+	for digit, child in pairs(node) do
+		if digit ~= "leaf" then
+			local sub = serializeNode(child)
+			if sub == "" then
+				-- leaf child
+				leafChildren[#leafChildren+1] = digit
+			else
+				-- branch child
+				branchChildren[#branchChildren+1] = digit .. sub
+			end
+		end
+	end
 
-    table.sort(branchChildren)
+	table.sort(branchChildren)
 
-    -- Only compress if ALL children are leaf nodes
-    local children
-    if #branchChildren == 0 and #leafChildren > 0 then
-        children = compressLeafChildren(leafChildren)
-    else
-        -- mix of leaf + branch → no compression
-        for _, d in ipairs(leafChildren) do
-            branchChildren[#branchChildren+1] = d
-        end
-        table.sort(branchChildren)
-        children = branchChildren
-    end
+	-- Only compress if ALL children are leaf nodes
+	local children
+	if #branchChildren == 0 and #leafChildren > 0 then
+		children = compressLeafChildren(leafChildren)
+	else
+		-- mix of leaf + branch → no compression
+		for _, d in ipairs(leafChildren) do
+			branchChildren[#branchChildren+1] = d
+		end
+		table.sort(branchChildren)
+		children = branchChildren
+	end
 
-    local childStr = table.concat(children, ",")
+	local childStr = table.concat(children, ",")
 
-    if node.leaf then
-        if #children == 0 then
-            return ""
-        else
-            return ".(" .. childStr .. ")"
-        end
-    else
-        if #children == 0 then
-            return "()"
-        else
-            return "(" .. childStr .. ")"
-        end
-    end
+	if node.leaf then
+		if #children == 0 then
+			return ""
+		else
+			return ".(" .. childStr .. ")"
+		end
+	else
+		if #children == 0 then
+			return "()"
+		else
+			return "(" .. childStr .. ")"
+		end
+	end
 end
 
 local function serializeTrieSet(tbl)
-    local root = {}
+	local root = {}
 
-    for value in pairs(tbl) do
-        trieInsert(root, value)
-    end
+	for value in pairs(tbl) do
+		trieInsert(root, value)
+	end
 
-    local parts = {}
-    for digit, child in pairs(root) do
-        parts[#parts+1] = digit .. serializeNode(child)
-    end
+	local parts = {}
+	for digit, child in pairs(root) do
+		parts[#parts+1] = digit .. serializeNode(child)
+	end
 
-    table.sort(parts)
-    return table.concat(parts, ",")
+	table.sort(parts)
+	return table.concat(parts, ",")
 end
 ser.trie = serializeTrieSet
 
 local function parseChildToken(str, i)
-    -- token can be:
-    --   digit
-    --   digit-digit
-    --   digit(...)
-    --   digit.(...)
-    --
-    -- First read the digit
-    local digit = str:sub(i,i)
-    i = i + 1
+	-- token can be:
+	--   digit
+	--   digit-digit
+	--   digit(...)
+	--   digit.(...)
+	--
+	-- First read the digit
+	local digit = str:sub(i,i)
+	i = i + 1
 
-    -- Check for range: digit-digit
-    if str:sub(i,i) == "-" then
-        i = i + 1
-        local endDigit = str:sub(i,i)
-        i = i + 1
-        return { range = { tonumber(digit), tonumber(endDigit) } }, i
-    end
+	-- Check for range: digit-digit
+	if str:sub(i,i) == "-" then
+		i = i + 1
+		local endDigit = str:sub(i,i)
+		i = i + 1
+		return { range = { tonumber(digit), tonumber(endDigit) } }, i
+	end
 
-    -- Check for leaf marker
-    local leaf = false
-    if str:sub(i,i) == "." then
-        leaf = true
-        i = i + 1
-    end
+	-- Check for leaf marker
+	local leaf = false
+	if str:sub(i,i) == "." then
+		leaf = true
+		i = i + 1
+	end
 
-    -- Check for children
-    if str:sub(i,i) == "(" then
-        i = i + 1
-        local children = {}
+	-- Check for children
+	if str:sub(i,i) == "(" then
+		i = i + 1
+		local children = {}
 
-        while true do
-            local c = str:sub(i,i)
+		while true do
+			local c = str:sub(i,i)
 
-            if c >= "0" and c <= "9" then
-                local child
-                child, i = parseChildToken(str, i)
-                children[#children+1] = child
+			if c >= "0" and c <= "9" then
+				local child
+				child, i = parseChildToken(str, i)
+				children[#children+1] = child
 
-            elseif c == ")" then
-                i = i + 1
-                break
+			elseif c == ")" then
+				i = i + 1
+				break
 
-            elseif c == "," then
-                i = i + 1
+			elseif c == "," then
+				i = i + 1
 
-            else
-                error("Unexpected char: " .. c)
-            end
-        end
+			else
+				error("Unexpected char: " .. c)
+			end
+		end
 
-        return { digit = digit, leaf = leaf, children = children }, i
-    end
+		return { digit = digit, leaf = leaf, children = children }, i
+	end
 
-    -- Simple leaf
-    return { digit = digit, leaf = true, children = {} }, i
+	-- Simple leaf
+	return { digit = digit, leaf = true, children = {} }, i
 end
 
 local function parseNode(str, i)
-    return parseChildToken(str, i)
+	return parseChildToken(str, i)
 end
 
 local function parseForest(str)
-    local i = 1
-    local nodes = {}
+	local i = 1
+	local nodes = {}
 
-    while i <= #str do
-        local node
-        node, i = parseNode(str, i)
-        nodes[#nodes+1] = node
+	while i <= #str do
+		local node
+		node, i = parseNode(str, i)
+		nodes[#nodes+1] = node
 
-        if str:sub(i,i) == "," then
-            i = i + 1
-        else
-            break
-        end
-    end
+		if str:sub(i,i) == "," then
+			i = i + 1
+		else
+			break
+		end
+	end
 
-    return nodes
+	return nodes
 end
 
 local function expandTrie(node, prefix, out)
-    if node.range then
-        for d = node.range[1], node.range[2] do
-            out[tonumber(prefix .. d)] = 1
-        end
-        return
-    end
+	if node.range then
+		for d = node.range[1], node.range[2] do
+			out[tonumber(prefix .. d)] = 1
+		end
+		return
+	end
 
-    local newPrefix = prefix .. node.digit
+	local newPrefix = prefix .. node.digit
 
-    if node.leaf then
-        out[tonumber(newPrefix)] = 1
-    end
+	if node.leaf then
+		out[tonumber(newPrefix)] = 1
+	end
 
-    for _, child in ipairs(node.children) do
-        expandTrie(child, newPrefix, out)
-    end
+	for _, child in ipairs(node.children) do
+		expandTrie(child, newPrefix, out)
+	end
 end
 
 local function deserializeTrieSet(str)
-    local forest = parseForest(str)
-    local result = {}
+	local forest = parseForest(str)
+	local result = {}
 
-    for _, node in ipairs(forest) do
-        expandTrie(node, "", result)
-    end
+	for _, node in ipairs(forest) do
+		expandTrie(node, "", result)
+	end
 
-    return result
+	return result
 end
 dser.trie = deserializeTrieSet
 
 local function serializeKV(tbl)
-    local parts = {}
+	local parts = {}
 
-    for k, v in pairs(tbl) do
-        parts[#parts+1] = tostring(k) .. rowIdSep .. tostring(v)
-    end
+	for k, v in pairs(tbl) do
+		parts[#parts+1] = tostring(k) .. rowIdSep .. tostring(v)
+	end
 
-    table.sort(parts) -- optional but makes output deterministic
-    return table.concat(parts, rowEnd)
+	table.sort(parts) -- optional but makes output deterministic
+	return table.concat(parts, rowEnd)
 end
 ser.numnumtbl = serializeKV
 
 local function deserializeKV(str)
-    local tbl = {}
+	local tbl = {}
 
-    for pair in string.gmatch(str, "([^"..rowEnd.."]+)") do
-        local k, v = pair:match("([^:]+)"..rowIdSep.."([^:]+)")
-        if k and v then
-            tbl[tonumber(k)] = tonumber(v)
-        end
-    end
+	for pair in string.gmatch(str, "([^"..rowEnd.."]+)") do
+		local k, v = pair:match("([^:]+)"..rowIdSep.."([^:]+)")
+		if k and v then
+			tbl[tonumber(k)] = tonumber(v)
+		end
+	end
 
-    return tbl
+	return tbl
 end
 dser.numnumtbl = deserializeKV
-
 
 
 -- Debugging
@@ -1217,7 +1292,7 @@ dser.numnumtbl = deserializeKV
 end
 local defaultDeserializer = function(field, currentValue, data)
 	if #data > 1 then
-		print("DEFAULT DESERIALIZER ENCOUNTERED MORE THAN ONE DATA FOR FIELD");
+		print("DEFAULT DESERIALIZER ENCOUNTERED MORE THAN ONE DATUM FOR FIELD");
 		print("  ", field, #data);
 		for i=1,#data,1 do
 			print("   ", data[i]);
@@ -1309,6 +1384,26 @@ local wrappers = {
 		end,
 	}
 }
+--- Numeric rank payload received for one character's ProfessionRanks field.
+---@class ATTSerializedProfessionRanks
+---@field [1] string? # Payload such as "2:171=300/2485=155"; "2:" or a missing value clears saved ranks.
+
+--- Fixed twelve-string array used to encode and decode account-sync Summary messages.
+--- Positions retain the wire order below; numeric values stay strings until deserialized.
+---@class ATTCharacterSummaryFields
+---@field [1] string # Battle tag.
+---@field [2] string # Character display text, including class colors.
+---@field [3] string # Complete native character name.
+---@field [4] string # Realm name.
+---@field [5] string # Faction ID encoded as a number.
+---@field [6] string # Character level encoded as a number.
+---@field [7] string # Class ID encoded as a number.
+---@field [8] string # Class token.
+---@field [9] string # Race ID encoded as a number.
+---@field [10] string # Last-played timestamp encoded as a number.
+---@field [11] string # Death count encoded as a number.
+---@field [12] string # Client build encoded as a number.
+
 local deserializers = setmetatable({
 	ActiveSkills = function(field, currentValue, data)
 		if currentValue then
@@ -1389,7 +1484,16 @@ local deserializers = setmetatable({
 		currentValue.modeString = modeString;
 		return currentValue;
 	end,
+	--- Applies the received twelve-field summary to saved character identity and metadata.
+	--- Clears the derived Identifier only when the received name or realm changes.
+	---@param field string # Serialized field name (unused).
+	---@param currentValue any # Value supplied by the generic deserializer (unused).
+	---@param data ATTCharacterSummaryFields # Summary fields in wire order.
+	---@param character ATTAccountCharacter # Saved character record to update.
 	Summary = function(field, currentValue, data, character)
+		if character.name ~= data[3] or character.realm ~= data[4] then
+			character.Identifier = nil;
+		end
 		character.battleTag = data[1];
 		character.text = data[2];
 		character.name = data[3];
@@ -1414,6 +1518,7 @@ local deserializers = setmetatable({
 		return currentValue;
 	end,
 	AzeriteEssenceRanks = wrappers.dser.numnumtbl,
+	ProfessionRanks = wrappers.dser.numnumtbl,
 }, {
 	__index = function(t)
 		return defaultDeserializer;
@@ -1437,7 +1542,7 @@ local serializers = setmetatable({
 	Lockouts = function(field, value, timeStamp, lastUpdated)
 		local any, str = false, field;
 		for savedInstanceID,difficulties in pairs(value) do
-			-- Escape commas and colons from isntance names.
+			-- Escape commas and colons from instance names.
 			str = str .. ";" .. tostring(savedInstanceID):gsub(":", "%%3A"):gsub(",", "%%2C");
 			any = true;
 			for difficultyID,difficulty in pairs(difficulties) do
@@ -1481,6 +1586,7 @@ local serializers = setmetatable({
 		if any then return str; end
 	end,
 	AzeriteEssenceRanks = wrappers.ser.numnumtbl,
+	ProfessionRanks = wrappers.ser.numnumtbl,
 
 	-- The main data package containing the simple stuff.
 	Summary = function(character, value)
@@ -1711,6 +1817,7 @@ end
 
 -- Merging
 local BlacklistedTooltipFields = {
+	ProfessionRanks = true,
 	ActiveSkills = true,
 	Lockouts = true,
 	PrimeData = true,
@@ -1718,12 +1825,48 @@ local BlacklistedTooltipFields = {
 };
 local eligibleFields = { "Buildings","GarrisonBuildings","Factions","FlightPaths","Exploration","Spells" };
 local function SortByCharacterLevel(a,b)
-  return (a.lvl or 0) > (b.lvl or 0);
+	return (a.lvl or 0) > (b.lvl or 0);
 end
+
+local function GetCharacterRaceText(character)
+	local raceID = character.raceID
+
+	if raceID and C_CreatureInfo and C_CreatureInfo.GetRaceInfo then
+		local raceInfo = C_CreatureInfo.GetRaceInfo(raceID)
+
+		if raceInfo and raceInfo.raceName then
+			return raceInfo.raceName
+		end
+	end
+
+	return character.race
+end
+
+local function GetMergeCandidateText(character)
+	local text = character.text or character.name or RETRIEVING_DATA
+
+	if character.lvl then
+		text = text .. ", " .. LEVEL .. " " .. character.lvl
+	end
+
+	local race = GetCharacterRaceText(character)
+
+	if race then
+		text = text .. " " .. race
+	end
+
+	if character.lastPlayed then
+		text = text .. " |cffaaaaaa(" .. date("%Y-%m-%d", character.lastPlayed) .. ")|r"
+	end
+
+	return text
+end
+
 local function MergeCharacterData(character, row)
 	local message = L.ACCOUNT_MANAGEMENT_MERGE_HEADER:format(character.text or character.name or RETRIEVING_DATA);
 	if character.lvl then message = message .. " " .. LEVEL .. " " .. character.lvl; end
-	if character.race then message = message .. " " .. character.race; end
+	local race = GetCharacterRaceText(character);
+	if race then message = message .. " " .. race; end
 	message = message .. L.ACCOUNT_MANAGEMENT_MERGE_FIELDS_HEADER;
 	local fields = {};
 	for i,field in ipairs(eligibleFields) do
@@ -1819,11 +1962,26 @@ local function MergeTransferredCharacterData(row)
 	end
 	if #eligibleCharacters > 1 then
 		tsort(eligibleCharacters, SortByCharacterLevel);
+		if MenuUtil and MenuUtil.CreateContextMenu then
+			-- Scrollable menu of all eligible characters; picking one opens the existing merge confirmation
+			MenuUtil.CreateContextMenu(row, function(owner, rootDescription)
+				rootDescription:CreateTitle(L.ACCOUNT_MANAGEMENT_MERGE_CHARACTER);
+				if rootDescription.SetScrollMode then
+					rootDescription:SetScrollMode(400);
+				end
+				for _,character in ipairs(eligibleCharacters) do
+					rootDescription:CreateButton(GetMergeCandidateText(character), function()
+						C_Timer.After(0.01, function()
+							MergeCharacterData(character, row);
+						end);
+					end);
+				end
+			end);
+			return;
+		end
 		local message = L.ACCOUNT_MANAGEMENT_MERGE_INDEX_POPUP;
 		for i,character in ipairs(eligibleCharacters) do
-			message = message .. "\n" .. i .. ": " .. (character.text or character.name) .. ",";
-			if character.lvl then message = message .. " " .. LEVEL .. " " .. character.lvl; end
-			if character.race then message = message .. " " .. character.race; end
+			message = message .. "\n" .. i .. ": " .. GetMergeCandidateText(character);
 		end
 		app:ShowPopupDialogWithEditBox(message, "1", function(input)
 			local index = input and input ~= "" and tonumber(input);
@@ -1940,8 +2098,26 @@ local function OnClickForLinkedAccount(row, button)
 	end
 	return true;
 end
+--- Pending synchronization item containing a transport key, display label, and chunk progress.
+--- Shared by queue display, progress tooltips, and cancellation callbacks.
+---@class ATTSyncQueueItem
+---@field datalink? ATTAccountTransportKey # Key used by the pending send and receive queues.
+---@field text? string # Display name used in the cancellation prompt.
+---@field progress? number # Number of received or acknowledged chunks.
+---@field total? number # Total number of send and receive chunks.
+---@field visible? boolean # Whether the queue item is displayed.
+
+--- ATT window row whose ref points to the synchronization item being displayed.
+--- Click handling uses that item's transport key to cancel pending synchronization.
+---@class ATTSyncQueueRow: ATTRowClass
+---@field ref ATTSyncQueueItem # Queue data associated with the row.
+
+--- Cancels pending send and receive chunks after a right-click confirmation.
+---@param row ATTSyncQueueRow # Window row containing the transport key and display name.
+---@param button string # Clicked mouse button.
+---@return true handled
 local function OnClickForSyncQueue(row, button)
-	local identifier = row.ref.text;
+	local identifier = row.ref.datalink;
 	if not identifier then return true; end
 
 	if button == "RightButton" then
@@ -2129,8 +2305,11 @@ local function OnTooltipForLinkedAccount(t, tooltipInfo)
 		});
 	end
 end
+--- Appends send/receive chunk progress and the cancellation hint for this transport key.
+---@param t ATTSyncQueueItem # Queue item containing the transport key.
+---@param tooltipInfo ATTTooltipLine[] # Tooltip lines to append to.
 local function OnTooltipForSyncQueue(t, tooltipInfo)
-	local identifier = t.text;
+	local identifier = t.datalink;
 	if not identifier then return; end
 
 	-- Show the Receive Queue
@@ -2180,8 +2359,11 @@ local function OnTooltipForSyncQueue(t, tooltipInfo)
 		r = 1, g = 0.8, b = 0.8
 	});
 end
+--- Updates combined send/receive progress and makes the queue item visible.
+---@param t ATTSyncQueueItem # Queue item containing the transport key.
+---@return true|nil updated # Nil when the item has no transport key.
 local function OnUpdateForSyncQueue(t)
-	local identifier = t.text;
+	local identifier = t.datalink;
 	if not identifier then return; end
 
 	local progress, total = 0, 0;
@@ -2416,6 +2598,7 @@ app:CreateWindow("Account Management", {
 					end
 					for sender,_ in pairs(senders) do
 						tinsert(g, app.CreateRawText(tostring(sender), {
+							datalink = sender,
 							OnClick = OnClickForSyncQueue,
 							OnTooltip = OnTooltipForSyncQueue,
 							OnUpdate = OnUpdateForSyncQueue,
@@ -2452,9 +2635,10 @@ app:CreateWindow("Account Management", {
 		CurrentCharacter = app.CurrentCharacter;
 		EnableBattleNet = settings.EnableBattleNet;
 
-		-- Delete some things I thought were going to be useful but ARENT THANKS BLIZZARD.
+		-- Delete some things I thought were going to be useful but AREN'T THANKS BLIZZARD.
 		-- We do actually use gameAccountID, but its value changes between game sessions and is unreliable.
 		for guid,character in pairs(CharacterData) do
+			character.Identifier = NormalizeLinkedCharacterIdentifier(character.name, character.realm);
 			character.bnetAccountID = nil;
 			character.gameAccountID = nil;
 		end

@@ -2,8 +2,9 @@
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
 
-root(ROOTS.Zones, m(DRAGON_ISLES, bubbleDown({ ["timeline"] = { ADDED_10_2_0 } }, {
-	m(EMERALD_DREAM, {
+maproot(DRAGON_ISLES, EMERALD_DREAM, {
+	timeline = { ADDED_10_2_0 },
+	groups = {
 		header(HEADERS.Quest, 78319, {	-- The Superbloom
 			n(ACHIEVEMENTS, {
 				ach(19313),	-- Bloom Man Group
@@ -11,7 +12,7 @@ root(ROOTS.Zones, m(DRAGON_ISLES, bubbleDown({ ["timeline"] = { ADDED_10_2_0 } }
 				ach(19310, {	-- Fruit of the Bloom
 					-- need to revise this... there are other Dreamfruit which don't provide these powers :weary:
 					-- would need coords accurately for them to match properly
-					-- ["provider"] = { "o", 410267 },	-- Dreamfruit (there's multiple ID's but we only care about the name)
+					-- provider = { "o", 410267 },	-- Dreamfruit (there's multiple ID's but we only care about the name)
 					-- Parser handles the criteria
 					-- crit(62910),	-- Basket of Explosive Acorns
 					-- crit(62911),	-- Bubble Blowgun
@@ -38,13 +39,13 @@ root(ROOTS.Zones, m(DRAGON_ISLES, bubbleDown({ ["timeline"] = { ADDED_10_2_0 } }
 			}),
 			n(QUESTS, {
 				q(78319, {	-- The Superbloom
-					["qg"] = 208474,	-- Clarelle
-					["coords"] = {
+					qg = 208474,	-- Clarelle
+					coords = {
 						{ 44.6, 72.0, EMERALD_DREAM },
 						{ 51.4, 59.6, EMERALD_DREAM },
 					},
-					["isWeekly"] = true,
-					["groups"] = {
+					isWeekly = true,
+					groups = {
 						i(211389, {	-- Cache of Overblooming Treasures
 							i(211416),	-- Dream Wardens Insignia [Epic 1k BoA]
 							i(211417),	-- Dream Wardens Insignia [Epic 1k]
@@ -129,10 +130,10 @@ root(ROOTS.Zones, m(DRAGON_ISLES, bubbleDown({ ["timeline"] = { ADDED_10_2_0 } }
 				}),
 			}),
 			n(207554, {		-- Verlann Timbercrush
-				["description"] = "Spawns at the end of the Superbloom Event.\nThe Event always starts on the hour.",
-				["coord"] = { 43.8, 71.8, EMERALD_DREAM },
-				["isWeekly"] = true,
-				["groups"] = {
+				description = "Spawns at the end of the Superbloom Event.\nThe Event always starts on the hour.",
+				coord = { 43.8, 71.8, EMERALD_DREAM },
+				isWeekly = true,
+				groups = {
 					-- Cosmetic
 					i(210663),	-- Circlet of the Mother Tree
 					i(210666),	-- Crest of the Seething Flamekeeper
@@ -150,11 +151,11 @@ root(ROOTS.Zones, m(DRAGON_ISLES, bubbleDown({ ["timeline"] = { ADDED_10_2_0 } }
 			}),
 			n(REWARDS, {
 				i(211414, {	-- Blossoming Dreamtrove
-					["description"] = "Granted for achieving 8000 points during the Superbloom Event.\nThe Event always starts on the hour.",
+					description = "Granted for achieving 8000 points during the Superbloom Event.\nThe Event always starts on the hour.",
 				}),
 				i(211413, {	-- Budding Dreamtrove
-					["description"] = "Granted for achieving 5333 or more points during the Superbloom Event.\nThe Event always starts on the hour.",
-					["groups"] = {
+					description = "Granted for achieving 5333 or more points during the Superbloom Event.\nThe Event always starts on the hour.",
+					groups = {
 						i(207762),	-- Grotto Netherwing Drake: Chin Spike (MM!)
 						i(207774),	-- Grotto Netherwing Drake: Finned Jaw (MM!)
 						i(207763),	-- Grotto Netherwing Drake: Single Horned Crest (MM!)
@@ -166,51 +167,54 @@ root(ROOTS.Zones, m(DRAGON_ISLES, bubbleDown({ ["timeline"] = { ADDED_10_2_0 } }
 					},
 				}),
 				i(211411, {	-- Sprouting Dreamtrove
-					["description"] = "Granted for achieving 2600 or more points during the Superbloom Event.\nThe Event always starts on the hour.",
+					description = "Granted for achieving 2600 or more points during the Superbloom Event.\nThe Event always starts on the hour.",
 				}),
 			}),
 		}),
-	}),
-})));
+	},
+});
 
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.DF, bubbleDownSelf({ ["timeline"] = { ADDED_10_2_0 } }, {
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.DF, {
 	m(DRAGON_ISLES, {
 		m(EMERALD_DREAM, {
 			header(HEADERS.Quest, 78203, {	-- Superbloom
-				q(78203),	-- Superbloom
-				--
-				q(78553),	-- pop if you loot any seed from Veriann Timbercrush (daily/weekly?)
-				-- q(78554),	-- on 2nd kill with rare state of event - was looted small dreamseed
-				q(79082, {["repeatable"]=true}),	-- 'The Superbloom Event'
-				q(78866),	-- 'Superbloom: Step 2 Right Path'
-				q(78867),	-- 'Superbloom: Step 3 Right Path'
-				q(78868),	-- 'Superbloom: Step 4 Right Path'
-				q(78869),	-- 'Superbloom: Step 2 Left Path'
-				q(78870),	-- 'Superbloom: Step 3 Left Path'
-				q(78871),	-- 'Superbloom: Step 4 Left Path'
-				q(78892),	-- 'Superbloom: Final Step'
-				-- spells for achievement Fruit of the Bloom ach(19310)
-				-- q(78751),	-- Arachnid Annihilation (spellID 428203)
-				-- q(78487),	-- Basket of Explosive Acorns (spellID 424568)
-				-- q(78488),	-- Bubble Blowgun (spellID 414636)
-				-- q(78482),	-- Dream Gatherer (spellID 418100)
-				-- q(78730),	-- Fae Lens (spellID 428124)
-				-- q(78483),	-- Feral Overflow (spellID 424822)
-				-- q(78492),	-- Flower Trail (spellID 414584)
-				-- q(78484),	-- Lifesurger (spellID 418166)
-				-- q(78494),	-- Memory of L'ghorek (spellID 424231)
-				-- q(78495),	-- Memory of Ursoc (spellID 424273)
-				-- q(78491),	-- Mighty Roar (spellID 416868)
-				-- q(78489),	-- Moonkin Jump (spellID 415185)
-				-- q(78486),	-- Moonkin Mayhem (spellID 415147)
-				-- q(78723),	-- Nae'dra Nibbles (spellID 428110)
-				-- q(78498),	-- Potent Lullaby (spellID 418754)
-				-- q(78490),	-- Putrid Propulsion (spellID 424560)
-				-- q(78485),	-- Sack of Talontreats (spellID 424341)
-				-- q(78496),	-- Star Shower (spellID 417790)
-				-- q(78497),	-- The Superb Loom (spellID 425196)
-				-- q(78493),	-- Wake Up! (spellID 415174)
+				timeline = { ADDED_10_2_0 },
+				groups = {
+					q(78203),	-- Superbloom
+					--
+					q(78553),	-- pop if you loot any seed from Veriann Timbercrush (daily/weekly?)
+					-- q(78554),	-- on 2nd kill with rare state of event - was looted small dreamseed
+					q(79082, {repeatable=true}),	-- 'The Superbloom Event'
+					q(78866),	-- 'Superbloom: Step 2 Right Path'
+					q(78867),	-- 'Superbloom: Step 3 Right Path'
+					q(78868),	-- 'Superbloom: Step 4 Right Path'
+					q(78869),	-- 'Superbloom: Step 2 Left Path'
+					q(78870),	-- 'Superbloom: Step 3 Left Path'
+					q(78871),	-- 'Superbloom: Step 4 Left Path'
+					q(78892),	-- 'Superbloom: Final Step'
+					-- spells for achievement Fruit of the Bloom ach(19310)
+					-- q(78751),	-- Arachnid Annihilation (spellID 428203)
+					-- q(78487),	-- Basket of Explosive Acorns (spellID 424568)
+					-- q(78488),	-- Bubble Blowgun (spellID 414636)
+					-- q(78482),	-- Dream Gatherer (spellID 418100)
+					-- q(78730),	-- Fae Lens (spellID 428124)
+					-- q(78483),	-- Feral Overflow (spellID 424822)
+					-- q(78492),	-- Flower Trail (spellID 414584)
+					-- q(78484),	-- Lifesurger (spellID 418166)
+					-- q(78494),	-- Memory of L'ghorek (spellID 424231)
+					-- q(78495),	-- Memory of Ursoc (spellID 424273)
+					-- q(78491),	-- Mighty Roar (spellID 416868)
+					-- q(78489),	-- Moonkin Jump (spellID 415185)
+					-- q(78486),	-- Moonkin Mayhem (spellID 415147)
+					-- q(78723),	-- Nae'dra Nibbles (spellID 428110)
+					-- q(78498),	-- Potent Lullaby (spellID 418754)
+					-- q(78490),	-- Putrid Propulsion (spellID 424560)
+					-- q(78485),	-- Sack of Talontreats (spellID 424341)
+					-- q(78496),	-- Star Shower (spellID 417790)
+					-- q(78497),	-- The Superb Loom (spellID 425196)
+					-- q(78493),	-- Wake Up! (spellID 415174)
+				},
 			}),
 		}),
 	}),
-})));
+}));

@@ -36,20 +36,21 @@ InRetailSeason = {	-- MID S2
 }
 -- #ENDIF
 
-root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
+root(ROOTS.Instances, expansion(EXPANSION.MID, {
 	inst(1309, {	-- The Blinding Vale
 		InRetailSeason=InRetailSeason,
-		["coord"] = { 27.2, 78.0, MAP.MIDNIGHT.HARANDAR },
-		["maps"] = { 2500 },
-		["groups"] = {
+		coord = { 27.2, 78.0, MAP.MIDNIGHT.HARANDAR },
+		timeline = { ADDED_12_0_1_LAUNCH },
+		maps = { 2500 },
+		groups = {
 			Difficulty(DIFFICULTY.DUNGEON.MULTI.NORMAL_PLUS).AddGroups({
 				n(SPECIAL, {
 					n(251885, {	-- Gravid Potatoad
-						["description"] = "Left of the path towards the last boss, target and use Hexed Potatoad Mucus to receive a toy.",
-						["questID"] = 92518,
-						["groups"] = {
+						description = "Left of the path towards the last boss, target and use Hexed Potatoad Mucus to receive a toy.",
+						questID = 92518,
+						groups = {
 							i(251903, {	-- Potatoad Egg (TOY!)
-								["provider"] = { "i", 252265 },	-- Hexed Potatoad Mucus
+								provider = { "i", 252265 },	-- Hexed Potatoad Mucus
 							}),
 						},
 					}),
@@ -94,16 +95,16 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 				}),
 			}),
 			Difficulty(DIFFICULTY.DUNGEON.MULTI.HEROIC_PLUS, {
-				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
-				["groups"] = {
+				timeline = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
+				groups = {
 					BossOnly(ZIEKKET, {
 						ach(61648),	-- Heroic: The Blinding Vale
 					}),
 				},
 			}),
 			Difficulty(DIFFICULTY.DUNGEON.MYTHIC, {
-				["timeline"] = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
-				["groups"] = {
+				timeline = { ADDED_12_0_1_LAUNCH, REMOVED_12_0_1_SEASONSTART, ADDED_12_1_0 },
+				groups = {
 					BossOnly(ZIEKKET, {
 						ach(61649),	-- Mythic: The Blinding Vale
 						ach(61619),	-- Mythic: The Blinding Vale Guild Run
@@ -113,4 +114,4 @@ root(ROOTS.Instances, expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = {
 			}),
 		},
 	}),
-})));
+}));

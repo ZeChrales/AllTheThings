@@ -4,13 +4,13 @@
 
 -- since many world event files aren't organized based on pre-launch event, we can setup the prelaunch groupings here first to ensure correct expac order
 root(ROOTS.WorldEvents, n(EXPANSION_PRELAUNCH, {
-	expansion(EXPANSION.TBC),
-	expansion(EXPANSION.WRATH),
-	expansion(EXPANSION.CATA),
-	expansion(EXPANSION.MOP),
-	expansion(EXPANSION.LEGION),
-	expansion(EXPANSION.BFA),
-	expansion(EXPANSION.SL),
-	expansion(EXPANSION.DF),
-	expansion(EXPANSION.TWW),
+	expansionHeader(EXPANSION.TBC, IGNORED_VALUE),
+	-- expansionHeader(EXPANSION.WRATH, IGNORED_VALUE), -- no data for this yet
+	expansionHeader(EXPANSION.CATA, IGNORED_VALUE),
+	expansionHeader(EXPANSION.MOP, IGNORED_VALUE),
+	expansionHeader(EXPANSION.LEGION, IGNORED_VALUE),
+	expansionHeader(EXPANSION.BFA, IGNORED_VALUE),
+	expansionHeader(EXPANSION.SL, IGNORED_VALUE),
+	expansionHeader(EXPANSION.DF, IGNORED_VALUE),
+	expansionHeader(EXPANSION.TWW, IGNORED_VALUE),
 }))

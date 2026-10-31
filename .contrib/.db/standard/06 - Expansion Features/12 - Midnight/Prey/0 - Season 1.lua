@@ -2,7 +2,7 @@
 --      E X P A N S I O N   F E A T U R E S    M O D U L E       --
 -------------------------------------------------------------------
 
-PREY_MID_S1 = createHeader({
+local PREY_MID_S1 = createHeader({
 	readable = "Prey MID S1",
 	icon = [[~_.asset("Category_Prey")]],
 	text = {
@@ -36,11 +36,11 @@ local PREYSEEKER_BOX_SYM_SEASON_ONE = {
 root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 	n(PREY, {
 		n(PREY_MID_S1, {
-			["timeline"] = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },
-			["groups"] = {
+			timeline = { ADDED_12_0_1_SEASONSTART, REMOVED_12_1_0 },
+			groups = {
 				n(ACHIEVEMENTS, {
 					ach(63164, {	-- Big Prey Hunter (Season 1)
-						["timeline"] = { ADDED_12_0_7, REMOVED_12_1_0 },
+						timeline = { ADDED_12_0_7, REMOVED_12_1_0 },
 					}),
 				}),
 				n(EVENT_COMPLETION, {symselector=SymSelector.MIDNIGHT_PREY_EVENT_COMPLETION_SEASON_ONE}),
@@ -128,20 +128,26 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 						i(262936),	-- Preyseeker's Veteran Sack
 						-- Boxes, Season 1
 						i(257023, {	-- Preyseeker's Adventurer Chest
-							["sym"] = PREYSEEKER_BOX_SYM_SEASON_ONE,
+							sym = PREYSEEKER_BOX_SYM_SEASON_ONE,
 						}),
 						i(257026, {	-- Preyseeker's Veteran Chest
-							["sym"] = PREYSEEKER_BOX_SYM_SEASON_ONE,
+							sym = PREYSEEKER_BOX_SYM_SEASON_ONE,
 						}),
 						i(262346, {	-- Preyseeker's Champion Chest
-							["sym"] = PREYSEEKER_BOX_SYM_SEASON_ONE,
+							sym = PREYSEEKER_BOX_SYM_SEASON_ONE,
 						}),
 						i(268545, {	-- Aspiring Preyseeker's Chest
-							["sym"] = PREYSEEKER_BOX_SYM_SEASON_ONE,
+							sym = PREYSEEKER_BOX_SYM_SEASON_ONE,
 						}),
 						-- Bonus roll
-						i(269768, {["timeline"] = { ADDED_12_0_5, REMOVED_12_1_0 }}),	-- Nebulous Voidcache: Prey
+						i(269768, {timeline = { ADDED_12_0_5, REMOVED_12_1_0 }}),	-- Nebulous Voidcache: Prey
 					}),
+					-- Weekly Bonus Reputations
+					-- Season 1 Prey
+					hqt_bonusRenown_weekly(95000, 2764, {timeline={ADDED_12_0_1_SEASONSTART,REMOVED_12_0_1_SEASONSTART}}),	-- 1st per week
+					hqt_bonusRenown_weekly(95001, 2764, {timeline={ADDED_12_0_1_SEASONSTART,REMOVED_12_0_1_SEASONSTART}}),	-- 2nd per week
+					hqt_bonusRenown_weekly(95002, 2764, {timeline={ADDED_12_0_1_SEASONSTART,REMOVED_12_0_1_SEASONSTART}}),	-- 3rd per week
+					hqt_bonusRenown_weekly(95003, 2764, {timeline={ADDED_12_0_1_SEASONSTART,REMOVED_12_0_1_SEASONSTART}}),	-- 4th per week
 				}),
 				n(FACTIONS, {
 					faction(2764),	-- Prey: Season 1

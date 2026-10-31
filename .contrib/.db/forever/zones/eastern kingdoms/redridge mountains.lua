@@ -111,6 +111,31 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					}),
 				},
 			}),
+			q(98386, {	-- Alther's Mill
+				sourceQuest = 89,	-- The Everstill Bridge
+				qg = 341,	-- Foreman Oslow
+				coord = { 27.0, 48.6, MAP.REDRIDGE_MOUNTAINS },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				races = ALLIANCE_ONLY,
+				lvl = 15,
+				groups = {
+					objective(1, {	-- 0/12 Greater Tarantula slain
+						providers = {
+							{ "n", 505 },	-- Greater Tarantula
+							{ "n", 271898 },	-- Greater Tarantula
+							{ "n", 271988 },	-- Greater Tarantula
+						},
+						coord = { 52.6, 41.2, MAP.REDRIDGE_MOUNTAINS },
+					}),
+					objective(2, {	-- 0/6 Tarantula Egg destroyed
+						providers = {
+							{ "o", 673101 },	-- Tarantula Egg
+							{ "o", 673085 },	-- Tarantula Egg
+						},
+						coord = { 47.3, 43.6, MAP.REDRIDGE_MOUNTAINS },
+					}),
+				},
+			}),
 			q(34, {	-- An Unwelcome Guest
 				qg = 342,	-- Martie Jainrose
 				coord = { 16.8, 46.3, MAP.REDRIDGE_MOUNTAINS },
@@ -282,9 +307,9 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 			}),
 			q(248, {	-- Looking Further
 				sourceQuest = 94,	-- A Watchful Eye
+				qi = 1083,	-- Glyph of Azora (QI!)
 				providers = {
 					{ "o",   31 },	-- Old Lion Statue
-					{ "i", 1083 },	-- Glyph of Azora (QI!)
 					{ "o",   76 },	-- An Empty Jar
 				},
 				coord = { 79.2, 46.7, MAP.REDRIDGE_MOUNTAINS },
@@ -368,6 +393,12 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 						cr = 397,	-- Morganth
 					}),
 					i(5274),	-- Rose Mantle
+					i(270033, {	-- Demonhide Bracers
+						timeline = { TIMELINE.ADDED_1_60_1 },
+					}),
+					i(270034, {	-- Shadow Gauntlets
+						timeline = { TIMELINE.ADDED_1_60_1 },
+					}),
 				},
 			}),
 			q(150, {	-- Murloc Poachers
@@ -403,7 +434,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 				lvl = 20,
 				groups = {
 					objective(1, {	-- 0/5 Rethban Ore
-						["providers"] = {
+						providers = {
 							{ "i", 2798 },	-- Rethban Ore
 							{ "n", 580 },	-- Redridge Drudger
 							{ "o", 2055 },	-- Copper Vein (Redridge Mountains - Rethban Caverns)
@@ -473,16 +504,15 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					}),
 				},
 			}),
-			q(98247, {	-- Shipping Label (A)
-				description = "The shipping label appears in your inventory once you seal a waylaid crate for the first time.",
-				qs = 280179,	-- Shipping Label (QS!)
-				qg = 256390,	-- Marcy Baker <Inventory Intake>
-				coord = { 9.6, 71.0, MAP.REDRIDGE_MOUNTAINS },
+			q(95816, {	-- Sign Me Up!
+				qs = 270888,	-- Advertising License Application (QS!)
+				-- Turned in to Elaine Compton <Contract Coordinator> (256391).
+				qi = 270896,	-- Massive Pile of Forms (PQI!)
 				timeline = { TIMELINE.ADDED_1_60_1 },
-				races = ALLIANCE_ONLY,
-				lvl = 10,
 				groups = {
-					currency(3402),	-- Merchant's Favor x50
+					objective(2, {	-- 0/1 Massive Pile of Completed Forms
+						provider = { "i", 270897 },	-- Massive Pile of Completed Forms
+					}),
 				},
 			}),
 			q(91, {	-- Solomon's Law
@@ -645,11 +675,11 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 				},
 			}),
 			q(95999, {	-- Wanted: Insinerator Gar'im
-				provider = { "o", 649051 },	-- Wanted: Insinerator Gar'im
+				provider = { "o", 649051 },	-- Wanted: Incinerator Gar'im
 				coord = { 24.3, 46.2, MAP.REDRIDGE_MOUNTAINS },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
-				lvl = 15,
+				lvl = 16,
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					objective(1, {	-- 0/1 Broken Staff of Incinerator Gar'im
 						provider = { "i", 271872 },	-- Broken Staff of Incinerator Gar'im (QI!)
@@ -691,10 +721,10 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 		}),
 		n(RARES, {
 			n(14273, {	-- Boulderheart
-				["coord"] = { 88.8, 67.0, MAP.REDRIDGE_MOUNTAINS },
+				coord = { 88.8, 67.0, MAP.REDRIDGE_MOUNTAINS },
 			}),
 			n(616, {	-- Chatter
-				["coords"] = {
+				coords = {
 					{ 51.2, 37.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 56.0, 41.4, MAP.REDRIDGE_MOUNTAINS },
 					{ 58.6, 41.0, MAP.REDRIDGE_MOUNTAINS },
@@ -702,25 +732,36 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					{ 53.6, 48.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 49.2, 41.8, MAP.REDRIDGE_MOUNTAINS },
 				},
-				["groups"] = {
+				groups = {
 					i(3229),	-- Tarantula Silk Sash
 				},
 			}),
+			n(214456, {	-- Dro'zem the Blasphemous
+				coords = {
+					{ 29.6, 7.6, MAP.REDRIDGE_MOUNTAINS },
+					{ 32.4, 7.0, MAP.REDRIDGE_MOUNTAINS },
+					{ 34.2, 8.6, MAP.REDRIDGE_MOUNTAINS },
+				},
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				groups = {
+					i(277213),	-- Dro'zem's Tunic
+				},
+			}),
 			n(584, {	-- Kazon
-				["coords"] = {
+				coords = {
 					{ 33.0,  6.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 36.0,  8.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 36.6, 11.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 38.4, 13.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 42.4, 15.4, MAP.REDRIDGE_MOUNTAINS },
 				},
-				["groups"] = {
+				groups = {
 					i(3231),	-- Cutthroat Pauldrons
 					i(2058),	-- Kazon's Maul
 				},
 			}),
 			n(14271, {	-- Ribchaser
-				["coords"] = {
+				coords = {
 					{ 16.2, 60.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 14.0, 64.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 18.8, 64.8, MAP.REDRIDGE_MOUNTAINS },
@@ -731,7 +772,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 				},
 			}),
 			n(947, {	-- Rohh the Silent
-				["coords"] = {
+				coords = {
 					{ 76.0, 29.4, MAP.REDRIDGE_MOUNTAINS },
 					{ 76.0, 34.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 73.0, 41.6, MAP.REDRIDGE_MOUNTAINS },
@@ -742,13 +783,13 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					{ 83.2, 51.0, MAP.REDRIDGE_MOUNTAINS },
 					{ 83.4, 57.6, MAP.REDRIDGE_MOUNTAINS },
 				},
-				["groups"] = {
+				groups = {
 					i(4446),	-- Blackvenom Blade
 					i(4447),	-- Cloak of Night
 				},
 			}),
 			n(14269, {	-- Seeker Aqualon
-				["coords"] = {
+				coords = {
 					{ 46.2, 59.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 50.2, 61.4, MAP.REDRIDGE_MOUNTAINS },
 					{ 28.2, 58.2, MAP.REDRIDGE_MOUNTAINS },
@@ -757,20 +798,25 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					{ 75.8, 67.4, MAP.REDRIDGE_MOUNTAINS },
 					{ 73.2, 71.2, MAP.REDRIDGE_MOUNTAINS },
 				},
-				["groups"] = {
+				groups = {
 					i(7091),	-- Pattern: Truefaith Gloves (RECIPE!)
 				},
 			}),
 			n(14272, {	-- Snarlflare
-				["coords"] = {
+				coords = {
 					{ 36.4, 66.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 43.4, 30.0, MAP.REDRIDGE_MOUNTAINS },
 					{ 49.2, 33.0, MAP.REDRIDGE_MOUNTAINS },
 					{ 54.6, 37.2, MAP.REDRIDGE_MOUNTAINS },
 				},
+				groups = {
+					i(281925, {	-- Whelpfire Wand
+						timeline = { TIMELINE.ADDED_1_60_1 },
+					}),
+				},
 			}),
 			n(14270, {	-- Squiddic
-				["coords"] = {
+				coords = {
 					{ 42.8, 52.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 39.0, 60.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 46.0, 63.4, MAP.REDRIDGE_MOUNTAINS },
@@ -793,7 +839,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					}),
 				},
 			}),
-			n(256732, {	-- Alynsia
+			n(256732, {	-- Alynsia <Enchanter>
 				coord = { 11.1, 71.6, MAP.REDRIDGE_MOUNTAINS },
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
@@ -802,6 +848,14 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 			n(3097, {	-- Bernard Brubaker <Leather Armor Merchant>
 				coord = { 83.2, 71.0, MAP.REDRIDGE_MOUNTAINS },
 				races = ALLIANCE_ONLY,
+				sym = {{ "select", "itemID",
+					236,	-- Cured Leather Armor
+					1849,	-- Cured Leather Belt
+					238,	-- Cured Leather Boots
+					1850,	-- Cured Leather Bracers
+					239,	-- Cured Leather Gloves
+					237,	-- Cured Leather Pants
+				}},
 				groups = {
 					i(4795, {	-- Bear Bracers
 						isLimited = true,
@@ -838,261 +892,11 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					}),
 				},
 			}),
-			n(256734, {	-- Daniel Stitchsong
+			n(256734, {	-- Daniel Stitchsong <Leatherworker>
 				coord = { 10.0, 72.6, MAP.REDRIDGE_MOUNTAINS },
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
-				groups = bubbleDownClassicRep(2586, {	-- Azeroth Commerce Authority
-					{	-- Neutral
-						i(271626, {	-- Leatherworking Certification
-							cost = { { "c", 3402, 1000 } },	-- x1000 Merchant's Favor
-						}),
-						i(252765, {	-- Pattern: Brawler's Leather Belt (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252786, {	-- Pattern: Brawler's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252777, {	-- Pattern: Brawler's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252798, {	-- Pattern: Brawler's Leather Hood (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252820, {	-- Pattern: Brawler's Leather Legguards (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252805, {	-- Pattern: Brawler's Leather Tunic (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252767, {	-- Pattern: Defender's Leather Belt (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252788, {	-- Pattern: Defender's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252779, {	-- Pattern: Defender's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252800, {	-- Pattern: Defender's Leather Hood (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252822, {	-- Pattern: Defender's Leather Kilt (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252807, {	-- Pattern: Defender's Leather Tunic (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252769, {	-- Pattern: Stormrider's Leather Belt (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252790, {	-- Pattern: Stormrider's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252781, {	-- Pattern: Stormrider's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252802, {	-- Pattern: Stormrider's Leather Hood (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252824, {	-- Pattern: Stormrider's Leather Kilt (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252809, {	-- Pattern: Stormrider's Leather Tunic (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252768, {	-- Pattern: Totemic Leather Belt (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252789, {	-- Pattern: Totemic Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252780, {	-- Pattern: Totemic Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252801, {	-- Pattern: Totemic Leather Hood (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252823, {	-- Pattern: Totemic Leather Leggings (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252808, {	-- Pattern: Totemic Leather Tunic (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252767, {	-- Pattern: Trapper's Leather Belt (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252787, {	-- Pattern: Trapper's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252778, {	-- Pattern: Trapper's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252799, {	-- Pattern: Trapper's Leather Hood (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252821, {	-- Pattern: Trapper's Leather Legguards (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252806, {	-- Pattern: Trapper's Leather Tunic (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252803, {	-- Pattern: Wisdom's Leather Hood (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252782, {	-- Pattern: Wisdom's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252825, {	-- Pattern: Wisdom's Leather Leggings (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252770, {	-- Pattern: Wisdom's Leather Belt (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(252810, {	-- Pattern: Wisdom's Leather Tunic (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-					}, {	-- Friendly
-						i(252834, {	-- Pattern: Forceful Thick Armor Kit (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252842, {	-- Pattern: Mender's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252852, {	-- Pattern: Mender's Leather Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252903, {	-- Pattern: Mender's Mail Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252836, {	-- Pattern: Prowler's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252848, {	-- Pattern: Prowler's Leather Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252840, {	-- Pattern: Skirmisher's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252902, {	-- Pattern: Skirmisher's Mail Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252841, {	-- Pattern: Skycaller's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252851, {	-- Pattern: Skycaller's Leather Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252901, {	-- Pattern: Skycaller's Mail Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252837, {	-- Pattern: Skulker's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252849, {	-- Pattern: Skulker's Leather Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252838, {	-- Pattern: Stalker's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252900, {	-- Pattern: Stalker's Mail Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252839, {	-- Pattern: Warden's Leather Gloves (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(252850, {	-- Pattern: Warden's Leather Shoulder (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-					}, {	-- Honored
-						i(252864, {	-- Pattern: Mender's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252857, {	-- Pattern: Mender's Leather Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252876, {	-- Pattern: Mender's Leather Waistguard (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252925, {	-- Pattern: Mender's Mail Belt (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252907, {	-- Pattern: Mender's Mail Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252913, {	-- Pattern: Mender's Mail Sabatons (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252941, {	-- Pattern: Mystic Rugged Armor Kit (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252860, {	-- Pattern: Prowler's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252853, {	-- Pattern: Prowler's Leather Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252872, {	-- Pattern: Prowler's Leather Waistguard (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252863, {	-- Pattern: Skycaller's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252856, {	-- Pattern: Skycaller's Leather Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252875, {	-- Pattern: Skycaller's Leather Waistguard (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252923, {	-- Pattern: Skycaller's Mail Belt (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252905, {	-- Pattern: Skycaller's Mail Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252911, {	-- Pattern: Skycaller's Mail Sabatons (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252924, {	-- Pattern: Skirmisher's Mail Belt (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252906, {	-- Pattern: Skirmisher's Mail Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252912, {	-- Pattern: Skirmisher's Mail Sabatons (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252861, {	-- Pattern: Skulker's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252854, {	-- Pattern: Skulker's Leather Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252873, {	-- Pattern: Skulker's Leather Waistguard (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252922, {	-- Pattern: Stalker's Mail Belt (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252904, {	-- Pattern: Stalker's Mail Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252910, {	-- Pattern: Stalker's Mail Sabatons (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252862, {	-- Pattern: Warden's Leather Boots (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252855, {	-- Pattern: Warden's Leather Bracers (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(252874, {	-- Pattern: Warden's Leather Waistguard (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-					}, {	-- Revered
-					}, {	-- Exalted
-					},
-				}),
+				groups = LEATHERWORKING_RECIPES.MERCHANTS_FAVOR_RECIPES_ALLIANCE,
 			}),
 			n(956, {	-- Dorin Songblade <Armorer>
 				coord = { 25.8, 46.5, MAP.REDRIDGE_MOUNTAINS },
@@ -1127,105 +931,11 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					}),
 				},
 			}),
-			n(256733, {	-- Fritz Fizzle
+			n(256733, {	-- Fritz Fizzle <Engineer>
 				coord = { 10.4, 74.4, MAP.REDRIDGE_MOUNTAINS },
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
-				groups = bubbleDownClassicRep(2586, {	-- Azeroth Commerce Authority
-					{	-- Neutral
-						i(271625, {	-- Engineering Certification
-							cost = { { "c", 3402, 1000 } },	-- x1000 Merchant's Favor
-						}),
-						i(264205, {	-- Schematic: EZ-Thro Copper Bomb XL (RECIPE!)
-							cost = { { "c", 3402, 45 } },	-- x45 Merchant's Favor
-						}),
-						i(264204, {	-- Schematic: EZ-Thro Wrap (RECIPE!)
-							cost = { { "c", 3402, 45 } },	-- x45 Merchant's Favor
-						}),
-						i(264206, {	-- Schematic: No Slip SAF-T Padding (RECIPE!)
-							cost = { { "c", 3402, 45 } },	-- x45 Merchant's Favor
-						}),
-						i(264203, {	-- Schematic: SAF-T Copper Bomb (RECIPE!)
-							cost = { { "c", 3402, 45 } },	-- x45 Merchant's Favor
-						}),
-						i(264202, {	-- Schematic: SAF-T Dynamite (RECIPE!)
-							cost = { { "c", 3402, 45 } },	-- x45 Merchant's Favor
-						}),
-						i(264201, {	-- Schematic: SAF-T Tabs (RECIPE!)
-							cost = { { "c", 3402, 45 } },	-- x45 Merchant's Favor
-						}),
-						i(285285, {	-- Schematic: Satchel of Copper Bombs (RECIPE!)
-							cost = { { "c", 3402, 45 } },	-- x45 Merchant's Favor
-						}),
-					}, {	-- Friendly
-						i(280326, {	-- Schematic: Bent Goggles (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(280323, {	-- Schematic: Clanking Cord (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(280328, {	-- Schematic: Dented Goggles (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(264211, {	-- Schematic: EZ-Thro Fireproof Fuse (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(280325, {	-- Schematic: Floppy Goggles (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(280322, {	-- Schematic: Gizmo Girdle (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(264209, {	-- Schematic: SAF-T Bell (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(285286, {	-- Schematic: Satchel of Bronze Bombs (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(280327, {	-- Schematic: Stuckbutton Goggles (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-						i(280321, {	-- Schematic: Whimsical Waistwrap (RECIPE!)
-							cost = { { "c", 3402, 180 } },	-- x180 Merchant's Favor
-						}),
-					}, {	-- Honored
-						i(264217, {	-- Schematic: Compact Critter Carrier (RECIPE!)
-							cost = { { "c", 3402, 270 } },	-- x270 Merchant's Favor
-						}),
-						i(264216, {	-- Schematic: Emergency Field Cloak 270 (RECIPE!)
-							cost = { { "c", 3402, 270 } },	-- x270 Merchant's Favor
-						}),
-						i(264221, {	-- Schematic: Gnomish Army Knife (RECIPE!)
-							cost = { { "c", 3402, 270 } },	-- x270 Merchant's Favor
-						}),
-						i(264234, {	-- Schematic: Gnomish Poultryizer (RECIPE!)
-							cost = { { "c", 3402, 360 } },	-- x360 Merchant's Favor
-						}),
-						i(264222, {	-- Schematic: Loot-A-Rang (RECIPE!)
-							cost = { { "c", 3402, 270 } },	-- x270 Merchant's Favor
-						}),
-						i(264220, {	-- Schematic: SAF-T Disposable Parachute (RECIPE!)
-							cost = { { "c", 3402, 270 } },	-- x270 Merchant's Favor
-						}),
-						i(285288, {	-- Schematic: Satchel of Dark Iron Bombs (RECIPE!)
-							cost = { { "c", 3402, 270 } },	-- x270 Merchant's Favor
-						}),
-						i(285287, {	-- Schematic: Satchel of Iron Bombs (RECIPE!)
-							cost = { { "c", 3402, 270 } },	-- x270 Merchant's Favor
-						}),
-						i(264237, {	-- Schematic: Stealthman 52 (RECIPE!)
-							cost = { { "c", 3402, 360 } },	-- x360 Merchant's Favor
-						}),
-						i(264235, {	-- Schematic: Ultralight Goblin Glider (RECIPE!)
-							cost = { { "c", 3402, 360 } },	-- x360 Merchant's Favor
-						}),
-						i(264232, {	-- Schematic: Ultrasafe Rechargeable Battery (RECIPE!)
-							cost = { { "c", 3402, 360 } },	-- x360 Merchant's Favor
-						}),
-					}, {	-- Revered
-					}, {	-- Exalted
-					},
-				}),
+				groups = ENGINEERING_RECIPES.MERCHANTS_FAVOR_RECIPES_ALLIANCE,
 			}),
 			n(3085, {	-- Gloria Femmel <Cooking Supplies>
 				coord = { 21.5, 43.4, MAP.REDRIDGE_MOUNTAINS },
@@ -1238,15 +948,26 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 			n(3088, {	-- Henry Chapal <Gunsmith>
 				coord = { 18.8, 41.3, MAP.REDRIDGE_MOUNTAINS },
 				races = ALLIANCE_ONLY,
-				sym = {{"select","itemID",
+				sym = {{ "select", "itemID",
 					2511,	-- Hunter's Boomstick
 					3023,	-- Large Bore Blunderbuss
 				}},
 			}),
+			n(256736, {	-- Huey Sunnydale <Mule Handler>
+				coord = { 8.4, 72.0, MAP.REDRIDGE_MOUNTAINS },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				races = ALLIANCE_ONLY,
+				groups = {
+					i(262766, {	-- Reins of the Pack Kodo (MOUNT!)
+						minReputation = { 2586, EXALTED },	-- Azeroth Commerce Authority, Exalted.
+						cost = { { "c", 3402, 6000 } },	-- x6000 Merchant's Favor
+					}),
+				},
+			}),
 			n(793, {	-- Kara Adams <Shield Crafter>
 				coord = { 25.5, 46.5, MAP.REDRIDGE_MOUNTAINS },
 				races = ALLIANCE_ONLY,
-				sym = {{"select","itemID",
+				sym = {{ "select", "itemID",
 					2445,	-- Large Metal Shield
 					17188,	-- Ringed Buckler
 				}},
@@ -1262,7 +983,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					}),
 				},
 			}),
-			n(256731, {	-- Kalsey Sanden
+			n(256731, {	-- Kalsey Sanden <Chef>
 				coord = { 10.8, 72.8, MAP.REDRIDGE_MOUNTAINS },
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
@@ -1274,11 +995,11 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					i(249887, {	-- Recipe: Mrrggl Smrrthle (RECIPE!)
 						cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
 					}),
-					i(21219), -- Recipe: Sagefish Delight (RECIPE!)
+					i(21219),	-- Recipe: Sagefish Delight (RECIPE!)
 					i(249886, {	-- Recipe: Slimy Smoothie (RECIPE!)
 						cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
 					}),
-					i(21099), -- Recipe: Smoked Sagefish (RECIPE!)
+					i(21099),	-- Recipe: Smoked Sagefish (RECIPE!)
 					i(249889, {	-- Recipe: Spicy Smoothie (RECIPE!)
 						minReputation = { 2586, FRIENDLY },	-- Azeroth Commerce Authority, Friendly.
 						cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
@@ -1292,241 +1013,30 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 					}),
 				},
 			}),
-			n(256735, {	-- Mivin Shadowweave
+			n(256735, {	-- Mivin Shadowweave <Tailor>
 				coord = { 10.0, 72.8, MAP.REDRIDGE_MOUNTAINS },
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
-				groups = bubbleDownClassicRep(2586, {	-- Azeroth Commerce Authority
-					{	-- Neutral
-						i(253894, {	-- Pattern: Flame Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253954, {	-- Pattern: Flame Circlet (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253918, {	-- Pattern: Flame Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253966, {	-- Pattern: Flame Gown (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253992, {	-- Pattern: Flame Leggings (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253930, {	-- Pattern: Flame Sash (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253898, {	-- Pattern: Pearly Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253958, {	-- Pattern: Pearly Circlet (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253922, {	-- Pattern: Pearly Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253970, {	-- Pattern: Pearly Gown (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253996, {	-- Pattern: Pearly Leggings (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253934, {	-- Pattern: Pearly Sash (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253890, {	-- Pattern: Pristine Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253950, {	-- Pattern: Pristine Circlet (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253914, {	-- Pattern: Pristine Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253962, {	-- Pattern: Pristine Gown (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253988, {	-- Pattern: Pristine Leggings (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253926, {	-- Pattern: Pristine Sash (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253896, {	-- Pattern: Shadow Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253956, {	-- Pattern: Shadow Circlet (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253920, {	-- Pattern: Shadow Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253968, {	-- Pattern: Shadow Gown (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253994, {	-- Pattern: Shadow Leggings (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253932, {	-- Pattern: Shadow Sash (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253900, {	-- Pattern: Shining Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253960, {	-- Pattern: Shining Circlet (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253924, {	-- Pattern: Shining Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253972, {	-- Pattern: Shining Gown (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253998, {	-- Pattern: Shining Leggings (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253936, {	-- Pattern: Shining Sash (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253892, {	-- Pattern: Silky Boots (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253952, {	-- Pattern: Silky Circlet (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253916, {	-- Pattern: Silky Gloves (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253964, {	-- Pattern: Silky Gown (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253990, {	-- Pattern: Silky Leggings (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(253928, {	-- Pattern: Silky Sash (RECIPE!)
-							cost = { { "c", 3402, 30 } },	-- x30 Merchant's Favor
-						}),
-						i(271627, {	-- Tailoring Certification
-							cost = { { "c", 3402, 1000 } },	-- x1000 Merchant's Favor
-						}),
-					}, {	-- Friendly
-						i(254028, {	-- Pattern: Black Handwraps (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254088, {	-- Pattern: Black Waistcord (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254026, {	-- Pattern: Fiery Handwraps (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254086, {	-- Pattern: Fiery Waistcord (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254024, {	-- Pattern: Frothing Handwraps (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254084, {	-- Pattern: Frothing Waistcord (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254082, {	-- Pattern: Gilded Waistcord (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254030, {	-- Pattern: Golden Handwraps (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254090, {	-- Pattern: Golden Waistcord (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254036, {	-- Pattern: Mageweave Reagent Bag (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254066, {	-- Pattern: Netherflame Cuffs (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254054, {	-- Pattern: Netherflame Shoulders (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254062, {	-- Pattern: Nethergeld Cuffs (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254050, {	-- Pattern: Nethergeld Shoulders (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254072, {	-- Pattern: Netherlight Cuffs (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254060, {	-- Pattern: Netherlight Shoulders (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254064, {	-- Pattern: Netherfroth Cuffs (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254052, {	-- Pattern: Netherfroth Shoulders (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254068, {	-- Pattern: Netherpearl Cuffs (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254056, {	-- Pattern: Netherpearl Shoulders (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254070, {	-- Pattern: Nethershine Cuffs (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254058, {	-- Pattern: Nethershine Shoulders (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254032, {	-- Pattern: Radiant Handwraps (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254092, {	-- Pattern: Radiant Waistcord (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-						i(254080, {	-- Pattern: Runecloth Reagent Bag (RECIPE!)
-							cost = { { "c", 3402, 60 } },	-- x60 Merchant's Favor
-						}),
-					}, {	-- Honored
-						i(254114, {	-- Pattern: Black Sandals (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(254112, {	-- Pattern: Fiery Sandals (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(254110, {	-- Pattern: Frothing Sandals (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(254108, {	-- Pattern: Gilded Sandals (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(254116, {	-- Pattern: Golden Sandals (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-						i(254118, {	-- Pattern: Radiant Sandals (RECIPE!)
-							cost = { { "c", 3402, 90 } },	-- x90 Merchant's Favor
-						}),
-					}, {	-- Revered
-					}, {	-- Exalted
-					},
-				}),
+				groups = TAILORING_RECIPES.MERCHANTS_FAVOR_RECIPES_ALLIANCE,
 			}),
-			n(256729, {	-- Nina Surefire
+			n(256729, {	-- Nina Surefire <Alchemist>
 				coord = { 10.8, 72.6, MAP.REDRIDGE_MOUNTAINS },
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
 				groups = ALCHEMY_RECIPES.MERCHANTS_FAVOR_RECIPES_ALLIANCE,
 			}),
-			n(256730, {	-- Stondry Darkhammer
+			n(256730, {	-- Stondry Darkhammer <Blacksmith>
 				coord = { 10.4, 74.6, MAP.REDRIDGE_MOUNTAINS },
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
 				groups = BLACKSMITHING_RECIPES.MERCHANTS_FAVOR_RECIPES_ALLIANCE,
 			}),
-			n(256389, {	-- Tamelyn Aldridge
+			n(256389, {	-- Tamelyn Aldridge <Supply Officer>
 				coord = { 10.5, 71.3, MAP.REDRIDGE_MOUNTAINS },
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
 				groups = {
-					i(270888, {	-- Advertising License Application
+					i(270888, {	-- Advertising License Application (QS!)
 						minReputation = { 2586, HONORED },	-- Azeroth Commerce Authority, Honored.
 						cost = { { "c", 3402, 1200 } },	-- x1200 Merchant's Favor
 					}),
@@ -1543,68 +1053,68 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 		}),
 		n(ZONE_DROPS, {
 			i(1446, {	-- Blackrock Boots
-				["crs"] = {
+				crs = {
 					440,	-- Blackrock Grunt
 				},
-				["coords"] = {
+				coords = {
 					{ 41.4, 39.8, MAP.REDRIDGE_MOUNTAINS },	-- Blackrock Grunt
 					{ 62.0, 44.0, MAP.REDRIDGE_MOUNTAINS },	-- Blackrock Grunt
 					{ 74.8, 78.8, MAP.REDRIDGE_MOUNTAINS },	-- Blackrock Grunt
 				},
 			}),
 			i(1455, {	-- Blackrock Champion's Axe
-				["crs"] = {
+				crs = {
 					435,	-- Blackrock Champion
 					4464,	-- Blackrock Gladiator
 				},
-				["coords"] = {
+				coords = {
 					{ 35.6, 9.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 28.6, 14.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 69.6, 57.4, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1448, {	-- Blackrock Gauntlets
-				["crs"] = {
+				crs = {
 					4064,	-- Blackrock Scout
 					485,	-- Blackrock Outrunner
 				},
-				["coords"] = {
+				coords = {
 					{ 65.6, 48.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 67.0, 59.0, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1296, {	-- Blackrock Mace
-				["crs"] = {
+				crs = {
 					437,	-- Blackrock Renegade
 					4065,	-- Blackrock Sentry
 				},
-				["coords"] = {
+				coords = {
 					{ 78.6, 71.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 62.6, 45.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 46.0, 18.4, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1445, {	-- Blackrock Pauldrons
-				["coords"] = {
+				coords = {
 					{ 39.4, 14.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 35.4,  8.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 28.6, 14.4, MAP.REDRIDGE_MOUNTAINS },
 				},
-				["crs"] = {
+				crs = {
 					615,	-- Blackrock Tracker
 					4462,	-- Blackrock Hunter
 				},
 			}),
 			i(1287, {	-- Giant Tarantula Fang
-				["cr"] = 442,	-- Tarantula
-				["coords"] = {
+				cr = 442,	-- Tarantula
+				coords = {
 					{ 28.4, 78.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 15.2, 76.2, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1962, {	-- Glowing Shadowhide Pendant
-				["races"] = ALLIANCE_ONLY,
-				["crs"] = {
+				races = ALLIANCE_ONLY,
+				crs = {
 					703,	-- Lieutenant Fangore
 					434,	-- Rabid Shadowhide Gnoll
 					947,	-- Rohh the Silent
@@ -1618,18 +1128,18 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 			}),
 			i(723),	-- Goretusk Liver
 			i(1213, {	-- Gnoll Kindred Bracers
-				["cr"] = 712,	-- Redridge Thrasher
-				["coords"] = {
+				cr = 712,	-- Redridge Thrasher
+				coords = {
 					{ 17.8, 59.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 28.8, 81.6, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1214, {	-- Gnoll Punisher
-				["crs"] = {
+				crs = {
 					14271,	-- Ribchaser
 					426,	-- Redridge Brute
 				},
-				["coords"] = {
+				coords = {
 					{ 17.4, 64.4, MAP.REDRIDGE_MOUNTAINS },
 					{ 31.0, 82.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 39.0, 33.0, MAP.REDRIDGE_MOUNTAINS },
@@ -1637,8 +1147,8 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 				},
 			}),
 			i(1440, {	-- Gnoll Skull Basher
-				["cr"] = 446,	-- Redridge Basher
-				["coords"] = {
+				cr = 446,	-- Redridge Basher
+				coords = {
 					{ 38.2, 31.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 27.2, 36.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 21.6, 35.0, MAP.REDRIDGE_MOUNTAINS },
@@ -1648,56 +1158,56 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 				},
 			}),
 			i(1211, {	-- Gnoll War Harness
-				["cr"] = 423,	-- Redridge Mongrel
-				["coords"] = {
+				cr = 423,	-- Redridge Mongrel
+				coords = {
 					{ 30.6, 62.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 30.0, 71.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 17.8, 57.8, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(2296, {	-- Great Goretusk Snout
-				["crs"] = {
+				crs = {
 					345,	-- Bellygrub
 					547,	-- Great Goretusk
 				},
 			}),
 			i(1218, {	-- Heavy Gnoll War Club
-				["crs"] = {
+				crs = {
 					445,	-- Redridge Alpha
 				},
-				["coords"] = {
+				coords = {
 					{ 28.6, 22.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 18.6, 16.4, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1299, {	-- Lesser Belt of the Spire
-				["crs"] = {
+				crs = {
 					436,	-- Blackrock Shadowcaster
 				},
-				["coords"] = {
+				coords = {
 					{ 59.2, 43.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 60.0, 50.6, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1300, {	-- Lesser Staff of the Spire
-				["crs"] = {
+				crs = {
 					436,	-- Blackrock Shadowcaster
 				},
-				["coords"] = {
+				coords = {
 					{ 59.2, 43.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 60.0, 50.6, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1220, {	-- Lupine Axe
-				["cr"] = 580,	-- Redridge Drudger
-				["coords"] = {
+				cr = 580,	-- Redridge Drudger
+				coords = {
 					{ 23.0, 19.0, MAP.REDRIDGE_MOUNTAINS },
 					{ 20.0, 23.8, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1406, {	-- Pearl-encrusted Spear / Pearl-Encrusted Spear
-				["cr"] = 544,	-- Murloc Nightcrawler
-				["coords"] = {
+				cr = 544,	-- Murloc Nightcrawler
+				coords = {
 					{ 80.4, 58.4, MAP.REDRIDGE_MOUNTAINS },
 					{ 81.0, 70.0, MAP.REDRIDGE_MOUNTAINS },
 				},
@@ -1710,40 +1220,57 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 				timeline = { TIMELINE.ADDED_1_60_1 },
 				cr = 428,	-- Dire Condor
 			}),
+			i(251526, {	-- Recipe: Savory Whimsyfin Delight (RECIPE!)
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				crs = {
+					426,	-- Redridge Brute
+					428,	-- Dire Condor
+					442,	-- Tarantula
+					446,	-- Redridge Basher
+					485,	-- Blackrock Outrunner
+					578,	-- Murloc Scout
+					580,	-- Redridge Drudger
+					1083,	-- Murloc Shorestriker
+					334,	-- Gath'Ilzogg
+					422,	-- Murloc Flesheater
+					440,	-- Blackrock Grunt
+					441,	-- Black Dragon Whelp
+				},
+			}),
 			i(1219, {	-- Redridge Machete
-				["cr"] = 424,	-- Redridge Poacher
-				["coords"] = {
+				cr = 424,	-- Redridge Poacher
+				coords = {
 					{ 44.0, 72.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 32.2, 82.6, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1462, {	-- Ring of the Shadow
-				["cr"] = 429,	-- Shadowhide Darkweaver
-				["coords"] = {
+				cr = 429,	-- Shadowhide Darkweaver
+				coords = {
 					{ 76.6, 43.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 80.0, 49.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 82.4, 55.2, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1473, {	-- Riverside Staff
-				["cr"] = 545,	-- Murloc Tidecaller
-				["coords"] = {
+				cr = 545,	-- Murloc Tidecaller
+				coords = {
 					{ 56.4, 49.0, MAP.REDRIDGE_MOUNTAINS },
 					{ 81.0, 63.6, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(2566, {	-- Sacrificial Robes
-				["crs"] = {
+				crs = {
 					397,	-- Morganth / Grand Magus Doane [CATA+]
 				},
-				["coord"] = { 80.0, 49.6, MAP.REDRIDGE_MOUNTAINS },	-- Morganth
+				coord = { 80.0, 49.6, MAP.REDRIDGE_MOUNTAINS },	-- Morganth
 			}),
 			i(1469, {	-- Scimitar of Atun
-				["crs"] = {
+				crs = {
 					578,	-- Murloc Scout
 					14270,	-- Squiddic
 				},
-				["coords"] = {
+				coords = {
 					{ 32.8, 41.4, MAP.REDRIDGE_MOUNTAINS },
 					{ 31.4, 43.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 52.8, 51.8, MAP.REDRIDGE_MOUNTAINS },
@@ -1751,46 +1278,46 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.REDRIDGE_MOUNTAINS, {
 				},
 			}),
 			i(2175, {	-- Shadowhide Battle Axe
-				["cr"] = 568,	-- Shadowhide Warrior
-				["coords"] = {
+				cr = 568,	-- Shadowhide Warrior
+				coords = {
 					{ 81.8, 38.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 77.8, 44.4, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1457, {	-- Shadowhide Mace
-				["cr"] = 433,	-- Shadowhide Gnoll
-				["coords"] = {
+				cr = 433,	-- Shadowhide Gnoll
+				coords = {
 					{ 66.8, 48.2, MAP.REDRIDGE_MOUNTAINS },
 					{ 68.6, 44.4, MAP.REDRIDGE_MOUNTAINS },
 					{ 66.2, 41.6, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1458, {	-- Shadowhide Maul
-				["cr"] = 432,	-- Shadowhide Brute
-				["coords"] = {
+				cr = 432,	-- Shadowhide Brute
+				coords = {
 					{ 82.0, 38.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 75.4, 46.0, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1459, {	-- Shadowhide Scalper
-				["crs"] = {
+				crs = {
 					579,	-- Shadowhide Assassin
 				},
-				["coords"] = {
+				coords = {
 					{ 80.6, 48.8, MAP.REDRIDGE_MOUNTAINS },
 					{ 79.2, 40.6, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1460, {	-- Shadowhide Two-handed Sword / Shadowhide Two-Handed Sword
-				["cr"] = 434,	-- Rabid Shadowhide Gnoll
-				["coords"] = {
+				cr = 434,	-- Rabid Shadowhide Gnoll
+				coords = {
 					{ 74.2, 44.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 72.6, 51.2, MAP.REDRIDGE_MOUNTAINS },
 				},
 			}),
 			i(1461, {	-- Slayer's Battle Axe
-				["cr"] = 431,	-- Shadowhide Slayer
-				["coords"] = {
+				cr = 431,	-- Shadowhide Slayer
+				coords = {
 					{ 81.6, 48.6, MAP.REDRIDGE_MOUNTAINS },
 					{ 78.4, 38.2, MAP.REDRIDGE_MOUNTAINS },
 				},

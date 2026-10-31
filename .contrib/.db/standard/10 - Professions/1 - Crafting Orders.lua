@@ -1,14 +1,14 @@
 -----------------------------------------------------
 --       P R O F E S S I O N S   M O D U L E       --
 -----------------------------------------------------
-CRAFTING_ORDERS = createHeader({
+local CRAFTING_ORDERS = createHeader({
 	readable = "Crafting Orders",
 	icon = 4557373,
 	text = {
 		en = [[~PROFESSIONS_CRAFTING_ORDERS_TAB_NAME]],
 	},
 });
-PATRON_REWARDS = createHeader({
+local PATRON_REWARDS = createHeader({
 	readable = "Patron Rewards",
 	icon = 4557373,
 	text = {
@@ -27,8 +27,8 @@ PATRON_REWARDS = createHeader({
 });
 
 root(ROOTS.Professions, n(CRAFTING_ORDERS, {
-	["timeline"] = { ADDED_10_0_2_LAUNCH },
-	["groups"] = {
+	timeline = { ADDED_10_0_2_LAUNCH },
+	groups = {
 		n(ACHIEVEMENTS, {
 			ach(16791, {	-- Merchant Artisan
 				title(485),	-- Merchant Artisan <Name>
@@ -38,7 +38,7 @@ root(ROOTS.Professions, n(CRAFTING_ORDERS, {
 			}),
 		}),
 		n(PATRON_REWARDS, {
-			expansion(EXPANSION.TWW, bubbleDownSelf({ ["timeline"] = { ADDED_11_0_2 } }, {
+			expansion(EXPANSION.TWW, {
 				i(225670),	-- Apprentice's Crafting License
 				i(227713),	-- Artisan's Consortium Payout
 				i(225673),	-- Artisan's Consortium Seal of Approval
@@ -92,8 +92,8 @@ root(ROOTS.Professions, n(CRAFTING_ORDERS, {
 				}),
 				i(225671),	-- Stack of Pentagold Reviews
 				i(225672),	-- Unraveled Instructions
-			})),
-			expansion(EXPANSION.MID, bubbleDownSelf({ ["timeline"] = { ADDED_12_0_1_LAUNCH } }, {
+			}),
+			expansion(EXPANSION.MID, {
 				i(246447),	-- Apprentice's Scribbles
 				i(246450),	-- Artisan's Consortium Gold Star
 				i(246585),	-- Artisan's Consortium Payout
@@ -157,7 +157,7 @@ root(ROOTS.Professions, n(CRAFTING_ORDERS, {
 				i(247725, {	-- Resourceful Rebar
 					i(247726),	-- Resourceful Routing
 				}),
-			})),
+			}),
 		}),
 	},
 }));

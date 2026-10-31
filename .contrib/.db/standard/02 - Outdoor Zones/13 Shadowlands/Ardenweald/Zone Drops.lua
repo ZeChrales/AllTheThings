@@ -2,8 +2,9 @@
 --          Z O N E S       M O D U L E          --
 ---------------------------------------------------
 
-root(ROOTS.Zones, m(SHADOWLANDS, bubbleDown({ ["timeline"] = { ADDED_9_0_2_LAUNCH } }, {
-	m(ARDENWEALD, {
+maproot(SHADOWLANDS, ARDENWEALD, {
+	timeline = { ADDED_9_0_2_LAUNCH },
+	groups = {
 		n(ZONE_DROPS, {
 			i(183877),	-- A Meandering Story
 			i(183881),	-- A Naughty Story
@@ -13,14 +14,23 @@ root(ROOTS.Zones, m(SHADOWLANDS, bubbleDown({ ["timeline"] = { ADDED_9_0_2_LAUNC
 			i(180478),	-- Champion's Pelt
 			i(180522),	-- Phaedrum Lockbox
 			i(174042, {	-- Pinch of Faerie Dust
-				["crs"] = {
+				crs = {
 					160748,	-- Possessed Defender
 					160747,	-- Shimmerbough Ritualist
 				},
 			}),
 			i(187935, {	-- Technique: Mark of the Midnight Runestag (RECIPE!)
-				["timeline"] = { ADDED_9_1_5 },
-				["crs"] = { 165907 },	-- Runestag
+				timeline = { ADDED_9_1_5 },
+				coords = {
+					{ 29.6, 47.8, ARDENWEALD },
+					{ 28.2, 51.6, ARDENWEALD },
+					{ 25.8, 52.8, ARDENWEALD },
+					{ 25.6, 55.6, ARDENWEALD },
+				},
+				crs = {
+					165907,	-- Runestag
+					165092,	-- Forest Guardian
+				},
 			}),
 			i(175247),	-- Unusually Large Mushroom
 			filter(CLOTH, {
@@ -65,5 +75,5 @@ root(ROOTS.Zones, m(SHADOWLANDS, bubbleDown({ ["timeline"] = { ADDED_9_0_2_LAUNC
 				i(175572),	-- Blackthorn Wristwraps
 			}),
 		}),
-	}),
-})));
+	},
+});

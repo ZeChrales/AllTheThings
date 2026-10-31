@@ -85,7 +85,7 @@ r(25008,{crs={3247,3249,3424,3630,3631,5056,5756},lvl=15,rank=2}),
 r(25009,{crs={3472,4117,4118,4119},lvl=25,rank=3}),
 r(25010,{crs={5307,5308},lvl=41,rank=4}),
 r(25011,{crs={5291,5349,5708,8336},lvl=49,rank=5}),
-r(25012,{crs={11357},lvl=60,rank=6,u=14}),
+r(25012,{crs={11357},lvl=60,phase=14,rank=6}),
 r(24545,{lvl=10,rank=1}),
 r(24549,{lvl=12,rank=2}),
 r(24550,{lvl=18,rank=3}),
@@ -122,8 +122,8 @@ r(26188,{crs={6516,9622},lvl=52,rank=3})}}),
 prof(164,{
 prof(9788,{description="These items can only be crafted by Blacksmiths who have completed the Art of the Armorsmith quest chain.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Blacksmiths and complete the opposing specialization(s).",rwp=40001,sourceQuests={5283,5301},g={
 cat(218,{requireSkill=164,g={
-r(23636,{learnedAt=300,requireSkill=9788,u=13}),
-r(16742,{learnedAt=300,requireSkill=9788,u=13}),
+r(23636,{learnedAt=300,phase=13,requireSkill=9788}),
+r(16742,{learnedAt=300,phase=13,requireSkill=9788}),
 r(16728,{learnedAt=300,requireSkill=9788}),
 r(16729,{learnedAt=300,requireSkill=9788}),
 r(16724,{learnedAt=300,requireSkill=9788})}}),
@@ -133,7 +133,7 @@ r(20873,{learnedAt=300,requireSkill=9788})}}),
 cat(222,{requireSkill=164,g={
 r(20874,{learnedAt=295,requireSkill=9788})}}),
 cat(221,{requireSkill=164,g={
-r(23637,{learnedAt=300,requireSkill=9788,u=13}),
+r(23637,{learnedAt=300,phase=13,requireSkill=9788}),
 r(16655,{learnedAt=290,requireSkill=9788}),
 r(16661,{learnedAt=295,requireSkill=9788}),
 r(16741,{learnedAt=300,requireSkill=9788}),
@@ -141,7 +141,7 @@ r(9954,{learnedAt=225,requireSkill=9788})}}),
 cat(220,{requireSkill=164,g={
 r(15296,{learnedAt=285,requireSkill=9788}),
 r(16667,{learnedAt=285,requireSkill=9788}),
-r(16745,{learnedAt=300,requireSkill=9788,u=13}),
+r(16745,{learnedAt=300,phase=13,requireSkill=9788}),
 r(16746,{learnedAt=300,requireSkill=9788}),
 r(9974,{learnedAt=245,requireSkill=9788}),
 r(16650,{learnedAt=270,requireSkill=9788})}}),
@@ -149,35 +149,35 @@ cat(223,{requireSkill=164,g={
 r(20872,{learnedAt=295,requireSkill=9788})}}),
 cat(224,{requireSkill=164,g={
 r(20876,{learnedAt=300,requireSkill=9788}),
-r(16744,{learnedAt=300,requireSkill=9788,u=13}),
-r(27829,{learnedAt=300,requireSkill=9788,u=15})}}),
+r(16744,{learnedAt=300,phase=13,requireSkill=9788}),
+r(27829,{learnedAt=300,phase=15,requireSkill=9788})}}),
 cat(225,{requireSkill=164,g={
-r(24399,{learnedAt=300,requireSkill=9788,u=14})}})}}),
+r(24399,{learnedAt=300,phase=14,requireSkill=9788})}})}}),
 prof(9787,{description="These items can only be crafted by Blacksmiths who have completed the Way of the Weaponsmith quest chain.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Blacksmiths and complete the opposing specialization(s).",rwp=40001,sourceQuests={5284,5302},g={
 prof(17041,{description="These items can only be crafted by Master Axesmith specialized Weaponsmiths.",sourceQuests={5306},g={
 r(16991,{learnedAt=300,requireSkill=17041}),
 r(16994,{learnedAt=300,requireSkill=17041}),
 r(20897,{learnedAt=300,requireSkill=17041}),
 r(16970,{awp=70105,learnedAt=275,requireSkill=17041,rwp=40003}),
-r(23653,{learnedAt=300,requireSkill=17041,u=13})}}),
+r(23653,{learnedAt=300,phase=13,requireSkill=17041})}}),
 prof(17040,{description="These items can only be crafted by Master Hammersmith specialized Weaponsmiths.",sourceQuests={5305},g={
-r(23650,{learnedAt=300,requireSkill=17040,u=13}),
+r(23650,{learnedAt=300,phase=13,requireSkill=17040}),
 r(16973,{learnedAt=280,requireSkill=17040}),
 r(16988,{learnedAt=300,requireSkill=17040}),
 r(16993,{learnedAt=300,requireSkill=17040}),
-r(27830,{learnedAt=300,requireSkill=17040,u=15}),
+r(27830,{learnedAt=300,phase=15,requireSkill=17040}),
 r(16983,{awp=30002,learnedAt=285,requireSkill=17040,rwp=20001})}}),
 prof(17039,{description="These items can only be crafted by Master Swordsmith specialized Weaponsmiths.",sourceQuests={5307},g={
 r(16990,{learnedAt=300,requireSkill=17039}),
-r(23652,{learnedAt=300,requireSkill=17039,u=13}),
+r(23652,{learnedAt=300,phase=13,requireSkill=17039}),
 r(16978,{awp=70105,learnedAt=280,requireSkill=17039}),
 r(16985,{awp=30002,learnedAt=290,requireSkill=17039,rwp=20001}),
 r(20890,{learnedAt=300,requireSkill=17039}),
 r(16992,{learnedAt=300,requireSkill=17039}),
-r(27832,{learnedAt=300,requireSkill=17039,u=15})}}),
+r(27832,{learnedAt=300,phase=15,requireSkill=17039})}}),
 cat(227,{description="These can be crafted by any Weaponsmith.",requireSkill=164,g={
-r(23638,{learnedAt=300,requireSkill=9787,u=13}),
-r(23639,{learnedAt=300,requireSkill=9787,u=13}),
+r(23638,{learnedAt=300,phase=13,requireSkill=9787}),
+r(23639,{learnedAt=300,phase=13,requireSkill=9787}),
 r(16965,{awp=70105,requireSkill=9787,u=1}),
 r(10011,{learnedAt=250,requireSkill=9787}),
 r(16986,{requireSkill=9787,u=1}),
@@ -215,15 +215,11 @@ i(11422,{b=1,description="If you destroy your Goblin Engineer Membership Card, y
 r(3968,{itemID=4416,learnedAt=195,q=2,requireSkill=202}),
 r(3972,{itemID=4417,learnedAt=200,q=2,requireSkill=202}),
 r(15628,{b=1,itemID=11828,learnedAt=205,q=2,requireSkill=20222})}})}})}})}}),
-prof(129,{rwp=80001,g={
+prof(129,{awp=10001,rwp=80001,g={
 x(1,{requireSkill=129,g={
 ach(131,{requireSkill=129}),
 ach(132,{requireSkill=129}),
-ach(133,{requireSkill=129})}}),
-x(4,{requireSkill=129}),
-x(5,{requireSkill=129}),
-x(6,{requireSkill=129}),
-x(7,{requireSkill=129})}}),
+ach(133,{requireSkill=129})}})}}),
 prof(356,{awp=10100,g={
 x(1,{requireSkill=356,g={
 ach(126,{requireSkill=356}),
@@ -235,16 +231,16 @@ x(1,{requireSkill=165,g={
 prof(10656,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5141,5145},g={
 cat(252,{requireSkill=165,g={
 r(19094,{learnedAt=300,requireSkill=10656}),
-r(19089,{awp=100107,learnedAt=295,requireSkill=10656,rwp=40003})}}),
+r(19089,{learnedAt=295,requireSkill=10656})}}),
 cat(253,{requireSkill=165,g={
 r(19085,{learnedAt=290,requireSkill=10656}),
 r(19077,{learnedAt=285,requireSkill=10656}),
 r(10650,{learnedAt=255,requireSkill=10656}),
-r(24703,{learnedAt=300,requireSkill=10656,u=14}),
+r(24703,{learnedAt=300,phase=14,requireSkill=10656}),
 r(19050,{learnedAt=260,requireSkill=10656}),
 r(19054,{learnedAt=300,requireSkill=10656})}}),
 cat(255,{requireSkill=165,g={
-r(23708,{learnedAt=300,requireSkill=10656,u=13}),
+r(23708,{learnedAt=300,phase=13,requireSkill=10656}),
 r(10619,{learnedAt=225,requireSkill=10656}),
 r(24655,{learnedAt=280,requireSkill=10656})}}),
 cat(257,{requireSkill=165,g={
@@ -253,8 +249,8 @@ r(24654,{learnedAt=300,requireSkill=10656}),
 r(19060,{learnedAt=270,requireSkill=10656})}}),
 cat(258,{requireSkill=165,g={
 r(20855,{learnedAt=300,requireSkill=10656})}}),
-cat(259,{awp=100105,requireSkill=165,g={
-r(22926,{learnedAt=300,requireSkill=10656,rwp=40003,u=1101})}})}}),
+cat(259,{requireSkill=165,g={
+r(22926,{learnedAt=300,phase=1101,requireSkill=10656})}})}}),
 prof(10658,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5144,5146},g={
 cat(251,{requireSkill=165,g={
 r(10632,{learnedAt=250,requireSkill=10658}),
@@ -264,20 +260,20 @@ r(19061,{learnedAt=270,requireSkill=10658}),
 r(19090,{awp=11101,learnedAt=295,requireSkill=10658}),
 r(19101,{learnedAt=300,requireSkill=10658})}}),
 cat(253,{requireSkill=165,g={
-r(19095,{awp=100107,learnedAt=300,requireSkill=10658,rwp=40003}),
+r(19095,{learnedAt=300,requireSkill=10658}),
 r(19079,{awp=11101,learnedAt=285,requireSkill=10658}),
 r(19076,{learnedAt=285,requireSkill=10658})}}),
 cat(255,{requireSkill=165,g={
 r(10630,{learnedAt=230,requireSkill=10658}),
 r(26279,{awp=11101,learnedAt=300,requireSkill=10658})}}),
 cat(256,{requireSkill=165,g={
-r(23710,{learnedAt=300,requireSkill=10658,u=13})}}),
+r(23710,{learnedAt=300,phase=13,requireSkill=10658})}}),
 cat(257,{requireSkill=165,g={
-r(19078,{awp=100107,learnedAt=285,requireSkill=10658,rwp=40003}),
+r(19078,{learnedAt=285,requireSkill=10658}),
 r(19067,{learnedAt=275,requireSkill=10658}),
-r(19059,{awp=100107,learnedAt=270,requireSkill=10658,rwp=40003})}}),
-cat(259,{awp=100105,requireSkill=165,g={
-r(22928,{learnedAt=300,requireSkill=10658,rwp=40003,u=1101})}})}}),
+r(19059,{learnedAt=270,requireSkill=10658})}}),
+cat(259,{requireSkill=165,g={
+r(22928,{learnedAt=300,phase=1101,requireSkill=10658})}})}}),
 prof(10660,{description="These items can only be crafted by Leatherworkers who have completed the associated quest.\n\nNOTE: You may only have one of these specializations active per character. If you wish to finish your collection, you must level several Leatherworkers and complete the opposing specialization(s).",rwp=40001,sourceQuests={5143,5148},g={
 cat(251,{requireSkill=165,g={
 r(10621,{learnedAt=225,requireSkill=10660})}}),
@@ -286,26 +282,26 @@ r(19062,{learnedAt=270,requireSkill=10660})}}),
 cat(253,{requireSkill=165,g={
 r(19081,{learnedAt=290,requireSkill=10660}),
 r(10647,{learnedAt=250,requireSkill=10660}),
-r(19104,{awp=100107,learnedAt=300,requireSkill=10660,rwp=40003}),
-r(19086,{awp=100107,learnedAt=290,requireSkill=10660,rwp=40003}),
+r(19104,{learnedAt=300,requireSkill=10660}),
+r(19086,{learnedAt=290,requireSkill=10660}),
 r(19068,{learnedAt=275,requireSkill=10660})}}),
 cat(255,{requireSkill=165,g={
 r(19053,{learnedAt=265,requireSkill=10660}),
 r(19084,{learnedAt=290,requireSkill=10660}),
-r(19087,{awp=100107,learnedAt=295,requireSkill=10660,rwp=40003})}}),
+r(19087,{learnedAt=295,requireSkill=10660})}}),
 cat(256,{requireSkill=165,g={
-r(23709,{learnedAt=300,requireSkill=10660,u=13})}}),
+r(23709,{learnedAt=300,phase=13,requireSkill=10660})}}),
 cat(257,{requireSkill=165,g={
 r(19073,{learnedAt=280,requireSkill=10660}),
 r(19097,{learnedAt=300,requireSkill=10660}),
-r(19074,{awp=100107,learnedAt=285,requireSkill=10660,rwp=40003}),
+r(19074,{learnedAt=285,requireSkill=10660}),
 r(19080,{learnedAt=285,requireSkill=10660})}}),
 cat(258,{requireSkill=165,g={
 r(19063,{learnedAt=275,requireSkill=10660}),
 r(20853,{learnedAt=295,requireSkill=10660}),
 r(19066,{learnedAt=275,requireSkill=10660})}}),
 cat(259,{requireSkill=165,g={
-r(22927,{learnedAt=300,requireSkill=10660,rwp=40003,u=1101})}})}}),
+r(22927,{learnedAt=300,phase=1101,requireSkill=10660})}})}}),
 h(-45,{lvl=40,requireSkill=165,rwp=40003,g={
 q(5141,{altQuests={5143,5144},coords={
 [1447]={{37.4,65.4}}},cost={{"i",8165,10},{"i",8204,2},{"i",8203,2}},learnedAt=225,lvl=40,qgs={7866},r=2,requireSkill=165}),
@@ -319,7 +315,7 @@ q(5143,{altQuests={5141,5144},coords={
 [1444]={{89.4,46.5}}},cost={{"i",8211,1},{"i",8214,1}},learnedAt=225,lvl=40,qgs={7870},r=2,requireSkill=165,sourceQuests={2853}}),
 q(5148,{altQuests={5145,5146},coords={
 [1434]={{36.6,34.2}}},cost={{"i",8211,1},{"i",8214,1}},learnedAt=225,lvl=40,qgs={7871},r=1,requireSkill=165,sourceQuests={2860}})}})}})}}),
-prof(633,{c={4},description="Lockpicking needs to be leveled up by practicing on lockboxes found in the world and junkboxes looted by using your pickpocket ability on appropriately leveled mobs.",DontEnforceSkillRequirements=1,OnTooltip=_.OnTooltipDB.ForLockpicking,OnUpdate=_.OnUpdateDB.ForLockpicking,g={
+prof(633,{awp=10100,c={4},description="Lockpicking needs to be leveled up by practicing on lockboxes found in the world and junkboxes looted by using your pickpocket ability on appropriately leveled mobs.",DontEnforceSkillRequirements=1,OnTooltip=_.OnTooltipDB.ForLockpicking,OnUpdate=_.OnUpdateDB.ForLockpicking,g={
 r(1804,{c={4},providers={{"i",5060}}}),
 r(921,{c={4}})}}),
 prof(186,{awp=10100,g={
@@ -333,7 +329,7 @@ r(2835,{lvl=30}),
 r(2837,{lvl=38}),
 r(11357,{lvl=46}),
 r(11358,{lvl=54}),
-r(25347,{lvl=60,u=15}),
+r(25347,{lvl=60,phase=15}),
 r(8681),
 r(8687,{lvl=28}),
 r(8691,{lvl=36}),

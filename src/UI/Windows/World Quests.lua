@@ -27,8 +27,8 @@ app:CreateWindow("WorldQuests", {
 		local C_QuestLine_GetAvailableQuestLines = C_QuestLine.GetAvailableQuestLines;
 		local C_Map_GetMapChildrenInfo = C_Map.GetMapChildrenInfo;
 		local C_QuestLog_GetBountiesForMapID = C_QuestLog.GetBountiesForMapID;
-		local GetNumRandomDungeons, GetLFGDungeonInfo, GetLFGRandomDungeonInfo, GetLFGDungeonRewards, GetLFGDungeonRewardInfo =
-			  GetNumRandomDungeons, GetLFGDungeonInfo, GetLFGRandomDungeonInfo, GetLFGDungeonRewards, GetLFGDungeonRewardInfo;
+		local GetNumRandomDungeons, GetLFGDungeonInfo, GetLFGRandomDungeonInfo, GetLFGDungeonRewards, GetLFGDungeonRewardInfo
+			= GetNumRandomDungeons, GetLFGDungeonInfo, GetLFGRandomDungeonInfo, GetLFGDungeonRewards, GetLFGDungeonRewardInfo;
 
 		-- Returns an Object based on a QuestID a lot of Quest information for displaying in a row
 		---@return table?
@@ -84,7 +84,7 @@ app:CreateWindow("WorldQuests", {
 			},
 		})
 		self:SetData(data);
-		-- Build the initial heirarchy
+		-- Build the initial hierarchy
 		self:AssignChildren();
 		local emissaryMapIDs = {
 			{ 619, 650 },	-- Broken Isles, Highmountain
@@ -546,7 +546,7 @@ app:CreateWindow("WorldQuests", {
 			app.EnsureObject(temp)
 			-- put all the things into the window data, turning them into objects as well
 			NestObjects(self.data, temp);
-			-- Build the heirarchy
+			-- Build the hierarchy
 			self:AssignChildren();
 			-- Fill up the window
 			app.FillGroups(self.data)

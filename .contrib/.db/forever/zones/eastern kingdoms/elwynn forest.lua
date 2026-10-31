@@ -9,7 +9,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 		m(MAP.NORTHSHIRE_VALLEY, {
 			lore = "Northshire was the pride of Stormwind's vineyards until recently when Defias bandits drove off the farmers and occupied the farm and fields. This is where the human starting area is located, though the serene valley is visited by adventurers from all over the world.",
 			icon = 236447,
-			["zone-text-areas"] = {
+			zoneTextAreaIDs = {
 				9,	-- Northshire Valley
 				59,	-- Northshire Vineyards
 				24,	-- Northshire Abbey
@@ -17,6 +17,14 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			},
 			groups = {
 				n(QUESTS, {
+					q(92479, {	-- A Scribbled Letter
+						qg = 197,	-- Marshal McBride
+						qi = 251941,	-- Scribbled Letter (PQI!)
+						coord = { 48.9, 41.6, MAP.ELWYNN_FOREST },
+						timeline = { TIMELINE.ADDED_1_60_1 },
+						races = { NIGHTELF },
+						classes = { WARRIOR },
+					}),
 					q(783, {	-- A Threat Within
 						qg = 823,	-- Deputy Willem
 						coord = { 48.1, 42.9, MAP.ELWYNN_FOREST },
@@ -136,7 +144,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 						races = ALLIANCE_ONLY,
 						lvl = 20,
 					}),
-					q(15, {		-- Investigate Echo Ridge
+					q(15, {	-- Investigate Echo Ridge
 						sourceQuest = 7,	-- Kobold Camp Cleanup
 						qg = 197,	-- Marshal McBride
 						coord = { 48.9, 41.6, MAP.ELWYNN_FOREST },
@@ -215,7 +223,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 						},
 					}),
 					q(54, {	-- Report to Goldshire
-						sourceQuest = 21,		-- Skirmish at Echo Ridge
+						sourceQuest = 21,	-- Skirmish at Echo Ridge
 						qg = 197,	-- Marshal McBride
 						qi = 745,	-- Marshal McBride's Documents (PQI!)
 						coord = { 48.9, 41.6, MAP.ELWYNN_FOREST },
@@ -285,11 +293,20 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					}),
 					q(96627, {	-- The Adventurer [Elwynn Forest]
 						sourceQuest = 21,	-- Skirmish at Echo Ridge
+						altQuests = {
+							96628,	-- The Adventurer [Dun Morogh]
+							96630,	-- The Adventurer [Teldrassil]
+							96638,	-- The Adventurer [Zephras Isle]
+							96652,	-- The Adventurer [Durotar]
+							96656,	-- The Adventurer [Tirisfal Glades]
+							96659,	-- The Adventurer [Mulgore]
+						},
 						qg = 197,	-- Marshal McBride
 						coord = { 48.9, 41.6, MAP.ELWYNN_FOREST },
-						timeline = { TIMELINE.ADDED_1_60_1 },
 						races = ALLIANCE_ONLY,
 						lvl = 4,
+						isBreadcrumb = true,
+						timeline = { TIMELINE.ADDED_1_60_1 },
 					}),
 					q(91752, {	-- The Big Picture
 						sourceQuest = 91745,	-- Mining Consultant
@@ -343,7 +360,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 				n(VENDORS, {
 					n(190, {	-- Dermot Johns <Cloth & Leather Armor Merchant>
 						coord = { 47.6, 41.4, MAP.ELWYNN_FOREST },
-						sym = {{"select","itemID",
+						sym = {{ "select", "itemID",
 							2122,	-- Cracked Leather Belt
 							2123,	-- Cracked Leather Boots
 							2124,	-- Cracked Leather Bracers
@@ -360,7 +377,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					}),
 					n(1213, {	-- Godric Rothgar <Armorer & Shieldcrafter>
 						coord = { 47.6, 41.4, MAP.ELWYNN_FOREST },
-						sym = {{"select","itemID",
+						sym = {{ "select", "itemID",
 							2129,	-- Large Round Shield
 							17184,	-- Small Shield
 							2380,	-- Tarnished Chain Belt
@@ -373,7 +390,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					}),
 					n(78, {	-- Janos Hammerknuckle <Weaponsmith>
 						coord = { 47.2, 41.8, MAP.ELWYNN_FOREST },
-						sym = {{"select","itemID",
+						sym = {{ "select", "itemID",
 							1194,	-- Bastard Sword
 							2479,	-- Broad Axe
 							2130,	-- Club
@@ -408,17 +425,17 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 		}),
 		explorationHeader({
 			exploration(62),	-- Brackwell Pumpkin Patch
-			visit_exploration(18,{coord={47.4,62.2,MAP.ELWYNN_FOREST}}),	-- Crystal Lake
+			visit_exploration(18, {coord={47.4, 62.2, MAP.ELWYNN_FOREST}}),	-- Crystal Lake
 			exploration(88),	-- Eastvale Logging Camp
 			exploration(57),	-- Fargodeep Mine
 			exploration(60),	-- Forest's Edge
 			exploration(87),	-- Goldshire
-			visit_exploration(56, {coord={74.5,54.0,MAP.ELWYNN_FOREST}}),	-- Heroes' Vigil
+			visit_exploration(56, {coord={74.5, 54.0, MAP.ELWYNN_FOREST}}),	-- Heroes' Vigil
 			exploration(54),	-- Jasperlode Mine
 			exploration(797),	-- Jerod's Landing
-			visit_exploration(92, {coord={32.1,58.2,MAP.ELWYNN_FOREST}}),	-- Mirror Lake
-			visit_exploration(89, {coord={31.6,64.8,MAP.ELWYNN_FOREST}}),	-- Mirror Lake Orchard
-			visit_exploration(9,   {coord={45.5,48.7,MAP.ELWYNN_FOREST}}),	-- Northshire Valley
+			visit_exploration(92, {coord={32.1, 58.2, MAP.ELWYNN_FOREST}}),	-- Mirror Lake
+			visit_exploration(89, {coord={31.6, 64.8, MAP.ELWYNN_FOREST}}),	-- Mirror Lake Orchard
+			visit_exploration(9,   {coord={45.5, 48.7, MAP.ELWYNN_FOREST}}),	-- Northshire Valley
 			exploration(798),	-- Ridgepoint Tower
 			exploration(86),	-- Stone Cairn Lake
 			exploration(1519),	-- Stormwind City
@@ -487,6 +504,14 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					}),
 				},
 			}),
+			q(95771, {	-- A Taste of Darkness
+				-- Not yet available in game.
+				timeline = { TIMELINE.CREATED_1_60_1 },
+				lvl = 6,
+				groups = {
+					i(270298),	-- Unholy Icon
+				},
+			}),
 			q(91738, {	-- An Apple Treat
 				sourceQuest = 91736,	-- Applejack Still
 				qg = 955,	-- Sergeant De Vries <Morale Officer>
@@ -541,8 +566,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 							822,	-- Young Forest Bear
 						},
 					}),
-					-- CRIEVE NOTE: Check this.
-					i(286733),	-- Fightin' Fish
+					i(286733, { collectible = false }),	-- Fightin' Fish
 				},
 			}),
 			q(91736, {	-- Applejack Still
@@ -614,6 +638,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 						},
 						coord = { 54.4, 66.9, MAP.ELWYNN_FOREST },
 					}),
+					i(286732),	-- Shiny Silver Coin
 				},
 			}),
 			q(46, {	-- Bounty on Murlocs
@@ -640,140 +665,271 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			}),
 			q(97915, {	-- Camping 101: Alchemy [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96045,	-- Camping 101: Alchemy [Dun Morogh]
+					97899,	-- Camping 101: Alchemy [Durotar]
+					97927,	-- Camping 101: Alchemy [Mulgore]
+					97938,	-- Camping 101: Alchemy [Teldrassil]
+					97951,	-- Camping 101: Alchemy [Tirisfal Glades]
+					97963,	-- Camping 101: Alchemy
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = ALCHEMY,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1230564 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1230564),	-- Alchemy: Mana Well
 				},
 			}),
 			q(97916, {	-- Camping 101: Blacksmithing [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96044,	-- Camping 101: Blacksmithing [Dun Morogh]
+					97900,	-- Camping 101: Blacksmithing [Durotar]
+					97928,	-- Camping 101: Blacksmithing [Mulgore]
+					97939,	-- Camping 101: Blacksmithing [Teldrassil]
+					97952,	-- Camping 101: Blacksmithing [Tirisfal Glades]
+					97964,	-- Camping 101: Blacksmithing
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = BLACKSMITHING,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1230171 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1230171),	-- Blacksmithing: Sharpening Wheel
 				},
 			}),
 			q(96626, {	-- Camping 101: Cooking [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96629,	-- Camping 101: Cooking [Dun Morogh]
+					96634,	-- Camping 101: Cooking [Teldrassil]
+					96646,	-- Camping 101: Cooking
+					96655,	-- Camping 101: Cooking [Durotar]
+					96658,	-- Camping 101: Cooking [Tirisfal Glades]
+					96661,	-- Camping 101: Cooking [Mulgore]
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				timeline = { TIMELINE.ADDED_1_60_1 },
 			}),
 			q(97917, {	-- Camping 101: Enchanting [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96059,	-- Camping 101: Enchanting [Dun Morogh]
+					97901,	-- Camping 101: Enchanting [Durotar]
+					97929,	-- Camping 101: Enchanting [Mulgore]
+					97940,	-- Camping 101: Enchanting [Teldrassil]
+					97953,	-- Camping 101: Enchanting [Tirisfal Glades]
+					98284,	-- Camping 101: Enchanting
+					98286,	-- Camping 101: Enchanting
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = ENCHANTING,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1230643 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1230643),	-- Enchanting: Enchanted Lute
 				},
 			}),
-			q(97918, {	-- Camping 101: Engineering [Elwynn Forest]
+			q(98287, {	-- Camping 101: Engineering
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
-				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
+				altQuests = {
+					96058,	-- Camping 101: Engineering [Dun Morogh]
+					97902,	-- Camping 101: Engineering [Durotar]
+					97918,	-- Camping 101: Engineering [Elwynn Forest]
+					97930,	-- Camping 101: Engineering [Mulgore]
+					97941,	-- Camping 101: Engineering [Teldrassil]
+					97954,	-- Camping 101: Engineering [Tirisfal Glades]
+					98285,	-- Camping 101: Engineering
+				},
+				-- TODO: Wowhead doesn't list the quest giver yet. Speak with Sprite Jumpsprocket in Stormwind once your engineering skill reaches 20.
 				requireSkill = ENGINEERING,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1230656 },
+				timeline = { TIMELINE.CREATED_1_60_1 },
+				groups = {
+					recipe(1230656),	-- Engineering: Reagent Bot
+				},
+			}),
+			q(97918, {	-- Camping 101: Engineering [Elwynn Forest]
+				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
+				altQuests = {
+					96058,	-- Camping 101: Engineering [Dun Morogh]
+					97902,	-- Camping 101: Engineering [Durotar]
+					97930,	-- Camping 101: Engineering [Mulgore]
+					97941,	-- Camping 101: Engineering [Teldrassil]
+					97954,	-- Camping 101: Engineering [Tirisfal Glades]
+					98285,	-- Camping 101: Engineering
+					98287,	-- Camping 101: Engineering
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
+				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
+				requireSkill = ENGINEERING,
+				races = ALLIANCE_ONLY,
+				lvl = 4,
+				lockCriteria = { 1, "spellID", 1230656 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1230656),	-- Engineering: Reagent Bot
 				},
 			}),
 			q(97919, {	-- Camping 101: First Aid [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96047,	-- Camping 101: First Aid [Dun Morogh]
+					97903,	-- Camping 101: First Aid [Durotar]
+					97931,	-- Camping 101: First Aid [Mulgore]
+					97942,	-- Camping 101: First Aid [Teldrassil]
+					97955,	-- Camping 101: First Aid [Tirisfal Glades]
+					97965,	-- Camping 101: First Aid
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = FIRST_AID,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1230117 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1230117),	-- First Aid: First Aid Kit
 				},
 			}),
 			q(97920, {	-- Camping 101: Fishing [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96050,	-- Camping 101: Fishing [Dun Morogh]
+					97904,	-- Camping 101: Fishing [Durotar]
+					97932,	-- Camping 101: Fishing [Mulgore]
+					97943,	-- Camping 101: Fishing [Teldrassil]
+					97956,	-- Camping 101: Fishing [Tirisfal Glades]
+					97967,	-- Camping 101: Fishing
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = FISHING,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1229745 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1229745),	-- Fishing: Fish Bowl
 				},
 			}),
 			q(97921, {	-- Camping 101: Herbalism [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96055,	-- Camping 101: Herbalism [Dun Morogh]
+					97905,	-- Camping 101: Herbalism [Durotar]
+					97933,	-- Camping 101: Herbalism [Mulgore]
+					97944,	-- Camping 101: Herbalism [Teldrassil]
+					97957,	-- Camping 101: Herbalism [Tirisfal Glades]
+					97968,	-- Camping 101: Herbalism
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = HERBALISM,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1229705 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1229705),	-- Herbalism: Incense Candle
 				},
 			}),
 			q(97922, {	-- Camping 101: Leatherworking [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96031,	-- Camping 101: Leatherworking [Dun Morogh]
+					97906,	-- Camping 101: Leatherworking [Durotar]
+					97934,	-- Camping 101: Leatherworking [Mulgore]
+					97946,	-- Camping 101: Leatherworking [Teldrassil]
+					97958,	-- Camping 101: Leatherworking [Tirisfal Glades]
+					97969,	-- Camping 101: Leatherworking
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = LEATHERWORKING,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1229432 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1229432),	-- Leatherworking: Camp Tent
 				},
 			}),
 			q(97923, {	-- Camping 101: Mining [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96046,	-- Camping 101: Mining [Dun Morogh]
+					97907,	-- Camping 101: Mining [Durotar]
+					97935,	-- Camping 101: Mining [Mulgore]
+					97948,	-- Camping 101: Mining [Teldrassil]
+					97959,	-- Camping 101: Mining [Tirisfal Glades]
+					97970,	-- Camping 101: Mining
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = MINING,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1230161 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1230161),	-- Mining: Lodestone
 				},
 			}),
 			q(97924, {	-- Camping 101: Skinning [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96056,	-- Camping 101: Skinning [Dun Morogh]
+					97908,	-- Camping 101: Skinning [Durotar]
+					97936,	-- Camping 101: Skinning [Mulgore]
+					97949,	-- Camping 101: Skinning [Teldrassil]
+					97960,	-- Camping 101: Skinning [Tirisfal Glades]
+					97971,	-- Camping 101: Skinning
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = SKINNING,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1229517 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1229517),	-- Skinning: Camp Chair
 				},
 			}),
 			q(97925, {	-- Camping 101: Tailoring [Elwynn Forest]
 				sourceQuest = 95998,	-- The Great Outdoors [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96057,	-- Camping 101: Tailoring [Dun Morogh]
+					96102,	-- Camping 101: Tailoring [Durotar]
+					97937,	-- Camping 101: Tailoring [Mulgore]
+					97950,	-- Camping 101: Tailoring [Teldrassil]
+					97961,	-- Camping 101: Tailoring [Tirisfal Glades]
+					97972,	-- Camping 101: Tailoring
+					97973,	-- Camping 101: Tailoring
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				requireSkill = TAILORING,
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				lockCriteria = { 1, "spellID", 1229504 },
+				timeline = { TIMELINE.ADDED_1_60_1 },
 				groups = {
 					recipe(1263425),	-- Tailoring: Camp Chair
 				},
@@ -804,6 +960,25 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 							735,	-- Murloc Streamrunner
 						},
 					}),
+				},
+			}),
+			q(94822, {	-- Confounding Flash
+				altQuests = {
+					94817,	-- Confounding Flash
+					94821,	-- Confounding Flash
+					94823,	-- Confounding Flash
+					94825,	-- Confounding Flash
+					94826,	-- Confounding Flash
+				},
+				qg = 377,	-- Priestess Josetta <Priest Trainer>
+				coord = { 43.4, 65.6, MAP.ELWYNN_FOREST },
+				maps = { MAP.IRONFORGE },
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				races = { GNOME },
+				classes = { PRIEST },
+				lvl = 10,
+				groups = {
+					recipe(1277455),	-- Confounding Flash
 				},
 			}),
 			q(91740, {	-- Croaky's Head
@@ -885,8 +1060,8 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 				lvl = 10,
 				groups = {
 					{
-						["recipeID"] = 13908,	-- Desperate Prayer (Rank 1)
-						["rank"] = 1,
+						recipeID = 13908,	-- Desperate Prayer (Rank 1)
+						rank = 1,
 					},
 				},
 			}),
@@ -896,6 +1071,14 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 				coord = { 72.7, 60.3, MAP.ELWYNN_FOREST },
 				races = ALLIANCE_ONLY,
 				lvl = 7,
+			}),
+			q(94774, {	-- Divine Grace
+				qg = 377,	-- Priestess Josetta <Priest Trainer>
+				coord = { 43.28, 65.72, MAP.ELWYNN_FOREST },
+				races = { HUMAN },
+				classes = { PRIEST },
+				lvl = 10,
+				timeline = { TIMELINE.ADDED_1_60_1 },
 			}),
 			q(91733, {	-- Downstream
 				qg = 248265,	-- Ormin Pelford
@@ -998,7 +1181,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 						},
 					}),
 					i(1191, {	-- Bag of Marbles
-						["description"] = "One of the single best PvE defensive cooldowns. Choose your targets wisely... Save for Patchwerk!",
+						description = "One of the single best PvE defensive cooldowns. Choose your targets wisely... Save for Patchwerk!",
 					}),
 				},
 			}),
@@ -1163,8 +1346,8 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 				lvl = 10,
 				groups = {
 					{
-						["recipeID"] = 10797,	-- Starshards (Rank 1)
-						["rank"] = 1,
+						recipeID = 10797,	-- Starshards (Rank 1)
+						rank = 1,
 					},
 				},
 			}),
@@ -1216,6 +1399,9 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					}),
 					i(2249),	-- Militia Buckler
 					i(2238),	-- Urchin's Pants
+					i(287059, {	-- Footman's Pocketknife
+						timeline = { TIMELINE.ADDED_1_60_1 },
+					}),
 				},
 			}),
 			q(91751, {	-- Rough Wolf Pelts
@@ -1245,7 +1431,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 				lvl = 10,
 			}),
 			q(61, {	-- Shipment to Stormwind
-				sourceQuest = 47,	-- Gold Dust Exchange
+				sourceQuests = { 60 },	-- Kobold Candles
 				qg = 253,	-- William Pestle
 				qi = 957,	-- William's Shipment (PQI!)
 				coord = { 43.2, 65.8, MAP.ELWYNN_FOREST },
@@ -1317,6 +1503,50 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					}),
 				},
 			}),
+			q(94792, {	-- Taming the Beast
+				qg = 251507,	-- Josephine Carson <Hunter Trainer>
+				coord = { 41.14, 66.32, MAP.ELWYNN_FOREST },
+				races = ALLIANCE_ONLY,
+				classes = { HUNTER },
+				lvl = 10,
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				qi = 266158,	-- Taming Rod (QI!)
+				groups = {
+					objective(1, {	-- Rockhide Boar
+						provider = { "n", 524 },	-- Rockhide Boar
+					}),
+				},
+			}),
+			q(94863, {	-- Taming the Beast
+				sourceQuest = 94792,	-- Taming the Beast
+				qg = 251507,	-- Josephine Carson <Hunter Trainer>
+				coord = { 41.14, 66.32, MAP.ELWYNN_FOREST },
+				races = ALLIANCE_ONLY,
+				classes = { HUNTER },
+				lvl = 10,
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				qi = 266253,	-- Taming Rod (QI!)
+				groups = {
+					objective(1, {	-- Gray Forest Wolf
+						provider = { "n", 1922 },	-- Gray Forest Wolf
+					}),
+				},
+			}),
+			q(94864, {	-- Taming the Beast
+				sourceQuest = 94863,	-- Taming the Beast
+				qg = 251507,	-- Josephine Carson <Hunter Trainer>
+				coord = { 41.14, 66.32, MAP.ELWYNN_FOREST },
+				races = ALLIANCE_ONLY,
+				classes = { HUNTER },
+				lvl = 10,
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				qi = 266254,	-- Taming Rod (QI!)
+				groups = {
+					objective(1, {	-- Young Forest Bear
+						provider = { "n", 822 },	-- Young Forest Bear
+					}),
+				},
+			}),
 			q(123, {	-- The Collector
 				qs = 1307,	-- Gold Pickup Schedule (QS!)
 				qi = 2223,	-- The Collector's Schedule (PQI!)
@@ -1339,11 +1569,19 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			}),
 			q(95998, {	-- The Great Outdoors [Elwynn Forest]
 				sourceQuest = 96627,	-- The Adventurer [Elwynn Forest]
-				qg = 263399,	-- Sam Sarsaparilla
+				altQuests = {
+					96101,	-- The Great Outdoors [Zephras Isle]
+					96604,	-- The Great Outdoors [Durotar]
+					96605,	-- The Great Outdoors [Mulgore]
+					96606,	-- The Great Outdoors [Teldrassil]
+					96607,	-- The Great Outdoors [Tirisfal Glades]
+					96608,	-- The Great Outdoors [Dun Morogh]
+				},
+				qg = 263399,	-- Sam Sarsaparilla <Adventurer>
 				coord = { 44.91, 63.34, MAP.ELWYNN_FOREST },
-				timeline = { TIMELINE.ADDED_1_60_1 },
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+				timeline = { TIMELINE.ADDED_1_60_1 },
 			}),
 			q(76, {	-- The Jasperlode Mine
 				sourceQuest = 62,	-- The Fargodeep Mine
@@ -1351,6 +1589,15 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 				coord = { 42.1, 65.9, MAP.ELWYNN_FOREST },
 				races = ALLIANCE_ONLY,
 				lvl = 4,
+			}),
+			q(94793, {	-- Training the Beast
+				sourceQuest = 94864,	-- Taming the Beast
+				qg = 251507,	-- Josephine Carson <Hunter Trainer>
+				coord = { 41.14, 66.32, MAP.ELWYNN_FOREST },
+				races = ALLIANCE_ONLY,
+				classes = { HUNTER },
+				lvl = 10,
+				timeline = { TIMELINE.ADDED_1_60_1 },
 			}),
 			q(176, {	-- Wanted: "Hogger"
 				sourceQuest = 239,	-- Westbrook Garrison Needs Help!
@@ -1408,6 +1655,11 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			}),
 			n(100, {	-- Gruff Swiftbite
 				coord = { 27.6, 88.4, MAP.ELWYNN_FOREST },
+				groups = {
+					i(281993, {	-- Gnoll Hide Boots
+						timeline = { TIMELINE.ADDED_1_60_1 },
+					}),
+				},
 			}),
 			n(276189, {	-- Matriarch Bristlefur
 				coords = {
@@ -1459,9 +1711,8 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			n(4732, {	-- Randal Hunter <Horse Riding Instructor>
 				coord = { 84.2, 65.0, MAP.ELWYNN_FOREST },
 				races = ALLIANCE_ONLY,
-
 				-- Available to Humans without faction requirements.
-				minReputation = { FACTION_STORMWIND, EXALTED },	-- Stormwind, Exalted.
+				minReputation = { FACTION_STORMWIND, EXALTED },
 				OnInit = [[function(t)
 					if _.RaceIndex == ]] .. HUMAN .. [[ then
 						t.minReputation = nil;
@@ -1489,7 +1740,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			n(2046, {	-- Andrew Krighton <Armorer & Shieldcrafter>
 				coord = { 41.7, 65.9, MAP.ELWYNN_FOREST },
 				races = ALLIANCE_ONLY,
-				sym = {{"select","itemID",
+				sym = {{ "select", "itemID",
 					1201,	-- Dull Heater Shield
 					2392,	-- Light Mail Armor
 					2393,	-- Light Mail Belt
@@ -1548,7 +1799,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			n(54, {	-- Corina Steele <Weaponsmith>
 				coord = { 41.4, 65.8, MAP.ELWYNN_FOREST },
 				races = ALLIANCE_ONLY,
-				sym = {{"select","itemID",
+				sym = {{ "select", "itemID",
 					2492,	-- Cudgel
 					2488,	-- Gladius
 					2491,	-- Large Axe
@@ -1581,7 +1832,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			n(384, {	-- Katie Hunter <Horse Breeder>
 				coord = { 84.0, 65.4, MAP.ELWYNN_FOREST },
 				-- Available to Humans without faction requirements.
-				minReputation = { FACTION_STORMWIND, EXALTED },	-- Stormwind, Exalted.
+				minReputation = { FACTION_STORMWIND, EXALTED },
 				OnInit = [[function(t)
 					if _.RaceIndex == ]] .. HUMAN .. [[ then
 						t.minReputation = nil;
@@ -1601,7 +1852,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			n(74, {	-- Kurran Steele <Cloth & Leather Armor Merchant>
 				coord = { 41.4, 65.6, MAP.ELWYNN_FOREST },
 				races = ALLIANCE_ONLY,
-				sym = {{"select","itemID",
+				sym = {{ "select", "itemID",
 					3602,	-- Knitted Belt
 					3603,	-- Knitted Bracers
 					793,	-- Knitted Gloves
@@ -1619,7 +1870,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 			n(959, {	-- Morley Eberlein <Clothier>
 				coord = { 64.7, 69.5, MAP.ELWYNN_FOREST },
 				races = ALLIANCE_ONLY,
-				sym = {{"select","itemID",
+				sym = {{ "select", "itemID",
 					3602,	-- Knitted Belt
 					3603,	-- Knitted Bracers
 					793,	-- Knitted Gloves
@@ -1628,12 +1879,28 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					795,	-- Knitted Tunic
 				}},
 			}),
+			n(268238, {	-- Nordun Steadysight <Traveling Ranged Weapon Salesman>
+				coord = { 42.1, 66.6, MAP.ELWYNN_FOREST },
+				races = ALLIANCE_ONLY,
+				timeline = { TIMELINE.ADDED_1_60_1 },
+				sym = {{ "select", "itemID",
+					2506,	-- Hornwood Recurve Bow
+					2509,	-- Ornate Blunderbuss
+					2505,	-- Polished Shortbow
+					2510,	-- Solid Blunderbuss
+					2504,	-- Worn Shortbow
+				}},
+			}),
 			n(1198, {	-- Rallic Finn <Bowyer>
 				coord = { 83.2, 66.0, MAP.ELWYNN_FOREST },
 				races = ALLIANCE_ONLY,
 				groups = {
 					i(11303, {	-- Fine Shortbow
 						isLimited = true,
+					}),
+					i(287063, {	-- Serrated Knife
+						isLimited = true,
+						timeline = { TIMELINE.ADDED_1_60_1 },
 					}),
 				},
 			}),
@@ -1680,7 +1947,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 				},
 			}),
 			i(778, {	-- Kobold Excavation Pick
-				["cr"] = 476,	-- Kobold Geomancer
+				cr = 476,	-- Kobold Geomancer
 			}),
 			i(1389, {	-- Kobold Mining Mallet
 				coords = {
@@ -1688,7 +1955,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					{ 64.6, 56.4, MAP.ELWYNN_FOREST },
 					{ 41.6, 80.0, MAP.ELWYNN_FOREST },
 				},
-				["cr"] = 40,	-- Kobold Miner
+				cr = 40,	-- Kobold Miner
 			}),
 			i(1195, {	-- Kobold Mining Shovel
 				coords = {
@@ -1696,10 +1963,10 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 					{ 40.0, 83.8, MAP.ELWYNN_FOREST },
 					{ 38.0, 87.0, MAP.ELWYNN_FOREST },
 				},
-				["cr"] = 475,	-- Kobold Tunneler
+				cr = 475,	-- Kobold Tunneler
 			}),
 			i(1399, {	-- Magic Candle
-				["cr"] = 476,	-- Kobold Geomancer
+				cr = 476,	-- Kobold Geomancer
 			}),
 			i(781, {	-- Stone Gnoll Hammer
 				coords = {
@@ -1714,7 +1981,7 @@ maproot(MAP.EASTERN_KINGDOMS, MAP.ELWYNN_FOREST, {
 				},
 			}),
 			i(1972, {	-- Westfall Deed (QS!)
-				["crs"] = {
+				crs = {
 					116,	-- Defias Bandit
 					6866,	-- Defias Bodyguard
 					6846,	-- Defias Dockmaster

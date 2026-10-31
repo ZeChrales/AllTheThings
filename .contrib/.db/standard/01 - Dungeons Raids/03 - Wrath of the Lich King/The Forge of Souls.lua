@@ -17,102 +17,114 @@ local InstanceHelper = CreateInstanceHelper(EncounterToCRS)
 local BossOnly, Difficulty =
 InstanceHelper.BossOnly, InstanceHelper.Difficulty
 
-root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_FOUR, bubbleDown({ ["timeline"] = { ADDED_3_3_0 } }, {
+root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_FOUR, {
 	inst(280, {	-- The Forge of Souls
-		["mapID"] = THE_FORGE_OF_SOULS,
-		["coord"] = { 52.3, 89.3, ICECROWN },
-		["lvl"] = lvlsquish(78, 78, 25),
-		["groups"] = {
+		mapID = THE_FORGE_OF_SOULS,
+		coord = { 52.3, 89.3, ICECROWN },
+		timeline = { ADDED_3_3_0 },
+		lvl = lvlsquish(78, 78, 25),
+		groups = {
 			n(ACHIEVEMENTS, {
 				ach(4516, {	-- The Forge of Souls
 					-- #if AFTER 7.3.5
 					crit(13315, {	-- Bronjahm
-						["_encounter"] = { BRONJAHM, DIFFICULTY.DUNGEON.MULTI.NORMAL_HEROIC },
+						_encounter = { BRONJAHM, DIFFICULTY.DUNGEON.MULTI.NORMAL_HEROIC },
 					}),
 					crit(13316, {	-- Devourer of Souls
-						["_encounter"] = { DEVOURER, DIFFICULTY.DUNGEON.MULTI.NORMAL_HEROIC },
+						_encounter = { DEVOURER, DIFFICULTY.DUNGEON.MULTI.NORMAL_HEROIC },
 					}),
 					-- #else
 					crit(13315, {	-- Bronjahm
-						["_encounter"] = { BRONJAHM, DIFFICULTY.DUNGEON.NORMAL },
+						_encounter = { BRONJAHM, DIFFICULTY.DUNGEON.NORMAL },
 					}),
 					crit(13316, {	-- Devourer of Souls
-						["_encounter"] = { DEVOURER, DIFFICULTY.DUNGEON.NORMAL },
+						_encounter = { DEVOURER, DIFFICULTY.DUNGEON.NORMAL },
 					}),
 					-- #endif
 				}),
 				ach(4519, {	-- Heroic: The Forge of Souls
 					crit(13167, {	-- Bronjahm
-						["_encounter"] = { BRONJAHM, DIFFICULTY.DUNGEON.HEROIC },
+						_encounter = { BRONJAHM, DIFFICULTY.DUNGEON.HEROIC },
 					}),
 					crit(13168, {	-- Devourer of Souls
-						["_encounter"] = { DEVOURER, DIFFICULTY.DUNGEON.HEROIC },
+						_encounter = { DEVOURER, DIFFICULTY.DUNGEON.HEROIC },
 					}),
 				}),
 			}),
 			n(QUESTS, {
 				q(24499, {	-- Echoes of Tortured Souls (A)
-					["sourceQuest"] = 24510,	-- Inside the Frozen Citadel (A)
-					["qg"] = 37597,	-- Lady Jaina Proudmoore
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = lvlsquish(78, 78, 25),
-					["groups"] = {
+					sourceQuest = 24510,	-- Inside the Frozen Citadel (A)
+					qg = 37597,	-- Lady Jaina Proudmoore
+					races = ALLIANCE_ONLY,
+					lvl = lvlsquish(78, 78, 25),
+					groups = {
 						objective(1, {	-- 0/1 Bronjahm slain
-							["provider"] = { "n", 36497 },	-- Bronjahm <Godfather of Souls>
+							provider = { "n", 36497 },	-- Bronjahm <Godfather of Souls>
 						}),
 						objective(2, {	-- 0/1 Devourer of Souls slain
-							["provider"] = { "n", 36502 },	-- Devourer of Souls
+							provider = { "n", 36502 },	-- Devourer of Souls
 						}),
 					},
 				}),
 				q(24511, {	-- Echoes of Tortured Souls (H)
-					["sourceQuest"] = 24506,	-- Inside the Frozen Citadel (H)
-					["qg"] = 37596,	-- Lady Sylvanas Windrunner <Banshee Queen>
-					["races"] = HORDE_ONLY,
-					["lvl"] = lvlsquish(78, 78, 25),
-					["groups"] = {
+					sourceQuest = 24506,	-- Inside the Frozen Citadel (H)
+					qg = 37596,	-- Lady Sylvanas Windrunner <Banshee Queen>
+					races = HORDE_ONLY,
+					lvl = lvlsquish(78, 78, 25),
+					groups = {
 						objective(1, {	-- 0/1 Bronjahm slain
-							["provider"] = { "n", 36497 },	-- Bronjahm <Godfather of Souls>
+							provider = { "n", 36497 },	-- Bronjahm <Godfather of Souls>
 						}),
 						objective(2, {	-- 0/1 Devourer of Souls slain
-							["provider"] = { "n", 36502 },	-- Devourer of Souls
+							provider = { "n", 36502 },	-- Devourer of Souls
 						}),
 					},
 				}),
 				q(24510, {	-- Inside the Frozen Citadel (A)
-					["qg"] = 37776,	-- Apprentice Nelphi <Kirin Tor>
-					["coords"] = {
+					qg = 37776,	-- Apprentice Nelphi <Kirin Tor>
+					coords = {
 						{ 46.0, 68.1, NORTHREND_DALARAN },
 						{ 46.1, 76.8, NORTHREND_DALARAN },
 					},
-					["races"] = ALLIANCE_ONLY,
-					["isBreadcrumb"] = true,
-					["lvl"] = lvlsquish(78, 78, 25),
+					races = ALLIANCE_ONLY,
+					isBreadcrumb = true,
+					lvl = lvlsquish(78, 78, 25),
 				}),
 				q(24506, {	-- Inside the Frozen Citadel (H)
-					["qg"] = 37780,	-- Dark Ranger Vorel
-					["coord"] = { 51.3, 27.3, NORTHREND_DALARAN },
-					["races"] = HORDE_ONLY,
-					["isBreadcrumb"] = true,
-					["lvl"] = lvlsquish(78, 78, 25),
+					qg = 37780,	-- Dark Ranger Vorel
+					coord = { 51.3, 27.3, NORTHREND_DALARAN },
+					races = HORDE_ONLY,
+					isBreadcrumb = true,
+					lvl = lvlsquish(78, 78, 25),
 				}),
 				q(24683, {	-- The Pit of Saron (A)
-					["sourceQuest"] = 24499,	-- Echoes of Tortured Souls (A)
-					["qg"] = 38160,	-- Lady Jaina Proudmoore
-					["maps"] = { PIT_OF_SARON },
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = lvlsquish(78, 78, 25),
+					sourceQuest = 24499,	-- Echoes of Tortured Souls (A)
+					qg = 38160,	-- Lady Jaina Proudmoore
+					maps = { PIT_OF_SARON },
+					races = ALLIANCE_ONLY,
+					lvl = lvlsquish(78, 78, 25),
 				}),
 				q(24682, {	-- The Pit of Saron (H)
-					["sourceQuest"] = 24511,	-- Echoes of Tortured Souls (H)
-					["qg"] = 38161,	-- Lady Sylvanas Windrunner <Banshee Queen>
-					["maps"] = { PIT_OF_SARON },
-					["races"] = HORDE_ONLY,
-					["lvl"] = lvlsquish(78, 78, 25),
+					sourceQuest = 24511,	-- Echoes of Tortured Souls (H)
+					qg = 38161,	-- Lady Sylvanas Windrunner <Banshee Queen>
+					maps = { PIT_OF_SARON },
+					races = HORDE_ONLY,
+					lvl = lvlsquish(78, 78, 25),
 				}),
 			}),
 			-- #if AFTER 7.3.5
 			Difficulty(DIFFICULTY.DUNGEON.MULTI.NORMAL_HEROIC).AddGroups({
+				n(ZONE_DROPS, {
+					a(i(50379)),	-- Battered Hilt [A]
+					h(i(50380)),	-- Battered Hilt [H]
+					i(49852),	-- Coffin Nail
+					i(50318),	-- Ghostly Wristwraps
+					i(49854),	-- Mantle of Tattered Feathers
+					i(49855),	-- Plated Grips of Korth'azz
+					i(50315),	-- Seven-Fingered Claws
+					i(49853),	-- Titanium Links of Lore
+					i(50319),	-- Unsharpened Ice Razor
+				}),
 				BossOnly(BRONJAHM, {
 					i(49785),	-- Bewildering Shoulderpads
 					i(49788),	-- Cold Sweat Grips
@@ -156,27 +168,14 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 				}),
 			}),
 			Difficulty(DIFFICULTY.DUNGEON.NORMAL).AddGroups({
-				n(ZONE_DROPS, {
-					i(49852),	-- Coffin Nail
-					i(49854),	-- Mantle of Tattered Feathers
-					i(49855),	-- Plated Grips of Korth'azz
-					i(49853),	-- Titanium Links of Lore
-				}),
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.HEROIC, { ["lvl"] = lvlsquish(80, 80, 30) }).AddGroups({
-				n(ZONE_DROPS, {
-					a(i(50379)),	-- Battered Hilt [A]
-					h(i(50380)),	-- Battered Hilt [H]
-					i(50318),	-- Ghostly Wristwraps
-					i(50315),	-- Seven-Fingered Claws
-					i(50319),	-- Unsharpened Ice Razor
-				}),
+			Difficulty(DIFFICULTY.DUNGEON.HEROIC, { lvl = lvlsquish(80, 80, 30) }).AddGroups({
 				BossOnly(BRONJAHM, {
-					i(50169, { ["timeline"] = { REMOVED_5_0_4 } }),	-- Papa's Brand New Knife
 					ach(4522),	-- Soul Power
+					i(50169, { timeline = { REMOVED_5_0_4 } }),	-- Papa's Brand New Knife
 				}),
 				BossOnly(DEVOURER, {
-					ach(5112, { ["timeline"] = { ADDED_4_0_3 } }),	-- Heroic: The Forge of Souls Guild Run
+					ach(5112, { timeline = { ADDED_4_0_3 } }),	-- Heroic: The Forge of Souls Guild Run
 					ach(4523),	-- Three Faced
 				}),
 			}),
@@ -212,7 +211,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 					i(49793),	-- Tower of the Mouldering Corpse
 				}),
 			}),
-			Difficulty(DIFFICULTY.DUNGEON.HEROIC, { ["lvl"] = lvlsquish(80, 80, 30) }).AddGroups({
+			Difficulty(DIFFICULTY.DUNGEON.HEROIC, { lvl = lvlsquish(80, 80, 30) }).AddGroups({
 				n(ZONE_DROPS, {
 					a(i(50379)),	-- Battered Hilt [A]
 					h(i(50380)),	-- Battered Hilt [H]
@@ -225,13 +224,13 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 					i(50197),	-- Eyes of Bewilderment
 					i(50196),	-- Love's Prisoner
 					i(50191),	-- Nighttime
-					i(50169, { ["timeline"] = { REMOVED_5_0_4 } }),	-- Papa's Brand New Knife
 					i(50316),	-- Papa's Brand New Bag
+					i(50169, { timeline = { REMOVED_5_0_4 } }),	-- Papa's Brand New Knife
 					i(50193),	-- Very Fashionable Shoulders
 					i(50194),	-- Weeping Gauntlets
 				}),
 				BossOnly(DEVOURER, {
-					ach(5112, { ["timeline"] = { ADDED_4_0_3 } }),	-- Heroic: The Forge of Souls Guild Run
+					ach(5112, { timeline = { ADDED_4_0_3 } }),	-- Heroic: The Forge of Souls Guild Run
 					ach(4523),	-- Three Faced
 					i(50211),	-- Arcane Loops of Anger
 					i(50207),	-- Black Spire Sabatons
@@ -250,11 +249,11 @@ root(ROOTS.Instances, expansion(EXPANSION.WRATH, applyclassicphase(WRATH_PHASE_F
 			-- #endif
 		},
 	}),
-}))));
+})));
 
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { ADDED_6_0_2 } }, {
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, {
 	inst(280, {
 		q(35436),	-- The Forge of Souls Reward Quest - Normal completion
 		q(35437),	-- The Forge of Souls Reward Quest - Heroic completion
 	}),
-})));
+}));

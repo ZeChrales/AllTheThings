@@ -2,19 +2,20 @@
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 
-root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADDED_6_2_0 } }, {
+root(ROOTS.Instances, expansion(EXPANSION.WOD, {
 	inst(669, {	-- Hellfire Citadel
-		["mapID"] = 661,
-		["coord"] = { 45.56, 53.61, TANAAN_JUNGLE },
-		["maps"] = { 662, 663, 664, 665, 666, 667, 668, 669, 670 },
-		["isRaid"] = true,
-		["lvl"] = 100,
-		["groups"] = {
+		mapID = 661,
+		coord = { 45.56, 53.61, TANAAN_JUNGLE },
+		timeline = { ADDED_6_2_0 },
+		maps = { 662, 663, 664, 665, 666, 667, 668, 669, 670 },
+		isRaid = true,
+		lvl = 100,
+		groups = {
 			n(ACHIEVEMENTS, {
-				ach(11631, {["timeline"] = {ADDED_7_2_0}}),	-- Extreme Makeover: Fel Edition (Hellfire Citadel)
+				ach(11631, {timeline = {ADDED_7_2_0}}),	-- Extreme Makeover: Fel Edition (Hellfire Citadel)
 				ach(10149, {	-- Glory of the Hellfire Raider
 					-- Meta Achievement
-					["sym"] = {{"meta_achievement",
+					sym = {{"meta_achievement",
 						10026,	-- Nearly Indestructible
 						10057,	-- Turning the Tide
 						10013,	-- Waves Came Crashing Down All Around
@@ -29,63 +30,63 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						10030,	-- Bad Manner(oth)
 						10073,	-- Echoes of Doomfire
 					}},
-					["groups"] = {
+					groups = {
 						i(127140),	-- Infernal Direwolf (MOUNT!)
 					},
 				}),
 				ach(10023, {	-- Hellbreach
 					crit(28075, {	-- Hellfire Assault
-						["_encounter"] = { 1426, DIFFICULTY.RAID.LFR },
+						_encounter = { 1426, DIFFICULTY.RAID.LFR },
 					}),
 					crit(28076, {	-- Iron Reaver
-						["_encounter"] = { 1425, DIFFICULTY.RAID.LFR },
+						_encounter = { 1425, DIFFICULTY.RAID.LFR },
 					}),
 					crit(28077, {	-- Kormrok
-						["_encounter"] = { 1392, DIFFICULTY.RAID.LFR },
+						_encounter = { 1392, DIFFICULTY.RAID.LFR },
 					}),
 				}),
 				ach(10024, {	-- Halls of Blood
 					crit(28078, {	-- Hellfire High Council
-						["_encounter"] = { 1432, DIFFICULTY.RAID.LFR },
+						_encounter = { 1432, DIFFICULTY.RAID.LFR },
 					}),
 					crit(28079, {	-- Kilrogg Deadeye
-						["_encounter"] = { 1396, DIFFICULTY.RAID.LFR },
+						_encounter = { 1396, DIFFICULTY.RAID.LFR },
 					}),
 					crit(28080, {	-- Gorefiend
-						["_encounter"] = { 1372, DIFFICULTY.RAID.LFR },
+						_encounter = { 1372, DIFFICULTY.RAID.LFR },
 					}),
 				}),
 				ach(10025, {	-- Bastion of Shadows
 					crit(28081, {	-- Shadow-Lord Iskar
-						["_encounter"] = { 1433, DIFFICULTY.RAID.LFR },
+						_encounter = { 1433, DIFFICULTY.RAID.LFR },
 					}),
 					crit(28082, {	-- Socrethar the Eternal
-						["_encounter"] = { 1427, DIFFICULTY.RAID.LFR },
+						_encounter = { 1427, DIFFICULTY.RAID.LFR },
 					}),
 					crit(28083, {	-- Tyrant Velhari
-						["_encounter"] = { 1394, DIFFICULTY.RAID.LFR },
+						_encounter = { 1394, DIFFICULTY.RAID.LFR },
 					}),
 				}),
 				ach(10020, {	-- Destructor's Rise
 					crit(28067, {	-- Fel Lord Zakuun
-						["_encounter"] = { 1391, DIFFICULTY.RAID.LFR },
+						_encounter = { 1391, DIFFICULTY.RAID.LFR },
 					}),
 					crit(28068, {	-- Xhul'horac
-						["_encounter"] = { 1447, DIFFICULTY.RAID.LFR },
+						_encounter = { 1447, DIFFICULTY.RAID.LFR },
 					}),
 					crit(28069, {	-- Mannoroth
-						["_encounter"] = { 1395, DIFFICULTY.RAID.LFR },
+						_encounter = { 1395, DIFFICULTY.RAID.LFR },
 					}),
 				}),
 				ach(10019, {	-- The Black Gate
 					crit(28066, {	-- Archimonde
-						["provider"] = { "n", 91331 },	-- Archimonde
-						["_encounter"] = { 1438, DIFFICULTY.RAID.LFR },
+						provider = { "n", 91331 },	-- Archimonde
+						_encounter = { 1438, DIFFICULTY.RAID.LFR },
 					}),
 				}),
 			}),
 			n(COMMON_BOSS_DROPS, {
-				["crs"] = {
+				crs = {
 					95068,	-- Hellfire Assault
 					90284,	-- Iron Reaver
 					90435,	-- Kormrok
@@ -100,12 +101,12 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 					91349,	-- Manno
 					91331,	-- Archi
 				},
-				["groups"] = {
+				groups = {
 					un(REMOVED_FROM_GAME, i(127115)),	-- Tome of Chaos
 				},
 			}),
 			d(DIFFICULTY.RAID.MULTI.ALL, {	-- Queue NPC
-				["crs"] = { 94870 },	-- Seer Kazal <Shadowmoon Exile>
+				crs = { 94870 },	-- Seer Kazal <Shadowmoon Exile>
 			}),
 			d(DIFFICULTY.RAID.MULTI.ALL, {
 				cr(90284, e(1425, {	-- Iron Reaver
@@ -116,12 +117,12 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(91331, e(1438, {	-- Archimonde
 					i(212780, {	-- Grimoire of the Felbrute Tyrant (CI!)
-						["timeline"] = { ADDED_10_2_5 },
+						timeline = { ADDED_10_2_5 },
 					}),
 				})),
 			}),
 			d(DIFFICULTY.RAID.LFR, {	-- Queue NPC
-				["crs"] = { 94870 },	-- Seer Kazal <Shadowmoon Exile>
+				crs = { 94870 },	-- Seer Kazal <Shadowmoon Exile>
 			}),
 			d(DIFFICULTY.RAID.LFR, {
 				header(HEADERS.Achievement, 10023, {	-- Hellbreach
@@ -155,7 +156,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						i(128168),	-- Shrapnel-Studded Boots
 						i(128141),	-- Crackling Fel-Spark Plug
 						i(128256, {	-- Equipment Blueprint: Gyroscopic Internal Stabilizer
-							["questID"] = 39364,	-- Equipment Blueprint: Gyroscopic Internal Stabilizer
+							questID = 39364,	-- Equipment Blueprint: Gyroscopic Internal Stabilizer
 						}),
 					})),
 					cr(90435, e(1392, {	-- Kormrok
@@ -176,12 +177,12 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				}),
 				header(HEADERS.Achievement, 10024, {	-- Halls of Blood
 					e(1432, {	-- Hellfire High Council
-						["crs"] = {
+						crs = {
 							92142,	-- Blademaster Jubei'thos
 							92144,	-- Dia Darkwhisper
 							92146,	-- Gurtogg Bloodboil
 						},
-						["groups"] = {
+						groups = {
 							i(128097),	-- Riverspike Cleaver
 							i(128100),	-- Spring-Loaded Jawstaff
 							i(128095),	-- Viscera-Stained Longsword
@@ -216,7 +217,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						i(128147),	-- Teardrop of Blood
 						i(128144),	-- Vial of Vile Viscera
 						ig(138808, {	-- Illusion: Mark of the Bleeding Hollow (ILLUSION!)
-							["timeline"] = { ADDED_7_0_3 },
+							timeline = { ADDED_7_0_3 },
 						}),
 					})),
 					cr(90199, e(1372, {	-- Gorefiend
@@ -250,8 +251,8 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						i(128146),	-- Ensnared Orb of the Sky
 						ig(127749),	-- Corrupted Nest Guardian (PET!)
 						TempForceMisc(ig(127771, {	-- Gemcutter Module: Critical Strike
-							["description"] = "Take this recipe to the \"Apexis Gemcutter\" in Tanaan Jungle to learn. If you have this recipe already you will need to revisit the vendor to cache the recipe.",
-							["requireSkill"] = JEWELCRAFTING,
+							description = "Take this recipe to the \"Apexis Gemcutter\" in Tanaan Jungle to learn. If you have this recipe already you will need to revisit the vendor to cache the recipe.",
+							requireSkill = JEWELCRAFTING,
 						})),
 					})),
 					cr(92330, e(1427, {	-- Socrethar the Eternal
@@ -348,65 +349,65 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 			d(DIFFICULTY.RAID.MULTI.NORMAL_PLUS, {
 				cr(95068, e(1426, {	-- Hellfire Assault (Siegemaster Mar'tak)
 					ach(10026, {	-- Nearly Indestructible
-						["crs"] = { 90018 },	-- Hellfire Cannon
+						crs = { 90018 },	-- Hellfire Cannon
 					}),
 					i(128256, {	-- Equipment Blueprint: Gyroscopic Internal Stabilizer
-						["questID"] = 39364,	-- Equipment Blueprint: Gyroscopic Internal Stabilizer
+						questID = 39364,	-- Equipment Blueprint: Gyroscopic Internal Stabilizer
 					}),
 				})),
 				cr(90284, e(1425, {	-- Iron Reaver
 					ach(10057, {	-- Turning the Tide
-						["description"] = "When the boss casts Barrage, simply stand at the North or South walls and try to get at least 2-3 Guardians within the frontal cone to kill them. There are 5 Guardians at each wall, 10 Guardians in all, very easy to solo at max level.",
-						["crs"] = { 94808 },	-- Hellfire Guardian
+						description = "When the boss casts Barrage, simply stand at the North or South walls and try to get at least 2-3 Guardians within the frontal cone to kill them. There are 5 Guardians at each wall, 10 Guardians in all, very easy to solo at max level.",
+						crs = { 94808 },	-- Hellfire Guardian
 					}),
 				})),
 				cr(90435, e(1392, {	-- Kormrok
 					ach(10013),	-- Waves Came Crashing Down All Around
 				})),
 				e(1432, {	-- Hellfire High Council
-					["crs"] = {
+					crs = {
 						92142,	-- Blademaster Jubei'thos
 						92144,	-- Dia Darkwhisper
 						92146,	-- Gurtogg Bloodboil
 					},
-					["groups"] = {
+					groups = {
 						ach(10054),	-- Don't Fear the Reaper
 					},
 				}),
 				cr(90378, e(1396, {	-- Kilrogg Deadeye
 					ach(9972, {	-- A Race Against Slime
-						["crs"] = { 90980 },	-- Ariok
-						["groups"] = {
+						crs = { 90980 },	-- Ariok
+						groups = {
 							follower(474),	-- Ariok
 						},
 					}),
 					ig(138808, {	-- Illusion: Mark of the Bleeding Hollow (ILLUSION!)
-						["timeline"] = { ADDED_7_0_3 },
+						timeline = { ADDED_7_0_3 },
 					}),
 				})),
 				cr(90199, e(1372, {	-- Gorefiend
 					ach(9979, {	-- Get In My Belly!
-						["crs"] = { 93145 },	-- Soul of the Crone
+						crs = { 93145 },	-- Soul of the Crone
 					}),
 				})),
 				cr(90316, e(1433, {	-- Shadow-Lord Iskar
 					ach(9988, {	-- Pro Toss
-						["description"] = "Pull the boss and burn him before he transitions. As long as no one touched the Eye of Anzu, you will earn the achievement.",
+						description = "Pull the boss and burn him before he transitions. As long as no one touched the Eye of Anzu, you will earn the achievement.",
 					}),
 					ig(127749),	-- Corrupted Nest Guardian (PET!)
 					TempForceMisc(ig(127771, {	-- Gemcutter Module: Critical Strike
-						["description"] = "Take this recipe to the \"Apexis Gemcutter\" in Tanaan Jungle to learn. If you have this recipe already you will need to revisit the vendor to cache the recipe.",
-						["requireSkill"] = JEWELCRAFTING,
+						description = "Take this recipe to the \"Apexis Gemcutter\" in Tanaan Jungle to learn. If you have this recipe already you will need to revisit the vendor to cache the recipe.",
+						requireSkill = JEWELCRAFTING,
 					})),
 				})),
 				cr(92330, e(1427, {	-- Socrethar the Eternal
 					ach(10086, {	-- I'm a Soul Man
-						["crs"] = { 91938 },	-- Haunting Soul
+						crs = { 91938 },	-- Haunting Soul
 					}),
 				})),
 				cr(90269, e(1394, {	-- Tyrant Velhari
 					ach(9989, {	-- Non-Lethal Enforcer
-						["crs"] = { 90270 },	-- Ancient Enforcer
+						crs = { 90270 },	-- Ancient Enforcer
 					}),
 				})),
 				cr(89890, e(1391, {	-- Fel Lord Zakuun
@@ -417,13 +418,13 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(91349, e(1395, {	-- Mannoroth
 					ach(10030, {	-- Bad Manner(oth)
-						["crs"] = { 91241 },	-- Doom Lord
+						crs = { 91241 },	-- Doom Lord
 					}),
 				})),
 				cr(91331, e(1438, {	-- Archimonde
 					ach(10073),	-- Echoes of Doomfire
 					ach(9680, {	-- Time is a Flat Circle
-						["timeline"] = { ADDED_6_2_0, REMOVED_7_0_3 },
+						timeline = { REMOVED_7_0_3 },
 					}),
 					un(REMOVED_FROM_GAME, i(127785)),	-- Crystallized Fel
 				})),
@@ -431,25 +432,25 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 			d(DIFFICULTY.RAID.NORMAL, {
 				n(QUESTS, {
 					q(39502, {	-- The Fel Spire (Normal)
-						["description"] = "Finishing this quest will grant you immediate access to the Destructor's Rise on Normal difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Heroic or Mythic version first.|r\n",
-						["sourceQuests"] = { 39499 },	-- Well of Souls (Normal)
-						["qg"] = 95659,	-- Archmage Khadgar
-						["lockCriteria"] = { 1,
+						description = "Finishing this quest will grant you immediate access to the Destructor's Rise on Normal difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Heroic or Mythic version first.|r\n",
+						sourceQuests = { 39499 },	-- Well of Souls (Normal)
+						qg = 95659,	-- Archmage Khadgar
+						lockCriteria = { 1,
 							"questID", 39504,	-- The Fel Spire (Heroic)
 							"questID", 39505,	-- The Fel Spire (Mythic)
 						},
-						["DisablePartySync"] = true,
-						["qi"] = 128419,	-- Fel Essence (QI!)
+						DisablePartySync = true,
+						qi = 128419,	-- Fel Essence (QI!)
 					}),
 					q(39499, {	-- Well of Souls (Normal)
-						["description"] = "Finishing this quest will grant you immediate access to the Upper Citadel on Normal difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Heroic or Mythic version first.|r\n",
-						["qg"] = 95659,	-- Archmage Khadgar
-						["lockCriteria"] = { 1,
+						description = "Finishing this quest will grant you immediate access to the Upper Citadel on Normal difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Heroic or Mythic version first.|r\n",
+						qg = 95659,	-- Archmage Khadgar
+						lockCriteria = { 1,
 							"questID", 39500,	-- Well of Souls (Heroic)
 							"questID", 39501,	-- Well of Souls (Mythic)
 						},
-						["DisablePartySync"] = true,
-						["qi"] = 128416,	-- Soul Remnant (QI!)
+						DisablePartySync = true,
+						qi = 128416,	-- Soul Remnant (QI!)
 					}),
 				}),
 				n(ZONE_DROPS, {
@@ -504,7 +505,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(90435, e(1392, {	-- Kormrok
 					un(REMOVED_FROM_GAME, i(127956, {	-- Helm of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -513,7 +514,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127966, {	-- Helm of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -522,7 +523,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127959, {	-- Helm of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -558,12 +559,12 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 					i(124235),	-- Rumbling Pebble
 				})),
 				e(1432, {	-- Hellfire High Council
-					["crs"] = {
+					crs = {
 						92142,	-- Blademaster Jubei'thos
 						92144,	-- Dia Darkwhisper
 						92146,	-- Gurtogg Bloodboil
 					},
-					["groups"] = {
+					groups = {
 						i(124388),	-- Fel-Burning Blade
 						i(124385),	-- Blazing Demonhilt Sword
 						i(124383),	-- Mindbender's Flameblade
@@ -604,7 +605,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(90199, e(1372, {	-- Gorefiend
 					un(REMOVED_FROM_GAME, i(127955, {	-- Leggings of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -613,7 +614,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127965, {	-- Leggings of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -622,7 +623,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127960, {	-- Leggings of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -678,7 +679,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(92330, e(1427, {	-- Socrethar the Eternal
 					un(REMOVED_FROM_GAME, i(127954, {	-- Gauntlets of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -687,7 +688,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127964, {	-- Gauntlets of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -696,7 +697,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127958, {	-- Gauntlets of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -767,7 +768,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(93068, e(1447, {	-- Xhul'horac
 					un(REMOVED_FROM_GAME, i(127957, {	-- Shoulders of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1447 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -776,7 +777,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127967, {	-- Shoulders of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -785,7 +786,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127961, {	-- Shoulders of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -820,7 +821,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(91349, e(1395, {	-- Mannoroth
 					un(REMOVED_FROM_GAME, i(127953, {	-- Chest of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1395 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -829,7 +830,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127963, {	-- Chest of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -838,7 +839,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127962, {	-- Chest of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -874,7 +875,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(91331, e(1438, {	-- Archimonde
 					un(REMOVED_FROM_GAME, i(127969, {	-- Badge of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -883,7 +884,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127970, {	-- Badge of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -892,7 +893,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127968, {	-- Badge of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 3 },			-- only keep this difficulty
@@ -931,36 +932,34 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 			d(DIFFICULTY.RAID.HEROIC, {
 				n(QUESTS, {
 					q(40962, {	-- Dark Waters
-						["sourceQuest"] = 40904,	-- Shadow of the Defiler
-						["qg"] = 102432,	-- Malfurion Stormrage
-						["coord"] = { 36.4, 41.6, MOONGLADE },
-						["timeline"] = { REMOVED_7_0_3 },
-						["lvl"] = 100,
-						["groups"] = {
-							i(128422, {	-- Grove Warden (MOUNT!)
-								["timeline"] = { REMOVED_7_0_3 },
-							}),
+						sourceQuest = 40904,	-- Shadow of the Defiler
+						qg = 102432,	-- Malfurion Stormrage
+						coord = { 36.4, 41.6, MOONGLADE },
+						timeline = { REMOVED_7_0_3 },
+						lvl = 100,
+						groups = {
+							i(128422),	-- Grove Warden (MOUNT!)
 						},
 					}),
 					q(40904, {	-- Shadow of the Defiler
-						["provider"] = { "i", 133762 },	-- Remnant of Chaos
-						["timeline"] = { REMOVED_7_0_3 },
-						["maps"] = { MOONGLADE },
+						provider = { "i", 133762 },	-- Remnant of Chaos
+						timeline = { REMOVED_7_0_3 },
+						maps = { MOONGLADE },
 					}),
 					q(39504, {	-- The Fel Spire (Heroic)
-						["description"] = "Finishing this quest will grant you immediate access to the Destructor's Rise on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
-						["sourceQuests"] = { 39500 },	-- Well of Souls (Heroic)
-						["qg"] = 95659,	-- Archmage Khadgar
-						["lockCriteria"] = { 1, "questID", 39505 },	-- The Fel Spire (Mythic)
-						["DisablePartySync"] = true,
-						["qi"] = 128420,	-- Fel Essence (QI!)
+						description = "Finishing this quest will grant you immediate access to the Destructor's Rise on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
+						sourceQuests = { 39500 },	-- Well of Souls (Heroic)
+						qg = 95659,	-- Archmage Khadgar
+						lockCriteria = { 1, "questID", 39505 },	-- The Fel Spire (Mythic)
+						DisablePartySync = true,
+						qi = 128420,	-- Fel Essence (QI!)
 					}),
 					q(39500, {	-- Well of Souls (Heroic)
-						["description"] = "Finishing this quest will grant you immediate access to the Upper Citadel on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
-						["qg"] = 95659,	-- Archmage Khadgar
-						["lockCriteria"] = { 1, "questID", 39501 },	-- Well of Souls (Mythic)
-						["DisablePartySync"] = true,
-						["qi"] = 128417,	-- Soul Remnant (QI!)
+						description = "Finishing this quest will grant you immediate access to the Upper Citadel on Heroic difficulty each week.\n\n|cfffd1818This quest becomes unobtainable if you complete the Mythic version first.|r\n",
+						qg = 95659,	-- Archmage Khadgar
+						lockCriteria = { 1, "questID", 39501 },	-- Well of Souls (Mythic)
+						DisablePartySync = true,
+						qi = 128417,	-- Soul Remnant (QI!)
 					}),
 				}),
 				n(ZONE_DROPS, {
@@ -1015,7 +1014,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(90435, e(1392, {	-- Kormrok
 					un(REMOVED_FROM_GAME, i(127956, {	-- Helm of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1024,7 +1023,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127966, {	-- Helm of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1033,7 +1032,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127959, {	-- Helm of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1069,12 +1068,12 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 					i(124235),	-- Rumbling Pebble
 				})),
 				e(1432, {	-- Hellfire High Council
-					["crs"] = {
+					crs = {
 						92142,	-- Blademaster Jubei'thos
 						92144,	-- Dia Darkwhisper
 						92146,	-- Gurtogg Bloodboil
 					},
-					["groups"] = {
+					groups = {
 						i(124388),	-- Fel-Burning Blade
 						i(124385),	-- Blazing Demonhilt Sword
 						i(124383),	-- Mindbender's Flameblade
@@ -1115,7 +1114,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(90199, e(1372, {	-- Gorefiend
 					un(REMOVED_FROM_GAME, i(127955, {	-- Leggings of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1124,7 +1123,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127965, {	-- Leggings of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1133,7 +1132,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127960, {	-- Leggings of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1189,7 +1188,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(92330, e(1427, {	-- Socrethar the Eternal
 					un(REMOVED_FROM_GAME, i(127954, {	-- Gauntlets of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1198,7 +1197,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127964, {	-- Gauntlets of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1207,7 +1206,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127958, {	-- Gauntlets of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1278,7 +1277,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(93068, e(1447, {	-- Xhul'horac
 					un(REMOVED_FROM_GAME, i(127957, {	-- Shoulders of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1447 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1287,7 +1286,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127967, {	-- Shoulders of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1296,7 +1295,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127961, {	-- Shoulders of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1331,7 +1330,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				})),
 				cr(91349, e(1395, {	-- Mannoroth
 					un(REMOVED_FROM_GAME, i(127953, {	-- Chest of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1395 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1340,7 +1339,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127963, {	-- Chest of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1349,7 +1348,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127962, {	-- Chest of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1386,10 +1385,10 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				cr(91331, e(1438, {	-- Archimonde
 					un(REMOVED_FROM_GAME, ach(10044)),	-- Ahead of the Curve: The Black Gate
 					i(133762, {	-- Remnant of Chaos
-						["timeline"] = { REMOVED_7_0_3 },
+						timeline = { REMOVED_7_0_3 },
 					}),
 					un(REMOVED_FROM_GAME, i(127969, {	-- Badge of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1398,7 +1397,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127970, {	-- Badge of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1407,7 +1406,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127968, {	-- Badge of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 5 },			-- only keep this difficulty
@@ -1446,15 +1445,15 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 			d(DIFFICULTY.RAID.MYTHIC, {
 				n(QUESTS, {
 					q(39505, {	-- The Fel Spire (Mythic)
-						["description"] = "Finishing this quest will grant you immediate access to the Destructor's Rise on Mythic difficulty each week.",
-						["sourceQuests"] = { 39501 },	-- Well of Souls (Mythic)
-						["qg"] = 95659,	-- Archmage Khadgar
-						["qi"] = 128421,	-- Fel Essence (QI!)
+						description = "Finishing this quest will grant you immediate access to the Destructor's Rise on Mythic difficulty each week.",
+						sourceQuests = { 39501 },	-- Well of Souls (Mythic)
+						qg = 95659,	-- Archmage Khadgar
+						qi = 128421,	-- Fel Essence (QI!)
 					}),
 					q(39501, {	-- Well of Souls (Mythic)
-						["description"] = "Finishing this quest will grant you immediate access to the Upper Citadel on Mythic difficulty each week.",
-						["qg"] = 95659,	-- Archmage Khadgar
-						["qi"] = 128418,	-- Soul Remnant (QI!)
+						description = "Finishing this quest will grant you immediate access to the Upper Citadel on Mythic difficulty each week.",
+						qg = 95659,	-- Archmage Khadgar
+						qi = 128418,	-- Soul Remnant (QI!)
 					}),
 				}),
 				n(ZONE_DROPS, {
@@ -1512,7 +1511,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				cr(90435, e(1392, {	-- Kormrok
 					ach(10033),	-- Mythic: Kormrok
 					un(REMOVED_FROM_GAME, i(127956, {	-- Helm of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1521,7 +1520,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127966, {	-- Helm of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1530,7 +1529,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127959, {	-- Helm of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1392 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1566,12 +1565,12 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 					i(124235),	-- Rumbling Pebble
 				})),
 				e(1432, {	-- Hellfire High Council
-					["crs"] = {
+					crs = {
 						92142,	-- Blademaster Jubei'thos
 						92144,	-- Dia Darkwhisper
 						92146,	-- Gurtogg Bloodboil
 					},
-					["groups"] = {
+					groups = {
 						ach(10034),	-- Mythic: Hellfire High Council
 						i(124388),	-- Fel-Burning Blade
 						i(124385),	-- Blazing Demonhilt Sword
@@ -1615,7 +1614,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				cr(90199, e(1372, {	-- Gorefiend
 					ach(10253),	-- Mythic: Gorefiend
 					un(REMOVED_FROM_GAME, i(127955, {	-- Leggings of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1624,7 +1623,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127965, {	-- Leggings of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1633,7 +1632,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127960, {	-- Leggings of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1372 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1691,7 +1690,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				cr(92330, e(1427, {	-- Socrethar the Eternal
 					ach(10040),	-- Mythic: Socrethar the Eternal
 					un(REMOVED_FROM_GAME, i(127954, {	-- Gauntlets of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1700,7 +1699,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127964, {	-- Gauntlets of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1709,7 +1708,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127958, {	-- Gauntlets of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1783,7 +1782,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				cr(93068, e(1447, {	-- Xhul'horac
 					ach(10039),	-- Mythic: Xhul'horac
 					un(REMOVED_FROM_GAME, i(127957, {	-- Shoulders of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1447 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1792,7 +1791,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127967, {	-- Shoulders of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1801,7 +1800,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127961, {	-- Shoulders of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1837,7 +1836,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 				cr(91349, e(1395, {	-- Mannoroth
 					ach(10042),	-- Mythic: Mannoroth
 					un(REMOVED_FROM_GAME, i(127953, {	-- Chest of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1395 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1846,7 +1845,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127963, {	-- Chest of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1855,7 +1854,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127962, {	-- Chest of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1427 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1899,10 +1898,10 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 					ach(10176),	-- Mythic: Archimonde Guild Run
 					ig(123890),	-- Felsteel Annihilator (MOUNT!)
 					i(133762, {	-- Remnant of Chaos
-						["timeline"] = { REMOVED_7_0_3 },
+						timeline = { REMOVED_7_0_3 },
 					}),
 					un(REMOVED_FROM_GAME, i(127969, {	-- Badge of Hellfire's Conqueror
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1911,7 +1910,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127970, {	-- Badge of Hellfire's Protector
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1920,7 +1919,7 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 						},
 					})),
 					un(REMOVED_FROM_GAME, i(127968, {	-- Badge of Hellfire's Vanquisher
-						["sym"] = {
+						sym = {
 							{ "select", "encounterID", 1438 },	-- This encounter
 							{ "pop" },							-- pop the encounter Headers
 							{ "where", "modID", 6 },			-- only keep this difficulty
@@ -1958,10 +1957,11 @@ root(ROOTS.Instances, expansion(EXPANSION.WOD, bubbleDown({ ["timeline"] = { ADD
 			}),
 		},
 	}),
-})));
+}));
 
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { ADDED_6_2_0 } }, {
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, {
 	inst(669, {
 		-- q(8152),	-- Achimonde Normal. (Was also doing 39830)??
+		timeline = { ADDED_6_2_0 },
 	}),
-})));
+}));

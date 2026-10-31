@@ -1283,6 +1283,7 @@ local AccountWideQuestsDB = {
 	76620,	-- Paracausal Fragment of Azzinoth
 	76621,	-- Felstorm Dragon
 	76637,	-- Reins of the Ravenous Black Gryphon
+	76638,	-- Paracausal Fragment of Shalamayne
 	76640,	-- Warmonger's Skullcap
 	76642,	-- Warmonger's Leggings
 	76644,	-- Warmonger's Robe
@@ -1907,6 +1908,7 @@ local AccountWideQuestsDB = {
 	85161,	-- Rotfist weekly reputation
 	85162,	-- Deepflayer Broodmother weekly reputation
 	85163,	-- Lurker of the Deeps weekly reputation
+	85164,	-- Beledar's Spawn Bonus Reputation
 	85165,	-- Deathtide weekly reputation
 	85166,	-- Tka'ktath weekly reputation
 	85167,	-- The One Left weekly reputation
@@ -2915,6 +2917,9 @@ local AccountWideQuestsDB = {
 	97111,	-- ??
 	97115,	-- First Preference Killing of the week
 	97116,	-- Has rolled for Ahune Special Loot (Daily Accountwide)
+	97131,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	97379,	-- Contract: Zul'jarra's Forces+
+	97380,	-- Contract: Zul'jarra's Forces++
 	97383,	-- Spirit Corrosion
 	97616,	-- Corrosive Gifts: Corrosive Power
 	97640,	-- Vaults of Atal'Utek: One Coin Too Many
@@ -2929,7 +2934,9 @@ local AccountWideQuestsDB = {
 	97983,	-- Ula'tek
 	98014,	-- Ensemble: Venom-Cursed Dragonhawk's Rainment
 	98022,	-- Ensemble: Venom-Cursed Bear's Guard
+	98044,	-- Nebulous Voidcache: Delver's Trove
 	98097,	-- The Coiled Altar
+	98204,	-- Cursed Keepsake
 	98217,	-- Insidious Venomstone
 	98337,	-- Quest #98337*
 	98344,	-- Farthik the Plunderer weekly reputation obtained.
@@ -2945,15 +2952,69 @@ local AccountWideQuestsDB = {
 	98354,	-- Sss'alik weekly reputation obtained.
 	98355,	-- Destra weekly reputation obtained.
 	98388,	-- Into the Vaults of Atal'Utek
+	98379,	-- Ancient Depths, Ancient Venom
 	98406,	-- A Curated Gift
 	98428,	-- Vaults of Atal'Utek: The Altar of Corrosion
 	98515,	-- Vaults of Atal'Utek: A Toxic Tour
+	98602,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98603,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98604,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98605,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98606,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98607,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98608,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98609,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98610,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98611,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98612,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98613,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98614,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98615,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98616,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98617,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98618,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98619,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98620,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98621,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98622,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98623,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98624,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98625,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98626,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98627,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98628,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98629,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98630,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98631,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98632,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98633,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98634,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98635,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98636,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98637,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98638,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98639,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98640,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98641,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98648,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98649,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
+	98650,	-- Sturdy Chest [The Labyrinth of Kindo'jan]
 	98740,	-- Unlock Auction House [Sporebearer Fungal Strider]
-	98741,	-- Sporebearer Fungal Strider
-	98742,	-- (Related to Sporebearer Fungal Strider)
+	98741,	-- Unlock Mail Carrier [Sporebearer Fungal Strider]
+	98742,	-- Unlock Repair Services [Sporebearer Fungal Strider]
 	98743,	-- Unlock Transmogrifier [Sporebearer Fungal Strider]
 	98787,	-- Quest #98787*
+	98831,	-- The Labyrinth
+	98832,	-- Dangers Untold and Hardships Unnumbered
+	98833,	-- You Remind Me of the Bird
+	98834,	-- The Way Forward...
+	98836,	-- ...Is Sometimes the Way Back
 	98848,	-- Delver's Cosmetic Surprise Bag
+	99222,	-- Bonus Reputation: Zul'jarra's Forces [Delve Completion]
+	99246,	-- First Weekly Warband Aqir Token
+	99251,	-- Second Weekly Warband Aqir Token
+	99306,	-- The Labyrinth of Kindo'jan
+	99312,	-- On the Trail of Kindo'jan
 
 	-- Weird partial cases... ??
 	-- 45237,	-- Ensemble: Funerary Plate of the Chosen Dead (Only flags complete for Plate characters)

@@ -18,74 +18,74 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 	}),
 	expansion(EXPANSION.CATA, {
 		-- 4.0.3
-		expansion(EXPANSION.CATA, patch(0,3), bubbleDownSelf({ ["timeline"] = { CREATED_4_0_3 } }, {
+		expansion(EXPANSION.CATA, patch(0,3), {
 			i(62058),	-- Irradiated Bandages
 			i(52488),	-- Jeweler's Sapphire Monocle
-		})),
+		}),
 	}),
 	expansion(EXPANSION.MOP, {
 		-- 5.0.1
-		expansion(EXPANSION.MOP, patch(0,1), bubbleDownSelf({ ["timeline"] = { CREATED_5_0_4 } }, {
+		expansion(EXPANSION.MOP, patch(0,1), {
 			i(73240),	-- Sedge Hat of the Enlightened
-		})),
+		}),
 
 		-- 5.1.0
-		expansion(EXPANSION.MOP, patch(1,0), bubbleDownSelf({ ["timeline"] = { CREATED_5_1_0 } }, {
+		expansion(EXPANSION.MOP, patch(1,0), {
 			i(92553),	-- Gnomish X-Ray Specs Visual
 			i(90986),	-- Ruby Bracelet
-		})),
+		}),
 	}),
 	expansion(EXPANSION.WOD, {
 		-- 6.0.1
-		expansion(EXPANSION.WOD, patch(0,1), bubbleDownSelf({ ["timeline"] = { CREATED_6_0_2 } }, {
+		expansion(EXPANSION.WOD, patch(0,1), {
 			i(116399),	-- Emerald Sunglasses
-		})),
+		}),
 	}),
 	expansion(EXPANSION.LEGION, {
 		-- 7.0.3
-		expansion(EXPANSION.LEGION, patch(0,3), bubbleDownSelf({ ["timeline"] = { CREATED_7_0_3 } }, {
+		expansion(EXPANSION.LEGION, patch(0,3), {
 			i(92894),	-- Art Template Generic Head - Helm_Misc_StarPartyHat_A_01
 			i(81862),	-- Art Template Robe Dress_B_03 - Blue
 			i(133996),	-- Burgy Blackheart's Handsome Hat
 			i(134013),	-- Chef's Hat [Likely the cosmetic effect from when you use the toy]
 			i(134012),	-- X-52 Rocket Helmet [Might be the transmog it applies when you use the toy itself.]
-		})),
+		}),
 
 		-- 7.2.0
-		expansion(EXPANSION.LEGION, patch(2,0), bubbleDownSelf({ ["timeline"] = { CREATED_7_2_0 } }, {
+		expansion(EXPANSION.LEGION, patch(2,0), {
 			i(146306),	-- Green Winter Clothes
 			i(146305),	-- Green Winter Hat
 			i(146307),	-- Winter Boots
 			i(147379),	-- Wooden Toy Axe [H] used to apply the mog
 			i(147378),	-- Wooden Toy Sword [A] (Visual usage for toy weapon set)
-		})),
+		}),
 	}),
 	expansion(EXPANSION.BFA, {
 		-- 8.0.1
-		expansion(EXPANSION.BFA, patch(0,1), bubbleDownSelf({ ["timeline"] = { CREATED_8_0_1 } }, {
+		expansion(EXPANSION.BFA, patch(0,1), {
 			i(162641),	-- Alliance Toy Cape (used from Winter Veil 2018 Toy, but its just used to attach the look to you, you actually never get the item)
 			i(162640),	-- Horde Toy Cape (used from Winter Veil 2018 Toy, but its just used to attach the look to you, you actually never get the item)
 			i(163922),	-- Kobold Candle Helm
 			i(163923),	-- Kobold Candle Helm
 			i(162638),	-- Wooden Toy Helm [H] (used from Winter Veil 2018 Toy, but its just used to attach the look to you, you actually never get the item)
 			i(162639),	-- Wooden Toy Helm [A] (used from Winter Veil 2018 Toy, but its just used to attach the look to you, you actually never get the item)
-		})),
+		}),
 
 		-- 8.1.5
-		expansion(EXPANSION.BFA, patch(1,5), bubbleDownSelf({ ["timeline"] = { CREATED_8_1_5 } }, {
+		expansion(EXPANSION.BFA, patch(1,5), {
 			i(168004),	-- Gift of N'Zoth
-		})),
+		}),
 	}),
 	expansion(EXPANSION.SL, {
 		-- 9.0.1
-		expansion(EXPANSION.SL, patch(0,1), bubbleDownSelf({ ["timeline"] = { CREATED_9_0_1 } }, {
+		expansion(EXPANSION.SL, patch(0,1), {
 			n(ARMOR, {
 				i(182306),	-- Monster Mantle
 			}),
-		})),
+		}),
 
 		-- 9.1.0
-		expansion(EXPANSION.SL, patch(1,0), bubbleDownSelf({ ["timeline"] = { CREATED_9_1_0 } }, {
+		expansion(EXPANSION.SL, patch(1,0), {
 			n(ARMOR, {
 				i(185774),	-- PH Green Head Candle
 				i(186093),	-- Shaded Spectacles
@@ -102,18 +102,18 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(186514),	-- Ensemble: Redeemed Inquisitor's Vestments
 				q(63636),	--Ensemble: Redeemed Inquisitor's Vestments
 			}),
-		})),
+		}),
 
 		-- 9.1.5
-		expansion(EXPANSION.SL, patch(1,5), bubbleDownSelf({ ["timeline"] = { CREATED_9_1_5 } }, {
+		expansion(EXPANSION.SL, patch(1,5), {
 			n(ARMOR, {
 				i(187914),	-- Captain Noteo's Unused Eye Patch
 			}),
-		})),
+		}),
 	}),
 	expansion(EXPANSION.DF, {
 		-- 10.0.0
-		expansion(EXPANSION.DF, patch(0,0,1), bubbleDownSelf({ ["timeline"] = { CREATED_10_0_0 } }, {
+		expansion(EXPANSION.DF, patch(0,0,1), {
 			n(ARMOR, {
 				i(193069),	-- Climber's Pack
 				i(199666),	-- Spiked Azure Spaulders
@@ -176,19 +176,19 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 			}),
 			n(WEAPONS, {
 				i(194318),	-- Book of Ancient Lore
-				i(198385, {["sourceID"] = 181695 }),	-- Draconian Garden Pick
+				i(198385, {sourceID = 181695 }),	-- Draconian Garden Pick
 				i(194329),	-- Elaborate Reliquary Candelabra
-				i(198386, {["sourceID"] = 181696 }),	-- Gardener's Tilling Spork
+				i(198386, {sourceID = 181696 }),	-- Gardener's Tilling Spork
 				i(194314),	-- Light of the Enlightened
 				i(194331),	-- Pristine Research Journal
 				i(194316),	-- Tome of Forgotten Legends
-				i(198342, {["sourceID"] = 181576 }),	-- Tuskarr Expedition Pack
-				i(191647, {["sourceID"] = 169691 }),	-- Tuskarr Fishing Pole
+				i(198342, {sourceID = 181576 }),	-- Tuskarr Expedition Pack
+				i(191647, {sourceID = 169691 }),	-- Tuskarr Fishing Pole
 			}),
-		})),
+		}),
 
 		-- 10.0.5
-		expansion(EXPANSION.DF, patch(0,5), bubbleDownSelf({ ["timeline"] = { CREATED_10_0_5 } }, {
+		expansion(EXPANSION.DF, patch(0,5), {
 			n(ARMOR, {
 				i(190672),	-- Deathguard Acolyte's Cloak
 				i(189869),	-- Distinguished Warcloak
@@ -278,18 +278,18 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(190691),	-- Twisted Guardian's Profane Barrier
 				i(189884),	-- Vengeful Nemesis Warblades
 			}),
-		})),
+		}),
 
 		-- 10.1.0
-		expansion(EXPANSION.DF, patch(1,7), bubbleDownSelf({ ["timeline"] = { CREATED_10_1_0 } }, {
+		expansion(EXPANSION.DF, patch(1,7), {
 			n(WEAPONS, {
 				i(190077),	-- Scarlet Zealot's Heater Shield
 				i(189885),	-- The Battlespoon
 			}),
-		})),
+		}),
 
 		-- 10.1.5
-		expansion(EXPANSION.DF, patch(1,5), bubbleDownSelf({ ["timeline"] = { CREATED_10_1_5 } }, {
+		expansion(EXPANSION.DF, patch(1,5), {
 			n(ARMOR, {
 				i(190559),	-- Helm of the Swift
 			}),
@@ -311,20 +311,20 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(190561),	-- Crystalblade of Shifting Magic
 				i(206806),	-- Part Dislocator
 			}),
-		})),
+		}),
 
 		-- 10.2.0
-		expansion(EXPANSION.DF, patch(2,0), bubbleDownSelf({ ["timeline"] = { CREATED_10_2_0 } }, {
+		expansion(EXPANSION.DF, patch(2,0), {
 			n(ARMOR, {
 				i(210851),	-- Trader's Grassy Sarong
 			}),
 			n(WEAPONS, {
 				i(190875),	-- Chilled Touch of the Condemned
 			}),
-		})),
+		}),
 
 		-- 10.2.5
-		expansion(EXPANSION.DF, patch(2,5), bubbleDownSelf({ ["timeline"] = { CREATED_10_2_5 } }, {
+		expansion(EXPANSION.DF, patch(2,5), {
 			n(ARMOR, {
 				i(190807),	-- Artisan's Work Shirt
 				i(190669),	-- Burnished Helm of Righteousness
@@ -344,23 +344,18 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(213162),	-- Blessed Bow of the Windseeker
 				i(190908),	-- Devourer's Skullscythe
 				i(190816),	-- Forgehand's "Stable" Fuel Cell
-				i(213077),	-- Lavender Bow-quet
 				i(190822),	-- Mo'arg Enforcer's Halberd
-				i(213063),	-- Paradise's Ruby Axe
 				i(190900),	-- Prototype Farstrider Sniper Rifle
 				i(190820),	-- Restless Void Handaxe
-				i(213066),	-- Rosy Floral Edge
-				i(213069),	-- Rosy Floral Stalk
-				i(213072),	-- Ruby Floral Staff
 				i(190891),	-- Shabby Battleaxe
 				i(190903),	-- Soulburner Warscythe
 				i(190902),	-- Will of the Titanforged
 				i(190889),	-- Woodsman's Hatchet
 			}),
-		})),
+		}),
 
 		-- 10.2.6
-		expansion(EXPANSION.DF, patch(2,6), bubbleDownSelf({ ["timeline"] = { CREATED_10_2_6 } }, {
+		expansion(EXPANSION.DF, patch(2,6), {
 			n(SETS, {
 				------ Dragonriding Cup ------
 				i(212686),	-- Azure Riders of Azeroth Tabard
@@ -376,10 +371,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 			n(WEAPONS, {
 				i(217635),	-- Dream Raider's Azure Razor
 			}),
-		})),
+		}),
 
 		-- 10.2.7
-		expansion(EXPANSION.DF, patch(2,7), bubbleDownSelf({ ["timeline"] = { CREATED_10_2_7 } }, {
+		expansion(EXPANSION.DF, patch(2,7), {
 			n(ARMOR, {
 				i(223769),	-- Eternal Aspirant's Cape
 			}),
@@ -396,11 +391,11 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(220690),	-- Water Blaster P.R.
 				i(220691),	-- Water Blaster Y.L.
 			}),
-		})),
+		}),
 	}),
 	expansion(EXPANSION.TWW, {
 		-- 11.0.0
-		expansion(EXPANSION.TWW, patch(0,0,1), bubbleDownSelf({ ["timeline"] = { CREATED_11_0_0 } }, {
+		expansion(EXPANSION.TWW, patch(0,0,1), {
 			n(ARMOR, {
 				i(224869),	-- Earthen Drape
 				i(224169),	-- Stonebound Tabard
@@ -484,10 +479,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(217706),	-- Learn Warglaives Test Item (DNT)
 				i(225496),	-- Unhinged Vault-Hatch
 			}),
-		})),
+		}),
 
 		-- 11.0.5
-		expansion(EXPANSION.TWW, patch(0,5), bubbleDownSelf({ ["timeline"] = { CREATED_11_0_5 } }, {
+		expansion(EXPANSION.TWW, patch(0,5), {
 			n(SETS, {
 				------ Prowler's Aquatic Set ------
 				i(230050),	-- Prowler's Aquatic Shoulder Cape
@@ -506,27 +501,13 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(230077),	-- Prowler's Grassy Mask
 				i(230036),	-- Prowler's Grassy Shoulder Cape
 
-				------ Prowler's Lively Set ------
-				i(230172),	-- Ensemble: Prowler's Lively Headgear
-				q(85126),	-- Ensemble: Prowler's Lively Headgear
-				i(230062),	-- Prowler's Lively Cowl
-				i(230082),	-- Prowler's Lively Mask
-				i(230041),	-- Prowler's Lively Shoulder Cape
-
-				------ Prowler's Plum Set ------
-				i(230178),	-- Ensemble: Prowler's Plum Headgear
-				q(85137),	-- Ensemble: Prowler's Plum Headgear
-				i(230068),	-- Prowler's Plum Cowl
-				i(230088),	-- Prowler's Plum Mask
-				i(230047),	-- Prowler's Plum Shoulder Cape
-
 				------ Prowler's Rosy Set ------
 				i(230046),	-- Prowler's Rosy Shoulder Cape
 			}),
-		})),
+		}),
 
 		-- 11.0.7
-		expansion(EXPANSION.TWW, patch(0,07), bubbleDownSelf({ ["timeline"] = { CREATED_11_0_7 } }, {
+		expansion(EXPANSION.TWW, patch(0,07), {
 			n(ARMOR, {
 				i(233976),	-- [PH] Cloak
 				i(233913),	-- [PH] Shield
@@ -608,17 +589,16 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(233253),	-- Purple Clockwork Mace
 				i(233229),	-- Silver Lunar Polearm
 			}),
-		})),
+		}),
 
 		-- 11.1.0
-		expansion(EXPANSION.TWW, patch(1,0), bubbleDownSelf({ ["timeline"] = { CREATED_11_1_0 } }, {
+		expansion(EXPANSION.TWW, patch(1,0), {
 			n(ARMOR, {
 				i(231559),	-- [DNT] Experimental Gobbo-Flyer v3
 				i(238243),	-- Hidden Boots
 				i(235034),	-- Vigilante's Aquatic Mask
 				i(235023),	-- Vigilante's Cloudy Mask
 				i(235022),	-- Vigilante's Grassy Mask
-				i(234601),	-- Wings of the Icy Rose Monarch
 			}),
 			n(PVP, {
 				i(232890),	-- Arsenal: Algari Warmonger's Weapons
@@ -628,26 +608,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(232889),	-- Ensemble: Algari Warmonger's Plate Armor
 			}),
 			n(SETS, {
-				------ Forest Dweller's Garden Set ------
-				i(235592),	-- Ensemble: Forest Dweller's Garden Attire
-				q(86871),	-- Ensemble: Forest Dweller's Garden Attire
-				i(235588),	-- Forest Dweller's Garden Belt
-				i(235567),	-- Forest Dweller's Garden Boots
-				i(235575),	-- Forest Dweller's Garden Cap
-				i(235571),	-- Forest Dweller's Garden Glove
-				i(235584),	-- Forest Dweller's Garden Mantle
-				i(235579),	-- Forest Dweller's Garden Pants
-				i(235563),	-- Forest Dweller's Garden Tunic
-
-				------ Midnight Butterfly Set ------
-				i(235229),	-- Ensemble: Ornaments of the Midnight Butterfly
-				i(235215),	-- Midnight Butterfly Belt
-				i(235153),	-- Midnight Butterfly Helm
-				i(235155),	-- Midnight Butterfly Pauldrons
-
-				------ Topsy Turvy Mask Set ------
-				i(235340),	-- Topsy Turvy Fool's Mask
-
 				-- Old Delve Sets
 				------ Myconic Set ------
 				i(234347),	-- Myconic Chausses
@@ -694,26 +654,17 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 			}),
 			n(WEAPONS, {
 				i(234374),	-- Arathi Holy Standard
-				i(234609),	-- Double-Bladed Forest Garden Trowel
 				i(234370),	-- Flame-Bearing Crozier
-				i(238775, {["sourceID"] = 287817}),	-- Gallagio Raider's Venture Co. Blasthammer
-				i(238775, {["sourceID"] = 287819}),	-- Gallagio Raider's Venture Co. Blasthammer
-				i(238775, {["sourceID"] = 287820}),	-- Gallagio Raider's Venture Co. Blasthammer
+				i(238775, {sourceID = 287817}),	-- Gallagio Raider's Venture Co. Blasthammer
+				i(238775, {sourceID = 287819}),	-- Gallagio Raider's Venture Co. Blasthammer
+				i(238775, {sourceID = 287820}),	-- Gallagio Raider's Venture Co. Blasthammer
 				i(234371),	-- Hand of Piety
 				i(234373),	-- Imperial Flarebolt
 				i(234375),	-- Lamplighter's Mercy
-				i(235654),	-- Midnight Butterfly Longbow
-				i(235271),	-- Midnight Butterfly Mace
-				i(235400),	-- Midnight Butterfly Polearm
-				i(235292),	-- Midnight Butterfly Sword
-				i(235296),	-- Midnight Butterfly Wand
 				i(234369),	-- Pyretic Star
 				i(234378),	-- Radiant Steelglaives
 				i(234367),	-- Sanctifier's Startierce
 				i(234372),	-- Shooting Starquebus
-				i(234572),	-- Topsy Turvy Fool's Blade
-				i(234727),	-- Topsy Turvy Fool's Cleaver
-				i(235640),	-- Topsy Turvy Fool's Die
 				i(234577),	-- Topsy Turvy Joker's Blade
 				i(234726),	-- Topsy Turvy Joker's Cleaver
 				i(235643),	-- Topsy Turvy Joker's Die
@@ -722,10 +673,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(234362),	-- Visage of Hidden Stars
 				i(234368),	-- Worshipper's Poniard
 			}),
-		})),
+		}),
 
 		-- 11.1.5
-		expansion(EXPANSION.TWW, patch(1,5), bubbleDownSelf({ ["timeline"] = { CREATED_11_1_5 } }, {
+		expansion(EXPANSION.TWW, patch(1,5), {
 			n(ARMOR, {
 				i(239003),	-- Feathered Mantle of the Guardian
 				i(238949),	-- Inferno Helm
@@ -768,12 +719,7 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 			n(WEAPONS, {
 				i(238621),	-- Blackwater Pinchzapper
 				i(238620),	-- Darkfuse Pinchzapper
-				i(238957),	-- Deathwarder's Great Grove Blade
 				i(238958),	-- Deathwarder's Great Twilight Blade
-				i(236628),	-- Deathwarder's Grove Blade
-				i(237181),	-- Deathwarder's Grove Fetish
-				i(237177),	-- Deathwarder's Grove Fist
-				i(236403),	-- Deathwarder's Grove Stave
 				i(236629),	-- Deathwarder's Twilight Blade
 				i(237182),	-- Deathwarder's Twilight Fetish
 				i(237178),	-- Deathwarder's Twilight Fist
@@ -789,10 +735,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(238623),	-- Undermine City Pinchzapper
 				i(238955),	-- Yellow Flame Burner
 			}),
-		})),
+		}),
 
 		-- 11.1.7
-		expansion(EXPANSION.TWW, patch(1,7), bubbleDownSelf({ ["timeline"] = { CREATED_11_1_5 } }, {
+		expansion(EXPANSION.TWW, patch(1,7), {
 			n(SETS, {
 				------ Banshee's Chilling Set ------
 				i(244223),	-- Ensemble: Banshee's Chilling Collection
@@ -806,19 +752,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(244184),	-- Chilling Epaulets of the Banshee
 				i(244188),	-- Chilling Leggings of the Banshee
 				i(244210),	-- Chilling Shroud of the Banshee
-
-				------ Banshee's Sickly Set ------
-				i(244227),	-- Ensemble: Banshee's Sickly Collection
-				q(90929),	-- Ensemble: Banshee's Sickly Collection
-				i(244209),	-- Banshee's Sickly Chestplate
-				i(244201),	-- Banshee's Sickly Grip
-				i(244183),	-- Banshee's Sickly Veil
-				i(244205),	-- Banshee's Sickly Vestment
-				i(244218),	-- Sickly Banshee Boots
-				i(244222),	-- Sickly Banshee Cinch
-				i(244187),	-- Sickly Epaulets of the Banshee
-				i(244191),	-- Sickly Leggings of the Banshee
-				i(244213),	-- Sickly Shroud of the Banshee
 
 				------ Deep Sweatsuit Set ------
 				i(242460),	-- Ensemble: Deep Sweatsuit
@@ -873,7 +806,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(242375),	-- Grandmaster's White Bulwark
 				i(242542),	-- Grandmaster's White Mace
 				i(242360),	-- Grandmaster's White Stave
-				i(242524),	-- Sickening Forsaken Cauldron
 				i(242630),	-- Sickly Forsaken Blade
 				i(242634),	-- Sickly Forsaken Great Blade
 				i(242379),	-- Sickly Forsaken Longbow
@@ -882,10 +814,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(242389),	-- Sickly Forsaken Wand
 				i(242355),	-- Sickly Forsaken Warglaives
 			}),
-		})),
+		}),
 
 		-- 11.2.0
-		expansion(EXPANSION.TWW, patch(2,0), bubbleDownSelf({ ["timeline"] = { CREATED_11_2_0 } }, {
+		expansion(EXPANSION.TWW, patch(2,0), {
 			n(ARMOR, {
 				i(245526),	-- Bloodmarked Phasebound Visor
 				i(244806),	-- Renowned Explorer's Versatile Vest
@@ -985,10 +917,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(245958),	-- Wildhammer's Crystal Ward
 				i(246800),	-- Wildhammer's Mighty Crossbow
 			}),
-		})),
+		}),
 
 		-- 11.2.5
-		expansion(EXPANSION.TWW, patch(2,5), bubbleDownSelf({ ["timeline"] = { CREATED_11_2_5 } }, {
+		expansion(EXPANSION.TWW, patch(2,5), {
 			n(ARMOR, {
 				i(251670),	-- Battered Wearable Pot Lid
 				i(249718),	-- Bronze Food Fanatic Backpack
@@ -1096,10 +1028,10 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(248730),	-- Weathered Pot of Stew
 				i(248737),	-- Well-Used Great Steak Knife
 			}),
-		})),
+		}),
 
 		-- 11.2.7
-		expansion(EXPANSION.TWW, patch(2,7), bubbleDownSelf({ ["timeline"] = { CREATED_11_2_7 } }, {
+		expansion(EXPANSION.TWW, patch(2,7), {
 			n(ARMOR, {
 				i(260936),	-- Basic Brown Quiver
 				i(260413),	-- Copper Chainkini
@@ -1234,11 +1166,11 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(250313),	-- Vicious Warrior's Blade
 				i(260378),	-- Wooden Shortbow
 			}),
-		})),
+		}),
 	}),
 	expansion(EXPANSION.MID, {
 		-- 12.0.0
-		expansion(EXPANSION.MID, patch(0,0,1), bubbleDownSelf({ ["timeline"] = { CREATED_12_0_0 } }, {
+		expansion(EXPANSION.MID, patch(0,0,1), {
 			n(ARMOR, {
 				i(266976),	-- [PH] Hara'ti Cloak - Blue
 				i(266971),	-- [PH] Hara'ti Cloak - Yellow
@@ -1325,7 +1257,7 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(260741),	-- Big Lil' Blue Whirlwind
 				i(260744),	-- Big Lil' Green Whirlwind
 				i(260745),	-- Big Lil' Red Whirlwind
-				i(264969, {["sourceID"] = 303634}),	-- Extinction Voulge
+				i(264969, {sourceID = 303634}),	-- Extinction Voulge
 				i(260737),	-- Forest Dweller's Dawn Staff
 				i(260736),	-- Forest Dweller's Mossy Staff
 				i(260739),	-- Forest Dweller's Night Staff
@@ -1352,6 +1284,6 @@ root(ROOTS.NeverImplemented, filter(COSMETIC, {
 				i(260731),	-- Snugglefin's Lil' Fish Stick
 				i(263009),	-- Valeera's Wicked Knife
 			}),
-		})),
+		}),
 	}),
 }));

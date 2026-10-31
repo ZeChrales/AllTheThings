@@ -2,7 +2,7 @@
 --        P R O M O T I O N S   M O D U L E        --
 -----------------------------------------------------
 
-ICOKE_PROMOTION = createHeader({
+local ICOKE_PROMOTION = createHeader({
 	readable = "iCoke",
 	-- #if AFTER 5.4.2
 	icon = 461806,
@@ -28,12 +28,12 @@ ICOKE_PROMOTION = createHeader({
 	},
 });
 
-root(ROOTS.Promotions, n(ICOKE_PROMOTION, bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {
-	["timeline"] = { ADDED_1_12_1 },
-	["groups"] = {
-		i(19055),	-- Tiny Green Dragon (PET!)
+root(ROOTS.Promotions, n(ICOKE_PROMOTION, bubbleDown({ u = REMOVED_FROM_GAME }, {
+	timeline = { ADDED_1_12_1 },
+	groups = {
 		i(22781),	-- Poley (PET!)
-		i(19054),	-- Tiny Red Dragon (PET!)
 		i(22780),	-- Terky (PET!)
+		i(19055),	-- Tiny Green Dragon (PET!)
+		i(19054),	-- Tiny Red Dragon (PET!)
 	},
 })));

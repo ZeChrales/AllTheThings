@@ -2,28 +2,31 @@
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
 
-root(ROOTS.Zones, m(ZANDALAR, bubbleDown({ ["timeline"] = { ADDED_8_0_1 } }, {
-	m(ZULDAZAR, {
+maproot(ZANDALAR, ZULDAZAR, {
+	timeline = { ADDED_8_0_1 },
+	groups = {
 		n(EMISSARY_QUESTS, {
-			q(54451, bubbleDownSelf({ ["timeline"] = { ADDED_8_1_0 }, ["minReputation"] = { FACTION_TORTOLLAN_SEEKERS, EXALTED } }, {	-- Baubles from the Seekers
-				["provider"] = { "n", 134345 },	-- Collector Kojo
-				["coord"] = { 71.51, 30.35, ZULDAZAR },
-				["repeatable"] = true,
-				["lvl"] = 120,
-				["groups"] = {
+			q(54451, {	-- Baubles from the Seekers
+				provider = { "n", 134345 },	-- Collector Kojo
+				coord = { 71.51, 30.35, ZULDAZAR },
+				timeline = { ADDED_8_1_0 },
+				minReputation = { FACTION_TORTOLLAN_SEEKERS, EXALTED },
+				repeatable = true,
+				lvl = 120,
+				groups = {
 					i(166245, {	-- Tortollan Seekers Supplies
 						i(166704),	-- Bowl of Glowing Pufferfish (TOY!)
 						i(166807),	-- Recipe: Boralus Blood Sausage [Rank 3] (RECIPE!)
 						i(166264),	-- Recipe: Sanguinated Feast [Rank 3] (RECIPE!)
 					}),
 				},
-			})),
+			}),
 			q(50604, {	-- Tortollan Seekers
-				["provider"] = { "n", 134345 },	-- Collector Kojo
-				["coord"] = { 71.51, 30.35, ZULDAZAR },
-				["isWorldQuest"] = true,
-				["lvl"] = 120,
-				["sym"] = {{"select","itemID",
+				provider = { "n", 134345 },	-- Collector Kojo
+				coord = { 71.51, 30.35, ZULDAZAR },
+				isWorldQuest = true,
+				lvl = 120,
+				sym = {{"select","itemID",
 					165680,	-- Igneous Winterskorn Loop
 					165679,	-- Ornate Elun'dris Ring
 					165683,	-- Seal of Dath'Remar
@@ -38,10 +41,10 @@ root(ROOTS.Zones, m(ZANDALAR, bubbleDown({ ["timeline"] = { ADDED_8_0_1 } }, {
 				}},
 			}),
 		}),
-	}),
-})));
+	},
+});
 
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.BFA, bubbleDownSelf({ ["timeline"] = { ADDED_8_0_1_LAUNCH } }, {
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.BFA, {
 	m(ZANDALAR, {
 		m(ZULDAZAR, {
 			n(FACTIONS, {
@@ -51,4 +54,4 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.BFA, bubbleDownSelf({ ["time
 			}),
 		}),
 	}),
-})));
+}));

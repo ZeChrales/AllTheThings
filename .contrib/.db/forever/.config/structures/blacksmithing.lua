@@ -4,21 +4,21 @@
 BLACKSMITHING_RECIPES = {
 	APPRENTICE = {
 		r(2018, {	-- Blacksmithing (Apprentice)
-			["lvl"] = 5,
-			["rank"] = 1,
+			lvl = 5,
+			rank = 1,
 		}),
 		n(ARMOR, {
 			r(2663),	-- Copper Bracers
 			r(2661),	-- Copper Chain Belt
 			r(3319),	-- Copper Chain Boots
 			r(2662),	-- Copper Chain Pants
-			r(1252229, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Gemmed Copper Boots
-			r(1252231, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Glowing Copper Boots
+			r(1252229, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Gemmed Copper Boots
+			r(1252231, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Glowing Copper Boots
 			r(12260),	-- Rough Copper Vest
 			r(2666),	-- Runed Copper Belt
 			r(3323),	-- Runed Copper Gauntlets
 			r(3324),	-- Runed Copper Pants
-			r(1252230, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Strange Copper Boots
+			r(1252230, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Strange Copper Boots
 		}),
 		filter(MISC, {
 			r(2665),	-- Coarse Sharpening Stone
@@ -27,7 +27,7 @@ BLACKSMITHING_RECIPES = {
 			r(3115),	-- Rough Weightstone
 		}),
 		filter(REAGENTS, {
-			r(1245287, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Copper Rod
+			r(1245287, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Copper Rod
 			r(3320),	-- Rough Grinding Stone
 		}),
 		n(WEAPONS, {
@@ -43,22 +43,22 @@ BLACKSMITHING_RECIPES = {
 	},
 	JOURNEYMAN = {
 		r(3100, {	-- Blacksmithing (Journeyman)
-			["lvl"] = 10,
-			["rank"] = 2,
+			lvl = 10,
+			rank = 2,
 		}),
 		n(ARMOR, {
-			r(1252250, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Acolyte's Chain Helm
-			r(1252245, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Acolyte's Chain Leggings
-			r(1252240, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Acolyte's Chain Shirt
-			r(1252251, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Crusader's Chain Helm
-			r(1252246, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Crusader's Chain Leggings
-			r(1252241, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Crusader's Chain Shirt
-			r(1252248, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Guard's Chain Helm
-			r(1252243, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Guard's Chain Leggings
+			r(1252250, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Acolyte's Chain Helm
+			r(1252245, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Acolyte's Chain Leggings
+			r(1252240, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Acolyte's Chain Shirt
+			r(1252251, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Crusader's Chain Helm
+			r(1252246, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Crusader's Chain Leggings
+			r(1252241, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Crusader's Chain Shirt
+			r(1252248, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Guard's Chain Helm
+			r(1252243, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Guard's Chain Leggings
 			r(2672),	-- Patterned Bronze Bracers
-			r(1252249, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Protector's Chain Helm
-			r(1252244, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Protector's Chain Leggings
-			r(1252239, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Protector's Chain Shirt
+			r(1252249, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Protector's Chain Helm
+			r(1252244, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Protector's Chain Leggings
+			r(1252239, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Protector's Chain Shirt
 			r(7817),	-- Rough Bronze Boots
 			r(2670),	-- Rough Bronze Cuirass
 			r(2668),	-- Rough Bronze Leggings
@@ -67,9 +67,9 @@ BLACKSMITHING_RECIPES = {
 			r(2675),	-- Shining Silver Breastplate
 			r(3331),	-- Silvered Bronze Boots
 			r(3333),	-- Silvered Bronze Gauntlets
-			r(1252247, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Veteran's Chain Helm
-			r(1252242, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Veteran's Chain Leggings
-			r(1252237, {["timeline"] = {TIMELINE.ADDED_1_60_1}}),	-- Veteran's Chain Shirt
+			r(1252247, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Veteran's Chain Helm
+			r(1252242, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Veteran's Chain Leggings
+			r(1252237, {timeline = {TIMELINE.ADDED_1_60_1}}),	-- Veteran's Chain Shirt
 		}),
 		filter(MISC, {
 			r(2674),	-- Heavy Sharpening Stone
@@ -96,8 +96,8 @@ BLACKSMITHING_RECIPES = {
 	},
 	EXPERT = {
 		r(3538, {	-- Blacksmithing (Expert)
-			["lvl"] = 20,
-			["rank"] = 3,
+			lvl = 20,
+			rank = 3,
 		}),
 		n(ARMOR, {
 			r(7223),	-- Golden Scale Bracers
@@ -112,7 +112,7 @@ BLACKSMITHING_RECIPES = {
 			r(9935),	-- Steel Plate Helm
 		}),
 		filter(MISC, {
-			r(19667),	-- Golden Skeleton 
+			r(19667),	-- Golden Skeleton
 			r(8768),	-- Iron Buckle
 			r(9918),	-- Solid Sharpening Stone
 			r(9921),	-- Solid Weightstone
@@ -130,8 +130,8 @@ BLACKSMITHING_RECIPES = {
 	},
 	ARTISAN = {
 		r(9785, {	-- Blacksmithing (Artisan)
-			["lvl"] = 35,
-			["rank"] = 4,
+			lvl = 35,
+			rank = 4,
 		}),
 		n(ARMOR, {
 			r(9968),	-- Heavy Mithril Boots
@@ -304,58 +304,58 @@ BLACKSMITHING_RECIPES = {
 				cost = {{ "c", MERCHANTS_FAVOR, 120 }},
 			}),
 			i(251417, {	-- Plans: Justicar's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251427, {	-- Plans: Justicar's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251437, {	-- Plans: Justicar's Wristguards (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251471, {	-- Plans: Legionite Glaive (RECIPE!)
 				cost = {{ "c", MERCHANTS_FAVOR, 120 }},
 			}),
 			i(251413, {	-- Plans: Officer's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251423, {	-- Plans: Officer's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251433, {	-- Plans: Officer's Wristguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251416, {	-- Plans: Prefect's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251426, {	-- Plans: Prefect's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251436, {	-- Plans: Prefect's Wristguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251414, {	-- Plans: Sentinel's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251424, {	-- Plans: Sentinel's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251434, {	-- Plans: Sentinel's Wristguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251466, {	-- Plans: Thorium Cestus (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251465, {	-- Plans: Thorium Greatmace (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251415, {	-- Plans: Warder's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251425, {	-- Plans: Warder's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251435, {	-- Plans: Warder's Wristguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 		}, {	-- Revered
 		}, {	-- Exalted
@@ -498,58 +498,58 @@ BLACKSMITHING_RECIPES = {
 				cost = {{ "c", MERCHANTS_FAVOR, 120 }},
 			}),
 			i(251417, {	-- Plans: Justicar's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251427, {	-- Plans: Justicar's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251437, {	-- Plans: Justicar's Wristguards (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251471, {	-- Plans: Legionite Glaive (RECIPE!)
 				cost = {{ "c", MERCHANTS_FAVOR, 120 }},
 			}),
 			i(251413, {	-- Plans: Officer's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251423, {	-- Plans: Officer's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251433, {	-- Plans: Officer's Wristguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251416, {	-- Plans: Prefect's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251426, {	-- Plans: Prefect's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251436, {	-- Plans: Prefect's Wristguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251414, {	-- Plans: Sentinel's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251424, {	-- Plans: Sentinel's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251434, {	-- Plans: Sentinel's Wristguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251466, {	-- Plans: Thorium Cestus (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251465, {	-- Plans: Thorium Greatmace (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251415, {	-- Plans: Warder's Sabatons (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251425, {	-- Plans: Warder's Waistguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 			i(251435, {	-- Plans: Warder's Wristguard (RECIPE!)
-				cost = {{ "c", MERCHANTS_FAVOR, 90}},
+				cost = {{ "c", MERCHANTS_FAVOR, 90 }},
 			}),
 		}, {	-- Revered
 		}, {	-- Exalted

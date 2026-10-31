@@ -20,8 +20,13 @@ end
 -------------------------------------------------------------------- LOADING DOCK --------------------------------------------------------------------
 -- Put items between these two bars if you dont want to sort them /Braghe
 i(6457);	-- Rusted Engineering Parts
-i(23553,{collectible=false})	-- Living Branch
+i(4491,{collectible=false})	-- Goggles of Gem Hunting
+i(6653,{collectible=false})	-- Torch of the Dormant Flame
+i(9978,{collectible=false})	-- Gahz'ridian Detector
 i(16967,{collectible=false})	-- Feralas Ahi
+i(23553,{collectible=false})	-- Living Branch
+i(49201,{collectible=false})	-- Dingy Wizard Hat (assumed since no retro-credit)
+i(167547,{collectible=false})	-- Deep Diving Helmet
 i(29570);	-- A Gnmome Effigy
 i(44435);	-- Windle's Lighter
 i(102144);	-- Kor'kron Cage Key
@@ -321,6 +326,7 @@ i(158855);	-- Grim Skull Fetish
 i(152698);	-- Grimestone Stew
 i(158860);	-- Grindstone Molar
 i(158765);	-- Hardshell Mollusk
+i(158826);	-- Hardy Hoof
 i(162559);	-- Hearty Swamp Gumbo
 i(158806);	-- Hooked Talon
 i(155600);	-- How to Make Money and Influence Subordinates
@@ -380,6 +386,7 @@ i(159919);	-- Salted Tideway Cod
 i(161053);	-- Salty Dog Crackers
 i(162630);	-- Sandy Ornate Relic
 i(163087);	-- Satchel of Blood Oranges
+i(158813);	-- Sausage Casing
 i(158849);	-- Sawtooth Jawbone
 i(163695);	-- Scroll of Inner Truth
 i(163707);	-- Scroll of Torga's Swiftness
@@ -530,6 +537,7 @@ i(170096);	-- Sodden Highborne Painting
 i(169126);	-- Supercharged Graphics Cog
 i(168007);	-- Torn Direbloom Petal
 i(168788);	-- Toy Soldier Weapons
+i(168755);	-- Unpublished Research
 i(169135);	-- Warped Shock Absorber
 i(169998);	-- Weathered Bulwark
 i(168006);	-- Wilted Direbloom Petal
@@ -2936,3 +2944,14 @@ i(278276);	-- Spoils of Azta'rec
 i(279148);	-- Strip of Snake Hide
 i(280184);	-- Sweetsaw Surprise
 i(279145);	-- Vial of Venom
+
+------------------
+-- PATCH 12.1.5 --
+------------------
+i(263517);	-- Ancient Text
+i(284576);	-- Cracked Mask
+i(279143);	-- Elongated Viscera
+i(279142);	-- Intact Spine Segment
+i(263519);	-- Snake Oil
+i(284577);	-- Stinging Nettle
+i(284578);	-- Untainted Wicker

@@ -10,7 +10,7 @@ local mapMetatable = {
 		error("Unknown map key MAP." .. mapKey .. ". You done messed up, A-aron!");
 	end
 };
-MAP = setmetatable({
+local _MAP = setmetatable({
 	-- Roots
 	AZEROTH = 947;
 	COSMIC = 947;
@@ -42,7 +42,6 @@ MAP = setmetatable({
 	DIRE_MAUL_COURT_OF_THE_HIGHBORNE = 237;	-- Court of the Highborne
 	DIRE_MAUL_PRISON_OF_IMMOLTHAR = 238;	-- Prison of Immol'Thar
 	GNOMEREGAN = 226;
-	LBRS = 250,	-- TODO: @Crieve - verify pls
 	MARAUDON = 280;
 	RAGEFIRE_CHASM = 213;
 	RAZORFEN_DOWNS = 300;
@@ -51,7 +50,7 @@ MAP = setmetatable({
 	SCHOLOMANCE = 476;
 	SHADOWFANG_KEEP = 310;
 	STRATHOLME = 317;
-	TEMPLE_OF_ATALHAKKAR = 220;
+	SUNKEN_TEMPLE = 220;
 	THE_STOCKADE = 225;
 	ULDAMAN = 230;
 	ULDAMAN_OUTDOORS = 16;
@@ -121,7 +120,8 @@ MAP = setmetatable({
 	SHENDRALAS = 2652;
 }, mapMetatable);
 
--- Temporary solution forces the map globals to exist.
-for mapConst,mapID in pairs(MAP) do
+-- Temporary solution forces the map globals to exist. Also apply to the MAP constant from shared
+for mapConst, mapID in pairs(_MAP) do
 	_G[mapConst] = mapID;
+	MAP[mapConst] = mapID;
 end

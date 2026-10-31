@@ -30,7 +30,7 @@ local CollectionCacheFunctions = {
 			achID = tonumber(id) or id
 			if achID > maxid then maxid = achID; end
 		end
-		 -- go beyond ATT max known just in case we haven't sourced the highest achievementID
+		-- go beyond ATT max known just in case we haven't sourced the highest achievementID
 		return maxid + 100
 	end,
 	RealAchievementIDs = function()
@@ -419,7 +419,7 @@ do
 
 	-- Criteria field values which will use the value of the respective Achievement instead
 	local UseParentAchievementValueKeys = {
-		"c", "classID", "races", "r", "u", "e", "sr", "pb", "pvp", "requireSkill"
+		"c", "classID", "races", "r", "u", "phase", "e", "sr", "pb", "pvp", "requireSkill"
 	}
 	local function GetParentAchievementInfo(t, key, _t)
 		-- if the Achievement data was already cached, but the criteria is still getting here
@@ -483,7 +483,9 @@ do
 				name = select(2, GetAchievementInfo(achievementID)) or "#"..criteriaID
 			end
 		end
-		app.PrintDebug("failed to retrieve criteria name",achievementID,t.criteriaID,name)
+		if app.Debugging then
+			app.report("Failed to retrieve criteria name",achievementID,t.criteriaID,name)
+		end
 		if not t.CanRetry then
 			return name or UNKNOWN
 		end

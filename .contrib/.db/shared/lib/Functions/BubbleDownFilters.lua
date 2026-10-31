@@ -7,6 +7,9 @@ function FILTERFUNC_itemID(t) return t.itemID and true; end
 -- Only match groups with questID
 function FILTERFUNC_questID(t) return t.questID and true; end
 
+-- Only match groups with recipeID
+function FILTERFUNC_recipeID(t) return t.recipeID and true; end
+
 -- Only match groups with criteriaID
 function FILTERFUNC_criteriaID(t) return t.criteriaID and true; end
 
@@ -18,3 +21,6 @@ function FILTERFUNC_questIDORencounterID(t) return t.questID or t.encounterID an
 
 -- Only match groups without an explicit timeline
 function FILTERFUNC_NoTimeline(t) return not t.timeline and true; end
+
+-- Only match groups without a headerID/f
+function FILTERFUNC_NoheaderID(t) return not t.headerID and not t.f and true; end

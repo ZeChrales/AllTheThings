@@ -127,7 +127,7 @@ local function SearchForFieldRecursively(group, field, value)
 						first[#first + 1] = data;
 					end
 				else
-					-- Cool! (This should be the most common occurance)
+					-- Cool! (This should be the most common occurrence)
 					first = g;
 				end
 			end
@@ -613,35 +613,36 @@ fieldConverters.instanceID = function(group, value)
 		end
 	end
 end
-fieldConverters["zone-artIDs"] = function(group, value)
-	runners[#runners + 1] = function()
-		zoneArtIDRunner(group, value);
-	end
-end
-fieldConverters["zone-text-areaID"] = function(group, value)
-	runners[#runners + 1] = function()
-		zoneTextAreasRunner(group, { value });
-	end
-end
-fieldConverters["zone-text-areas"] = function(group, value)
-	runners[#runners + 1] = function()
-		zoneTextAreasRunner(group, value);
-	end
-end
-fieldConverters["zone-text-continent"] = function(group, value)
+fieldConverters.isContinent = function(group, value)
 	runners[#runners + 1] = function()
 		local mapID = group.mapID;
 		if mapID then
 			MapRemapping[mapID].isContinent = true;
 		end
+		local maps = group.maps;
+		if maps then
+			for i=1,#maps,1 do
+				MapRemapping[maps[i]].isContinent = true;
+			end
+		end
 	end
 end
-fieldConverters["zone-text-headerID"] = function(group, value)
+fieldConverters.zoneTextArtIDs = function(group, value)
 	runners[#runners + 1] = function()
-		zoneTextHeaderIDRunner(group, value);
+		zoneArtIDRunner(group, value);
 	end
 end
-fieldConverters["zone-text-names"] = function(group, value)
+fieldConverters.zoneTextAreaID = function(group, value)
+	runners[#runners + 1] = function()
+		zoneTextAreasRunner(group, { value });
+	end
+end
+fieldConverters.zoneTextAreaIDs = function(group, value)
+	runners[#runners + 1] = function()
+		zoneTextAreasRunner(group, value);
+	end
+end
+fieldConverters.zoneTextNames = function(group, value)
 	runners[#runners + 1] = function()
 		zoneTextNamesRunner(group, value);
 	end

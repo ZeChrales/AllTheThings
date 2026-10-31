@@ -1,23 +1,41 @@
---------------------------------------------------------------
+-----------------------------------------------------
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 
-root(ROOTS.Instances, expansion(EXPANSION.CATA, bubbleDown({ ["timeline"] = ADDED_4_3_0 }, {
+------ Encounter Constants ------
+local PEROTHARN = 290;
+local AZSHARA = 291;
+local MANNOROTH = 292;
+
+------ EncounterToCRS ------
+local EncounterToCRS = {
+	[PEROTHARN] = { 55085 },	-- Peroth'arn
+	[AZSHARA] = { 54853 },	-- Queen Azshara
+	[MANNOROTH] = { 54969 },	-- Mannoroth
+};
+
+------ Boss Functions ------
+local InstanceHelper = CreateInstanceHelper(EncounterToCRS)
+local BossOnly, Difficulty =
+InstanceHelper.BossOnly, InstanceHelper.Difficulty
+
+root(ROOTS.Instances, expansion(EXPANSION.CATA, {
 	applyclassicphase(CATA_PHASE_HOUR_OF_TWILIGHT, inst(185, {	-- Well of Eternity
-		["mapID"] = 398,
-		["coords"] = {
+		mapID = 398,
+		coords = {
 			{ 22.9, 64.4, CAVERNS_OF_TIME },	-- dungeon entrance
 			{ 64.7, 49.9, TANARIS },	-- entrance to CoT
 		},
-		["groups"] = {
+		timeline = { ADDED_4_3_0 },
+		groups = {
 			n(QUESTS, {
 				q(30104, {	-- Documenting the Timeways
-					["sourceQuests"] = {
+					sourceQuests = {
 						30097,	-- Archival Purposes
 						30096,	-- Murozond
 					},
-					["qg"] = 57864,	-- Alurmi
-					["groups"] = {
+					qg = 57864,	-- Alurmi
+					groups = {
 						i(72880),	-- Alurmi's Ring
 						i(72881),	-- Treads of the Past
 						i(72882),	-- Chronicler's Chestguard
@@ -25,18 +43,18 @@ root(ROOTS.Instances, expansion(EXPANSION.CATA, bubbleDown({ ["timeline"] = ADDE
 					},
 				}),
 				q(30099, {	-- In Unending Numbers
-					["sourceQuest"] = 30098,	-- The Well of Eternity
-					["qg"] = 55624,	-- Nozdormu
+					sourceQuest = 30098,	-- The Well of Eternity
+					qg = 55624,	-- Nozdormu
 				}),
 				q(30102, {	-- The Hour of Twilight
-					["sourceQuest"] = 30101,	-- The Path of the Dragon Soul
-					["qg"] = 57913,	-- Chromie
-					["isBreadcrumb"] = true,
+					sourceQuest = 30101,	-- The Path of the Dragon Soul
+					qg = 57913,	-- Chromie
+					isBreadcrumb = true,
 				}),
 				q(30101, {	-- The Path of the Dragon Soul
-					["sourceQuest"] = 30100,	-- The Vainglorious
-					["qg"] = 55624,	-- Nozdormu
-					["groups"] = {
+					sourceQuest = 30100,	-- The Vainglorious
+					qg = 55624,	-- Nozdormu
+					groups = {
 						i(72876),	-- Ironfeather Longbow
 						i(72877),	-- Chain of the Demon Hunter
 						i(72878),	-- Demonic Skull
@@ -44,13 +62,13 @@ root(ROOTS.Instances, expansion(EXPANSION.CATA, bubbleDown({ ["timeline"] = ADDE
 					},
 				}),
 				q(30100, {	-- The Vainglorious
-					["sourceQuest"] = 30099,	-- In Unending Numbers
-					["qg"] = 55624,	-- Nozdormu
+					sourceQuest = 30099,	-- In Unending Numbers
+					qg = 55624,	-- Nozdormu
 				}),
 			}),
 			n(ZONE_DROPS, {
 				i(76158, {	-- Courtier's Slippers
-					["crs"] = {
+					crs = {
 						55654,	-- Corrupted Arcanist
 						55656,	-- Dreadlord Defender
 						56579,	-- Enchanted Highmistress
@@ -64,7 +82,7 @@ root(ROOTS.Instances, expansion(EXPANSION.CATA, bubbleDown({ ["timeline"] = ADDE
 					},
 				}),
 				i(76157, {	-- Waterworn Handguards
-					["crs"] = {
+					crs = {
 						55654,	-- Corrupted Arcanist
 						55656,	-- Dreadlord Defender
 						56579,	-- Enchanted Highmistress
@@ -78,7 +96,7 @@ root(ROOTS.Instances, expansion(EXPANSION.CATA, bubbleDown({ ["timeline"] = ADDE
 					},
 				}),
 				i(76159, {	-- Legion Bindings
-					["crs"] = {
+					crs = {
 						55654,	-- Corrupted Arcanist
 						55656,	-- Dreadlord Defender
 						56579,	-- Enchanted Highmistress
@@ -92,64 +110,55 @@ root(ROOTS.Instances, expansion(EXPANSION.CATA, bubbleDown({ ["timeline"] = ADDE
 					},
 				}),
 			}),
-			d(DIFFICULTY.DUNGEON.HEROIC, sharedData({ ["modID"] = 0, }, {
-				e(290, {	-- Peroth'arn
-					["crs"] = { 55085 },	-- Peroth'arn
-					["groups"] = {
-						ach(6127),	-- Lazy Eye
-						i(72827),	-- Gavel of Peroth'arn
-						i(72832),	-- Girdle of the Queen's Champion
-						i(72831),	-- Horned Band
-						i(72829),	-- Orb of the First Satyrs
-						i(72830),	-- Peroth'arn's Belt
-						i(72828),	-- Trickster's Edge
-					},
+			Difficulty(DIFFICULTY.DUNGEON.HEROIC).AddGroups(sharedData({ modID = 0, }, {
+				BossOnly(PEROTHARN, {
+					ach(6127),	-- Lazy Eye
+					i(72827),	-- Gavel of Peroth'arn
+					i(72832),	-- Girdle of the Queen's Champion
+					i(72831),	-- Horned Band
+					i(72829),	-- Orb of the First Satyrs
+					i(72830),	-- Peroth'arn's Belt
+					i(72828),	-- Trickster's Edge
 				}),
-				e(291, {	-- Queen Azshara
-					["crs"] = { 54853 },	-- Queen Azshara
-					["groups"] = {
-						i(72834),	-- Breastplate of the Queen's Guard
-						i(72838),	-- Cloak of the Royal Protector
-						i(72835),	-- Puppeteer's Pantaloons
-						i(72837),	-- Queen's Boon
-						i(72833),	-- Scepter of Azshara
-						i(72836),	-- Slippers of Wizardry
-					},
+				BossOnly(AZSHARA, {
+					i(72834),	-- Breastplate of the Queen's Guard
+					i(72838),	-- Cloak of the Royal Protector
+					i(72835),	-- Puppeteer's Pantaloons
+					i(72837),	-- Queen's Boon
+					i(72833),	-- Scepter of Azshara
+					i(72836),	-- Slippers of Wizardry
 				}),
-				e(292, {	-- Mannoroth
-					["crs"] = { 54969 },	-- Mannoroth
-					["groups"] = {
-						ach(6070),	-- That's Not Canon!
-						ach(6118),	-- Heroic: Well of Eternity
-						ach(6121),	-- Heroic: Well of Eternity Guild Run
-						i(72842),	-- Annihilan Helm
-						i(72839),	-- Cowl of Highborne Sorcerers
-						i(72841),	-- Demonsbane Chestguard
-						i(72898),	-- Foul Gift of the Demon Lord
-						i(72843),	-- Helm of Power
-						i(72847),	-- Helm of Thorns
-						i(72848),	-- Leggings of the Legion
-						i(72845),	-- Mannoroth's Signet
-						i(72844),	-- Pit Lord's Destroyer
-						i(72840),	-- Spaulders of Eternity
-						i(72846),	-- Thornwood Staff
-						i(72899),	-- Varo'then's Brooch
-					},
+				BossOnly(MANNOROTH, {
+					ach(6070),	-- That's Not Canon!
+					ach(6118),	-- Heroic: Well of Eternity
+					ach(6121),	-- Heroic: Well of Eternity Guild Run
+					i(72842),	-- Annihilan Helm
+					i(72839),	-- Cowl of Highborne Sorcerers
+					i(72841),	-- Demonsbane Chestguard
+					i(72898),	-- Foul Gift of the Demon Lord
+					i(72843),	-- Helm of Power
+					i(72847),	-- Helm of Thorns
+					i(72848),	-- Leggings of the Legion
+					i(72845),	-- Mannoroth's Signet
+					i(72844),	-- Pit Lord's Destroyer
+					i(72840),	-- Spaulders of Eternity
+					i(72846),	-- Thornwood Staff
+					i(72899),	-- Varo'then's Brooch
 				}),
 			})),
 			n(55500, {	-- Illidan Stormrage
-				["sharedDescription"] = "|CFFFF0000Listen to Illidan, these mobs do have lethal abilities!|r",
-				["groups"] = {
+				sharedDescription = "|CFFFF0000Listen to Illidan, these mobs do have lethal abilities!|r",
+				groups = {
 					n(54927),	-- Guardian Demon
 					n(54500),	-- Legion Demon
 				},
 			}),
 		},
 	})),
-})));
+}));
 
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, bubbleDownSelf({ ["timeline"] = { ADDED_6_0_2 } }, {
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.WOD, {
 	inst(185, {
 		q(35435),	-- Well of Eternity Reward Quest - Heroic completion
 	}),
-})));
+}));

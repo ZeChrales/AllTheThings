@@ -38,7 +38,7 @@ local SetGroupVisibility, SetThingVisibility, BaseSetGroupVisibility, BaseSetThi
 local function SetDefaultVisibility(parent, group)
 	group.visible = true
 end
--- Visibilty Checks
+-- Visibility Checks
 -- nil - the check doesn't result in a visible outcome
 -- true - the check resulted in a visible outcome
 -- 2 - the check resulted in a visible outcome and should force the parent to also persist visibility
@@ -212,7 +212,7 @@ local function UpdateGroup(group, parent)
 	local isCost = group.isCost
 	local valid = isCost or group.forceShow or group.wasFilled
 	-- if valid and debug then app.PrintDebug("Pre-valid group as from cost/forceShow/wasFilled/upgrade",group.isCost,group.forceShow,group.wasFilled,group.isUpgrade,app:SearchLink(group)) end
-	-- A group with a source parent means it has a different 'real' heirarchy than in the current window
+	-- A group with a source parent means it has a different 'real' hierarchy than in the current window
 	-- so need to verify filtering based on that instead of only itself
 	if not valid then
 		if group.sourceParent then
@@ -294,11 +294,12 @@ local function UpdateGroup(group, parent)
 end
 UpdateGroups = function(parent, g)
 	if g then
-		local group
+		local group, onUpdate
 		for i=1,#g do
 			group = g[i]
-			if group.OnUpdate then
-				if not group:OnUpdate(parent, UpdateGroup) then
+			onUpdate = group.OnUpdate
+			if onUpdate then
+				if not onUpdate(group, parent, UpdateGroup) then
 					UpdateGroup(group, parent)
 				elseif group.visible then
 					UpdateGroups(group, group.g)
@@ -727,6 +728,14 @@ local function UpdateRawIDs(field, ids, updateFunc)
 	end
 end
 app.UpdateRawIDs = UpdateRawIDs
+-- Pulls all cached fields for the field/ids and passes the results into UpdateSearchResults
+local function UpdateRawGroups(groups, updateFunc)
+	-- app.PrintDebug("UpdateRawGroups",groups and #groups)
+	if groups and #groups > 0 then
+		UpdateSearchResults(groups, updateFunc)
+	end
+end
+app.UpdateRawGroups = UpdateRawGroups
 
 
 ---- Group Handling Functionality (creation/merging/nesting) ----
@@ -762,6 +771,7 @@ local MergeSkipFields = {
 	-- 1 -> only when cloning
 	e = 1,
 	u = 1,
+	phase = 1,
 	c = 1,
 	up = 1,
 	pb = 1,
@@ -779,7 +789,7 @@ local MergeSkipFields = {
 -- Fields on a Thing which are specific to where the Thing is Sourced or displayed in a ATT window
 local SourceSpecificFields = {
 -- Returns the 'most obtainable' event value from the provided set of event values
-	["e"] = function(...)
+	e = function(...)
 		-- print("GetMostObtainableValue:")
 		-- app.PrintTable(vals)
 		local e
@@ -792,7 +802,7 @@ local SourceSpecificFields = {
 		return e
 	end,
 -- Returns the 'most obtainable' unobtainable value from the provided set of unobtainable values
-	["u"] = function(...)
+	u = function(...)
 		-- app.PrintDebug("GetMostObtainableValue:",...)
 		local max, check, new = -1, nil, nil
 		local phases = L.PHASES
@@ -821,8 +831,26 @@ local SourceSpecificFields = {
 		-- app.PrintDebug("new:",new)
 		return new
 	end,
+-- Returns the 'most obtainable' phase value from the provided set of phase values (the earliest released phase)
+	phase = function(...)
+		local phases = L.PHASES
+		local new, newBuild, phase, build
+		local vals = select("#", ...)
+		for i=1,vals do
+			phase = select(i, ...)
+			-- missing phase value means available in all phases
+			if not phase then return end
+			build = phases[phase]
+			build = build and (build.buildVersion or build.minimumBuildVersion) or 0
+			if not new or build < newBuild or (build == newBuild and phase < new) then
+				new = phase
+				newBuild = build
+			end
+		end
+		return new
+	end,
 -- Returns the 'earliest' Added with Patch value from the provided set of `awp` values
-	["awp"] = function(...)
+	awp = function(...)
 		local min, awp
 		local vals = select("#", ...)
 		for i=1,vals do
@@ -836,7 +864,7 @@ local SourceSpecificFields = {
 		return min
 	end,
 -- Returns the 'highest' Removed with Patch value from the provided set of `rwp` values
-	["rwp"] = function(...)
+	rwp = function(...)
 		local max, rwp = -1,nil
 		local vals = select("#", ...)
 		for i=1,vals do
@@ -851,12 +879,12 @@ local SourceSpecificFields = {
 		return max
 	end,
 -- Simple boolean
-	["pvp"] = true,
-	["pb"] = true,
-	["requireSkill"] = true,
+	pvp = true,
+	pb = true,
+	requireSkill = true,
 	-- could be more complex, but for now just prevent showing when not true for all sources
-	["minReputation"] = true,
-	["maxReputation"] = true,
+	minReputation = true,
+	maxReputation = true,
 }
 -- Group Merge Handling
 local function Assign_Direct(g, k, v)
@@ -931,10 +959,10 @@ local function MergeProperties(g, t, noReplace, clone)
 		local gk, tk
 		for k,f in pairs(SourceSpecificFields) do
 			-- existing is set
-			gk = rawget(g, k)
+			gk = g[k]
 			-- app.PrintDebug("SSF",k,g,t,gk,rawget(t, k))
 			if gk then
-				tk = rawget(t, k)
+				tk = t[k]
 				-- no value on merger
 				if tk == nil then
 					-- app.PrintDebug(g.hash,"remove",k,gk,tk)
@@ -977,7 +1005,7 @@ local function CreateObject(t, rootOnly)
 		-- 	app.PrintTable(t)
 		-- end
 		-- app.PrintDebug("Merge done",result.key,result[result.key], t, result);
-	-- is it an array of raw datas which needs to be turned into an array of usable objects
+	-- is it an array of raw data which needs to be turned into an array of usable objects
 	elseif t[1] then
 		local result = {};
 		-- array
@@ -1014,7 +1042,7 @@ app.__CreateObject = CreateObject;
 local function EnsureObject(t)
 	-- app.PrintDebug("EO",t)
 	if not t then return end
-	-- is it an array of raw datas which needs to be turned into an array of usable objects
+	-- is it an array of raw data which needs to be turned into an array of usable objects
 	if t[1] then
 		-- array
 		-- app.PrintDebug("EO.[]","=>",t)

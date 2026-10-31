@@ -23,7 +23,7 @@ assignRootCategoryHeader(35, ROOTS.ExpansionFeatures, EXPANSION_FEATURES);
 assignRootCategoryHeader(40, ROOTS.Character, CHARACTER);
 assignRootCategoryHeader(45, ROOTS.Housing, HOUSING);
 assignRootCategoryHeader(50, ROOTS.GroupFinder, DUNGEON_FINDER);
-assignRootCategoryHeader(55, ROOTS.PVP, PVP);
+pvp(assignRootCategoryHeader(55, ROOTS.PVP, PVP));
 assignRootCategoryHeader(65, ROOTS.Secrets, SECRETS);
 assignRootCategoryHeader(75, ROOTS.WorldEvents, WORLD_EVENTS);
 

@@ -9,16 +9,17 @@ h(-61,{
 hqt(78650)}),
 inst(760,{isRaid=1,savedInstanceID=249,g={
 hqt(76175)}}),
+hqt(934,{description="This quest gets marked as completed when you complete the quest ' Crown of the Earth (5/6)' (7383).",r=2,rwp=10700,u=2}),
 m(1414,{maps={1464},g={
 m(1413,{
 hqt(55296)})}}),
-m(1415,{awp=11101,maps={1463},g={
-m(1434,{
+m(1415,{maps={1463},g={
+m(1434,{awp=11101,g={
 hqt(7908,{awp=11201}),
 hqt(618),
 hqt(614),
 hqt(615,{awp=11201}),
-hqt(620,{awp=11201})})}}),
+hqt(620,{awp=11201})}})}}),
 hqt(6842),
 hqt(9611),
 hqt(236)}}),

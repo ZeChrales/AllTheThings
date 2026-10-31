@@ -1,4 +1,3 @@
-
 -- App locals
 local _, app = ...;
 local L = app.L;
@@ -51,6 +50,7 @@ do
 
 	app.CreateFirstCraft = app.CreateClass(CLASSNAME, KEY, {
 		CACHE = function() return CACHE end,
+		CACHEDKEY = function() return KEY end,
 		name = function(t)
 			local info = FirstCraftInfoMeta[t[KEY]]
 			return L.FIRST_CRAFTS .. ": " .. info.name

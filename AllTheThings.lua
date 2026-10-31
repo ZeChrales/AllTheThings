@@ -140,7 +140,15 @@ local function GenerateSourcePath(group, l)
 		if l < 1 then
 			return GenerateSourcePath(parent, l + 1);
 		else
-			return GenerateSourcePath(parent, l + 1) .. " > " .. (group.sourceText or group.text or RETRIEVING_DATA);
+			local prefix = GenerateSourcePath(parent, l + 1)
+			local text = group.sourceText or group.text or RETRIEVING_DATA
+			-- secret segments make the whole path secret, which can't be abbreviated later,
+			-- so abbreviate the plain prefix before appending one
+			local issecretvalue = app.WOWAPI.issecretvalue
+			if issecretvalue(text) and not issecretvalue(prefix) then
+				prefix = app.AbbreviateString(prefix)
+			end
+			return prefix .. " > " .. text;
 		end
 	end
 	return group.text or RETRIEVING_DATA;
@@ -152,7 +160,7 @@ local function AddContainsData(group, tooltipInfo)
 	if not thingCheck or (app.ActiveRowReference and thingCheck ~= true) then return end
 
 	local working = group.working
-	-- Sort by the heirarchy of the group if not the raw group of an ATT list
+	-- Sort by the hierarchy of the group if not the raw group of an ATT list
 	if not working and not app.ActiveRowReference then
 		app.Sort(group.g, app.SortDefaults.Hierarchy, true);
 	end
@@ -292,7 +300,7 @@ local function AddContainsData(group, tooltipInfo)
 				end
 			end
 
-			-- If this entry is an Achievement Criteria (whose raw parent is not the Achievement) then show the Achievement
+			-- If this entry is an Achievement Criterion (whose raw parent is not the Achievement) then show the Achievement
 			if entry.criteriaID and entry.achievementID then
 				local rawParent = rawget(entry, "parent");
 				if not rawParent or rawParent.achievementID ~= entry.achievementID then
@@ -382,8 +390,10 @@ local function AddSourceLinesForTooltip(tooltipInfo, paramA, paramB)
 	local showUnsorted = settings:GetTooltipSetting("SourceLocations:Unsorted");
 	local showCompleted = settings:GetTooltipSetting("SourceLocations:Completed");
 	local issecretvalue = app.WOWAPI.issecretvalue
+	local filters = app.Modules.Filter.Filters
+	---@type function,function,function,function
 	local FilterSettings, FilterInGame, FilterCharacter, FirstParent
-		= app.RecursiveGroupRequirementsFilter, app.Modules.Filter.Filters.InGame, app.RecursiveCharacterRequirementsFilter, app.GetRelativeGroup
+		= filters.RecursiveGroupRequirementsFilter, filters.InGame, filters.RecursiveCharacterRequirementsFilter, app.GetRelativeGroup
 	local sourcesToShow
 	-- paramB is the modItemID for itemID searches, so we may have to fallback to the base itemID if nothing sourced for the modItemID
 	-- TODO: Rings from raid showing all difficulties, need fallback matching for items... modItemID, modID, itemID
@@ -412,7 +422,7 @@ local function AddSourceLinesForTooltip(tooltipInfo, paramA, paramB)
 						sourcesToShow[#sourcesToShow + 1] = text..NotCurrentCharacterTexture
 					else
 						-- check if this needs a status icon even though it's being shown
-						right = GetUnobtainableTexture(FirstParent(parent, "e", true) or FirstParent(parent, "u", true) or parent)
+						right = GetUnobtainableTexture(FirstParent(parent, "e", true) or FirstParent(parent, "u", true) or FirstParent(parent, "phase", true) or parent)
 							or (parent.rwp and app.asset("status-prerequisites"))
 						if right then
 							sourcesToShow[#sourcesToShow + 1] = text.." |T" .. right .. ":0|t"
@@ -527,8 +537,10 @@ local function GetSearchResults(method, paramA, paramB, options)
 	if paramB then paramB = tonumber(paramB);
 	else rawlink = paramA; end
 
-	local RecursiveCharacterRequirementsFilter, RecursiveGroupRequirementsFilter
-		= app.RecursiveCharacterRequirementsFilter, app.RecursiveGroupRequirementsFilter
+	local filters = app.Modules.Filter.Filters
+	---@type function,function,function
+	local RecursiveCharacterRequirementsFilter, RecursiveGroupRequirementsFilter, RecursiveUnobtainableFilter
+		= filters.RecursiveCharacterRequirementsFilter, filters.RecursiveGroupRequirementsFilter, filters.RecursiveUnobtainableFilter
 
 	-- Call to the method to search the database.
 	local group, a, b
@@ -560,7 +572,7 @@ local function GetSearchResults(method, paramA, paramB, options)
 				local rank = options and options.Rank
 				if app.MODE_ACCOUNT then
 					for i,j in ipairs(group) do
-						if j.rank == rank and app.RecursiveUnobtainableFilter(j) then
+						if j.rank == rank and RecursiveUnobtainableFilter(j) then
 							if j.mapID or j.parent == nil or j.parent.parent == nil then
 								tinsert(regroup, setmetatable({["g"] = {}}, { __index = j }));
 							else
@@ -570,7 +582,7 @@ local function GetSearchResults(method, paramA, paramB, options)
 					end
 				else
 					for i,j in ipairs(group) do
-						if j.rank == rank and RecursiveCharacterRequirementsFilter(j) and app.RecursiveUnobtainableFilter(j) and RecursiveGroupRequirementsFilter(j) then
+						if j.rank == rank and RecursiveCharacterRequirementsFilter(j) and RecursiveUnobtainableFilter(j) and RecursiveGroupRequirementsFilter(j) then
 							if j.mapID or j.parent == nil or j.parent.parent == nil then
 								tinsert(regroup, setmetatable({["g"] = {}}, { __index = j }));
 							else
@@ -586,13 +598,13 @@ local function GetSearchResults(method, paramA, paramB, options)
 				local regroup = {};
 				if app.MODE_ACCOUNT then
 					for i,j in ipairs(group) do
-						if app.RecursiveUnobtainableFilter(j) then
+						if RecursiveUnobtainableFilter(j) then
 							tinsert(regroup, setmetatable({["g"] = {}}, { __index = j }));
 						end
 					end
 				else
 					for i,j in ipairs(group) do
-						if RecursiveCharacterRequirementsFilter(j) and app.RecursiveUnobtainableFilter(j) and RecursiveGroupRequirementsFilter(j) then
+						if RecursiveCharacterRequirementsFilter(j) and RecursiveUnobtainableFilter(j) and RecursiveGroupRequirementsFilter(j) then
 							tinsert(regroup, setmetatable({["g"] = {}}, { __index = j }));
 						end
 					end
@@ -1037,13 +1049,14 @@ local function BuildSourceParent(group)
 			if isDirectSources then
 				parents[#parents + 1] = CreateObject(thing)
 			elseif isAchievement or GroupMatchesParams(thing, groupKey, keyValue) then
+				--- Ancestor object inspected when building a list of sources for a collectible.
 				---@class ATTTempParentObject
-				---@field key string
-				---@field hash string
-				---@field npcID number
-				---@field creatureID number
-				---@field _keepSource boolean
-				---@field parent ATTTempParentObject
+				---@field key string # Name of the field that identifies the source parent object.
+				---@field hash string # Object hash used to exclude the original group from its source list.
+				---@field npcID number # NPC ID associated with this source parent.
+				---@field creatureID number # Creature ID identifying this source parent.
+				---@field _keepSource boolean # Source-retention flag declared for temporary parent objects.
+				---@field parent ATTTempParentObject # Next ancestor to inspect when searching for a source parent.
 				parent = thing.parent;
 				while parent do
 					-- app.PrintDebug("parent",parent.text,parent.key)
@@ -1158,7 +1171,7 @@ local function BuildSourceParent(group)
 						end
 					end
 				end
-				-- Things which are a Item output of one or more Crafting Recipes should show those Recipes as a Source
+				-- Things which are an Item output of one or more Crafting Recipes should show those Recipes as a Source
 				if thing.itemID then
 					local recipes = GetCraftingOutputRecipes(thing)
 					if recipes then
@@ -1213,7 +1226,7 @@ local function BuildSourceParent(group)
 			-- otherwise the visibility can be driven by the nested thing
 			parent.OnSetVisibility = not parent.g and app.AlwaysShowUpdate or nil	-- TODO: filter actual unobtainable sources...
 		end
-		PriorityNestObjects(sourceGroup, parents, nil, app.RecursiveCharacterRequirementsFilter, app.RecursiveGroupRequirementsFilter);
+		PriorityNestObjects(sourceGroup, parents, nil, app.Modules.Filter.Filters.RecursiveCharacterRequirementsFilter, app.Modules.Filter.Filters.RecursiveGroupRequirementsFilter);
 		NestObject(group, sourceGroup, nil, 1);
 	end
 end
@@ -1285,7 +1298,7 @@ function app:GetDatabaseRoot()
 		text = L.TITLE,
 		icon = app.asset("logo_32x32"),
 		preview = app.asset("Discord_2_128"),
-		awp = app.IsForever and 16000 or 10000,
+		awp = app.IsForever and 16000 or nil,
 		description = L.DESCRIPTION,
 		font = "GameFontNormalLarge",
 		SortType = "Global",
@@ -1349,8 +1362,8 @@ app:RegisterFuncEvent("PLAYER_LOGIN", function(addonName)
 		characterData[app.GUID] = currentCharacter;
 	end
 	currentCharacter.build = app.GameBuildVersion;
-	local name, realm = UnitName("player");
-	if not realm then realm = GetRealmName(); end
+	local name = GetUnitName("player");
+	local realm = GetRealmName();
 	if name then currentCharacter.name = name; end
 	if realm then currentCharacter.realm = realm; end
 	if app.Me then currentCharacter.text = app.Me; end
@@ -1469,7 +1482,7 @@ app:RegisterFuncEvent("PLAYER_LOGIN", function(addonName)
 	app.Settings:Initialize();
 
 	-- Event handlers which need Saved Variable data which is added by OnSavedVariablesAvailable handlers into saved variables
-	app.HandleEvent("OnAfterSavedVariablesAvailable", currentCharacter, accountWideData);
+	app.HandleEvent("OnAfterSavedVariablesAvailable", currentCharacter, accountWideData, characterData);
 
 	-- Determine the load style for ATT data
 	if AllTheThingsSavedVariables.LoadStyle == 1 then

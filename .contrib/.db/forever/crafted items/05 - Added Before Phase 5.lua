@@ -31,9 +31,8 @@ root(ROOTS.Craftables, {
 			i(20750),	-- Wizard Oil
 		}),
 	}),
-	--]]
 	prof(LEATHERWORKING, {
-		prof(10656, {	-- Dragonscale Leatherworking
+		prof(DRAGONSCALE_LEATHERWORKING, {
 			i(20380),	-- Dreamscale Breastplate
 		}),
 		n(ARMOR, {
@@ -55,4 +54,5 @@ root(ROOTS.Craftables, {
 			i(22252),	-- Satchel of Cenarius
 		}),
 	}),
+	--]]
 });

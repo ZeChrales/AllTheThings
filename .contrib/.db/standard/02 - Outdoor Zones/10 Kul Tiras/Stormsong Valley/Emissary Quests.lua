@@ -2,27 +2,30 @@
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
 
-root(ROOTS.Zones, m(KUL_TIRAS, bubbleDown({ ["timeline"] = { ADDED_8_0_1 } }, {
-	m(STORMSONG_VALLEY, {
+maproot(KUL_TIRAS, STORMSONG_VALLEY, {
+	timeline = { ADDED_8_0_1 },
+	groups = {
 		n(EMISSARY_QUESTS, {
-			q(54451, bubbleDownSelf({ ["timeline"] = { ADDED_8_1_0 }, ["minReputation"] = { FACTION_TORTOLLAN_SEEKERS, EXALTED } }, {	-- Baubles from the Seekers
-				["provider"] = { "n", 135793 },	-- Collector Kojo
-				["coord"] = { 40.54, 36.41, STORMSONG_VALLEY },
-				["repeatable"] = true,
-				["groups"] = {
+			q(54451, {	-- Baubles from the Seekers
+				provider = { "n", 135793 },	-- Collector Kojo
+				coord = { 40.54, 36.41, STORMSONG_VALLEY },
+				timeline = { ADDED_8_1_0 },
+				minReputation = { FACTION_TORTOLLAN_SEEKERS, EXALTED },
+				repeatable = true,
+				groups = {
 					i(166245, {	-- Tortollan Seekers Supplies
 						i(166704),	-- Bowl of Glowing Pufferfish (TOY!)
 						i(166807),	-- Recipe: Boralus Blood Sausage [Rank 3] (RECIPE!)
 						i(166264),	-- Recipe: Sanguinated Feast [Rank 3] (RECIPE!)
 					}),
 				},
-			})),
+			}),
 			q(50604, {	-- Tortollan Seekers
-				["provider"] = { "n", 135793 },	-- Collector Kojo
-				["coord"] = { 40.54, 36.41, STORMSONG_VALLEY },
-				["isWorldQuest"] = true,
-				["lvl"] = 120,
-				["sym"] = {{"select","itemID",
+				provider = { "n", 135793 },	-- Collector Kojo
+				coord = { 40.54, 36.41, STORMSONG_VALLEY },
+				isWorldQuest = true,
+				lvl = 120,
+				sym = {{"select","itemID",
 					165680,	-- Igneous Winterskorn Loop
 					165679,	-- Ornate Elun'dris Ring
 					165683,	-- Seal of Dath'Remar
@@ -37,14 +40,14 @@ root(ROOTS.Zones, m(KUL_TIRAS, bubbleDown({ ["timeline"] = { ADDED_8_0_1 } }, {
 				}},
 			}),
 			q(50601, {	-- Storm's Wake
-				["provider"] = { "n", 135800 },	-- Sister Lilyana
-				["coord"] = { 59.29, 69.33, STORMSONG_VALLEY },
-				["races"] = ALLIANCE_ONLY,
-				["isWorldQuest"] = true,
-				["lvl"] = 120,
-				["groups"] = {
+				provider = { "n", 135800 },	-- Sister Lilyana
+				coord = { 59.29, 69.33, STORMSONG_VALLEY },
+				races = ALLIANCE_ONLY,
+				isWorldQuest = true,
+				lvl = 120,
+				groups = {
 					i(165868, {	-- Storm's Wake Equipment Cache
-						["sym"] = {
+						sym = {
 							{"select", "mapID", STORMSONG_VALLEY},
 							{"find", "headerID", ZONE_REWARDS },
 							{"extract", "itemID" },	-- Select the Items.
@@ -52,7 +55,7 @@ root(ROOTS.Zones, m(KUL_TIRAS, bubbleDown({ ["timeline"] = { ADDED_8_0_1 } }, {
 						},
 					}),
 					i(165867, {	-- Kul Tiran Weapons Cache
-						["sym"] = {
+						sym = {
 							{"select", "mapID", KUL_TIRAS},
 							{"find", "headerID", ZONE_REWARDS },
 							{"extract", "itemID" },	-- Select the Items.
@@ -60,29 +63,31 @@ root(ROOTS.Zones, m(KUL_TIRAS, bubbleDown({ ["timeline"] = { ADDED_8_0_1 } }, {
 						},
 					}),
 					i(163857, {	-- Azerite Armor Cache
-						["sym"] = {
+						sym = {
 							{"sub", "bfa_azerite_armor_chest" },
 						},
 					}),
 				},
 			}),
-			q(54457, bubbleDownSelf({ ["timeline"] = { ADDED_8_1_0 }, ["minReputation"] = { FACTION_STORMS_WAKE, EXALTED } }, {	-- Supplies from Storm's Wake
-				["provider"] = { "n", 135800 },	-- Sister Lilyana
-				["coord"] = { 59.29, 69.33, STORMSONG_VALLEY },
-				["races"] = ALLIANCE_ONLY,
-				["isDaily"] = true,
-				["groups"] = {
+			q(54457, {	-- Supplies from Storm's Wake
+				provider = { "n", 135800 },	-- Sister Lilyana
+				coord = { 59.29, 69.33, STORMSONG_VALLEY },
+				timeline = { ADDED_8_1_0 },
+				minReputation = { FACTION_STORMS_WAKE, EXALTED },
+				races = ALLIANCE_ONLY,
+				isDaily = true,
+				groups = {
 					i(166294, {	-- Storm's Wake Supplies
 						i(166719),	-- Violet Abyssal Eel (PET!)
 						i(166665),	-- Technique: Glyph of Storm's Wake (RECIPE!)
 					}),
 				},
-			})),
+			}),
 		}),
-	}),
-})));
+	},
+});
 
-root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.BFA, bubbleDownSelf({ ["timeline"] = { ADDED_8_0_1_LAUNCH } }, {
+root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.BFA, {
 	m(KUL_TIRAS, {
 		m(STORMSONG_VALLEY, {
 			n(FACTIONS, {
@@ -93,4 +98,4 @@ root(ROOTS.HiddenQuestTriggers, expansion(EXPANSION.BFA, bubbleDownSelf({ ["time
 			}),
 		}),
 	}),
-})));
+}));

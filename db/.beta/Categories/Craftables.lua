@@ -1396,8 +1396,8 @@ flt(50,{
 i(11020,{b=1,cost={{"i",11022,1},{"i",11018,2}},rwp=40003,spellID=13399,u=2,g={
 i(11024,{b=1,u=2,g={
 i(11040,{u=2})}})}})}),
-h(-22,{
-s(43958,85663,{awp=50004,collectible=false,description="Can only be bought from Trade suppliers.",f=57,requireSkill=182,spellID=124353})})}}),
+h(-22,{awp=50004,g={
+s(43958,85663,{collectible=false,description="Can only be bought from Trade suppliers.",f=57,requireSkill=182,spellID=124353})}})}}),
 prof(773,{
 h(-22,{
 i(10648,{description="Can be bought from Inscription Suppliers, as well as some Trade vendors around the world.",rwp=50004,u=2}),
@@ -2003,9 +2003,9 @@ i(7279,{f=113,rwp=40001,u=2}),
 i(8173,{f=55,lvl=13,spellID=10344}),
 i(4304),
 i(8218,{f=113,rwp=40001,u=2})}),
-h(-101,{
-s(185371,203805,{awp=100007,f=34,lvl=25}),
-s(188015,206491,{awp=100105,f=33,lvl=25})})}),
+h(-101,{awp=100007,g={
+s(185371,203805,{f=34,lvl=25}),
+s(188015,206491,{awp=100105,f=33,lvl=25})}})}),
 prof(186,{description="Mining veins are usually found on uneven terrain and mountainsides as well as inside caves. It is beneficial to mine all veins in the area even if you only need specific ore because the node spawns are often connected.",g={
 sp(2575,{
 o(1731,{maps={1,7,10,18,21,27,37,48,52,62,76,94,97,106},requireSkill=186}),
@@ -2027,7 +2027,6 @@ o(181068,{maps={247,320},requireSkill=186}),
 o(73940,{coords={
 [64]={{66.1,86.2}}},requireSkill=186}),
 o(1733,{maps={14,15,22,23,25,26,47,50,56,63,65,66,69,199,210},requireSkill=186}),
-o(180215,{maps={337},requireSkill=186,rwp=40001,u=2}),
 o(177388,{maps={81},requireSkill=186}),
 o(123848,{coords={
 [78]={{50,81.2}}},requireSkill=186}),
@@ -2142,8 +2141,6 @@ i(8171,{description="Is a rare drop in place of Rugged Leather.",maps_disp={17}}
 i(8169,{description="Is a rare drop in place of Thick Leather.",maps_disp={15,64,77,78,83}}),
 i(15423,{crs={7447,7448,7449,8763,8764,10807},maps_disp={76,83},rwp=30100,u=2}),
 i(17012,{crs={11673,11982,53134},maps_disp={232,367}}),
-i(19767,{awp=100007}),
-i(19768,{awp=100007}),
 i(15419,{coords={
 [83]={{55.1,37.8},{58.1,89.4}}},crs={7443,7446,42336},description="Can be skinned from bears in previously highlevel vanilla zones like shardtooths in Winterspring."}),
 i(7428,{crs={684,768,1713},description="Panthers can be found in central Stranglethorn Vale and eastern Swamp of Sorrows.",maps_disp={51,224},rwp=30100,u=2}),
@@ -2152,7 +2149,6 @@ i(15416,{description="Can be skinned from elite creatures of the Black Dragonfli
 i(7286),
 i(15415,{crs={14020},description="Blizzard being Blizzard, Blue Dragonscale is only obtainable from Chromaggus in Blackwing Lair. All other sources are removed.",maps_disp={287}}),
 i(12607),
-i(20381,{awp=70205,description="Can be skinned from corrupted creatures of the Green Dragonflight in Temple of Atal'hakkar. Can also be skinned from the Dragons of Nightmare during the Anniversary event.",maps_disp={220}}),
 i(15412,{description="Can be skinned from elite creatures of the Green Dragonflight around the world.",maps_disp={220}}),
 i(15408,{description="Can be skinned from scorpids in Silithus.",maps_disp={81}}),
 i(15414,{crs={14020},description="Blizzard being Blizzard, Red Dragonscale is only obtainable from Chromaggus in Blackwing Lair. All other sources are removed.",maps_disp={287}}),
@@ -2945,9 +2941,9 @@ prof(356,{awp=20005,g={
 i(27422,{maps_disp={42,102,107,108}}),
 i(34865,{awp=20400,maps_disp={108}}),
 i(35313,{awp=20400,b=1,maps_disp={102},g={
-i(34866,{awp=20005})}}),
+i(34866)}}),
 i(35286,{awp=20400,maps_disp={122},g={
-i(35287,{awp=20005,f=55,lvl=23,spellID=2023})}}),
+i(35287,{f=55,lvl=23,spellID=2023})}}),
 i(33823,{awp=20300,maps_disp={42}}),
 i(33824,{awp=20300,maps_disp={42}}),
 i(27513,{maps_disp={102,107,108},providers={{"o",182951},{"o",182952},{"o",182953},{"o",182954},{"o",182956},{"o",182957},{"o",182958},{"o",182959}}}),
@@ -3007,38 +3003,38 @@ o(181277,{coords={
 [105]={{29.2,81.3}}},description="Found near the base of trees.",maps={108},requireSkill=182}),
 i(22790,{maps_disp={256,258,260,262,263,265,272},providers={{"o",181278}}}),
 i(108348,{awp=60002,providers={{"o",181278}},spellID=153839,g={
-i(22790,{awp=20005})}}),
+i(22790)}}),
 i(22786,{description="Found near edges and highly uneven terrain.",maps_disp={104,105,107,108,109},providers={{"o",181271}}}),
 i(108345,{awp=60002,providers={{"o",181271}},spellID=153849,g={
-i(22786,{awp=20005})}}),
+i(22786)}}),
 i(22795,{f=55,lvl=10,providers={{"o",181270}},requireSkill=182,spellID=28527}),
 i(22794,{description="Can uncommonly be looted when gathering TBC herbs.",providers={{"o",181270},{"o",181271},{"o",181275},{"o",181277},{"o",181278},{"o",181279},{"o",181280},{"o",181281}}}),
 i(22785,{maps_disp={100,102,104,105,107,108},providers={{"o",181270}}}),
 i(108344,{awp=60002,providers={{"o",181270}},spellID=153852,g={
-i(22785,{awp=20005})}}),
+i(22785)}}),
 i(22788,{lvl=23,maps_disp={102,262,263,265},providers={{"o",181276}},spellID=28714}),
 i(22793,{maps_disp={122},providers={{"o",181281}}}),
 i(108351,{awp=60002,providers={{"o",181281}},spellID=153869,g={
-i(22793,{awp=20005})}}),
+i(22793)}}),
 i(35229,{awp=20400,providers={{"o",181270},{"o",181271},{"o",181275},{"o",181277},{"o",181278},{"o",181279},{"o",181280},{"o",181281}}}),
 i(22791,{maps_disp={109},providers={{"o",181279}}}),
 i(108349,{awp=60002,providers={{"o",181279}},spellID=153871,g={
-i(22791,{awp=20005})}}),
+i(22791)}}),
 i(22797,{lvl=25,providers={{"o",181280}},rwp=30300,spellID=28726,u=2}),
 i(22792,{coords={
 [100]={{62.7,19.5}},
 [105]={{29.2,81.3},{34.8,40.4},{63.9,68.3}}},description="Although it can be found all over Shadowmoon Valley, the more efficient farm is the listed coordinates.",maps_disp={104},providers={{"o",181280}}}),
 i(108350,{awp=60002,providers={{"o",181280}},spellID=153872,g={
-i(22792,{awp=20005})}}),
+i(22792)}}),
 i(22787,{maps_disp={102},providers={{"o",181275}}}),
 i(108346,{awp=60002,providers={{"o",181275}},spellID=153874,g={
-i(22787,{awp=20005})}}),
+i(22787)}}),
 i(22789,{coords={
 [100]={{62.7,19.5}},
 [104]={{36.5,32.5},{43.4,55.8}},
 [105]={{29.2,81.3}}},description="Found near the base of trees.",maps_disp={108},providers={{"o",181277}}}),
 i(108347,{awp=60002,providers={{"o",181277}},spellID=153881,g={
-i(22789,{awp=20005})}}),
+i(22789)}}),
 i(24401,{maps_disp={102}})}})}}),
 prof(773,{awp=20005,g={
 ah(51005,{type="s",g={
@@ -3128,13 +3124,13 @@ de(11889,{itemID=258201,spellID=1262955}),
 de(11888,{itemID=258200,spellID=1262954})}}),
 flt(61,{
 h(-55,{awp=20200,g={
-i(33140,{awp=20005,b=1}),
-i(33131,{awp=20005,b=1}),
-i(33133,{awp=20005,b=1}),
-i(33135,{awp=20005,b=1}),
-i(33144,{awp=20005,b=1}),
-i(33134,{awp=20005,b=1}),
-i(33143,{awp=20005,b=1})}}),
+i(33140,{b=1}),
+i(33131,{b=1}),
+i(33133,{b=1}),
+i(33135,{b=1}),
+i(33144,{b=1}),
+i(33134,{b=1}),
+i(33143,{b=1})}}),
 h(-227,{
 i(23095),
 i(23094),
@@ -3224,45 +3220,45 @@ i(32410,{awp=20100}),
 i(24056),
 i(31867,{awp=20100})}),
 h(-217,{awp=20100,g={
-i(32193,{awp=20005}),
+i(32193),
 i(32195,{rwp=40003,u=2}),
 i(32204,{rwp=40003,u=2}),
-i(32196,{awp=20005}),
+i(32196),
 i(32197,{rwp=40003,u=2}),
-i(32194,{awp=20005}),
-i(32199,{awp=20005}),
-i(32222,{awp=20005}),
-i(32217,{awp=20005}),
-i(32218,{awp=20005}),
+i(32194),
+i(32199),
+i(32222),
+i(32217),
+i(32218),
 i(32219,{rwp=40003,u=2}),
 i(35760,{awp=20400}),
 i(32214,{rwp=40003,u=2}),
-i(32220,{awp=20005}),
+i(32220),
 i(32216,{rwp=40003,u=2}),
 i(37503,{awp=20402,rwp=40003,u=2}),
-i(32225,{awp=20005}),
+i(32225),
 i(32213,{rwp=40003,u=2}),
-i(32212,{awp=20005}),
-i(32211,{awp=20005}),
-i(32215,{awp=20005}),
-i(32221,{awp=20005}),
+i(32212),
+i(32211),
+i(32215),
+i(32221),
 i(35759,{awp=20400}),
-i(32226,{awp=20005}),
-i(32224,{awp=20005}),
-i(32223,{awp=20005}),
+i(32226),
+i(32224),
+i(32223),
 i(35758,{awp=20400}),
-i(32209,{awp=20005}),
+i(32209),
 i(35761,{awp=20400}),
 i(32207,{rwp=40003,u=2}),
-i(32205,{awp=20005}),
+i(32205),
 i(32208,{rwp=40003,u=2}),
-i(32198,{awp=20005}),
+i(32198),
 i(32210,{rwp=40003,u=2}),
-i(32206,{awp=20005}),
-i(32200,{awp=20005}),
+i(32206),
+i(32200),
 i(32202,{rwp=40003,u=2}),
-i(32201,{awp=20005}),
-i(32203,{awp=20005})}})}),
+i(32201),
+i(32203)}})}),
 flt(52,{
 i(24086,{f=52,lvl=27}),
 i(24076,{f=52,lvl=25}),
@@ -3321,8 +3317,8 @@ i(35702,{awp=20400,b=1,f=53,lvl=27,requireSkill=755,spellID=46784}),
 i(24127,{b=1,f=53,lvl=27,requireSkill=755,spellID=31045})})}}),
 prof(165,{awp=20005,g={
 h(-88,{
-h(-89,{
-s(15258,33122,{awp=20200,f=3,lvl=27})}),
+h(-89,{awp=20200,g={
+s(15258,33122,{f=3,lvl=27})}}),
 flt(5,{
 s(13485,30040,{awp=20100,f=5,loc=45,lvl=27}),
 s(13487,30042,{awp=20100,f=5,loc=45,lvl=27}),
@@ -3473,16 +3469,16 @@ o(181569,{maps={102,104,105,107,108,109,122},requireSkill=186}),
 o(181570,{maps={107},requireSkill=186}),
 i(23425,{maps_disp={102,104,105,107,108,109,122},providers={{"o",181556},{"o",181569},{"o",181570}}}),
 i(108302,{awp=60002,providers={{"o",181556},{"o",181569}},spellID=153819,g={
-i(23425,{awp=20005})}}),
+i(23425)}}),
 i(23427,{maps_disp={102,104,105,107,108,109,122},providers={{"o",181556},{"o",181557},{"o",181569},{"o",181570}}}),
 i(108303,{awp=60002,spellID=153820,g={
-i(23427,{awp=20005})}}),
+i(23427)}}),
 i(23424,{maps_disp={100,102,104,105,107,108,109},providers={{"o",181555}}}),
 i(108301,{awp=60002,providers={{"o",181555}},spellID=153818,g={
-i(23424,{awp=20005})}}),
+i(23424)}}),
 i(23426,{maps_disp={104,105,107,108,109,122,256,258,260,262,263,265,272},providers={{"o",181557}}}),
 i(108304,{awp=60002,providers={{"o",181557}},spellID=153821,g={
-i(23426,{awp=20005})}}),
+i(23426)}}),
 i(35229,{awp=20400})}}),
 ah(2656,{type="s",g={
 i(23446),
@@ -3653,8 +3649,8 @@ o(569785,{type="AsSubGenericObject"}),
 o(570233,{type="AsSubGenericObject"}),
 i(251762,{b=2})}})}}),
 prof(171,{
-h(-22,{
-i(40411,{awp=30002,description="Can be bought from Alchemy Suppliers, as well as some Trade vendors around the world.",rwp=40001,u=2})}),
+h(-22,{awp=30002,g={
+i(40411,{description="Can be bought from Alchemy Suppliers, as well as some Trade vendors around the world.",rwp=40001,u=2})}}),
 h(-26,{
 sp(60893,{
 i(115460,{
@@ -5515,9 +5511,9 @@ de(1830,{itemID=245621,spellID=1239434})}}),
 flt(56,{
 i(61978),
 i(61981)}),
-ah(165466,{type="s",g={
-r(64260,{awp=30100,requireSkill=773,skillID=2511}),
-r(64262,{awp=30100,requireSkill=773,rwp=70003,u=2})}}),
+ah(165466,{awp=30100,type="s",g={
+r(64260,{requireSkill=773,skillID=2511}),
+r(64262,{requireSkill=773,rwp=70003,u=2})}}),
 flt(111,{
 i(43390,{awp=30002,c={9},rwp=70003,u=2}),
 i(41540,{awp=30002,c={7},rwp=70003,u=2}),
@@ -6411,7 +6407,7 @@ i(79898,{b=1,cost={{"c",676,50}},spellID=126935}),
 s(46495,89684,{b=2,cost={{"c",676,180}},f=1,lvl=32}),
 i(79899,{b=1,cost={{"c",676,50}},spellID=126935})}})}),
 prof(164,{
-h(-26,{
+h(-26,{awp=50200,g={
 ah(143255,{awp=50400,type="s",g={
 r(142959,{learnedAt=75,providers={{"s",143255}},requireSkill=164,skillID=2473}),
 r(142968,{learnedAt=75,providers={{"s",143255}},requireSkill=164,skillID=2473}),
@@ -6454,7 +6450,7 @@ r(143187,{learnedAt=75,providers={{"s",143255}},requireSkill=164,skillID=2473}),
 r(143186,{learnedAt=75,providers={{"s",143255}},requireSkill=164,skillID=2473}),
 r(142958,{learnedAt=75,providers={{"s",143255}},requireSkill=164,skillID=2473}),
 r(142967,{learnedAt=75,providers={{"s",143255}},requireSkill=164,skillID=2473})}}),
-ah(138646,{awp=50200,type="s",g={
+ah(138646,{type="s",g={
 r(137792,{learnedAt=75,providers={{"s",138646}},requireSkill=164,skillID=2473}),
 r(137791,{learnedAt=75,providers={{"s",138646}},requireSkill=164,skillID=2473}),
 r(137781,{learnedAt=75,providers={{"s",138646}},requireSkill=164,skillID=2473}),
@@ -6493,18 +6489,18 @@ r(137767,{learnedAt=75,providers={{"s",138646}},requireSkill=164,skillID=2473}),
 r(137771,{learnedAt=75,providers={{"s",138646}},requireSkill=164,skillID=2473}),
 r(137768,{learnedAt=75,providers={{"s",138646}},requireSkill=164,skillID=2473}),
 r(137770,{learnedAt=75,providers={{"s",138646}},requireSkill=164,skillID=2473})}}),
-r(138890,{awp=50200,learnedAt=75,providers={{"s",138888}},requireSkill=164,skillID=2473}),
-r(138892,{awp=50200,learnedAt=75,providers={{"s",138890}},requireSkill=164,skillID=2473}),
-r(138878,{awp=50200,learnedAt=75,providers={{"s",138876}},requireSkill=164,skillID=2473}),
-r(138880,{awp=50200,learnedAt=75,providers={{"s",138878}},requireSkill=164,skillID=2473}),
-r(138885,{awp=50200,learnedAt=75,providers={{"s",138882}},requireSkill=164,skillID=2473}),
-r(138886,{awp=50200,learnedAt=75,providers={{"s",138885}},requireSkill=164,skillID=2473}),
-r(138891,{awp=50200,learnedAt=75,providers={{"s",138889}},requireSkill=164,skillID=2473}),
-r(138893,{awp=50200,learnedAt=75,providers={{"s",138891}},requireSkill=164,skillID=2473}),
-r(138879,{awp=50200,learnedAt=75,providers={{"s",138877}},requireSkill=164,skillID=2473}),
-r(138881,{awp=50200,learnedAt=75,providers={{"s",138879}},requireSkill=164,skillID=2473}),
-r(138884,{awp=50200,learnedAt=75,providers={{"s",138883}},requireSkill=164,skillID=2473}),
-r(138887,{awp=50200,learnedAt=75,providers={{"s",138884}},requireSkill=164,skillID=2473})}),
+r(138890,{learnedAt=75,providers={{"s",138888}},requireSkill=164,skillID=2473}),
+r(138892,{learnedAt=75,providers={{"s",138890}},requireSkill=164,skillID=2473}),
+r(138878,{learnedAt=75,providers={{"s",138876}},requireSkill=164,skillID=2473}),
+r(138880,{learnedAt=75,providers={{"s",138878}},requireSkill=164,skillID=2473}),
+r(138885,{learnedAt=75,providers={{"s",138882}},requireSkill=164,skillID=2473}),
+r(138886,{learnedAt=75,providers={{"s",138885}},requireSkill=164,skillID=2473}),
+r(138891,{learnedAt=75,providers={{"s",138889}},requireSkill=164,skillID=2473}),
+r(138893,{learnedAt=75,providers={{"s",138891}},requireSkill=164,skillID=2473}),
+r(138879,{learnedAt=75,providers={{"s",138877}},requireSkill=164,skillID=2473}),
+r(138881,{learnedAt=75,providers={{"s",138879}},requireSkill=164,skillID=2473}),
+r(138884,{learnedAt=75,providers={{"s",138883}},requireSkill=164,skillID=2473}),
+r(138887,{learnedAt=75,providers={{"s",138884}},requireSkill=164,skillID=2473})}}),
 h(-88,{
 s(52070,98607,{awp=50400,f=7,loc=46,lvl=35}),
 s(52079,98616,{awp=50400,f=7,loc=45,lvl=35}),
@@ -7340,7 +7336,7 @@ i(83804,{f=51,lvl=35})}),
 flt(56,{
 i(76132,{awp=50200})})}),
 prof(165,{
-h(-26,{
+h(-26,{awp=50200,g={
 ah(142976,{awp=50400,type="s",g={
 r(143146,{learnedAt=75,providers={{"s",142976}},requireSkill=165,skillID=2528}),
 r(143145,{learnedAt=75,providers={{"s",142976}},requireSkill=165,skillID=2528}),
@@ -7424,7 +7420,7 @@ r(142961,{learnedAt=75,providers={{"s",142976}},requireSkill=165,skillID=2528}),
 r(142952,{learnedAt=75,providers={{"s",142976}},requireSkill=165,skillID=2528}),
 r(142965,{learnedAt=75,providers={{"s",142976}},requireSkill=165,skillID=2528}),
 r(142956,{learnedAt=75,providers={{"s",142976}},requireSkill=165,skillID=2528})}}),
-ah(140040,{awp=50200,type="s",g={
+ah(140040,{type="s",g={
 r(137832,{learnedAt=75,providers={{"s",140040}},requireSkill=165,skillID=2528}),
 r(137845,{learnedAt=75,providers={{"s",140040}},requireSkill=165,skillID=2528}),
 r(137822,{learnedAt=75,providers={{"s",140040}},requireSkill=165,skillID=2528}),
@@ -7472,7 +7468,7 @@ r(138589,{learnedAt=75,providers={{"s",140040}},requireSkill=165,skillID=2528}),
 r(138590,{learnedAt=75,providers={{"s",140040}},requireSkill=165,skillID=2528}),
 r(138593,{learnedAt=75,providers={{"s",140040}},requireSkill=165,skillID=2528}),
 r(138594,{learnedAt=75,providers={{"s",140040}},requireSkill=165,skillID=2528})}}),
-ah(140041,{awp=50200,type="s",g={
+ah(140041,{type="s",g={
 r(138596,{learnedAt=75,providers={{"s",140041}},requireSkill=165,skillID=2528}),
 r(138595,{learnedAt=75,providers={{"s",140041}},requireSkill=165,skillID=2528}),
 r(137866,{learnedAt=75,providers={{"s",140041}},requireSkill=165,skillID=2528}),
@@ -7509,7 +7505,7 @@ r(137856,{learnedAt=75,providers={{"s",140041}},requireSkill=165,skillID=2528}),
 r(137855,{learnedAt=75,providers={{"s",140041}},requireSkill=165,skillID=2528}),
 r(138592,{learnedAt=75,providers={{"s",140041}},requireSkill=165,skillID=2528}),
 r(138591,{learnedAt=75,providers={{"s",140041}},requireSkill=165,skillID=2528}),
-r(140185,{learnedAt=70,providers={{"s",140041}},requireSkill=165,skillID=2528})}})}),
+r(140185,{learnedAt=70,providers={{"s",140041}},requireSkill=165,skillID=2528})}})}}),
 h(-88,{
 h(-89,{
 s(44085,85851,{f=3,lvl=32}),
@@ -7786,7 +7782,7 @@ ah(2656,{type="s",g={
 i(72096),
 i(72095)}})}),
 prof(197,{
-h(-26,{
+h(-26,{awp=50200,g={
 ah(143011,{awp=50400,type="s",g={
 r(142964,{learnedAt=75,providers={{"s",143011}},requireSkill=197,skillID=2536}),
 r(143053,{learnedAt=75,providers={{"s",143011}},requireSkill=197,skillID=2536}),
@@ -7828,7 +7824,7 @@ r(143060,{learnedAt=75,providers={{"s",143011}},requireSkill=197,skillID=2536}),
 r(142955,{learnedAt=75,providers={{"s",143011}},requireSkill=197,skillID=2536}),
 r(142960,{learnedAt=75,providers={{"s",143011}},requireSkill=197,skillID=2536}),
 r(142951,{learnedAt=75,providers={{"s",143011}},requireSkill=197,skillID=2536})}}),
-ah(125557,{awp=50200,type="s",g={
+ah(125557,{type="s",g={
 r(137907,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536}),
 r(137908,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536}),
 r(137936,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536}),
@@ -7868,7 +7864,7 @@ r(137914,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536}),
 r(138598,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536}),
 r(138600,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536}),
 r(138599,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536}),
-r(138597,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536})}})}),
+r(138597,{learnedAt=75,providers={{"s",125557}},requireSkill=197,skillID=2536})}})}}),
 h(-88,{
 s(52075,98612,{awp=50400,f=4,loc=45,lvl=35}),
 s(48346,92726,{f=4,loc=44,lvl=32}),
@@ -8017,13 +8013,13 @@ i(86623,{b=1,sym={{"select","itemID",87250,87251,41508,44413,15996,11826,4401,11
 i(97985,{awp=50300,b=1,lvl=40,rwp=70003,u=2}),
 p(1320,{b=1,itemID=103670,npcID=73011,spellID=147124}),
 i(90561,{description="Can be turned in in Booty Bay for a bag of gold!"})}})}})})}}),
-x(6,{awp=70003,g={
+x(6,{awp=60003,g={
 i(180055,{awp=90001}),
 i(180057,{awp=90001}),
 i(180058,{awp=90001}),
 i(180059,{awp=90001}),
 i(180060,{awp=90001}),
-h(-679,{awp=110207,g={
+h(-679,{awp=120000,g={
 o(628951,{maps={525,534,535,539,542,543,550,622,624},type="AsGenericObjectContainer",g={
 o(628951,{type="AsSubGenericObject"}),
 o(628952,{type="AsSubGenericObject"}),
@@ -8034,7 +8030,7 @@ o(628950,{type="AsSubGenericObject"}),
 o(628956,{type="AsSubGenericObject"}),
 o(628953,{type="AsSubGenericObject"}),
 i(251766,{b=2})}})}}),
-prof(171,{awp=60003,g={
+prof(171,{
 flt(55,{
 i(116979,{awp=80001,f=55,lvl=35,spellID=172368}),
 i(109145,{f=55,lvl=35,spellID=156073}),
@@ -8082,8 +8078,8 @@ i(122602,{awp=60100,b=1,f=53,lvl=35,requireSkill=171,spellID=157136}),
 i(128024,{awp=60200,f=53,lvl=35,rwp=100005,spellID=157136,u=2}),
 i(122603,{awp=60100,b=1,f=53,lvl=35,requireSkill=171,spellID=157136}),
 i(128023,{awp=60200,f=53,lvl=35,rwp=100005,spellID=157136,u=2}),
-i(122601,{awp=60100,b=1,f=53,lvl=35,requireSkill=171,spellID=157136})})}}),
-prof(794,{awp=60003,g={
+i(122601,{awp=60100,b=1,f=53,lvl=35,requireSkill=171,spellID=157136})})}),
+prof(794,{
 i(109585),
 i(108439),
 i(109584),
@@ -8135,8 +8131,8 @@ i(117385,{cost={{"c",828,50}},f=51,lvl=35}),
 i(114192,{b=1,cost={{"c",828,50}},spellID=126935}),
 i(114183,{b=1,cost={{"c",828,50}},spellID=126935}),
 i(114181,{b=1,cost={{"c",828,50}},spellID=126935}),
-s(65965,117384,{b=2,cost={{"c",828,50}},f=24,lvl=35})}})}}),
-prof(164,{awp=60003,g={
+s(65965,117384,{b=2,cost={{"c",828,50}},f=24,lvl=35})}})}),
+prof(164,{
 h(-88,{
 s(65301,116426,{f=7,loc=40,lvl=39}),
 s(65302,116427,{f=7,loc=42,lvl=37}),
@@ -8212,8 +8208,8 @@ s(65508,116644,{bonusID=9146,cost={{"i",202209,1}},f=20,lvl=35}),
 s(65315,116453,{bonusID=9146,cost={{"i",202209,1}},f=22,lvl=35}),
 s(65511,116646,{bonusID=9146,cost={{"i",202209,1}},f=23,lvl=35}),
 s(65318,116454,{bonusID=9146,cost={{"i",202209,1}},f=25,lvl=35}),
-s(65514,116647,{bonusID=9146,cost={{"i",202209,1}},f=8,lvl=35})})}}),
-prof(185,{awp=60003,g={
+s(65514,116647,{bonusID=9146,cost={{"i",202209,1}},f=8,lvl=35})})}),
+prof(185,{
 h(-26,{description="These items have a chance to appear in your bag after cooking any recipe from Warlords of Draenor.",g={
 p(1395,{b=1,itemID=110684,npcID=78895,spellID=159296}),
 r(160986,{b=1,itemID=118323,lvl=10,requireSkill=185,skillID=2543}),
@@ -8266,8 +8262,8 @@ i(122343,{awp=60100,f=55,lvl=35,spellID=180752}),
 i(111439,{f=55,lvl=35,spellID=160846}),
 i(111442,{f=55,lvl=35,spellID=160872}),
 i(111447,{f=55,lvl=35,spellID=160884}),
-i(122347,{awp=60100,f=55,lvl=35,spellID=180755})}}),
-prof(333,{awp=60003,g={
+i(122347,{awp=60100,f=55,lvl=35,spellID=180755})}),
+prof(333,{
 ah(13262,{type="s",g={
 i(109693),
 i(115504,{spellID=170443}),
@@ -8322,8 +8318,8 @@ i(112115,{f=55}),
 i(112165,{f=55}),
 i(112093,{f=55}),
 i(110682,{f=55}),
-i(112164,{f=55})})}}),
-prof(202,{awp=60003,g={
+i(112164,{f=55})})}),
+prof(202,{
 h(-88,{
 s(59105,109173,{bonusID=525,f=6,loc=40,lvl=35,requireSkill=202,spellID=12883}),
 s(59103,109171,{bonusID=525,f=5,loc=40,lvl=35,requireSkill=202,spellID=12883}),
@@ -8380,8 +8376,8 @@ s(62918,109168,{bonusID=9146,cost={{"i",202215,1}},f=31,lvl=35})}),
 h(-245,{
 i(118008,{f=55,lvl=35,spellID=173287}),
 i(109122,{f=55,lvl=35,spellID=156061}),
-i(109120,{f=55,lvl=35,spellID=156050})})}}),
-prof(356,{awp=60003,g={
+i(109120,{f=55,lvl=35,spellID=156050})})}),
+prof(356,{
 i(111356,{b=1,description="Rewarded for fishing",f=200,lvl=10,requireSkill=356,spellID=160326,g={
 r(158743,{collectible=false,rank=9,requireSkill=356,rwp=80001,u=2}),
 r(271664,{awp=80001,requireSkill=356}),
@@ -8444,8 +8440,8 @@ i(111658,{spellID=161237}),
 i(118511,{b=1,f=55,spellID=174841}),
 i(118391,{f=55,requireSkill=356,spellID=174471}),
 flt(200,{
-r(43308,{b=1,description="Can be fished from schools.",itemID=34109,requireSkill=356})})}}),
-prof(182,{awp=60003,g={
+r(43308,{b=1,description="Can be fished from schools.",itemID=34109,requireSkill=356})})}),
+prof(182,{
 flt(101,{
 p(1432,{crs={95132},itemID=118595,npcID=83594,requireSkill=182,spellID=167394})}),
 ah(2366,{type="s",g={
@@ -8463,8 +8459,8 @@ i(109626,{spellID=157024}),
 i(109128),
 i(109628,{spellID=157027}),
 i(109127),
-i(109627,{spellID=157025})}})}}),
-prof(773,{awp=60003,g={
+i(109627,{spellID=157025})}})}),
+prof(773,{
 cat(106,{
 sp(163294,{
 i(112303,{spellID=178253,g={
@@ -8532,8 +8528,8 @@ flt(50,{
 sp(167950,{
 i(113992,{f=200,requireSkill=773,spellID=167948})}),
 i(202220,{awp=100005,b=1}),
-i(202221,{awp=100005,b=1})})}}),
-prof(755,{awp=60003,g={
+i(202221,{awp=100005,b=1})})}),
+prof(755,{
 flt(52,{
 i(115993,{f=52,lvl=39}),
 i(115987,{f=52,lvl=36}),
@@ -8613,8 +8609,8 @@ i(115801,{bonusID=558,f=51,lvl=35,u=2,g={
 i(115801,{bonusID=559,f=51,lvl=35,u=2}),
 i(115801,{bonusID=594,f=51,lvl=35,u=2}),
 i(115801,{bonusID=619,f=51,lvl=35,u=2}),
-i(115801,{bonusID=620,f=51,lvl=35,u=2})}})}})})}}),
-prof(165,{awp=60003,g={
+i(115801,{bonusID=620,f=51,lvl=35,u=2})}})}})})}),
+prof(165,{
 h(-88,{
 h(-89,{
 s(64986,116175,{bonusID=525,f=3,lvl=35}),
@@ -8702,8 +8698,8 @@ i(116203,{lvl=35,rwp=60200,spellID=188599,u=2}),
 i(116204,{lvl=35,rwp=60200,spellID=187575,u=2}),
 i(122537,{awp=60100,lvl=35,rwp=60200,spellID=187576,u=2})}),
 flt(100,{
-mnt(171844,{b=1,itemID=108883,lvl=10,requireSkill=165})})}}),
-prof(186,{awp=60003,g={
+mnt(171844,{b=1,itemID=108883,lvl=10,requireSkill=165})})}),
+prof(186,{
 flt(101,{
 p(1495,{itemID=118919,npcID=85667,requireSkill=186,spellID=170280})}),
 ah(2575,{type="s",g={
@@ -8715,16 +8711,16 @@ i(109992,{spellID=157516}),
 i(109118),
 i(115508,{b=1}),
 i(109991,{spellID=157517}),
-i(109119)}})}}),
-prof(393,{awp=60003,g={
+i(109119)}})}),
+prof(393,{
 ah(8613,{type="s",g={
 i(111351,{b=1,description="This item can drop while skinning mobs in Draenor.",f=200,lvl=10,requireSkill=393,spellID=160321,g={
 r(158756,{collectible=false,rank=9,requireSkill=393,rwp=80001,u=2}),
 r(194174,{awp=70003,requireSkill=393}),
 r(265865,{awp=80001,requireSkill=393,skillID=2559})}}),
 i(110609),
-i(110610,{requireSkill=393,spellID=159069})}})}}),
-prof(197,{awp=60003,g={
+i(110610,{requireSkill=393,spellID=159069})}})}),
+prof(197,{
 h(-88,{
 s(63716,114819,{bonusID=525,f=3,lvl=35}),
 s(63689,114816,{bonusID=525,f=4,loc=45,lvl=35}),
@@ -8786,8 +8782,8 @@ i(202219,{awp=100005,b=1}),
 i(127733,{awp=60200,lvl=35,rwp=100005,spellID=187525,u=2}),
 i(114838,{lvl=35,rwp=60200,spellID=187573,u=2}),
 i(114837,{lvl=35,rwp=60200,spellID=188598,u=2}),
-i(122540,{awp=60100,lvl=35,rwp=60200,spellID=187574,u=2})})}}),
-h(-45,{awp=60003,g={
+i(122540,{awp=60100,lvl=35,rwp=60200,spellID=187574,u=2})})}),
+h(-45,{
 q(34774,{isDaily=1,lvl=10,qgs={77789},g={
 ach(9071,{
 crit(25132,{achID=9071,id=1,providers={{"i",113994}}}),
@@ -8810,8 +8806,8 @@ i(113997,{b=1}),
 i(113998,{b=1}),
 i(113999,{b=1}),
 i(114000,{b=1}),
-i(114001)}})}})}})}})}}),
-x(7,{awp=80001,g={
+i(114001)}})}})}})})}}),
+x(7,{awp=70003,g={
 i(180055,{awp=90001}),
 i(180057,{awp=90001}),
 i(180058,{awp=90001}),
@@ -8828,7 +8824,7 @@ o(560826,{type="AsSubGenericObject"}),
 o(562159,{type="AsSubGenericObject"}),
 o(560358,{type="AsSubGenericObject"}),
 i(251767,{b=2})}})}}),
-prof(171,{awp=70003,g={
+prof(171,{
 h(-26,{
 r(188300,{b=1,itemID=127935,lvl=10,providers={{"s",188299}},requireSkill=171,skillID=2479}),
 r(188302,{b=1,itemID=127918,lvl=10,providers={{"s",188301}},requireSkill=171,skillID=2479}),
@@ -8908,8 +8904,8 @@ s(80789,139392,{b=1,f=6,loc=46,lvl=40}),
 s(80792,139395,{b=1,f=7,loc=46,lvl=40})}})}),
 flt(53,{
 i(151607,{awp=70300,f=53,lvl=45,requireSkill=171,spellID=188026}),
-i(127842,{f=53,lvl=45,requireSkill=171,spellID=188026})})}}),
-prof(794,{awp=70003,g={
+i(127842,{f=53,lvl=45,requireSkill=171,spellID=188026})})}),
+prof(794,{
 i(130903),
 r(209611,{b=1,itemID=137867,lvl=10,requireSkill=755,skillID=2518}),
 i(130904),
@@ -8948,8 +8944,8 @@ i(130927,{b=1,cost={{"c",1173,50}},lvl=10}),
 i(130930,{b=1,cost={{"c",1173,50}},lvl=10}),
 i(130926,{b=1,cost={{"c",1173,50}},lvl=10}),
 i(130915,{b=1,cost={{"c",1173,50}},spellID=196452}),
-i(130911,{b=1,cost={{"c",1173,50}},spellID=126935})}})}}),
-prof(164,{awp=70003,g={
+i(130911,{b=1,cost={{"c",1173,50}},spellID=126935})}})}),
+prof(164,{
 h(-88,{
 s(80860,123917,{f=7,loc=43,lvl=45}),
 s(80854,123911,{f=7,loc=47,lvl=45}),
@@ -8984,8 +8980,8 @@ flt(54,{
 i(136685,{f=54,lvl=45}),
 i(136686,{f=54,lvl=45}),
 i(136684,{f=54,lvl=45}),
-i(136683,{f=54,lvl=45})})}}),
-prof(185,{awp=70003,g={
+i(136683,{f=54,lvl=45})})}),
+prof(185,{
 i(133571,{f=55,lvl=40,spellID=225614}),
 i(133567,{f=55,lvl=40,spellID=225609}),
 i(133576,{f=55,lvl=40,spellID=201349}),
@@ -9008,8 +9004,8 @@ i(133573,{f=55,lvl=40,spellID=225616}),
 i(142334,{awp=70100,f=55,lvl=40,spellID=230058}),
 i(133564,{f=55,lvl=40,spellID=201335}),
 i(133566,{f=55,lvl=40,spellID=225608}),
-i(133570,{f=55,lvl=40,spellID=225613})}}),
-prof(333,{awp=70003,g={
+i(133570,{f=55,lvl=40,spellID=225613})}),
+prof(333,{
 ah(13262,{type="s",g={
 i(124440),
 i(124442),
@@ -9055,8 +9051,8 @@ flt(54,{
 i(136691,{f=54,lvl=45}),
 i(136689,{f=54,lvl=45})}),
 flt(102,{
-toy(128536)})}}),
-prof(202,{awp=70003,g={
+toy(128536)})}),
+prof(202,{
 h(-88,{
 s(76356,132500,{f=4,loc=40,lvl=40,requireSkill=202,spellID=201360}),
 s(76358,132502,{f=6,loc=40,lvl=40,requireSkill=202,spellID=201360}),
@@ -9102,8 +9098,8 @@ i(144341,{awp=70105,b=1,f=55,requireSkill=202,spellID=200061}),
 i(132982,{spellID=210563})}),
 flt(102,{
 toy(132518),
-toy(151652,{awp=70300,lvl=39,requireSkill=202})})}}),
-prof(356,{awp=70003,g={
+toy(151652,{awp=70300,lvl=39,requireSkill=202})})}),
+prof(356,{
 i(133742,{b=1,lvl=39,spellID=201826}),
 i(133733,{b=1,lvl=39,spellID=201826}),
 i(133730,{b=1,lvl=39,spellID=201826}),
@@ -9149,8 +9145,8 @@ toy(143662,{b=1,requireSkill=356}),
 s(80800,139408,{bonusID=1812,f=4,loc=47,lvl=40,requireSkill=356}),
 s(80799,139407,{bonusID=1812,f=6,loc=47,lvl=40,requireSkill=356}),
 s(80797,139405,{bonusID=1812,f=7,loc=47,lvl=40,requireSkill=356}),
-s(80798,139406,{bonusID=1812,f=5,loc=47,lvl=40,requireSkill=356})}})}}),
-prof(182,{awp=70003,g={
+s(80798,139406,{bonusID=1812,f=5,loc=47,lvl=40,requireSkill=356})}})}),
+prof(182,{
 h(-26,{
 r(195114,{collectible=false,requireSkill=182,rwp=80001,u=2}),
 r(193290,{requireSkill=182}),
@@ -9187,8 +9183,8 @@ i(124105),
 i(129288,{spellID=193800}),
 i(129158),
 i(129121,{b=1}),
-i(151856,{awp=70300,b=1})}})}}),
-prof(773,{awp=70003,g={
+i(151856,{awp=70300,b=1})}})}),
+prof(773,{
 flt(111,{
 cq(62678,{c={11},itemID=140630,lvl=11,spellID=224123}),
 cq(62675,{c={11},itemID=129021,lvl=11,spellID=219064}),
@@ -9226,8 +9222,8 @@ flt(53,{
 i(128978,{f=53,lvl=40,spellID=226221})}),
 flt(54,{
 i(136692,{f=54,lvl=45}),
-i(136693,{f=54,lvl=45})})}}),
-prof(755,{awp=70003,g={
+i(136693,{f=54,lvl=45})})}),
+prof(755,{
 ah(31252,{type="s",g={
 i(151718,{awp=70300}),
 i(130174,{spellID=195693}),
@@ -9251,11 +9247,11 @@ i(130176,{spellID=195693})}}),
 h(-26,{
 r(225902,{requireSkill=755,skillID=2518}),
 r(225904,{b=1,itemID=141312,lvl=10,requireSkill=755,skillID=2518})}),
-h(-88,{
-s(89473,151587,{awp=70300,f=4,loc=40,lvl=45}),
-s(89474,151588,{awp=70300,f=5,loc=40,lvl=45}),
-s(89475,151589,{awp=70300,f=6,loc=40,lvl=45}),
-s(89476,151590,{awp=70300,f=7,loc=40,lvl=45})}),
+h(-88,{awp=70300,g={
+s(89473,151587,{f=4,loc=40,lvl=45}),
+s(89474,151588,{f=5,loc=40,lvl=45}),
+s(89475,151589,{f=6,loc=40,lvl=45}),
+s(89476,151590,{f=7,loc=40,lvl=45})}}),
 h(-679,{awp=110207,g={
 de(1746,{itemID=245557,spellID=1239014}),
 de(11913,{itemID=258227,spellID=1263009})}}),
@@ -9307,8 +9303,8 @@ flt(56,{
 i(130245)}),
 flt(102,{
 toy(130254),
-toy(130251)})}}),
-prof(165,{awp=70003,g={
+toy(130251)})}),
+prof(165,{
 h(-88,{
 flt(5,{
 s(80843,128890,{f=5,loc=45,lvl=45}),
@@ -9361,8 +9357,8 @@ flt(102,{
 toy(129961),
 toy(129956),
 toy(129960),
-toy(129958)})}}),
-prof(186,{awp=70003,g={
+toy(129958)})}),
+prof(186,{
 h(-26,{
 r(195122,{collectible=false,requireSkill=186,rwp=80001,u=2}),
 r(2656,{requireSkill=186}),
@@ -9390,8 +9386,8 @@ i(124499,{b=1}),
 i(124501,{b=1}),
 i(124500,{b=1}),
 i(124492,{b=1}),
-i(151862,{awp=70300,b=1})}})}}),
-prof(393,{awp=70003,g={
+i(151862,{awp=70300,b=1})}})}),
+prof(393,{
 flt(101,{
 p(2121,{awp=70300,b=1,description="This can be obtained from any skinnable Argus mob.",itemID=153057,npcID=128160,spellID=254298})}),
 h(-26,{
@@ -9403,8 +9399,8 @@ i(151566,{awp=70300}),
 i(124115),
 i(124113)}}),
 flt(102,{
-toy(130102,{b=1,requireSkill=393})})}}),
-prof(197,{awp=70003,g={
+toy(130102,{b=1,requireSkill=393})})}),
+prof(197,{
 h(-88,{
 s(85957,146666,{awp=70200,c={5,8,9},f=4,loc=41,lvl=40,spellID=241334}),
 s(80836,127002,{f=4,loc=43,lvl=45}),
@@ -9449,11 +9445,11 @@ i(133942,{f=55,lvl=40,spellID=202852})}),
 flt(56,{
 i(127004)}),
 h(-22,{
-i(127037)})}}),
-h(-45,{awp=70003,g={
+i(127037)})}),
+h(-45,{
 q(40753,{isDaily=1,lvl=45,qgs={101527},g={
 i(132892,{b=1,sym={{"select","itemID",113258},{"pop"},{"select","itemID",136631,136630,136629,136632}},g={
-p(1806,{b=1,itemID=136911,npcID=99505,spellID=210683})}})}})}})}}),
+p(1806,{b=1,itemID=136911,npcID=99505,spellID=210683})}})}})})}}),
 x(8,{awp=80001,g={
 i(180055,{awp=90001}),
 i(180057,{awp=90001}),
@@ -9477,15 +9473,15 @@ i(251768,{b=2})}})}}),
 flt(100,{
 mnt(256123,{awp=80200,cost={{"i",158886,1},{"i",158887,1}},itemID=153594,lvl=10})}),
 prof(171,{
-h(-26,{
+h(-26,{awp=80100,g={
 r(298996,{awp=80200,b=1,itemID=168757,lvl=10,providers={{"s",298995}},requireSkill=171,skillID=2478}),
 r(305992,{awp=80300,b=1,itemID=171084,lvl=10,providers={{"s",305993}},requireSkill=171,skillID=2478}),
 r(298997,{awp=80200,b=1,itemID=168758,lvl=10,providers={{"s",298996}},requireSkill=171,skillID=2478}),
-r(291086,{awp=80100,b=1,itemID=166978,lvl=10,providers={{"s",291085}},requireSkill=171,skillID=2478}),
-r(291085,{awp=80100,b=1,itemID=166977,lvl=10,providers={{"s",291084}},requireSkill=171,skillID=2478}),
-r(286923,{awp=80100,b=1,itemID=165930,lvl=10,providers={{"s",286922}},requireSkill=171,skillID=2478}),
-r(286922,{awp=80100,b=1,itemID=165929,lvl=10,providers={{"s",286921}},requireSkill=171,skillID=2478}),
-r(305993,{awp=80300,b=1,itemID=171086,lvl=10,providers={{"s",305994}},requireSkill=171,skillID=2478})}),
+r(291086,{b=1,itemID=166978,lvl=10,providers={{"s",291085}},requireSkill=171,skillID=2478}),
+r(291085,{b=1,itemID=166977,lvl=10,providers={{"s",291084}},requireSkill=171,skillID=2478}),
+r(286923,{b=1,itemID=165930,lvl=10,providers={{"s",286922}},requireSkill=171,skillID=2478}),
+r(286922,{b=1,itemID=165929,lvl=10,providers={{"s",286921}},requireSkill=171,skillID=2478}),
+r(305993,{awp=80300,b=1,itemID=171086,lvl=10,providers={{"s",305994}},requireSkill=171,skillID=2478})}}),
 flt(101,{
 i(160325,{b=1}),
 i(160324,{b=1,providers={{"i",160325}},g={
@@ -9900,7 +9896,7 @@ s(100845,164677,{awp=80100,f=27,lvl=50,r=1}),
 s(105462,170312,{awp=80300,f=27,lvl=50,r=2}),
 s(105458,170307,{awp=80300,f=27,lvl=50,r=1})})}),
 prof(202,{
-h(-26,{
+h(-26,{awp=80100,g={
 r(305950,{awp=80300,b=1,itemID=170408,providers={{"s",305951}},requireSkill=202,skillID=2499}),
 r(305941,{awp=80300,b=1,itemID=170406,providers={{"s",305942}},requireSkill=202,skillID=2499}),
 r(305947,{awp=80300,b=1,itemID=170410,providers={{"s",305948}},requireSkill=202,skillID=2499}),
@@ -9913,22 +9909,22 @@ r(299012,{awp=80200,b=1,itemID=168768,lvl=10,providers={{"s",299011}},requireSki
 r(299009,{awp=80200,b=1,itemID=168766,lvl=10,providers={{"s",299008}},requireSkill=202,skillID=2499}),
 r(299015,{awp=80200,b=1,itemID=168770,lvl=10,providers={{"s",299014}},requireSkill=202,skillID=2499}),
 r(299006,{awp=80200,b=1,itemID=168764,lvl=10,providers={{"s",299005}},requireSkill=202,skillID=2499}),
-r(291094,{awp=80100,b=1,itemID=166989,lvl=10,providers={{"s",291093}},requireSkill=202,skillID=2499}),
-r(291092,{awp=80100,b=1,itemID=166988,lvl=10,providers={{"s",291091}},requireSkill=202,skillID=2499}),
-r(291096,{awp=80100,b=1,itemID=166990,lvl=10,providers={{"s",291095}},requireSkill=202,skillID=2499}),
-r(291090,{awp=80100,b=1,itemID=166987,lvl=10,providers={{"s",291089}},requireSkill=202,skillID=2499}),
-r(286866,{awp=80100,b=1,itemID=165912,lvl=10,providers={{"s",286865}},requireSkill=202,skillID=2499}),
-r(286869,{awp=80100,b=1,itemID=165914,lvl=10,providers={{"s",286868}},requireSkill=202,skillID=2499}),
-r(286872,{awp=80100,b=1,itemID=165916,lvl=10,providers={{"s",286871}},requireSkill=202,skillID=2499}),
-r(286875,{awp=80100,b=1,itemID=165918,lvl=10,providers={{"s",286874}},requireSkill=202,skillID=2499}),
+r(291094,{b=1,itemID=166989,lvl=10,providers={{"s",291093}},requireSkill=202,skillID=2499}),
+r(291092,{b=1,itemID=166988,lvl=10,providers={{"s",291091}},requireSkill=202,skillID=2499}),
+r(291096,{b=1,itemID=166990,lvl=10,providers={{"s",291095}},requireSkill=202,skillID=2499}),
+r(291090,{b=1,itemID=166987,lvl=10,providers={{"s",291089}},requireSkill=202,skillID=2499}),
+r(286866,{b=1,itemID=165912,lvl=10,providers={{"s",286865}},requireSkill=202,skillID=2499}),
+r(286869,{b=1,itemID=165914,lvl=10,providers={{"s",286868}},requireSkill=202,skillID=2499}),
+r(286872,{b=1,itemID=165916,lvl=10,providers={{"s",286871}},requireSkill=202,skillID=2499}),
+r(286875,{b=1,itemID=165918,lvl=10,providers={{"s",286874}},requireSkill=202,skillID=2499}),
 r(305949,{awp=80300,b=1,itemID=170409,providers={{"s",305950}},requireSkill=202,skillID=2499}),
 r(305940,{awp=80300,b=1,itemID=170407,providers={{"s",305941}},requireSkill=202,skillID=2499}),
 r(305946,{awp=80300,b=1,itemID=170411,providers={{"s",305947}},requireSkill=202,skillID=2499}),
 r(305943,{awp=80300,b=1,itemID=170405,providers={{"s",305944}},requireSkill=202,skillID=2499}),
-r(286865,{awp=80100,b=1,itemID=165911,lvl=10,providers={{"s",286864}},requireSkill=202,skillID=2499}),
-r(286868,{awp=80100,b=1,itemID=165913,lvl=10,providers={{"s",286867}},requireSkill=202,skillID=2499}),
-r(286871,{awp=80100,b=1,itemID=165915,lvl=10,providers={{"s",286870}},requireSkill=202,skillID=2499}),
-r(286874,{awp=80100,b=1,itemID=165917,lvl=10,providers={{"s",286873}},requireSkill=202,skillID=2499})}),
+r(286865,{b=1,itemID=165911,lvl=10,providers={{"s",286864}},requireSkill=202,skillID=2499}),
+r(286868,{b=1,itemID=165913,lvl=10,providers={{"s",286867}},requireSkill=202,skillID=2499}),
+r(286871,{b=1,itemID=165915,lvl=10,providers={{"s",286870}},requireSkill=202,skillID=2499}),
+r(286874,{b=1,itemID=165917,lvl=10,providers={{"s",286873}},requireSkill=202,skillID=2499})}}),
 h(-88,{
 flt(4,{
 s(105884,171008,{awp=80300,b=1,f=4,loc=40,lvl=50,requireSkill=202,spellID=279347}),
@@ -10197,15 +10193,15 @@ i(169328,{awp=80200,f=53,lvl=50,spellID=300913}),
 i(169321,{awp=80200,f=53,lvl=50,spellID=300830}),
 i(169301,{awp=80200,f=53,lvl=50,spellID=300805})})}),
 prof(755,{
-h(-26,{
+h(-26,{awp=80100,g={
 r(299018,{awp=80200,b=1,itemID=168772,lvl=10,providers={{"s",299017}},requireSkill=755,skillID=2517}),
 r(305981,{awp=80300,b=1,itemID=171083,providers={{"s",305982}},requireSkill=755,skillID=2517}),
 r(299017,{awp=80200,b=1,itemID=168771,lvl=10,providers={{"s",299016}},requireSkill=755,skillID=2517}),
-r(289175,{awp=80100,b=1,itemID=166541,lvl=10,providers={{"s",289174}},requireSkill=755,skillID=2517}),
-r(289181,{awp=80100,b=1,itemID=166543,lvl=10,providers={{"s",289180}},requireSkill=755,skillID=2517}),
-r(289174,{awp=80100,b=1,itemID=166540,lvl=10,providers={{"s",289105}},requireSkill=755,skillID=2517}),
-r(289180,{awp=80100,b=1,itemID=166542,lvl=10,providers={{"s",289179}},requireSkill=755,skillID=2517}),
-r(305980,{awp=80300,b=1,itemID=171082,providers={{"s",305981}},requireSkill=755,skillID=2517})}),
+r(289175,{b=1,itemID=166541,lvl=10,providers={{"s",289174}},requireSkill=755,skillID=2517}),
+r(289181,{b=1,itemID=166543,lvl=10,providers={{"s",289180}},requireSkill=755,skillID=2517}),
+r(289174,{b=1,itemID=166540,lvl=10,providers={{"s",289105}},requireSkill=755,skillID=2517}),
+r(289180,{b=1,itemID=166542,lvl=10,providers={{"s",289179}},requireSkill=755,skillID=2517}),
+r(305980,{awp=80300,b=1,itemID=171082,providers={{"s",305981}},requireSkill=755,skillID=2517})}}),
 ah(31252,{type="s",g={
 i(154123),
 i(168193,{awp=80200}),
@@ -10220,6 +10216,7 @@ i(168635,{awp=80200}),
 i(154120),
 i(154125),
 i(153701),
+i(168188,{awp=80200}),
 i(168192,{awp=80200}),
 i(154121),
 i(168191,{awp=80200}),
@@ -17589,7 +17586,7 @@ s(292430,244770,{f=7,loc=47,lvl=81}),
 s(292422,244762,{f=7,loc=40,lvl=58}),
 s(292399,244739,{f=4,loc=43,lvl=80}),
 s(292395,244735,{f=4,loc=40,lvl=80,requireSkill=202}),
-s(292423,244763,{f=4,loc=47,lvl=90,requireSkill=202}),
+s(292423,244763,{f=4,loc=47,lvl=90}),
 s(292400,244740,{f=5,loc=43,lvl=80}),
 s(292396,244736,{f=5,loc=40,lvl=80,requireSkill=202}),
 s(292424,244764,{f=5,loc=47,lvl=90}),

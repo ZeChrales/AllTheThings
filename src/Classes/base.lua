@@ -12,6 +12,27 @@ local containsValue = app.containsValue;
 local DelayedCallback = app.CallbackHandlers.DelayedCallback
 local TryColorizeName = app.TryColorizeName
 
+-- Release phases whose build/release date hasn't arrived yet (same rule as the default phase filter states in Settings/Pages/Phases.lua)
+local PhaseAvailability = {};
+local function IsPhaseAvailable(phaseID)
+	local available = PhaseAvailability[phaseID];
+	if available == nil then
+		local phase = app.L.PHASES and app.L.PHASES[phaseID];
+		if phase and phase.minimumBuildVersion then
+			local build = app.GameBuildVersion;
+			available = build >= phase.minimumBuildVersion
+				and phase.buildVersion and build >= phase.buildVersion
+				and (not phase.release or phase.release <= time())
+				or false;
+		else
+			available = true;
+		end
+		-- Only cache a positive result; an unreleased phase can become available mid-session when its release time passes
+		if available then PhaseAvailability[phaseID] = true; end
+	end
+	return available;
+end
+
 -- Lib Helpers
 local constructor = function(id, t, typeID)
 	if t then
@@ -112,26 +133,26 @@ app.SetCAN_RETRY_DURATION_SEC = function(sec) CAN_RETRY_DURATION_SEC = sec end
 -- Represents default field evaluation logic for all Classes unless defined within the Class
 local DefaultFields = {
 	-- Cloned groups will not directly have a parent, but they will instead have a sourceParent, so fill in with that instead
-	["parent"] = function(t)
+	parent = function(t)
 		return t.sourceParent;
 	end,
 	-- A semi-unique string value that identifies this object based on its key, or text if it doesn't have one.
-	["hash"] = function(t)
+	hash = function(t)
 		return CreateHash(t);
 	end,
-	["keyval"] = function(t)
+	keyval = function(t)
 		return t[t.key]
 	end,
 	-- Default text should be a valid link or name
-	["text"] = function(t)
+	text = function(t)
 		return t.link or TryColorizeName(t, t.name)
 	end,
 	-- modItemID doesn't exist for Items which NEVER use a modID or bonusID (illusions, music rolls, mounts, etc.)
-	["modItemID"] = function(t)
+	modItemID = function(t)
 		return t.itemID;
 	end,
 	-- whether something is considered 'missing' by seeing if it can search for itself
-	["_missing"] = function(t)
+	_missing = function(t)
 		local key = t.key;
 		-- only process this logic for real 'Things' in the game
 		if not app.ThingKeys[key] then return; end
@@ -160,14 +181,14 @@ local DefaultFields = {
 		return true
 	end,
 	-- Whether or not something is repeatable.
-	["repeatable"] = function(t)
+	repeatable = function(t)
 		return t.isDaily or t.isWeekly or t.isMonthly or t.isYearly;
 	end,
-	["costTotal"] = returnZero,
-	["upgradeTotal"] = returnZero,
-	["progress"] = returnZero,
-	["total"] = returnZero,
-	["isContainer"] = function(t)
+	costTotal = returnZero,
+	upgradeTotal = returnZero,
+	progress = returnZero,
+	total = returnZero,
+	isContainer = function(t)
 		local total = t.total
 		return total and (total > 1 or (total > 0 and not t.collectible))
 	end,
@@ -182,14 +203,14 @@ local DefaultFields = {
 		if not merge then return end
 		return merge.isOwnedCost
 	end,
-	["nmc"] = function(t)
+	nmc = function(t)
 		local c = t.c;
 		local nmc = c and not containsValue(c, app.ClassIndex) or false;
 		-- app.PrintDebug("base.nmc",t.__type,nmc)
 		t.nmc = nmc;
 		return nmc;
 	end,
-	["nmr"] = function(t)
+	nmr = function(t)
 		local races = t.races;
 		local r = t.r;
 		local nmr = (r and r ~= app.FactionID) or (races and not containsValue(races, app.RaceIndex)) or false;
@@ -197,7 +218,7 @@ local DefaultFields = {
 		t.nmr = nmr;
 		return nmr;
 	end,
-	["AccessibilityScore"] = function(t)
+	AccessibilityScore = function(t)
 		local score = 0;
 		if GetRelativeValue(t, "nmr") then
 			score = score + 20;
@@ -221,20 +242,27 @@ local DefaultFields = {
 				score = score + 1 + u;
 			end
 		end
+		local phase = GetRelativeValue(t, "phase");
+		if phase then
+			score = score + 1 + phase;
+			if not IsPhaseAvailable(phase) then
+				score = score + 10000;
+			end
+		end
 		t.AccessibilityScore = score;
 		return score;
 	end,
-	["creatureID"] = function(t)	-- TODO: Do something about this, it's silly.
+	creatureID = function(t)	-- TODO: Do something about this, it's silly.
 		return t.npcID;
 	end,
-	["filterID"] = function(t)	-- we like to use different field names in different places
+	filterID = function(t)	-- we like to use different field names in different places
 		return t.f
 	end,
-	["iconPath"] = function(t)
+	iconPath = function(t)
 		return rawget(t, "icon")
 	end,
 	-- Base ShouldExcludeFromTooltip is false, so search upwards in hierarchy for a defined result
-	["ShouldExcludeFromTooltip"] = function(t)
+	ShouldExcludeFromTooltip = function(t)
 		-- If this t has a helper defined for exclusion
 		local helper = t.ShouldExcludeFromTooltipHelper
 		if helper and helper(t) then return true end
@@ -251,7 +279,7 @@ local DefaultFields = {
 	-- (number) - the retry has been started with this duration in seconds
 	-- true - the group is pending an active retry timer
 	-- nil - the group has retried and the retry timer has not been re-started
-	["CanRetry"] = function(t)
+	CanRetry = function(t)
 		local canretry = t.__canretry
 		if canretry == nil then
 			-- first check if we can retry for this group
@@ -312,9 +340,9 @@ local DefaultFields = {
 
 local CloneDictionary = app.CloneDictionary
 -- Creates a Base Object Table which will evaluate the provided set of 'fields' (each field value being a keyed function)
-local classDefinitions, _cache = {}, nil;
+local classDefinitions = {}
 local function call(class, key, t)
-	_cache = rawget(class, key);
+	local _cache = rawget(class, key);
 	if _cache then return _cache(t) end
 end
 local function ClassError(...)
@@ -342,7 +370,7 @@ local CreateClassMeta = not app.__perf and function(fields, className)
 	return {
 		__class = class,
 		__index = function(t, key)
-			_cache = class[key];
+			local _cache = class[key];
 			---@diagnostic disable-next-line: redundant-parameter
 			if _cache then return _cache(t); end
 		end
@@ -372,7 +400,7 @@ or function(fields, className)
 	return {
 		__class = class,
 		__index = function(t, key)
-			_cache = class[key] or class.__missing[key]
+			local _cache = class[key] or class.__missing[key]
 			---@diagnostic disable-next-line: redundant-parameter
 			if _cache then return _cache(t); end
 			-- capture a new empty function return for missing keys so we can track how much missing keys are called on various classes
@@ -395,7 +423,7 @@ app.ExtendBaseClassHandler = function(field, handler)
 	end
 end
 
--- Create a dictionary of classes by their classKey, for reference in generic object contructors.
+-- Create a dictionary of classes by their classKey, for reference in generic object constructors.
 local classesByKey = setmetatable({}, {
 	__newindex = function(t, key, value)
 		if rawget(t, key) then
@@ -1043,7 +1071,7 @@ app.CreateCache = function(idField, className)
 		--]]
 		_t = cache.GetCached(t);
 		if _t then
-			-- set a default provided cache value if any default function was provided and evalutes to a value
+			-- set a default provided cache value if any default function was provided and evaluates to a value
 			v = _t[field];
 			if v ~= nil then return v end
 
@@ -1171,13 +1199,13 @@ end
 --[[
 -- Proof of Concept with Class Conditionals
 local fields = {
-	["name"] = function(t)
+	name = function(t)
 		return "Loki";
 	end,
 	MyField = function(t)
 		return "MyField";
 	end,
-	["OnTest"] = function()
+	OnTest = function()
 		return function(t)
 			print(t.name .. " (" .. t.__type .. "): I'm a god!");
 		end

@@ -89,7 +89,7 @@ settings.RequiredForInsaneMode = {
 	Conduits = app.GameBuildVersion >= 100000,
 	Decor = app.GameBuildVersion >= 110207,
 	MountMods = app.GameBuildVersion >= 100000,
-	Exploration = app.GameBuildVersion < 100000,	-- CRIEVE NOTE: For now, until Blizzard adds an exploration API that doesn't suck
+	Exploration = app.GameBuildVersion < 100000 and not app.IsForever,	-- CRIEVE NOTE: For now, until Blizzard adds an exploration API that doesn't suck
 	FirstCrafts = app.GameBuildVersion >= 100000,
 	FlightPaths = true,
 	Followers = app.GameBuildVersion >= 60000,
@@ -295,7 +295,7 @@ local GeneralSettingsBase = {
 		["Thing:Conduits"] = app.GameBuildVersion >= 100000,
 		["Thing:Decor"] = app.GameBuildVersion >= 110207,
 		["Thing:MountMods"] = app.GameBuildVersion >= 100000,
-		["Thing:Exploration"] = app.GameBuildVersion < 100000,	-- CRIEVE NOTE: For now, until Blizzard adds an exploration API that doesn't suck
+		["Thing:Exploration"] = app.GameBuildVersion < 100000 and not app.IsForever,	-- CRIEVE NOTE: For now, until Blizzard adds an exploration API that doesn't suck
 		["Thing:FirstCrafts"] = app.GameBuildVersion >= 100000,
 		["Thing:FlightPaths"] = true,
 		["Thing:Followers"] = app.GameBuildVersion >= 60000,
@@ -370,6 +370,9 @@ local TooltipSettingsBase = {
 		["Expand:MiniList"] = true,
 		["CompletedBy"] = true,
 		["KnownBy"] = true,
+		["GroupByRealm"] = false,
+		["GroupByFaction"] = false,
+		["UsefulFor"] = true,
 		["Locations"] = 5,
 		["InactiveWindowAlpha"] = 1,
 		["MainListScale"] = 1,
@@ -457,6 +460,7 @@ local TooltipSettingsBase = {
 		["c"] = true,
 		["r"] = true,
 		["u"] = true,
+		["phase"] = true,
 
 		-- TEMPORARY
 		["achID"] = true,
@@ -899,7 +903,7 @@ settings.GetModeString = function(self)
 				thingActive = settings:Get(key);
 				if thingActive then
 					-- Heirloom Upgrades only count when Heirlooms are enabled
-					-- This prevents the heirloom uprades and quests locked from being displayed as a mode.
+					-- This prevents the heirloom upgrades and quests locked from being displayed as a mode.
 					-- Only 'Things' in General settings count towards the mode string
 					if (key ~= "Thing:HeirloomUpgrades" or settings:Get("Thing:Heirlooms"))
 						and keyPrefix == "Thing"
@@ -1017,7 +1021,7 @@ settings.GetShortModeString = function(self)
 				thingActive = settings:Get(key);
 				if thingActive then
 					-- Heirloom Upgrades only count when Heirlooms are enabled
-					-- This prevents the heirloom uprades and quests locked from being displayed as a mode.
+					-- This prevents the heirloom upgrades and quests locked from being displayed as a mode.
 					if key ~= "Thing:HeirloomUpgrades" or settings:Get("Thing:Heirlooms") then
 						thingCount = thingCount + 1
 						things[#things + 1] = thingName
@@ -1322,9 +1326,10 @@ ATTSettingsPanelMixin = {
 			app.print("Invalid Checkbox Info")
 			text = "INVALID CHECKBOX"
 		end
+		--- Settings checkbox with an ATT text label and refresh/click handlers.
 		---@class ATTSettingsCheckButton: CheckButton
-		---@field Text FontString
-		---@field OnRefreshCheckedDisabled any
+		---@field Text FontString # Text label displayed beside the settings checkbox.
+		---@field OnRefreshCheckedDisabled any # Default refresh handler that checks, disables, and fades the checkbox.
 		local cb = CreateFrame("CheckButton", self:GetName() .. "-" .. text, self, settings.UITemplates.Checkbox)
 		Mixin(cb, ATTSettingsObjectMixin);
 		self:RegisterObject(cb);
@@ -1347,8 +1352,9 @@ ATTSettingsPanelMixin = {
 		local width = opts.width or 150
 		local template = opts.template or "InputBoxTemplate"
 
+		--- Settings text input with optional labels and configurable handlers.
 		---@class ATTOptionsEditBox: EditBox
-		---@field AddLabel fun(self:any, label: string)
+		---@field AddLabel fun(self:any, label: string) # Creates and registers a text label above the edit box.
 		local editbox = CreateFrame("EditBox", name, self, template)
 		Mixin(editbox, ATTSettingsObjectMixin);
 		self:RegisterObject(editbox);
@@ -1404,6 +1410,7 @@ ATTSettingsPanelMixin = {
 		local refs = opts.refs
 		local template = opts.template or "UIPanelButtonTemplate"
 
+		--- Configurable settings action button registered with its options panel.
 		---@class ATTSettingsButton: ATTButtonClass
 		local f = CreateFrame("Button", name, self, template)
 		Mixin(f, ATTSettingsObjectMixin)
@@ -1442,8 +1449,10 @@ ATTSettingsPanelMixin = {
 	-- :CreateCheckBox(text, OnRefresh, OnClick) - create a checkbox attached to the scrollable area
 	CreateScrollFrame = function(self)
 		-- Create the ScrollFrame
+		--- Scrollable viewport for the settings panel's child controls.
 		---@class ATTOptionsScrollFrame: ScrollFrame
 		local scrollFrame = CreateFrame("ScrollFrame", settings:GetName().."SF"..app.UniqueCounter.AddScrollframe, self, "ScrollFrameTemplate")
+		--- Settings control container inside an options scroll frame.
 		---@class ATTOptionsScrollFrameChild: Frame
 		local child = CreateFrame("Frame", settings:GetName().."SCF"..app.UniqueCounter.AddScrollableframe)
 		Mixin(child, ATTSettingsPanelMixin);
@@ -1556,9 +1565,10 @@ settings.Open = function(self)
 	openToCategory(RootCategoryID or AddOnCategoryID)
 end
 settings.CreateOptionsPage = function(self, text, parentCategory, isRootCategory)
+	--- Settings page frame registered as an options category or subcategory.
 	---@class ATTSubCategoryFrame: Frame
-	---@field CreateCheckBox fun(self: any, locale: string, OnRefresh: function, OnClick: function)
-	---@field CreateHeaderLabel fun(self: any, locale: string)
+	---@field CreateCheckBox fun(self: any, locale: string, OnRefresh: function, OnClick: function) # Creates a labeled settings checkbox with refresh and click handlers.
+	---@field CreateHeaderLabel fun(self: any, locale: string) # Creates and registers a left-aligned settings section heading.
 	local subcategory = CreateFrame("Frame", settings:GetName() .. "-" .. text, InterfaceOptionsFramePanelContainer);
 	Mixin(subcategory, ATTSettingsPanelMixin);
 	self:RegisterObject(subcategory);
@@ -1810,6 +1820,7 @@ settings.UpdateMode = function(self, doRefresh)
 		app.MODE_DEBUG = true;
 		filterSet.Group()
 		filterSet.Unobtainable()
+		filterSet.Phase()
 		filterSet.Visible(true)
 		filterSet.FilterID()
 		filterSet.Class()
@@ -1831,18 +1842,28 @@ settings.UpdateMode = function(self, doRefresh)
 		filterSet.DefaultGroup(true)
 		filterSet.DefaultThing(true)
 
-		-- Check for any inactive unobtainable filters.
-		local anyFiltered = false
-		for u,phase in pairs(L.PHASES) do
-			if not settings:GetUnobtainableFilter(u) then
-				anyFiltered = true;
-				break;
+		-- Check for any inactive unobtainable or phase filters.
+		-- Release Phases have build version information, Unobtainable Filters do not.
+		local anyUnobtainableFiltered, anyPhaseFiltered = false, false
+		for id,phase in pairs(L.PHASES) do
+			if not settings:GetUnobtainableFilter(id) then
+				if phase.minimumBuildVersion or phase.buildVersion then
+					anyPhaseFiltered = true;
+				else
+					anyUnobtainableFiltered = true;
+				end
+				if anyUnobtainableFiltered and anyPhaseFiltered then break; end
 			end
 		end
-		if anyFiltered then
+		if anyUnobtainableFiltered then
 			filterSet.Unobtainable(true)
 		else
 			filterSet.Unobtainable()
+		end
+		if anyPhaseFiltered then
+			filterSet.Phase(true)
+		else
+			filterSet.Phase()
 		end
 		if self:Get("Show:TrackableThings") then
 			filterSet.Trackable(true)

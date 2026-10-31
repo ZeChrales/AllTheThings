@@ -1,7 +1,7 @@
 local Items = ItemDBConditional;
 local MountDB = MountDB;
 local i = function(itemID, spellID)
-	local item = { ["mountID"] = spellID, ["ignoreBonus"] = true, ["_wipe"] = { "spellID" } }
+	local item = { mountID = spellID, ignoreBonus = true, _wipe = { "spellID" } }
 	if itemID > 0 then
 		Items[itemID] = item
 	end
@@ -48,6 +48,12 @@ i(236665, 1220568); -- Reins of Famine
 -- Phase 8
 i(239694, 1229305); -- Covenant of Light
 i(239695, 1229308); -- Scarlet Steed
+-- #endif
+
+-- FOREVER --
+-- #if FOREVER
+i(280544, 1309208);	-- Cerulean Prideclaw
+i(280611, 1309405);	-- Veteran Adventurer's Loyal Companion
 -- #endif
 
 -- TBC Classic --
@@ -1782,7 +1788,7 @@ i(206162, 407555);	-- Tarecgosa's Visage
 i(205246, 409034);	-- Vicious War Snail [A]
 i(205245, 409032);	-- Vicious War Snail [H]
 i(204361, 368893);	-- Winding Slitherdrake
-i(206167, 397406);	-- Wonderous Wavewhisker
+i(206167, 397406);	-- Wondrous Wavewhisker
 
 ------------------
 -- PATCH 10.1.5 --
@@ -1961,7 +1967,6 @@ i(223285, 448851);	-- Underlight Corrupted Behemoth
 i(223470, 449141);	-- [PH] Alliance Wolf Mount Red
 i(223460, 449133);	-- [PH] Nightsaber Horde Mount White
 i(223282, 448845);	-- Blue Old God Fish Mount
-i(223284, 448849);	-- Underlight Shorestalker
 
 ------------------
 -- PATCH 11.0.0 --
@@ -2155,8 +2160,6 @@ i(235556, 1217342);	-- Violet Darkmoon Charger
 i(229947, 466021);	-- Violet Goblin Shredder
 --- NYI ---
 i(232523, 460013);	-- G-99 Breakneck
-i(235659, 1218014);	-- Midnight Butterfly
-i(235554, 1217340);	-- Midnight Darkmoon Charger
 i(235557, 1217343);	-- Snowy Darkmoon Charger
 
 ------------------
@@ -2185,7 +2188,6 @@ i(211089, 428068);	-- Voidfire Deathcycle
 --- NYI ---
 i(238902, 1226533);	-- Autumn Harvesthog
 i(238968, 1226856);	-- Lavaborn Cormaera
-i(238900, 1226531);	-- Summer Harvesthog
 i(238901, 1226532);	-- Winter Harvesthog
 
 ------------------
@@ -2206,7 +2208,6 @@ i(245936, 1240003);	-- Unarmored Deathtusk Felboar
 i(243596, 1235819);	-- Wailing Banshee's Charger
 --- NYI ---
 i(243593, 1234859);	-- Banshee's Chilling Charger
-i(243597, 1235820);	-- Banshee's Sickening Charger
 i(243590, 1235763);	-- Grandmaster's Deep Board
 i(243592, 1235806);	-- Grandmaster's Smokey Board
 
@@ -2483,7 +2484,6 @@ i(257225, 1261362);	-- Witherbark Warbear Harness
 --- NYI ---
 i(268878, 1283906);	-- [PH] Giant Eagle Sunwalker Mount Blue
 i(268875, 1283911);	-- [PH] Giant Eagle Sunwalker Mount White
-i(268362, 1282274);	-- Gilnean Copper Charger
 i(268360, 1282268);	-- Gilnean Iron Charger
 i(260421, 1266285);	-- Void-Corrupted Amani Warbear Kit
 
@@ -2518,7 +2518,9 @@ i(272920, 1291315);	-- Spring Panda
 ------------------
 i(275657, 1297404);	-- Apophic Soul Crusher
 i(275656, 1297224);	-- Auriferous Venomfang
+i(275551, 1296724);	-- Autumnal Witchwick's Rider
 i(250191, 1250481);	-- Bilebound Ur'zul
+i(275573, 1296988);	-- Blushing Witchwick's Rider
 i(276881, 1301070);	-- Breath of Blight
 i(276882, 1301074);	-- Breath of Ruin
 i(275654, 1297217);	-- Caustic Venomfang
@@ -2534,6 +2536,7 @@ i(263449, 1270520);	-- Fluffy Comfy Flying Quilt
 i(274164, 142515);	-- Hearthkeeper's Wandering Caravan
 i(275659, 1297407);	-- Hexflame Reaver
 i(276802, 1300778);	-- Indigo Coiled Horror
+i(275571, 1296986);	-- Moonlit Witchwick's Rider
 i(275660, 1297408);	-- Preyhunter's Fury
 i(275658, 1297405);	-- Primeval Skyfriend
 i(276803, 1300779);	-- Ruby Writhe
@@ -2549,37 +2552,59 @@ i(280599, 1309376);	-- Veteran Adventurer's Loyal Companion
 i(275433, 1296670);	-- Vicious Lightbloom Boar [A]
 i(275432, 1296672);	-- Vicious Lightbloom Boar [H]
 i(276551, 1299963);	-- Violet-Backed Skyfang
+i(277261, 1301817);	-- Whoofle Bramblewing
+i(280581, 1309340);	-- Wintry Witchwick's Rider
 i(268833, 1283837);	-- Zothwing Darkseeker
 i(268834, 1283838);	-- Zothwing Deepseeker
 --- NYI ---
 i(276800, 1300780);	-- [PH]Writhes Mount - Yellow
-i(275551, 1296724);	-- Autumnal Witchwick's Rider	(SHOP OR TRADING POST)
-i(275573, 1296988);	-- Blushing Witchwick's Rider	(SHOP OR TRADING POST)
 i(275574, 1296989);	-- Carmine Witchwick's Rider	(SHOP OR TRADING POST)
 i(278576, 1305209);	-- Crested Violet Leafmimic		(SHOP OR TRADING POST)
-i(275571, 1296986);	-- Moonlit Witchwick's Rider	(SHOP OR TRADING POST)
 i(275570, 1296985);	-- Mossy Witchwick's Rider		(SHOP OR TRADING POST)
 i(275572, 1296987);	-- Scarlet Witchwick's Rider	(SHOP OR TRADING POST)
 i(0, 1295958);	-- Swift Spectral Eagle
 i(275655, 1297223);	-- Venom Serpent - White
 i(280599, 1309376);	-- Veteran Adventurer's Loyal Companion
-i(277261, 1301817);	-- Whoofle Bramblewing			(SHOP OR TRADING POST)
 i(276552, 1299964);	-- Wind Serpent - Pink
 i(276550, 1299962);	-- Wind Serpent - White
-i(280581, 1309340);	-- Wintry Witchwick's Rider		(SHOP OR TRADING POST)
 
 ------------------
 -- PATCH 12.1.5 --
 ------------------
+i(282657, 1314189);	-- Ashen Dreadglider
 i(276926, 1301331);	-- Corrupted Swarmer
+i(278743, 1305612);	-- Giant Grrloc
+i(282649, 1314169);	-- Hot Motocross Bunmover 4600
+i(275756, 1297808);	-- Living Heartsbane Cauldron
 i(283363, 1314715);	-- Loa-Blessed Wayfarer
 i(282414, 1313788);	-- Sporebearer Fungal Strider
---- Unsorted ---
+--- UNSORTED ---
 i(280521, 1309112);	-- [PH] Brown Cat Mount
 i(280520, 1309110);	-- [PH] Purple Cat Mount
 i(280522, 1309114);	-- [PH] White Blue Cat Mount
 i(282646, 1314165);	-- Hot Motocross Bunmover 4000
 i(282647, 1314166);	-- Hot Motocross Bunmover 4200
 i(282648, 1314168);	-- Hot Motocross Bunmover 4400
-i(282649, 1314169);	-- Hot Motocross Bunmover 4600
-i(275756, 1297808);	-- Living Heartsbane Cauldron
+
+------------------
+-- PATCH 12.1.7 --
+------------------
+i(268362, 1282274);	-- Ambermill Traveler's Rouncey
+i(282272, 1313284);	-- Autumn Dream Jumper
+i(238900, 1226531);	-- Enchanted Woodland Wanderer
+i(243597, 1235820);	-- Faith-Cursed Courser
+i(235554, 1217340);	-- Lost Mare of the Maddening Faire
+i(287513, 1323203);	-- Markeet of the Infinite
+i(235659, 1218014);	-- Night Court Courier
+i(275255, 1296315);	-- Shadowbound Storybook
+i(282278, 1313363);	-- Shadowpaw Wood Watcher
+i(282271, 1313280);	-- Stone-Carved Crusher
+i(223284, 448849);	-- The Watcher in the Waves
+--- UNSORTED ---
+i(274262, 1293485);	-- [PH] Dino Size Test
+i(286632, 1320798);	-- Attuned Ancient Stegodon
+i(286633, 1320801);	-- Crackling Ancient Stegodon
+i(288214, 1325226);	-- Reanimated Skeletal Raptor
+i(286634, 1320802);	-- Rumbling Jungle Stegodon
+i(286635, 1320803);	-- Thundering Primal Stegodon
+i(287092, 1321944);	-- Winterrrgl's Pine-Powered Candy Cane Contraption

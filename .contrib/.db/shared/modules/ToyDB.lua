@@ -2,7 +2,7 @@ local Items = ItemDBConditional;
 local i = function(itemID)
 	-- This is necessary because Blizzard sometimes tells us that things are Toys when they are not Toys.
 	-- So we cannot trust them and have to do it ourselves.
-	Items[itemID] = { ["type"] = "toyID" };
+	Items[itemID] = { type = "toyID" };
 end
 
 -- #if ANYCLASSIC
@@ -14,7 +14,7 @@ i(184871);	-- Dark Portal
 i(38233);	-- Path of Illidan
 
 -- Wrath Classic --
-i(40110);	-- Haunted Momento (Should be a toy...)
+i(40110);	-- Haunted Memento (Should be a toy...)
 i(198647);	-- Fishspeaker's Lucky Lure
 i(38506);	-- Don Carlos' Famous Hat	-- With ICC Patch of Wrath Classic, they made the hat (the original removed version) into a Toy. Whether it also functions as a transmog still is not known.
 
@@ -57,6 +57,12 @@ i(215449);	-- World Shrinker
 i(228189);	-- Gift of Gob
 i(228502);	-- Piccolo of the Flaming Fire (Blizzard... Why did you duplicate this... Dumbasses.)
 -- #endif
+
+-----------------
+--   FOREVER   --
+-----------------
+i(276236);	-- Holstered Replica Ironforge Air Rifle
+i(280740);	-- Shen'dorei Windwell
 
 -----------------
 -- PATCH 2.0.1 --
@@ -802,7 +808,7 @@ i(164373);	-- Enchanted Soup Stone
 i(163735);	-- Foul Belly
 i(161342);	-- Gem of Acquiescence
 i(164310);	-- Glorious Pennant
-i(163201);	-- Gnoll Targetting Barrel
+i(163201);	-- Gnoll Targeting Barrel
 i(162973);	-- Greatfather Winter's Heartstone
 i(159749);	-- Haw'li's Hot & Spicy Chili
 i(163045);	-- Headless Horseman's Hearthstone
@@ -1634,13 +1640,21 @@ i(279590);	-- Venomous Champion's Illustrious Banner
 -- PATCH 12.1.5 --
 ------------------
 i(275039);	-- Curse of the Aqir
+i(280823);	-- Feathers of Akil'zon
 i(281136);	-- Hiveborne Hearthstone
 i(286643);	-- Kinduru's Spiriting Quill
 i(284159);	-- Libram of the Matriarch
-i(281615);	-- Shadeweaver's Hearthstone
---- UNSORTED ---
-i(280823);	-- Feathers of Akil'zon
 i(280820);	-- Loa Blessed Victory
 i(280822);	-- Nalorakk's Strength Charm
+i(284572);	-- Rexxar's Companion Transformation
 i(280825);	-- Rite of Jan'alai's Flame
+i(281615);	-- Shadeweaver's Hearthstone
 i(280821);	-- Trail of Halazzi
+
+------------------
+-- PATCH 12.1.7 --
+------------------
+i(288899);	-- Hexed Tiny Tome
+i(288912);	-- Wood-Cursed Hearthstone
+--- UNSORTED ---
+i(286660);	-- Throw Bow

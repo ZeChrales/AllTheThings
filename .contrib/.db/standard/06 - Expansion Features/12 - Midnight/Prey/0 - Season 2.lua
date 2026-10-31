@@ -2,7 +2,7 @@
 --      E X P A N S I O N   F E A T U R E S    M O D U L E       --
 -------------------------------------------------------------------
 
-PREY_MID_S2 = createHeader({
+local PREY_MID_S2 = createHeader({
 	readable = "Prey MID S2",
 	icon = [[~_.asset("Category_Prey")]],
 	text = {
@@ -36,8 +36,8 @@ local PREYSEEKER_BOX_SYM_SEASON_TWO = {
 root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 	n(PREY, {
 		n(PREY_MID_S2, {
-			["timeline"] = { ADDED_12_1_0, REMOVED_12_2_0 },
-			["groups"] = {
+			timeline = { ADDED_12_1_0, REMOVED_12_2_0 },
+			groups = {
 				n(ACHIEVEMENTS, {
 					ach(63611, {	-- Big Prey Hunter (Season 2)
 						title(792),	-- <Name>, Servant of Astalor
@@ -129,18 +129,26 @@ root(ROOTS.ExpansionFeatures, expansion(EXPANSION.MID, {
 						i(275917),	-- Preyhunter's Veteran Sack
 						-- Boxes, Season 2
 						i(275918, {	-- Preyhunter's Adventurer Chest
-							["sym"] = PREYSEEKER_BOX_SYM_SEASON_TWO,
+							sym = PREYSEEKER_BOX_SYM_SEASON_TWO,
 						}),
 						i(275822, {	-- Preyhunter's Veteran Chest
-							["sym"] = PREYSEEKER_BOX_SYM_SEASON_TWO,
+							sym = PREYSEEKER_BOX_SYM_SEASON_TWO,
 						}),
 						i(275726, {	-- Preyhunter's Champion Chest
-							["sym"] = PREYSEEKER_BOX_SYM_SEASON_TWO,
+							sym = PREYSEEKER_BOX_SYM_SEASON_TWO,
 						}),
 						i(276104, {	-- Aspiring Preyhunter's Chest
-							["sym"] = PREYSEEKER_BOX_SYM_SEASON_TWO,
+							sym = PREYSEEKER_BOX_SYM_SEASON_TWO,
 						}),
+						-- Bonus roll
+						i(280131),	-- Nebulous Voidcache: Prey
 					}),
+					-- Weekly Bonus Reputations
+					-- Season 2 Prey
+					hqt_bonusRenown_weekly(98547, 2808),	-- 1st per week
+					hqt_bonusRenown_weekly(98548, 2808),	-- 2nd per week
+					hqt_bonusRenown_weekly(98549, 2808),	-- 3rd per week
+					hqt_bonusRenown_weekly(98550, 2808),	-- 4th per week
 				}),
 				n(FACTIONS, {
 					faction(2808),	-- Prey: Season 2

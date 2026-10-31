@@ -19,7 +19,7 @@
 	<Script file="Bounty.lua"/>
 	<Script file="Class Specific Things.lua"/>
 	<Script file="Collected Sources.lua"/>
-    <Script file="Commands.lua"/>
+	<Script file="Commands.lua"/>
 	<Script file="Debugger.lua"/>
 	<Script file="Exploration.lua"/>
 	<Script file="Export.lua"/>
@@ -51,6 +51,7 @@
 	<Script file="Toys.lua"/>
 	<Script file="Tradeskills.lua"/>
 	<Script file="Retail/Tradeskills.lua"/>
+	<Script file="White Collectible Transmog.lua"/>
 	<Script file="World Quests.lua"/>
 
 	<Frame name="AllTheThings_Tab" virtual="true" inherits="QuestLogTabButtonTemplate">

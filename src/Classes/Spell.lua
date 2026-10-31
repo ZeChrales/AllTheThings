@@ -1,4 +1,3 @@
-
 -- Spell Class
 local _, app = ...
 local L = app.L
@@ -45,7 +44,7 @@ local SpellQuestOverrides = setmetatable({}, { __index = function(t,key)
 	return saved
 end})
 -- Consolidates some spell checking
----@param spellID number
+---@param spellID number # Spell ID to check for knowledge or linked quest completion.
 ---@return boolean isKnown
 local IsSpellKnownHelper
 -- In 11.2 some spell checking was consolidated
@@ -344,8 +343,8 @@ do
 	-- WoW API Cache
 	if app.GameBuildVersion >= 40000 and app.GameBuildVersion <= 70000 then
 		local GlyphDB = app.GlyphDB or {};
-		local GetGlyphInfo, GetNumGlyphs =
-			  GetGlyphInfo, GetNumGlyphs;
+		local GetGlyphInfo, GetNumGlyphs
+			= GetGlyphInfo, GetNumGlyphs;
 		app.AddEventHandler("OnRefreshCollections", function()
 			local saved, char, none = {}, {}, {}
 			for index=1,GetNumGlyphs(),1 do

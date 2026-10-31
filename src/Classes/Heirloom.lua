@@ -1,4 +1,3 @@
-
 local _, app = ...
 local L = app.L
 
@@ -147,8 +146,6 @@ do
 			-- unlocking the heirloom is the only thing contained in the heirloom
 			if C_Heirloom_GetHeirloomMaxUpgradeLevel(t.itemID) then
 				local unlock = CreateHeirloomUnlock(t.itemID, {
-					e = t.e,
-					u = t.u,
 					-- TODO: maybe can do this eventually
 					-- providers = {{"i",t.itemID}},
 				});
@@ -258,8 +255,6 @@ do
 								CreateHeirloomLevel(itemID, {
 									levelMax = upgrades,
 									level = i,
-									e = heirloom.e,
-									u = heirloom.u,
 								})
 							})
 						)

@@ -53,9 +53,11 @@ app.ResolveQuestData = function(t)
 		local questData, otherQuestData;
 		if app.FactionID == HORDE_FACTION_ID then
 			questData = hqd;
+			questData.races = HORDE_ONLY;
 			otherQuestData = aqd;
 		else
 			questData = aqd;
+			questData.races = ALLIANCE_ONLY;
 			otherQuestData = hqd;
 		end
 
@@ -254,6 +256,20 @@ local function GetRelativeByFunc(group, func)
 		return func(group) or GetRelativeByFunc(group.sourceParent or group.parent, func)
 	end
 end
+-- Iterates down a whole tree, filtering matching groups into the results table
+local function GetAllNestedGroupsByFunc(results, groups, func)
+	local g,o
+	for i=1,#groups do
+		o = groups[i]
+		if func(o) then results[#results + 1] = o end
+		g = o.g
+		if g then
+			for i=1,#g do
+				GetAllNestedGroupsByFunc(results, g[i], func)
+			end
+		end
+	end
+end
 app.GetRelativeByFunc = GetRelativeByFunc;
 app.AssignChildren = AssignChildren;
 app.AssignFieldValue = AssignFieldValue;
@@ -264,6 +280,7 @@ app.GetDeepestRelativeFunc = GetDeepestRelativeFunc;
 app.GetDeepestRelativeValue = GetDeepestRelativeValue;
 app.GetRelativeField = GetRelativeField;
 app.GetRawRelativeField = GetRawRelativeField
+app.GetAllNestedGroupsByFunc = GetAllNestedGroupsByFunc
 app.GetRelativeValue = GetRelativeValue;
 app.IsComplete = function(o)
 	local total = o.total
@@ -277,7 +294,7 @@ local GetItemIcon = app.WOWAPI.GetItemIcon;
 local GetSpellIcon = app.WOWAPI.GetSpellIcon
 app.GetIconFromProviders = function(group)
 	local qss = group.qss;
-	if qss then 
+	if qss then
 		local icon = GetItemIcon(qss[1]);
 		if icon then return icon; end
 	end
@@ -464,8 +481,8 @@ else
 end
 
 -- Determine the player's name and class information.
-local name, realm = UnitName("player");
-if not realm then realm = GetRealmName(); end
+local name = GetUnitName("player");
+local realm = GetRealmName();
 local className, classFile, classID = UnitClass("player");
 local classColorPrefix = "|c".. (RAID_CLASS_COLORS[classFile].colorStr or "ff1eff00");
 app.Me = classColorPrefix .. name .. "-" .. realm .. "|r";
@@ -613,6 +630,7 @@ local SetATTTooltip = function(self, text)
 	end);
 end
 
+--- Frame prototype extended with ATT tooltip and coroutine helpers.
 ---@class ATTFrameClass: Frame
 local frameClass = getmetatable(frame).__index;
 frameClass.SetATTTooltip = SetATTTooltip;
@@ -623,6 +641,7 @@ app.StartATTCoroutine = function(self, ...)
 end
 
 local button = CreateFrame("Button", nil, frame);
+--- Button prototype extended with ATT tooltip and coroutine helpers.
 ---@class ATTButtonClass: Button
 local buttonClass = getmetatable(button).__index;
 buttonClass.StartATTCoroutine = StartATTCoroutine;	-- don't think this is used...
@@ -630,18 +649,21 @@ buttonClass.SetATTTooltip = SetATTTooltip;
 button:Hide();
 
 local checkbutton = CreateFrame("CheckButton", nil, frame);
+--- CheckButton prototype extended with ATT tooltip helpers.
 ---@class ATTCheckButtonClass: CheckButton
 local checkButtonClass = getmetatable(checkbutton).__index;
 checkButtonClass.SetATTTooltip = SetATTTooltip;
 checkbutton:Hide();
 
 local editbox = CreateFrame("EditBox", nil, frame);
+--- EditBox prototype extended with ATT tooltip helpers.
 ---@class ATTEditBoxClass: EditBox
 local editBoxClass = getmetatable(editbox).__index;
 editBoxClass.SetATTTooltip = SetATTTooltip;
 editbox:Hide();
 
 local slider = CreateFrame("Slider", nil, frame);
+--- Slider prototype extended with ATT tooltip helpers.
 ---@class ATTEditBoxClass: Slider
 local sliderClass = getmetatable(slider).__index;
 sliderClass.SetATTTooltip = SetATTTooltip;
@@ -729,6 +751,7 @@ end
 function app:ShowPopupDialogWithMultiLineEditBox(text, onclick, label)
 	local f = ATTEditBox;
 	if not f then
+		--- Movable, resizable popup dialog for displaying or editing multiline text.
 		---@class ATTEditBox: BackdropTemplate, Frame
 		f = CreateFrame("Frame", "ATTEditBox", UIParent, "DialogBoxFrame")
 		f:SetPoint("CENTER")
@@ -750,6 +773,7 @@ function app:ShowPopupDialogWithMultiLineEditBox(text, onclick, label)
 		f:SetScript("OnMouseUp", f.StopMovingOrSizing)
 
 		-- ScrollFrame
+		--- Scrollable viewport for the popup dialog's multiline text input.
 		---@class ATTEditBoxScrollFrame: ScrollFrame
 		local sf = CreateFrame("ScrollFrame", "ATTEditBoxScrollFrame", f, "UIPanelScrollFrameTemplate")
 		---@diagnostic disable-next-line: undefined-field
@@ -774,6 +798,7 @@ function app:ShowPopupDialogWithMultiLineEditBox(text, onclick, label)
 		end
 
 		-- EditBox
+		--- Multiline text input whose contents are passed to the popup's submit callback.
 		---@class ATTEditBoxEditBox: EditBox
 		local eb = CreateFrame("EditBox", "ATTEditBoxEditBox", sf)
 		eb:SetSize(sf:GetSize())
@@ -861,6 +886,9 @@ app.DataStyleExporters = DataStyleExporters
 -- funcs.afterData(data, depth)
 --   Optional. If returns a string, it is inserted after current data.
 --
+-- funcs.getSub(data)
+--   Optional. If returns a table, this table is considered the 'Sub' data for the current data (this defaults to data.g)
+--
 -- funcs.beforeSub(data, depth)
 --   Optional. If returns a string, it is inserted before descendants are processed.
 --
@@ -892,7 +920,7 @@ end
 local function ExportDataRecursively(data, styleFuncs, strings, depth)
 	if not data then return end
 	depth = depth or 0
-	local g = data.g
+	local g = styleFuncs.getSub and styleFuncs.getSub(data) or data.g
 	if not g or type(g) ~= "table" then
 		g = nil
 	end
@@ -972,4 +1000,34 @@ function app:ExportStylizedData(window, style)
 	-- join each style string with a newline for readability
 	local out = app.TableConcat(DataStyleStrings, nil, nil, "\n")
 	app:ShowPopupDialogWithMultiLineEditBox(out)
+end
+
+function app:RenderStylizedRawData(data, style)
+	-- style must exist and window must have data
+	local styleFuncs = DataStyleExporters[style]
+	if not styleFuncs then
+		app.print("Export Style not defined!",style)
+		return
+	end
+	if not data then
+		app.print("data not defined!")
+		return
+	end
+	local DataStyleStrings = {}
+	if styleFuncs.beforeExport then
+		local str = styleFuncs.beforeExport(data)
+		if str then
+			DataStyleStrings[#DataStyleStrings + 1] = str
+		end
+	end
+	ExportDataRecursively(data, styleFuncs, DataStyleStrings)
+	if styleFuncs.afterExport then
+		local str = styleFuncs.afterExport(data)
+		if str then
+			DataStyleStrings[#DataStyleStrings + 1] = str
+		end
+	end
+	-- join each style string with a newline for readability
+	local out = app.TableConcat(DataStyleStrings, nil, nil, "\n")
+	return out
 end

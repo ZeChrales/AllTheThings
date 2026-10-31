@@ -2,6 +2,7 @@
 local _, app = ...;
 local L = app.L;
 local GetItemInfo = app.WOWAPI.GetItemInfo;
+local GetCoinTextureString = app.WOWAPI.GetCoinTextureString;
 
 -- Global locals
 local debugprofilestop, next, pcall, select, tinsert, tonumber, type,math_min
@@ -220,6 +221,9 @@ app:CreateWindow("Auctions", {
 	TooltipAnchor = "ANCHOR_RIGHT",
 	IgnoreQuestUpdates = true,
 	Preload = true,
+	Defaults = {
+		movable = false,
+	},
 	OnInit = function(self, handlers)
 		local function ProcessAuctions()
 			pcall(self.UnregisterEvent, self, "AUCTION_ITEM_LIST_UPDATE");

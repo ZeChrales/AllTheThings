@@ -26,7 +26,7 @@ local pairs, select, math_floor,tinsert,tremove
 --- @type table,function,function,function,
 local L, ColorizeRGB, contains, CloneDictionary
 	= app.L, app.Modules.Color.ColorizeRGB, app.contains, app.CloneDictionary
-local GetDetailedItemLevelInfo = GetDetailedItemLevelInfo;
+local GetDetailedItemLevelInfo = app.WOWAPI.GetDetailedItemLevelInfo;
 local ArtifactDB = setmetatable(app.ArtifactDB or {}, { __index = function(t,key)
 	app.PrintDebug("ArtifactID not in DB!",key)
 	t[key] = app.EmptyTable
@@ -166,7 +166,7 @@ app.CreateArtifact = app.CreateClass(CLASSNAME, KEY, {
 		-- else app.PrintDebug("Artifact with no ItemID?",t.artifactID)
 		end
 	end,
-	-- only used when an artifact is listed without correpsonding itemID
+	-- only used when an artifact is listed without corresponding itemID
 	itemID = function(t)
 		local info = t.artifactinfo
 		return t.isOffHand and info.itemOffhandID or info.itemID
@@ -189,7 +189,7 @@ app.CreateArtifact = app.CreateClass(CLASSNAME, KEY, {
 			return modItemID;
 		end
 	end,
-	-- probably never used ever, but just in case an artifact somehow misses it's appearance...
+	-- probably never used ever, but just in case an artifact somehow misses its appearance...
 	sourceID = function(t)
 		local sourceID = t.silentLink;
 		if sourceID then

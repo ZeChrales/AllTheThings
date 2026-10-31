@@ -7,342 +7,457 @@
 -- Parser-side documentation types used by the shortcut functions below.
 -- These annotations are documentation-only and do not change runtime data.
 
----@alias FileID integer
----@alias ExpansionID integer
----@alias ObjectID integer
----@alias ItemID integer
----@alias ModID integer
----@alias ModItemID number
----@alias SourceID integer
----@alias BonusID integer
----@alias IllusionID integer
----@alias ArtifactID integer
----@alias AzeriteEssenceID integer
----@alias DecorID integer
----@alias CurrencyID integer
----@alias FilterID integer
----@alias MountID integer
----@alias QuestID integer
----@alias ObjectiveID integer
----@alias MissionID integer
----@alias SpellID integer
----@alias SkillID integer
----@alias RecipeID integer
----@alias CreatureID integer
----@alias NPCID integer Interactive creatures are NPCs.
----@alias ATTHeaderID integer Negative NPC IDs are used as ATT Headers
----@alias FollowerID integer
----@alias GarrisonBuildingID integer
----@alias GarrisonTalentID integer
----@alias RaceID integer
----@alias ClassID integer
----@alias ChrSpecializationID integer
----@alias TitleID integer
----@alias AchievementID integer
----@alias AchievementCategoryID integer
----@alias CriteriaID integer
----@alias JournalEncounterID integer
----@alias DungeonEncounterID integer
----@alias BattlePetSpeciesID integer
----@alias BattlePetAbilityID integer
----@alias BattlePetTypeID integer
----@alias FactionID integer
----@alias UiMapID integer
----@alias MapID integer
----@alias JournalInstanceID integer
----@alias FlightPathID integer
----@alias ExplorationID integer
----@alias DifficultyID integer
----@alias EventID integer
----@alias ATTUnobtainableStatus integer|string|string[]
----@alias ATTIgnoredValue string Parser sentinel value assigned via `IGNORED_VALUE`.
----@alias Region "US"|"EU"|"KR"|"TW"|"CN"
----@alias ATTTimelineEvent string
----@alias ATTSymCommand table
----@alias ATTSym ATTSymCommand[]
+---@alias FileID integer # WoW file data ID for an asset.
+---@alias ExpansionID integer # Expansion identifier.
+---@alias ObjectID integer # Interactable world object ID, such as a chest.
+---@alias ItemID integer # Base item ID.
+---@alias ModID integer # Item modifier ID selecting an item variant.
+---@alias ModItemID number # Encoded item identifier for modifier, bonus, or appearance variants.
+---@alias SourceID integer # Transmog appearance source ID.
+---@alias BonusID integer # Item bonus ID selecting an item variant.
+---@alias IllusionID integer # Weapon enchantment illusion source ID.
+---@alias ArtifactID integer # Artifact weapon appearance ID.
+---@alias AzeriteEssenceID integer # Azerite essence ID.
+---@alias DecorID integer # Housing decor entry ID.
+---@alias CurrencyID integer # Currency type ID.
+---@alias FilterID integer # ATT filter/category ID.
+---@alias MountID integer # Mount spell ID used by ATT.
+---@alias QuestID integer # Quest ID.
+---@alias ObjectiveID integer # Objective index within a quest.
+---@alias MissionID integer # Garrison mission ID.
+---@alias SpellID integer # Spell ID.
+---@alias SkillID integer # Profession or skill line ID.
+---@alias RecipeID integer # Crafting recipe spell ID.
+---@alias CreatureID integer # Creature entry ID.
+---@alias NPCID integer # Interactive creatures are NPCs.
+---@alias ATTHeaderID integer # Negative NPC IDs are used as ATT Headers
+---@alias FollowerID integer # Garrison follower ID.
+---@alias GarrisonBuildingID integer # Garrison building ID.
+---@alias GarrisonTalentID integer # Garrison or order hall research talent ID.
+---@alias RaceID integer # Character race ID.
+---@alias ClassID integer # Character class ID.
+---@alias ChrSpecializationID integer # Character specialization ID.
+---@alias TitleID integer # Character title ID.
+---@alias AchievementID integer # Achievement ID.
+---@alias AchievementCategoryID integer # Achievement category ID.
+---@alias CriteriaID integer # Achievement criterion ID or legacy criterion index.
+---@alias JournalEncounterID integer # Encounter Journal encounter ID.
+---@alias DungeonEncounterID integer # Dungeon encounter ID, distinct from Encounter Journal IDs.
+---@alias BattlePetSpeciesID integer # Battle pet species ID.
+---@alias BattlePetAbilityID integer # Battle pet ability ID.
+---@alias BattlePetTypeID integer # Battle pet family/type ID.
+---@alias FactionID integer # Reputation faction ID.
+---@alias UiMapID integer # UI map ID used for zones and coordinates.
+---@alias MapID integer # Internal world or instance map ID.
+---@alias JournalInstanceID integer # Encounter Journal instance ID.
+---@alias FlightPathID integer # Flight path taxi node ID.
+---@alias ExplorationID integer # Exploration area ID.
+---@alias DifficultyID integer # Instance difficulty ID, including parser multi-difficulty IDs.
+---@alias EventID integer # Event or holiday identifier used by ATT schedules and filters.
+---@alias ATTUnobtainableStatus integer|string|string[] # Unobtainable code or helper-supplied timeline event(s).
+---@alias ATTPhaseID integer # Release phase ID (see Phases.lua), e.g. `PHASE_ONE` or `TBC_PHASE_TWO`.
+---@alias ATTIgnoredValue string # Parser sentinel value assigned via `IGNORED_VALUE`.
+---@alias Region "US"|"EU"|"KR"|"TW"|"CN" # WoW portal region code.
+---@alias ATTTimelineEvent string # Patch change string using created, added, removed, or deleted plus a patch version.
+---@alias ATTSymFieldValue any # Field-dependent value matched or assigned by a symbolic command.
+---@alias ATTSymSubroutineName # Registered symbolic subroutine names.
+---| "pvp_gear_base" # Selects a PvP season header and optional set header; accepts an ignored legacy tier.
+---| "pvp_gear_faction_base" # Selects PvP season, faction, and set headers; accepts an ignored legacy tier.
+---| "pvp_set_ensemble" # Extracts PvP set appearances by season, set, and class; accepts an ignored legacy tier.
+---| "pvp_set_faction_ensemble" # Extracts PvP set appearances by season, faction, set, and class; accepts an ignored legacy tier.
+---| "pvp_weapons_ensemble" # Extracts PvP weapons by season and set; accepts an ignored legacy tier.
+---| "pvp_weapons_faction_ensemble" # Extracts PvP weapons by season, faction, and set; accepts an ignored legacy tier.
+---| "common_recipes_vendor" # Selects a vendor by NPC ID and excludes vendor-specific recipes.
+---| "common_vendor" # Selects a vendor by NPC ID and returns its children.
+---| "tw_instance" # Selects a Timewalking instance by ID and adds the Infinite Timereaver common drop.
+---| "instance_tier" # Selects instance tier items by instance ID and optional difficulty and class IDs.
+---| "legion_relinquished_base" # Collects the base set of Legion relinquished item candidates.
+---| "legion_relinquished" # Filters Legion relinquished candidates by an inventory-type list and optional filter IDs.
+---| "legion_relinquished_relic" # Filters Legion relinquished candidates by optional relic types.
+---| "korthian_armaments" # Selects Korthian armaments for an inventory type.
+---| "common_wod_dungeon_drop" # Selects common Warlords dungeon drops for a difficulty and header ID.
+---| "common_wod_dungeon_drop_tw" # Selects Timewalking Warlords dungeon drops for a difficulty and header ID.
+---| "bfa_azerite_armor_chest_dungeons" # Selects Azerite armor from dungeon rewards.
+---| "bfa_azerite_armor_chest_warfront" # Selects Azerite armor from Warfront rewards.
+---| "bfa_azerite_armor_chest_zonedrops" # Selects Azerite armor from world-quest rewards.
+---| "bfa_azerite_armor_chest" # Selects Azerite armor sources according to the owner modifier ID.
+---| "common_island_expedition_salvage" # Selects common island expedition salvage using filter IDs.
+---| "catalyst_select_proper_tier_item" # Selects a catalyst tier item using catalyst, track, class, slot, and base item.
+---@alias ATTSymCommand # Symbolic instruction: command name followed by positional arguments; some commands accept additional values.
+---| { [1]: "select", [2]: string, [3]?: number } # Selects a field and zero or more numeric IDs.
+---| { [1]: "selectparent", [2]?: integer } # Selects an ancestor; the default level is one.
+---| { [1]: "fill" } # Adds content from matching source objects.
+---| { [1]: "finalize" } # Moves current results into the finalized set.
+---| { [1]: "merge" } # Merges finalized results back into the current set.
+---| { [1]: "pop" } # Expands the current results to their children.
+---| { [1]: "myModID" } # Applies the owner modifier ID to finalized items.
+---| { [1]: "usemyModID" } # Uses the owner modifier ID as the offset for subsequent selection.
+---| { [1]: "whereMyModID" } # Filters by the owner modifier ID when one is set.
+---| { [1]: "push", [2]: string, [3]: ATTSymFieldValue } # Wraps results in an object with the specified field and value.
+---| { [1]: "where", [2]: string, [3]: ATTSymFieldValue } # Keeps results whose truthy field equals the supplied value.
+---| { [1]: "whereany", [2]: string, [3]: ATTSymFieldValue } # Keeps results whose truthy field matches any supplied value.
+---| { [1]: "not", [2]: string, [3]: ATTSymFieldValue } # Excludes results whose truthy field matches a supplied value.
+---| { [1]: "contains", [2]: string, [3]: ATTSymFieldValue } # Keeps results whose field contains a supplied value.
+---| { [1]: "exclude", [2]: string, [3]: number } # Excludes results matching supplied numeric IDs.
+---| { [1]: "extract", [2]: string } # Extracts nested results containing the named field.
+---| { [1]: "is", [2]: string } # Keeps results with a truthy named field.
+---| { [1]: "isnt", [2]: string } # Keeps results without a truthy named field.
+---| { [1]: "find", [2]: string, [3]: ATTSymFieldValue } # Finds nested results matching a field value.
+---| { [1]: "index", [2]: integer } # Selects the indexed child from each current result group.
+---| { [1]: "invtype", [2]: string } # Filters by one or more inventory types.
+---| { [1]: "meta_achievement", [2]: AchievementID } # Selects and merges achievements, then prunes their groups.
+---| { [1]: "partial_achievement", [2]: AchievementID } # Resolves partial criteria for an achievement.
+---| { [1]: "prune", [2]?: string } # Prunes named fields from finalized results; defaults to groups.
+---| { [1]: "modID", [2]: ModID } # Assigns a modifier ID to resolved items.
+---| { [1]: "usemodID", [2]: ModID } # Uses a modifier ID for subsequent selection.
+---| { [1]: "groupfill", [2]?: boolean } # Fills cloned current results when true, or finalized results otherwise.
+---| { [1]: "relictype", [2]: string } # Filters by one or more relic types.
+---| { [1]: "sub", [2]: ATTSymSubroutineName } # Runs a named symbolic subroutine with its arguments.
+---@alias ATTSym ATTSymCommand[] # Ordered symbolic commands used to resolve referenced objects.
+--- Tagged item, NPC, object, or spell provider reference.
 ---@alias ATTProvider
----| { [1]: "i", [2]: ItemID|ModItemID } item
----| { [1]: "n", [2]: NPCID } creature
----| { [1]: "o", [2]: ObjectID } object
----| { [1]: "s", [2]: SpellID } spell
+---| { [1]: "i", [2]: ItemID|ModItemID } # Item
+---| { [1]: "n", [2]: NPCID } # Creature
+---| { [1]: "o", [2]: ObjectID } # Object
+---| { [1]: "s", [2]: SpellID } # Spell
+--- Tagged gold, item, or currency cost entry.
 ---@alias ATTCost
----| { [1]: "g", [2]: number } gold
----| { [1]: "i", [2]: ItemID|ModItemID, [3]: number } item
----| { [1]: "c", [2]: CurrencyID, [3]: number } currency
----@alias x_axis number
----@alias y_axis number
----@alias ATTObjectArray ATTObject[]
----@alias ATTObjectArrayArray ATTObjectArray[]
+---| { [1]: "g", [2]: number } # Gold
+---| { [1]: "i", [2]: ItemID|ModItemID, [3]: number } # Item
+---| { [1]: "c", [2]: CurrencyID, [3]: number } # Currency
+---@alias x_axis number # Horizontal map coordinate, expressed as a percentage.
+---@alias y_axis number # Vertical map coordinate, expressed as a percentage.
+---@alias ATTObjectArray ATTObject[] # Ordered list of parser objects.
+---@alias ATTObjectArrayArray ATTObjectArray[] # Ordered list of parser-object groups.
 
+--- Parser data node containing identifiers, shared metadata, and optional child groups.
 --- Intentionally non-exact: parser objects are an extensible data model and
 --- may carry module/flavor-specific fields outside this central shortcut schema.
 ---@class ATTObject
----@field groups? ATTObjectArray Nested parser objects.
----@field g? ATTObjectArray Legacy alias for `groups`; normalized by parser helpers.
----@field type? string Parser object type override.
----@field text? string|ATTLocalizationStringTable Display/localization text.
----@field description? string|ATTLocalizationStringTable Description/localization data.
----@field name? string Display name.
----@field readable? string Human-readable parser label.
----@field icon? string|FileID Icon path/file ID.
----@field model? integer Display/model ID.
----@field displayID? integer Display ID.
----@field sourceID? SourceID Appearance/source ID.
----@field achievementCategoryID? AchievementCategoryID
----@field artifactID? ArtifactID
----@field azeriteessenceID? AzeriteEssenceID
----@field buildingID? GarrisonBuildingID
----@field campsiteID? integer
----@field categoryID? integer
----@field classID? number Class ID, optionally specialization-encoded as a decimal.
----@field decorID? DecorID
----@field expansionID? number Expansion ID, optionally patch-encoded as a decimal.
----@field followerID? FollowerID
----@field illusionID? IllusionID
----@field objectiveID? ObjectiveID
----@field petAbilityID? BattlePetAbilityID
----@field petTypeID? BattlePetTypeID
----@field professionnodeID? integer
----@field pvpRankID? integer
----@field raceID? RaceID
----@field setID? integer
----@field setHeaderID? integer
----@field setSubHeaderID? integer
----@field talentID? GarrisonTalentID
----@field itemID? ItemID General item ID.
----@field qs? ItemID item grants or starts a quest.
----@field qss? ItemID[] items grant or start a quest.
----@field qi? ItemID item exists specifically for use in a quest.
----@field qis? ItemID[] items exist specifically for use in a quest.
----@field modItemID? ModItemID
----@field modID? ModID
----@field bonusID? BonusID
----@field questID? QuestID
----@field sourceQuest? QuestID Prerequisite/source quest.
----@field sourceQuests? QuestID[] Prerequisite/source quests.
----@field sourceQuestNumRequired? integer Number of source quests required.
----@field spellID? SpellID
----@field npcID? NPCID
----@field creatureID? CreatureID
----@field encounterID? JournalEncounterID
----@field achievementID? AchievementID
----@field allianceAchievementID? AchievementID
----@field hordeAchievementID? AchievementID
----@field altAchID? AchievementID
----@field criteriaID? CriteriaID
----@field factionID? FactionID
----@field mapID? UiMapID
----@field map? UiMapID Legacy singular map field.
----@field maps? UiMapID[]
----@field difficultyID? DifficultyID
----@field difficulties? DifficultyID[]
----@field skillID? SkillID
----@field professionID? SkillID
----@field requireSkill? SkillID|ATTIgnoredValue
----@field headerID? ATTHeaderID
----@field filterID? FilterID
----@field currencyID? CurrencyID
----@field speciesID? BattlePetSpeciesID
----@field flightpathID? FlightPathID
----@field explorationID? ExplorationID
----@field missionID? MissionID
----@field mountID? MountID
----@field titleID? TitleID
----@field recipeID? RecipeID
----@field instanceID? JournalInstanceID
----@field savedInstanceID? MapID
----@field firstcraftID? RecipeID
----@field objectID? ObjectID
----@field rank? integer
----@field cr? CreatureID
----@field crs? CreatureID[]
----@field qg? NPCID
----@field qgs? NPCID[]
----@field coord? Coord|ATTIgnoredValue
----@field coords? Coord[]
----@field provider? ATTProvider|ATTIgnoredValue
----@field providers? ATTProvider[]
----@field cost? number|ATTCost[] Copper amount or a list of cost entries.
----@field timeline? ATTTimelineEvent[]|ATTIgnoredValue
----@field _defaulttimeline? ATTTimelineEvent[] Parser fallback timeline used when no explicit timeline is supplied.
----@field forcetimeline? ATTTimelineEvent[] Parser-only timeline override consumed during expansion processing.
----@field e? EventID Event association applied by `applyevent`.
----@field symselector? integer Symbolic-selector ID.
----@field sym? ATTSym
----@field u? ATTUnobtainableStatus
----@field up? number|string Encoded upgrade target or parser sentinel such as `IGNORED_VALUE`.
----@field r? RaceID Race restriction.
----@field races? RaceID[]|ATTIgnoredValue Race restrictions.
----@field c? ClassID[] Class restrictions.
----@field classes? ClassID[]|ATTIgnoredValue Class restrictions.
----@field f? FilterID Filter ID.
----@field lvl? integer|{ [1]: integer, [2]: integer? } Minimum level, or a level tuple with an optional maximum.
----@field minReputation? { [1]: FactionID, [2]: integer } Reputation requirement tuple.
----@field maxReputation? { [1]: FactionID, [2]: integer } Reputation requirement tuple.
----@field customCollect? string|string[]
----@field pb? boolean|ATTIgnoredValue Pet-battle filter flag.
----@field isDaily? boolean|ATTIgnoredValue
----@field isWeekly? boolean|ATTIgnoredValue
----@field isWorldQuest? boolean
----@field isBreadcrumb? boolean
----@field isLocked? boolean
----@field isRaid? boolean
----@field collectible? boolean Whether the object is collectible.
----@field repeatable? boolean Whether the object is repeatable.
----@field gender? integer Gender restriction/variant ID.
----@field pvp? boolean PvP requirement/filter flag.
----@field cm? boolean Challenge-mode requirement/filter flag.
----@field sr? boolean Skyriding requirement/filter flag.
----@field ignoreBonus? boolean
----@field autoname? string
----@field OnInit? string
----@field IgnoreWarnings? boolean Suppresses warnings when applying shared or bubbled fields.
----@field _drop? string[] Parser fields to remove after processing.
----@field _noautomation? boolean Disables parser automation for this object.
----@field _remove? boolean Marks the object for parser-side removal.
----@field _multiDifficultyID? DifficultyID Original multi-difficulty ID retained for parser/instance processing.
----@field _ignore? boolean
----@field _DATAGROUP? string
----@field _DATAGROUPS? string[]
----@field [integer] ATTObject Array-style group entries.
+---@field groups? ATTObjectArray # Nested parser objects.
+---@field g? ATTObjectArray # Legacy alias for `groups`; normalized by parser helpers.
+---@field type? string # Parser object type override.
+---@field text? string|ATTLocalizationStringTable # Display/localization text.
+---@field description? string|ATTLocalizationStringTable # Description/localization data.
+---@field name? string # Display name.
+---@field readable? string # Human-readable parser label.
+---@field icon? string|FileID # Icon path/file ID.
+---@field model? FileID # Model file data ID.
+---@field displayID? integer # Display ID.
+---@field sourceID? SourceID # Appearance/source ID.
+---@field achievementCategoryID? AchievementCategoryID # Achievement category ID.
+---@field artifactID? ArtifactID # Artifact weapon appearance ID.
+---@field azeriteessenceID? AzeriteEssenceID # Azerite essence ID.
+---@field buildingID? GarrisonBuildingID # Garrison building ID.
+---@field campsiteID? integer # Warband campsite scene ID.
+---@field categoryID? integer # ATT category ID used for localized names and icons.
+---@field classID? number # Class ID, optionally specialization-encoded as a decimal.
+---@field decorID? DecorID # Housing decor entry ID.
+---@field expansionID? number # Expansion ID, optionally patch-encoded as a decimal.
+---@field followerID? FollowerID # Garrison follower ID.
+---@field illusionID? IllusionID # Weapon enchantment illusion source ID.
+---@field objectiveID? ObjectiveID # Objective index within the parent quest.
+---@field petAbilityID? BattlePetAbilityID # Battle pet ability ID.
+---@field petTypeID? BattlePetTypeID # Battle pet family/type ID.
+---@field professionnodeID? integer # Profession specialization path/node ID.
+---@field pvpRankID? integer # Classic PvP rank ID.
+---@field raceID? RaceID # Character race ID represented by this object.
+---@field setID? integer # Transmog gear set ID.
+---@field setHeaderID? integer # Gear set ID used to display its shared label as a header.
+---@field setSubHeaderID? integer # Gear set ID used to display its description as a subheader.
+---@field talentID? GarrisonTalentID # Garrison or order hall research talent ID.
+---@field itemID? ItemID # General item ID.
+---@field qs? ItemID # item grants or starts a quest.
+---@field qss? ItemID[] # items grant or start a quest.
+---@field qi? ItemID # item exists specifically for use in a quest.
+---@field qis? ItemID[] # items exist specifically for use in a quest.
+---@field modItemID? ModItemID # Encoded item identifier for modifier, bonus, or appearance variants.
+---@field modID? ModID # Item modifier ID selecting an item variant.
+---@field bonusID? BonusID # Item bonus ID selecting an item variant.
+---@field questID? QuestID # Quest ID.
+---@field sourceQuest? QuestID # Prerequisite/source quest.
+---@field sourceQuests? QuestID[] # Prerequisite/source quests.
+---@field sourceQuestNumRequired? integer # Number of source quests required.
+---@field spellID? SpellID # Spell ID.
+---@field npcID? NPCID # NPC ID.
+---@field creatureID? CreatureID # Creature ID; also accepted as an NPC identifier.
+---@field encounterID? JournalEncounterID # Encounter Journal encounter ID.
+---@field achievementID? AchievementID # Achievement ID.
+---@field allianceAchievementID? AchievementID # Alliance achievement ID paired with a Horde variant.
+---@field hordeAchievementID? AchievementID # Horde achievement ID paired with an Alliance variant.
+---@field altAchID? AchievementID # Alternate achievement ID used for the Horde variant.
+---@field criteriaID? CriteriaID # Achievement criterion ID or legacy criterion index.
+---@field factionID? FactionID # Reputation faction ID.
+---@field mapID? UiMapID # UI map ID for a zone or map object.
+---@field map? UiMapID # Legacy singular map field.
+---@field maps? UiMapID[] # UI map IDs associated with this object.
+---@field difficultyID? DifficultyID # Instance difficulty ID, including parser multi-difficulty IDs.
+---@field difficulties? DifficultyID[] # Instance difficulties associated with this object.
+---@field skillID? SkillID # Associated profession or skill line ID.
+---@field professionID? SkillID # Profession skill line ID represented by this object.
+---@field requireSkill? SkillID|ATTIgnoredValue # Required profession or skill line ID, or the parser ignore sentinel.
+---@field headerID? ATTHeaderID # ATT header identifier interpreted according to the header type.
+---@field filterID? FilterID # Alias for the ATT filter/category field `f`.
+---@field currencyID? CurrencyID # Currency type ID.
+---@field speciesID? BattlePetSpeciesID # Battle pet species ID.
+---@field flightpathID? FlightPathID # Flight path taxi node ID.
+---@field explorationID? ExplorationID # Exploration area ID.
+---@field missionID? MissionID # Garrison mission ID.
+---@field mountID? MountID # Mount spell ID used by ATT.
+---@field titleID? TitleID # Character title ID.
+---@field recipeID? RecipeID # Crafting recipe spell ID.
+---@field instanceID? JournalInstanceID # Encounter Journal instance ID.
+---@field savedInstanceID? MapID # Internal instance map ID used to look up saved lockouts.
+---@field sharedLockout? boolean|integer # Shared instance lockout across non-LFR difficulties; normalized to `isLockoutShared` by the parser (data commonly uses `1`).
+---@field firstcraftID? RecipeID # Recipe spell ID whose first craft is tracked.
+---@field objectID? ObjectID # Interactable world object ID, such as a chest.
+---@field rank? integer # Rank discriminator for ranked objects such as Azerite essences.
+---@field cr? CreatureID # Single creature associated with the object.
+---@field crs? CreatureID[] # Creatures associated with the object.
+---@field qg? NPCID # Single NPC quest giver.
+---@field qgs? NPCID[] # NPC quest givers.
+---@field coord? Coord|ATTIgnoredValue # Single map-coordinate tuple.
+---@field coords? Coord[] # Map-coordinate tuples.
+---@field provider? ATTProvider|ATTIgnoredValue # Single typed reference providing this content.
+---@field providers? ATTProvider[] # Typed references providing this content.
+---@field cost? number|ATTCost[] # Copper amount or a list of cost entries.
+---@field timeline? ATTTimelineEvent[]|ATTIgnoredValue # Patch events describing when the object is created, added, removed, or deleted.
+---@field _defaulttimeline? ATTTimelineEvent[] # Parser fallback timeline used when no explicit timeline is supplied.
+---@field forcetimeline? ATTTimelineEvent[] # Parser-only timeline override consumed during expansion processing.
+---@field e? EventID # Event association applied by `applyevent`.
+---@field symselector? integer # Symbolic-selector ID.
+---@field sym? ATTSym # Symbolic commands used to resolve referenced objects.
+---@field u? ATTUnobtainableStatus # Unobtainable status (why the object can't be obtained).
+---@field phase? ATTPhaseID # Release phase in which the object becomes available (Classic builds).
+---@field up? number|string # Encoded upgrade target or parser sentinel such as `IGNORED_VALUE`.
+---@field r? RaceID # Race restriction.
+---@field races? RaceID[]|ATTIgnoredValue # Race restrictions.
+---@field c? ClassID[] # Class restrictions.
+---@field classes? ClassID[]|ATTIgnoredValue # Class restrictions.
+---@field f? FilterID # Filter ID.
+---@field lvl? integer|{ [1]: integer, [2]: integer? } # Minimum level, or a level tuple with an optional maximum.
+---@field minReputation? { [1]: FactionID, [2]: integer } # Reputation requirement tuple.
+---@field maxReputation? { [1]: FactionID, [2]: integer } # Reputation requirement tuple.
+---@field customCollect? string|string[] # Custom collection requirement key(s) for character-specific availability.
+---@field pb? boolean|ATTIgnoredValue # Pet-battle filter flag.
+---@field isDaily? boolean|ATTIgnoredValue # Daily-reset flag.
+---@field isWeekly? boolean|ATTIgnoredValue # Weekly-reset flag.
+---@field isMonthly? boolean # Monthly-reset flag.
+---@field isYearly? boolean # Yearly-reset flag.
+---@field isWorldQuest? boolean # Marks a world quest.
+---@field isBreadcrumb? boolean # Marks a breadcrumb quest which can be skipped by its follow-up.
+---@field isLocked? boolean # Declared lock flag; no ATTObject handler currently consumes it.
+---@field isRaid? boolean # Marks raid content for display and quest filtering.
+---@field collectible? boolean # Whether the object is collectible.
+---@field repeatable? boolean # Whether the object is repeatable.
+---@field isRepeatable? boolean # Alias for `repeatable`.
+---@field gender? integer # Gender restriction/variant ID.
+---@field pvp? boolean # PvP requirement/filter flag.
+---@field cm? boolean # Challenge-mode requirement/filter flag.
+---@field sr? boolean # Skyriding requirement/filter flag.
+---@field ignoreBonus? boolean # Suppresses item modifier and bonus IDs during parser processing.
+---@field autoname? string # Type-and-ID string used to generate a name for supported object types.
+---@field OnInit? string # Lua function source applied to the constructed object during addon initialization.
+---@field OnClick? string # Lua function source or function reference stored as a string; called with `(row, button)`, and a truthy return consumes the click.
+---@field IgnoreWarnings? boolean # Suppresses warnings when applying shared or bubbled fields.
+---@field isLimited? boolean # Limited quantity; ATT shows a limited-quantity tooltip line.
+---@field altQuests? QuestID[] # Alternate quest IDs that stand in for this quest.
+---@field learnedAt? integer # Skill level at which the recipe is learned.
+---@field lockCriteria? { [1]: integer, [integer]: string|integer } # Lock criteria: a match count followed by key/value pairs, e.g. `{ 1, "questID", 12345 }`. Keys seen in data: questID, lvl, factionID, achID, spellID, sourceID, toyID, renownID, decorID.
+---@field OnUpdate? string # Lua source of a `function(t)` stored as a string, e.g. `[[function(t) ... end]]`. Run when the group updates.
+---@field lore? string # Lore text for the group.
+---@field allianceQuestData? table # Alliance-specific quest data (short form: aqd).
+---@field aqd? table # Alias for `allianceQuestData`.
+---@field hordeQuestData? table # Horde-specific quest data (short form: hqd).
+---@field hqd? table # Alias for `hordeQuestData`.
+---@field maps_disp? UiMapID[] # Maps shown in the information line when `maps` is not set.
+---@field sourceAchievement? AchievementID # Source achievement (cached as `sourceAchievementID`).
+---@field modelScale? number # Scale applied to the model preview camera distance in the tooltip.
+---@field DisablePartySync? boolean # Passed to the quest lock check to disable party sync handling.
+---@field nextRecipeID? RecipeID # Next recipe in a recipe chain.
+---@field previousRecipeID? RecipeID # Previous recipe in a recipe chain.
+---@field OnTooltip? string # Lua source of a `function(t, tooltipInfo)` stored as a string, e.g. `[[function(t, tooltipInfo) ... end]]`.
+---@field sourceAchievements? AchievementID[] # Source achievements (cached as `sourceAchievementID`).
+---@field skipFill? boolean|integer # Skips Fill processing for this object (`true` in data; Symlink sets `2`).
+---@field classes_display? ClassID[] # Class list used for display only (the parser maps it to `c_disp`).
+---@field petBattleLvl? integer # Pet battle level shown in the information line.
+---@field allianceQuestID? QuestID # Alliance-only version of the quest ID. Handled by the parser.
+---@field hordeQuestID? QuestID # Horde-only version of the quest ID. Handled by the parser.
+---@field extraTransmogSetItems? table # Extra transmog set items; the parser converts them to `extraTransmogSetSpells`.
+---@field isBounty? boolean # Marks a bounty entry; the Bounty window searches this field.
+---@field _drop? string[] # Parser fields to remove after processing.
+---@field _noautomation? boolean # Disables parser automation for this object.
+---@field _remove? boolean # Marks the object for parser-side removal.
+---@field _multiDifficultyID? DifficultyID # Original multi-difficulty ID retained for parser/instance processing.
+---@field _ignore? boolean # Declared ignore flag; no parser handler currently consumes it.
+---@field _DATAGROUP? string # Group key used by constructors to register the object in DATAGROUP and IDGROUP.
+---@field _DATAGROUPS? string[] # Group keys used by constructors to register the object in DATAGROUP and IDGROUP.
+---@field [integer] ATTObject # Array-style group entries.
 
+--- Achievement parser object supporting a shared achievement ID or an Alliance/Horde pair.
 ---@class ATTAchievementObject: ATTObject
----@field achievementID? AchievementID
----@field allianceAchievementID? AchievementID
----@field hordeAchievementID? AchievementID
+---@field achievementID? AchievementID # Achievement ID represented by this object.
+---@field allianceAchievementID? AchievementID # Alliance achievement ID for a faction-specific achievement pair.
+---@field hordeAchievementID? AchievementID # Horde achievement ID for a faction-specific achievement pair.
 
+--- Achievement criterion parser object identified by a criterion ID or legacy index.
 ---@class ATTAchievementCriteriaObject: ATTObject
----@field criteriaID CriteriaID
+---@field criteriaID CriteriaID # Achievement criterion ID or legacy criterion index.
 
+--- Item parser object identified by a base item ID, with optional modifier and bonus metadata.
 ---@class ATTItemObject: ATTObject
----@field itemID ItemID
+---@field itemID ItemID # Item ID represented by this object.
 
+--- Quest parser object identified by a quest ID.
 ---@class ATTQuestObject: ATTObject
----@field questID QuestID
+---@field questID QuestID # Quest ID represented by this object.
 
+--- Spell parser object identified by a spell ID.
 ---@class ATTSpellObject: ATTObject
----@field spellID SpellID
+---@field spellID SpellID # Spell ID represented by this object.
 
+--- NPC parser object used to group an NPC's sourced content.
 ---@class ATTNPCObject: ATTObject
----@field npcID NPCID
+---@field npcID NPCID # NPC ID represented by this object.
 
+--- Creature parser object identified by a creature entry ID.
 ---@class ATTCreatureObject: ATTObject
----@field creatureID CreatureID
+---@field creatureID CreatureID # Creature ID represented by this object.
 
+--- Encounter Journal encounter parser object containing encounter metadata and rewards.
 ---@class ATTEncounterObject: ATTObject
----@field encounterID JournalEncounterID
+---@field encounterID JournalEncounterID # Encounter Journal encounter ID represented by this object.
 
+--- Reputation faction parser object containing faction metadata and optional reward groups.
 ---@class ATTFactionObject: ATTObject
----@field factionID FactionID
+---@field factionID FactionID # Reputation faction ID represented by this object.
 
+--- UI map parser object used to group content for a zone or map.
 ---@class ATTMapObject: ATTObject
----@field mapID UiMapID
+---@field mapID UiMapID # UI map ID represented by this object.
 
+--- Currency parser object identified by a currency type ID.
 ---@class ATTCurrencyObject: ATTObject
----@field currencyID CurrencyID
+---@field currencyID CurrencyID # Currency ID represented by this object.
 
+--- Instance difficulty parser object carrying difficulty-specific content.
 ---@class ATTDifficultyObject: ATTObject
----@field difficultyID DifficultyID
+---@field difficultyID DifficultyID # Difficulty ID represented by this object, including parser multi-difficulty IDs.
 
+--- Header parser object grouping content under a custom or automatically named label.
 ---@class ATTHeaderObject: ATTObject
----@field headerID ATTHeaderID
----@field SortPriority? number Parser root-category sort priority.
+---@field headerID ATTHeaderID # ATT header ID represented by this object.
+---@field SortPriority? number # Parser root-category sort priority.
 
+--- Profession parser object identified by a profession skill line.
 ---@class ATTProfessionObject: ATTObject
----@field professionID SkillID
+---@field professionID SkillID # Profession skill ID represented by this object.
 
+--- Crafting recipe parser object carrying its spell ID and profession requirement.
 ---@class ATTRecipeObject: ATTObject
----@field recipeID RecipeID
----@field requireSkill? SkillID|ATTIgnoredValue
----@field _requireSkill? SkillID Parser-side recipe profession requirement cache.
+---@field recipeID RecipeID # Recipe spell ID represented by this object.
+---@field requireSkill? SkillID|ATTIgnoredValue # Required profession skill ID, or the parser ignore sentinel.
+---@field _requireSkill? SkillID # Parser-side recipe profession requirement cache.
 
+--- Encounter Journal dungeon or raid instance parser object with optional lockout metadata.
 ---@class ATTInstanceObject: ATTObject
----@field instanceID JournalInstanceID
----@field savedInstanceID? MapID
+---@field instanceID JournalInstanceID # Encounter Journal instance ID represented by this object.
+---@field savedInstanceID? MapID # Instance map ID used to look up the character's saved lockouts.
 
+--- Parser object tracking the first craft of a recipe, optionally through a completion quest.
 ---@class ATTFirstCraftObject: ATTObject
----@field firstcraftID RecipeID
----@field questID? QuestID
+---@field firstcraftID RecipeID # Recipe spell ID whose first craft is tracked.
+---@field questID? QuestID # Quest ID used to track completion of this first craft when available.
 
+--- Battle pet parser object identified by a species ID.
 ---@class ATTBattlePetObject: ATTObject
----@field speciesID BattlePetSpeciesID
+---@field speciesID BattlePetSpeciesID # Battle-pet species ID represented by this object.
 
+--- Exploration area parser object used to track discovery of a named location.
 ---@class ATTExplorationObject: ATTObject
----@field explorationID ExplorationID
+---@field explorationID ExplorationID # Exploration area ID represented by this object.
 
+--- Flight path parser object used to track discovery of a taxi node.
 ---@class ATTFlightPathObject: ATTObject
----@field flightpathID FlightPathID
+---@field flightpathID FlightPathID # Flight-path node ID represented by this object.
 
+--- Garrison mission parser object identified by a mission ID.
 ---@class ATTMissionObject: ATTObject
----@field missionID MissionID
+---@field missionID MissionID # Garrison mission ID represented by this object.
 
+--- Mount parser object identified by its summoning spell ID.
 ---@class ATTMountObject: ATTObject
----@field mountID MountID
+---@field mountID MountID # Mount spell ID represented by this object.
 
+--- Character title parser object identified by a title ID.
 ---@class ATTTitleObject: ATTObject
----@field titleID TitleID
+---@field titleID TitleID # Character title ID represented by this object.
 
+--- Map position tuple containing horizontal and vertical percentages and a UI map ID.
 ---@class Coord
----@field [1] x_axis
----@field [2] y_axis
----@field [3] UiMapID
+---@field [1] x_axis # Horizontal map position expressed as a percentage.
+---@field [2] y_axis # Vertical map position expressed as a percentage.
+---@field [3] UiMapID # UI map ID on which the position is located.
 
+--- Localized text or programmatic tokens indexed by ATT locale keys.
 ---@class ATTLocalizationStringTable
----@field en string
----@field de? string
----@field es? string
----@field mx? string
----@field fr? string
----@field it? string
----@field ko? string
----@field pt? string
----@field ru? string
----@field cn? string
----@field tw? string
+---@field en string # Default English text or programmatic localization token.
+---@field de? string # German localized text (`deDE`).
+---@field es? string # European Spanish localized text (`esES`).
+---@field mx? string # Mexican Spanish localized text (`esMX`).
+---@field fr? string # French localized text (`frFR`).
+---@field it? string # Italian localized text (`itIT`).
+---@field ko? string # Korean localized text (`koKR`).
+---@field pt? string # Brazilian Portuguese localized text (`ptBR`).
+---@field ru? string # Russian localized text (`ruRU`).
+---@field cn? string # Simplified Chinese localized text (`zhCN`).
+---@field tw? string # Traditional Chinese localized text (`zhTW`).
 
+--- Localization definition registered by `createLocalizationString`, with a unique constant and localized text.
 ---@class ATTLocalizationStringData
----@field constant string Unique parser constant name.
----@field readable? string Human-readable label used in parser diagnostics.
----@field text ATTLocalizationStringTable Localized text/programmatic tokens by locale. Runtime formatting iterates this table.
----@field icon? string Optional icon path or programmatic icon token.
----@field color? string Optional color string or programmatic color token.
----@field description? ATTLocalizationStringTable Optional localized description.
----@field export? boolean Whether this localization definition is exported to generated addon data.
----@field [string] any Additional localization metadata.
+---@field constant string # Unique parser constant name.
+---@field readable? string # Human-readable label used in parser diagnostics.
+---@field text ATTLocalizationStringTable # Localized text/programmatic tokens by locale. Runtime formatting iterates this table.
+---@field icon? string # Optional icon path or programmatic icon token.
+---@field color? string # Optional color string or programmatic color token.
+---@field description? ATTLocalizationStringTable # Optional localized description.
+---@field export? boolean # Whether this localization definition is exported to generated addon data.
+---@field [string] any # Additional localization metadata.
 
 --- Shared fields used by both raw header definitions and processed header data.
 ---@class ATTHeaderDefinitionBase: ATTObject
----@field readable string Human-readable parser label.
----@field text string|ATTLocalizationStringTable Localized header text.
----@field constant? string Unique header constant.
----@field icon? string|FileID
----@field sort? number
----@field SortPriority? number
----@field eventID? EventID
----@field eventIDs? EventID[]
----@field export? boolean Whether this header definition is exported to generated addon data.
----@field npcfill? boolean Whether sourced Things may be filled into matching NPC sources.
+---@field readable string # Human-readable parser label.
+---@field text string|ATTLocalizationStringTable # Localized header text.
+---@field constant? string # Unique header constant.
+---@field icon? string|FileID # Header icon texture path or file ID.
+---@field sort? number # Header child-sorting setting.
+---@field SortPriority? number # Parser root-category sort priority.
+---@field eventID? EventID # Primary event ID associated with this header.
+---@field eventIDs? EventID[] # Additional event IDs remapped to this header's `eventID`.
+---@field export? boolean # Whether this header definition is exported to generated addon data.
+---@field npcfill? boolean # Whether sourced Things may be filled into matching NPC sources.
 
 --- Mutable header while its schedule and standalone flag are normalized.
 ---@class ATTHeaderProcessingDefinition: ATTHeaderDefinitionBase
----@field eventSchedule? number[]|string
----@field standalone? boolean
+---@field eventSchedule? number[]|string # Numeric schedule input or its generated Lua schedule expression during processing.
+---@field standalone? boolean # Whether this header may be retained without child groups; defaults to `false`.
 
 --- Raw definition accepted by `createHeader`.
 ---@class ATTHeaderInputDefinition: ATTHeaderDefinitionBase
----@field eventSchedule? number[] Numeric schedule definition consumed by `createHeader`.
----@field standalone? boolean
+---@field eventSchedule? number[] # Numeric schedule definition consumed by `createHeader`.
+---@field standalone? boolean # Whether this header may be retained without child groups; defaults to `false`.
 
 --- Processed definition stored in `CustomHeaders`.
 ---@class ATTHeaderDefinition: ATTHeaderDefinitionBase
----@field eventSchedule? string Generated Lua schedule expression after processing.
----@field standalone boolean Normalized by `createHeader`; defaults to `false`.
----@field filepath? string Parser source file which registered this header.
+---@field eventSchedule? string # Generated Lua schedule expression after processing.
+---@field standalone boolean # Normalized by `createHeader`; defaults to `false`.
+---@field filepath? string # Parser source file which registered this header.
 
+--- Custom world object definition registered by `createCustomObject` in `ObjectDB`.
 ---@class ATTCustomObjectDefinition: ATTObject
----@field readable string Human-readable parser label.
----@field text string|ATTLocalizationStringTable Localized object text.
----@field constant? string Unique custom-object constant.
+---@field readable string # Human-readable parser label.
+---@field text string|ATTLocalizationStringTable # Localized object text.
+---@field constant? string # Unique custom-object constant.
 
 --- Date input accepted by `getTimestamp`. Either `day` (such as an
 --- `os.date("*t")` result) or parser-style `monthDay` must be present.
@@ -350,56 +465,57 @@
 ---| { year: integer, month: integer, day: integer, monthDay?: integer, hour?: integer, minute?: integer, weekday?: integer }
 ---| { year: integer, month: integer, day?: integer, monthDay: integer, hour?: integer, minute?: integer, weekday?: integer }
 
+--- Registry of symbolic selector IDs with a `select` helper for building lookup commands.
 ---@class ATTSymSelectorTable
----@field select fun(key: string): ATTSymCommand
----@field [string] integer Selector IDs; the reserved `select` method is declared separately.
+---@field select fun(key: string): ATTSymCommand # Builds a symbolic `select` command for the named selector ID.
+---@field [string] integer # Selector IDs; the reserved `select` method is declared separately.
 
 --- Closed root-category registry; runtime rejects unknown keys via `__index`.
 ---@class (exact) ATTRootConstants
----@field AchievementDB string
----@field Achievements string
----@field Arcantina string
----@field BlackMarket string
----@field Character string
----@field Craftables string
----@field Delves string
----@field ExpansionFeatures string
----@field Factions string
----@field GroupFinder string
----@field HiddenAchievementTriggers string
----@field HiddenCurrencyTriggers string
----@field HiddenQuestTriggers string
----@field Holidays string
----@field Housing string
----@field InGameShop string
----@field Instances string
----@field ItemDB string
----@field ItemDBConditional string
----@field NeverImplemented string
----@field PVP string
----@field PetBattles string
----@field Professions string
----@field Promotions string
----@field RecipeDB string
----@field SeasonOfDiscovery string
----@field Secrets string
----@field Sourceless string
----@field TradingPost string
----@field Uncollectible string
----@field Unsorted string
----@field WorldDrops string
----@field WorldEvents string
----@field Zones string
----@field AprilFools string
+---@field AchievementDB string # Root-category key for the achievement metadata database.
+---@field Achievements string # Root-category key for achievement content.
+---@field Arcantina string # Root-category key for Arcantina content.
+---@field BlackMarket string # Root-category key for Black Market Auction House content.
+---@field Character string # Root-category key for character-related content.
+---@field Craftables string # Root-category key for crafted items.
+---@field Delves string # Root-category key for Delve content.
+---@field ExpansionFeatures string # Root-category key for expansion-specific features.
+---@field Factions string # Root-category key for reputation faction content.
+---@field GroupFinder string # Root-category key for Group Finder content.
+---@field HiddenAchievementTriggers string # Root-category key for hidden achievement triggers.
+---@field HiddenCurrencyTriggers string # Root-category key for hidden currency triggers.
+---@field HiddenQuestTriggers string # Root-category key for hidden quest triggers.
+---@field Holidays string # Root-category key for holiday content.
+---@field Housing string # Root-category key for player housing content.
+---@field InGameShop string # Root-category key for in-game shop content.
+---@field Instances string # Root-category key for dungeon and raid instances.
+---@field ItemDB string # Root-category key for the item metadata database.
+---@field ItemDBConditional string # Root-category key for conditional item metadata.
+---@field NeverImplemented string # Root-category key for content never implemented in the game.
+---@field PVP string # Root-category key for player-versus-player content.
+---@field PetBattles string # Root-category key for pet-battle content.
+---@field Professions string # Root-category key for profession content.
+---@field Promotions string # Root-category key for promotional content.
+---@field RecipeDB string # Root-category key for the recipe metadata database.
+---@field SeasonOfDiscovery string # Root-category key for Season of Discovery content.
+---@field Secrets string # Root-category key for secret content.
+---@field Sourceless string # Root-category key for existing content whose source is unknown.
+---@field TradingPost string # Root-category key for Trading Post content.
+---@field Uncollectible string # Root-category key for uncollectible item content.
+---@field Unsorted string # Root-category key for content awaiting categorization.
+---@field WorldDrops string # Root-category key for world-drop content.
+---@field WorldEvents string # Root-category key for world-event content.
+---@field Zones string # Root-category key for outdoor zone content.
+---@field AprilFools string # Root-category key for April Fools content; resolves to `Special_AprilFools`.
 
 
 --- Generic constructor used by most shortcuts in this file.
 --- Accepts either an ordinary object table or an array of child objects. Array
 --- input is normalized to `groups`. The function also performs parser
 --- validation and registers `_DATAGROUP` / `_DATAGROUPS` references when set.
----@param field string
----@param id number
----@param t? ATTObject|ATTObjectArray
+---@param field string # Identifier field to assign on the constructed object.
+---@param id number # Numeric identifier assigned to the selected field.
+---@param t? ATTObject|ATTObjectArray # Object metadata or child objects to normalize into the constructed object.
 ---@return ATTObject
 struct = function(field, id, t)		-- Construct a commonly formatted object.
 	if type(id) ~= "number" then
@@ -411,7 +527,7 @@ struct = function(field, id, t)		-- Construct a commonly formatted object.
 		error("Don't use 'g' or 'groups' with an array of objects! Fix Group: "..field..":"..id);
 		return;
 	elseif not t.groups and t[1] then
-		t = { ["groups"] = validateGroups(t) };
+		t = { groups = validateGroups(t) };
 	elseif t.groups then
 		validateGroups(t.groups);
 	end
@@ -444,8 +560,8 @@ end
 --- Deep-clones parser data into an optional destination table.
 --- Existing keys in `c` are preserved; table values copied from `t` are
 --- recursively cloned so the resulting parser object can be mutated safely.
----@param t any
----@param c? table
+---@param t any # Source value to deep-clone; non-table values are returned unchanged.
+---@param c? table # Destination table whose existing keys are preserved.
 ---@return any
 clone = function(t, c)	-- Clone a piece of data as a separate table (t => c, return c)
 	if type(t) ~= "table" then return t end
@@ -465,13 +581,21 @@ end
 -- mutate the provided object tree in place and also return the same table so
 -- they can be composed around constructors.
 --- Checks whether a value is an array-style table (including an empty table).
----@param t? any
+---@param t? any # Value to check for an array-style or empty table.
 ---@return boolean|nil
 isarray = function(t)
 	return t and type(t) == 'table' and (#t > 0 or next(t) == nil);
 end
+--- Checks whether a phase ID is a Release Phase (belongs in `phase`) rather than an Unobtainable Filter (belongs in `u`).
+---@param phaseID? integer # Phase ID to check.
+---@return boolean
+isreleasephase = function(phaseID)
+	---@diagnostic disable-next-line: undefined-global
+	local phase = phaseID and Phases and Phases[phaseID];
+	return phase and (phase.minimumBuildVersion or phase.buildVersion) and true or false;
+end
 --- Counts the number of keys in a table.
----@param t? table
+---@param t? table # Table whose keys are counted; nil or non-table input returns nil.
 ---@return integer|nil
 keycount = function(t)
 	if not t or type(t) ~= "table" then return end
@@ -483,8 +607,8 @@ keycount = function(t)
 end
 -- Concats all the key/value pairs in the table into a string
 --- Concatenates the key/value pairs of a table into a string.
----@param tbl? table
----@param sep? string
+---@param tbl? table # Table whose key/value pairs are formatted as text.
+---@param sep? string # Separator between formatted pairs; defaults to an empty string.
 ---@return string
 StringifyTable = function(tbl, sep)
 	if tbl then
@@ -500,7 +624,7 @@ StringifyTable = function(tbl, sep)
 end
 -- Ensures that 't' has a 'groups' field containing the array/'g' data of the table
 --- Normalizes array or `g` data into a table containing a `groups` field.
----@param t ATTObject|ATTObjectArray
+---@param t ATTObject|ATTObjectArray # Object or child array whose array/`g` data is normalized into `groups`.
 ---@return ATTObject
 togroups = function(t)
 	if isarray(t) then
@@ -508,7 +632,7 @@ togroups = function(t)
 		for _,group in ipairs(t) do
 			table.insert(groups, group);
 		end
-		return { ["groups"] = groups }
+		return { groups = groups }
 	end
 	if t.g then
 		t.groups = t.g
@@ -518,8 +642,8 @@ togroups = function(t)
 	return t;
 end
 --- Appends an object to a table and returns that table.
----@param o ATTObject
----@param t ATTObjectArray
+---@param o ATTObject # Parser object to append.
+---@param t ATTObjectArray # Destination array receiving the object.
 ---@return ATTObjectArray
 addObject = function(o, t)
 	table.insert(t, o);
@@ -527,7 +651,7 @@ addObject = function(o, t)
 end
 -- Appends a common groups set into the groups for this object. The last element is the one to append into.
 --- Combines group arrays, using the final argument as the destination when multiple arrays are supplied.
----@param ... ATTObjectArray
+---@param ... ATTObjectArray # Arrays to combine; the last is the destination when multiple arrays are supplied.
 ---@return ATTObjectArray
 appendGroups = function(...)
 	local data = { ... };
@@ -552,8 +676,8 @@ appendGroups = function(...)
 end
 -- Appends together multiple arrays of groups (into the first provided group). This way multiple portions of a single group can be created separately and joined together for one final 'groups' container
 --- Appends multiple group arrays into the first destination array.
----@param g? ATTObjectArray
----@param ... ATTObjectArray|nil
+---@param g? ATTObjectArray # Destination array, created from nil when additional arrays are supplied.
+---@param ... ATTObjectArray|nil # Child arrays to append in order; nil arguments are skipped.
 ---@return ATTObjectArray|nil
 appendAllGroups = function(g, ...)
 	local arrs = select("#", ...);
@@ -615,8 +739,8 @@ local BubbleDownKeyWarnings = {
 -- }
 -- Simply applies keys from 'data' into 't' using a custom function by key, or where the key does not already exist
 --- Copies missing fields from `data` into `t` without replacing fields already present.
----@param data? ATTObject
----@param t? ATTObject
+---@param data? ATTObject # Source fields to deep-clone into missing destination fields.
+---@param t? ATTObject # Destination object whose existing fields are preserved.
 applyData = function(data, t)
 	if data and t then
 		for key, value in pairs(data) do
@@ -638,8 +762,8 @@ end
 -- This is sort of a workaround for replacing bubbleDownSelf a billion times with static field and groups
 --- Normalizes the top-level object and applies missing fields from `data` to it.
 --- Array input is wrapped in a group container before the fields are applied.
----@param data ATTObject
----@param t ATTObject|ATTObjectArray
+---@param data ATTObject # Source fields to apply where the normalized top-level object has no value.
+---@param t ATTObject|ATTObjectArray # Object or child array to normalize before applying the fields.
 ---@return ATTObject
 applyDataSelf = function(data, t)
 	if not data then
@@ -656,12 +780,14 @@ applyDataSelf = function(data, t)
 	applyData(data, t);
 	return t
 end
+-- Simpler way to applyDataSelf in a more readable wording
+with = applyDataSelf
 -- Applies a function against the group and all sub-groups
 --- Recursively applies a function to a group and all of its nested groups.
 --- Invokes the function after visiting children, including on array containers.
 --- Returns the original input, whose fields may have been changed by the function.
----@param func? fun(group: ATTObject|ATTObjectArray)
----@param t ATTObject|ATTObjectArray
+---@param func? fun(group: ATTObject|ATTObjectArray) # Callback invoked after visiting children, including on array containers.
+---@param t ATTObject|ATTObjectArray # Object tree or child array to traverse and pass to the callback.
 ---@return ATTObject|ATTObjectArray
 applyFunc = function(func, t)
 	if not func then return t end
@@ -678,7 +804,7 @@ applyFunc = function(func, t)
 	return t
 end
 --- Splits a timeline event string into its textual and numeric components.
----@param epoch string
+---@param epoch string # Timeline event string to split into its action and patch components.
 ---@return (string|number)[]
 splitTimelineEvent = function(epoch)
 	local words = {};
@@ -688,8 +814,8 @@ splitTimelineEvent = function(epoch)
 end
 -- Applies the timeline event (epoch) to the object.
 --- Adds a timeline event to an object while preserving timeline ordering and avoiding duplicates.
----@param epoch? string
----@param t? ATTObject
+---@param epoch? string # Timeline event to insert in order, unless already present.
+---@param t? ATTObject # Object whose timeline receives the event.
 applyTimelineEvent = function(epoch, t)
 	if epoch and t then
 		local timeline = t.timeline;
@@ -742,8 +868,8 @@ end
 -- Applies a copy of the provided data into the tables of the provided array/group
 --- Applies shared data to each direct child in a group or group container.
 ---@generic T: ATTObject|ATTObjectArray
----@param data ATTObject
----@param t T
+---@param data ATTObject # Fields to apply to each direct child where values are missing.
+---@param t T # Child array or group container whose direct children receive the fields.
 ---@return T
 sharedData = function(data, t)
 	if not data then
@@ -767,8 +893,8 @@ end
 -- Performs sharedData logic but also applies the data to the top-level table
 --- Applies shared data to the top-level object and its direct children.
 --- Array input is wrapped in a group container; the result is always an object.
----@param data ATTObject
----@param t ATTObject|ATTObjectArray
+---@param data ATTObject # Fields to apply to the top-level object and each direct child where values are missing.
+---@param t ATTObject|ATTObjectArray # Object or child array to normalize before applying the shared fields.
 ---@return ATTObject
 sharedDataSelf = function(data, t)
 	if not data then
@@ -789,14 +915,16 @@ sharedDataSelf = function(data, t)
 	end
 	return t
 end
+-- Simpler way to sharedDataSelf in a more readable wording
+withShared = sharedDataSelf
 -- Applies a copy of the provided data into all sub-groups of the provided table/array
 --- Recursively applies missing fields from `data` to all nested groups.
 --- Recursively propagates shared metadata to descendant parser objects.
 --- Existing values on child objects take precedence. This is intended for
 --- inheritance-like metadata such as timeline, classes, races, or requirements.
 ---@generic T: ATTObject|ATTObjectArray
----@param data ATTObject
----@param t T
+---@param data ATTObject # Fields to propagate recursively without replacing existing values.
+---@param t T # Object tree or child array receiving the fields throughout its descendants.
 ---@return T
 bubbleDown = function(data, t)
 	if not data then
@@ -844,9 +972,9 @@ end
 --- Children are visited regardless of the parent result; arrays are traversed
 --- without being passed to the filter. Returns the original input unchanged in shape.
 ---@generic T: ATTObject|ATTObjectArray|nil
----@param data ATTObject
----@param filter fun(group: ATTObject): boolean|integer|nil
----@param t T
+---@param data ATTObject # Fields to apply where accepted objects have no existing value.
+---@param filter fun(group: ATTObject): boolean|integer|nil # Predicate accepting objects with a true or integer result; false/nil skips them.
+---@param t T # Object tree or child array to traverse, even when a parent is rejected.
 ---@return T
 ---@overload fun(data: ATTObject, filter: fun(group: ATTObject): boolean|integer|nil): nil
 bubbleDownFiltered = function(data, filter, t)
@@ -865,36 +993,10 @@ bubbleDownFiltered = function(data, filter, t)
 		return t;
 	end
 end
---- Recursively applies data to nested groups, replacing existing values.
---- Recursively propagates metadata while replacing existing child values.
---- Use only when the bubbled value is authoritative for every descendant.
----@param data ATTObject
----@param t? ATTObject|ATTObjectArray
----@return ATTObject|ATTObjectArray|nil
-bubbleDownAndReplace = function(data, t)
-	if t then
-		if t --[[@as ATTObject]].g or t --[[@as ATTObject]].groups then
-			for key, value in pairs(data) do
-				t[key] = value;
-			end
-			bubbleDownAndReplace(data, t.groups);
-			bubbleDownAndReplace(data, t.g);
-		elseif isarray(t) then
-			for i,group in ipairs(t --[[@as ATTObjectArray]]) do
-				bubbleDownAndReplace(data, group);
-			end
-		else
-			for key, value in pairs(data) do
-				t[key] = value;
-			end
-		end
-		return t;
-	end
-end
 -- Performs bubbleDown logic but also applies the data to the top-level table
 --- Applies bubbled data to the top-level object and all nested groups.
----@param data ATTObject
----@param t ATTObject|ATTObjectArray
+---@param data ATTObject # Fields to propagate to the normalized root and descendants without replacing existing values.
+---@param t ATTObject|ATTObjectArray # Object or child array to normalize before recursively applying the fields.
 ---@return ATTObject
 bubbleDownSelf = function(data, t)
 	if not data then
@@ -914,9 +1016,9 @@ end
 --- Applies timeline-only data to direct children via `sharedData`.
 --- Preserves the input type; auto mode returns nil when data is not timeline-only.
 ---@generic T: ATTObject|ATTObjectArray
----@param data ATTObject
----@param t T
----@param auto? boolean
+---@param data ATTObject # Object containing only the `timeline` field to share with direct children.
+---@param t T # Child array or group container whose direct children receive the timeline.
+---@param auto? boolean # Whether invalid timeline-only data returns nil instead of raising an error.
 ---@return T|nil
 timelineSelf = function(data, t, auto)
 	if not data then
@@ -943,8 +1045,8 @@ end
 -- Applies the timeline event (epoch) to all sub-groups of the provided table/array
 --- Recursively applies a timeline event to all nested groups.
 ---@generic T: ATTObject|ATTObjectArray
----@param epoch ATTTimelineEvent
----@param t T
+---@param epoch ATTTimelineEvent # Timeline event to add recursively while preserving each timeline order.
+---@param t T # Object tree or child array whose objects receive the event.
 ---@return T
 bubbleDownTimelineEvent = function(epoch, t)
 	if not epoch then
@@ -973,15 +1075,15 @@ bubbleDownTimelineEvent = function(epoch, t)
 	end
 end
 --- Normalizes the object to a group container and bubbles a timeline event through it.
----@param epoch ATTTimelineEvent
----@param t ATTObject|ATTObjectArray
+---@param epoch ATTTimelineEvent # Timeline event to add to the normalized root and descendants.
+---@param t ATTObject|ATTObjectArray # Object or child array to normalize before applying the event recursively.
 ---@return ATTObject
 bubbleDownTimelineEventSelf = function(epoch, t)
 	return bubbleDownTimelineEvent(epoch, togroups(t));
 end
 --- Builds a human-readable representation of a nested table for validation errors.
----@param indent string
----@param t table
+---@param indent string # Indentation prefix for each entry, extended when descending into nested tables.
+---@param t table # Nested table to format for validation error output.
 ---@return string
 generateValidationStructure = function(indent, t)
 	local msg = "";
@@ -995,7 +1097,7 @@ generateValidationStructure = function(indent, t)
 end
 -- Validates and returns 't' (expected 'groups' content) ensuring that contained content is in the expected formats
 --- Validates that group contents use numeric array keys and table values.
----@param t? ATTObjectArray
+---@param t? ATTObjectArray # Group array to validate for numeric keys and table-valued child objects.
 ---@return ATTObjectArray|nil
 validateGroups = function(t)
 	if t then
@@ -1010,8 +1112,8 @@ validateGroups = function(t)
 	end
 end
 --- Checks whether an array contains a value.
----@param arr table
----@param value any
+---@param arr table # Array to search by direct value equality.
+---@param value any # Value to find among the array entries.
 ---@return boolean|nil
 contains = function(arr, value)
 	for i,value2 in ipairs(arr) do
@@ -1019,8 +1121,8 @@ contains = function(arr, value)
 	end
 end
 --- Checks whether two arrays share at least one value.
----@param arr table
----@param otherArr table
+---@param arr table # First array to compare for shared values.
+---@param otherArr table # Second array to compare by direct value equality.
 ---@return boolean|nil
 containsAny = function(arr, otherArr)
 	for i, v in ipairs(arr) do
@@ -1030,8 +1132,8 @@ containsAny = function(arr, otherArr)
 	end
 end
 --- Checks whether a table contains a value.
----@param dict table
----@param value any
+---@param dict table # Table whose values are searched, regardless of their keys.
+---@param value any # Value to find by direct equality.
 ---@return boolean|nil
 containsValue = function(dict, value)
 	for key,value2 in pairs(dict) do
@@ -1039,8 +1141,8 @@ containsValue = function(dict, value)
 	end
 end
 --- Returns a filtered copy of a table excluding the supplied value or values.
----@param data any
----@param t table
+---@param data any # Single value or array of values to omit from the result.
+---@param t table # Source array to copy while excluding the requested values.
 ---@return table
 exclude = function(data, t)
 	local t2 = {};
@@ -1069,14 +1171,14 @@ exclude = function(data, t)
 	return t2;
 end
 --- Returns a filtered copy of a table excluding all supplied values.
----@param t table
----@param ... any
+---@param t table # Source array to copy while excluding the supplied values.
+---@param ... any # Values to omit from the copied array.
 ---@return table
 excludeMany = function(t, ...)
 	return exclude({...}, t);
 end
 --- Merges multiple arrays into a new array.
----@param ... ATTObjectArray
+---@param ... ATTObjectArray # Child arrays to concatenate in order into a new array.
 ---@return ATTObjectArray
 merge = function(...)
 	local t = {};
@@ -1088,13 +1190,13 @@ merge = function(...)
 	return t;
 end
 --- Applies reputation requirements to grouped reputation tiers while skipping the initial ranks.
----@param rep FactionID
----@param group ATTObjectArrayArray
+---@param rep FactionID # Faction ID assigned to each minimum reputation requirement.
+---@param group ATTObjectArrayArray # Child arrays ordered by reputation tier; array index 1 requires tier 4.
 ---@return ATTObjectArray
 bubbleDownRepSkip = function(rep, group)
 	local t = {};
 	for i,groups in ipairs(group) do
-		groups = bubbleDown({["minReputation"] = {rep, i+3}}, groups)
+		groups = bubbleDownFiltered({minReputation = {rep, i+3}},FILTERFUNC_NoheaderID,groups)
 		for j,o in ipairs(groups) do
 			table.insert(t, o);
 		end
@@ -1102,13 +1204,13 @@ bubbleDownRepSkip = function(rep, group)
 	return t;
 end
 --- Applies reputation requirements to grouped reputation tiers.
----@param rep FactionID
----@param group ATTObjectArrayArray
+---@param rep FactionID # Faction ID assigned to each minimum reputation requirement.
+---@param group ATTObjectArrayArray # Child arrays whose indices become their minimum reputation tiers.
 ---@return ATTObjectArray
 bubbleDownRep = function(rep, group)
 	local t = {};
 	for i,groups in ipairs(group) do
-		groups = bubbleDown({["minReputation"] = {rep, i}}, groups)
+		groups = bubbleDownFiltered({minReputation = {rep, i}},FILTERFUNC_NoheaderID,groups)
 		for j,o in ipairs(groups) do
 			table.insert(t, o);
 		end
@@ -1123,13 +1225,13 @@ local classicRepsMap = {
 	EXALTED
 };
 --- Applies Classic reputation requirements to grouped reputation tiers.
----@param rep FactionID
----@param group ATTObjectArrayArray
+---@param rep FactionID # Faction ID assigned to each minimum reputation requirement.
+---@param group ATTObjectArrayArray # Child arrays ordered from Neutral through Exalted.
 ---@return ATTObjectArray
 bubbleDownClassicRep = function(rep, group)
 	local t = {};
 	for i,groups in ipairs(group) do
-		groups = bubbleDown({["minReputation"] = {rep, classicRepsMap[i]}}, groups)
+		groups = bubbleDownFiltered({minReputation = {rep, classicRepsMap[i]}},FILTERFUNC_NoheaderID,groups)
 		for j,o in ipairs(groups) do
 			table.insert(t, o);
 		end
@@ -1139,8 +1241,8 @@ end
 --- Recursively invokes a method for an object and all nested groups.
 --- Array containers are traversed; only objects are passed to the method.
 --- Returns the original input, whose fields may have been changed by the method.
----@param method fun(group: ATTObject)
----@param t? ATTObject|ATTObjectArray
+---@param method fun(group: ATTObject) # Callback invoked on each object before traversing its children.
+---@param t? ATTObject|ATTObjectArray # Object tree or child array to traverse; array containers are not passed to the callback.
 ---@return ATTObject|ATTObjectArray|nil
 run = function(method, t)
 	if t then
@@ -1159,8 +1261,8 @@ run = function(method, t)
 	end
 end
 --- Recursively unpacks an array beginning at the requested index.
----@param t table
----@param i? integer
+---@param t table # Array whose consecutive entries are returned as separate values.
+---@param i? integer # First array index to unpack; defaults to 1.
 ---@return any ...
 unpack = function(t, i)
   i = i or 1
@@ -1171,20 +1273,20 @@ end
 
 -- Helper Functions
 --- Provides the `asset` parser shortcut/helper.
----@param path string
+---@param path string # Asset path printed before this deprecated helper raises an error.
 asset = function(path)
 	print("ASSET: " .. path);
 	error("The asset function has been deprecated");
 end
 --- Provides the `icon` parser shortcut/helper.
----@param path string
+---@param path string # Icon path printed before this deprecated helper raises an error.
 icon = function(path)
 	print("ICON: " .. path);
 	error("The icon function has been deprecated");
 end
 --- Applies an event ID to all nested data.
----@param eventID EventID
----@param data ATTObject|ATTObjectArray
+---@param eventID EventID # Event identifier to propagate through the `e` field.
+---@param data ATTObject|ATTObjectArray # Object tree or child array receiving the event association.
 ---@return ATTObject|ATTObjectArray
 applyevent = function(eventID, data)
 	if not eventID then
@@ -1192,36 +1294,47 @@ applyevent = function(eventID, data)
 		---@diagnostic disable-next-line: undefined-global
 		print(CurrentSubFileName or CurrentFileName);
 	end
-	return bubbleDown({ ["e"] = eventID }, data);
+	return bubbleDown({ e = eventID }, data);
 end
 -- #if ANYCLASSIC
---- Applies a Classic phase/unobtainable value to nested data for Classic builds.
----@param phase integer
----@param data ATTObject|ATTObjectArray
----@param force? boolean
+--- Applies a Classic release phase to the provided data for Classic builds.
+---@param phase ATTPhaseID # Classic release phase to assign to the `phase` field; ignored in non-Classic builds.
+---@param data ATTObject|ATTObjectArray # Object tree receiving the Classic phase, or returned unchanged in other builds.
 ---@return ATTObject|ATTObjectArray
-applyclassicphase = function(phase, data, force)
-	return (force and bubbleDownAndReplace or bubbleDown)({ ["u"] = phase }, data);
+applyclassicphase = function(phase, t)
+	if t then
+		local data = { phase = phase };
+		if t --[[@as ATTObject]].g or t --[[@as ATTObject]].groups then
+			applyData(data, t);
+		elseif isarray(t) then
+			for _,group in ipairs(t --[[@as ATTObjectArray]]) do
+				applyData(data, group);
+			end
+		else
+			applyData(data, t);
+		end
+		return t;
+	end
+	return t;
 end
 --- Selects the Classic or non-Classic value for the active build.
----@param classicValue any
----@param value any
+---@param classicValue any # Value returned for Classic builds.
+---@param value any # Value returned for non-Classic builds.
 ---@return any
 ifclassic = function(classicValue, value)
 	return classicValue;
 end
 -- #else
---- Applies a Classic phase/unobtainable value to nested data for Classic builds.
----@param phase integer
----@param data ATTObject|ATTObjectArray
----@param force? boolean
+--- Applies a Classic release phase to the provided data for Classic builds.
+---@param phase ATTPhaseID # Classic release phase to assign to the `phase` field; ignored in non-Classic builds.
+---@param data ATTObject|ATTObjectArray # Object tree receiving the Classic phase, or returned unchanged in other builds.
 ---@return ATTObject|ATTObjectArray
-applyclassicphase = function(phase, data, force)
+applyclassicphase = function(phase, data)
 	return data;
 end
 --- Selects the Classic or non-Classic value for the active build.
----@param classicValue any
----@param value any
+---@param classicValue any # Value returned for Classic builds.
+---@param value any # Value returned for non-Classic builds.
 ---@return any
 ifclassic = function(classicValue, value)
 	return value;
@@ -1230,9 +1343,9 @@ end
 
 local squishes = {};
 --- Returns the appropriate level after expansion-specific level squishes.
----@param originalLvl integer
----@param cataLvl integer
----@param shadowlandsLvl integer
+---@param originalLvl integer # Level used before Cataclysm.
+---@param cataLvl integer # Level used from Cataclysm until the Shadowlands level squish.
+---@param shadowlandsLvl integer # Level used after the Shadowlands level squish.
 ---@return integer
 lvlsquish = function(originalLvl, cataLvl, shadowlandsLvl)
 	if cataLvl < shadowlandsLvl then
@@ -1253,15 +1366,15 @@ lvlsquish = function(originalLvl, cataLvl, shadowlandsLvl)
 	return lvl;
 end
 --- Builds the symbolic selector for a PvP weapons arsenal.
----@param TIER integer
----@param SEASON integer
----@param PVPSET integer
+---@param TIER integer # Legacy tier argument retained in the symbolic command; ignored by the current resolver.
+---@param SEASON integer # Season header ID selected by the weapons ensemble resolver.
+---@param PVPSET integer # PvP set header ID searched beneath the season header.
 ---@return ATTSym
 Sym_PvPWeaponsArsenal = function(TIER, SEASON, PVPSET)
 	return {{"sub","pvp_weapons_ensemble",TIER,SEASON,PVPSET}}
 end
 --- Creates the Shadowlands Legendaries header and assigns its symbolic selector.
----@param t? ATTObject|ATTObjectArray
+---@param t? ATTObject|ATTObjectArray # Metadata or child objects for the Shadowlands legendary header.
 ---@return ATTHeaderObject
 SL_Legendaries = function(t)
 	t = n(LEGENDARIES, t)
@@ -1269,7 +1382,7 @@ SL_Legendaries = function(t)
 	return t
 end
 --- Creates the Chronicle of Lost Memories item with its legendary-memory symbolic data.
----@param t? ATTObject|ATTObjectArray
+---@param t? ATTObject|ATTObjectArray # Metadata or child objects for the Chronicle of Lost Memories item.
 ---@return ATTItemObject
 ChronicleOfLostMemories = function(t)
 	t = t or {}
@@ -1302,8 +1415,8 @@ end
 -- Cost Helper Functions
 --- Appends one or more cost entries to an object.
 ---@generic T: ATTObject
----@param item T
----@param ... ATTCost
+---@param item T # Object whose cost list receives the new entries.
+---@param ... ATTCost # Typed cost entries to append without replacing existing costs.
 ---@return T
 applycost = function(item, ...)
 	local cost = item.cost;
@@ -1318,8 +1431,8 @@ applycost = function(item, ...)
 end
 --- Assign a token cost to an item.
 ---@generic T: ATTObject
----@param tokenItemID ItemID
----@param item T
+---@param tokenItemID ItemID # Item ID of the token required in a quantity of one.
+---@param item T # Object receiving the single-token item cost.
 ---@return T
 tokencost = function(tokenItemID, item)				-- Assign a token cost to an item.
 	applycost(item, { "i", tokenItemID, 1 });
@@ -1327,8 +1440,8 @@ tokencost = function(tokenItemID, item)				-- Assign a token cost to an item.
 end
 --- Assign a Remnant of Anguish cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Remnants of Anguish required; nonpositive amounts add no cost.
+---@param item T # Object receiving the Remnant of Anguish currency cost.
 ---@return T
 anguish = function(cost, item)						-- Assign a Remnant of Anguish cost to an item.
 	if cost > 0 then applycost(item, { "c", 3392, cost }); end
@@ -1336,16 +1449,16 @@ anguish = function(cost, item)						-- Assign a Remnant of Anguish cost to an it
 end
 --- Assign an Bloody Tokens cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Bloody Tokens required; nonpositive amounts add no cost.
+---@param item T # Object receiving the Bloody Tokens currency cost.
 ---@return T
 bloody = function(cost, item)							-- Assign an Bloody Tokens cost to an item.
 	if cost > 0 then applycost(item, { "c", BLOODY_TOKENS, cost }); end
 	return item;
 end
 --- Assign a Champion's Seal cost to an item with proper timeline & phase requirements.
----@param cost number
----@param item ATTObject
+---@param cost number # Number of Champion's Seals required.
+---@param item ATTObject # Object receiving the cost and the Wrath phase 2 flag in Classic builds.
 ---@return ATTObject
 champ = function(cost, item)							-- Assign a Champion's Seal cost to an item with proper timeline & phase requirements.
 	applycost(item, { "c", 241, cost });	-- Champion's Seal
@@ -1353,8 +1466,8 @@ champ = function(cost, item)							-- Assign a Champion's Seal cost to an item w
 end
 --- Assign a Chef's Award or Epicurean's Award cost to an item. (based on patch).
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Chef's Awards or Epicurean's Awards required, depending on the patch.
+---@param item T # Object receiving the patch-appropriate cooking award currency cost.
 ---@return T
 chefsaward = function(cost, item)						-- Assign a Chef's Award or Epicurean's Award cost to an item. (based on patch)
 	-- #if AFTER 5.0.4
@@ -1366,8 +1479,8 @@ chefsaward = function(cost, item)						-- Assign a Chef's Award or Epicurean's A
 end
 --- Assign a Conquest cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Conquest currency amount required; nonpositive amounts add no cost.
+---@param item T # Object receiving the Conquest currency cost.
 ---@return T
 conquest = function(cost, item)							-- Assign a Conquest cost to an item.
 	if cost > 0 then applycost(item, { "c", CONQUEST, cost }); end
@@ -1375,8 +1488,8 @@ conquest = function(cost, item)							-- Assign a Conquest cost to an item.
 end
 --- Assign a Dalaran Jewelcrafter's Token cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Dalaran Jewelcrafter's Tokens required.
+---@param item T # Object receiving the Dalaran Jewelcrafter's Token currency cost.
 ---@return T
 daljewelcraftingtoken = function(cost, item)			-- Assign a Dalaran Jewelcrafter's Token cost to an item.
 	applycost(item, { "c", 61, cost });
@@ -1384,8 +1497,8 @@ daljewelcraftingtoken = function(cost, item)			-- Assign a Dalaran Jewelcrafter'
 end
 --- Assign a Darkmoon Daggermaw cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Darkmoon Daggermaw items required.
+---@param item T # Object receiving the Darkmoon Daggermaw item cost.
 ---@return T
 darkmoondaggermaw = function(cost, item)				-- Assign a Darkmoon Daggermaw cost to an item.
 	applycost(item, { "i", 124669, cost });	-- Darkmoon Daggermaw
@@ -1393,8 +1506,8 @@ darkmoondaggermaw = function(cost, item)				-- Assign a Darkmoon Daggermaw cost 
 end
 --- Assign a Darkmoon Prize Ticket cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Darkmoon Prize Tickets required.
+---@param item T # Object receiving the Darkmoon Prize Ticket currency cost.
 ---@return T
 darkmoonprizeticket = function(cost, item)				-- Assign a Darkmoon Prize Ticket cost to an item.
 	applycost(item, { "c", 515, cost });	-- Darkmoon Prize Ticket
@@ -1402,8 +1515,8 @@ darkmoonprizeticket = function(cost, item)				-- Assign a Darkmoon Prize Ticket 
 end
 --- Assign a Defiler's Scourgestone (Defense Protocol Gamma - Wrath Classic) cost to an item with proper timeline requirements.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Defiler's Scourgestones required in Classic builds.
+---@param item T # Object receiving the Defiler's Scourgestone currency cost in Classic builds.
 ---@return T
 defilersscourgestone = function(cost, item)				-- Assign a Defiler's Scourgestone (Defense Protocol Gamma - Wrath Classic) cost to an item with proper timeline requirements.
 	-- #if ANYCLASSIC
@@ -1412,8 +1525,8 @@ defilersscourgestone = function(cost, item)				-- Assign a Defiler's Scourgeston
 	return item;
 end
 --- Assign a Emblem of Conquest cost to an item with proper timeline & phase requirements.
----@param cost number
----@param item ATTObject
+---@param cost number # Number of Emblems of Conquest required before patch 4.0.1.
+---@param item ATTObject # Object receiving the cost and the Wrath phase 2 flag in Classic builds.
 ---@return ATTObject
 emoc = function(cost, item)								-- Assign a Emblem of Conquest cost to an item with proper timeline & phase requirements.
 	-- #if BEFORE 4.0.1
@@ -1422,8 +1535,8 @@ emoc = function(cost, item)								-- Assign a Emblem of Conquest cost to an ite
 	return applyclassicphase(WRATH_PHASE_TWO, item);
 end
 --- Assign a Emblem of Frost cost to an item with proper timeline & phase requirements.
----@param cost number
----@param item ATTObject
+---@param cost number # Number of Emblems of Frost required before patch 4.0.1.
+---@param item ATTObject # Object receiving the cost and the Wrath phase 4 flag in Classic builds.
 ---@return ATTObject
 emof = function(cost, item)								-- Assign a Emblem of Frost cost to an item with proper timeline & phase requirements.
 	-- #if BEFORE 4.0.1
@@ -1432,8 +1545,8 @@ emof = function(cost, item)								-- Assign a Emblem of Frost cost to an item w
 	return applyclassicphase(WRATH_PHASE_FOUR, item);
 end
 --- Assign a Emblem of Heroism cost to an item with proper timeline & phase requirements.
----@param cost number
----@param item ATTObject
+---@param cost number # Number of Emblems of Heroism required before patch 4.0.1.
+---@param item ATTObject # Object receiving the cost and the Wrath phase 1 flag in Classic builds.
 ---@return ATTObject
 emoh = function(cost, item)								-- Assign a Emblem of Heroism cost to an item with proper timeline & phase requirements.
 	-- #if BEFORE 4.0.1
@@ -1442,8 +1555,8 @@ emoh = function(cost, item)								-- Assign a Emblem of Heroism cost to an item
 	return applyclassicphase(WRATH_PHASE_ONE, item);
 end
 --- Assign a Emblem of Triumph cost to an item with proper timeline & phase requirements.
----@param cost number
----@param item ATTObject
+---@param cost number # Number of Emblems of Triumph required before patch 4.0.1.
+---@param item ATTObject # Object receiving the cost and the Wrath phase 3 flag in Classic builds.
 ---@return ATTObject
 emot = function(cost, item)								-- Assign a Emblem of Triumph cost to an item with proper timeline & phase requirements.
 	-- #if BEFORE 4.0.1
@@ -1452,8 +1565,8 @@ emot = function(cost, item)								-- Assign a Emblem of Triumph cost to an item
 	return applyclassicphase(WRATH_PHASE_THREE, item);
 end
 --- Assign a Emblem of Valor cost to an item with proper timeline & phase requirements.
----@param cost number
----@param item ATTObject
+---@param cost number # Number of Emblems of Valor required before patch 4.0.1.
+---@param item ATTObject # Object receiving the cost and the Wrath phase 1 flag in Classic builds.
 ---@return ATTObject
 emov = function(cost, item)								-- Assign a Emblem of Valor cost to an item with proper timeline & phase requirements.
 	-- #if BEFORE 4.0.1
@@ -1463,8 +1576,8 @@ emov = function(cost, item)								-- Assign a Emblem of Valor cost to an item w
 end
 --- Assign a Epicurean's Award cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Epicurean's Awards required.
+---@param item T # Object receiving the Epicurean's Award currency cost.
 ---@return T
 epicurean = function(cost, item)						-- Assign a Epicurean's Award cost to an item.
 	applycost(item, { "c", 81, cost });
@@ -1472,8 +1585,8 @@ epicurean = function(cost, item)						-- Assign a Epicurean's Award cost to an i
 end
 --- Assign a Flame-Blessed Iron cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Flame-Blessed Iron currency amount required; nonpositive amounts add no cost.
+---@param item T # Object receiving the Flame-Blessed Iron currency cost.
 ---@return T
 fbiron = function(cost, item)						-- Assign a Flame-Blessed Iron cost to an item.
 	if cost > 0 then applycost(item, { "c", 3090, cost }); end
@@ -1481,8 +1594,8 @@ fbiron = function(cost, item)						-- Assign a Flame-Blessed Iron cost to an ite
 end
 --- Assign a Gold cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Cost in gold, converted to copper by multiplying by 10,000.
+---@param item T # Object receiving the gold cost entry.
 ---@return T
 gold = function(cost, item)								-- Assign a Gold cost to an item.
 	applycost(item, { "g", cost * 10000 });	-- Gold
@@ -1490,8 +1603,8 @@ gold = function(cost, item)								-- Assign a Gold cost to an item.
 end
 --- Assign an Heavy Savage Leather cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Heavy Savage Leather items required; nonpositive amounts add no cost.
+---@param item T # Object receiving the Heavy Savage Leather item cost.
 ---@return T
 heavysavageleather = function(cost, item)				-- Assign an Heavy Savage Leather cost to an item.
 	if cost > 0 then applycost(item, { "i", 56516, cost }); end
@@ -1499,19 +1612,19 @@ heavysavageleather = function(cost, item)				-- Assign an Heavy Savage Leather c
 end
 --- Assign an Honor cost to an item. (modern).
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Modern Honor currency amount required; nonpositive amounts add no cost.
+---@param item T # Object receiving the modern Honor currency cost.
 ---@return T
 honor = function(cost, item)							-- Assign an Honor cost to an item. (modern)
 	if cost > 0 then applycost(item, { "c", HONOR, cost }); end
 	return item;
 end
---- Assign a Honor cost to an item with proper timeline requirements. (pre-Cata costs).
+--- Assign an Honor cost to an item with proper timeline requirements. (pre-Cata costs).
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Intended pre-Cataclysm Honor amount; currently unused by this unimplemented helper.
+---@param item T # Object returned unchanged while this helper is unimplemented.
 ---@return T
-honorpoints = function(cost, item)						-- Assign a Honor cost to an item with proper timeline requirements. (pre-Cata costs)
+honorpoints = function(cost, item)						-- Assign an Honor cost to an item with proper timeline requirements. (pre-Cata costs)
 	-- #if BEFORE CATA
 	-- TODO: Add the before Cata Honor System
 	--applycost(item, { "c", , cost });	-- Honor
@@ -1520,8 +1633,8 @@ honorpoints = function(cost, item)						-- Assign a Honor cost to an item with p
 end
 --- Assign a Mark of Honor cost to an item with proper timeline requirements.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Mark of Honor items required after patch 7.0.3.22248.
+---@param item T # Object receiving the Mark of Honor item cost when supported by the patch.
 ---@return T
 moh = function(cost, item)								-- Assign a Mark of Honor cost to an item with proper timeline requirements.
 	-- #if AFTER 7.0.3.22248
@@ -1531,8 +1644,8 @@ moh = function(cost, item)								-- Assign a Mark of Honor cost to an item with
 end
 --- Assign a Sidereal Essence (Defense Protocol Beta - Wrath Classic) cost to an item with proper timeline requirements.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Sidereal Essence currency amount required in Classic builds.
+---@param item T # Object receiving the Sidereal Essence currency cost in Classic builds.
 ---@return T
 siderealessence = function(cost, item)					-- Assign a Sidereal Essence (Defense Protocol Beta - Wrath Classic) cost to an item with proper timeline requirements.
 	-- #if ANYCLASSIC
@@ -1542,8 +1655,8 @@ siderealessence = function(cost, item)					-- Assign a Sidereal Essence (Defense
 end
 --- Assign a Chef's Award or Epicurean's Award cost to an item. (based on patch).
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Spirit Shards required, as items or currency depending on the patch.
+---@param item T # Object receiving the patch-appropriate Spirit Shard item or currency cost.
 ---@return T
 spiritshard = function(cost, item)						-- Assign a Chef's Award or Epicurean's Award cost to an item. (based on patch)
 	-- #if AFTER 8.0.1
@@ -1555,8 +1668,8 @@ spiritshard = function(cost, item)						-- Assign a Chef's Award or Epicurean's 
 end
 --- Assign a Tol Barad Commendation cost to an item with proper timeline requirements.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Tol Barad Commendations required.
+---@param item T # Object receiving the Tol Barad Commendation currency cost.
 ---@return T
 tolbaradcommendation = function(cost, item)				-- Assign a Tol Barad Commendation cost to an item with proper timeline requirements.
 	applycost(item, { "c", 391, cost });	-- Tol Barad Commendation
@@ -1564,8 +1677,8 @@ tolbaradcommendation = function(cost, item)				-- Assign a Tol Barad Commendatio
 end
 --- Assign a Traders Tender cost to an item.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Trader's Tender currency amount required; nonpositive amounts add no cost.
+---@param item T # Object receiving the Trader's Tender currency cost.
 ---@return T
 traderstender = function(cost, item)                	-- Assign a Traders Tender cost to an item.
 	if cost > 0 then applycost(item, { "c", TRADERS_TENDER, cost }); end
@@ -1573,8 +1686,8 @@ traderstender = function(cost, item)                	-- Assign a Traders Tender 
 end
 --- Assign a Venture Coin cost to an item with proper timeline requirements.
 ---@generic T: ATTObject
----@param cost number
----@param item T
+---@param cost number # Number of Venture Coins required before patch 4.0.1.
+---@param item T # Object receiving the Venture Coin currency cost before patch 4.0.1.
 ---@return T
 venture = function(cost, item)							-- Assign a Venture Coin cost to an item with proper timeline requirements.
 	-- #if BEFORE 4.0.1
@@ -1583,7 +1696,7 @@ venture = function(cost, item)							-- Assign a Venture Coin cost to an item wi
 	return item;
 end
 --- Assign a Champion's Writ cost to an item with proper timeline & phase requirements.
----@param item ATTObject
+---@param item ATTObject # Object receiving a cost of one Champion's Writ and the Wrath phase 2 flag in Classic builds.
 ---@return ATTObject
 writ = function(item)									-- Assign a Champion's Writ cost to an item with proper timeline & phase requirements.
 	applycost(item, { "i", 46114, 1 });	-- 1x Champion's Writ
@@ -1592,9 +1705,9 @@ end
 
 -- Achievement Shortcuts
 --- Create an ACHIEVEMENT Object.
----@param id AchievementID
----@param altID? AchievementID
----@param t? ATTObject|ATTObjectArray
+---@param id AchievementID # Achievement ID, or Alliance achievement ID for a faction-specific pair.
+---@param altID? AchievementID # Optional Horde achievement ID paired with the Alliance achievement ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTAchievementObject
 ---@overload fun(id: AchievementID, t?: ATTObject|ATTObjectArray): ATTAchievementObject
 ach = function(id, altID, t)							-- Create an ACHIEVEMENT Object
@@ -1618,9 +1731,9 @@ ach = function(id, altID, t)							-- Create an ACHIEVEMENT Object
 	return t;
 end
 --- Create an ACHIEVEMENT Object with getting Exalted with a Faction as a requirement.
----@param id AchievementID
----@param factionID FactionID
----@param t? ATTObject|ATTObjectArray
+---@param id AchievementID # Achievement ID.
+---@param factionID FactionID # Reputation faction with which Exalted standing is required.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTAchievementObject
 achWithRep = function(id, factionID, t)					-- Create an ACHIEVEMENT Object with getting Exalted with a Faction as a requirement.
 	t = ach(id, t);
@@ -1628,25 +1741,25 @@ achWithRep = function(id, factionID, t)					-- Create an ACHIEVEMENT Object with
 	return t;
 end
 --- Create an ACHIEVEMENT Object with getting Exalted with seveneral Factions as a requirement.
----@param id AchievementID
----@param factions FactionID[]
----@param t? ATTObject|ATTObjectArray
+---@param id AchievementID # Achievement ID.
+---@param factions FactionID[] # Faction IDs accepted by the signature; currently unused.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTAchievementObject
 achWithReps = function(id, factions, t)					-- Create an ACHIEVEMENT Object with getting Exalted with seveneral Factions as a requirement.
 	return ach(id, t);
 end
 --- Create an ACHIEVEMENT Object with getting Exalted with seveneral Factions as a requirement.
----@param id AchievementID
----@param factions FactionID[]
----@param t? ATTObject|ATTObjectArray
+---@param id AchievementID # Achievement ID.
+---@param factions FactionID[] # Faction IDs accepted by the signature; currently unused.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTAchievementObject
 achWithAnyReps = function(id, factions, t)				-- Create an ACHIEVEMENT Object with getting Exalted with seveneral Factions as a requirement.
 	return ach(id, t);
 end
 --- Create an ACHIEVEMENT Object whose Criteria will not be adjusted by AchievementDB info.
----@param id AchievementID
----@param altID? AchievementID
----@param t? ATTObject|ATTObjectArray
+---@param id AchievementID # Achievement ID, or Alliance achievement ID for a faction-specific pair.
+---@param altID? AchievementID # Optional Horde achievement ID paired with the Alliance achievement ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTAchievementObject
 ---@overload fun(id: AchievementID, t?: ATTObject|ATTObjectArray): ATTAchievementObject
 achraw = function(id, altID, t)							-- Create an ACHIEVEMENT Object whose Criteria will not be adjusted by AchievementDB info
@@ -1663,9 +1776,9 @@ achraw = function(id, altID, t)							-- Create an ACHIEVEMENT Object whose Crit
 	return t;
 end
 --- Create an ACHIEVEMENT Object whose Criteria is simply to complete a partial set of a broader Achievement's Criteria.
----@param id AchievementID
----@param fullAch AchievementID
----@param t? ATTObject|ATTObjectArray
+---@param id AchievementID # Achievement ID.
+---@param fullAch AchievementID # Broader achievement whose criteria supply this partial achievement.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTAchievementObject
 achpart = function(id, fullAch, t)						-- Create an ACHIEVEMENT Object whose Criteria is simply to complete a partial set of a broader Achievement's Criteria
 	t = ach(id, t)
@@ -1676,24 +1789,24 @@ end
 
 -- SHORTCUTS for Object Class Types
 --- Create an ACHIEVEMENT CATEGORY Object.
----@param id AchievementCategoryID
----@param t? ATTObject|ATTObjectArray
+---@param id AchievementCategoryID # Achievement category ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 achcat = function(id, t)								-- Create an ACHIEVEMENT CATEGORY Object
 	return struct("achievementCategoryID", id, t);
 end
 achievementCategory = achcat;
 --- Create an ARTIFACT Object.
----@param id ArtifactID
----@param t? ATTObject|ATTObjectArray
+---@param id ArtifactID # Artifact weapon appearance ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 artifact = function(id, t)								-- Create an ARTIFACT Object
 	return struct("artifactID", id, t);
 end
 --- Create a AZERITE ESSENCE Object.
----@param id AzeriteEssenceID
----@param rank? integer
----@param t? ATTObject|ATTObjectArray
+---@param id AzeriteEssenceID # Azerite essence ID.
+---@param rank? integer # Optional Azerite essence rank.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 ---@overload fun(id: AzeriteEssenceID, t?: ATTObject|ATTObjectArray): ATTObject
 az = function(id, rank, t)								-- Create a AZERITE ESSENCE Object
@@ -1711,8 +1824,8 @@ az = function(id, rank, t)								-- Create a AZERITE ESSENCE Object
 end
 azeriteEssence = az;									-- Create a AZERITE ESSENCE Object. (alternative shortcut)
 --- Create an Item which is marked as having obtained the Heart of Azeroth.
----@param id ItemID
----@param t? ATTObject|ATTObjectArray
+---@param id ItemID # Base item ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTItemObject
 azeriteItem = function(id, t)							-- Create an Item which is marked as having obtained the Heart of Azeroth
 	t = i(id, t);
@@ -1720,8 +1833,8 @@ azeriteItem = function(id, t)							-- Create an Item which is marked as having 
 	return t;
 end
 --- Create an Item which is marked as having not obtained the Heart of Azeroth.
----@param id ItemID
----@param t? ATTObject|ATTObjectArray
+---@param id ItemID # Base item ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTItemObject
 azewrongItem = function(id, t)							-- Create an Item which is marked as having not obtained the Heart of Azeroth
 	t = i(id, t);
@@ -1729,15 +1842,15 @@ azewrongItem = function(id, t)							-- Create an Item which is marked as having
 	return t;
 end
 --- Create a CAMPSITE Object.
----@param id integer
----@param t? ATTObject|ATTObjectArray
+---@param id integer # Warband campsite scene ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 campsite = function(id, t)								-- Create a CAMPSITE Object
 	return struct("campsiteID", id, t);
 end
 --- Create a BATTLE PET Object (Battle Pet == Species == Pet).
----@param id BattlePetSpeciesID
----@param t? ATTObject|ATTObjectArray
+---@param id BattlePetSpeciesID # Battle pet species ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTBattlePetObject
 battlepet = function(id, t)								-- Create a BATTLE PET Object (Battle Pet == Species == Pet)
 	return struct("speciesID", id, t);
@@ -1745,8 +1858,8 @@ end
 pet = battlepet;										-- Create a BATTLE PET Object (alternative shortcut)
 p = battlepet;											-- Create a BATTLE PET Object (alternative shortcut)
 --- Create a BATTLE PET ABILITY Object.
----@param id BattlePetAbilityID
----@param t? ATTObject|ATTObjectArray
+---@param id BattlePetAbilityID # Battle pet ability ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 battlepetability = function(id, t)						-- Create a BATTLE PET ABILITY Object
 	return struct("petAbilityID", id, t);
@@ -1754,25 +1867,25 @@ end
 bpa = battlepetability;									-- Create a BATTLE PET ABILITY Object (alternative shortcut)
 pa = battlepetability;									-- Create a BATTLE PET ABILITY Object (alternative shortcut)
 --- Create a BATTLE PET TYPE Object.
----@param id BattlePetTypeID
----@param t? ATTObject|ATTObjectArray
+---@param id BattlePetTypeID # Battle pet family/type ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 battlepettype = function(id, t)							-- Create a BATTLE PET TYPE Object
 	return struct("petTypeID", id, t);
 end
 bpt = battlepettype;									-- Create a BATTLE PET TYPE Object (alternative shortcut)
 --- Create a CATEGORY Object.
----@param id integer
----@param t? ATTObject|ATTObjectArray
+---@param id integer # ATT category ID used for localized names and icons.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 category = function(id, t)								-- Create a CATEGORY Object.
 	return struct("categoryID", id, t);
 end
 cat = category
 --- Create a CHARACTER CLASS Object.
----@param id ClassID
----@param spec ChrSpecializationID
----@param t ATTObject|ATTObjectArray
+---@param id ClassID # Character class ID.
+---@param spec ChrSpecializationID # Specialization ID encoded into the class ID in the three-argument form.
+---@param t ATTObject|ATTObjectArray # Object fields or child objects for the class or specialization header.
 ---@return ATTObject
 ---@overload fun(id: ClassID, t?: ATTObject|ATTObjectArray): ATTObject
 cl = function(id, spec, t)								-- Create a CHARACTER CLASS Object
@@ -1801,14 +1914,14 @@ cl = function(id, spec, t)								-- Create a CHARACTER CLASS Object
 	return struct("classID", id, t);
 end
 --- Flag all nested content to require achieving Challenge Master FoS (Realm Best times for Challenge Modes in MoP and WoD).
----@param t ATTObject|ATTObjectArray
+---@param t ATTObject|ATTObjectArray # Object or child groups whose nested content receives the Challenge Master requirement.
 ---@return ATTObject|ATTObjectArray
 challengemaster = function(t)							-- Flag all nested content to require achieving Challenge Master FoS (Realm Best times for Challenge Modes in MoP and WoD)
-	return bubbleDown({ ["cm"] = true }, t);
+	return bubbleDown({ cm = true }, t);
 end
 --- Create a CHARACTER CLASS Object without a Class Lock.
----@param id ClassID
----@param t? ATTObject|ATTObjectArray
+---@param id ClassID # Character class ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTHeaderObject
 clWithoutLock = function(id, t)							-- Create a CHARACTER CLASS Object without a Class Lock
 	t = struct("headerID", id, t);
@@ -1816,22 +1929,22 @@ clWithoutLock = function(id, t)							-- Create a CHARACTER CLASS Object without
 	return t;
 end
 --- Create a CREATURE Object.
----@param id CreatureID
----@param t? ATTObject|ATTObjectArray
+---@param id CreatureID # Creature entry ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTCreatureObject
 creature = function(id, t)								-- Create a CREATURE Object
 	return struct("creatureID", id, t);
 end
 cr = creature;											-- Create a CREATURE Object (alternative shortcut)
 --- Create an Achievement Criteria Object (localized automatically).
----@param criteriaUID CriteriaID
----@param t? ATTObject|ATTObjectArray
+---@param criteriaUID CriteriaID # Achievement criterion ID or legacy criterion index.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTAchievementCriteriaObject
 crit = function(criteriaUID, t)							-- Create an Achievement Criteria Object (localized automatically)
 	if not t then t = {};
 	elseif not t.groups then
 		if isarray(t) then
-			t = { ["groups"] = t };
+			t = { groups = t };
 		end
 	end
 	if (t.groups or t.g) and #(t.groups or t.g) > 0 and false then
@@ -1856,15 +1969,15 @@ crit = function(criteriaUID, t)							-- Create an Achievement Criteria Object (
 	return t;
 end
 --- Create a CURRENCY Object.
----@param id CurrencyID
----@param t? ATTObject|ATTObjectArray
+---@param id CurrencyID # Currency type ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTCurrencyObject
 currency = function(id, t)								-- Create a CURRENCY Object
 	return struct("currencyID", id, t);
 end
 --- Create a DIFFICULTY Object.
----@param id DifficultyID|DifficultyID[]
----@param t? ATTObject|ATTObjectArray
+---@param id DifficultyID|DifficultyID[] # Single instance difficulty ID or a list to combine into a multi-difficulty ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTDifficultyObject
 d = function(id, t)										-- Create a DIFFICULTY Object
 	if not id then
@@ -1929,19 +2042,19 @@ d = function(id, t)										-- Create a DIFFICULTY Object
 	return t;
 end
 --- Create an ENCOUNTER Object (Post-Wrath).
----@param id JournalEncounterID
----@param t? ATTObject|ATTObjectArray
+---@param id JournalEncounterID # Encounter Journal encounter ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTEncounterObject
 e = function(id, t)										-- Create an ENCOUNTER Object (Post-Wrath)
 	return struct("encounterID", id, t);
 end
 --- Flag all nested content as requiring Elite PvP gameplay.
----@param t ATTObject|ATTObjectArray
+---@param t ATTObject|ATTObjectArray # Object or child groups whose nested content receives the Elite PvP requirement.
 ---@return ATTObject|ATTObjectArray
 elitepvp = function(t)									-- Flag all nested content as requiring Elite PvP gameplay
 	return bubbleDown({
-		["pvp"] = true,
-		["u"] = ELITE_PVP_REQUIREMENT,					-- CRIEVE NOTE: This currently uses the same filter as our other filters. This should probably be changed to act like the PVP filter or make "pvp" a 2 or something.
+		pvp = true,
+		u = ELITE_PVP_REQUIREMENT,					-- CRIEVE NOTE: This currently uses the same filter as our other filters. This should probably be changed to act like the PVP filter or make "pvp" a 2 or something.
 	}, t);
 end
 local PatchDecimals = 2
@@ -1949,9 +2062,9 @@ local RevDecimals = 2
 local PatchShift = 10 ^ PatchDecimals
 local RevShift = 10 ^ RevDecimals
 --- Create an EXPANSION Object.
----@param id ExpansionID
----@param patch number
----@param t ATTObject|ATTObjectArray
+---@param id ExpansionID # Expansion ID.
+---@param patch number # Patch component encoded into the expansion ID in the three-argument form.
+---@param t ATTObject|ATTObjectArray # Object fields or child objects for the expansion or patch header.
 ---@return ATTObject
 ---@overload fun(id: ExpansionID, t?: ATTObject|ATTObjectArray): ATTObject
 expansion = function(id, patch, t)						-- Create an EXPANSION Object
@@ -1987,14 +2100,37 @@ expansion = function(id, patch, t)						-- Create an EXPANSION Object
 			t.timeline = { "added " .. math.floor(id) ..".".. patchstring }
 		else
 			local deftimeline = EXPANSION_DEFAULT_TIMELINES[id]
-			t._defaulttimeline = { deftimeline } or { "added " .. math.floor(id) .. ".0" }
+			if not deftimeline then
+				print("WARN: No EXPANSION_DEFAULT_TIMELINES found for expansionID:",id)
+				t.timeline = { "added " .. math.floor(id) .. ".0" }
+			else
+				t.timeline = { deftimeline }
+			end
 		end
 	end
 	return t;
 end
+--- Create an EXPANSION Object with a specified Timeline (for use as a Header)
+---@param id ExpansionID # Expansion ID.
+---@param patch number # Patch component encoded into the expansion ID in the three-argument form.
+---@param t ATTObject|ATTObjectArray # Object fields or child objects for the expansion or patch header.
+---@return ATTObject
+---@overload fun(id: ExpansionID, t?: ATTObject|ATTObjectArray): ATTObject
+expansionHeader = function(id, timeline, t)
+	t = expansion(id, t)
+	if timeline == IGNORED_VALUE then
+		return t
+	end
+	if not timeline or not isarray(timeline) then
+		print("WARN: Use of 'expansionHeader' without a valid 'timeline': "..tostring(timeline))
+		return t
+	end
+	t.timeline = timeline
+	return t
+end
 --- Create an EXPLORATION Object.
----@param id ExplorationID
----@param t? ATTObject|ATTObjectArray|string
+---@param id ExplorationID # Exploration area ID.
+---@param t? ATTObject|ATTObjectArray|string # Optional object fields or child objects; legacy string values are ignored.
 ---@return ATTExplorationObject
 exploration = function(id, t)							-- Create an EXPLORATION Object
 	if type(t) == "string" then
@@ -2003,8 +2139,8 @@ exploration = function(id, t)							-- Create an EXPLORATION Object
 	return struct("explorationID", id, t);
 end
 --- Create an EXPLORATION Object (which fails to return in exploration API and must be visited manually for name-based area check to capture).
----@param id ExplorationID
----@param t? ATTObject|ATTObjectArray
+---@param id ExplorationID # Exploration area ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTExplorationObject
 visit_exploration = function(id, t)						-- Create an EXPLORATION Object (which fails to return in exploration API and must be visited manually for name-based area check to capture)
 	t = struct("explorationID", id, t)
@@ -2025,15 +2161,15 @@ visit_exploration = function(id, t)						-- Create an EXPLORATION Object (which 
 end
 map_exploration = visit_exploration;
 --- Create a FACTION Object.
----@param id FactionID
----@param t? ATTObject|ATTObjectArray
+---@param id FactionID # Reputation faction ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTFactionObject
 faction = function(id, t)								-- Create a FACTION Object
 	return struct("factionID", id, t);
 end
 --- Create a FIRST CRAFT Object.
----@param id RecipeID
----@param t? ATTObject|ATTObjectArray
+---@param id RecipeID # Crafting recipe spell ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTFirstCraftObject
 firstcraft = function(id, t)							-- Create a FIRST CRAFT Object
 	t = struct("firstcraftID", id, t);
@@ -2042,16 +2178,16 @@ firstcraft = function(id, t)							-- Create a FIRST CRAFT Object
 end
 fc = firstcraft;
 --- Create a FLIGHT PATH Object.
----@param id FlightPathID
----@param t? ATTObject|ATTObjectArray
+---@param id FlightPathID # Flight path taxi node ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTFlightPathObject
 flightpath = function(id, t)							-- Create a FLIGHT PATH Object
 	return struct("flightpathID", id, t);
 end
 fp = flightpath;										-- Create a FLIGHT PATH Object (Alternative)
 --- Create a FILTER Object.
----@param id FilterID
----@param t? ATTObject|ATTObjectArray
+---@param id FilterID # ATT filter/category ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 filter = function(id, t)								-- Create a FILTER Object
 	if not id or id < 0 then
@@ -2061,59 +2197,59 @@ filter = function(id, t)								-- Create a FILTER Object
 end
 f = filter;												-- Create a FILTER Object (Alternative)
 --- Create a FOLLOWER Object.
----@param id FollowerID
----@param t? ATTObject|ATTObjectArray
+---@param id FollowerID # Garrison follower ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 follower = function(id, t)								-- Create a FOLLOWER Object
 	return struct("followerID", id, t);
 end
 --- Create a GARRISON BUILDING Object.
----@param id GarrisonBuildingID
----@param t? ATTObject|ATTObjectArray
+---@param id GarrisonBuildingID # Garrison building ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 garrisonBuilding = function(id, t)						-- Create a GARRISON BUILDING Object
 	return struct("buildingID", id, t);
 end
 gb = garrisonBuilding;									-- Create a GARRISON BUILDING Object (Alternative)
 --- Create a GARRISON TALENT Object.
----@param id GarrisonTalentID
----@param t? ATTObject|ATTObjectArray
+---@param id GarrisonTalentID # Garrison or order hall research talent ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 garrisonTalent = function(id, t)						-- Create a GARRISON TALENT Object
 	return struct("talentID", id, t);
 end
 --- Create an GARRISON TALENT Object (Alternative).
----@param id GarrisonTalentID
----@param t? ATTObject|ATTObjectArray
+---@param id GarrisonTalentID # Garrison or order hall research talent ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 gt = function(id, t)									-- Create an GARRISON TALENT Object (Alternative)
 	return struct("talentID", id, t);
 end
 --- Create a GEAR SET Object (IE: "Vestments of Prophecy").
----@param id integer
----@param t? ATTObject|ATTObjectArray
+---@param id integer # Transmog gear set ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 gs = function(id, t)									-- Create a GEAR SET Object (IE: "Vestments of Prophecy")
 	return struct("setID", id, t);
 end
 --- Create a GEAR SET HEADER Object (IE: "Season 1").
----@param id integer
----@param t? ATTObject|ATTObjectArray
+---@param id integer # Gear set ID whose shared label is used as the header name.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 gsh = function(id, t)									-- Create a GEAR SET HEADER Object (IE: "Season 1")
 	return struct("setHeaderID", id, t);
 end
 --- Create a GEAR SET SUB HEADER Object (IE: "Gladiator").
----@param id integer
----@param t? ATTObject|ATTObjectArray
+---@param id integer # Gear set ID whose description is used as the subheader name.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 gssh = function(id, t)									-- Create a GEAR SET SUB HEADER Object (IE: "Gladiator")
 	return struct("setSubHeaderID", id, t);
 end
 --- Create an Automatic Header which will use the plain Text of the specified in-game object based on Type-ID combination.
----@param ty string|integer
----@param id ATTHeaderID
----@param t? ATTObject|ATTObjectArray
+---@param ty string|integer # Header type controlling automatic naming.
+---@param id ATTHeaderID # In-game object identifier resolved using the automatic header type.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTHeaderObject
 header = function(ty, id, t)							-- Create an Automatic Header which will use the plain Text of the specified in-game object based on Type-ID combination
 	if type(ty) == "string" or id >= 0 then
@@ -2131,24 +2267,63 @@ header = function(ty, id, t)							-- Create an Automatic Header which will use 
 	return t;
 end
 --- Create an HEIRLOOM Object(NOTE: You should only use this if not an appearance).
----@param id ItemID
----@param t? ATTObject|ATTObjectArray
+---@param id ItemID # Base item ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTItemObject
 heir = function(id, t)									-- Create an HEIRLOOM Object(NOTE: You should only use this if not an appearance)
 	return struct("itemID", id, t);
 end
 --- Create a HQT (Hidden Quest Tracker) Object.
----@param id QuestID
----@param t? ATTObject|ATTObjectArray
+---@param id QuestID # Quest ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTQuestObject
 hqt = function(id, t)									-- Create a HQT (Hidden Quest Tracker) Object
 	t = q(id, t);
-	t.type = "hqt"
+	if not t.type then
+		t.type = "hqt"
+	end
+	return t
+end
+--- Creates a Hidden Quest Trigger object related to bonus Faction reputation from a given Source. Assumes typical Exalted-based rep unless overridden in MAX_FACTION_RANKS
+---@param questID QuestID # Hidden quest ID tracking the source's bonus reputation.
+---@param factionID FactionID # Faction ID used for the default reputation cap, from `MAX_FACTION_RANKS` or rank 8.
+---@param t? ATTObject|ATTObjectArray # Optional trigger fields or an array of child objects.
+---@return ATTQuestObject
+hqt_bonusRep = function(questID, factionID, t)
+	t = t or {}
+	-- TODO: adjust with 'givesReputation' when implemented
+	if not t.maxReputation then
+		t.maxReputation = { factionID, MAX_FACTION_RANKS[factionID] or 8 }
+	end
+	t.type = "hqtbr"
+	return hqt(questID, t)
+end
+--- Creates a Hidden Quest Trigger object related to bonus Faction reputation from a given Source. Assumes typical Renown-based rep (rank 20 max) unless overridden in MAX_FACTION_RANKS
+---@param questID QuestID # Hidden quest ID tracking the source's bonus reputation.
+---@param factionRenownID FactionID # Renown faction ID used for the default reputation cap, from `MAX_FACTION_RANKS` or rank 20.
+---@param t? ATTObject|ATTObjectArray # Optional trigger fields or an array of child objects.
+---@return ATTQuestObject
+hqt_bonusRenown = function(questID, factionRenownID, t)
+	t = t or {}
+	-- TODO: adjust with 'givesReputation' when implemented
+	if not t.maxReputation then
+		t.maxReputation = { factionRenownID, MAX_FACTION_RANKS[factionRenownID] or 20 }
+	end
+	return hqt_bonusRep(questID, factionRenownID, t)
+end
+--- Creates a weekly Hidden Quest Trigger object related to bonus Faction reputation from a given Source. Assumes typical Renown-based rep (rank 20 max) unless overridden in MAX_FACTION_RANKS
+---@param questID QuestID # Hidden quest ID tracking the source's weekly bonus reputation.
+---@param factionRenownID FactionID # Renown faction ID used for the default reputation cap, from `MAX_FACTION_RANKS` or rank 20.
+---@param t? ATTObject|ATTObjectArray # Optional trigger fields or an array of child objects.
+---@return ATTQuestObject
+hqt_bonusRenown_weekly = function(questID, factionRenownID, t)
+	local t = hqt_bonusRenown(questID, factionRenownID, t)
+	t.isWeekly = true
 	return t
 end
 --- Create an ILLUSION Object (only necessary for illusions without itemIDs).
----@param id IllusionID
----@param t? ATTObject|ATTObjectArray
+---@param id IllusionID # Weapon enchantment illusion source ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 illusion = function(id, t)								-- Create an ILLUSION Object (only necessary for illusions without itemIDs)
 	return struct("illusionID", id, t);
@@ -2156,16 +2331,16 @@ end
 ill = illusion;											-- Create an ILLUSION Object
 
 -- Create an ITEM Object
----@param id ItemID
----@param t? ATTObject|ATTObjectArray
+---@param id ItemID # Base item ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTItemObject
 item = function(id, t)
 	return struct("itemID", id, t);
 end
 i = item;												-- Create an ITEM Object (alternative shortcut)
 --- Create an ITEM Object that ignores bonus IDs.
----@param id ItemID
----@param t? ATTObject|ATTObjectArray
+---@param id ItemID # Base item ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTItemObject
 ig = function(id, t)									-- Create an ITEM Object that ignores bonus IDs.
 	t = struct("itemID", id, t);
@@ -2175,10 +2350,10 @@ ig = function(id, t)									-- Create an ITEM Object that ignores bonus IDs.
 	return t;
 end
 --- Create an ITEM Object which can be Upgraded to another Item version (specified by ModID/BonusID).
----@param itemID ItemID
----@param modID? ModID
----@param bonusID? BonusID
----@param t? ATTObject|ATTObjectArray
+---@param itemID ItemID # Base item ID.
+---@param modID? ModID # Optional modifier ID of the upgraded variant; `modID` or `bonusID` must be nonzero.
+---@param bonusID? BonusID # Optional bonus ID of the upgraded item variant.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTItemObject
 iupgrade = function(itemID, modID, bonusID, t)			-- Create an ITEM Object which can be Upgraded to another Item version (specified by ModID/BonusID)
 	if (modID or 0) == 0 and (bonusID or 0) == 0 then
@@ -2190,8 +2365,8 @@ iupgrade = function(itemID, modID, bonusID, t)			-- Create an ITEM Object which 
 	return i;
 end
 --- Create an ITEM which imports Wago Ensemble data during Parse.
----@param itemID ItemID
----@param t? ATTObject|ATTObjectArray
+---@param itemID ItemID # Base item ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTItemObject
 iensemble = function(itemID, t)							-- Create an ITEM which imports Wago Ensemble data during Parse
 	-- Include '_IgnoreSharedEnsembleByQuestID' in the RARE situation that two distinct ensembles are given the same QuestID by Blizz
@@ -2200,10 +2375,10 @@ iensemble = function(itemID, t)							-- Create an ITEM which imports Wago Ensem
 	return i
 end
 --- Create an exact ITEM Object (specified by ModID/BonusID).
----@param itemID ItemID
----@param modID? ModID
----@param bonusID? BonusID
----@param t? ATTObject|ATTObjectArray
+---@param itemID ItemID # Base item ID.
+---@param modID? ModID # Optional modifier ID selecting the exact item variant.
+---@param bonusID? BonusID # Optional bonus ID selecting the exact item variant.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTItemObject
 iexact = function(itemID, modID, bonusID, t)			-- Create an exact ITEM Object (specified by ModID/BonusID)
 	local i = i(itemID, t);
@@ -2215,9 +2390,19 @@ iexact = function(itemID, modID, bonusID, t)			-- Create an exact ITEM Object (s
 	end
 	return i;
 end
+--- Creates an item-drop Hidden Quest Trigger object.
+---@param itemID ItemID # Item ID used as the trigger's provider and automatic-name source.
+---@param questID QuestID # Hidden quest ID completed when the item drops.
+---@param t? ATTObject|ATTObjectArray # Trigger metadata or child objects to attach to the hidden quest.
+---@return ATTQuestObject
+itemDropHQT = function(itemID, questID, t)
+	t = t or {}
+	t.provider = {"i",itemID}	-- Item
+	return hqt(questID, name(HEADERS.Item, itemID, t))	-- Item Drop
+end
 --- This function helps build an item container for a "sack" or "bag" or some other type of reward structure.
----@param id ItemID
----@param t? ATTObject|ATTObjectArray
+---@param id ItemID # Item ID of the container that provides the listed contents.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTHeaderObject
 container = function(id, t)								-- This function helps build an item container for a "sack" or "bag" or some other type of reward structure.
 	local bag = header(HEADERS.Item, id, t);
@@ -2234,9 +2419,9 @@ container = function(id, t)								-- This function helps build an item containe
 	return bag;
 end
 --- This function helps build proper listing for 'Salvage' Recipes and their visible 'Display Item'.
----@param recipeID RecipeID
----@param displayItemID ItemID
----@param t? ATTObject|ATTObjectArray
+---@param recipeID RecipeID # Salvage recipe spell ID added as a provider.
+---@param displayItemID ItemID # Item ID used for the salvage recipe display and container provider.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTHeaderObject
 salvagerecipe = function(recipeID, displayItemID, t)	-- This function helps build proper listing for 'Salvage' Recipes and their visible 'Display Item'
 	local item = container(displayItemID, t)
@@ -2245,8 +2430,8 @@ salvagerecipe = function(recipeID, displayItemID, t)	-- This function helps buil
 	return item
 end
 
----@param id JournalInstanceID
----@param t? ATTObject|ATTObjectArray
+---@param id JournalInstanceID # Encounter Journal instance ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTInstanceObject
 inst = function(id, t)									-- Create an INSTANCE Object
 	t = struct("instanceID", id, t);
@@ -2271,8 +2456,8 @@ inst = function(id, t)									-- Create an INSTANCE Object
 	return t;
 end
 
----@param id UiMapID
----@param t? ATTObject|ATTObjectArray
+---@param id UiMapID # UI map ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTMapObject
 map = function(id, t)									-- Create a MAP Object
 	if t then
@@ -2285,17 +2470,17 @@ map = function(id, t)									-- Create a MAP Object
 end
 m = map;												-- Create a MAP Object (alternative shortcut)
 --- Create an MISSION Object.
----@param id MissionID
----@param t? ATTObject|ATTObjectArray
+---@param id MissionID # Garrison mission ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTMissionObject
 mission = function(id, t)								-- Create an MISSION Object
 	return struct("missionID", id, t);
 end
 mi = mission											-- Create a MISSION Object (Alternative)
 --- Create a MOLE MACHINE Quest Object.
----@param questID? QuestID
----@param explorationID ExplorationID
----@param t? ATTObject|ATTObjectArray
+---@param questID? QuestID # Optional character unlock quest ID; omitted to create the Mole Machine NPC instead.
+---@param explorationID ExplorationID # Exploration area ID used to name the unlock quest.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTQuestObject|ATTNPCObject
 molemachine = function(questID, explorationID, t)		-- Create a MOLE MACHINE Quest Object
 	if questID then
@@ -2322,18 +2507,18 @@ molemachine = function(questID, explorationID, t)		-- Create a MOLE MACHINE Ques
 	return t;
 end
 --- Create a MOUNT Object, which is just a spellID with a filter.
----@param id MountID
----@param t? ATTObject|ATTObjectArray
+---@param id MountID # Mount spell ID used by ATT.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTMountObject
 mount = function(id, t)									-- Create a MOUNT Object, which is just a spellID with a filter.
 	return struct("mountID", id, t);
 end
 
 --- Creates an NPC/header object. With a nil `id`, this preserves the legacy behavior of returning `unpack(t)`.
----@param id? ATTHeaderID|NPCID|CreatureID
----@param t? ATTObject|ATTObjectArray
+---@param id? ATTHeaderID|NPCID|CreatureID # Positive NPC/creature ID or negative custom header ID; nil returns unpacked `t`.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or child objects; unpacked directly when `id` is nil.
 ---@return ATTNPCObject|ATTHeaderObject|ATTObject|nil first
----@return ATTObject|nil ... additional Values returned only by the legacy `id == nil` + array form.
+---@return ATTObject|nil ... # additional Values returned only by the legacy `id == nil` + array form.
 npc = function(id, t)									-- Create an NPC Object (negative indicates that it is custom)
 	if not id then
 		print("NPC ID Missing for n() header");
@@ -2385,8 +2570,8 @@ npc = function(id, t)									-- Create an NPC Object (negative indicates that i
 end
 n = npc;												-- Create an NPC Object (alternative shortcut)
 --- Create an NPC Object which is Conditional (assign u = CONDITIONALLY_AVAILABLE for Retail).
----@param id ATTHeaderID|NPCID|CreatureID
----@param t? ATTObject|ATTObjectArray
+---@param id ATTHeaderID|NPCID|CreatureID # Positive NPC/creature ID or negative custom header ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTNPCObject|ATTHeaderObject
 n_conditional = function(id, t)							-- Create an NPC Object which is Conditional (assign u = CONDITIONALLY_AVAILABLE for Retail)
 	t = n(id, t);
@@ -2397,16 +2582,16 @@ n_conditional = function(id, t)							-- Create an NPC Object which is Condition
 	return t;
 end
 --- Create a WORLD OBJECT Object (an interactable, non-NPC object out in the world - like a chest).
----@param id ObjectID
----@param t? ATTObject|ATTObjectArray
+---@param id ObjectID # Interactable world object ID, such as a chest.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 obj = function(id, t)									-- Create a WORLD OBJECT Object (an interactable, non-NPC object out in the world - like a chest)
 	return struct("objectID", id, t);
 end
 o = obj;												-- Create a WORLD OBJECT Object (alternative shortcut)
 --- Create a group which represents the shared contents for multiple, identically-named WORLD OBJECTS.
----@param t ATTObject|ATTObjectArray
----@param o? ATTObjectArray
+---@param t ATTObject|ATTObjectArray # Shared-content container or child array for the repeated world objects.
+---@param o? ATTObjectArray # Optional additional object groups appended when `t` is a child array.
 ---@return ATTObject|nil
 o_repeated = function(t, o)								-- Create a group which represents the shared contents for multiple, identically-named WORLD OBJECTS
 	if t[1] then
@@ -2435,50 +2620,50 @@ o_repeated = function(t, o)								-- Create a group which represents the shared
 	print("Could not find a group with an objectID value");
 end
 --- Pet Battle (bubbleDown pb filter).
----@param t ATTObject|ATTObjectArray
+---@param t ATTObject|ATTObjectArray # Object or child groups whose nested content receives the pet-battle filter.
 ---@return ATTObject|ATTObjectArray
 petbattle = function(t)									-- Pet Battle (bubbleDown pb filter)
-	return bubbleDown({ ["pb"] = true }, t);
+	return bubbleDown({ pb = true }, t);
 end
 --- Create a PROFESSION Object.
----@param skillID SkillID
----@param t? ATTObject|ATTObjectArray
+---@param skillID SkillID # Profession or skill line ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTProfessionObject
 prof = function(skillID, t)								-- Create a PROFESSION Object
 	return struct("professionID", skillID, t);
 end
 --- Create a PROFESSION NODE Object.
----@param id integer
----@param t? ATTObject|ATTObjectArray
+---@param id integer # Profession specialization path/node ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 professionnode = function(id, t)						-- Create a PROFESSION NODE Object
 	return struct("professionnodeID", id, t);
 end
 pn = professionnode;
 --- Flag all nested content as requiring PvP gameplay.
----@param t ATTObject|ATTObjectArray
+---@param t ATTObject|ATTObjectArray # Object or child groups whose nested content receives the PvP requirement.
 ---@return ATTObject|ATTObjectArray
 pvp = function(t)										-- Flag all nested content as requiring PvP gameplay
-	return bubbleDown({ ["pvp"] = true }, t);
+	return bubbleDown({ pvp = true }, t);
 end
 --- Create a PVP Rank Object.
----@param id integer
----@param t? ATTObject|ATTObjectArray
+---@param id integer # Classic PvP rank ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 pvprank = function(id, t)								-- Create a PVP Rank Object.
 	return struct("pvpRankID", id, t);
 end
 --- Create a QUEST Object.
----@param id QuestID
----@param t? ATTObject|ATTObjectArray
+---@param id QuestID # Quest ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTQuestObject
 quest = function(id, t)									-- Create a QUEST Object
 	return struct("questID", id, t);
 end
 q = quest;												-- Create a QUEST Object (alternative shortcut)
 --- Create a QUEST Object flagged with the NYI unobtainable flag.
----@param id QuestID
----@param t? ATTObject|ATTObjectArray
+---@param id QuestID # Quest ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTQuestObject
 qNYI = function (id, t)									-- Create a QUEST Object flagged with the NYI unobtainable flag
 	t = q(id, t);
@@ -2486,8 +2671,8 @@ qNYI = function (id, t)									-- Create a QUEST Object flagged with the NYI un
 	return t;
 end
 --- Create a QUEST OBJECTIVE Object.
----@param id ObjectiveID
----@param t? ATTObject|ATTObjectArray
+---@param id ObjectiveID # Objective index within the parent quest.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 questobjective = function(id, t)						-- Create a QUEST OBJECTIVE Object
 	t = struct("objectiveID", id, t);
@@ -2500,15 +2685,15 @@ end
 objective = questobjective;								-- Create a QUEST OBJECTIVE Object (alternative shortcut)
 qo = questobjective;									-- Create a QUEST OBJECTIVE Object (alternative shortcut)
 --- Create a RACE Object.
----@param id RaceID
----@param t? ATTObject|ATTObjectArray
+---@param id RaceID # Character race ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 race = function(id, t)									-- Create a RACE Object
 	return struct("raceID", id, t);
 end
 --- Create a CHARACTER RACE Object without a Race Lock.
----@param id RaceID
----@param t? ATTObject|ATTObjectArray
+---@param id RaceID # Character race ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTHeaderObject
 raceWithoutLock = function(id, t)						-- Create a CHARACTER RACE Object without a Race Lock
 	t = struct("headerID", id, t);
@@ -2516,23 +2701,23 @@ raceWithoutLock = function(id, t)						-- Create a CHARACTER RACE Object without
 	return t;
 end
 --- Create a Raw Decor Object.
----@param id DecorID
----@param t? ATTObject|ATTObjectArray
+---@param id DecorID # Housing decor entry ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 rawdecor = function(id, t)								-- Create a Raw Decor Object
 	return struct("decorID", id, t)
 end
 --- Create a RECIPE Object.
----@param id RecipeID
----@param t? ATTObject|ATTObjectArray
+---@param id RecipeID # Crafting recipe spell ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTRecipeObject
 recipe = function(id, t)								-- Create a RECIPE Object
 	return struct("recipeID", id, t);
 end
 r = recipe;												-- Create a RECIPE Object (alternative shortcut)
 --- Create an Ensemble directly from SpellID.
----@param spellID SpellID
----@param t? ATTObject|ATTObjectArray
+---@param spellID SpellID # Spell ID identifying the ensemble.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTSpellObject
 sensemble = function(spellID, t)						-- Create an Ensemble directly from SpellID
 	local i = sp(spellID, t);
@@ -2540,36 +2725,36 @@ sensemble = function(spellID, t)						-- Create an Ensemble directly from SpellI
 	return i
 end
 --- Skyriding (bubbleDown sr filter).
----@param t ATTObject|ATTObjectArray
+---@param t ATTObject|ATTObjectArray # Object or child groups whose nested content receives the Skyriding requirement.
 ---@return ATTObject|ATTObjectArray
 skyriding = function(t)									-- Skyriding (bubbleDown sr filter)
-	return bubbleDown({ ["sr"] = true }, t);
+	return bubbleDown({ sr = true }, t);
 end
 --- Create a SPELL Object.
----@param id SpellID
----@param t? ATTObject|ATTObjectArray
+---@param id SpellID # Spell ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTSpellObject
 spell = function(id, t)									-- Create a SPELL Object
 	return struct("spellID", id, t);
 end
 sp = spell;												-- Create a SPELL Object (alternative shortcut)
 --- Create an Item Source Object.
----@param id SourceID
----@param t? ATTObject|ATTObjectArray
+---@param id SourceID # Transmog appearance source ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTObject
 itemsource = function(id, t)							-- Create an Item Source Object
 	return struct("sourceID", id, t)
 end
 --- Create a TITLE Object.
----@param id TitleID
----@param t? ATTObject|ATTObjectArray
+---@param id TitleID # Character title ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTTitleObject
 title = function(id, t)									-- Create a TITLE Object
 	return struct("titleID", id, t);
 end
 --- Create a TITLE Object for Female Characters.
----@param id TitleID
----@param t? ATTObject|ATTObjectArray
+---@param id TitleID # Character title ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTTitleObject
 title_female = function(id, t)							-- Create a TITLE Object for Female Characters
 	t = struct("titleID", id, t);
@@ -2577,8 +2762,8 @@ title_female = function(id, t)							-- Create a TITLE Object for Female Charact
 	return t;
 end
 --- Create a TITLE Object for Male Characters.
----@param id TitleID
----@param t? ATTObject|ATTObjectArray
+---@param id TitleID # Character title ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTTitleObject
 title_male = function(id, t)							-- Create a TITLE Object for Male Characters
 	t = struct("titleID", id, t);
@@ -2588,8 +2773,8 @@ end
 
 -- Common Object Types
 --- Creates a QUEST which is for a Dragonriding Race.
----@param id QuestID
----@param t? ATTObject|ATTObjectArray
+---@param id QuestID # Dragonriding race quest ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTQuestObject
 dragonridingrace = function(id, t)						-- Creates a QUEST which is for a Dragonriding Race
 	t = q(id, t);
@@ -2603,8 +2788,8 @@ dragonridingrace = function(id, t)						-- Creates a QUEST which is for a Dragon
 	return t;
 end
 --- Creates a QUEST which is for a Skyriding Race.
----@param id QuestID
----@param t? ATTObject|ATTObjectArray
+---@param id QuestID # Skyriding race quest ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTQuestObject
 skyridingrace = function(id, t)							-- Creates a QUEST which is for a Skyriding Race
 	t = q(id, t);
@@ -2619,8 +2804,8 @@ skyridingrace = function(id, t)							-- Creates a QUEST which is for a Skyridin
 	return t;
 end
 --- Creates a QUEST which is for a D.R.I.V.E. Race.
----@param id QuestID
----@param t? ATTObject|ATTObjectArray
+---@param id QuestID # D.R.I.V.E. race quest ID.
+---@param t? ATTObject|ATTObjectArray # Optional object fields or an array of child objects.
 ---@return ATTQuestObject
 driverace = function(id, t)								-- Creates a QUEST which is for a D.R.I.V.E. Race
 	t = q(id, t);
@@ -2636,10 +2821,10 @@ driverace = function(id, t)								-- Creates a QUEST which is for a D.R.I.V.E. 
 end
 -- Simple function for First Craft HQTs
 --- Creates a First Craft hidden quest trigger for a recipe.
----@param questID QuestID
----@param recipeID RecipeID
----@param added? ATTTimelineEvent
----@param removed? ATTTimelineEvent
+---@param questID QuestID # Hidden quest ID tracking first-craft completion.
+---@param recipeID RecipeID # Recipe spell ID whose first craft is tracked.
+---@param added? ATTTimelineEvent # Optional timeline event marking first-craft availability.
+---@param removed? ATTTimelineEvent # Optional removal event appended to the timeline; requires `added`.
 ---@return ATTFirstCraftObject
 FirstCraft = function(questID, recipeID, added, removed)
 	local t = fc(recipeID, {questID=questID})
@@ -2657,11 +2842,11 @@ FirstCraft = function(questID, recipeID, added, removed)
 end
 -- Simple function for Recipes with HQTs
 --- Creates a recipe object associated with a hidden quest trigger.
----@param recipeID RecipeID
----@param questID QuestID
----@param added? ATTTimelineEvent
----@param description? string|ATTLocalizationStringTable
----@param maps? UiMapID[]
+---@param recipeID RecipeID # Crafting recipe spell ID.
+---@param questID QuestID # Hidden quest ID associated with the recipe.
+---@param added? ATTTimelineEvent # Optional timeline event marking recipe availability.
+---@param description? string|ATTLocalizationStringTable # Optional display description for the recipe.
+---@param maps? UiMapID[] # Optional UI map IDs associated with the recipe.
 ---@return ATTRecipeObject
 r_withQuest = function(recipeID, questID, added, description, maps)
 	local t = r(recipeID, {questID=questID})
@@ -2679,8 +2864,8 @@ end
 -- Creates a simple 'gathered' Item which has a set of object providers
 -- Note: If additional table data is provided it must be the last param
 --- Creates a gathered item with the supplied object providers.
----@param itemID ItemID
----@param ... ObjectID|ATTObject|ATTObjectArray
+---@param itemID ItemID # Base item ID.
+---@param ... ObjectID|ATTObject|ATTObjectArray # World object provider IDs, optionally followed by object fields or child objects as the final argument.
 ---@return ATTItemObject
 i_gathered = function(itemID, ...)
 	local t
@@ -2707,8 +2892,8 @@ i_gathered = function(itemID, ...)
 end
 -- Outdoor Zones Headers with Filters
 --- Creates a BATTLE_PETS header with pet battle filter on it. Use this with Outdoor Zones.
----@param timeline ATTTimelineEvent[]
----@param t ATTObject|ATTObjectArray
+---@param timeline ATTTimelineEvent[] # Patch events applied to the header and nested content; defaults to 5.0.4 in the one-argument form.
+---@param t ATTObject|ATTObjectArray # Header fields or child objects to receive the timeline and pet-battle filter.
 ---@return ATTObject
 ---@overload fun(t: ATTObject|ATTObjectArray): ATTObject
 battlepets = function(timeline, t)						-- Creates a BATTLE_PETS header with pet battle filter on it. Use this with Outdoor Zones.
@@ -2719,11 +2904,13 @@ battlepets = function(timeline, t)						-- Creates a BATTLE_PETS header with pet
 		t = timeline;
 		timeline = { ADDED_5_0_4 };
 	end
-	return petbattle(filter(BATTLE_PETS, bubbleDownSelf({ ["timeline"] = timeline }, t)));
+	t = togroups(t);
+	t.timeline = timeline;
+	return petbattle(filter(BATTLE_PETS, t));
 end
 --- Creates a PET_BATTLES header with pet battle filter on it. Use this with Outdoor Zones.
----@param timeline ATTTimelineEvent[]
----@param t ATTObject|ATTObjectArray
+---@param timeline ATTTimelineEvent[] # Patch events applied to the header and nested content; defaults to 5.0.4 in the one-argument form.
+---@param t ATTObject|ATTObjectArray # Header fields or child objects to receive the timeline and pet-battle filter.
 ---@return ATTObject
 ---@overload fun(t: ATTObject|ATTObjectArray): ATTObject
 petbattles = function(timeline, t)						-- Creates a PET_BATTLES header with pet battle filter on it. Use this with Outdoor Zones.
@@ -2734,11 +2921,13 @@ petbattles = function(timeline, t)						-- Creates a PET_BATTLES header with pet
 		t = timeline;
 		timeline = { ADDED_5_0_4 };
 	end
-	return petbattle(n(PET_BATTLES, bubbleDownSelf({ ["timeline"] = timeline }, t)));
+	t = togroups(t);
+	t.timeline = timeline;
+	return petbattle(n(PET_BATTLES, t));
 end
 --- Creates a LOCKPICKING header with Rogue Class Filtering on it. Use this with Outdoor Zones.
----@param skipRequirement boolean|nil
----@param t ATTObject|ATTObjectArray
+---@param skipRequirement boolean|nil # Whether to omit the Rogue class restriction in the two-argument form.
+---@param t ATTObject|ATTObjectArray # Optional header fields or child objects for the Lockpicking profession.
 ---@return ATTProfessionObject
 ---@overload fun(): ATTProfessionObject
 ---@overload fun(t: ATTObject|ATTObjectArray): ATTProfessionObject
@@ -2755,8 +2944,8 @@ lockpicking = function(skipRequirement, t)				-- Creates a LOCKPICKING header wi
 	return obj;
 end
 --- Creates a PICK POCKET header with Rogue Class Filtering on it. Use this with Outdoor Zones.
----@param skipRequirement boolean|nil
----@param t ATTObject|ATTObjectArray
+---@param skipRequirement boolean|nil # Whether to omit the Rogue class restriction in the two-argument form.
+---@param t ATTObject|ATTObjectArray # Optional header fields or child objects for the Pick Pocket header.
 ---@return ATTHeaderObject
 ---@overload fun(): ATTHeaderObject
 ---@overload fun(t: ATTObject|ATTObjectArray): ATTHeaderObject
@@ -2776,7 +2965,7 @@ end
 -- SHORTCUTS for Field Modifiers (not objects, you can apply these anywhere)
 --- Flag as Alliance Only.
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to restrict to Alliance races; must not already define `races`.
 ---@return T
 a = function(t)	-- Flag as Alliance Only
 	if t.races then
@@ -2803,21 +2992,21 @@ a = function(t)	-- Flag as Alliance Only
 	end
 	return t;
 end
--- Adds an item which is convertable between itself and another subitem by way of a subitem amount and whether the
+-- Adds an item which is convertible between itself and another subitem by way of a subitem amount and whether the
 -- item to subitem is possible
 --- Creates an item with a conversion cost to another item and optional reverse-conversion child.
----@param itemID ItemID
----@param subItemID ItemID
----@param subItemAmount number
----@param includeItemToSubitem? boolean
+---@param itemID ItemID # Item ID produced by converting the specified subitems.
+---@param subItemID ItemID # Item ID consumed by the conversion.
+---@param subItemAmount number # Number of subitems required to obtain one item.
+---@param includeItemToSubitem? boolean # Whether to add the subitem as a child for reverse conversion.
 ---@return ATTItemObject
 convertItem = function(itemID, subItemID, subItemAmount, includeItemToSubitem)
-	return i(itemID, {["cost"]={{"i",subItemID,subItemAmount}},["groups"]=includeItemToSubitem and {i(subItemID)} or nil})
+	return i(itemID, {cost={{"i",subItemID,subItemAmount}},groups=includeItemToSubitem and {i(subItemID)} or nil})
 end
 --- Add a Creature List to an object.
 ---@generic T: ATTObject
----@param id CreatureID|CreatureID[]
----@param t T
+---@param id CreatureID|CreatureID[] # Single creature ID stored in `cr`, or a list stored in `crs`.
+---@param t T # Object whose creature sources are assigned.
 ---@return T
 crs = function(id, t)									-- Add a Creature List to an object.
 	if type(id) == "number" then
@@ -2830,7 +3019,7 @@ crs = function(id, t)									-- Add a Creature List to an object.
 end
 --- Flag as Horde Only.
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to restrict to Horde races; must not already define `races`.
 ---@return T
 h = function(t) -- Flag as Horde Only
 	if t.races then
@@ -2857,20 +3046,10 @@ h = function(t) -- Flag as Horde Only
 	end
 	return t;
 end
---- Creates an item-drop Hidden Quest Trigger object.
----@param itemID ItemID
----@param questID QuestID
----@param t? ATTObject|ATTObjectArray
----@return ATTQuestObject
-itemDropHQT = function(itemID, questID, t)
-	t = t or {}
-	t.provider = {"i",itemID}	-- Item
-	return hqt(questID, name(HEADERS.Item, itemID, t))	-- Item Drop
-end
 --- Assigns a display ID to an object.
 ---@generic T: ATTObject
----@param displayID integer
----@param t T
+---@param displayID integer # Creature display ID to assign for the object's model.
+---@param t T # Object whose `displayID` is assigned.
 ---@return T
 model = function(displayID, t)
 	t --[[@as ATTObject]].displayID = displayID;
@@ -2878,9 +3057,9 @@ model = function(displayID, t)
 end
 -- Converts a given Item/Mod/Bonus combination into the current modItemID format (should roughly match GetGroupItemIDWithModID from Item.Retail.lua)
 --- Encodes ItemID, ModID, and BonusID into the parser's modItemID numeric format.
----@param itemID? ItemID
----@param modID? ModID
----@param bonusID? BonusID
+---@param itemID? ItemID # Base item ID; defaults to 0 when omitted.
+---@param modID? ModID # Item modifier ID to encode for Legion and later builds.
+---@param bonusID? BonusID # Item bonus ID to encode for Legion and later builds; bonus 3524 is omitted.
 ---@return ModItemID
 modItemId = function(itemID, modID, bonusID)
 	itemID = itemID and tonumber(itemID) or 0;
@@ -2901,9 +3080,9 @@ end
 -- NOTE: The base Type must support: GlobalVariants.WithAutoName as a Class Variant for the 'autoname' field to be recognized in the addon to generate a 'name'
 -- ref. Classes/Quest.lua
 --- Adds automatic-name metadata for a supported object type and ID.
----@param type? string
----@param id? integer
----@param t? ATTObject|ATTObjectArray
+---@param type? string # Supported `HEADERS` type used to resolve the automatic name.
+---@param id? integer # ID of the source whose name should be used.
+---@param t? ATTObject|ATTObjectArray # Object or child objects to normalize and assign automatic-name metadata.
 ---@return ATTObject|ATTObjectArray|nil
 name = function(type, id, t)
 	if not type or not id then return t end
@@ -2916,9 +3095,9 @@ name = function(type, id, t)
 end
 -- Converts 3 separate patch values into a single patch decimal for use within expansion() groups
 --- Encodes major, minor, and build values into the parser's decimal patch format.
----@param major number
----@param minor number
----@param build number
+---@param major number # Major patch component stored before the decimal point.
+---@param minor number # Minor patch component encoded at two decimal places.
+---@param build number # Build component encoded at five decimal places.
 ---@return number
 patch = function(major, minor, build)
 	major = math.floor(tonumber(major) or 0)
@@ -2937,13 +3116,13 @@ patch = function(major, minor, build)
 end
 --- Mark an object unobtainable where u is the type.
 ---@generic T: ATTObject
----@param u ATTUnobtainableStatus
----@param t T
+---@param u ATTUnobtainableStatus # Unobtainable status value to store in `u`.
+---@param t T # Object whose unobtainable status is assigned.
 ---@return T
 un = function(u, t) t --[[@as ATTObject]].u = u; return t; end						-- Mark an object unobtainable where u is the type.
 --- A daily group based on questID with specific rewards (typically an HQT trigger with lockout-based loot/rewards).
----@param questID QuestID
----@param t? ATTObject|ATTObjectArray
+---@param questID QuestID # Quest ID used to track the daily reward's completion.
+---@param t? ATTObject|ATTObjectArray # Daily reward metadata or child reward objects.
 ---@return ATTHeaderObject
 dailyReward = function(questID, t)								-- A daily group based on questID with specific rewards (typically an HQT trigger with lockout-based loot/rewards)
 	local t = n(DAILY, t)
@@ -2952,8 +3131,8 @@ dailyReward = function(questID, t)								-- A daily group based on questID with
 	return t
 end
 --- A weekly group based on questID with specific rewards (typically an HQT trigger with lockout-based loot/rewards).
----@param questID QuestID
----@param t? ATTObject|ATTObjectArray
+---@param questID QuestID # Quest ID used to track the weekly reward's completion.
+---@param t? ATTObject|ATTObjectArray # Weekly reward metadata or child reward objects.
 ---@return ATTHeaderObject
 weeklyReward = function(questID, t)								-- A weekly group based on questID with specific rewards (typically an HQT trigger with lockout-based loot/rewards)
 	local t = n(WEEKLY, t)
@@ -2965,8 +3144,8 @@ end
 -- Region Specific Filters
 --- Restricts an object to a specific WoW portal region.
 ---@generic T: ATTObject
----@param region Region
----@param t T
+---@param region Region # Portal region in which the object remains available.
+---@param t T # Object to receive an initialization callback that enforces the region restriction.
 ---@return T
 regionExclusive = function(region, t)
 	if t.OnInit then
@@ -2982,8 +3161,8 @@ end]];
 end
 --- Marks an object unavailable in a specific WoW portal region.
 ---@generic T: ATTObject
----@param region Region
----@param t T
+---@param region Region # Portal region in which the object is marked unavailable.
+---@param t T # Object to receive an initialization callback that enforces regional unavailability.
 ---@return T
 regionUnavailable = function(region, t)
 	if t.OnInit then
@@ -2999,61 +3178,61 @@ end]];
 end
 
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to make available only in the US portal region.
 ---@return T
 usONLY = function(t)	-- the object only available on US realm
 	return regionExclusive("US", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to make available only in the EU portal region.
 ---@return T
 euONLY = function(t)	-- the object only available on EU realm
 	return regionExclusive("EU", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to make available only in the KR portal region.
 ---@return T
 krONLY = function(t)	-- the object only available on KR realm
 	return regionExclusive("KR", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to make available only in the TW portal region.
 ---@return T
 twONLY = function(t)	-- the object only available on TW realm
 	return regionExclusive("TW", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to make available only in the CN portal region.
 ---@return T
 cnONLY = function(t)	-- the object only available on CN realm
 	return regionExclusive("CN", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to mark unavailable in the US portal region.
 ---@return T
 usUnavailable = function(t)	-- the object only unavailable on US realm
 	return regionUnavailable("US", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to mark unavailable in the EU portal region.
 ---@return T
 euUnavailable = function(t)	-- the object only unavailable on EU realm
 	return regionUnavailable("EU", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to mark unavailable in the KR portal region.
 ---@return T
 krUnavailable = function(t)	-- the object only unavailable on KR realm
 	return regionUnavailable("KR", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to mark unavailable in the TW portal region.
 ---@return T
 twUnavailable = function(t)	-- the object only unavailable on TW realm
 	return regionUnavailable("TW", t);
 end
 ---@generic T: ATTObject
----@param t T
+---@param t T # Object to mark unavailable in the CN portal region.
 ---@return T
 cnUnavailable = function(t)	-- the object only unavailable on CN realm
 	return regionUnavailable("CN", t);
@@ -3080,7 +3259,7 @@ do
 		-- Returns the proper symlink "select" table for a given SymSelector key
 		-- e.g. {"select","symselector",SymSelector[key]}
 		--- Provides the `select` parser shortcut/helper.
-		---@param key string
+		---@param key string # Registry name whose unique selector ID is used in the symbolic `select` command.
 		---@return ATTSymCommand
 		select = function(key) return {"select","symselector",SymSelector[key]} end,
 	}, {
@@ -3096,7 +3275,7 @@ end
 -- until the 'guessing' logic is eventually relegated when Prof DB's are sufficient
 --- Forces an item to use the Misc filter to prevent parser recipe conversion.
 ---@generic T: ATTObject
----@param t T
+---@param t T # Item to force into the Misc filter so parser recipe conversion is skipped.
 ---@return T
 TempForceMisc = function(t)
 	t --[[@as ATTObject]].f = MISC
@@ -3112,42 +3291,42 @@ end
 -- Usage: ROOTS.[Constant]
 ---@type ATTRootConstants
 ROOTS = setmetatable({
-	["AchievementDB"] = "AchievementDB",
-	["Achievements"] = "Achievements",
-	["Arcantina"] = "Arcantina",
-	["BlackMarket"] = "BlackMarket",
-	["Character"] = "Character",
-	["Craftables"] = "Craftables",
-	["Delves"] = "Delves",
-	["ExpansionFeatures"] = "ExpansionFeatures",
-	["Factions"] = "Factions",
-	["GroupFinder"] = "GroupFinder",
-	["HiddenAchievementTriggers"] = "HiddenAchievementTriggers",
-	["HiddenCurrencyTriggers"] = "HiddenCurrencyTriggers",
-	["HiddenQuestTriggers"] = "HiddenQuestTriggers",
-	["Holidays"] = "Holidays",
-	["Housing"] = "Housing",
-	["InGameShop"] = "InGameShop",
-	["Instances"] = "Instances",
-	["ItemDB"] = "ItemDB",
-	["ItemDBConditional"] = "ItemDBConditional",
-	["NeverImplemented"] = "NeverImplemented",
-	["PVP"] = "PVP",
-	["PetBattles"] = "PetBattles",
-	["Professions"] = "Professions",
-	["Promotions"] = "Promotions",
-	["RecipeDB"] = "RecipeDB",
-	["SeasonOfDiscovery"] = "SeasonOfDiscovery",
-	["Secrets"] = "Secrets",
-	["Sourceless"] = "Sourceless",
-	["TradingPost"] = "TradingPost",
-	["Uncollectible"] = "Uncollectible",
-	["Unsorted"] = "Unsorted",
-	["WorldDrops"] = "WorldDrops",
-	["WorldEvents"] = "WorldEvents",
-	["Zones"] = "Zones",
+	AchievementDB = "AchievementDB",
+	Achievements = "Achievements",
+	Arcantina = "Arcantina",
+	BlackMarket = "BlackMarket",
+	Character = "Character",
+	Craftables = "Craftables",
+	Delves = "Delves",
+	ExpansionFeatures = "ExpansionFeatures",
+	Factions = "Factions",
+	GroupFinder = "GroupFinder",
+	HiddenAchievementTriggers = "HiddenAchievementTriggers",
+	HiddenCurrencyTriggers = "HiddenCurrencyTriggers",
+	HiddenQuestTriggers = "HiddenQuestTriggers",
+	Holidays = "Holidays",
+	Housing = "Housing",
+	InGameShop = "InGameShop",
+	Instances = "Instances",
+	ItemDB = "ItemDB",
+	ItemDBConditional = "ItemDBConditional",
+	NeverImplemented = "NeverImplemented",
+	PVP = "PVP",
+	PetBattles = "PetBattles",
+	Professions = "Professions",
+	Promotions = "Promotions",
+	RecipeDB = "RecipeDB",
+	SeasonOfDiscovery = "SeasonOfDiscovery",
+	Secrets = "Secrets",
+	Sourceless = "Sourceless",
+	TradingPost = "TradingPost",
+	Uncollectible = "Uncollectible",
+	Unsorted = "Unsorted",
+	WorldDrops = "WorldDrops",
+	WorldEvents = "WorldEvents",
+	Zones = "Zones",
 	--
-	["AprilFools"] = "Special_AprilFools",
+	AprilFools = "Special_AprilFools",
 }, {
 	__index = function(t, category)
 		error("Attempting to reference ROOTS." .. category .. ", which is not a valid Root Category.");
@@ -3156,7 +3335,7 @@ ROOTS = setmetatable({
 
 -- Root Data Processors
 --- Marks quest objects under the Hidden Quest Triggers root as HQT objects.
----@param data ATTObject
+---@param data ATTObject # Object to mark as an HQT type when it contains a quest ID.
 local function HQTCleanup(data)
 	if data.questID then
 		-- force quests under the HQT section to be the HQT type
@@ -3165,22 +3344,22 @@ local function HQTCleanup(data)
 	end
 end
 --- Marks nested quest groups so parser-generated `g` data can be dropped.
----@param g any
+---@param g any # Object or object hierarchy whose quest nodes should drop generated child groups.
 ---@return ATTObject|ATTObjectArray|nil
 local function __DropG(g)
 	return bubbleDownFiltered({
 		-- keep API data from populating into NYI/Hidden quests
-		["_drop"]={"g"}
+		_drop={"g"}
 	},FILTERFUNC_questID,g)
 end
 --- Preprocesses Hidden Quest Trigger data before it is attached to the root.
----@param g any
+---@param g any # Hidden-quest content to normalize and mark with the HQT type.
 ---@return ATTObject|ATTObjectArray|nil
 local function __HiddenQuestTriggers(g)
 	return applyFunc(HQTCleanup, __DropG(g))
 end
 --- Returns all arguments unchanged.
----@param ... any
+---@param ... any # Values to pass through unchanged to the caller.
 ---@return any ...
 local function ReturnArguments(...)
 	return ...;
@@ -3196,8 +3375,8 @@ local RootDataProcessors = setmetatable({
 
 -- Connect data to a Root Category
 --- Create a ROOT CATEGORY Object.
----@param category string|integer
----@param g any
+---@param category string|integer # Name or numeric key of the destination root category.
+---@param g any # Object, child array, or numeric-keyed references to merge; nil creates or retrieves the root.
 ---@return table
 --- Adds data to a named parser root category.
 --- Repeated calls merge into the existing root array. Hidden/NYI roots can run
@@ -3247,12 +3426,15 @@ root = function(category, g)							-- Create a ROOT CATEGORY Object
 	end
 	return o;
 end
----@param mapID UiMapID
----@param g? ATTObject|ATTObjectArray
+---@param mapID UiMapID # UI map ID of the battleground to register under the PvP root.
+---@param g? ATTObject|ATTObjectArray # Battleground map metadata or child objects.
 battleground = function(mapID, g)						-- Create a BATTLEGROUND in the PvP header.
 	root(ROOTS.PVP, n(BATTLEGROUNDS, { m(mapID, g) }));
 end
----@param ... UiMapID|ATTObject|ATTObjectArray
+instanceroot = function(instID, g)
+	root(ROOTS.Instances, inst(instID, g));
+end
+---@param ... UiMapID|ATTObject|ATTObjectArray # UI map IDs from outermost to innermost, followed by the object or child array to nest.
 maproot = function(...)									-- Create a MAP ROOT in the Zones header.
 	-- Example: maproot(KALIMDOR, ELWYNN_FOREST, { });
 	local args = { ... };
@@ -3265,13 +3447,16 @@ maproot = function(...)									-- Create a MAP ROOT in the Zones header.
 	root(ROOTS.Zones, data);
 end
 --- Create a PROFESSION Container. (NOTE: Only use in the Profession Folder.).
----@param skillID SkillID
----@param t? ATTObject|ATTObjectArray
+---@param skillID SkillID # Profession skill ID assigned to the container.
+---@param t? ATTObject|ATTObjectArray # Profession metadata or child objects to register under the Professions root.
 ---@return ATTProfessionObject
 profession = function(skillID, t)						-- Create a PROFESSION Container. (NOTE: Only use in the Profession Folder.)
 	local p = prof(skillID, t);
+	-- CRIEVE NOTE: I need to look back at this and see if it's necessary.
 	-- #if NOT ANYCLASSIC
-	bubbleDown({ ["requireSkill"] = skillID }, p);
+	bubbleDown({ requireSkill = skillID }, p);
+	-- #elseif FOREVER
+	bubbleDown({ requireSkill = skillID }, p);
 	-- #endif
 	root(ROOTS.Professions, p);
 	return p;
@@ -3282,10 +3467,10 @@ local rootCategoryHeaders = {};
 ---@type table<string|integer, ATTHeaderObject>
 RootCategoryHeaders = rootCategoryHeaders;	-- This is global, so that it can be found by Parser!
 --- Assigns a header object to a root category with a parser sort priority.
----@param priority number
----@param category string|integer
----@param headerID ATTHeaderID
----@param data? ATTObject|ATTObjectArray
+---@param priority number # Parser sort priority assigned to the root-category header.
+---@param category string|integer # Name or numeric key of the root category receiving the header.
+---@param headerID ATTHeaderID # ATT header ID to assign to the root category.
+---@param data? ATTObject|ATTObjectArray # Header metadata and optional child objects; children are moved into the root category.
 assignRootCategoryHeader = function(priority, category, headerID, data)
 	if not headerID or type(headerID) ~= "number" then
 		print("ROOT CATEGORY: " .. category);
@@ -3295,6 +3480,7 @@ assignRootCategoryHeader = function(priority, category, headerID, data)
 	end
 	data = n(headerID, data or {});
 	data.SortPriority = priority;
+	data.timeline = { EXPANSION_DEFAULT_TIMELINES[EXPANSION.CLASSIC] };
 	rootCategoryHeaders[category] = data;
 	if data.groups then
 		root(category, data.groups);
@@ -3310,7 +3496,7 @@ local localizationStringsByConstant = {};
 ---@type table<string, ATTLocalizationStringData>
 LocalizationStrings = localizationStringsByConstant;	-- This is global, so that it can be found by Parser!
 --- Checks whether a localization string is programmatic (prefixed with `~`).
----@param str string
+---@param str string # Text to check for the programmatic `~` prefix.
 ---@return boolean
 function isTextProgrammatic(str)
 	return str:sub(1, 1) == '~';
@@ -3319,13 +3505,20 @@ end
 --- Registers a parser localization definition by its unique `constant`.
 --- The definition may provide literal/localized text, an icon, formatting, or
 --- programmatic text. Duplicate constants are rejected.
----@param data ATTLocalizationStringData
+---@param data ATTLocalizationStringData # Localization definition to register, including its constant, localized text, and optional formatting.
 createLocalizationString = function(data)
 	if not data then
 		print("INVALID LOCALIZATION STRING: You must pass data into the createLocalizationString function.");
 	elseif not data.constant then
-		print("INVALID LOCALIZATION STRING (missing 'constant')", data.readable);
-	elseif localizationStringsByConstant[data.constant] then
+		error("INVALID LOCALIZATION STRING (missing 'constant')", data.readable);
+	end
+
+	-- Prevent invalid variable declarations
+	if string.match(data.constant, "^%d") then
+		data.constant = "_" .. data.constant;
+	end
+
+	if localizationStringsByConstant[data.constant] then
 		error("ERROR: LOCALIZATION STRING CONSTANT " .. data.constant .. " ALREADY ASSIGNED TO " .. localizationStringsByConstant[data.constant].readable .. ". Please double check that the localization definitions are unique or reuse the same localization.");
 	else
 		local textData = data.text;
@@ -3386,6 +3579,7 @@ createLocalizationString = function(data)
 			end
 		end
 	end
+	return "~L." .. data.constant;
 end
 end)();
 
@@ -3403,7 +3597,7 @@ local customHeadersByReadable, customHeadersByConstant = {}, {};
 ---@type table<ATTHeaderID, ATTHeaderDefinition>
 CustomHeaders = customHeaders;	-- This is global, so that it can be found by Parser!
 --- Serializes sorted table key/value pairs into a Lua table-literal string.
----@param t table<string, string|number>
+---@param t table<string, string|number> # Schedule fields whose numeric or expression values are serialized into a Lua table literal.
 ---@return string
 local concatKeyPairs = function(t)
 	local keys = {};
@@ -3416,12 +3610,12 @@ local concatKeyPairs = function(t)
 		if i > 1 then
 			schedule = schedule .. ",";
 		end
-		schedule = schedule .. "[\"" .. key .. "\"]=" .. t[key];
+		schedule = schedule .. key .. "=" .. t[key];
 	end
 	return schedule .. "}";
 end
 --- Converts a parser date table into a Unix timestamp.
----@param t ATTDateParts
+---@param t ATTDateParts # Date components containing `day` or `monthDay`, plus optional hour and minute.
 ---@return integer
 local getTimestamp = function(t)
 	return os.time({
@@ -3440,7 +3634,7 @@ local SECONDS_IN_A_WEEK = 604800;
 --- Registers a reusable parser header definition and returns its header ID.
 --- Header metadata is indexed for parser generation and can later be referenced
 --- through `header(...)`, `n(...)`, or generated constants.
----@param data ATTHeaderInputDefinition
+---@param data ATTHeaderInputDefinition # Header definition to validate, normalize, and register with an assigned header ID.
 ---@return ATTHeaderID|nil
 createHeader = function(data)
 	if not data then
@@ -3451,6 +3645,10 @@ createHeader = function(data)
 		print("INVALID HEADER", data.readable, data.text);
 	else
 		if data.constant then
+			-- Prevent invalid variable declarations
+			if string.match(data.constant, "^%d") then
+				data.constant = "_" .. data.constant;
+			end
 			if customHeadersByConstant[data.constant] then
 				error("ERROR: HEADER CONSTANT " .. data.constant .. " ALREADY ASSIGNED TO " .. customHeadersByConstant[data.constant].text.en .. ". Please double check that the header definitions are unique or reuse the same header.");
 			else
@@ -3606,7 +3804,7 @@ createHeader = function(data)
 					endTime.weekday = os.date("*t", endTimeStamp).wday;
 
 					-- Append the schedule
-					schedule = schedule .. "\n\t_.Modules.Events.CreateSchedule(" .. concatKeyPairs(startTime) .. "," .. concatKeyPairs(endTime) .. ",{[\"remappedID\"]=" .. eventID .. "})";
+					schedule = schedule .. "\n\t_.Modules.Events.CreateSchedule(" .. concatKeyPairs(startTime) .. "," .. concatKeyPairs(endTime) .. ",{remappedID=" .. eventID .. "})";
 
 					totalMonthOffset = totalMonthOffset + 1;
 					month = month + 1;
@@ -3681,7 +3879,7 @@ createHeader = function(data)
 						weekday=endTime.wday,
 						hour=0,
 						minute=0,
-					}) .. ",{[\"remappedID\"]=" .. eventIDs[(totalOffset % totalEventIDs) + 1] .. "})";
+					}) .. ",{remappedID=" .. eventIDs[(totalOffset % totalEventIDs) + 1] .. "})";
 
 					-- Adjust by 2 weeks.
 					startTimeStamp = startTimeStamp + SECONDS_IN_TWO_WEEKS;
@@ -3839,7 +4037,7 @@ createHeader = function(data)
 					endTime.weekday = os.date("*t", endTimeStamp).wday;
 
 					-- Append the schedule
-					schedule = schedule .. "\n\t_.Modules.Events.CreateSchedule(" .. concatKeyPairs(startTime) .. "," .. concatKeyPairs(endTime) .. ",{[\"remappedID\"]=" .. eventID .. "})";
+					schedule = schedule .. "\n\t_.Modules.Events.CreateSchedule(" .. concatKeyPairs(startTime) .. "," .. concatKeyPairs(endTime) .. ",{remappedID=" .. eventID .. "})";
 
 					totalMonthOffset = totalMonthOffset + 1;
 					month = month + 1;
@@ -3895,8 +4093,8 @@ CRIEVES_SUPER_COOL_HEADER = createHeader({
 ]]--
 local temporaryHeaderAssignments = {};
 --- Returns a programmatic header-translation token for a header ID or localization table.
----@param data? ATTHeaderID|table<string, string>
----@param key? string|integer
+---@param data? ATTHeaderID|table<string, string> # Existing header ID or localized text from which to create a reusable translation header.
+---@param key? string|integer # Header text field such as `description` or `lore`; used only with a numeric header ID.
 ---@return string|nil
 translate = function(data, key)
 	if not data then
@@ -3928,7 +4126,7 @@ local nextCustomObjectID = 100000000;
 --- Registers a custom object and returns its unique object ID.
 --- Registers a reusable custom parser object and returns its custom object ID.
 --- Custom objects are parser definitions, not ordinary runtime WoW API objects.
----@param data ATTCustomObjectDefinition
+---@param data ATTCustomObjectDefinition # Custom object definition to validate and store in `ObjectDB`.
 ---@return ObjectID|nil
 createCustomObject = function(data)
 	if not data then
@@ -3953,10 +4151,10 @@ local CurrentProfessionID = ALCHEMY;
 --- Links an item and recipe in the parser-side ItemDB/RecipeDB.
 --- This records recipe metadata, profession requirements, and optional
 --- unobtainable state so generated database files can resolve the relationship.
----@param itemID ItemID
----@param recipeID RecipeID
----@param unobtainStatus? ATTUnobtainableStatus
----@param requireSkill? SkillID
+---@param itemID ItemID # Item ID to associate with the recipe, or 0 to update the recipe directly in `RecipeDB`.
+---@param recipeID RecipeID # Recipe spell ID to associate with the item or recipe metadata.
+---@param unobtainStatus? ATTUnobtainableStatus|ATTPhaseID # Optional Classic unobtainable code or release phase, single timeline event, or list of timeline events.
+---@param requireSkill? SkillID # Profession skill requirement override; defaults to the active profession.
 ---@return ATTObject
 local ItemRecipeHelper = function(itemID, recipeID, unobtainStatus, requireSkill)
 	-- Cache the object.
@@ -4022,7 +4220,11 @@ local ItemRecipeHelper = function(itemID, recipeID, unobtainStatus, requireSkill
 			---@cast unobtainStatus integer
 			-- #if ANYCLASSIC
 			-- CRIEVE NOTE: At this time, this is exclusive to Classic builds.
-			RecipeDB[recipeID].u = unobtainStatus
+			if isreleasephase(unobtainStatus) then
+				RecipeDB[recipeID].phase = unobtainStatus
+			else
+				RecipeDB[recipeID].u = unobtainStatus
+			end
 			-- #endif
 		elseif unobtainType == "string" then
 			---@cast unobtainStatus ATTTimelineEvent
@@ -4035,7 +4237,7 @@ local ItemRecipeHelper = function(itemID, recipeID, unobtainStatus, requireSkill
 	return object;
 end
 --- Sets the active profession and returns the item/recipe helper function.
----@param professionID SkillID
+---@param professionID SkillID # Profession skill ID set as the default for subsequent recipe-helper calls.
 ---@return fun(itemID: ItemID, recipeID: RecipeID, unobtainStatus?: ATTUnobtainableStatus, requireSkill?: SkillID): ATTObject
 GetRecipeHelperForProfession = function(professionID)
 	CurrentProfessionID = professionID;

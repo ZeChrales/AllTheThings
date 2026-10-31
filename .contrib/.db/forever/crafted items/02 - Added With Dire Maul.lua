@@ -6,19 +6,20 @@ root(ROOTS.Craftables, {
 	prof(COOKING, {
 		i(18254),	-- Runn Tum Tuber Surprise
 	}),
+	--[[
 	prof(ENGINEERING, {
-		filter(MISC, {
+		filter(TRINKET_F, {
 			i(18637),	-- Major Recombobulator
 		}),
 	}),
 	prof(LEATHERWORKING, {
-		prof(10656, {	-- Dragonscale Leatherworking
+		prof(DRAGONSCALE_LEATHERWORKING, {
 			i(18509),	-- Chromatic Cloak
 		}),
-		prof(10658, {	-- Elemental Leatherworking
+		prof(ELEMENTAL_LEATHERWORKING, {
 			i(18511),	-- Shifting Cloak
 		}),
-		prof(10660, {	-- Tribal Leatherworking
+		prof(TRIBAL_LEATHERWORKING, {
 			i(18510),	-- Hide of the Wild
 		}),
 		n(ARMOR, {
@@ -41,9 +42,11 @@ root(ROOTS.Craftables, {
 			i(18407),	-- Felcloth Gloves
 			i(18408),	-- Inferno Gloves
 			i(18409),	-- Mooncloth Gloves
+			i(18486),	-- Mooncloth Robe
 		}),
 		filter(MISC, {
 			i(18258),	-- Gordok Ogre Suit
 		}),
 	}),
+	--]]
 });

@@ -4,14 +4,15 @@
 -----------------------------------------------------
 
 root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
-	applyclassicphase(SOD_PHASE_FOUR, inst(2784, bubbleDownSelf({["timeline"] = { ADDED_1_15_3 }}, {	-- Demon Fall Canyon
-		["lore"] = "Demon Fall Canyon is historically the location of the final battle between Grom Hellscream and Mannoroth as featured in Warcraft III.",
-		["zone-text-areaID"] = 435,	-- Demon Fall Canyon
-		["sourceQuest"] = 84384,	-- Demonic Deceptions
-		["provider"] = { "i", 228172 },	-- Shadowtooth Illusion Ward
-		["coord"] = { 84.5, 75.0, ASHENVALE },
-		["lvl"] = 55,
-		["groups"] = {
+	applyclassicphase(SOD_PHASE_FOUR, inst(2784, {	-- Demon Fall Canyon
+		lore = "Demon Fall Canyon is historically the location of the final battle between Grom Hellscream and Mannoroth as featured in Warcraft III.",
+		zoneTextAreaID = 435,	-- Demon Fall Canyon
+		sourceQuest = 84384,	-- Demonic Deceptions
+		provider = { "i", 228172 },	-- Shadowtooth Illusion Ward
+		coord = { 84.5, 75.0, ASHENVALE },
+		timeline = { ADDED_1_15_3 },
+		lvl = 55,
+		groups = {
 			n(226923, {	-- Grimroot <The Mourning Guardian>
 				i(228082),	-- Warsong Axe
 				i(228079),	-- Cloak of Leaves
@@ -19,7 +20,7 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 				i(228081),	-- Germinating Poisonseed
 				i(228083),	-- Gloaming Treeheart
 				applyclassicphase(SOD_PHASE_SEVEN, i(235787, {	-- Ancient Ironwood Branch (QI!)
-					["timeline"] = { ADDED_1_15_6 },
+					timeline = { ADDED_1_15_6 },
 				})),
 			}),
 			n(228022, {	-- The Destructor's Wraith
@@ -37,19 +38,22 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 				i(228087),	-- Supercharged Silver Moebius
 				i(228084),	-- Miniaturized Fire Extinguisher
 			}),
-			applyclassicphase(SOD_PHASE_FIVE, n(232632, bubbleDownSelf({["timeline"] = { ADDED_1_15_4 }}, {	-- Azgaloth <Lord of the Pit>
-				i(231913),	-- Eye of the Observer
-				i(231911),	-- Signet of the Legion General
-				i(231910),	-- Heart of Azgaloth
-				i(231912),	-- Blade of the Pit
-				i(231460),	-- Planebreaker of Azgaloth
-				i(4213, {	-- Grimoire of Doom
-					["classes"] = { WARLOCK },
-					["groups"] = {
-						recipe(18540),	-- Ritual of Doom
-					},
-				}),	
-			}))), 
+			applyclassicphase(SOD_PHASE_FIVE, n(232632, {	-- Azgaloth <Lord of the Pit>
+				timeline = { ADDED_1_15_4 },
+				groups = {
+					i(231913),	-- Eye of the Observer
+					i(231911),	-- Signet of the Legion General
+					i(231910),	-- Heart of Azgaloth
+					i(231912),	-- Blade of the Pit
+					i(231460),	-- Planebreaker of Azgaloth
+					i(4213, {	-- Grimoire of Doom
+						classes = { WARLOCK },
+						groups = {
+							recipe(18540),	-- Ritual of Doom
+						},
+					}),	
+				},
+			})), 
 			n(227140, {	-- Pyranis
 				i(228090),	-- Cenarion Ritual Dagger
 				i(228092),	-- Druidic Mantle
@@ -73,13 +77,13 @@ root(ROOTS.Instances, expansion(EXPANSION.CLASSIC, {
 				i(228109),	-- Legguards of Sacrifice
 				i(228113),	-- Cold Embrace
 				i(228126, {	-- Aperitive Epiphany
-					["classes"] = { PRIEST },
-					["groups"] = {
+					classes = { PRIEST },
+					groups = {
 						recipe(402857),	-- Engrave Cloak - Vampiric Touch
 					},
 				}),
 			}),
 		},
-	}))),
+	})),
 }));
 -- #endif

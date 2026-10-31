@@ -14,15 +14,13 @@ root(ROOTS.Craftables, {
 			i(22198),	-- Jagged Obsidian Shield
 		}),
 	}),
-	--]]
 	prof(COOKING, {
 		i(21023),	-- Dirge's Kickin' Chimaerok Chops
 	}),
-	--[[
 	prof(ENCHANTING, {
 		header(HEADERS.Spell, 13262, {	-- Disenchant
-			i(20725, {	-- Nexus Crystal 
-				["description"] = "Obtained from disenchanting all epic (purple) quality gear within the ilvl bracket 60-83.",
+			i(20725, {	-- Nexus Crystal
+				description = "Obtained from disenchanting all epic (purple) quality gear within the ilvl bracket 60-83.",
 			}),
 		}),
 		--[[
@@ -38,27 +36,26 @@ root(ROOTS.Craftables, {
 		i(),	-- Enchant Gloves - Superior Agility
 		i(),	-- Enchant Gloves - Shadow Power
 	}),
-	--]]
 	prof(MINING, {
 		spell(2575, {	-- Mining
 			i(22203, {	-- Large Obsidian Shard
-				["maps_disp"] = {
+				maps_disp = {
 					MAP.RUINS_OF_AHNQIRAJ,
 					MAP.TEMPLE_OF_AHNQIRAJ,
 					MAP.SILITHUS,
 				},
-				["providers"] = {
+				providers = {
 					{ "o", 181069 },	-- Large Obsidian Chunk
 					{ "o", 181068 },	-- Small Obsidian Chunk
 				},
 			}),
 			i(22202, {	-- Small Obsidian Shard
-				["maps_disp"] = {
+				maps_disp = {
 					MAP.RUINS_OF_AHNQIRAJ,
 					MAP.TEMPLE_OF_AHNQIRAJ,
 					MAP.SILITHUS,
 				},
-				["providers"] = {
+				providers = {
 					{ "o", 181069 },	-- Large Obsidian Chunk
 					{ "o", 181068 },	-- Small Obsidian Chunk
 				},
@@ -68,4 +65,5 @@ root(ROOTS.Craftables, {
 	prof(POISONS, {
 		i(20844),	-- Deadly Poison V
 	}),
+	--]]
 });

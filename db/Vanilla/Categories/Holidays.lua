@@ -54,10 +54,10 @@ qo(1,{coords={
 q(915,{awp=10400,e=13,isYearly=1,lvl=10,maps={1454},providers={{"n",14444}},qss={18597},r=1,rwp=40001,sourceQuests={910,911,1800},g={
 qo(1,{coords={
 [1454]={{52.6,69.6}}},crs={14480},e=13,providers={{"i",7228}}})}})}})}}),
-h(-37,{e=1,maps={1412,1429},g={
+h(-37,{awp=10600,e=1,maps={1412,1429},g={
 h(-31,{e=1,g={
 faction(909,{e=1,icon=_.asset("Event_dmf"),OnTooltip=function(t,tooltipInfo)local reputation=t.reputation if reputation<42000 then	local addRepInfo=_.Modules.FactionData.AddReputationTooltipInfo local repPerTierTurnIn=100 local tierOneMaxRep=500 if reputation<tierOneMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 1 Quests",repPerTierTurnIn,tierOneMaxRep)else	local tierTwoMaxRep=1050 if reputation<tierTwoMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 2 Quests",repPerTierTurnIn,tierTwoMaxRep)else	local tierThreeMaxRep=1700 if reputation<tierThreeMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 3 Quests",repPerTierTurnIn,tierThreeMaxRep)else	local tierFourMaxRep=2500 if reputation<tierFourMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 4 Quests",repPerTierTurnIn,tierFourMaxRep)else	local tierFiveMaxRep=5001 if reputation<tierFiveMaxRep then	addRepInfo(tooltipInfo,reputation,"Complete Tier 5 Quests",repPerTierTurnIn,tierFiveMaxRep)end	end	end	end	end	local repPerDeckTurnIn=150 addRepInfo(tooltipInfo,reputation,"Turn in Decks.",repPerDeckTurnIn,42000)end	end,g={
-crit(8823,{achID=2336,id=8,u=13})}})}}),
+crit(8823,{achID=2336,id=8,phase=13})}})}}),
 h(-45,{e=1,g={
 q(7930,{coords={
 [1412]={{37.3,37.7}},
@@ -129,20 +129,20 @@ q(7884,{coords={
 i(19182,{b=1,e=1,f=55,q=1})}}),
 q(7907,{coords={
 [1412]={{36.4,38}},
-[1429]={{41.2,69.8}}},e=1,maxReputation={909,42000},providers={{"n",14847}},qss={19228},repeatable=1,u=13,g={
-i(19288,{b=1,e=1,f=53,lvl=60,q=4,u=13})}}),
+[1429]={{41.2,69.8}}},e=1,maxReputation={909,42000},phase=13,providers={{"n",14847}},qss={19228},repeatable=1,g={
+i(19288,{b=1,e=1,f=53,lvl=60,q=4})}}),
 q(7929,{coords={
 [1412]={{36.4,38}},
-[1429]={{41.2,69.8}}},e=1,maxReputation={909,42000},providers={{"n",14847}},qss={19267},repeatable=1,u=13,g={
-i(19289,{b=1,e=1,f=53,lvl=60,q=4,u=13})}}),
+[1429]={{41.2,69.8}}},e=1,maxReputation={909,42000},phase=13,providers={{"n",14847}},qss={19267},repeatable=1,g={
+i(19289,{b=1,e=1,f=53,lvl=60,q=4})}}),
 q(7927,{coords={
 [1412]={{36.4,38}},
-[1429]={{41.2,69.8}}},e=1,maxReputation={909,42000},providers={{"n",14847}},qss={19277},repeatable=1,u=13,g={
-i(19290,{b=1,e=1,f=53,lvl=60,q=4,u=13})}}),
+[1429]={{41.2,69.8}}},e=1,maxReputation={909,42000},phase=13,providers={{"n",14847}},qss={19277},repeatable=1,g={
+i(19290,{b=1,e=1,f=53,lvl=60,q=4})}}),
 q(7928,{coords={
 [1412]={{36.4,38}},
-[1429]={{41.2,69.8}}},e=1,maxReputation={909,42000},providers={{"n",14847}},qss={19257},repeatable=1,u=13,g={
-i(19287,{b=1,e=1,f=53,lvl=60,q=4,u=13})}}),
+[1429]={{41.2,69.8}}},e=1,maxReputation={909,42000},phase=13,providers={{"n",14847}},qss={19257},repeatable=1,g={
+i(19287,{b=1,e=1,f=53,lvl=60,q=4})}}),
 q(7903,{coords={
 [1412]={{37.5,39.6}},
 [1429]={{40.2,69.7}}},cost={{"i",11404,10}},e=1,lvl=40,maxReputation={909,5001},qgs={14829},repeatable=1,rwp=40300,g={
@@ -199,7 +199,7 @@ q(7901,{coords={
 [1412]={{37.5,39.6}},
 [1429]={{40.2,69.7}}},cost={{"i",4582,5}},e=1,lvl=20,maxReputation={909,1700},qgs={14829},repeatable=1,rwp=40300,g={
 i(19182,{b=1,e=1,f=55,q=1})}}),
-q(7946,{coords={
+q(7946,{awp=11101,coords={
 [1412]={{35.9,35.3}},
 [1429]={{43.3,70.3}}},cost={{"i",11325,2}},description="You need to throw down a Dark Iron Ale mug near Morja in Darkmoon Faire, and wait for the jubling to come hopping to it. This might take a while. Then she'll offer the quest 'Spawn of Jubjub', which requires another mug of Dark Iron Ale. This can only be done once per character.",e=1,isMonthly=1,lvl=10,qgs={14871},g={
 i(19462,{b=1,e=1,q=1,g={
@@ -308,10 +308,10 @@ i(19222,{e=1,f=55,q=1}),
 i(19221,{e=1,f=55,q=1}),
 i(19299,{e=1,f=55,lvl=15,q=1})}})}}),
 cat(3,{e=1,g={
-i(19228,{cost={{"i",19236,1},{"i",19235,1},{"i",19234,1},{"i",19233,1},{"i",19232,1},{"i",19231,1},{"i",19230,1},{"i",19227,1}},e=1,q=4,u=13}),
-i(19267,{cost={{"i",19275,1},{"i",19274,1},{"i",19273,1},{"i",19272,1},{"i",19271,1},{"i",19270,1},{"i",19269,1},{"i",19268,1}},e=1,q=4,u=13}),
-i(19277,{cost={{"i",19284,1},{"i",19283,1},{"i",19282,1},{"i",19281,1},{"i",19280,1},{"i",19279,1},{"i",19278,1},{"i",19276,1}},e=1,q=4,u=13}),
-i(19257,{cost={{"i",19265,1},{"i",19264,1},{"i",19263,1},{"i",19262,1},{"i",19261,1},{"i",19260,1},{"i",19259,1},{"i",19258,1}},e=1,q=4,u=13})}})}}),
+i(19228,{cost={{"i",19236,1},{"i",19235,1},{"i",19234,1},{"i",19233,1},{"i",19232,1},{"i",19231,1},{"i",19230,1},{"i",19227,1}},e=1,phase=13,q=4}),
+i(19267,{cost={{"i",19275,1},{"i",19274,1},{"i",19273,1},{"i",19272,1},{"i",19271,1},{"i",19270,1},{"i",19269,1},{"i",19268,1}},e=1,phase=13,q=4}),
+i(19277,{cost={{"i",19284,1},{"i",19283,1},{"i",19282,1},{"i",19281,1},{"i",19280,1},{"i",19279,1},{"i",19278,1},{"i",19276,1}},e=1,phase=13,q=4}),
+i(19257,{cost={{"i",19265,1},{"i",19264,1},{"i",19263,1},{"i",19262,1},{"i",19261,1},{"i",19260,1},{"i",19259,1},{"i",19258,1}},e=1,phase=13,q=4})}})}}),
 h(-574,{e=14,g={
 h(-19,{e=14,g={
 s(164648,21525,{b=1,crs={1853,10899,11486},e=14,f=2,loc=40,maps={234,250,251,252,253,254,255,476},q=2}),
@@ -319,16 +319,16 @@ s(164647,21524,{b=1,crs={9019,9237,10997},e=14,f=2,loc=40,maps={242,250,251,252,
 h(-39,{description="These recipes are mailed to characters with the corresponding profession(s) at the start of the event.",e=14,g={
 r(21945,{e=14,itemID=17724,learnedAt=190,q=1,requireSkill=197}),
 toy(17712,{b=1,description="Greatfather Winter will mail this to you 24 hours after you complete the 'A Smokywood Pastures Thank You!' quest.",e=14,q=1,sourceQuests={6984,7045}})}}),
-h(-45,{e=14,g={
-q(8744,{awp=10200,coords={
+h(-45,{awp=10200,e=14,g={
+q(8744,{coords={
 [1454]={{49.5,78.5}},
 [1455]={{33.5,66.5}}},e=14,isYearly=1,providers={{"o",180743}},qis={21191},g={
 i(21254,{b=1,e=14,f=55,q=1})}}),
-q(8803,{awp=10200,coords={
+q(8803,{coords={
 [1454]={{49.6,77.7}},
 [1455]={{33.6,66.1}}},e=14,isYearly=1,lvl=10,providers={{"o",180793}},qis={21363},g={
 i(21328,{b=1,e=14,q=1})}}),
-q(8768,{awp=10200,coords={
+q(8768,{coords={
 [1454]={{49.6,78.2}},
 [1455]={{33.6,66.3}}},e=14,isYearly=1,lvl=20,providers={{"o",180747}},qis={21310},g={
 p(119,{awp=10804,e=14,itemID=21301,petTypeID=1,q=1,spellID=26533}),
@@ -350,7 +350,7 @@ r(21923,{e=14,itemID=17709,learnedAt=190,q=1,requireSkill=171}),
 r(21940,{e=14,itemID=17720,learnedAt=190,q=2,requireSkill=202}),
 i(21325,{b=1,e=14,f=55,q=2}),
 i(21213,{e=14,f=55,lvl=40,q=2})}}),
-q(7045,{awp=10200,coords={
+q(7045,{coords={
 [1455]={{33.4,67}}},e=14,isYearly=1,lvl=30,qgs={13433},r=2,sourceQuests={7043},g={
 i(17726,{b=1,e=14,q=1,g={
 r(21931,{e=14,itemID=17725,learnedAt=190,q=2,requireSkill=333}),
@@ -359,7 +359,7 @@ r(21945,{e=14,itemID=17724,learnedAt=190,q=1,requireSkill=197}),
 r(21913,{e=14,itemID=17706,learnedAt=190,q=2,requireSkill=164}),
 r(21923,{e=14,itemID=17709,learnedAt=190,q=1,requireSkill=171}),
 r(21940,{e=14,itemID=17720,learnedAt=190,q=2,requireSkill=202})}})}}),
-q(6984,{awp=10200,coords={
+q(6984,{coords={
 [1454]={{53.2,66.6}}},e=14,isYearly=1,lvl=30,qgs={13418},r=1,sourceQuests={6983},g={
 i(17726,{b=1,e=14,q=1,g={
 r(21931,{e=14,itemID=17725,learnedAt=190,q=2,requireSkill=333}),
@@ -368,15 +368,15 @@ r(21945,{e=14,itemID=17724,learnedAt=190,q=1,requireSkill=197}),
 r(21913,{e=14,itemID=17706,learnedAt=190,q=2,requireSkill=164}),
 r(21923,{e=14,itemID=17709,learnedAt=190,q=1,requireSkill=171}),
 r(21940,{e=14,itemID=17720,learnedAt=190,q=2,requireSkill=202})}})}}),
-q(7022,{awp=10200,coords={
+q(7022,{coords={
 [1455]={{33.4,67}}},e=14,isYearly=1,lvl=10,qgs={13433},r=2}),
-q(7023,{awp=10200,coords={
+q(7023,{coords={
 [1453]={{55,59.2}}},e=14,isYearly=1,lvl=10,qgs={13435},r=2}),
-q(6961,{awp=10200,coords={
+q(6961,{coords={
 [1454]={{53.2,66.6}}},e=14,isYearly=1,lvl=10,qgs={13418},r=1}),
-q(7021,{awp=10200,coords={
+q(7021,{coords={
 [1456]={{43.8,58.6}}},e=14,isYearly=1,lvl=10,qgs={13431},r=1}),
-q(7024,{awp=10200,coords={
+q(7024,{coords={
 [1458]={{68,39}}},e=14,isYearly=1,lvl=10,qgs={13429},r=1}),
 q(8762,{awp=10804,coords={
 [1455]={{33.4,67}}},e=14,isYearly=1,lvl=40,maps={1427,1446},qgs={13433},r=2,rwp=40300,g={
@@ -402,13 +402,13 @@ q(8860,{awp=10804,description="This quest is only available on December 31. Ques
 qo(1,{e=14,providers={{"i",21545}}})}}),
 q(8861,{awp=10804,description="This quest is only available on December 31. Quest can be obtained from Wonderform Operator in any major city.",e=14,isYearly=1,maps={1411,1420,1426,1434,1437,1446,1453,1454},qgs={15732},r=1,g={
 qo(1,{e=14,providers={{"i",21545}}})}}),
-q(7042,{awp=10200,coords={
+q(7042,{coords={
 [1455]={{33.4,67}}},e=14,isYearly=1,lvl=30,maps={1416},qgs={13433},r=2,rwp=40003}),
-q(6963,{awp=10200,coords={
+q(6963,{coords={
 [1454]={{53.2,66.6}}},e=14,isYearly=1,lvl=30,maps={1416},qgs={13418},r=1,rwp=40003}),
-q(7063,{awp=10200,coords={
+q(7063,{coords={
 [1455]={{77.2,11.8}}},e=14,isYearly=1,lvl=10,qgs={2916},qis={17735},r=2,sourceQuests={7062}}),
-q(7061,{awp=10200,coords={
+q(7061,{coords={
 [1454]={{38.6,36.2}}},e=14,isYearly=1,lvl=10,qgs={13417},qis={17735},r=1,sourceQuests={6964}}),
 q(8763,{awp=10804,coords={
 [1455]={{33.4,67}}},cost={{"i",8150,1},{"g",50000}},description="Requires Cooking Skill Level 300",e=14,isYearly=1,lvl=40,qgs={13433},r=2,requireSkill=185,rwp=40300,sourceQuests={8762},g={
@@ -416,13 +416,13 @@ i(21213,{e=14,f=55,lvl=40,q=2,requireSkill=185})}}),
 q(8799,{awp=10804,coords={
 [1454]={{53.2,66.6}}},cost={{"i",8150,1},{"g",50000}},description="Requires Cooking Skill Level 300",e=14,isYearly=1,lvl=40,qgs={13418},r=1,requireSkill=185,rwp=40300,sourceQuests={8746},g={
 i(21213,{e=14,f=55,lvl=40,q=2,requireSkill=185})}}),
-q(7062,{awp=10200,coords={
+q(7062,{coords={
 [1455]={{30.2,59.8}}},e=14,isYearly=1,lvl=10,qgs={1365},r=2,g={
 i(17735,{e=14,q=1})}}),
-q(6964,{awp=10200,coords={
+q(6964,{coords={
 [1454]={{51,71.1}}},e=14,isYearly=1,lvl=10,qgs={9550},r=1,g={
 i(17735,{e=14,q=1})}}),
-q(7025,{awp=10200,coords={
+q(7025,{coords={
 [1455]={{33.2,65.8}}},cost={{"i",1179,1},{"i",17197,5}},e=14,isYearly=1,lvl=10,qgs={13444},r=2,g={
 i(17727,{b=1,e=14,q=1,g={
 i(2996,{e=14,q=1}),
@@ -435,7 +435,7 @@ i(17344,{e=14,f=55,q=1,rwp=60202}),
 i(17407,{e=14,f=55,lvl=25,q=1}),
 i(21215,{b=1,e=14,f=55,lvl=40,q=1}),
 i(17406,{e=14,f=55,lvl=5,q=1})}})}}),
-q(6962,{awp=10200,coords={
+q(6962,{coords={
 [1454]={{49.9,78.4}}},cost={{"i",1179,1},{"i",17197,5}},e=14,isYearly=1,lvl=10,qgs={13445},r=1,g={
 i(17727,{b=1,e=14,q=1,g={
 i(2996,{e=14,q=1}),
@@ -448,12 +448,12 @@ i(17344,{e=14,f=55,q=1,rwp=60202}),
 i(17407,{e=14,f=55,lvl=25,q=1}),
 i(21215,{b=1,e=14,f=55,lvl=40,q=1}),
 i(17406,{e=14,f=55,lvl=5,q=1})}})}}),
-q(8827,{awp=10200,description="This quest becomes available after the 25th.",e=14,isYearly=1,maps={1411,1420,1426,1434,1437,1446,1453,1454},qgs={15732},r=2}),
-q(8828,{awp=10200,description="This quest becomes available after the 25th.",e=14,isYearly=1,maps={1411,1420,1426,1434,1437,1446,1453,1454},qgs={15732},r=1}),
-q(7043,{awp=10200,coords={
+q(8827,{description="This quest becomes available after the 25th.",e=14,isYearly=1,maps={1411,1420,1426,1434,1437,1446,1453,1454},qgs={15732},r=2}),
+q(8828,{description="This quest becomes available after the 25th.",e=14,isYearly=1,maps={1411,1420,1426,1434,1437,1446,1453,1454},qgs={15732},r=1}),
+q(7043,{coords={
 [1416]={{35.4,72.6}}},e=14,isYearly=1,lvl=30,maps={1455},qgs={13636},r=2,sourceQuests={7042},g={
 qo(1,{crs={13602},e=14,providers={{"i",17662}}})}}),
-q(6983,{awp=10200,coords={
+q(6983,{coords={
 [1416]={{35.4,72.6}}},e=14,isYearly=1,lvl=30,maps={1454},qgs={13636},r=1,sourceQuests={6963},g={
 qo(1,{crs={13602},e=14,providers={{"i",17662}}})}})}}),
 h(-58,{e=14,g={
@@ -476,20 +476,20 @@ n(13432,{coords={
 [1456]={{43.8,59.2}}},e=14}),
 n(13433,{coords={
 [1455]={{33.4,67}}},e=14})}}),
-n(15760,{crs={15780,15781,15782,15783,15784,15785,15786,15787,15788,15789,15790,15791,15792,15793,15794,15795},description="Type /kiss while targeting any Winter Reveler to receive one of the following items.\n\nNOTE: While the debuff persists, you will be unable to kiss another one.",e=14,g={
+n(15760,{awp=10200,crs={15780,15781,15782,15783,15784,15785,15786,15787,15788,15789,15790,15791,15792,15793,15794,15795},description="Type /kiss while targeting any Winter Reveler to receive one of the following items.\n\nNOTE: While the debuff persists, you will be unable to kiss another one.",e=14,g={
 i(21212,{awp=10804,b=1,e=14,f=55,lvl=40,q=1}),
-i(21519,{awp=10200,b=1,e=14,q=1})}}),
+i(21519,{b=1,e=14,q=1})}}),
 h(-63,{e=14,g={
 o(178609,{e=14,g={
 i(17202,{e=14,f=55,q=1})}})}})}}),
-h(-576,{e=16,g={
+h(-576,{awp=10800,e=16,g={
 h(-45,{e=16,g={
 q(1658,{coords={
 [1424]={{50,57.2}}},e=16,isYearly=1,lvl=25,maps={1420,1421},qgs={15199},r=2,rwp=40003,g={
 qo(1,{coords={
 [1420]={{56,69}}},e=16,providers={{"o",181672}}}),
 i(20557,{b=1,e=16,f=55,q=1})}}),
-q(8311,{awp=10800,coords={
+q(8311,{coords={
 [1453]={{47.6,35.4}}},e=16,isYearly=1,lvl=10,maxReputation={469,42000},qgs={15310},r=2,g={
 q(8356,{coords={
 [1453]={{52.6,65.6}}},e=16,qgs={6740},r=2,repeatable=1,g={
@@ -504,7 +504,7 @@ q(8357,{coords={
 [1457]={{67.2,15.8}}},e=16,qgs={6735},r=2,repeatable=1,g={
 qo(4,{e=16,providers={{"i",20496}},questID=8311})}}),
 i(20557,{b=1,e=16,f=55,q=1})}}),
-q(8312,{awp=10800,coords={
+q(8312,{coords={
 [1454]={{71.2,22.8}}},e=16,isYearly=1,lvl=10,maxReputation={67,42000},qgs={15309},r=1,g={
 q(8359,{coords={
 [1454]={{54.2,68.4}}},e=16,qgs={6929},r=1,repeatable=1,g={
@@ -519,10 +519,10 @@ q(8360,{coords={
 [1456]={{45.8,64.4}}},e=16,qgs={6746},r=1,repeatable=1,g={
 qo(4,{e=16,providers={{"i",20497}},questID=8312})}}),
 i(20557,{b=1,e=16,f=55,q=1})}}),
-q(8322,{awp=10800,coords={
+q(8322,{coords={
 [1420]={{55.6,69.9}},
 [1424]={{51.4,59}}},cost={{"i",20605,1}},e=16,isYearly=1,lvl=30,qgs={15197},r=1,rwp=40003}),
-q(8409,{awp=10800,coords={
+q(8409,{coords={
 [1424]={{51.4,59}}},e=16,isYearly=1,lvl=30,providers={{"o",180570}},r=1,rwp=40003,sourceQuests={8322},g={
 i(20557,{b=1,e=16,f=55,q=1})}}),
 q(1657,{coords={
@@ -530,7 +530,7 @@ q(1657,{coords={
 qo(1,{coords={
 [1424]={{49.8,57.9}}},e=16,providers={{"i",20387}}}),
 i(20557,{b=1,e=16,f=55,q=1})}}),
-q(8373,{awp=10800,coords={
+q(8373,{coords={
 [1424]={{50,57.2}}},e=16,isYearly=1,lvl=25,qgs={15199},r=2,rwp=40003,g={
 qo(1,{e=16,providers={{"i",20604}}}),
 i(20557,{b=1,e=16,f=55,q=1})}})}}),
@@ -563,6 +563,9 @@ s(164329,20567,{b=1,e=16,f=2,loc=40,q=1}),
 s(164330,20568,{b=1,e=16,f=2,loc=40,q=1}),
 s(164336,20574,{b=1,e=16,f=2,loc=40,q=1}),
 s(164335,20573,{b=1,e=16,f=2,loc=40,q=1})}}),
+h(-56,{e=16,g={
+o(180523,{e=16,g={
+i(20516,{b=1,e=16,f=55,q=1})}})}}),
 h(-63,{e=16,g={
 i(20400,{b=1,e=16,f=113,q=2})}})}}),
 h(-577,{awp=11201,e=17,g={
@@ -1212,7 +1215,7 @@ h(-586,{e=133889,maps={1425,1434,1444,1446,1447},g={
 i(13756,{description="Can be caught in open sea water in Azshara, Tanaris, The Hinterlands, Feralas, and STV from 20th March to 22nd September.",e=133889,f=55,lvl=35,q=1})}}),
 h(-587,{e=133899,maps={1425,1434,1444,1446,1447},g={
 i(13755,{description="Can be caught in open sea water in Azshara, Tanaris, The Hinterlands, Feralas, and STV from 23nd September to 20th March.",e=133899,f=55,lvl=35,q=1})}}),
-h(-588,{description="The Stranglethorn Fishing Extravaganza is a weekly fishing event held every Sunday in Stranglethorn Vale. There is a highly competitive fishing contest and a more casual rare fish turn-in for this event.",e=6,maps={1434},g={
+h(-588,{awp=10700,description="The Stranglethorn Fishing Extravaganza is a weekly fishing event held every Sunday in Stranglethorn Vale. There is a highly competitive fishing contest and a more casual rare fish turn-in for this event.",e=6,maps={1434},g={
 h(-12,{e=6,g={
 ach(306,{e=6,providers={{"i",19970},{"i",19979}},requireSkill=356,g={
 crit(12910,{achID=306,e=6,id=1,questID=24803,u=1})}})}}),

@@ -1029,7 +1029,7 @@ local i = function(itemID, speciesID, altSpeciesID)
 end
 local n = function(creatureID, speciesID)
 	if creatureID < 1 or speciesID < 1 then return end
-	local pet = { ["speciesID"] = speciesID, ["npcID"] = creatureID, ["ignoreBonus"] = true };
+	local pet = { speciesID = speciesID, npcID = creatureID, ignoreBonus = true };
 	Pets[creatureID] = pet;
 	SpeciesDB[speciesID] = Pets[creatureID]
 	return pet;
@@ -1148,9 +1148,28 @@ i(13343, 0);		-- Pet Stone
 -----------------
 --   FOREVER   --
 -----------------
+i(268503, 57);		-- Azure Whelpling
 i(282047, 5162);	-- Baby Crocolisk
+i(276275, 5094);	-- Bitter Baitling
+i(268502, 1563);	-- Bronze Whelpling
+i(280794, 5154);	-- Brown Ground Squirrel
+i(282637, 5167);	-- Condor Hatchling
+i(280803, 5158);	-- Eagle Owl
 i(275682, 5075);	-- Excitable Slime
+i(280703, 5153);	-- Jungle Boa
+i(281168, 5161);	-- Mini Diablo
+i(280614, 5138);	-- Pachimari
+i(281166, 5159);	-- Panda Cub
+i(280697, 5151);	-- Plagued Cockroach
+i(277508, 5121);	-- Prairie Wolf Pup
+i(280795, 5155);	-- Red Ground Squirrel
+i(277714, 5122);	-- Spectral Bear Cub
+i(284176, 5172);	-- Tallstrider Hatchling
+i(280699, 5152);	-- Undercity Cockroach
+i(281167, 5160);	-- Zergling
 i(249897, 0);	-- Flowery Lashling Bud [TODO: Find the speciesID]
+i(249895, 0);	-- Frosty Lashling Bud [TODO: Find the speciesID]
+i(249896, 0);	-- Viridian Lashling Bud [TODO: Find the speciesID]
 i(249898, 0);	-- Wilted Lashling Bud [TODO: Find the speciesID]
 -- #if FOREVER
 i(13342, 0);		-- Pet Fish [TODO: Find the speciesID]
@@ -1645,8 +1664,8 @@ n(62697, 530);		-- Oily Slimeling
 n(61313, 403);		-- Parrot
 n(63547, 726);		-- Plains Monitor
 n(61322, 409);		-- Polly
-n(61141, 386);		-- Prarie Dog
-n(59702, 727);		-- Prarie Mouse
+n(61141, 386);		-- Prairie Dog
+n(59702, 727);		-- Prairie Mouse
 n(62526, 513);		-- Qiraji Guardling
 n(61080, 378);		-- Rabbit
 n(62120, 472);		-- Rabid Nut Varmint 5000
@@ -4699,7 +4718,6 @@ i(277318, 5116);	-- Catsramas
 i(277319, 5117);	-- Cat'Thuzad
 i(0, 5061);		-- Crabbers
 i(274925, 5067);	-- Delta
-i(277270, 5114);	-- Kirin Tor Kitty
 i(277321, 5118);	-- Mewkahen
 i(279197, 5129);	-- Slitherfang
 
@@ -4709,4 +4727,18 @@ i(279197, 5129);	-- Slitherfang
 i(276927, 5100);	-- Aqir Razorwing
 i(274923, 5066);	-- Aqir Scuttler
 i(274927, 5068);	-- Aqir Wingreaver
---- Unsorted ---
+
+------------------
+-- PATCH 12.1.7 --
+------------------
+i(277270, 5114);	-- Bewitching Familiar
+i(284094, 5170);	-- Hex-Cursed Manifestation
+i(283378, 5169);	-- Inquisitor's Messenger
+i(283375, 5168);	-- Slayer's Faithful Tracker
+i(284103, 5171);	-- Zyg'ee <The Hadorable Tyrant>
+--- UNSORTED ---
+i(286652, 5184);	-- Bump
+i(286655, 5187);	-- Frump
+i(286654, 5186);	-- Grump
+i(286653, 5185);	-- Lump
+i(286661, 5188);	-- Petite Snow Buddy

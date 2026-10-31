@@ -9,6 +9,11 @@
 .contrib/db-sync/*.cmd text eol=crlf
 # lua script
 *.lua       text eol=crlf
+/AllTheThings.lua text eol=lf
+/lib/**/*.lua  text eol=lf
+/src/**/*.lua  text eol=lf
+/tests/*.lua     text eol=lf
+/locales/*.lua   text eol=lf
 # project config / tool config
 *.config    text eol=crlf
 # WOW addon filelist
@@ -23,6 +28,10 @@
 *.text      text eol=crlf
 # xml file
 *.xml       text eol=crlf
+# Runtime XML
+/Bindings.xml text eol=lf
+/src/Settings/Settings.xml text eol=lf
+/src/UI/Windows/Windows.xml text eol=lf
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
@@ -91,6 +100,68 @@ setup.cfg export-ignore
 contrib export-ignore
 .contrib export-ignore
 .github export-ignore
+tests export-ignore
 ###############################################################################
 # using for Git LFS (Large File Storage)
 ###############################################################################
+
+###############################################################################
+# Binary assets
+###############################################################################
+/assets/** binary
+*.blp binary
+*.ogg binary
+*.wav binary
+
+###############################################################################
+# Root-level files
+###############################################################################
+/.coderabbit.yaml text eol=lf
+/.editorconfig text eol=lf
+/.gitattributes text eol=lf
+/.gitignore text eol=lf
+/.luarc.json text eol=lf
+/.pkgmeta text eol=lf
+/.pre-commit-config.yaml text eol=lf
+/AGENTS.md text eol=lf
+/AllTheThings.toc text eol=lf
+/LICENSE text eol=lf
+"/Link ATT to WoW.bat" text eol=crlf
+"/Link ATT to WoW.sh" text eol=lf
+/README.md text eol=lf
+/_config.yml text eol=lf
+/setup.cfg text eol=lf
+
+# VS Code workspace configuration
+/.vscode/*.json text eol=lf
+
+# GitHub metadata
+/.github/*.yml text eol=lf
+/.github/ISSUE_TEMPLATE/*.yml text eol=lf
+
+# GitHub Actions workflows
+/.github/workflows/*.yml text eol=lf
+
+# Windows PowerShell 5.1 scripts
+/.contrib/.tools/GameObjectCache-to-ObjectDB.ps1 text eol=lf
+/.contrib/src/Parser/tests/CostMerge.Tests.ps1 text eol=lf
+# Windows harvester batch scripts
+/.contrib/Harvesters/*.bat text eol=crlf
+/.contrib/Harvesters/DBs/*.bat text eol=crlf
+
+# DB sync documentation
+/.contrib/db-sync/README.md text eol=lf
+
+# Contributor tools
+/.contrib/.tools/Lua/*.js text eol=lf
+/.contrib/.tools/Localization/*.py text eol=lf
+/.contrib/.tools/Localization/requirements.txt text eol=lf
+/.contrib/.tools/.wago.update.bat text eol=crlf
+/.contrib/.tools/README.md text eol=lf
+/.contrib/.tools/TOOLS_ROADMAP.md text eol=lf
+
+# Harvester source files
+"/.contrib/Harvesters/Database Harvester/*.py" text eol=lf
+"/.contrib/Harvesters/Exploration Mapping/*.py" text eol=lf
+"/.contrib/Harvesters/WoWHead Harvester/*.js" text eol=lf
+/.contrib/Harvesters/OpenItems.html text eol=lf
